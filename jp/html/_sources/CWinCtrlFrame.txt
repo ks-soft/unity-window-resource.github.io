@@ -1,0 +1,48 @@
+.. highlight:: csharp
+
+.. _CWinCtrlFrame:
+
+====================
+CWinCtrlFrame
+====================
+
+ スクリプト: :ref:`FRAME`
+ 
+ フレームを表示するためのコントロールです。
+ 
+ バーと違いキャプションが持てないです。
+
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+ :param Vector2 dragVelocity: タッチ位置の変位
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlFrame	ctrlStart = find(FRAME_BG) as CWinCtrlFrame;
+
+ // 押されたときのコールバック
+ override protected void onClick(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case FRAME_BG:
+         //押されたときの処理
+         break;
+      }
+ }

@@ -1,0 +1,92 @@
+.. highlight:: csharp
+
+.. _CWinCtrlRecastIcon:
+
+===================================
+CWinCtrlRecastIcon
+===================================
+
+ スクリプト: :ref:`RECASTICON`
+
+ リキャストアイコンを表示するためのコントロールです。
+
+ 最大8枚のテクスチャパーツを重ねて表示することが可能です。
+ 
+ :ref:`ICON` とほぼ同じ振る舞いを行います。
+ 
+ リキャスト設定を行うと、指定したテクスチャパーツが、下から徐々に充填されるようなアニメーションを行います。
+ リキャスト時間は、0の時、:ref:`TEXTURE` と同等の表示を行い、1以上の時何も表示されないようになっています。
+
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+ :param Vector2 dragVelocity: タッチ位置の変位
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+.. cpp:member:: CInput::e_State state
+
+ アイコンが押されている状態を取得できます。
+
+.. cpp:function:: void setRecastTime(int index,float tmRecast)
+
+ :param int index: リキャストアニメーションを行うテクスチャパーツ番号
+ :param float tmRecast: アニメーション時間[0～1]
+
+ リキャスト時間を設定します。
+
+.. cpp:function::	public float getRecastTime(int index)
+
+ :param int index: リキャストアニメーションを行うテクスチャパーツ番号
+ :return float: 残りアニメーション時間
+
+ リキャスト時間を取得します。
+
+.. note:
+ 
+ リキャスト時間は、0の時、:ref:`TEXTURE` と同等の表示、1以上の時何も表示されないようになっています。
+
+..
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlRecastIcon	rcItem = find(RECASTICON_Item) as CWinCtrlRecastIcon;
+ 
+ // リキャスト表示(TEX_ID3のテクスチャを半分表示する)
+ rcItem.setRecastTime(3,0.5f);
+ 
+ // 押されたときのコールバック
+ override protected void onClick(CWinCtrlBase cCtrl) {
+   switch (cCtrl.id) {
+     case RECASTICON_Item:
+       //押されたときの処理
+       break;
+    }
+ }
+ // 長押しされたときのコールバック
+ override protected void onHold(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case ICON_Item:
+         //押されたときの処理
+         break;
+     }
+ }
+

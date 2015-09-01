@@ -1,0 +1,118 @@
+.. highlight:: csharp
+
+================================
+CTextureResourceMgrについて
+================================
+
+.. _CTextureResourceMgr:
+
+ CMainSystemのAwake内でAddComponentしてください。
+ 
+ テクスチャリソースを管理するためのマネージャです。
+ 
+ CTextureResourceのコンテナとしての役割を果たします。
+ 
+ CTextureResoruceをダウンロード、若しくはリソースから読みます。既に読み込まれていたらキャッシュを返します。
+ 
+ ウィンドウシステムも、このマネージャを経由してテクスチャを読み込んでいます。
+ 
+ リソース作成方法は :ref:`こちら<TextureResource>` を参照ください。
+ 
+ .. note::
+  アセットバンドル経由で読み込むには、:ref:`CAssetBundleMgr<CAssetBundleMgr>` を登録しておく必要があります。
+
+
+CTextureResourceMgr
+------------------------------------ 
+
+.. cpp:function:: CTextureResource reference(uint id)
+
+  :param uint id: アセットバンドルID
+
+  テクスチャリソースを参照します。
+  もし、キャッシュされていないときは、ダウンロードします。
+  
+  ダウンロード済みでなくてもテクスチャリソースが存在するときは、CTextureResourceを返します。
+  
+  返ってきたCTextureResourceがダウンロード中かどうかは、CTextureResource.isLoadedによって判別可能です。
+  
+  trueの時、使用可能になっています。
+  
+  アセットバンドルとしてダウンロードできないときは、リソースデータとして読み込めるか試します。
+  
+  それでも存在しないときは、nullが返ってきます。
+
+
+.. cpp:function::CTextureResource loadFromResources(uint id,bool bRemain)
+
+  :param uint id: アセットバンドルID
+  :param bool bRemain: 読み込んだ後、常駐するかどうかを指定します。
+
+  リソースから読み込みます。
+  
+ 
+.. cpp:member:: CTextureResourceMgr Instance
+
+   マネージャのインスタンスを取得します。
+
+
+CTextureResource
+------------------------------------ 
+
+ Materialにキャスト可能です。
+
+.. cpp:member:: Material get()
+
+ 保持しているMaterialを取得します。
+
+.. cpp:member:: uint id
+ 
+ IDを取得します。
+ 
+.. cpp:member:: bool isLoaded
+
+ trueなら読み込み済みです。
+
+.. cpp:member:: bool isRemain
+ 
+ 常駐しているかどうか調べます。
+
+.. c:member:: CSpriteDataOne[] spriteData
+ 
+ スプライトデータを取得します。
+ 
+ アトラス化されたテクスチャパーツのUV情報、パッチ情報、カラー情報等が格納されています。
+
+CSpriteDataOne
+------------------------------------
+
+ アトラス化されたテクスチャパーツのUV情報、パッチ情報、カラー情報等が格納されています。
+ 
+.. cpp:member:: uint m_id
+
+.. cpp:member:: WinColor m_color
+
+.. cpp:member:: e_Patch m_ePatch
+
+ .. code-block:: csharp
+
+   public enum e_Patch {
+       None,   //patch none
+       H3,     //3 patch in a horizontal direction
+       V3,     //3 patch in the vertical direction
+       HV9,    //9 patch
+   };
+
+..
+
+
+
+.. cpp:member:: Vector4 m_uv
+
+ テクスチャのUV情報が格納されています。
+
+.. c:member:: Vector4[] m_aUV
+ 
+ e_PatchがH3,V3ならば、三つのUV情報が格納されています。
+ e_PatchがHV9ならば、9つのUV情報が格納されています。
+ 

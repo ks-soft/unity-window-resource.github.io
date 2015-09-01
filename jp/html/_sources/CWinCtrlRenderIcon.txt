@@ -1,0 +1,244 @@
+.. highlight:: csharp
+
+.. _CWinCtrlRenderIcon:
+
+==============================
+CWinCtrlRenderIcon
+==============================
+
+ スクリプト: :ref:`RENDERICON`
+
+ アイコンにレンダリングするためのコントロールです。
+
+ 指定されたレンダーテクスチャから自動的に矩形を切り出し、レンダリングします。
+ 
+ 複数のレンダー結果を一枚のレンダーテクスチャ内に含めることができるため、一度レンダリングした後のアイコンの描画が高速です。
+ 
+ 例えば、リストボックス内のコンテンツに着せ替え可能アバターアイコンを表示したいときなどに使うと効果的です。
+
+CWindowBaseに届くコールバック
+-------------------------------
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2 pos: ドラッグされたコントロールの位置
+
+ 押している状態で動かした(ドラッグ)
+
+.. _onBeginRenderIcon:
+
+.. cpp:function:: bool onBeginRenderIcon(CWinCtrlRenderIcon icon)
+
+ :param CWinCtrlRenderIcon icon: レンダリングを要求されたアイコンコントロール
+ :return bool: 実際にレンダリングするかしないかを選択します。
+
+ アイコンにレンダリング開始
+ 
+ この関数の戻り値は、次の意味を持ちます。
+ 
+  * trueを返すとテクスチャにレンダリングします。
+  * falseを返すとレンダリングしません。 :ref:`onEndRenderIcon<onEndRenderIcon>` も呼ばれません。 
+
+.. _onEndRenderIcon:
+
+.. cpp:function:: bool onEndRenderIcon(CWinCtrlRenderIcon icon)
+
+ :param CWinCtrlRenderIcon icon: レンダリングを要求されたアイコンコントロール
+ :return bool: 以降のフレームでレンダリングを継続するか打ち切るかを選択します。
+ 
+ レンダリングが終了したときに呼ばれる
+
+ この関数の戻り値は、次の意味を持ちます。
+
+  * trueを返すと、次のフレームもレンダリングを継続します( :ref:`onBeginRenderIcon<onBeginRenderIcon>` が呼ばれる)
+  * falseを返すと、以降のフレームでは必要がない限り、レンダリングされません。
+
+ 一度停止させたレンダリングを再開したいときは、 :ref:`needToRender<needToRender>` をtrueにしてください。
+
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+.. _regionId:
+
+.. cpp:member:: ulong regionId
+
+ 0以外の固有のIDを割り振ってください。
+ 0を代入すると確保されたレンダリング領域が解放されます。
+ また、他のコントロールと同じ値を割り振ると、レンダリング領域を共有します。
+
+.. cpp:member:: Camera camera
+
+ レンダリングテクスチャが割り当てられたカメラを取得できます。
+ カメラの位置や角度等をカスタマイズしたいときにアクセスしてください。
+
+.. cpp:member:: WinColor color1
+
+ レンダリングする際の背景色として割り当てられています。
+
+ デフォルトは、(0,0,0,0)です。
+
+.. _needToRender:
+
+.. cpp:member:: bool needToRender
+
+ レンダリングを再開したいとき、trueを設定してください。
+
+ 次のフレームでは :ref:`onBeginRenderIcon<onBeginRenderIcon>` が呼び出されます。
+
+.. cpp:member:: CInput::e_State state
+ 
+ アイコンが押されている状態を取得できます。
+
+使用例
+-----------------------------
+
+ :ref:`onBeginRenderIcon<onBeginRenderIcon>` によって、レンダリングしたいオブジェクトのみアクティブにしています。
+ そして、 :ref:`onEndRenderIcon<onEndRenderIcon>` によって、非アクティブにしています。
+
+ この操作をしないと全てのオブジェクトが一つのアイコンにレンダリングされることになります。
+
+ また、 :ref:`onBeginRenderIcon<onBeginRenderIcon>` がtrueを返すと、直ちにCamera.Render()が呼び出されるので、
+ アニメーションなどの設定をしたときは、下記の例のように、Animation.Sample()を明示的に呼んでおく必要があります。
+
+ 正しくレンダリングされないときは、以下の点をチェックしてみて下さい。
+
+ * レイヤーの設定がおかしくないか？/レイヤーの設定を忘れていないか?
+
+ * カメラにレンダリング対象が収まっているか？
+ 
+  当然、カメラに収まっていないとオブジェクトはレンダリングされません。
+
+ * :ref:`regionId<regionId>` を設定したか？
+  
+  :ref:`regionId<regionId>` が0の時は、レンダーテクスチャへのレンダリングが行われません。
+  :ref:`regionId<regionId>` をキーにしてレンダーテクスチャの空いている領域から矩形を切り出し、レンダリングします。
+
+
+::
+
+ override public bool onBeginRenderIcon(CWinCtrlRenderIcon icon) {
+     CWinCtrlListbox	lbAvatar = lbAvatar = find(CWinCtrlListbox>(LISTBOX_Avatar);
+     int idx = lbAvatar.getContentsIndex(icon);
+     if (idx < 0) {
+         return false;
+     }
+     GameObject go = m_lstGameObject[idx];
+     if (go == null) {
+     	return false;
+     }
+     go.SetActive(true);
+     Animation anim = go.GetComponent<Animation>();
+     anim.Sample();
+
+     return true;
+ }
+ override public bool onEndRenderIcon(CWinCtrlRenderIcon icon) {
+     CWinCtrlListbox	lbAvatar = lbAvatar = find(CWinCtrlListbox>(LISTBOX_Avatar);
+     int idx = lbAvatar.getContentsIndex(icon);
+
+     GameObject go = m_lstGameObject[idx];
+     if (go == null) {
+     	return false;
+     }
+     go.SetActive(false);
+     return false;
+ }
+
+ // 押されたときのコールバック.
+ override public void onClick(CWinCtrlBase cCtrl) {
+   switch (cCtrl.id) {
+     case RENDERICON_Avatar:
+       //押されたときの処理.
+       break;
+    }
+ }
+ // 長押しされたときのコールバック.
+ override public void onHold(CWinCtrlBase cCtrl) {
+    switch (cCtrl.id) {
+      case RENDERICON_Avatar:
+       //押されたときの処理.
+       break;
+     }
+ }
+
+各レイヤーの初期値
+-------------------------------------
+
+ Camera.cullingMask = e_Layer.RenderIcon;
+
+ 特に必要が無ければ触らないようにしておいてください。
+ 
+ レンダリングするときは、レイヤー設定をしているかしっかり確認してください。
+ 
+ レンダリング対象のゲームオブジェクトも上記値を設定しておくようにしておいてください。
+
+::
+
+ // gameobjectAvatarが複数の階層でなければ、以下で十分.
+ gameobjectAvatar.layer = (int) e_LayerId.RenderIcon;
+ // gameobjectAvatarが複数の階層からできているときは、次の関数を使って再帰的に設定する必要がある.
+ Utility.setLayer(gameObjectAvatar,e_LayerId.RenderIcon);
+ // RenderIconにレンダリングするオブジェクトは、読み込みが終了したタイミングですぐにSetActive(false)にしておく必要がある.
+ gameobjectAvatar.SetActive(false);
+
+..
+
+.. note::
+
+ GameObject.layerは、一つの階層に対してのみレイヤーを設定します。子供の階層にまで影響を与えません。
+ レンダーアイコンが持つカメラに選択的に子供の階層を持つオブジェクトを正しくレンダリングするためには、
+ 本アセットが用意しているレイヤーを再帰的に設定可能な、Utility.setLayerを使ってください。
+
+レンダリングの主な流れ
+--------------------------------------
+
+ RenderIconは、複数のモデルをテクスチャにレンダリングして表示するのに適しています。
+ ただし、レイヤーの数が限りがあるので、一つのレイヤーを使いまわすことを考える必要があります。
+
+ この問題を回避するために次のような手順でレンダリングします。
+ 
+  #. モデルの読み込み
+  #. 読み込み終わったら、SetActive(false)にしてゲームオブジェクトを非アクティブにします
+  #. レイヤーをRenderIconに設定します。
+  #. :ref:`regionId<regionId>` に、ユニークな値を設定します。
+  #. OnBeginRenderIconが呼ばれたら、対象のゲームオブジェクトをアクティブにします
+  #. OnEndRenderIconが呼ばれたら、対象のゲームオブジェクトを非アクティブにします
+
+ これによって必ずRenderIconにレンダリングされるゲームオブジェクトを一つに絞ることができます。
+ OnEndRenderIconの戻り値は、falseを返しておく方がパフォーマンスが出ます。
+ そうしないと、毎フレーム、テクスチャへのレンダリングが発生してしまいます。
+ 
+onBeginRenderが呼ばれるタイミング.
+--------------------------------------
+ 
+ * :ref:`regionId<regionId>` に0以外の値が設定されたとき.
+
+   :ref:`regionId<regionId>` に0以外のユニークな値を設定した直後から、 :ref:`onBeginRenderIcon<onBeginRenderIcon>` が呼ばれます。
+   :ref:`onBeginRenderIcon<onBeginRenderIcon>` がtrueを返すまで呼ばれ続けます。
+   falseを返した時は、 :ref:`onEndRenderIcon<onEndRenderIcon>` は呼び出されません。
+   この仕組みを使ってモデルの非同期読み込み途中は、falseを返し、レンダリング準備ができたタイミングで
+   モデルをテクスチャにレンダリングすることが可能です(レイヤーの設定は忘れないでください)。   
+
+ * レンダーテクスチャ消失後
+   
+   レンダーテクスチャが消失する理由としては、スクリーンセーバが走ったり、ウィンドウが最小化されたときなどが考えられます。
+   レンダーテクスチャは破壊されることがあるので、常にテクスチャへの再レンダーができるようにしておくべきです。
+ 
+ * :ref:`needToRender<needToRender>` にtrueを設定した後
+ 
+ * :ref:`onEndRenderIcon<onEndRenderIcon>` がtrueを返した次のフレーム
+ 
+   毎フレームレンダリングしたいときは、trueを返してください。
+   ただし、パフォーマンスには気を付けてください。
+

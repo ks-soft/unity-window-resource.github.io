@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CWinCtrlBase &mdash; WindowResource 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowResource 1 documentation" href="index.html"/>
+        <link rel="next" title="CWinContents" href="CWinContents.html"/>
+        <link rel="prev" title="CWindowBase" href="CWindowBase.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WindowResource</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">The feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id3">Scripting / Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Window viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id8">How to handle the window in the app.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">Mul ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">Texture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">Created as a resource data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as a asset bundle data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">The font data generating method of BMFont</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create an asset bundle SE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">Multilingual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">Excel format of string resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Window script(wra) syntax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">wra syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">Variables and expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">Window placement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">Screen:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">The arrangement of the control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">Base position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">Relationship between the anchor and the base position</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">If the same texture ID is specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">If the texture ID is different</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">Relative size :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">Size default value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = Control ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { control define … }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = width，height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = Control ID,…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = Priority value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">Position and size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">Direction of the scroll bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">Display control of the scroll bar.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoader interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManager interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">AssetBundle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">When it does version.unity3d is updated ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">Resident of asset bundles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">When a collision occurs in such as version control tool .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CSoundEffectMgr.html#id2">How to incorporate manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">How to incorporate the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id2">How to create a window class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#callback">The callback that reach to each window object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id4">Window property/method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id5">Others can be overridden methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contents-access">About content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contentslist-access">Content list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">The main property / method with the control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">Function/Method</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">How to clear log.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id1">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">The initial values of each layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">The main flow of rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">Timing onBeginRender is called .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">Example of use</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowResource</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CWinCtrlBase</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/CWinCtrlBase.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="cwinctrlbase">
+<span id="id1"></span><h1>CWinCtrlBase<a class="headerlink" href="#cwinctrlbase" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>All controls have inherited CWinCtrlBase.</p>
+<p>It has a common method / property of each control to CWinCtrlBase.</p>
+<p>Control that inherits CWinCtrlBase is also one that has its own properties. Please refer to the description of each control about it.</p>
+</div></blockquote>
+<div class="section" id="contents-access">
+<span id="id2"></span><h2>About content<a class="headerlink" href="#contents-access" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Controls that are defined by the CONTENTS on the window script is accessible <a class="reference internal" href="#getcontents"><span>getContents()</span></a> .</p>
+<p>The corresponding control: <a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a> 、 <a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a> 、 <a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Get the CONTAINER(Map)</span>
+<span class="n">CWinCtrlContainer</span>      <span class="n">ctnMap</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlContainer</span><span class="p">&gt;(</span><span class="n">CONTAINER_Map</span><span class="p">);</span>
+<span class="n">CWinContents</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">ctnMap</span><span class="p">.</span><span class="n">getContents</span><span class="p">();</span>
+<span class="c1">// Get the BUTTON(A) in contents</span>
+<span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">contents</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Also, CWindowBase. <a class="reference internal" href="CWindowBase.html#cwindowbase-find"><span>find</span></a>  function and CWinContents. <a class="reference internal" href="CWinContents.html#contents-find"><span>find</span></a>  search in the content .</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contentslist-access">
+<span id="id3"></span><h2>Content list<a class="headerlink" href="#contentslist-access" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>List box are those having set a plurality of contents .To add a row in the list box is that duplicate <a class="reference internal" href="#contents-access"><span>content</span></a> as a template.Therefore, the control with the same control ID exists in the contents list .To get a control of the content list , it is necessary to identify the content from the content list .</p>
+<p>In this case, you use the  <a class="reference internal" href="#getcontentsfromindex"><span>getContentsFromIndex(int index))</span></a> .</p>
+<p>It shows a typical code for access to the control in the list box.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// get the listbox control</span>
+<span class="n">CWinCtrlListbox</span>     <span class="n">lbFriends</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlListbox</span><span class="p">&gt;(</span><span class="n">LISTBOX_Friends</span><span class="p">);</span>
+
+<span class="c1">// set the listbox contents number</span>
+<span class="n">lbFriends</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="m">10</span><span class="p">);</span>
+
+<span class="c1">// update each contents in listbox(update 10 contents).</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">lbFriends</span><span class="p">.</span><span class="n">Count</span><span class="p">;++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// get the one column(= contents) from listbox</span>
+    <span class="n">CWinContents</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">lbFriends</span><span class="p">.</span><span class="n">getContentsFromIndex</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="n">CWInCtrlIcon</span> <span class="n">icon</span> <span class="p">=</span> <span class="n">contents</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlIcon</span><span class="p">&gt;(</span><span class="n">ICON_Avatar</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>The main property / method with the control<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Content-related<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="getcontents"></span><dl class="function">
+<dt id="_CPPv211getContentsv">
+<span id="getContents"></span>CWinContents <code class="descclassname"></code><code class="descname">getContents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211getContentsv" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first last">Get the content with the <a class="reference internal" href="CWinContents.html#cwincontents"><span>control</span></a> .</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id6">
+<h3>Content list related<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="member">
+<dt id="_CPPv25count">
+<span id="count__i"></span>int <code class="descclassname"></code><code class="descname">count</code><a class="headerlink" href="#_CPPv25count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a number of content list .</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26resizei">
+<span id="resize__i"></span>void <code class="descclassname"></code><code class="descname">resize</code><span class="sig-paren">(</span>int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26resizei" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int count:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The number of contents list</td>
+</tr>
+</tbody>
+</table>
+<p>Set the number of contents list .</p>
+<p>If the number of content list has increased , and the required number of copies the content as a template.</p>
+<p>Already elements of a content list is not performed the operation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26inserti">
+<span id="insert__i"></span>CWinContents <code class="descclassname"></code><code class="descname">insert</code><span class="sig-paren">(</span>int <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26inserti" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int pos:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">After create the content , it is where insert it into the content list .</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last"><a class="reference internal" href="CWinContents.html#cwincontents"><span>Content</span></a> with the control</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Copy the contents as a template,and insert it to the specified location.</p>
+</dd></dl>
+
+<span class="target" id="getcontentsfromindex"></span><dl class="function">
+<dt id="_CPPv220getContentsFromIndexi">
+<span id="getContentsFromIndex__i"></span>CWinContents <code class="descclassname"></code><code class="descname">getContentsFromIndex</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220getContentsFromIndexi" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int index:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Content index that you want to get in the content list</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last"><a class="reference internal" href="CWinContents.html#cwincontents"><span>Content</span></a> with the control</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Get the content using the index from the contents list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216getContentsIndex12CWinCtrlBase">
+<span id="getContentsIndex__CWinCtrlBase"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinCtrlBase <em>ctrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the control is included in the ordinal number of the content list.  It returns -1 if it is not also included in the elements of which content list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216getContentsIndex12CWinContents">
+<span id="getContentsIndex__CWinContents"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinContents <em>contents</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether content is included in the ordinal number of a content list. It returns -1 if it is not also included in the elements of which content list.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h3>Other<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="_CPPv28ToStringv">
+<span id="ToString"></span>string <code class="descclassname"></code><code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28ToStringv" title="Permalink to this definition">¶</a></dt>
+<dd><p>It generates a string by the type and ID of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv22id">
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the ID of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24kind">
+<span id="kind__e_WinCtrlKind"></span>e_WinCtrlKind <code class="descclassname"></code><code class="descname">kind</code><a class="headerlink" href="#_CPPv24kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>the kind of control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28priority">
+<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>the priority of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28position">
+<span id="position__Vector3"></span>Vector3 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the control position.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv211absPosition">
+<span id="absPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">absPosition</code><a class="headerlink" href="#_CPPv211absPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the window relative position of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214screenPosition">
+<span id="screenPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">screenPosition</code><a class="headerlink" href="#_CPPv214screenPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the absolute position of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25width">
+<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26height">
+<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24size">
+<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212contentsSize">
+<span id="contentsSize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">contentsSize</code><a class="headerlink" href="#_CPPv212contentsSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the content</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28getColori">
+<span id="getColor__i"></span>WinColor <code class="descclassname"></code><code class="descname">getColor</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28getColori" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ~ 7. Set the color. You can define up to eight texture parts . Therefore, you can define the eight color at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28setColori8WinColor">
+<span id="setColor__i.WinColor"></span>void <code class="descclassname"></code><code class="descname">setColor</code><span class="sig-paren">(</span>int <em>index</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setColori8WinColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the color. You can define up to eight texture parts . Therefore, you can define the eight color at the maximum.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25color">
+<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set / set the color of the texture part number 0 .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color1">
+<span id="color1__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color1</code><a class="headerlink" href="#_CPPv26color1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color2">
+<span id="color2__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color2</code><a class="headerlink" href="#_CPPv26color2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color3">
+<span id="color3__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color3</code><a class="headerlink" href="#_CPPv26color3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color4">
+<span id="color4__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color4</code><a class="headerlink" href="#_CPPv26color4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color5">
+<span id="color5__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color5</code><a class="headerlink" href="#_CPPv26color5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color6">
+<span id="color6__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color6</code><a class="headerlink" href="#_CPPv26color6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color7">
+<span id="color7__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color7</code><a class="headerlink" href="#_CPPv26color7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the color of the texture part number 1 (～ 7 ) .</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212setTextureIdi4uint">
+<span id="setTextureId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setTextureId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>texid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212setTextureIdi4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture ID.  You can define up to eight texture parts . Therefore, you can define the eight texture at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212getTextureIdi">
+<span id="getTextureId__i"></span>WinColor <code class="descclassname"></code><code class="descname">getTextureId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212getTextureIdi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the texture ID.  You can define up to eight texture parts . Therefore, you can define the eight texture at the maximum.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25texId">
+<span id="texId__uint"></span>uint <code class="descclassname"></code><code class="descname">texId</code><a class="headerlink" href="#_CPPv25texId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26texId1">
+<span id="texId1__uint"></span>uint <code class="descclassname"></code><code class="descname">texId1</code><a class="headerlink" href="#_CPPv26texId1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set a texture ID.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv29setPartIdi4uint">
+<span id="setPartId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setPartId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>partId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29setPartIdi4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture part ID.  You can define up to eight texture parts . Therefore, you can define the eight texture part ID at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv29getPartIdi">
+<span id="getPartId__i"></span>uint <code class="descclassname"></code><code class="descname">getPartId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29getPartIdi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the texture part ID.  You can define up to eight texture parts . Therefore, you can define the eight texture part ID at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214setTextureSizei7Vector2">
+<span id="setTextureSize__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureSize</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214setTextureSizei7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture part size.  You can define up to eight texture parts . Therefore, you can define the eight texture part size at the maximum.When index = 0, it becomes the equivalent of accessing (width, height).</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25parts">
+<span id="parts__uint"></span>uint <code class="descclassname"></code><code class="descname">parts</code><a class="headerlink" href="#_CPPv25parts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId1">
+<span id="partId1__uint"></span>uint <code class="descclassname"></code><code class="descname">partId1</code><a class="headerlink" href="#_CPPv27partId1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId2">
+<span id="partId2__uint"></span>uint <code class="descclassname"></code><code class="descname">partId2</code><a class="headerlink" href="#_CPPv27partId2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId3">
+<span id="partId3__uint"></span>uint <code class="descclassname"></code><code class="descname">partId3</code><a class="headerlink" href="#_CPPv27partId3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId4">
+<span id="partId4__uint"></span>uint <code class="descclassname"></code><code class="descname">partId4</code><a class="headerlink" href="#_CPPv27partId4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId5">
+<span id="partId5__uint"></span>uint <code class="descclassname"></code><code class="descname">partId5</code><a class="headerlink" href="#_CPPv27partId5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId6">
+<span id="partId6__uint"></span>uint <code class="descclassname"></code><code class="descname">partId6</code><a class="headerlink" href="#_CPPv27partId6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27partId7">
+<span id="partId7__uint"></span>uint <code class="descclassname"></code><code class="descname">partId7</code><a class="headerlink" href="#_CPPv27partId7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the texture part ID.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216setTextureOffseti7Vector2">
+<span id="setTextureOffset__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureOffset</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216setTextureOffseti7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the display offset of texture parts.  You can define up to eight texture parts . Therefore, you can define the eight display offsets at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216getTextureOffseti">
+<span id="getTextureOffset__i"></span>Vector2 <code class="descclassname"></code><code class="descname">getTextureOffset</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getTextureOffseti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the display offset of texture parts.  You can define up to eight texture parts . Therefore, you can define the eight display offsets at the maximum.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26anchor">
+<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the anchor to determine the origin .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv210baseAnchor">
+<span id="baseAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">baseAnchor</code><a class="headerlink" href="#_CPPv210baseAnchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set/Get the base anchor to determine to where the center of the control .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv210textAnchor">
+<span id="textAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">textAnchor</code><a class="headerlink" href="#_CPPv210textAnchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set/Get the text anchor to decide to where the center of the caption .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28fontKind">
+<span id="fontKind__uint"></span>uint <code class="descclassname"></code><code class="descname">fontKind</code><a class="headerlink" href="#_CPPv28fontKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the type of font.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27caption">
+<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the caption.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv29captionId">
+<span id="captionId__uint"></span>uint <code class="descclassname"></code><code class="descname">captionId</code><a class="headerlink" href="#_CPPv29captionId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set caption ID. However, it is not reflected in the caption to be set .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212captionColor">
+<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the caption color.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv213captionOffset">
+<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the display offset of caption.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv29lineSpace">
+<span id="lineSpace__float"></span>float <code class="descclassname"></code><code class="descname">lineSpace</code><a class="headerlink" href="#_CPPv29lineSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the space between the content. Also, a value of between the lines in the rich text .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24SEId">
+<span id="SEId__uint"></span>uint <code class="descclassname"></code><code class="descname">SEId</code><a class="headerlink" href="#_CPPv24SEId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the ID of the SE assigned to the control .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26parent">
+<span id="parent__CWinContents"></span>CWinContents <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the content with the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.groups">
+CWinCtrlBase[] <code class="descname">groups</code><a class="headerlink" href="#c.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the group with the control .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26window">
+<span id="window__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">window</code><a class="headerlink" href="#_CPPv26window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the window that contains the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25style">
+<span id="style__e_WinCtrlStyle"></span>e_WinCtrlStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the control style flag.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24hide">
+<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>true: Hide the control.</p>
+</div></blockquote>
+<p>false: display the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27disable">
+<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p class="first">true: inactivate control and darken.</p>
+</li>
+<li><p class="first">false: activate control.</p>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25nohit">
+<span id="nohit__b"></span>bool <code class="descclassname"></code><code class="descname">nohit</code><a class="headerlink" href="#_CPPv25nohit" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p class="first">true: Take away the functions of the control (no dark Unlike disable).</p>
+</li>
+<li><p class="first">false: activate control.</p>
+</li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CWinContents.html" class="btn btn-neutral float-right" title="CWinContents">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CWindowBase.html" class="btn btn-neutral" title="CWindowBase"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, kanemura.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

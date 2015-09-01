@@ -1,0 +1,141 @@
+.. highlight:: csharp
+
+===================================
+CMessageDataSheetMgrについて
+===================================
+
+.. _CMessageDataSheetMgr:
+
+ 文字リソースを管理するためのオブジェクトです。
+
+ CMessageDataSheetが、Excelのシートに対応しています。
+
+ CMessageDataSheetMgrは、CMessageDataSheetを束ねるコンテナになっています。
+
+ ちょうど、CMessageDataSheetMgrが、Excelの１ファイルに相当するようになっています。 
+
+
+アプリケーションに組み込む方法
+----------------------------------------------------
+
+ CMainSystemのAwakeの中で、addManagerします。
+  
+.. code-block:: csharp
+
+ public class CMainSystem : CMainSystemBase {
+    //==========================================================================
+     /*!Awake
+     * @brief	Unity Callback
+     */
+     new void Awake() {
+         base.Awake();
+
+         if (m_instance != null) {
+             Debug.LogError("already exist CMainSystem");
+             return;
+         }
+         m_instance = this;
+
+         // Add Component
+         gameObject.AddComponent<CInput>();
+         gameObject.AddComponent<CAssetBundleMgr>();
+         gameObject.AddComponent<CSpriteFontMgr>();
+         gameObject.AddComponent<CTextureResourceMgr>();
+         gameObject.AddComponent<CWindowMgr>();
+         gameObject.AddComponent<CBgmResourceMgr>();
+         gameObject.AddComponent<CSeResourceMgr>();
+         gameObject.AddComponent<CSoundEffectMgr>();
+
+         addManager(new CMessageDataSheetMgr(Utility.getSystemLocale()));
+     }
+
+..
+
+
+ また、CWindowMgrのキャプションと関連付けたいときは、CMainSystemのinitializeの中で次のように設定します。
+
+.. code-block:: csharp
+
+ public class CMainSystem : CMainSystemBase {
+    //==========================================================================
+    /*!Initialize
+    * @brief	initialize
+    */
+    override protected void initialize() {
+        base.initialize();
+
+        //--------------------------------------------
+        // WindowMgr initialize.
+        //--------------------------------------------
+        CWindowMgr	cWindowMgr = CWindowMgr.Instance;
+        // initialize caption interface
+        cWindowMgr.captiondata = CMessageDataSheetMgr.Instance.find(new FiveCC("WNDW"));
+
+..
+
+ CMessageDataSheetMgrが、IWinCaptionDataインターフェースを持っているためこのように記述可能です。
+
+
+CMessageDataSheetMgr
+------------------------------------------------------
+
+ CMessageDataSheetMgrは、CMessageDataSheetを複数持つ、コンテナになっています。
+ 
+ CMessageDataSheetは、Excel上でシート一つに該当します。
+ 
+ CMessageDataSheetMgrは、Excelのシートを束ねて持っているコンテナとも言えます。
+ 
+ ただし、複数ロケールを持つわけではなく、一つのロケールに対応する文字リソースデータを保持するようになっています。
+ 
+.. c:function:: void initialize(byte[] buffer)
+
+ :param byte[] buffer: 読み込んだバイナリデータ
+ 
+ Excelから生成したバイナリデータを指定します。
+
+
+.. cpp:function::  CMessageDataSheet find(uint sheetname)
+
+ :param uint type: シート名を :ref:`FiveCC` で渡します。
+ 
+ シートを一つ取得します。
+
+::
+
+ CMessageDataSheet cSheet = cMessageDataSheetMgr.find(new FiveCC("WNDW");
+
+..
+
+.. cpp:member::  e_Locale eLocale
+
+ 現在設定されているロケールを取得する。 
+ 
+.. cpp:member:: CMessageDataSheetMgr Instance
+
+ CMessageDataSheetMgrのインスタンスを取得する。
+ 
+
+.. _CMessageDataSheet:
+
+CMessageDataSheet
+------------------------------------------------------
+
+ Excel上のシート一つに対応します。
+
+.. c:function:: string find(uint id)
+
+ :param uint id: :ref:`マルチID<MulID>` を指定し、文字リソースを取得します。
+
+.. c:function:: string format(uint id,params object[] args)
+
+ :param uint id: :ref:`マルチID<MulID>` を指定し、文字リソースを取得します。
+ :param params object[] args: 可変引数
+ 
+ フォーマットにそって文字リソースを生成し返します。
+  
+ 
+.. code-block:: csharp
+
+ string str = cMessageDataSheetMgr.format(new MulId(0,0,1),"Test",n,value);
+
+..

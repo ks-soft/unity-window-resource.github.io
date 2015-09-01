@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RICHTEXT &mdash; WindowResource 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowResource 1 documentation" href="index.html"/>
+        <link rel="next" title="LOG" href="LOG.html"/>
+        <link rel="prev" title="TEXT" href="TEXT.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WindowResource</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">環境構築方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">cygwinインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Python 2.x インストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">チュートリアル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">最初に</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id3">スクリプト作成/編集方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">ウィンドウビューワー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">アセットバンドル/リソースデータ化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id8">実際のゲーム内でウィンドウを扱う方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">サンプルを動かすための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">サンプル画面説明</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">マルチID,FiveCC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">マルチID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">テクスチャについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">テクスチャリソースを作る方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">定義ファイル &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">プリプロセッサ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">フォントについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">リソースデータとして作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">アセットバンドルデータとして作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">BMFontによるフォントデータ作成方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">効果音、BGMについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">SEのアセットバンドルを作成する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def記述方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">BGMのアセットバンドルを作成する方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">多言語対応について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">文字リソースExcel書式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">文字リソースExcelコンバート方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">wra文法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">変数と式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">プリプロセッサ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">スクリーン:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">アンカー：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id3">プロパティ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">コントロールの配置について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">アンカー：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">ベースポジション:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">アンカーとベースポジションの関係</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">コントロールのプライオリティについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">同一のテクスチャIDが指定されているとき</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">テクスチャIDが異なるとき</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">コントロールのサイズについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">相対サイズ指定:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">サイズのデフォルト値</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">コントロールの共通プロパティ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = コントロールID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = 横サイズ,縦サイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { コントロール定義 … }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = 横幅，縦幅</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = コントロールID,…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = プライオリティ値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = テクスチャID,パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = テクスチャID,パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = オフセットX,オフセットY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = 横サイズ,縦サイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">RICHTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">位置とサイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">スクロールバーの方向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">スクロールバーの表示制御</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">プロパティ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoaderインターフェース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManagerインターフェース</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">version.unity3dが作られるタイミング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">アセットバンドルの常駐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">バージョン管理ツールなどでぶつかった時</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CSoundEffectMgr.html#id2">マネージャを組み込む方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">アプリケーションに組み込む方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id2">ウィンドウクラスを作成する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#callback">各ウィンドウオブジェクトに届くコールバックについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id4">ウィンドウオブジェクトの持つ主なプロパティ/メソッド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id5">その他オーバーライド可能なメソッド</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contents-access">コンテンツについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contentslist-access">コンテンツリストについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#id4">コントロールが持つ主なプロパティ/メソッド</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">関数/プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">C#からのアクセス方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">使用例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">ログをクリアする方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id1">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">C#からのアクセス方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">使用例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">各レイヤーの初期値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">レンダリングの主な流れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">onBeginRenderが呼ばれるタイミング.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">記述例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">使用例</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowResource</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>RICHTEXT</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/RICHTEXT.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="richtext">
+<span id="id1"></span><h1>RICHTEXT<a class="headerlink" href="#richtext" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span>CWinCtrlRichText</span></a></p>
+<p>リッチテキストを表示するためのコントロールです。</p>
+<p>改行や途中で文字色を変えたりすることが可能です。</p>
+<blockquote>
+<div><p>RICHTEXT(コントロール名) {</p>
+<blockquote>
+<div><p>プロパティ1;</p>
+<p>プロパティ2;</p>
+<blockquote>
+<div><p>:</p>
+<p>:</p>
+</div></blockquote>
+<p>プロパティn;</p>
+</div></blockquote>
+<p>};</p>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>記述例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
+
+WINDOW(255_000_00001) {
+  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_LEFT;
+  POSITION = 0,-100;
+  SIZE = 512,256;
+};
+
+RICHTEXT(Message) {
+  ID = 00_000_00010;
+  POSITION = 0,-64;
+  CAPTION = &quot;\a[3]TESTabc\f[fn16]smallFont\t123[100_000_00001,ATTR1,32,32,0]&quot; +
+            &quot;\a[4]\w[001_002_00003,click here!]&quot;;
+  CONTENTS_SIZE = 380, 64;
+};
+</pre></div>
+</div>
+<img alt="_images/RICHTEXT.png" src="_images/RICHTEXT.png" />
+</div>
+<div class="section" id="id3">
+<h2>プロパティ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id-id">
+<h3><strong>ID</strong> = コントロールID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>コントロールIDを定義します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="size">
+<h3><strong>SIZE</strong> = 改行サイズ<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>    <span class="c1">//128pixel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="font-kind">
+<h3><strong>FONT_KIND</strong> = フォント種類<a class="headerlink" href="#font-kind" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>フォントの種類を指定します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">FONT_KIND</span> <span class="p">=</span> <span class="s">&quot;fnt32&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="caption-id">
+<h3><strong>CAPTION</strong> = キャプションID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>文字列のIDを指定してください。</p>
+<p><a class="reference internal" href="caption.html#multi-language"><span>こちら</span></a> を参照ください。</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00100</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="caption">
+<h3><strong>CAPTION</strong> = &#8220;文字列&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>文字列を設定します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="caption-color-r-g-b-a">
+<h3><strong>CAPTION_COLOR</strong> = R,G,B,A<a class="headerlink" href="#caption-color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>キャプションのカラーを指定できます。</p>
+<p>0～1の間で指定してください。</p>
+</div></blockquote>
+</div>
+<div class="section" id="line-space">
+<h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>行間をこのプロパティで設定可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="caption-offset-x-y">
+<h3><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ<a class="headerlink" href="#caption-offset-x-y" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>キャプションの位置を移動することができます。</div></blockquote>
+</div>
+<div class="section" id="style-0-1-n">
+<h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
+<p>コントロールの表示アンカーを指定できます。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">表示位置アンカーフラグ</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を左上に設定</div>
+<div class="line">ANCHOR_LEFTTOPと同じ</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を左上に設定</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を左に設定</div>
+<div class="line">縦にはセンタリング</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を左に設定</div>
+<div class="line">縦には下辺を基準に配置</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>ANCHOR_TOP</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を上辺に設定</div>
+<div class="line">横方向にはセンタリング</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_TOPになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を画面中央にセンタリング</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_CENTERになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を底辺に設定</div>
+<div class="line">横方向にはセンタリング</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を右上に設定</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を右に設定</div>
+<div class="line">縦にはセンタリング</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">アンカー位置を右に設定</div>
+<div class="line">縦には下辺を基準に配置</div>
+<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div>コントロールの中心位置を指定できます。</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">中心位置変更フラグ</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BASE_DEFAULT</td>
+<td><div class="first last line-block">
+<div class="line">アンカーフラグに応じて変わる。</div>
+<div class="line">特に指定しなければ、これになります。</div>
+<div class="line">各アンカーフラグの説明を参照</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_LEFTTOP</td>
+<td>中心位置をコントロールの左上に設定</td>
+</tr>
+<tr class="row-even"><td>BASE_LEFT</td>
+<td><div class="first last line-block">
+<div class="line">中心位置を左に設定</div>
+<div class="line">縦にはコントロールの真中</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
+<td>中心位置を左下に設定</td>
+</tr>
+<tr class="row-even"><td>BASE_TOP</td>
+<td><div class="first last line-block">
+<div class="line">中心位置を上辺に設定</div>
+<div class="line">横にはコントロールの中心</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_CENTER</td>
+<td>中心位置をコントロールの中心</td>
+</tr>
+<tr class="row-even"><td>BASE_BOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">中心位置を底辺に設定</div>
+<div class="line">横方向にはコントロールの真中</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_RIGHTTOP</td>
+<td>中心位置をコントロールの右上に設定</td>
+</tr>
+<tr class="row-even"><td>BASE_RIGHT</td>
+<td><div class="first last line-block">
+<div class="line">中心位置を右に設定</div>
+<div class="line">横にはコントロールの中心</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">中心位置を右下に設定</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>キャプションの中心位置を指定できます。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">テキストアンカー</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TEXT_CENTER</td>
+<td>テキスト表示を中心に合わせます。</td>
+</tr>
+<tr class="row-odd"><td>TEXT_LEFT</td>
+<td>テキスト表示を左に合わせます。</td>
+</tr>
+<tr class="row-even"><td>TEXT_RIGHT</td>
+<td>テキスト表示を右に合わせます。</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>機能を制限するスタイルは以下のものがあります。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">機能制限スタイル</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HIDE</td>
+<td>表示を隠す。</td>
+</tr>
+<tr class="row-odd"><td>DRAG</td>
+<td>ドラッグ可能にする。</td>
+</tr>
+<tr class="row-even"><td>DISABLE</td>
+<td>押せなくし、暗くする。</td>
+</tr>
+<tr class="row-odd"><td>NOHIT</td>
+<td>押せなくする。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="richtext-cmd">
+<span id="id4"></span><h3>リッチテキストで使用可能なコントロールコード<a class="headerlink" href="#richtext-cmd" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>リッチテキストのキャプションにコントロールコードを埋め込むことによって、様々な装飾が可能になっています。</p>
+<p>例えば、途中にテクスチャを挟み込むには次のような文字列をキャプションに設定します。</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;テクスチャテスト\t[001_001_01000,icon0,32,32,0]\n表示テスト&quot;</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">\n or \r</th>
+<th class="head">改行</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\ \</td>
+<td>\文字</td>
+</tr>
+<tr class="row-odd"><td>\f[フォント名]</td>
+<td>以降のフォントを指定したものに切り替える</td>
+</tr>
+<tr class="row-even"><td>\a[0] or \a[1]</td>
+<td>横:左揃え 縦:上辺</td>
+</tr>
+<tr class="row-odd"><td>\a[2]</td>
+<td>横:左揃え 縦:中心</td>
+</tr>
+<tr class="row-even"><td>\a[3]</td>
+<td>横:左揃え 縦:下辺</td>
+</tr>
+<tr class="row-odd"><td>\a[4]</td>
+<td>横:センタリング 縦:上辺</td>
+</tr>
+<tr class="row-even"><td>\a[5]</td>
+<td>横:センタリング 縦:中心</td>
+</tr>
+<tr class="row-odd"><td>\a[6]</td>
+<td>横:センタリング 縦:下辺</td>
+</tr>
+<tr class="row-even"><td>\a[7]</td>
+<td>横:右揃え 縦:上辺</td>
+</tr>
+<tr class="row-odd"><td>\a[8]</td>
+<td>横:右揃え 縦:中心</td>
+</tr>
+<tr class="row-even"><td>\a[9]</td>
+<td>横:右揃え 縦:下辺</td>
+</tr>
+<tr class="row-odd"><td>\c[0]</td>
+<td>カラーを白色</td>
+</tr>
+<tr class="row-even"><td>\c[1]</td>
+<td>カラーを水色</td>
+</tr>
+<tr class="row-odd"><td>\c[2]</td>
+<td>カラーを紫色</td>
+</tr>
+<tr class="row-even"><td>\c[3]</td>
+<td>カラーを青色</td>
+</tr>
+<tr class="row-odd"><td>\c[4]</td>
+<td>カラーを黄色</td>
+</tr>
+<tr class="row-even"><td>\c[5]</td>
+<td>カラーを緑色</td>
+</tr>
+<tr class="row-odd"><td>\c[6]</td>
+<td>カラーを赤色</td>
+</tr>
+<tr class="row-even"><td>\c[7]</td>
+<td>カラーをピンク色</td>
+</tr>
+<tr class="row-odd"><td>\c[8]</td>
+<td>カラーをオレンジ色</td>
+</tr>
+<tr class="row-even"><td>\c[9]</td>
+<td>カラーをスカイブルー</td>
+</tr>
+<tr class="row-odd"><td>\c[10]</td>
+<td>カラーを黒</td>
+</tr>
+<tr class="row-even"><td>\C[00000000] ～ \C[FFFFFFFF]</td>
+<td>カラーを16進数(AARRGGBB)で指定</td>
+</tr>
+<tr class="row-odd"><td>\wUserID[WindowID,キャプション]</td>
+<td>指定したIDの <a class="reference internal" href="#richtext-windowcmd"><span>ウィンドウ</span></a> コマンドを発行する。</td>
+</tr>
+<tr class="row-even"><td>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</td>
+<td>指定したテクスチャ内のパーツIDの <a class="reference internal" href="#richtext-texturecmd"><span>パーツ</span></a> を埋め込む。</td>
+</tr>
+<tr class="row-odd"><td>\B or \b</td>
+<td>ボールド</td>
+</tr>
+<tr class="row-even"><td>\S or \s</td>
+<td>影付き</td>
+</tr>
+<tr class="row-odd"><td>\N</td>
+<td>装飾無</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>\aコマンドを使ったときに、右揃え、センタリング、左揃えのアンカーが変化したとき、自動的に改行します。</div></blockquote>
+<div class="section" id="w">
+<span id="richtext-windowcmd"></span><h4>ウィンドウコマンド \w<a class="headerlink" href="#w" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>指定されたキャプション文字列をタッチすると <a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>コールバック</span></a> が発生します。</p>
+<p>次のようなフォーマットになっています。</p>
+<blockquote>
+<div>\wUserID[WindowID,キャプション]</div></blockquote>
+<ul class="simple">
+<li>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</li>
+<li>WindowID: マルチIDで指定してください。</li>
+<li>キャプション: 文字列を指定してください。この文字列を押すとコールバックが発生します。</li>
+</ul>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;\a[4]\w123[001_002_00003,click here!]&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="t">
+<span id="richtext-texturecmd"></span><h4>テクスチャコマンド \t<a class="headerlink" href="#t" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>文字列の途中にテクスチャを埋め込めます。</p>
+<p>テクスチャをタッチすると <a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>コールバック</span></a> が発生します。</p>
+<p>次のようなフォーマットになっています。</p>
+<blockquote>
+<div>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</div></blockquote>
+<ul class="simple">
+<li>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</li>
+<li>テクスチャID: マルチIDで指定してください。</li>
+<li>横,縦: ピクセルサイズを指定してください。</li>
+<li>Yオフセット: 表示するときのY方向へのオフセットです(省略可能です)。</li>
+</ul>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;テクスチャテスト\t456[001_001_01000,icon0,32,32,0]&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LOG.html" class="btn btn-neutral float-right" title="LOG">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TEXT.html" class="btn btn-neutral" title="TEXT"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, kanemura.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+.. highlight:: csharp
+
+.. _multi_language:
+
+===================================
+多言語対応について
+===================================
+
+ 文字リソースをアセットデータとしてアプリケーションと分離する機能を持っています。
+ 
+ この文字リソースを切り替えることによって多言語対応が可能になっています。
+
+ ただし、ウィンドウシステムを使うに当たって必須ではありません。
+ 
+ 文字データのアセットデータを作成する際、MS-Excelを使用します。
+ 
+ 作成したExcelデータからリソースデータ用のバイナリデータを出力するためのツールを用意しています。
+ 
+ 出力されたデータを使用するためのオブジェクトとして、以下を用意してあります。
+ 
+ * :ref:`CMessageDataSheetMgr<CMessageDataSheetMgr>`
+ * :ref:`CMessageDataSheet<CMessageDataSheet>`
+ 
+
+文字リソースExcel書式
+----------------------------------------------------
+
+ Excelファイルフォーマットは次の図のようになります。
+ 
+ .. image:: images/messagedata.png
+
+
+[ORIGIN]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ [ORIGIN]というカラムを基準にデータを取得してきます。
+ 
+ 必須ですので必ず右下のデータが始まる先頭においてください。
+ 
+ [ORIGIN]と同じ行はコメント扱いになり、データ出力に影響を与えません。
+
+[D],[R]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ B4カラム,C4カラムの[D],[R]は、バージョンごとに出力するかしないかを選択します。
+ ここの列が空欄の時は、その行はデータ出力を抑止します。
+
+ * [D]はデバッグバージョン
+ * [R]はリリースバージョン
+ 
+ DやRの文字は自由に設定でき、コンバータに渡す引数でどのデータを出力するかしないかを選択可能になっています。
+ 細かくバージョン管理したいときは、行を追加して下さい。
+
+ID
+^^^^^^^^^^^^^^^^^^^^
+
+ D3カラムのIDは、文字リソースのIDを :ref:`マルチID<MulID>` で指定することになります。
+ その下(D4)の、[D][R]は、デバッグバージョン、リリースバージョンでも必要なのでこのような記述になっています。
+
+ IDを使って、文字リソースにアクセスするので、IDカラムは全てのバージョンで必須です。
+
+JP,EN
+^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+ E3 ,F3カラムのJP,ENは文字リソースのロケール名です。
+ 出力するとき次のようにデータが出力されます。
+ 
+ * messagedata.JP.bin
+ * messagedata.EN.bin
+ 
+ 自由に列を追加可能です。
+ 
+ E4の[D][R]は、ロケールがJPの時は、リリース、デバッグ両方で出力することを意味します。
+ 
+ それに対して、F4の[D]は、デバッグバージョンでのみ出力することを意味しています。
+ 
+ 
+シート名 [WNDW]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ シート名は、 :ref:`FiveCC` でエンコードされます。
+ 
+ よって、半角英数字5文字まででシート名を付けてください。
+ 
+ シート名+IDの組み合わせで、文字リソースにアクセスすることになります。
+ 
+
+文字リソースExcelコンバート方法
+----------------------------------------------------
+
+ messagedata.exe、若しくはmessagedata.pyを使ってください。
+ 
+ `こちら <../../StringResource.zip>`_ からダウンロードしてください。
+
+ python(2.6以降)を用いて記述されています。
+ 
+ Excelデータの読み込みには、openpyxlを使用しています。
+ 
+ インストール手順はここを参照ください。
+ 
+ exeにするときに、pyinstallerを使っています。
+ 
+[使用方法] messagedata.exe or messagedata.py
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ messagedata [-v version] Excelファイル名 [出力ファイル名]
+ 
+ * -v version
+   
+ versionで指定した、文字列のデータを出力します。
+ デフォルトでは、Dになっています。
+ 
+ * Excelファイル名
+ 
+  エクセルファイルを指定してください。必須です。
+ 
+ * 出力ファイル名
+
+  省略したときは、エクセルファイル名から生成します。
+  
+::
+
+ messagedata -v R messagedata.xlsx caption
+ 
+ output file names:
+   messagedata.JP.bin
+   messagedata.EN.bin
+   etc
+
+..
+
+アセットバンドル化
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ 標準で用意しているアセットバンドル化の手順です。
+
+ バイナリを自前で読み込みデータを展開する方法もあります。
+ 
+ メニュータブから、[KsTools]->[Export Binary Data]を選択してください。
+ 
+ .. image:: images/exportbinary.png
+
+ メッセージデータファイルを変更したときは、以下のコードを参考に修正/追加してください。
+ 
+ Editor/KsSoft/ExportBinaryData.cs
+
+::
+
+  public class ExportBinaryData {
+
+    const string BINARY_BASE_PATH = "StringResource/";
+    const string COMPARE_PATH     = "bin/";
+    static Dictionary<uint,string>	m_dicBinaryExport = new Dictionary<uint,string>();
+
+    static ExportBinaryData() {
+        m_dicBinaryExport[AssetBundleId.MessageDataJP] = "messagedata.JP.bin";
+        m_dicBinaryExport[AssetBundleId.MessageDataEN] = "messagedata.EN.bin";
+    }
+
+..

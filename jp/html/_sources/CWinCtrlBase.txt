@@ -1,0 +1,335 @@
+.. highlight:: csharp
+
+.. _CWinCtrlBase:
+
+========================
+CWinCtrlBase
+========================
+
+ 全てのコントロールは、CWinCtrlBaseを継承しています。
+
+ CWinCtrlBaseに各コントロールの共通メソッド/プロパティを持っています。
+ 
+ これを継承したコントロールはそれぞれ独自のプロパティを持つものもありますが、それについては各コントロールの説明を参照ください。
+
+.. _CONTENTS_ACCESS:
+
+コンテンツについて
+----------------------------------------
+ ウィンドウスクリプト上で、 **CONTENTS** によって関連付いたコントロールは :ref:`getContents()<getContents>` でアクセス可能です。
+ 
+ :ref:`CHECKBOX` 、 :ref:`RADIO` 、 :ref:`CONTAINER` 等のコンテンツはこれに該当します。
+
+::
+
+ // Get the CONTAINER(Map)
+ CWinCtrlContainer	ctnMap = find<CWinCtrlContainer>(CONTAINER_Map);
+ CWinContents contents = ctnMap.getContents();
+ // Get the BUTTON(A) in contents
+ CWinCtrlButton btnA = contents.find<CWinCtrlButton>(BUTTON_A);
+
+..
+
+ また、CWindowBase. :ref:`find<CWindowBase_find>` 関数と、CWinContents. :ref:`find<Contents_find>` は、コンテンツ内も(再帰的に)検索対象にします。
+ よって、単純に次のようにもBUTTON_Aを取り出すことができます。
+
+::
+
+ CWinCtrlButton btnA = find<CWinCtrlButton>(BUTTON_A);
+
+..
+
+.. _CONTENTSLIST_ACCESS:
+
+コンテンツリストについて
+----------------------------------------
+
+ リストボックスはコンテンツを複数組み持つものになります。
+ リストボックスの行を追加するというのは、 :ref:`コンテンツ<CONTENTS_ACCESS>` をテンプレートとして複製するということです。
+ よって、コンテンツリスト内には同一のコントロールIDを持つコントロールが複数存在することになります。
+ 特定のコンテンツリスト内のコントロールを取得するには、まず最初にコンテンツリスト内からコンテンツを特定する必要があります。
+ 
+ この時、 :ref:`getContentsFromIndex(int index)<getContentsFromIndex>` を使います。
+
+ 以下にリストボックス内のコントロールに対してアクセスする典型的なコードを掲載しておきます。
+
+::
+
+    // get the listbox control
+    CWinCtrlListbox	lbFriends = find<CWinCtrlListbox>(LISTBOX_Friends);
+
+    // set the listbox contents number
+    lbFriends.resize(10);
+
+    // update each contents in listbox(update 10 contents).
+    for (int i = 0;i < lbFriends.Count;++i) {
+        // get the one column(= contents) from listbox
+        CWinContents contents = lbFriends.getContentsFromIndex(i);
+        
+        CWInCtrlIcon icon = contents.find<CWinCtrlIcon>(ICON_Avatar);
+
+..
+
+
+コントロールが持つ主なプロパティ/メソッド
+---------------------------------------------------
+
+コンテンツ関連
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _getContents:
+
+.. cpp:function:: CWinContents getContents()
+
+ :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>` を取得する。
+
+コンテンツリスト関連
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. cpp:member:: int count
+
+ コンテンツリストの数を取得する。
+
+
+.. cpp:function:: void resize(int count)
+
+ :param int count: コンテンツリストサイズ
+
+ コンテンツリストの数を設定する。
+ 
+ コンテンツリストの数が増えたときは、コンテンツをテンプレートとして必要な数、複製します。
+ 
+ 既にあるコンテンツリストの要素に対しては操作は行いません。
+ 
+.. cpp:function:: CWinContents insert(int pos)
+ 
+ :param int pos: コンテンツを作成し、コンテンツリストに挿入する場所
+ :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>`
+
+ コンテンツリストの特定の場所にコンテンツを生成し挿入する。
+
+
+.. _getContentsFromIndex:
+
+
+.. cpp:function:: CWinContents getContentsFromIndex(int index)
+
+
+ :param int index: コンテンツリスト内の取得したいコンテンツのインデックス
+ :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>`
+
+ コンテンツリストから、インデックスを用いて取得する。
+
+.. cpp:function:: int getContentsIndex(CWinCtrlBase ctrl)
+
+ 特定のコントロールが何番目のコンテンツリストに含まれているか調べて返す。
+ どのコンテンツリストの要素にも入っていなければ-1が返る。
+
+.. cpp:function:: int getContentsIndex(CWinContents contents)
+
+ 特定のコンテンツが何番目のコンテンツリストに含まれているか調べて返す。
+ どのコンテンツリストのコンテンツのどれとも合致しなければ-1が返る。
+
+
+その他
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. cpp:function:: string ToString()
+
+ コントロールの種類とIDによる文字列を生成する。
+ 
+.. cpp:member:: uint id
+
+ コントロールのIDを取得/設定する。
+
+.. cpp:member:: e_WinCtrlKind kind
+
+ コントロールの種類を取得する。
+
+.. cpp:member:: int priority
+
+ コントロールのプライオリティを取得/設定する。
+ 
+.. cpp:member:: Vector3 position
+
+ コントロールの座標を設定する。
+ 
+.. cpp:member:: Vector2 absPosition
+
+ コントロールの座標をウィンドウ基準から取得
+ 
+.. cpp:member:: Vector2 screenPosition
+
+ コントロールの座標を画面基準から取得
+
+.. cpp:member:: float width
+.. cpp:member:: float height
+
+ コントロールのサイズを取得/設定する。
+
+.. cpp:member:: Vector2 size
+
+ コントロールのサイズを取得/設定する。
+ 
+.. cpp:member:: Vector2 contentsSize
+
+ コンテンツのサイズを取得/設定する。
+
+.. cpp:function:: WinColor getColor(int index)
+
+ index = 0～7の間で設定する。
+ カラーを取得する。
+ テクスチャパーツを最大８まで持てるので、カラーもそれに対応して、8個持てる。
+
+.. cpp:function:: void setColor(int index,WinColor color)
+
+ index = 0～7の間で設定する。
+ カラーを設定する。
+ テクスチャパーツを最大８まで持てるので、カラーもそれに対応して、8個持てる。
+
+.. cpp:member:: WinColor color
+
+ テクスチャパーツ番号0番のカラーを取得/設定する。
+
+.. cpp:member:: WinColor color1
+.. cpp:member:: WinColor color2
+.. cpp:member:: WinColor color3
+.. cpp:member:: WinColor color4
+.. cpp:member:: WinColor color5
+.. cpp:member:: WinColor color6
+.. cpp:member:: WinColor color7
+
+ テクスチャパーツ番号1(～7番)のカラーを取得/設定する。
+
+.. cpp:function:: void setTextureId(int index,uint texid)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャIDを設定する。
+ テクスチャパーツを最大８まで持てるので、テクスチャIDもそれに対応して8個持てる。
+ 
+.. cpp:function:: WinColor getTextureId(int index)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャIDを取得する。
+ テクスチャパーツを最大８まで持てるので、テクスチャIDもそれに対応して8個持てる。
+
+.. cpp:member:: uint texId
+.. cpp:member:: uint texId1
+
+ テクスチャＩＤを取得/設定する。
+
+.. cpp:function:: void setPartId(int index,uint partId)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャパーツIDを設定する。
+ テクスチャパーツを最大８まで持てるので、パーツIDもそれに対応して8個持てる。
+
+.. cpp:function:: uint getPartId(int index)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャパーツIDを取得する。
+ テクスチャパーツを最大８まで持てるので、パーツIDもそれに対応して8個持てる。
+
+.. cpp:function:: void setTextureSize(int index,Vector2 size)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャパーツの表示サイズを設定する。
+ テクスチャパーツを最大８まで持てるので、サイズもそれに対応して8個持てる。
+ 特にindex = 0の時、width,heightにアクセスするのと同等になる。
+
+.. cpp:member:: uint parts
+.. cpp:member:: uint partId1
+.. cpp:member:: uint partId2
+.. cpp:member:: uint partId3
+.. cpp:member:: uint partId4
+.. cpp:member:: uint partId5
+.. cpp:member:: uint partId6
+.. cpp:member:: uint partId7
+
+ テクスチャパーツＩＤを取得/設定する。
+
+.. cpp:function:: void setTextureOffset(int index,Vector2 offset)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャパーツの表示オフセットを設定する。
+ テクスチャパーツを最大８まで持てるので、オフセットもそれに対応して8個持てる。
+
+.. cpp:function:: Vector2 getTextureOffset(int index)
+
+ index = 0～7の間で設定する。
+ 特定のテクスチャパーツの表示オフセットを取得する。
+ テクスチャパーツを最大８まで持てるので、オフセットもそれに対応して8個持てる。
+
+.. cpp:member:: e_Anchor anchor
+
+ 基準座標を決定するためのアンカーを取得/設定する。
+
+.. cpp:member:: e_Anchor baseAnchor
+
+ コントロールの原点をどこにするかを決定するベースアンカーを取得/設定する。
+
+.. cpp:member:: e_Anchor textAnchor
+
+ キャプションの原点をどこにするかを決定するテキストアンカーを取得/設定する。
+
+.. cpp:member:: uint fontKind
+
+ フォントの種類を取得/設定する。
+
+.. cpp:member:: string caption
+
+ キャプションを取得/設定する。
+
+.. cpp:member:: uint captionId
+
+ キャプションIDを取得/設定する。
+ ただし、設定してもcaptionには反映しません。
+
+.. cpp:member:: WinColor captionColor
+
+ キャプションカラーを取得/設定する。
+
+.. cpp:member:: Vector2 captionOffset
+
+ キャプションの表示オフセットをずらす。
+
+.. cpp:member:: float lineSpace
+
+ コンテンツ間のスペースを設定する。
+ またリッチテキストなどでは、行間の値になる。
+
+.. cpp:member:: uint SEId
+
+ コントロールに割り当てられたSEのIDを取得/設定する。
+
+.. cpp:member:: CWinContents parent
+
+ コントロールが含まれているコンテンツを取得する。
+
+.. c:member:: CWinCtrlBase[] groups
+
+ コントロールが持つGROUPを取得する。
+
+.. cpp:member:: CWindowBase window
+
+ コントロールが含まれているウィンドウを取得する。
+
+.. cpp:member:: e_WinCtrlStyle style
+
+ コントロールのスタイルフラグを取得する。
+
+.. cpp:member:: bool hide
+
+  true: コントロールの表示を止める。
+
+ false: コントロールを表示する。
+
+.. cpp:member:: bool disable
+
+   *  true: コントロールの機能を奪い暗くする。
+   * false: コントロールを通常表示する。
+
+.. cpp:member:: bool nohit
+
+   *  true: コントロールの機能う(disableと違い暗くしない)。
+   * false: コントロールを通常表示する。

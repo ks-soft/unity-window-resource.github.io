@@ -1,0 +1,95 @@
+.. highlight:: csharp
+
+.. _CWinCtrlRender:
+
+========================
+CWinCtrlRender
+========================
+
+ スクリプト: :ref:`RENDER`
+
+ レンダーテクスチャに対して自由にレンダリングするためのコントロールです。
+
+ コントロールが生成されたとき、一緒にカメラも生成されます。
+ 
+ そのカメラにレンダリングした対象が描画されることになります。
+
+.. note:: 
+
+ **RENDER** を用いてレンダリングするためのリソースを確保したときは、クローズ時には忘れずに削除するようにしてください。
+ 
+ 削除し忘れると、ウィンドウクローズの度にリークすることになります。
+ 
+..
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+ :param Vector2 dragVelocity: タッチ位置の変位
+
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+.. cpp:member:: Camera camera
+
+ レンダリングテクスチャが割り当てられたカメラを取得できます。
+ カメラの位置や角度等をカスタマイズしたいときにアクセスしてください。
+
+.. note:
+
+ 描画対象オブジェクトとカメラのレイヤーの設定に矛盾が出ないように気を付けてください。
+ また、複数のRENDERコントロールが同時に画面にできるときは、それぞれのRENDERでレイヤー設定が重複しないように気を付けて割り当てる必要があります。
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ public override void onCreate() {
+   CWinCtrlRender	rdAvatar = find<CWinCtrlRender>(RENDER_AVATAR);
+   
+   // カメラを取得する.
+   Camera	camera = rdAvatar.camera;
+   
+   // 描画レイヤーを選択.
+   camera.cullingMask = (int) e_Layer.OwnPlayer;
+   
+   // カメラの位置と角度を決定.
+   camera.transform.position = new Vector3(0f,0.85f,0f);
+   camera.transform.rotation = Quaternion.Euler(new Vector3(0f,180f,0f));
+
+   GameObject goAvatar = LoadAvatar();
+   // レンダリング対象のゲームオブジェクトのレイヤーを設定(カメラと同じにする).
+   Utility.setLayer(goAvatar,e_LayerId.OwnPlayer);
+ }
+
+ // 押されたときのコールバック
+ override protected void onClick(CWinCtrlBase cCtrl) {
+   switch (cCtrl.id) {
+     case RENDER_AVATAR:
+       //押されたときの処理
+       break;
+    }
+ }
+ // 長押しされたときのコールバック
+ override protected void onHold(CWinCtrlBase cCtrl) {
+    switch (cCtrl.id) {
+      case RENDER_AVATAR:
+       //押されたときの処理
+       break;
+     }
+ }

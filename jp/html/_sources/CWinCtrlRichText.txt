@@ -1,0 +1,110 @@
+.. highlight:: csharp
+
+.. _CWinCtrlRichText:
+
+============================
+CWinCtrlRichText
+============================
+
+ スクリプト: :ref:`RICHTEXT`
+
+ リッチテキストを表示するためのコントロールです。
+ 
+ 改行や途中で文字色を変えたりすることが可能です。
+
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+.. _RICHTEXT_CLICK:
+
+.. cpp:function:: void onClick(CWinCtrlRichText cCtrl,CRichTextOne cText)
+ 
+ :param CWinCtrlRichText cCtrl: タッチされたリッチテキストコントロール
+ :param CRichTextOne cText: タッチされたリッチテキストコントロールの部分
+
+ このコールバックが発行されるのは、テクスチャコマンド( :ref:`\\t<RICHTEXT_TEXTURECMD>` )とウィンドウコマンド( :ref:`\\w<RICHTEXT_WINDOWCMD>` )のみです。
+ CRichTextOneは :ref:`こちらを<CRichTextOne>` 参照ください。
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+ :param Vector2 dragVelocity: タッチ位置の変位
+
+ void onClick(CWinCtrlBase cCtrl,CRichTextOne cText)
+
+.. note:
+
+ リッチテキストはドラッグできませんが、onDragコールバックを受け取ることができます。
+
+..
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+
+.. _CRichTextOne:
+
+CRichTextOne
+------------------------------------------------
+
+ クリックイベントに渡される引数です。
+ メンバを調べることによって、どこをクリックしたかを判定できます。
+ 
+.. cpp:member:: CRichTextOne::e_Cmd cmd
+
+  e_Cmd.String
+ 
+   文字列：この部位はクリックイベントが発生しない筈です。
+   
+  e_Cmd.Window
+
+   ウィンドウ： :ref:`\\wコマンド<RICHTEXT_WINDOWCMD>` の部位がクリックされた。
+   
+   次のプロパティに有効な値が入っています。
+   
+   :ref:`userID<RichText_UserID>`
+
+   :ref:`windowId<RichText_WindowID>`
+  
+  e_Cmd.Texture
+  
+   テクスチャ： :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` の部位がクリックされた。
+   
+   次のプロパティに有効な値が入っています。
+   
+   :ref:`userID<RichText_UserID>`
+
+   :ref:`texId<RichText_TexID>`
+
+   :ref:`partId<RichText_PartID>`
+
+.. _RichText_UserID:
+
+.. cpp:member:: uint userId
+
+  キャプション内で設定したユーザＩＤが格納されています。
+  ユーザＩＤを省略すると、0が入ります。
+
+.. _RichText_WindowID:
+
+.. cpp:member:: uint windowId
+
+ :ref:`\\wコマンド<RICHTEXT_WINDOWCMD>` で指定したウィンドウIDを取得できます。
+
+.. _RichText_TexID:
+
+.. cpp:member:: uint texId
+
+  :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` で指定したテクスチャIDを取得できます。
+
+.. _RichText_PartID:
+
+.. cpp:member:: uint partId
+
+  :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` で指定したパーツIDを取得できます。

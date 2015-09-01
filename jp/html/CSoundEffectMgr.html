@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CSoundEffectMgr &mdash; WindowResource 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowResource 1 documentation" href="index.html"/>
+        <link rel="next" title="CMessageDataSheetMgrについて" href="CMessageDataSheetMgr.html"/>
+        <link rel="prev" title="CTextureResourceMgrについて" href="CTextureResourceMgr.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WindowResource</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">環境構築方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">cygwinインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Python 2.x インストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">チュートリアル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">最初に</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id3">スクリプト作成/編集方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">ウィンドウビューワー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">アセットバンドル/リソースデータ化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id8">実際のゲーム内でウィンドウを扱う方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">サンプルを動かすための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">サンプル画面説明</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">マルチID,FiveCC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">マルチID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">テクスチャについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">テクスチャリソースを作る方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">定義ファイル &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">プリプロセッサ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">フォントについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">リソースデータとして作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">アセットバンドルデータとして作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">BMFontによるフォントデータ作成方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">効果音、BGMについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">SEのアセットバンドルを作成する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def記述方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">BGMのアセットバンドルを作成する方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">多言語対応について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">文字リソースExcel書式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">文字リソースExcelコンバート方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">wra文法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">変数と式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">プリプロセッサ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">スクリーン:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">アンカー：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id3">プロパティ</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">コントロールの配置について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">アンカー：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">ベースポジション:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">アンカーとベースポジションの関係</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">コントロールのプライオリティについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">同一のテクスチャIDが指定されているとき</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">テクスチャIDが異なるとき</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">コントロールのサイズについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">相対サイズ指定:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">サイズのデフォルト値</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">コントロールの共通プロパティ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = コントロールID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = 横サイズ,縦サイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { コントロール定義 … }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = 横幅，縦幅</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = コントロールID,…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = プライオリティ値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = テクスチャID,パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = テクスチャID,パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = パーツID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = オフセットX,オフセットY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = 横サイズ,縦サイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">位置とサイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">スクロールバーの方向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">スクロールバーの表示制御</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">プロパティ</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoaderインターフェース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManagerインターフェース</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">version.unity3dが作られるタイミング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">アセットバンドルの常駐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">バージョン管理ツールなどでぶつかった時</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">マネージャを組み込む方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">アプリケーションに組み込む方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id2">ウィンドウクラスを作成する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#callback">各ウィンドウオブジェクトに届くコールバックについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id4">ウィンドウオブジェクトの持つ主なプロパティ/メソッド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id5">その他オーバーライド可能なメソッド</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contents-access">コンテンツについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contentslist-access">コンテンツリストについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#id4">コントロールが持つ主なプロパティ/メソッド</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">関数/プロパティ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">C#からのアクセス方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">使用例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">ログをクリアする方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id1">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">C#からのアクセス方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">使用例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">各レイヤーの初期値</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">レンダリングの主な流れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">onBeginRenderが呼ばれるタイミング.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">記述例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">使用例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase">CWindowBaseに届く <code class="docutils literal"><span class="pre">コールバック</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">使用例</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowResource</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CSoundEffectMgr</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/CSoundEffectMgr.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="csoundeffectmgr">
+<h1>CSoundEffectMgr<a class="headerlink" href="#csoundeffectmgr" title="Permalink to this headline">¶</a></h1>
+<blockquote id="id1">
+<div><p>AudioSourceを複数持ち、SEのグループ化、プライオリティ、同時発生数制限等を行います。</p>
+<p>デフォルトの同時発生数制限は、このようになっています。</p>
+<ul class="simple">
+<li>2D音声 4音</li>
+<li>3D音声 8音</li>
+</ul>
+<p>また、グループ毎に同時発生数制限を個別に設定可能になっています。</p>
+<p>SEのこれら設定を行う方法は、こちらを参照ください。</p>
+<p>AudioSourceを管理しており、音声を発生させるためにプログラマが別途AudioSourceを作成する必要がなくなっています。</p>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>マネージャを組み込む方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>CSoundEffectMgrを使うには、上記三つのマネージャをCMainSystemを割り当てているゲームオブジェクトに対して、Addする必要があります。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+   <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Awake</span>
+<span class="cm">    * @brief   Unity Callback</span>
+<span class="cm">    */</span>
+    <span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="c1">// Add Component</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
+
+        <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="c.playBgm">
+void <code class="descname">playBgm</code><span class="sig-paren">(</span>CBgmResource      <em>&nbsp;cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.playBgm" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CBgmResource</strong> &#8211; 読み込んだBGMリソース</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt>
+void <code class="descname">playBgm</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param uint id:</th><td class="field-body">アセットバンドルID</td>
+</tr>
+</tbody>
+</table>
+<p>指定されたBGMを再生します。
+もし、指定されたアセットバンドルが読み込まれていないときは、読み込み終わった後に自動的に再生を開始します。
+明示的に読み込みを待ちたいときは、cBgmResource.isLoaded()が、trueを返すのを待ってから、再生してください。</p>
+</div></blockquote>
+<p>CBgmResourceを直接取得するには、次のように記述します。</p>
+</dd></dl>
+
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">IEnumerator</span> <span class="nf">load</span><span class="p">(</span><span class="kt">uint</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">CBgmResource</span> <span class="n">cBgmResource</span> <span class="p">=</span> <span class="n">CBgmResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+
+   <span class="k">if</span> <span class="p">(</span><span class="n">cBgmResource</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+       <span class="c1">// error!!</span>
+       <span class="k">yield</span> <span class="k">break</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">while</span> <span class="p">(!</span><span class="n">cBgmResource</span><span class="p">.</span><span class="n">isLoaded</span><span class="p">())</span> <span class="p">{</span>
+       <span class="k">yield</span> <span class="k">return</span> <span class="m">0</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">CSoundEffectMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">playBgm</span><span class="p">(</span><span class="n">cBgmResource</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="c.play">
+void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#c.play" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; CSeResourceから取得可能な、SEオブジェクトです。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>指定されたSEを2D音声として再生します。
+CSoundEffectは、次の方法で取得可能です。</p>
+</dd></dl>
+
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CSeResource</span>  <span class="n">m_cSR</span><span class="p">;</span>
+         <span class="p">:</span>
+<span class="n">CSoundEffect</span> <span class="n">cSE</span> <span class="p">=</span> <span class="n">m_cSR</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; アセットバンドルID</li>
+<li><strong>id</strong> (<em>uint</em>) &#8211; SE ID</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>指定されたSEを2D音声として再生します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, IEffectEmitter<em>&nbsp;emitter</em><span class="sig-paren">)</span></dt>
+<dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, Transform<em>&nbsp;trans</em><span class="sig-paren">)</span></dt>
+<dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, Vector3<em>&nbsp;position</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; CSeResourceから取得可能な、SEオブジェクトです。</li>
+<li><strong>emitter</strong> (<em>IEffectEmitter</em>) &#8211; エフェクトが発生するエミッター</li>
+<li><strong>trans</strong> (<em>Transform</em>) &#8211; 音が発生する場所</li>
+<li><strong>position</strong> (<em>Vector3</em>) &#8211; 音が発生する場所</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>指定されたSEを3D音声として再生します。</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.Instance">
+CSoundEffectMgr <code class="descname">Instance</code><a class="headerlink" href="#c.Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>マネージャのインスタンスを取得します。</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="cseresourcemgr">
+<span id="id3"></span><h1>CSeResourceMgr<a class="headerlink" href="#cseresourcemgr" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>CSeResourceを管理するコンテナになっています。</p>
+<p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだ音声データを管理します。</p>
+</div></blockquote>
+<dl class="function">
+<dt id="c.refenrece">
+CSeResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.refenrece" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; SE リソースID(アセットバンドルID)を指定します。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">SEリソースが返ってきます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>SEリソースを取得する。取得できるアセットは、<a class="reference internal" href="soundeffect.html#se-assetbuild"><span>こちら</span></a> でコンバートしたものです。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.find">
+CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;mId</em><span class="sig-paren">)</span><a class="headerlink" href="#c.find" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; SEリソースを指定する。</li>
+<li><strong>id</strong> (<em>uint</em>) &#8211; SE IDを指定します。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">SEが返ってきます。指定したSEがパックされているアセットバンドルがまだ読み込み中であったり存在しないときは、nullが返ります。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>CSoundEffectを取得します。</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+CSeResourceMgr <code class="descname">Instance</code></dt>
+<dd><p>マネージャのインスタンスを取得します。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="cseresource">
+<span id="id4"></span><h1>CSeResource<a class="headerlink" href="#cseresource" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>アセットバンドル化されたSEを使える状態にして保持しています。</p>
+<p>CSeResource一つに、複数のSEがまとまった形で入っています。</p>
+<p>IWinSoundEffectインターフェースを持ち、CWindowMgrに登録することが可能です。</p>
+<p>実際に、SEを鳴らすには、CSoundEffectMgr経由で行います。</p>
+</div></blockquote>
+<dl class="function">
+<dt>
+CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>uint</em>) &#8211; 取得したいSE IDを指定します。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">SEが返ってきます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>SEを取得します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&nbsp;mSE</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>uint</em>) &#8211; 再生したいSE IDを指定します。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>SEを再生します。</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.isLoaded">
+bool <code class="descname">isLoaded</code><a class="headerlink" href="#c.isLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="cbgmresourcemgr">
+<span id="id5"></span><h1>CBgmResourceMgr<a class="headerlink" href="#cbgmresourcemgr" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>CBgmResourceを管理するコンテナになっています。</p>
+<p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだBGMデータを管理します。</p>
+<p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
+</div></blockquote>
+<dl class="function">
+<dt>
+CBgmResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; BGMリソースID(アセットバンドルID)を指定します。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BGMリソースが返ってきます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>BGMリソースを取得します。取得できるアセットは、<a class="reference internal" href="soundeffect.html#bgm-assetbuild"><span>こちら</span></a> でコンバートしたものです。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.load">
+CBgmResource <code class="descname">load</code><span class="sig-paren">(</span>uint<em>&nbsp;mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mResource</strong> (<em>uint</em>) &#8211; リソースIDを指定します。</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BGMリソースが返ってきます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Resourcesフォルダの下に次のような形でファイルを置いておくと読み込むことができます。</p>
+</dd></dl>
+
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">Resources</span><span class="p">/</span><span class="m">001</span><span class="n">_000_000000</span><span class="p">.</span><span class="n">mp3</span>
+<span class="n">Assets</span><span class="p">/</span><span class="n">Resources</span><span class="p">/</span><span class="m">001</span><span class="n">_000_000000</span><span class="p">.</span><span class="n">intro</span><span class="p">.</span><span class="n">mp3</span>
+</pre></div>
+</div>
+<dl class="member">
+<dt>
+CBgmResourceMgr <code class="descname">Instance</code></dt>
+<dd><p>マネージャのインスタンスを取得します。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="cbgmresource">
+<span id="id6"></span><h1>CBgmResource<a class="headerlink" href="#cbgmresource" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>アセットバンドル化されたBGMを使える状態にして保持しています。</p>
+<p>CBgmResource内に、イントロ部分とループ部分の音声データを持っています。</p>
+<p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
+</div></blockquote>
+<dl class="member">
+<dt id="c.loopClip">
+AudioClip <code class="descname">loopClip</code><a class="headerlink" href="#c.loopClip" title="Permalink to this definition">¶</a></dt>
+<dd><p>ループ部分のクリップ</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="c.introClip">
+AudioClip <code class="descname">introClip</code><a class="headerlink" href="#c.introClip" title="Permalink to this definition">¶</a></dt>
+<dd><p>イントロ部分のクリップ</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+bool <code class="descname">isLoaded</code></dt>
+<dd><p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CMessageDataSheetMgr.html" class="btn btn-neutral float-right" title="CMessageDataSheetMgrについて">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CTextureResourceMgr.html" class="btn btn-neutral" title="CTextureResourceMgrについて"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, kanemura.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

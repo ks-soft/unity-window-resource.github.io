@@ -1,0 +1,83 @@
+.. highlight:: csharp
+
+================================
+CWindowMgrについて
+================================
+
+.. _CWindowMgr:
+
+ CMainSystemのAwake内でAddComponentしてください。
+ 
+ ウィンドウを管理するためのマネージャです。
+ 
+ このマネージャを介して全てのウィンドウをクリエイトします。
+ 
+
+CWindowMgr
+------------------------------------ 
+
+.. c:function:: bool initialize(CAssetBundle[] aAB)
+
+ 読み込まれたウィンドウリソースを展開し、初期化します。
+ CAssetBundleMgrが登録されていたら、自動的にウィンドウリソースをサーバからダウンロードしてきて、この関数に渡されます。
+ 
+.. c:function:: bool load(byte[] buffer)
+
+ バイトデータとして読み込んだウィンドウリソースを展開し初期化します。
+
+.. cpp:function:: bool load(string assetname)
+
+ :param string assetname: 読み込まれるアセット名
+
+ リソースデータから、指定したアセット名のウィンドウリソースを読み込み初期化します。
+
+ 実際に読み込まれるアセットは、assetname + ".asset"という名前です。
+
+.. _window_create_function:
+
+.. cpp:function:: WindowScript create<WindowScript>(uint id,CWindowBase cParent = null)
+
+ :param WindowScript: クリエイトするウィンドウのクラス名
+ :param uint id: ウィンドウID
+ :param CWindowBase cParet: 親ウィンドウ
+ 
+ 指定したクラスのウィンドウをクリエイトする。
+
+.. _window_find_function:
+ 
+.. cpp:function:: WindowScript find<WindowScript>(uint id)
+
+ :param WindowScript: ウィドウクラス名
+ :param uint id: ウィンドウID
+ 
+ 指定されたウィンドウを探す。まだクリエイトされていないなら、nullが返る。
+
+.. cpp:function:: void bringToTop(CWindowBase cWindow)
+
+ :param CWindowBase cWindow: 対象ウィンドウ
+ 
+ 対象ウィンドウの優先順位を上げる。
+
+.. cpp:function:: string getCaption(uint mCaptionId)
+
+ :param uint mCaptionId: キャプションID
+ 
+ 指定されたキャプションIDから、文字列を取得します。
+
+.. cpp:function:: void play(uint mSE)
+
+ :param uint mSE: SEのID
+ 
+ 指定されたSE IDから、効果音を再生する。
+ 
+.. cpp:member:: uint clickSE
+
+ タッチしたときに鳴らす標準音を指定します。
+ 
+.. cpp:member:: uint scrollSE
+
+ リストボックスなどをスクロールさせたときに鳴らす標準音を指定します。
+ 
+.. cpp:member:: static CWindowMgr Instance
+
+ ウィンドウマネージャのインスタンスを取得します。

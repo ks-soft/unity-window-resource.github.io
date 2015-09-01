@@ -1,0 +1,81 @@
+.. highlight:: csharp
+
+.. _CWinCtrlCheckbox:
+
+==============================
+CWinCtrlCheckbox
+==============================
+
+ スクリプト: :ref:`CHECKBOX`
+
+ チェックボックスボタンを実現するためのコントロールです。
+
+ ボタン同様、７つまでバッジを表示することができます。
+ 
+ :ref:`コンテンツ<CHECKBOX_CONTENTS>` を持つことができ、ONの時だけ関連付いたコンテンツをアクティブにすることも可能です。
+ 
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+.. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+ :param Vector2 dragVelocity: タッチ位置の変位
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+.. cpp:member:: bool check
+
+  チェックボックスボタンの状態を変更します。
+
+   true:
+     ON状態にし、関連付いているコンテンツがあれば、アクティブにします。
+   false:
+     OFF状態にし、関連付いているコンテンツがあれば、非アクティブにし表示を抑制します。
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlCheckbox	cbSelect = find<CWinCtrlCheckbox>(CHECKBOX_Select);
+
+ if (cbSelect.check) {
+   ONの状態
+ } else {
+   OFFの状態
+ }
+ // コンテンツ内から、BUTTON(A)を取得する
+ // コンテナ内のコンテンツを次の通り、findでアクセス可能です
+ CWinCtrlButton btnA = find<CWinCtrlButton>(BUTTON_A);
+ 
+ // 押されたときのコールバック
+ override protected void onClick(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case CHECKBOX_Select:
+         //押されたときの処理
+         break;
+     }
+ }
+  // 長押しされたときのコールバック
+ override protected void onHold(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case CHECKBOX_Select:
+         //押されたときの処理
+         break;
+     }
+ }
+
+..

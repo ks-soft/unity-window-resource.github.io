@@ -1,0 +1,50 @@
+.. highlight:: csharp
+
+====================================
+ウィンドウプライオリティについて
+====================================
+
+ 通常のウィンドウは、後にクリエイトしたものほど優先度が高く表示されます。
+ 
+ 明示的に優先度を制御したいときは、 :ref:`PRIORITY<WINDOW_PROP_PRIORITY>` に値を設定する必要があります。
+ 
+ 大きいほど手前に表示します。
+ 
+ ただし、次のスタイルが指定されていると、:ref:`PRIORITY<WINDOW_PROP_PRIORITY>` を設定した通常のウィンドウよりも優先度が高くなります。
+ 
+ * TOP
+ * POPUP
+ * TOPMOST
+  
+ ただし、同じスタイルが指定されているウィンドウ間なら、:ref:`PRIORITY<WINDOW_PROP_PRIORITY>` を使って優先度制御ができます。
+ 
+ 例えば、二つのウィンドウがTOPを指定してクリエイトされているとき、そのウィンドウ間の優先順位は、 :ref:`PRIORITY<WINDOW_PROP_PRIORITY>` で決定されます。
+ 
+ また、TOP,POPUP,TOPMOST間の優先順位は次の通りとなります。
+ 
+  TOP < POPUP < TOPMOST
+
+
+.. list-table::
+ :header-rows: 1
+ :widths: 10,10
+
+ * - ウィンドウ描画優先順位フラグ
+   - 説明	
+ * - WINDOW_STYLE_TOP
+   - | ウィンドウの表示優先度を最大にする。
+     | POPUP、TOPMOSTよりは優先度は低い。
+     | TOP同士では、PRIORITYプロパティに設定されている優先度に従います。
+ * - WINDOW_STYLE_POPUP
+   - | ウィンドウの表示優先度を最大にします。
+     | TOPより優先され、TOPMOSTよりは優先度は低い。
+     | POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。
+     | ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。
+ * - WINDOW_STYLE_TOPMOST
+   - | ウィンドウの表示優先度を最大にする。
+     | TOP、POPUPよりは優先度が高い。
+     | TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。
+ * - WINDOW_STYLE_NOECLIPSE
+   - | ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)
+     
+|

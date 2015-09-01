@@ -1,0 +1,44 @@
+.. highlight:: csharp
+
+.. _CWinCtrlBar:
+
+====================
+CWinCtrlBar
+====================
+
+ スクリプト: :ref:`BAR`
+ 
+ バーを表示するためのコントロールです。
+ 
+ ラベルと同様キャプションを持てます。
+
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+
+.. cpp:function:: void onClick(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: タッチされたコントロール
+
+
+.. cpp:function:: void onHold(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: 長押しされたコントロール
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlBar	ctrlStart = find<CWinCtrlBar>(BAR_Title);
+
+ // 押されたときのコールバック
+ override public void onClick(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case BAR_Title:
+         //押されたときの処理
+         break;
+      }
+ }

@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WINDOW &mdash; WindowResource 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowResource 1 documentation" href="index.html"/>
+        <link rel="next" title="The arrangement of the control" href="CtrlAnchor.html"/>
+        <link rel="prev" title="Window priority" href="WindowPriority.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WindowResource</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">The feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id3">Scripting / Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Window viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id8">How to handle the window in the app.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">Mul ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">Texture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">Created as a resource data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as a asset bundle data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">The font data generating method of BMFont</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create an asset bundle SE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">Multilingual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">Excel format of string resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Window script(wra) syntax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">wra syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">Variables and expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">Window placement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">Screen:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">WINDOW</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">The arrangement of the control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">Base position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">Relationship between the anchor and the base position</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">If the same texture ID is specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">If the texture ID is different</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">Relative size :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">Size default value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = Control ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { control define … }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = width，height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = Control ID,…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = Priority value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">Position and size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">Direction of the scroll bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">Display control of the scroll bar.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoader interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManager interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">AssetBundle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">When it does version.unity3d is updated ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">Resident of asset bundles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">When a collision occurs in such as version control tool .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CSoundEffectMgr.html#id2">How to incorporate manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">How to incorporate the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id2">How to create a window class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#callback">The callback that reach to each window object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id4">Window property/method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id5">Others can be overridden methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contents-access">About content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contentslist-access">Content list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#id4">The main property / method with the control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">Function/Method</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">How to clear log.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id1">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">The initial values of each layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">The main flow of rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">Timing onBeginRender is called .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">Example of use</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowResource</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>WINDOW</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/WINDOW.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="window">
+<span id="id1"></span><h1>WINDOW<a class="headerlink" href="#window" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><blockquote>
+<div><p>WINDOW(Window ID) {</p>
+<blockquote>
+<div><p>Property 1;</p>
+<p>Property 2;</p>
+<blockquote>
+<div><p>:</p>
+<p>:</p>
+</div></blockquote>
+<p>Property n</p>
+</div></blockquote>
+<p>};</p>
+</div></blockquote>
+<p>Window ID is  <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.</p>
+<p>If wra file name is <strong>TestWindow.wra</strong>, I automatically generates TestWindowBase.cs.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TestWindowBase</span><span class="p">.</span><span class="n">cs</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Make a TestWindow.cs, and inherit the TestWindowBase.</p>
+<p>You can specify by <a class="reference internal" href="#window-prop-path"><span>PATH</span></a>  the path that is output TestWindowBase.cs on the script.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">TestWindow</span> <span class="p">:</span> <span class="n">TestWindowBase</span> <span class="p">{</span>
+    <span class="p">:</span>
+    <span class="p">:</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>Property<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="resource-id">
+<span id="resource-ab"></span><h3><strong>RESOURCE = MulID</strong><a class="headerlink" href="#resource-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>If you do [KsTools]→[Export Window Resource], and outputs it as an asset bundle.</p>
+<p>If you set the same <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> , it summarizes the window data to one of the asset bundle.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="m">000</span><span class="n">_014_00000</span><span class="p">;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>In this example, it outputs a 000_014_00000.unity3d as an asset bundle.</p>
+</div></blockquote>
+</div>
+<div class="section" id="resource">
+<span id="resource-a"></span><h3><strong>RESOURCE = output path</strong><a class="headerlink" href="#resource" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It outputs the asset data to the specified path.</p>
+<p>Window where you specify the same path to output as an asset that is combined into one.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="s">&quot;Assets/Resources/windows&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>In this example It outputs the asset of &#8220;Assets/Resources/windows.asset.&#8221;</p>
+</div></blockquote>
+</div>
+<div class="section" id="path">
+<span id="window-prop-path"></span><h3><strong>PATH</strong> = window base class output path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It sets a path to output the window base class.</p>
+<p>The current path is directly under the Unity project.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PATH</span> <span class="p">=</span> <span class="s">&quot;../../../client/Assets/Script/TestWindow.cs&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tex-id-id">
+<h3><strong>TEX_ID</strong> = Texture ID<a class="headerlink" href="#tex-id-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You set the default texture ID.</p>
+<p>This value is applied as the default texture ID of each control.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00010</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tex-id-0-7-id">
+<h3><strong>TEX_ID</strong> 0～7 = Texture ID<a class="headerlink" href="#tex-id-0-7-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You set the default texture ID.</p>
+<p>If you omit the texture ID of the control, this value is used.</p>
+<p>In addition, it specifies here also texture to use for the frame and title bar.</p>
+</div></blockquote>
+</div>
+<div class="section" id="caption-id">
+<h3><strong>CAPTION</strong> = Caption ID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You set the window&#8217;s caption character.</p>
+<p>If  <strong>WINDOW_STYLE_NOTITLEBAR</strong>  is set to <strong>STYLE</strong> , this value is ignored.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">020</span><span class="n">_000_00010</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="position-x-y">
+<h3><strong>POSITION</strong> = Ｘ,Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>To determine the window display position. Display position changes by an anchor that you specify in STYLE.</p>
+</div></blockquote>
+</div>
+<div class="section" id="size">
+<h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set the window size</p>
+<p>By using the RELATIVE_SIZE, it can be set in a relative from the screen size.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">100</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">200</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this example, if the screen size is 640x960, it makes the window of 540x760.</p>
+</div>
+<div class="section" id="screen-x-y">
+<span id="window-prop-screen"></span><h3><strong>SCREEN</strong> = left top X,left Top Y,width,height<a class="headerlink" href="#screen-x-y" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set the position and size of the screen.</p>
+<p>Window size and position is determined along the specified screen.</p>
+<p>Window position and RELATIVE_SIZE is calculated on the basis of the screen.</p>
+<p>If you do not set the screen, the screen is set to full screen.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c1">//全画面と同義</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>By using the RELATIVE_SIZE, it can be set in a relative from the screen size.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+<span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">150</span><span class="p">);</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>In this example, It places the window as shown in the figure below.</p>
+</div></blockquote>
+<img alt="_images/winprop_screen.png" src="_images/winprop_screen.png" />
+</div>
+<div class="section" id="priority">
+<span id="window-prop-priority"></span><h3><strong>PRIORITY</strong> = display priority<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set the display priority of window. The higher the value, display priority is higher.Please be careful to differences between  <a class="reference internal" href="#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> .</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PRIORITY</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="texture-zoffset-id-z">
+<span id="window-prop-texture-zoffset"></span><h3><strong>TEXTURE_ZOFFSET</strong> = Texture ID,Z offset<a class="headerlink" href="#texture-zoffset-id-z" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It tries to render the control that uses the same texture in a single mesh for rendering optimization</p>
+<p>Therefore, the priority between the control is display priority among those that are using the same texture.</p>
+<p>To change the display priority between each texture, you can use the TEXTURE_ZOFFSET.This property can be set to display priority order of the meshes using the same texture.</p>
+<p>The smaller this value, display priority is higher.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">014</span><span class="n">_000_00010</span><span class="p">,-</span><span class="m">1</span><span class="p">;</span>    <span class="c1">//手前に表示するように変更</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="style-0-1-n">
+<h3><strong>STYLE</strong> = style flag 0|style flag 1|..|style flag n<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Display position anchor flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position in the upper left</div>
+<div class="line">Same as ANCHOR_LEFTTOP</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTTOP</td>
+<td><p class="first last">Set the anchor position in the upper left</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_LEFT</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position to the left.</div>
+<div class="line">Vertical centering</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTBOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position to the left.</div>
+<div class="line">Located along the lower edge</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_TOP</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position to the upper side</div>
+<div class="line">Lateral centering</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_CENTER</td>
+<td><p class="first last">Set the anchor position in the center of the window</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_BOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position at the bottom</div>
+<div class="line">Lateral centering</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTTOP</td>
+<td><p class="first last">Set the anchor position in the upper right</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_RIGHT</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position to the right</div>
+<div class="line">Vertical centering</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTBOTTOM</td>
+<td><div class="first last line-block">
+<div class="line">Set the anchor position to the right</div>
+<div class="line">Located along the lower edge</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Window display priority flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>WINDOW_STYLE_TOP</td>
+<td><div class="first last line-block">
+<div class="line">Set the display priority of the window to maximum.</div>
+<div class="line">This is a lower priority than POPUP and TOPMOST.</div>
+<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
+<td><div class="first last line-block">
+<div class="line">Set the display priority of the window to maximum.</div>
+<div class="line">It is priority than TOP, and a lower priority than TOPMOST.</div>
+<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+<div class="line">If you touch other than the window, automatically call the onClose.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
+<td><div class="first last line-block">
+<div class="line">Set the display priority of the window to maximum.</div>
+<div class="line">This is a higher priority than TOP and POPUP.</div>
+<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
+<td><div class="first last line-block">
+<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Window function control flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>WINDOW_STYLE_NOCLOSE</td>
+<td><div class="first last line-block">
+<div class="line">Do not place the close button.</div>
+<div class="line">When NOTITLEBAR is attached, close button is not placed</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_NOMINIMIZATION</td>
+<td><p class="first last">Unimplemented</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_NOHELP</td>
+<td><p class="first last">Unimplemented</p>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_NOTITLEBAR</td>
+<td><p class="first last">Do not display the title bar.</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_NOFRAME</td>
+<td><p class="first last">Do not display the frame.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_DISABLE</td>
+<td><p class="first last">To stop the function, and to not accept input.</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_NODRAG</td>
+<td><p class="first last">Stop the window movement by drag.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
+<td><p class="first last">It does not become active.</p>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_HIDE</td>
+<td><p class="first last">Turn off the window display.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>WINDOW_STYLE_NOBRINGTOTOP</td>
+<td><div class="first last line-block">
+<div class="line">If you set the NOTITLEBAR to flag, close button is not placed</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>WINDOW_STYLE_OPENBOTTOM</td>
+<td><p class="first last">Open the window on the back.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CtrlAnchor.html" class="btn btn-neutral float-right" title="The arrangement of the control">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="WindowPriority.html" class="btn btn-neutral" title="Window priority"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, kanemura.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+.. highlight:: csharp
+
+.. _CWinCtrlLabel:
+
+====================
+CWinCtrlLabel
+====================
+
+ スクリプト: :ref:`LABEL`
+
+ ラベルを表示するためのコントロールです。
+ :ref:`BAR<BAR>` と違い、onClickイベントを受け取れません。
+
+
+CWindowBaseに届く :ref:`コールバック<callback>`
+-------------------------------------------------
+
+  なし
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlLabel	ctrlStart = find(LABEL_Title) as CWinCtrlLabel;
+

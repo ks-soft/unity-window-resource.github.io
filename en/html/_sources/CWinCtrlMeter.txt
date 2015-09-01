@@ -1,0 +1,64 @@
+.. highlight:: csharp
+
+.. _CWinCtrlMeter:
+
+====================
+CWinCtrlMeter
+====================
+
+ スクリプト: :ref:`METER`
+
+ メータを表示するためのコントロールです。
+ 
+ プログレスバーなどに使えます。
+
+ :ref:`TEXTURE` と同様に最大8枚まで重ねて表示することが可能です。
+ 
+ 任意のテクスチャパーツの伸縮を設定可能です。
+
+ 長さを１に設定すると、ちょうど :ref:`TEXTURE` と同じ見た目で表示されるようになっています。
+
+CWindowBaseに届くコールバック
+-------------------------------
+
+ 無し
+
+固有の関数/プロパティ
+-------------------------------------------------
+
+.. cpp:function:: float meter(int index)
+
+ :param int index: テクスチャパーツ番号
+ :return float: メータの長さ
+
+ 指定されたテクスチャ番号のパーツが元のサイズから何割の長さに設定されているか取得する.
+ 
+ 0 ～ 1で値が返ってきます。
+ 
+ デフォルトでは、1が設定されています(メータがマックスの状態)
+
+.. cpp:function:: void setMeter(int index,float value,float speed = 0.2f)
+
+ :param int index: テクスチャパーツ番号
+ :param float value: メータの長さ(0～1)
+ :param float speed = 0.2f: アニメーション速度
+
+ 指定されたテクスチャ番号のパーツのサイズをアニメーション付で変更します。
+
+
+
+使用例
+-----------------------------
+
+::
+
+ // コントロールを取得する方法.
+ CWinCtrlMeter	mtrLoading = find(METER_Loading) as CWinCtrlMeter;
+
+ // メータの位置を取得(0～1で返ります)
+ float pos = mtrLoading.meter(3);
+
+ // 3番目のテクスチャパーツの伸縮を設定(0～1で指定可能です。)
+ mtrLoading.setMeter(3,0.5f);
+
+

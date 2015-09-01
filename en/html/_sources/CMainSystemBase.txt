@@ -1,0 +1,176 @@
+.. highlight:: csharp
+
+
+
+====================
+CMainSystemBase
+====================
+
+.. _CMainSystemBase:
+
+ ゲームオブジェクトに貼り付けた後、常駐します(シーンが切り替わっても削除されません)。
+ 
+ 常駐するマネージャなどをこのスクリプト経由で追加することによって、必要なアセットをダウンロードしてくれます。
+ 
+ また、シーン切り替え等に、このスクリプトを使うとAssetBundleダウンロード時などに切り替えをペンディングしてくれます。
+ 
+ 使うときは、CMainSystemクラスを作成し、継承するようにしてください。
+ 
+.. cpp:function:: void Awake()
+
+ Awakeの中で AddComponent,addManagerなどをすることによって、必要な初期化や、Start内でアセットバンドルに対して、読み込みを自動的に行ってくれます。
+
+ 代表的な記述方法は次の通りです。
+ 
+.. note::
+ 
+ void Start() は、継承先でnewによって上書きしないようにしてください。
+ 読み込みが正常に行えなくなります。
+ 
+ 
+::
+ 
+ new void Awake() {
+	base.Awake();
+
+     if (m_instance != null) {
+         Debug.LogError("already exist CMainSystem");
+         return;
+     }
+     m_instance = this;
+
+     // Add Component
+     gameObject.AddComponent<CInput>();
+     gameObject.AddComponent<CAssetBundleMgr>();
+     gameObject.AddComponent<CSpriteFontMgr>();
+     gameObject.AddComponent<CMaterialMgr>();
+     gameObject.AddComponent<CMeshMgr>();
+     gameObject.AddComponent<CTextureResourceMgr>();
+     gameObject.AddComponent<CWindowMgr>();
+     gameObject.AddComponent<CMapResourceMgr>();
+     gameObject.AddComponent<CBgmResourceMgr>();
+     gameObject.AddComponent<CSeResourceMgr>();
+
+     gameObject.AddComponent<CSpriteDataMgr>();
+     gameObject.AddComponent<CBillboardEffectMgr>();
+     gameObject.AddComponent<CEffectAttributeMgr>();
+     gameObject.AddComponent<CModelEffectMgr>();
+     gameObject.AddComponent<CParticleEffectMgr>();
+     gameObject.AddComponent<CSoundEffectMgr>();
+
+     // 初期化の必要なマネージャ.
+     addManager(new CCharAnimMgr());
+     addManager(new CMessageDataSheetMgr(Utility.getSystemLocale()));
+     addManager(new CNpcStatusSrcMgr());		//NPC status manager.
+     addManager(new CSkillMgr());				//skill manager
+     addManager(new CCombinationAttackMgr());	//combination attack manager
+     addManager(new CItemSrcMgr());				//item manager.
+     addManager(new CEffectMgr());				//effect manager.
+ }
+ 
+..
+
+.. cpp:function:: void addManager(IManager mgr)
+   
+   :param IManager mgr: アセットバンドルを読み込み初期化する必要のあるオブジェクト
+   
+   .. note::
+     Awake内で、AddComponetする必要があります。
+ 
+
+.. c:function:: virtual void initialize()
+
+   継承先でオーバライドしてください。
+   アセットバンドルの読み込みが終わり、ILoader,IManagerの読み込みが完了した後、呼び出される。
+
+.. cpp:function:: virtual void OnChangeScene()
+
+   継承先でオーバライドしてください。
+   シーンを切り替えたときに呼び出されます。
+
+.. cpp:function:: bool changeScene(string sScene, bool bForceChange=false)
+
+    指定したシーンに切り替えます。
+    
+    Application.LoadLevelと同等ですが、以下の点で異なります。
+    
+    #. フェードオブジェクトのフェードが終わるまで待ちます。
+    
+    #. アセットバンドル読み込み中などにシーン切り替えをペンディングしてくれます。
+
+    #. クリエイト済のウィンドウを自動的に閉じてくれます。
+
+    シーン切り替え直前(Application.LoadLevelが呼び出される直前)に、OnChageSceneが呼び出されます。
+
+.. cpp:member:: bool isChangingScene 
+  
+  シーン読み込み中かどうか判定します。
+  
+  CMainSystemBase.chageSceneによってシーンを切り替えているときのみ有効です。
+  
+.. cpp:member:: bool isInitialized
+
+  初期化が終わっているかどうか判定します。
+
+.. cpp:function:: static int	randi()
+
+  整数値の乱数を取得します。
+
+.. cpp:function::	static int	randi(int iMax)
+
+  指定された範囲の乱数を取得します。
+
+.. cpp:function:: static int	randi(int iMin,int iMax)
+
+  指定された範囲の乱数を取得します。
+
+.. cpp:function:: static float randf()
+
+  浮動小数点の乱数を取得します。
+
+
+ILoaderインターフェース
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. cpp:function:: bool isLoading()
+
+ :return bool: 読み込み中はtrue,読み込み終了状態の時はfalse
+
+ MonoBehaviourを継承したスクリプトにつけてください。
+ 
+ CMainSystemBaseと同じゲームオブジェクト内のスクリプトにおいて、ILoaderを持つオブジェクトを調べ、
+ ILoader.isLoading() がfalseになるまで待機します。
+ 
+ 待機終了後に、addManagerで追加したオブジェクトの読み込み待ちを行います。
+ 
+ IManagerの初期化が終わると、CMainSystemBase.initialize()が呼び出され、CMainSystemBase.isInitializedがtrueになります。
+ 
+  .. note::
+    Awake内で、AddComponetする必要があります。
+ 
+IManagerインターフェース
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+ Awake()内で、CMainSystemBase.addManagerで追加してください。
+
+ アセットバンドルを読み込んだのち、それを使って初期化する必要のあるオブジェクトに対してつけておく必要があります。
+
+::
+
+  addManager(new CMessageDataSheetMgr(Utility.getSystemLocale()));
+
+..
+ 
+.. c:function::	bool initialize(CAssetBundle[] aAssetBundles)
+
+  :param CAssetBundle[] aAssetBundles: 読み込み終わったアセットバンドルの配列
+
+.. cpp:function::	void release()
+
+   ゲームオブジェクトが解放されるときに、呼ばれる解放処理
+
+.. c:function::	uint[] getAssetBundleIds()
+
+   :return uint[]: 初期化時に読み込んでおく必要のあるアセットバンドルのID
+
+   読み込む必要のあるアセットバンドルIDの配列を返す関数です。
