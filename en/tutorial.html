@@ -1,0 +1,1028 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial &mdash; WindowResource 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowResource 1 documentation" href="index.html"/>
+        <link rel="next" title="Mul ID,FiveCC" href="id.html"/>
+        <link rel="prev" title="Sample" href="sample.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WindowResource</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">Preparation for the multi-lingual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Scripting / Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Window viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">How to handle the window in the app.</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">Mul ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">Texture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">Created as a resource data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as a asset bundle data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">The font data generating method of BMFont</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create an asset bundle SE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">Multilingual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">Excel format of string resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Window script(wra) syntax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">wra syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">Variables and expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">Preprocessor</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">Window placement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">Screen:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">The arrangement of the control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">Base position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">Relationship between the anchor and the base position</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">If the same texture ID is specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">If the texture ID is different</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">Relative size :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">Size default value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = Control ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { control define … }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = width，height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = Control ID,…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = Priority value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = Texture ID,Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = Part ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = width,height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">Position and size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">Direction of the scroll bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">Display control of the scroll bar.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">Property</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">Property</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoader interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManager interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">AssetBundle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">When it does version.unity3d is updated ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">Resident of asset bundles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">When a collision occurs in such as version control tool .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CSoundEffectMgr.html#id2">How to incorporate manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">How to incorporate the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id2">How to create a window class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#callback">The callback that reach to each window object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id4">Window property/method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWindowBase.html#id5">Others can be overridden methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contents-access">About content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contentslist-access">Content list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#id4">The main property / method with the control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">Function/Method</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">How to clear log.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">TEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id1">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">Access method from C#</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">Example of use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">The initial values of each layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">The main flow of rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">Timing onBeginRender is called .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">Specific function / property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">Example of use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">Example of use</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-assetbundle">アセットバンドル系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-windowresource">ウィンドウリソース系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-font">フォント系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-messagedata">メッセージデータシート系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Config.html#ip">アドレス/IP系</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowResource</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/tutorial.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="id1">
+<h1>Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Scripting / Editing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p class="first">Start the Unity Project.</p>
+</li>
+<li><p class="first">You create a wra file directly under &#8220;WindowResource&#8221; folder in the project(&#8220;Assets/KsSoft/WindowResource&#8221;).</p>
+</li>
+<li><p class="first">Right-click and you select [Export] on the wra file</p>
+</li>
+</ol>
+<blockquote>
+<div><p>You want to edit in your favorite editor.</p>
+<p>File is named in the form of a window name.wra(ex: CMessageWindow.wra).</p>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="id3">
+<h3>Include path<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Include path is set to the following path.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wra">
+<h3>wra file that is automatically included<a class="headerlink" href="#wra" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The following file when compiling the wra file, is automatically included. Common settings and constants are set to this file.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">wr</span><span class="p">.</span><span class="n">h</span>
+</pre></div>
+</div>
+<blockquote>
+<div><img alt="_images/edit.png" src="_images/edit.png" />
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h3>The location of the compiled file.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>*.wrb file is created under the folder &#8220;Unity Project/wrb&#8221;. This file is the one that has been compiled.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Window viewer<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>You can just see the compiled window in the viewer.</p>
+<p>In addition, the window that was successful once compiled can see the changes even leave to start the viewer.</p>
+<p>However, if you want to see the window that you have added a new, please restart once to end the window viewer.</p>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Select the WWindowViewer scene, and run.</p>
+<p>Compilation also in the scene execution script can be.</p>
+</li>
+<li><p class="first">Since the list is displayed, choose the window.</p>
+</li>
+<li><p class="first">Compilation results window displays.</p>
+</li>
+</ol>
+<blockquote>
+<div><img alt="_images/viewer.png" src="_images/viewer.png" />
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>Assetbundle/Resource<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>It is possible to be in the form to download the window data via HTTP.</p>
+<p>Select a [KsTools]-&gt;[Export Window Resource] menu on the Unity.an assetfile is output to the &#8220;assetbundles&#8221; folder.</p>
+<p>The file name is the default <strong>000_010_00000.unity3d</strong>.</p>
+<p>If you want to change the file to load, please refer to  <a class="reference internal" href="Config.html#cf-windowresource"><span>here</span></a> .</p>
+<p>It is possible to change the output destination using the <a class="reference internal" href="WINDOW.html#resource-a"><span>RESOURCE = MulID</span></a> of the WINDOW properties.</p>
+<p>Window data specifying the same <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>  outputs by combining as a single asset.At the same time, it also updates ** version.unity3d ** storing information asset bundle.</p>
+<p>CAssetBundleMgr loads once ** version.unity3d ** at startup, asset bundle to check whether it has been updated.</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>It is also possible to output as an asset data using the WINDOW properties RESOURCE.Window data specifying the same path are output in a state of collectively as a single asset bundle.</p>
+<blockquote>
+<div><img alt="_images/export.png" src="_images/export.png" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h2>How to handle the window in the app.<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>It can be handled in the same manner regardless to separate/not separate the window creation environment and application.</p>
+</div></blockquote>
+<div class="section" id="cmainsystem">
+<h3>Create/Edit CMainSystem<a class="headerlink" href="#cmainsystem" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Awake</span>
+<span class="cm">     * @brief    Unity Callback</span>
+<span class="cm">    */</span>
+    <span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Application</span><span class="p">.</span><span class="n">targetFrameRate</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="c1">// Add Component</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!初期化を行う.</span>
+<span class="cm">     * @brief    initialize</span>
+<span class="cm">    */</span>
+    <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Instance.</span>
+<span class="cm">        @brief    Instance.</span>
+<span class="cm">    */</span>
+    <span class="k">static</span> <span class="k">private</span> <span class="n">CMainSystem</span>    <span class="n">m_instance</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="k">new</span> <span class="k">public</span> <span class="k">static</span> <span class="n">CMainSystem</span> <span class="n">Instance</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">m_instance</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Register the CMainSystem the game object.<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>As described below, to create an empty game object of that MainSystem, and add a CMainSystem as a script.</p>
+<img alt="_images/MainSystem.png" src="_images/MainSystem.png" />
+<p>CMainSystem be created by inheriting the <a class="reference internal" href="CMainSystemBase.html#id1"><span>CMainSystemBase</span></a>. Game objects add to CMainSystem is set so as not to be destroyed even if the transition to the scene (see DontDestroyOnLoad).</p>
+<p>Scripts required to use the minimum window system is the four manager</p>
+<p>For more details, refer to <a class="reference internal" href="CMainSystemBase.html#id1"><span>here</span></a> .</p>
+</div></blockquote>
+</div>
+<div class="section" id="cinput">
+<h3>CInput<a class="headerlink" href="#cinput" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It is a script that monitors the input.This is necessary.</p>
+</div></blockquote>
+</div>
+<div class="section" id="cspritefontmgr">
+<h3>CSpriteFontMgr<a class="headerlink" href="#cspritefontmgr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It is managing the font data and font texture. This is necessary in order to render the character.</p>
+<p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the fond data.</p>
+<p>For more details, refer to <a class="reference internal" href="SpriteFont.html#spritefont"><span>here</span></a> .</p>
+</div></blockquote>
+</div>
+<div class="section" id="ctextureresourcemgr">
+<h3>CTextureResourceMgr<a class="headerlink" href="#ctextureresourcemgr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It manages the texture atlas resources.This is necessary.</p>
+<p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the texture data.</p>
+<p>For more details, refer to <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>here</span></a> .</p>
+</div></blockquote>
+</div>
+<div class="section" id="cassetbundlemgr">
+<h3>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It manages the asset bundle.</p>
+<p>It is used when loading an asset bundle data for sound effects,window layout data,texture resource data,font data,etc.</p>
+<p>When not using the asset bundle, this is not necessary.</p>
+<p>The manager is not concerned with the contents of the asset bundle.</p>
+<p>For more details, refer to <a class="reference internal" href="CAssetBundleMgr.html#id1"><span>here</span></a> .</p>
+</div></blockquote>
+</div>
+<div class="section" id="cwindowmgr">
+<h3>CWindowMgr<a class="headerlink" href="#cwindowmgr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It manages the window.This is necessary.</p>
+<p>For more details, refer to <a class="reference internal" href="CWindowMgr.html#id1"><span>here</span></a> .</p>
+</div></blockquote>
+<div class="section" id="id9">
+<h4>When you load from the resource<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Load the assets were placed in the &#8220;Resources&#8221; folder.</p>
+<p>Once the load, window data resides.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span> <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+<span class="n">cWindowMgr</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;windows&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>When you load from asset bundles<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>If you do <strong>[Export Window Resource]</strong> , following two of the file is updated.(the case of the PC, Mac &amp; Linux Standalone environment)</p>
+<ul class="simple">
+<li>assetbundles/Windows/000_000_00010.unity3d</li>
+<li>assetbundles/Windows/version.unity3d</li>
+</ul>
+<p>Check whether  <a class="reference internal" href="Config.html#cf-address"><span>KsSoftConfig.httpserver</span></a>  is pointing to the correct HTTP server folders.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you want to change the file ID to be output, please refer to  <a class="reference internal" href="Config.html#cf-windowresource"><span>here</span></a> .</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>How to create a window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>For example, it is assumed that defines the window in such a name</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">001</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">RESOURCE</span> <span class="p">=</span> <span class="s">&quot;Assets/KsSoft/Resources/windows&quot;</span><span class="p">;</span>
+   <span class="n">PATH</span> <span class="p">=</span> <span class="n">NETWORKPATH</span><span class="p">;</span>
+   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00000</span><span class="p">;</span>
+   <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_0000</span><span class="p">;</span>
+   <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_TOP</span><span class="p">;</span>
+   <span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+   <span class="n">PRIORITY</span> <span class="p">=</span> <span class="n">PROGRESSBAR_PRIORITY</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Then, CWinAssetbundleLoadingBase.cs(this is C# script) is generated.</p>
+<p>You can create a window by calling the CWinAssetbundleLoadingBase.create ().</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>CWinAssetbundleLoadingBase that has been automatically generated have the following functions.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">public</span> <span class="n">CWinAssetbundleLoading</span> <span class="nf">create</span><span class="p">(</span><span class="n">CWindowBase</span> <span class="n">cParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">create</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">windowId</span><span class="p">,</span><span class="n">cParent</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>How to get the windows that are create<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The windows are create it can be obtained by using the A via window manager.You can get the window that is create by <a class="reference internal" href="CWindowMgr.html#window-find-function"><span>find</span></a> .</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinAssetbundleLoading</span> <span class="n">cLoading</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">windowId</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">cLoading</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+   <span class="c1">//クリエイト済のウィンドウが見つかった!</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+   <span class="c1">//ウィンドウは、クリエイトしていない.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h4>How to bring the window to the top.<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>you can bring the window to top by bringToTop.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>About sound effects<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Set the CWindowMgr.soundeffect To play the sound effect.</p>
+<p>soundeffect is an object that has an interface that IWinSoundEffect.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinSoundEffect</span> <span class="p">{</span>
+    <span class="k">void</span> <span class="nf">play</span><span class="p">(</span><span class="kt">uint</span> <span class="n">mSE</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>It is one of the examples to work with CSeResourceMgr.</p>
+<p>You get the asset bundled been SE via <a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr"><span>CSeResourceMgr</span></a> (It contains a multiple of SE to one of asset bundles).</p>
+<p><a class="reference internal" href="CSoundEffectMgr.html#cseresource"><span>CSeResource</span></a>  has a IWinSoundEffect interface.(To actually play the sound,  it is necessary to add a <a class="reference internal" href="CSoundEffectMgr.html#id1"><span>CSoundEffectMgr</span></a>  to CMainSystem.)</p>
+<p>In the example below, it assumed that you are pack the sound effect of the window system in 052_000_00000.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is also possible to associate the object with your own was IWinSoundEffect.</p>
+</div>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Awake</span>
+<span class="cm">    * @brief   Unity Callback</span>
+<span class="cm">    */</span>
+    <span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="c1">// Add Component</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Initialize.</span>
+<span class="cm">    * @brief   initialize</span>
+<span class="cm">    */</span>
+    <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+        <span class="c1">//--------------------------------------------</span>
+        <span class="c1">// WindowMgr initilaize.</span>
+        <span class="c1">//--------------------------------------------</span>
+        <span class="n">CWindowMgr</span>     <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+        <span class="c1">// Assign standard SEs.</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span> <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">));</span> <span class="c1">//2D系;</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">clickSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">20</span><span class="p">);</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">scrollSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">110</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Instance.</span>
+<span class="cm">    @brief     Instance.</span>
+<span class="cm">    */</span>
+    <span class="k">static</span> <span class="k">private</span> <span class="n">CMainSystem</span> <span class="n">m_instance</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="k">new</span> <span class="k">public</span> <span class="k">static</span> <span class="n">CMainSystem</span> <span class="n">Instance</span> <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span>
+                 <span class="k">return</span> <span class="n">m_instance</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h4>How to character resources to asset bundle and multilingual.<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>When converting from the caption ID to a string, it is converted through CWindowMgr.captiondata of interface.</p>
+<p>captiondata is IWinCaptionData interface.</p>
+<p>Multilingual is made possible by changing the string returned in response to the current locale.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinCaptionData</span> <span class="p">{</span>
+    <span class="kt">string</span> <span class="nf">find</span><span class="p">(</span><span class="kt">uint</span> <span class="n">mCaptionId</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>It is one of the example of to work with <a class="reference internal" href="CMessageDataSheetMgr.html#id1"><span>CMessageDataSheetMgr</span></a> .</p>
+<p>Since <a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet"><span>CMessageDataSheet</span></a>  has a IWinCaptionData interface, you can get the caption data in the code, such as the following.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Awake</span>
+<span class="cm">    * @brief   Unity Callback</span>
+<span class="cm">    */</span>
+    <span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="c1">// Add Component</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
+
+        <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Initialize</span>
+<span class="cm">    * @brief   initialize</span>
+<span class="cm">    */</span>
+    <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">base</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+        <span class="c1">//--------------------------------------------</span>
+        <span class="c1">// WindowMgr initialize.</span>
+        <span class="c1">//--------------------------------------------</span>
+        <span class="n">CWindowMgr</span>     <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">captiondata</span> <span class="p">=</span> <span class="n">CMessageDataSheetMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="k">new</span> <span class="n">FiveCC</span><span class="p">(</span><span class="s">&quot;WNDW&quot;</span><span class="p">));</span>
+        <span class="c1">// Assign standard SEs</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span>  <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">));;</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">clickSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">20</span><span class="p">);</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">scrollSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">110</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//==========================================================================</span>
+    <span class="cm">/*!Instance.</span>
+<span class="cm">    @brief     Instance.</span>
+<span class="cm">    */</span>
+    <span class="k">static</span> <span class="k">private</span> <span class="n">CMainSystem</span> <span class="n">m_instance</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="k">new</span> <span class="k">public</span> <span class="k">static</span> <span class="n">CMainSystem</span> <span class="n">Instance</span> <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span>
+                 <span class="k">return</span> <span class="n">m_instance</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is also possible to associate the object with your own was IWinCaptionData.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="id.html" class="btn btn-neutral float-right" title="Mul ID,FiveCC">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sample.html" class="btn btn-neutral" title="Sample"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, kanemura.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

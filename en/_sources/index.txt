@@ -1,0 +1,180 @@
+.. WindowResource documentation master file, created by
+   sphinx-quickstart on Tue Apr 28 14:11:24 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to WindowResource's documentation!
+==========================================
+
+特徴:
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   feature
+
+
+チュートリアル:
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   install
+   sample
+   tutorial
+
+マルチID,FiveCC:
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   id
+
+テクスチャ:
+-------------------------------------
+.. toctree::
+   :maxdepth: 2
+   
+   TextureResource
+
+スプライトフォント:
+-------------------------------------
+.. toctree::
+   :maxdepth: 2
+   
+   SpriteFont
+
+
+
+
+効果音,BGM:
+-------------------------------------
+.. toctree::
+   :maxdepth: 2
+   
+   soundeffect
+
+文字リソース,多言語対応:
+-------------------------------------
+.. toctree::
+   :maxdepth: 2
+   
+   caption
+
+ウィンドウスクリプト:
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   syntax
+
+ウィンドウ:
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   WindowAnchor
+   WindowPriority
+   WINDOW
+
+コントロール:
+-------------------------------------
+
+共通項目:
+
+.. toctree::
+   :maxdepth: 2
+
+   CtrlAnchor
+   CtrlPriority
+   CtrlSize   
+   CtrlProp
+
+
+各コントロール詳細:
+
+.. toctree::
+   :maxdepth: 2
+
+   TEXT
+   RICHTEXT
+   LOG
+   LOGTEXT
+   EDITBOX
+   TEXTBOX
+   BUTTON
+   RADIO
+   CHECKBOX
+   TEXTURE
+   LINE
+   RENDER
+   ICON
+   RECASTICON
+   RENDERICON
+   METER
+   SCROLLBAR
+   LISTBOX
+   LISTBOXEX
+   CONTAINER
+   FRAME
+   LABEL
+   BAR
+
+リファレンス:
+
+.. toctree::
+   :maxdepth: 2
+
+   CMainSystemBase
+   CAssetBundleMgr
+   AssetVersion
+   CTextureResourceMgr
+   CSoundEffectMgr
+   CMessageDataSheetMgr
+   CWindowMgr
+   CWindowBase
+   CWinCtrlBase
+   CWinContents
+   CWinCtrlText
+   CWinCtrlRichText
+   CWinCtrlLog
+   CWinCtrlLogText
+   CWinCtrlEditbox
+   CWinCtrlTextbox
+   CWinCtrlButton
+   CWinCtrlRadio
+   CWinCtrlCheckbox
+   CWinCtrlTexture
+   CWinCtrlLine
+   CWinCtrlRender
+   CWinCtrlIcon
+   CWinCtrlRecastIcon
+   CWinCtrlRenderIcon
+   CWinCtrlMeter
+   CWinCtrlScrollbar
+   CWinCtrlListbox
+   CWinCtrlListboxEx
+   CWinCtrlContainer
+   CWinCtrlFrame
+   CWinCtrlLabel
+   CWinCtrlBar
+
+デフォルト値の変更方法:
+
+.. toctree::
+   :maxdepth: 2
+
+   Config
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
