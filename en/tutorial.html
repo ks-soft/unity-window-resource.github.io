@@ -74,8 +74,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a><ul>
@@ -94,9 +94,9 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">Texture</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">The definition file &#64;parts.def</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
 </ul>
 </li>
@@ -550,29 +550,29 @@
 <div><ol class="arabic simple">
 <li><p class="first">Start the Unity Project.</p>
 </li>
-<li><p class="first">You create a wra file directly under &#8220;WindowResource&#8221; folder in the project(&#8220;Assets/KsSoft/WindowResource&#8221;).</p>
+<li><p class="first">You create a wra file under a &#8220;WindowResource&#8221; folder in the project(&#8220;Assets/KsSoft/WindowResource&#8221;).</p>
 </li>
 <li><p class="first">Right-click and you select [Export] on the wra file</p>
 </li>
 </ol>
 <blockquote>
 <div><p>You want to edit in your favorite editor.</p>
-<p>File is named in the form of a window name.wra(ex: CMessageWindow.wra).</p>
+<p>A file must be named as &#8220;window_name.wra&#8221;(ex: CMessageWindow.wra).</p>
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id3">
-<h3>Include path<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Include path is set to the following path.</p>
+<div><p>The include path is set to the following path.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="wra">
-<h3>wra file that is automatically included<a class="headerlink" href="#wra" title="Permalink to this headline">¶</a></h3>
+<h3>The wra file that includ a &#8220;wr.h&#8221; automaticaly.<a class="headerlink" href="#wra" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>The following file when compiling the wra file, is automatically included. Common settings and constants are set to this file.</p>
+<div><p>When you compile the wra file,&#8221;wr.h&#8221; is automatically included in your script. Common settings and constants are set to this file.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">wr</span><span class="p">.</span><span class="n">h</span>
 </pre></div>
@@ -584,7 +584,7 @@
 <div class="section" id="id4">
 <h3>The location of the compiled file.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>*.wrb file is created under the folder &#8220;Unity Project/wrb&#8221;. This file is the one that has been compiled.</p>
+<div><p>*.wrb files are created under the folder &#8220;Unity Project/wrb&#8221;. These files are the result of the compiled your script files.</p>
 </div></blockquote>
 </div>
 </div>
@@ -592,7 +592,7 @@
 <h2>Window viewer<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can just see the compiled window in the viewer.</p>
-<p>In addition, the window that was successful once compiled can see the changes even leave to start the viewer.</p>
+<p>In addition, the window that was successful once compiled can viewes the changes without stopping the viewer.</p>
 <p>However, if you want to see the window that you have added a new, please restart once to end the window viewer.</p>
 </div></blockquote>
 <ol class="arabic">
@@ -612,7 +612,7 @@
 <h2>Assetbundle/Resource<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It is possible to be in the form to download the window data via HTTP.</p>
-<p>Select a [KsTools]-&gt;[Export Window Resource] menu on the Unity.an assetfile is output to the &#8220;assetbundles&#8221; folder.</p>
+<p>Select the [KsTools]-&gt;[Export Window Resource] menu on the Unity. An assetfile is output to the &#8220;assetbundles&#8221; folder.</p>
 <p>The file name is the default <strong>000_010_00000.unity3d</strong>.</p>
 <p>If you want to change the file to load, please refer to  <a class="reference internal" href="Config.html#cf-windowresource"><span>here</span></a> .</p>
 <p>It is possible to change the output destination using the <a class="reference internal" href="WINDOW.html#resource-a"><span>RESOURCE = MulID</span></a> of the WINDOW properties.</p>
@@ -623,7 +623,7 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p>It is also possible to output as an asset data using the WINDOW properties RESOURCE.Window data specifying the same path are output in a state of collectively as a single asset bundle.</p>
+<div><p>It is also possible to output as an asset data using the WINDOW properties RESOURCE. The window data specifying the same path are output in a state of collectively as a single asset bundle.</p>
 <blockquote>
 <div><img alt="_images/export.png" src="_images/export.png" />
 </div></blockquote>
@@ -698,7 +698,7 @@
 <h3>CSpriteFontMgr<a class="headerlink" href="#cspritefontmgr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is managing the font data and font texture. This is necessary in order to render the character.</p>
-<p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the fond data.</p>
+<p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the font data.</p>
 <p>For more details, refer to <a class="reference internal" href="SpriteFont.html#spritefont"><span>here</span></a> .</p>
 </div></blockquote>
 </div>
@@ -755,15 +755,58 @@
 <div class="section" id="id11">
 <h4>How to create a window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>For example, it is assumed that defines the window in such a name</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">001</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">RESOURCE</span> <span class="p">=</span> <span class="s">&quot;Assets/KsSoft/Resources/windows&quot;</span><span class="p">;</span>
-   <span class="n">PATH</span> <span class="p">=</span> <span class="n">NETWORKPATH</span><span class="p">;</span>
-   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00000</span><span class="p">;</span>
-   <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_0000</span><span class="p">;</span>
-   <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_TOP</span><span class="p">;</span>
-   <span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-   <span class="n">PRIORITY</span> <span class="p">=</span> <span class="n">PROGRESSBAR_PRIORITY</span><span class="p">;</span>
-<span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
+
+#define        WIN_WIDTH       640
+$y = 160;
+
+WINDOW(001_000_00000) {
+   RESOURCE = &quot;Assets/KsSoft/Resources/windows&quot;;
+   PATH = NETWORKPATH;
+   TEX_ID = 100_000_00000;
+   CAPTION = 000_000_0000;
+   STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_NODRAG|WINDOW_STYLE_ANCHOR_CENTER|WINDOW_STYLE_TOP;
+   SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+   PRIORITY = PROGRESSBAR_PRIORITY;
+};
+
+METER(ProgressTotal) {
+   ID = 000_001_00000;
+   STYLE = ANCHOR_BOTTOM;
+   POSITION = 0,$y;
+   SIZE = RELATIVE_SIZE(-128);
+   TEX_ID = 0,&quot;MTRB&quot;;
+   COLOR = COLOR32(255.0,255.0,255.0,255.0);
+   SIZE1 = RELATIVE_SIZE(-128);
+   TEX_ID1 = 0,&quot;MTR&quot;;
+   COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
+};
+$y -=64;
+METER(ProgressPart) {
+   ID = 000_001_00010;
+   STYLE = ANCHOR_BOTTOM;
+   SIZE = RELATIVE_SIZE(-128),32;
+   POSITION = 0,$y;
+   TEX_ID = 0,&quot;MTRB&quot;;
+   COLOR = COLOR32(255.0,255.0,255.0,255.0);
+   SIZE1 = RELATIVE_SIZE(-128),32;
+   TEX_ID1 = 0,&quot;MTR&quot;;
+   COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
+};
+TEXTURE(Wait) {
+   ID = 000_002_00020;
+   STYLE = ANCHOR_RIGHTBOTTOM;
+   TEX_ID = 0,&quot;LD00&quot;;
+   POSITION = -48,32;
+};
+TEXT(Message) {
+   ID = 000_002_00030;
+   STYLE = TEXT_RIGHT|ANCHOR_RIGHTTOP;
+   CAPTION = 000_000_00250;
+   FONT_KIND = &quot;cfn20&quot;;
+   POSITION = -48,-32;
+   COLOR = 1,1,1,1;
+};
 </pre></div>
 </div>
 <blockquote>

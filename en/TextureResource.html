@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Texture &mdash; WindowSystem 1 documentation</title>
+  <title>The texture &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -74,8 +74,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
@@ -94,9 +94,9 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Texture</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">The texture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">How to make a texture resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parts-def">The definition file &#64;parts.def</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id12">Preprocessor</a></li>
 </ul>
 </li>
@@ -531,7 +531,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Texture</li>
+    <li>The texture</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="_sources/TextureResource.txt" rel="nofollow"> View page source</a>
@@ -543,7 +543,7 @@
           <div role="main" class="document">
             
   <div class="section" id="textureresource">
-<span id="id1"></span><h1>Texture<a class="headerlink" href="#textureresource" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>The texture<a class="headerlink" href="#textureresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Please refer <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>here</span></a> to access the texture resources on C#.</p>
 <p>In the window system , it uses what summarizes some of the texture(texture atlas).It can be rendered by a small mesh by summarized some of the texture.</p>
@@ -551,11 +551,11 @@
 <p>It can be chosen whether to perform dithering for each part.</p>
 <p>■Texture part</p>
 <blockquote>
-<div><p>It can also be called a &#8220;part&#8221;.This is a previous texture atlas of.</p>
+<div><p>It can also be called a &#8220;part&#8221;. This is a previous texture atlas.</p>
 </div></blockquote>
-<p>■Texture</p>
+<p>■The texture</p>
 <blockquote>
-<div><p>When referred to as a texture in this document , it refers to the texture after the atlas of.In addition, in order to clearly separate the normal texture , sometimes referred to as a texture resource.</p>
+<div><p>When referred to as a texture in this document , it refers to the texture after the atlas.In addition, in order to clearly separate the normal texture , sometimes referred to as a texture resource.</p>
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id2">
@@ -575,7 +575,7 @@
 <div><img alt="_images/TextureResource.png" src="_images/TextureResource.png" />
 </div></blockquote>
 <p>Thus, the asset bundle named 100_000_00000.unity3d is generated under the &#8220;assetbundles&#8221; folder.</p>
-<p>■ texture name constraints</p>
+<p>■The texture name constraints</p>
 <p>The name of the texture atlas must be 5 characters , except for the extension .</p>
 <p>This is because it is encoded as <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
 <p>Other, it can also be used <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> file name.</p>
@@ -585,17 +585,17 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>■folder name constraints</p>
+<div><p>■The folder name constraints</p>
 <p>It must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</p>
 <p>Asset bundles because thease are managed by <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</p>
 </div></blockquote>
 </div>
 <div class="section" id="parts-def">
-<span id="id3"></span><h2>Definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>The definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>If the &#8220;&#64;parts.def&#8221; placed in the texture folder, texture parts are converted along the definition file.</p>
 <p>Because it is a simple text file , it can be edited using the editor of your choice.</p>
-<p>File encoding is UTF8.</p>
+<p>The file encoding is UTF8.</p>
 </div></blockquote>
 <p>Choose whether to convert to a resource.</p>
 <hr class="docutils" />
@@ -727,7 +727,7 @@
 </div>
 </div>
 <div class="section" id="id8">
-<h3>Part definition and aliases<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>The part definition and aliases<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Definition of parts can be defined in the form such as the following.</p>
 </div></blockquote>
@@ -760,7 +760,7 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id9">
-<h3>Part definition property<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<h3>The part definition properties<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="color-r-g-b-a">
 <h4>COLOR = R,G,B,A;<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h4>
 <blockquote>
@@ -843,9 +843,9 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id10">
-<h3>Include path<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Include path is set to the following path.</p>
+<div><p>The include path is set to the following path.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span>
 </pre></div>
