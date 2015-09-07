@@ -74,8 +74,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for moving the sample</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">Sample Screen Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
@@ -94,9 +94,9 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">Texture</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">Definition file &#64;parts.def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">The definition file &#64;parts.def</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
 </ul>
 </li>
@@ -104,14 +104,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">Created as a resource data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as a asset bundle data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as an asset bundle data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">The font data generating method of BMFont</a></li>
 </ul>
 </li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">SoundEffect,BGM</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#se">How to create an asset bundle SE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#se-def">&#64;se.def syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bgm-assetbuild">How to create an asset bundle BGM</a></li>
 </ul>
@@ -558,7 +558,7 @@
 <p class="last">SE grouping,priority,simultaneous sound limit only supports 3D sound. 2D sound is doing only control , such as not the same sound at the same time .</p>
 </div>
 <div class="section" id="se">
-<span id="se-assetbuild"></span><h2>How to create an asset bundle SE<a class="headerlink" href="#se" title="Permalink to this headline">¶</a></h2>
+<span id="se-assetbuild"></span><h2>How to create a Sound Effect asset bundle<a class="headerlink" href="#se" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>To place an audio file to use for sound effects along to the next step.</p>
 <ol class="arabic simple">
@@ -573,7 +573,7 @@
 <li><p class="first">Highlight a folder, please select the [Right-Click] → [Export] (multiple can be selected).</p>
 </li>
 </ol>
-<p>Folder name with the same name as the asset bundle that was created in &#8220;2.&#8221; is generated.</p>
+<p>Folder name with the same name as the asset bundle that was created in &#8220;assetbundles/XXXX/XXX_XXX_XXXXX.unity3d&#8221; is generated.</p>
 <p>Audio files to be placed must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> or <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
 </div></blockquote>
 <img alt="_images/SeResource.png" src="_images/SeResource.png" />
@@ -581,7 +581,7 @@
 <div class="section" id="se-def">
 <h2>&#64;se.def syntax<a class="headerlink" href="#se-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>When creating an asset bundle and exploitable embedding various information in the SE. It explains the method below.File format is UTF-8(without BOM).</p>
+<div><p>When creating an asset bundle and exploitable embedding various information in the SE. It explains the method below. The file format is UTF-8(without BOM).</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre><span class="c1">// click sound effect</span>
 <span class="n">SE</span><span class="p">(</span><span class="mo">052</span><span class="n">_000_00020</span><span class="p">)</span> <span class="p">{</span>
@@ -600,7 +600,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>With an alias , it is possible to provide an alias to the same audio file.And it is possible to allocate the different parameters.</p>
+<div><p>With an alias , it is possible to provide an alias to the same audio file. And it is possible to allocate the different parameters.</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre>SE(se file name) {
    Property 0;
@@ -648,9 +648,9 @@ SE(Alias name,SE file name) {
 <p class="last">When you use the <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> , please do not forget to enclose with the &#8220;～&#8221;</p>
 </div>
 <div class="section" id="id1">
-<h3>Include path<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Include path is set to the following path.</p>
+<div><p>The include path is set to the following path.</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span>
 </pre></div>
@@ -659,7 +659,7 @@ SE(Alias name,SE file name) {
 <div class="section" id="id2">
 <h3>&#64;se.def file that is automatically included<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>The following file when compiling the &#8220;&#64;se.def&#8221;, is automatically included. it is useful to describe a common set in this file.</p>
+<div><p>When you compile the &#8220;&#64;se.def&#8221;,&#8221;se.h&#8221; is included automatically in your script. It is useful to describe a common set in this file.</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">se</span><span class="p">.</span><span class="n">h</span>
 </pre></div>
