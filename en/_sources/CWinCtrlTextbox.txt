@@ -3,7 +3,7 @@
 .. _CWinCtrlTextbox:
 
 ===========================
-TEXTBOX
+CWinCtrlTextbox
 ===========================
 
  スクリプト: :ref:`TEXTBOX`
