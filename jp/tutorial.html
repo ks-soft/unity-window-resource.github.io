@@ -758,15 +758,58 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <div class="section" id="id11">
 <h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>例えば、このような名前でウィンドウを定義したとします。</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">001</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">RESOURCE</span> <span class="p">=</span> <span class="s">&quot;Assets/KsSoft/Resources/windows&quot;</span><span class="p">;</span>
-   <span class="n">PATH</span> <span class="p">=</span> <span class="n">NETWORKPATH</span><span class="p">;</span>
-   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00000</span><span class="p">;</span>
-   <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_0000</span><span class="p">;</span>
-   <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_TOP</span><span class="p">;</span>
-   <span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-   <span class="n">PRIORITY</span> <span class="p">=</span> <span class="n">PROGRESSBAR_PRIORITY</span><span class="p">;</span>
-<span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
+
+#define        WIN_WIDTH       640
+$y = 160;
+
+WINDOW(001_000_00000) {
+   RESOURCE = &quot;Assets/KsSoft/Resources/windows&quot;;
+   PATH = NETWORKPATH;
+   TEX_ID = 100_000_00000;
+   CAPTION = 000_000_0000;
+   STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_NODRAG|WINDOW_STYLE_ANCHOR_CENTER|WINDOW_STYLE_TOP;
+   SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+   PRIORITY = PROGRESSBAR_PRIORITY;
+};
+
+METER(ProgressTotal) {
+   ID = 000_001_00000;
+   STYLE = ANCHOR_BOTTOM;
+   POSITION = 0,$y;
+   SIZE = RELATIVE_SIZE(-128);
+   TEX_ID = 0,&quot;MTRB&quot;;
+   COLOR = COLOR32(255.0,255.0,255.0,255.0);
+   SIZE1 = RELATIVE_SIZE(-128);
+   TEX_ID1 = 0,&quot;MTR&quot;;
+   COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
+};
+$y -=64;
+METER(ProgressPart) {
+   ID = 000_001_00010;
+   STYLE = ANCHOR_BOTTOM;
+   SIZE = RELATIVE_SIZE(-128),32;
+   POSITION = 0,$y;
+   TEX_ID = 0,&quot;MTRB&quot;;
+   COLOR = COLOR32(255.0,255.0,255.0,255.0);
+   SIZE1 = RELATIVE_SIZE(-128),32;
+   TEX_ID1 = 0,&quot;MTR&quot;;
+   COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
+};
+TEXTURE(Wait) {
+   ID = 000_002_00020;
+   STYLE = ANCHOR_RIGHTBOTTOM;
+   TEX_ID = 0,&quot;LD00&quot;;
+   POSITION = -48,32;
+};
+TEXT(Message) {
+   ID = 000_002_00030;
+   STYLE = TEXT_RIGHT|ANCHOR_RIGHTTOP;
+   CAPTION = 000_000_00250;
+   FONT_KIND = &quot;cfn20&quot;;
+   POSITION = -48,-32;
+   COLOR = 1,1,1,1;
+};
 </pre></div>
 </div>
 <blockquote>
