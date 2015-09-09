@@ -68,9 +68,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">MS-Windows環境:cygwinインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">For MS-Windows:Install the cygwin.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">OSX環境:Xcodeのコマンドラインツールをインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">For OSX:Install the Command Line Tools in Xcode.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
@@ -114,7 +114,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
@@ -552,18 +552,18 @@
 <li><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr"><span>CSeResourceMgr</span></a></li>
 <li><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr"><span>CBgmResourceMgr</span></a></li>
 </ul>
-<p>thease manager control the management of asset bundles,SE grouping,priority and simultaneous sound limit. When playing the BGM,It is used in order to play the intro part + loop part .</p>
+<p>These manager control the management of asset bundles,SE grouping,priority and simultaneous sound limit. When playing the BGM,It is used in order to play the intro part + loop part .</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">SE grouping,priority,simultaneous sound limit only supports 3D sound. 2D sound is doing only control , such as not the same sound at the same time .</p>
+<p class="last">The SE grouping,priority, and simultaneous sound limit are supported by 3D sound only.  The manager controls 2D SEs so as not to play the same sound at the same time.</p>
 </div>
 <div class="section" id="se">
 <span id="se-assetbuild"></span><h2>How to create a Sound Effect asset bundle<a class="headerlink" href="#se" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>To place an audio file to use for sound effects along to the next step.</p>
 <ol class="arabic simple">
-<li><p class="first">Create a folder called Se under the &#8220;Assets/KsSoft/&#8221;.</p>
+<li><p class="first">Create a &#8220;Se&#8221; folder at the &#8220;Assets/KsSoft/&#8221; folder.</p>
 </li>
 <li><p class="first">Under the &#8220;Se&#8221; folder you created,You create more folders in a <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</p>
 </li>
@@ -574,15 +574,15 @@
 <li><p class="first">Highlight a folder, please select the [Right-Click] → [Export] (multiple can be selected).</p>
 </li>
 </ol>
-<p>Folder name with the same name as the asset bundle that was created in &#8220;assetbundles/XXXX/XXX_XXX_XXXXX.unity3d&#8221; is generated.</p>
-<p>Audio files to be placed must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> or <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
+<p>The folder name with the same name as the asset bundle is created.This file name is &#8220;assetbundles/XXXX/XXX_XXX_XXXXX.unity3d&#8221;.</p>
+<p>Placed sound files must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> or <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
 </div></blockquote>
 <img alt="_images/SeResource.png" src="_images/SeResource.png" />
 </div>
 <div class="section" id="se-def">
 <h2>&#64;se.def syntax<a class="headerlink" href="#se-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>When creating an asset bundle and exploitable embedding various information in the SE. It explains the method below. The file format is UTF-8(without BOM).</p>
+<div><p>When creating an asset bundle,you can embed  various information to the SE.The following is this example. The file format is UTF-8(without BOM).</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre><span class="c1">// click sound effect</span>
 <span class="n">SE</span><span class="p">(</span><span class="mo">052</span><span class="n">_000_00020</span><span class="p">)</span> <span class="p">{</span>
@@ -601,7 +601,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>With an alias , it is possible to provide an alias to the same audio file. And it is possible to allocate the different parameters.</p>
+<div><p>It is possible to provide an alias to the same audio and assign the different parameters.</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre>SE(se file name) {
    Property 0;
@@ -620,7 +620,7 @@ SE(Alias name,SE file name) {
 </div>
 <blockquote>
 <div><p>Alias name / file name must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> or <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
-<p>It has the following rules.</p>
+<p>It has the following syntax.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
@@ -658,9 +658,9 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="id2">
-<h3>&#64;se.def file that is automatically included<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>The &#64;se.def that includ a “se.h” automaticaly.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>When you compile the &#8220;&#64;se.def&#8221;,&#8221;se.h&#8221; is included automatically in your script. It is useful to describe a common set in this file.</p>
+<div><p>When you compile a “&#64;se.def” file,&#8221;tr.h&#8221; is automatically included in your script. Common settings and constants are set to this file.</p>
 </div></blockquote>
 <div class="highlight-cpp"><div class="highlight"><pre><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">se</span><span class="p">.</span><span class="n">h</span>
 </pre></div>
@@ -672,7 +672,7 @@ SE(Alias name,SE file name) {
 <h4>VOLUME = Number<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Set the volume.</p>
-<p>Value is specified by a small number of 0-1 , or you can use the 0-100% of the percentage.</p>
+<p>You can specified by a float  of 0-1 , or you can use the 0-100% of the percentage.</p>
 <ul class="simple">
 <li>VOLUME = 1;</li>
 </ul>
@@ -681,30 +681,30 @@ SE(Alias name,SE file name) {
 <div class="section" id="group">
 <h4>GROUP = Group number<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>It is effective only when it is a sound as 3D.</p>
-<p>Group number is specified by an integer of 0-255.Group affect the simultaneous sound limit and priority.</p>
+<div><p>It is effective only when a sound  is a 3D.</p>
+<p>Group number is specified by an integer of 0-255. It affects the simultaneous sound limit and priority.</p>
 </div></blockquote>
 </div>
 <div class="section" id="priority">
 <h4>PRIORITY = Priority number<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>It is effective only when it is a sound as 3D.</p>
+<div><p>It is effective only when a sound  is a 3D.</p>
 <p>The priority in the group set an integer of 0-255.</p>
 </div></blockquote>
 </div>
 <div class="section" id="polyphony">
 <h4>POLYPHONY = the simultaneous sound limit<a class="headerlink" href="#polyphony" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>It is effective only when it is a sound as 3D.</p>
-<p>Set between 1-255. It limits the number of simultaneous sound limit of the same group .If you exceed the number of simultaneous sound , compared the sound priorities , if higher ,to stop the low priority sound,to play the high priority sound.</p>
+<div><p>It is effective only when a sound  is a 3D.</p>
+<p>Set between 1-255. It limits the number of simultaneous sound limit of the same group.If you exceed the number of simultaneous sound , this manager  compare the sound priorities.If the priority which you want to play the sound is higher,it stop the sound that have lowest priority,and start to play new sound.</p>
 </div></blockquote>
 </div>
 <div class="section" id="distance">
 <h4>DISTANCE = minimum distance,maximum distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>It is effective only when it is a sound as 3D.</p>
-<p>When it plays in the place closer than the minimum distance , and play at maximum volume.</p>
-<p>In contrast , no longer hear the leaves and sound than the maximum distance.</p>
+<div><p>It is effective only when a sound  is a 3D.</p>
+<p>When it plays at place nearer than the minimum distance , it plays at maximum volume.</p>
+<p>In contrast , you can&#8217;t hear the sound that the distance  is more than the maximum.</p>
 </div></blockquote>
 </div>
 </div>
@@ -783,24 +783,24 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="bgm-assetbuild">
-<span id="id5"></span><h2>How to create an asset bundle BGM<a class="headerlink" href="#bgm-assetbuild" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>How to create an BGM&#8217;s asset bundle<a class="headerlink" href="#bgm-assetbuild" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>You divide the BGM to intro part and the loop part.  You will be converted into one of asset bundle them together. he manager can be played automatically in order to read it.</p>
+<div><p>If necessary,BGM divide to the intro part and the loop part.You can create an asset bundle that were included them.The manager can be played automatically in order to read it.</p>
 <p>It converted to asset bundle in the next procedure.</p>
 <ol class="arabic simple">
-<li><p class="first">Create a folder called &#8220;Bgm&#8221; folder under the &#8220;Assets/KsSoft/&#8221; folder.</p>
+<li><p class="first">Create a &#8220;BGM&#8221; folder at the &#8220;Assets/KsSoft/&#8221; folder.</p>
 </li>
-<li><p class="first">Loop part must be named that &#8220;<a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .mp3&#8221;.</p>
+<li><p class="first">The loop part must be named &#8220;<a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.mp3&#8221;.</p>
 </li>
-<li><p class="first">Intro part must be named that &#8220;<a class="reference internal" href="id.html#mulid"><span>MulID</span></a> intro.mp3&#8221;.</p>
+<li><p class="first">The intro part must be named &#8220;<a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.intro.mp3&#8221;.</p>
 </li>
-<li><p class="first">Select the loop file or intro file that you want to convert into asset bundle</p>
+<li><p class="first">Highlight the loop file or intro file that you want to convert into asset bundle.</p>
 </li>
 <li><p class="first">[Right-click]→[Export]</p>
 </li>
 </ol>
 <blockquote>
-<div><p>Asset bundle named <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> is generated.</p>
+<div><p>The asset bundle named &#8220;<a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.unity3d&#8221; is generated.</p>
 </div></blockquote>
 </div></blockquote>
 <img alt="_images/BgmResource.png" src="_images/BgmResource.png" />
