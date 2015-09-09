@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
-        <link rel="next" title="Sample" href="sample.html"/>
+        <link rel="next" title="This window system’s samples" href="sample.html"/>
         <link rel="prev" title="The features of window system" href="feature.html"/> 
 
   
@@ -68,20 +68,21 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ms-windows-cygwin">For MS-Windows:Install the cygwin.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-messagedata">Preparation for the multi-lingual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#osx-xcode">For OSX:Install the Command Line Tools in Xcode.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
 </ul>
 </li>
@@ -544,14 +545,14 @@
             
   <div class="section" id="id1">
 <h1>Environment Steps<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cygwin">
-<span id="install-cygwin"></span><h2>Install the cygwin<a class="headerlink" href="#cygwin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ms-windows-cygwin">
+<span id="install-cygwin"></span><h2>For MS-Windows:Install the cygwin.<a class="headerlink" href="#ms-windows-cygwin" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>A window data need to compile the script. This compiler calls gcc&#8217;s preprocessor.</p>
-<p>Install the cygwin in the following procedure in the MS-Windows environment .</p>
+<div><p>A window data need to compile the script. This compiler invokes a gcc&#8217;s preprocessor.</p>
+<p>Install the cygwin procedure in the MS-Windows environment as follows..</p>
 </div></blockquote>
-<div class="section" id="id2">
-<h3>Download the cygwin<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cygwin">
+<h3>Download the cygwin<a class="headerlink" href="#cygwin" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>down load <a class="reference external" href="http://www.cygwin.com/setup-x86.exe">setup-x86.exe</a> or <a class="reference external" href="http://www.cygwin.com/setup-x86_64.exe">setup-x86_64.exe</a></p>
 <p><a class="reference external" href="http://www.cygwin.com/">http://www.cygwin.com/</a></p>
@@ -560,18 +561,18 @@
 <div class="section" id="devel">
 <h3>Installation by choosing the &#8220;Devel&#8221; package<a class="headerlink" href="#devel" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>As shown in Figure in the Select Packages, the Devel <strong>Default</strong> → <strong>Install</strong></p>
+<div><p>In the &#8220;Select Packages&#8221;, the Devel <strong>Default</strong> → <strong>Install</strong> .</p>
 <img alt="_images/cygwin.png" src="_images/cygwin.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h3>Install<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Install<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Install as instructed.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id4">
-<h3>Add the PATH of enviroment variable .<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Add the PATH of enviroment variable .<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>set the path to &#8220;bin&#8221; of the installed folder .</p>
 <p>It has become in the following folder by default</p>
@@ -581,8 +582,8 @@
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id5">
-<h3>The confirmation method<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>The confirmation<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Open a command prompt, try typing &#8220;gcc&#8221;. If you have been installed,it is displayed as follows.</p>
 <img alt="_images/check_gcc.png" src="_images/check_gcc.png" />
@@ -597,19 +598,25 @@
 <p>This environment has taken the operation check in Python 2.6 or later.</p>
 </div></blockquote>
 </div>
+<div class="section" id="osx-xcode">
+<span id="install-xcode-cmd"></span><h2>For OSX:Install the Command Line Tools in Xcode.<a class="headerlink" href="#osx-xcode" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>If you can not find the gcc on the terminal, please install the Command Line Tools in Xcode.</p>
+</div></blockquote>
+</div>
 <div class="section" id="install-messagedata">
-<span id="id6"></span><h2>Preparation for the multi-lingual<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>A preparation for the multi-lingual<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You need to install the tools to convert to a binary file from Excel file for message data.</p>
 <p>Please download it from  <a class="reference external" href="../MessageData.zip">here</a> .</p>
 <ol class="arabic simple">
-<li><p class="first">Expand the zip file to a top folder on the Unity Project</p>
+<li><p class="first">Expand the zip file to a top folder on your Unity Project.</p>
 </li>
 <li><p class="first">The &#8220;pythonlib&#8221; folder is added as a library path of python (see python manual).</p>
 </li>
 </ol>
 <img alt="_images/messagedata_install.png" src="_images/messagedata_install.png" />
-<p>&#8220;Project/KsWindow&#8221; is the top folder of UnityProject</p>
+<p>In this example,&#8221;Project/KsWindow&#8221; is the top folder of UnityProject</p>
 </div></blockquote>
 </div>
 </div>
@@ -620,7 +627,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sample.html" class="btn btn-neutral float-right" title="Sample">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sample.html" class="btn btn-neutral float-right" title="This window system’s samples">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="feature.html" class="btn btn-neutral" title="The features of window system"><span class="fa fa-arrow-circle-left"></span> Previous</a>

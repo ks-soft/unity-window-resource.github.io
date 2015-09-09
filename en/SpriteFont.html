@@ -68,20 +68,21 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">MS-Windows環境:cygwinインストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">Preparation for the multi-lingual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">OSX環境:Xcodeのコマンドラインツールをインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
 </ul>
 </li>
@@ -545,16 +546,16 @@
   <div class="section" id="spritefont">
 <span id="id1"></span><h1>Font<a class="headerlink" href="#spritefont" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>It can handle four maximum bitmap fonts as one of the fonts.</p>
-<p>However, when you convert these four bitmap, it refers only to the α channel of the bitmap file.Four α channels are mapped to each channel(R,G,B,A) of a single texture.</p>
-<p>If the number of bitmap exceeds 4, it can not be handled as a single font data.</p>
+<div><p>It can handle four bitmap fonts as one of the font texture.</p>
+<p>When you convert these four bitmaps, it uses the α channel of the bitmap file. Four α channels are mapped to each channel(R,G,B,A) of a single texture.</p>
+<p>If the number of bitmap exceeds 4, it can&#8217;t  be handled as a single font data.</p>
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Created as a resource data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Make a FontResource folder under the &#8220;Assets/KsSoft/&#8221; folder.</p>
-<p>You puts the text file and the bitmap files that you named in  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>  under the folder.</p>
-<p>For example, when you want to create a font that &#8220;cfn20&#8221;, Prepare a file such as the following, and place it in the specified location.</p>
+<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>  under the folder.</p>
+<p>If you want to create a font named &#8220;cfn20&#8221;, you need to prepare the files such as follows.And you place these  in this location.</p>
 <blockquote>
 <div><ul class="simple">
 <li>cfn20.txt</li>
@@ -564,14 +565,14 @@
 <li>cfn20_3.png</li>
 </ul>
 </div></blockquote>
-<p>This select the &#8220;cfn20.txt&#8221;, choose the [Right-click]→[Export], files such as the following may be generated under the Resources folder.</p>
+<p>You highlight the &#8220;cfn20.txt&#8221;, and choose the [Right-click]→[Export]. Files such as the following are generated under the &#8220;Resources&#8221; folder.</p>
 <blockquote>
 <div><ul class="simple">
 <li>cfn20.font</li>
 <li>cfn20.tex</li>
 </ul>
 </div></blockquote>
-<p>In the above procedure, &#8220;cfn20&#8221; become available within your application.</p>
+<p>By these steps,your application can use  the &#8220;cfn20&#8221; as a font data.</p>
 <img alt="_images/FontResource.png" src="_images/FontResource.png" />
 </div></blockquote>
 </div>
@@ -579,8 +580,8 @@
 <h2>Created as an asset bundle data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Make a Fonts folder under the &#8220;Assets/KsSoft/&#8221; folder.</p>
-<p>You puts the text file and the bitmap files that you named in  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>  under the folder</p>
-<p>For example, when you want to create a font that &#8220;fn16&#8221;, Prepare a file such as the following, and place it in the specified location.</p>
+<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> under the folder.</p>
+<p>If you want to create a font named &#8220;fn16&#8221;, you need to prepare the files such as follows. And you place these in this location.</p>
 <blockquote>
 <div><ul class="simple">
 <li>fn16.txt</li>
@@ -606,41 +607,41 @@
 <div class="section" id="bmfont">
 <h2>The font data generating method of BMFont<a class="headerlink" href="#bmfont" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Use the BMFont(Bitmap Font Generator), to introduce a method of making a bitmap font.</p>
+<div><p>Introduce a method of making bitmap fonts by the BMFont(Bitmap Font Generator).</p>
 </div></blockquote>
 <div class="section" id="id4">
 <h3>Creating a bitmap font<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>■Font Settings</p>
 <blockquote>
-<div><p>First, select the font you want to use.Select the [Options]→[Font Settings] from the menu.</p>
+<div><p>First, select the font you want to use. Select the [Options]→[Font Settings] from the menu.</p>
 <p>Then select the font type and font size.</p>
-<p>ut a check in the [Match char height].</p>
+<p>Put a check in the [Match char height].</p>
 <p>Put 100 to [Hieght%].</p>
 <img alt="_images/FontSetting.png" src="_images/FontSetting.png" />
 </div></blockquote>
 <p>■Export Options</p>
 <blockquote>
-<div><p>Next, to set the Export Select the [Options] → [Export Options] from the menu.</p>
+<div><p>Next, to set the Export. Select the [Options] → [Export Options] from the menu.</p>
 <p>You change the value of the part of the following red frame.</p>
 <img alt="_images/FontExportOption.png" src="_images/FontExportOption.png" />
 </div></blockquote>
 <p>■ Select the character that you want to include</p>
 <blockquote>
-<div><p>Then specify the character to be included in the bitmap font.</p>
+<div><p>Then you select characters included in the bitmap font.</p>
 </div></blockquote>
 <p>■ confirmation</p>
 <blockquote>
 <div><p>Ensure that you are correctly output along the items set. Select [Options] → [Visualize] from the menu, you can preview.</p>
-<p>Make sure bitmaps are within four.</p>
-<p>If the font is within all of the one, it may be possible to reduce the data size and try to adjust the texture size as the bitmap size is four.</p>
+<p>Make sure that bitmap number is within four.</p>
+<p>If the bitmap number is one, almost always it may be possible to reduce the data size. You try to adjust the texture size that the bitmap number may be four.</p>
 </div></blockquote>
 <p>■Output</p>
 <blockquote>
 <div><p>This configuration is complete.</p>
-<p>Select the [Options] → [Save bitmap font as ...] from the menu, and then output the bitmap.</p>
-<p>the file names using a FiveCC.</p>
-<p>Finally, you can rename the fnt files to txt file.Thus, the files needed for bitmap fonts have all.</p>
+<p>Select the [Options] → [Save bitmap font as ...] from the menu, and then output bitmaps.</p>
+<p>You need to save the file using a  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
+<p>Finally, you need to change the &#8220;fnt&#8221; extension to &#8220;fnt&#8221;.</p>
 </div></blockquote>
 </div></blockquote>
 </div>

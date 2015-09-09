@@ -68,20 +68,21 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">MS-Windows環境:cygwinインストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">Preparation for the multi-lingual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">OSX環境:Xcodeのコマンドラインツールをインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
 </ul>
 </li>
@@ -546,27 +547,27 @@
 <span id="id1"></span><h1>The texture<a class="headerlink" href="#textureresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Please refer <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>here</span></a> to access the texture resources on C#.</p>
-<p>In the window system , it uses what summarizes some of the texture(texture atlas).It can be rendered by a small mesh by summarized some of the texture.</p>
-<p>Also, when do the texture atlas,it automatically reduced color textures to 16bit, and performs dithering .</p>
+<p>This window system uses what summarizes some of the texture(texture atlas). And when do the texture atlas,the summarized texture automatically reduces color to 16 bit by dithering.</p>
+<p>If you want, when do the texture atlas, the summarized texture automatically reduced color to 16bit with dithering.</p>
 <p>It can be chosen whether to perform dithering for each part.</p>
 <p>■Texture part</p>
 <blockquote>
-<div><p>It can also be called a &#8220;part&#8221;. This is a previous texture atlas.</p>
+<div><p>It can also be called a &#8220;part&#8221;. This is part of the texture atlas.</p>
 </div></blockquote>
 <p>■The texture</p>
 <blockquote>
-<div><p>When referred to as a texture in this document , it refers to the texture after the atlas.In addition, in order to clearly separate the normal texture , sometimes referred to as a texture resource.</p>
+<div><p>When referred to as a texture in this document ,it is the summraized texture(texture atlas).In addition, in order to clearly separate the normal texture , sometimes referred to as a texture resource.</p>
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id2">
 <h2>How to make a texture resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p class="first">Start the AssetBuilder.</p>
+<li><p class="first">Start your Unity Project.</p>
 </li>
-<li><p class="first">Create a folder in the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> under the &#8220;TextureResource&#8221; folder in the project (&#8220;Assets/KsSoft/TextureResource&#8221;).</p>
+<li><p class="first">Create a folder with <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> under the &#8220;TextureResource&#8221; folder in your project (&#8220;Assets/KsSoft/TextureResource&#8221;).</p>
 </li>
-<li><p class="first">Place the texture in the folder .</p>
+<li><p class="first">Place textures in the folder .</p>
 </li>
 <li><p class="first">Highlight a folder, please select the [Right-Click] → [Export] (multiple can be selected).</p>
 </li>
@@ -577,8 +578,8 @@
 <p>Thus, the asset bundle named 100_000_00000.unity3d is generated under the &#8220;assetbundles&#8221; folder.</p>
 <p>■The texture name constraints</p>
 <p>The name of the texture atlas must be 5 characters , except for the extension .</p>
-<p>This is because it is encoded as <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
-<p>Other, it can also be used <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> file name.</p>
+<p>It is encoded as <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
+<p>Other, you can use the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> file name.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">BTN00</span><span class="p">.</span><span class="n">pgn</span>
 <span class="m">000</span><span class="n">_000_00010</span><span class="p">.</span><span class="n">png</span>
@@ -593,8 +594,8 @@
 <div class="section" id="parts-def">
 <span id="id3"></span><h2>The definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>If the &#8220;&#64;parts.def&#8221; placed in the texture folder, texture parts are converted along the definition file.</p>
-<p>Because it is a simple text file , it can be edited using the editor of your choice.</p>
+<div><p>If a &#8220;&#64;parts.def&#8221; placed in the texture folder, texture parts are converted along the definition file.</p>
+<p>Because it is a simple text file , you can write it with your favorite editor.</p>
 <p>The file encoding is UTF8.</p>
 </div></blockquote>
 <p>Choose whether to convert to a resource.</p>
@@ -603,7 +604,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>When you enable RESOURCE as follows , to create a file such as the following under the &#8220;KsSoft/Resources/&#8221; folder.</p>
+<div><p>When you enable RESOURCE, It create two files as follows under the &#8220;KsSoft/Resources/&#8221; folder.</p>
 <ul class="simple">
 <li>001_000_00000.spr</li>
 <li>001_000_00000.tex</li>
@@ -627,7 +628,7 @@
 </div>
 <blockquote>
 <div><p>The default texture format is <a class="reference external" href="http://docs.unity3d.com/ScriptReference/TextureFormat.html">RGBA4444</a> .</p>
-<p>Otherwise, it is possible to specify a <a class="reference internal" href="#png-jpg"><span>PNG or JPG</span></a> .</p>
+<p>Otherwise, it is possible to set a <a class="reference internal" href="#png-jpg"><span>PNG or JPG</span></a> .</p>
 <p>Except when you want to specify a 16bit texture, please dithering to OFF.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
@@ -645,7 +646,7 @@
 <div class="section" id="png-jpg">
 <span id="id5"></span><h3>How to texture atlas as PNG or JPG file.<a class="headerlink" href="#png-jpg" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>After summarizes some texture(texture atlas), when converting a texture to asset bundles, it is possible to convert the textures to a PNG or JPG files.</p>
+<div><p>It is possible to convert the texture atlas to a PNG or JPG files.</p>
 <p>However, when it is loaded on the application, it is deployed as 32bit texture.</p>
 <p>Please use it consider the advantages and disadvantages.</p>
 </div></blockquote>
@@ -677,11 +678,11 @@
 </div></blockquote>
 <p><strong>Disadvantages</strong></p>
 <blockquote>
-<div><p>To be deployed as a 32bit texture and pressure on the VRAM and the main memory.</p>
-<p>In addition, also at the expense of rendering speed.</p>
+<div><p>Because it is deployed as a 32bit texture,it uses a lot of VRAM and main memory.</p>
+<p>In addition, the rendering becomes heavier.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">On a narrow memory bandwidth smartphone, performance degradation.</p>
+<p class="last">On a narrow memory bandwidth smartphone, your application performance becomes degradation.</p>
 </div>
 </div></blockquote>
 </div></blockquote>
@@ -714,9 +715,9 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>You can specify a shader to one texture resources.</p>
-<p>It is not possible to switch the shaders in the texture parts.</p>
-<p>However, it is possible to switch the texture resource unit.</p>
+<div><p>You can specify a shader for each texture resource.</p>
+<p>You can not switch the shaders for each texture part.</p>
+<p>But you can assign a shader to the texture resource.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;Custom/Billboard&quot;</span><span class="p">;</span>
 
@@ -727,9 +728,9 @@
 </div>
 </div>
 <div class="section" id="id8">
-<h3>The part definition and aliases<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>Texture part definitions and aliases<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Definition of parts can be defined in the form such as the following.</p>
+<div><p>Texture part definitions can be defined in the form such as follows.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>PART(Texture part file name) {
    Property 0;
@@ -747,8 +748,8 @@ PART(Alias name,Texture part file name) {
 </pre></div>
 </div>
 <blockquote>
-<div><p>It is possible to alias a different name for one texture parts.This makes it possible to act as parts with different properties in the same part.</p>
-<p>For example, it is defined as follows, &#8220;BTN00&#8221;, the texture color is rendered as it is.On the other hand,&#8221;BTN01&#8221; is dark rendering.</p>
+<div><p>You can assign a different name for one texture part. This makes it possible to act as parts with different properties in the same part.</p>
+<p>For example, these are defined as follows. If you use &#8220;BTN00&#8221;, the window system renders it as it is. On the other hand,if you use &#8220;BTN01&#8221;, it is rendered dark.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
@@ -764,7 +765,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="color-r-g-b-a">
 <h4>COLOR = R,G,B,A;<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>Change color.</p>
+<div><p>Change the color.</p>
 <p>Elements of each color, specified in 0-1.</p>
 <p>The default is 1, 1, 1, 1.</p>
 </div></blockquote>
@@ -772,8 +773,8 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="dither-on-off">
 <h4>DITHER = ON/OFF;<a class="headerlink" href="#dither-on-off" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>It is possible to select whether or not to dithering parts.</p>
-<p>When the dithering to ON,it is done by the Jarvis, Judice, and Ninke dithering</p>
+<div><p>It is possible to select whether or not dithering a part.</p>
+<p>When the dithering is enabled,it is dithered with the &#8220;Jarvis, Judice, and Ninke&#8221; dithering.</p>
 <p>The default is ON.</p>
 </div></blockquote>
 </div>
@@ -783,7 +784,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="nopatch">
 <h4>NOPATCH;<a class="headerlink" href="#nopatch" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>To perform the normal expansion when you enlarge parts.</p>
+<div><p>A texture part is stretched equally.</p>
 <p>Division of parts default has become NODIVIDE.</p>
 </div></blockquote>
 </div>
@@ -793,7 +794,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch3h">
 <h4>PATCH3H = Left fixed width,Right fixed width<a class="headerlink" href="#patch3h" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>When expanding a part, only the left and right of the specified width is fixed, to enlarge the middle.</p>
+<div><p>When a texture part is stretched,widths of left and right is fixed, and only the middle is stretched.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">DIVIDE3H</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
@@ -811,7 +812,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch3v">
 <h4>PATCH3V = Top fixed height,Bottom fixed heighth<a class="headerlink" href="#patch3v" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>When expanding a part, only the top and bottom specified height is fixed, to enlarge the middle.</p>
+<div><p>When a texture part is stretched,heights of top and bottom is fixed, and only the middle is stretched.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">DIVIDE3V</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
@@ -829,7 +830,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch9">
 <h4>PATCH9 = Top left fixed width, Top left fixed height, Bottom right fixed width, Bottom right fixed high<a class="headerlink" href="#patch9" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>When expanding the part, only the four sides of the specified size is fixed, to enlarge the middle.</p>
+<div><p>When a texture part is stretched, the four sides of the specified size is fixed and  only the middle  is stretched.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;FRAME&quot;</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">DIVIDE9</span> <span class="p">=</span> <span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">;</span>
@@ -854,7 +855,7 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="id11">
 <h3>&#64;parts.def file that is automatically included<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>The following file when compiling the &#8220;&#64;parts.def&#8221;, is automatically included. it is useful to describe a common set in this file.</p>
+<div><p>When you convert a texture resource, the &#8220;tr.h&#8221; is automatically included in &#8220;&#64;part.def&#8221;.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">tr</span><span class="p">.</span><span class="n">h</span>
 </pre></div>

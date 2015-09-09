@@ -68,20 +68,21 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#cygwin">Install the cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">MS-Windows環境:cygwinインストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">Preparation for the multi-lingual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">OSX環境:Xcodeのコマンドラインツールをインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">Preparation for run the sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundle/Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
 </ul>
 </li>
@@ -545,12 +546,12 @@
   <div class="section" id="id-fivecc">
 <h1>Mul ID,FiveCC<a class="headerlink" href="#id-fivecc" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>It describes the format of the ID that is used in the window script .</p>
+<div><p>It describes the ID format that is used in the window script .</p>
 </div></blockquote>
 <div class="section" id="mulid">
 <span id="id"></span><h2>Mul ID<a class="headerlink" href="#mulid" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Multi- ID is the ID obtained by dividing the 32bit integer to 8 bit - 8 bit - 16 bit.</p>
+<div><p>A Multi- ID is 32 bit integer divided to 8bit,8bit and 16bit.</p>
 <p>Described in the following format.</p>
 <p>8bit_8bit_16bit</p>
 <p>You can set the value in the following range.</p>
@@ -565,7 +566,7 @@
 <div class="section" id="c">
 <h3>Access method from C#<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>There is <strong>MulId</strong> class</p>
+<div><p>You can use the  <strong>MulId</strong>  class on C#.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">//Constructor</span>
 <span class="n">MulId</span><span class="p">(</span><span class="kt">string</span> <span class="n">sId</span><span class="p">);</span>
@@ -586,7 +587,7 @@
 <div class="section" id="fivecc">
 <span id="id1"></span><h2>FiveCC<a class="headerlink" href="#fivecc" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The ID consists of ASCII characters within five characters . you can use characters , it is as follows .</p>
+<div><p>The ID consists of ASCII characters within five characters. You can use ASCII characters as follows.</p>
 <ul class="simple">
 <li>0～9</li>
 <li>a～z</li>
@@ -605,7 +606,7 @@
 <div class="section" id="id2">
 <h3>Access method from C#<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>There is <strong>FiveCC</strong> class</p>
+<div><p>You can use the  <strong>FiveCC</strong>  class on C#.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">//Constructor</span>
 <span class="n">FiveCC</span><span class="p">(</span><span class="kt">string</span> <span class="n">sId</span><span class="p">);</span>
