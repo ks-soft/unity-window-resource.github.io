@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -547,8 +547,8 @@
 <span id="id1"></span><h1>The multilingual<a class="headerlink" href="#multi-language" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>You can have the string resources as an asset data .</p>
-<p>The multilingual has become possible by changing the string resources .</p>
-<p>However , it is not required on the window system .</p>
+<p>This system can change string resources depending on your application locale.</p>
+<p>However , it is not essential on the window system .</p>
 <p>When creating an asset data of the character data , using the MS-Excel.</p>
 <p>We have prepared the tool for outputting binary data for the resource data from the Excel data.</p>
 <p>C# Object for using the output data is are prepared as follows.</p>
@@ -566,62 +566,61 @@
 <div class="section" id="origin">
 <h3>[ORIGIN]<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>[ORIGIN] you will have to get the data on the basis of the column named .</p>
-<p>There is always a need to put in the top data in the lower right begins .</p>
-<p>The same line will be commented and [ORIGIN]. It does not affect the data output .</p>
+<div><p>It parses the data on the basis of the column named [ORIGIN].</p>
+<p>It is necessary to place it on the location where the data begins.</p>
+<p>The same line as the [ORIGIN] will be commented. It does not affect the data output .</p>
 </div></blockquote>
 </div>
 <div class="section" id="d-r">
 <h3>[D],[R]<a class="headerlink" href="#d-r" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>[D] [R] of the B4 columns and C4 column , select whether or not to output every version . When individual column is blank , that line will suppress the data output.</p>
+<div><p>[D] [R] of the B4 columns and C4 column select to  whether or not to output data for what the version. When individual column is blank , that line will suppress the data output.</p>
 <ul class="simple">
 <li><p class="first">[D] is the debug version</p>
 </li>
-<li><p class="first">[D] is the release version</p>
+<li><p class="first">[R] is the release version</p>
 </li>
 </ul>
-<p>Character of D and R can be set freely.Whether or not to output any data by the argument can be selected. If you want to version control, add the line.</p>
+<p>Character of D and R can be set freely. Whether or not to output any data by the argument can be selected. If you want to add new version, add the line.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id">
 <h3>ID<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>D3 ID column gives the ID letters resource in a <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.[D] [R] of the lower (D4) declares that there is a need in the debug and release versions .</p>
-<p>ID column to access the character resources using an ID is required in all versions .</p>
+<div><p>ID of D3 column is specify the string resource ID by the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.[D][R] of D4 represents that it is necessary for both the debug version and release version.</p>
+<p>Since access to the character resources using the ID,It is required for all versions.</p>
 </div></blockquote>
 </div>
 <div class="section" id="jp-en">
 <h3>JP,EN<a class="headerlink" href="#jp-en" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>E3, F3 column of JP, EN is the locale name of character resources . Data is output as follows .</p>
+<div><p>E3, F3 column of JP, EN is the locale name of string resources. Data is output as follows .</p>
 <ul class="simple">
 <li>messagedata.JP.bin</li>
 <li>messagedata.EN.bin</li>
 </ul>
-<p>Column can be added .</p>
-<p>E4 Of [D] [R] is the locale defines to be output in the release and debug both in the case of JP</p>
-<p>On the other hand , [D] of F4 has means to output only in debug version .</p>
+<p>You can add any columns.</p>
+<p>When your application locale is JP,[D][R] of E4 represents to outputting  E column&#8217;s data in both the release and debug.</p>
+<p>On the other hand , [D] of F4 represents to outputting in the debug version only.</p>
 </div></blockquote>
 </div>
 <div class="section" id="wndw">
 <h3>Sheet name [WNDW]<a class="headerlink" href="#wndw" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Sheet names are encoded in <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
+<div><p>Sheet names are encoded in <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>.</p>
 <p>There is a need to put the sheet name of up to 5 alphanumeric characters .</p>
-<p>You can access the character resources in the argument of the sheet name and ID.</p>
+<p>You can access the string resource by the argument of the sheet name and ID.</p>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="id2">
-<h2>Character resources Excel conversion method<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>How to convert from Excel data to string resource data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>messagedata.exe or messagedata.py use</p>
+<div><p>You can use messagedata.exe or messagedata.py.</p>
 <p>Installation please refer to  <a class="reference internal" href="install.html#install-messagedata"><span>here</span></a> .</p>
 <p>This converter is written in python (2.6 or later) .</p>
 <p>It has imported the openpyxl to read Excel data .</p>
-<p>Installation procedure refer to here .</p>
-<p>When you want to exe, you are using pyinstaller.</p>
+<p>If you want to convert to the exe file from this python script , You are possible to use the pyinstaller.</p>
 </div></blockquote>
 <div class="section" id="messagedata-exe-or-messagedata-py">
 <h3>[ How to Use ] messagedata.exe or messagedata.py<a class="headerlink" href="#messagedata-exe-or-messagedata-py" title="Permalink to this headline">¶</a></h3>
@@ -659,10 +658,10 @@
 <h3>Asset bundling<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This is the procedure of asset bundling that is provided as standard .</p>
-<p>There is also a method to deploy a data read binary .</p>
-<p>Select the [KsTools]-&gt;[Export Binary Data] from the menu tab</p>
+<p>There is also a method which load a data as binary.</p>
+<p>Select the [KsTools]→[Export Binary Data] from the menu.</p>
 <img alt="_images/exportbinary.png" src="_images/exportbinary.png" />
-<p>If you want to add the locale data, add the  <a class="reference internal" href="Config.html#cf-messagedata"><span>KsSoftConfig</span></a> .</p>
+<p>If you want to add the locale data, add in the  <a class="reference internal" href="Config.html#cf-messagedata"><span>KsSoftConfig</span></a> .</p>
 </div></blockquote>
 </div>
 </div>

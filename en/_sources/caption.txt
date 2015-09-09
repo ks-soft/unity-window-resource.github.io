@@ -96,8 +96,6 @@ JP,EN
  
  Excelデータの読み込みには、openpyxlを使用しています。
  
- インストール手順はここを参照ください。
- 
  exeにするときに、pyinstallerを使っています。
  
 [使用方法] messagedata.exe or messagedata.py
