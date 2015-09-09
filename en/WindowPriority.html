@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -546,10 +546,10 @@
   <div class="section" id="id1">
 <h1>Window priority<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>Normal window displays higher the priority those create later.</p>
+<div><p>Generally,the newly created window is displayed aboveb others.</p>
 <p>If you want to control an explicit priority, it is necessary to set the value to <a class="reference internal" href="WINDOW.html#window-prop-priority"><span>PRIORITY</span></a> .</p>
 <p>The larger the priority, the window is displayed in front.</p>
-<p>However, if the next style is specified in the window, the priority is higher than the normal window.</p>
+<p>However, if windows are specified by the same style, you can control them  using <a class="reference internal" href="WINDOW.html#window-prop-priority"><span>PRIORITY</span></a>.</p>
 <ul class="simple">
 <li>TOP</li>
 <li>POPUP</li>
@@ -587,7 +587,7 @@
 <div class="line">Set the display priority of the window to maximum.</div>
 <div class="line">It is priority than TOP, and a lower priority than TOPMOST.</div>
 <div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
-<div class="line">If you touch other than the window, automatically call the onClose.</div>
+<div class="line">if you touch the screen other than this window, this window is closed.</div>
 </div>
 </td>
 </tr>
@@ -601,7 +601,7 @@
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
 <td><div class="first last line-block">
-<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+<div class="line">Even if this window is opened, you specify it when you do not want to darken the other window.(valid only when you have specified the TOP / POPUP)</div>
 </div>
 </td>
 </tr>

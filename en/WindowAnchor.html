@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -549,9 +549,9 @@
 <h2>The screen:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It is possible to define a virtual screen in the screen by setting the <a class="reference internal" href="WINDOW.html#window-prop-screen"><span>SCREEN</span></a> .</p>
-<p>It is possible to adjust the center position and the base position of the anchor.</p>
-<p>A window position and RELATIVE_SIZE is calculated on the basis of the screen.</p>
-<p>Unless you do not explicitly set, the screen size is the same as the screen size.</p>
+<p>Your window can adjust the center position and base position by <a class="reference internal" href="WINDOW.html#window-prop-screen"><span>SCREEN</span></a> property.</p>
+<p>A window position and RELATIVE_SIZE are calculated on the basis of the <a class="reference internal" href="WINDOW.html#window-prop-screen"><span>SCREEN</span></a> property.</p>
+<p>If you do not explicitly set it, the <a class="reference internal" href="WINDOW.html#window-prop-screen"><span>SCREEN</span></a> property size is the same as your device screen size.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c1">//this mean is full screen.</span>
 </pre></div>
@@ -574,9 +574,9 @@
 <blockquote>
 <div><p>When placing the window, you can set individually the origin position on the screen.</p>
 <p>You can set the relative position of the window position from each origin position.</p>
-<p>As a screen size is changed, the window layout is less likely to collapse.</p>
-<p>It is named the setting of this origin position as an anchor in this window system.</p>
-<p>Anchor is freely set from nine as shown in the figure below .</p>
+<p>Even if a screen size is changed, the window layout is less likely to collapse.</p>
+<p>This window system named the anchor it.</p>
+<p>You can select nine kind anchor as shown in the figure below.</p>
 </div></blockquote>
 <img alt="_images/WindowAnchor.png" src="_images/WindowAnchor.png" />
 </div>

@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -555,7 +555,7 @@
 <li><p class="first">Control definition blocks</p>
 </li>
 </ul>
-<p>Always , window definition block comes to the top.Then in control definition block is followed.Window ID is named using the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.</p>
+<p>Always , window definition block comes to the top. Following that, there is a control definition block. The window-ID is required to be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>// window define block
 WINDOW(Window ID) {
@@ -628,7 +628,7 @@ METER(ProgressPart) {
 <div class="section" id="id2">
 <h2>Variables and expressions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>You can use the variables and the expression in the wra file. Those that begin from <strong>$</strong> is variable.The type of the variable is real.It is possible to write an expression in the property.</p>
+<div><p>You can use the variables and the expression on the wra file. Those that begin from <strong>$</strong> is a variable. The type of the variable is real. It is possible to write an expression in the property.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>ID = 000_000_00010 + (3 * $val);
 </pre></div>
@@ -636,7 +636,7 @@ METER(ProgressPart) {
 <div class="section" id="id3">
 <h3>The declaration of variables<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>When you use a variable , When you use a variable , it is necessary to always have an initial value. Uninitialized variables are errors.</p>
+<div><p>When you use a variable , it is necessary to always have an initial value. Uninitialized variables are errors.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>$i = 3;             //integer(Decimal number)
 $h = 0xfff123;      //integer(Hexadecimal number)
@@ -720,11 +720,11 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div class="section" id="id6">
 <h3>Calculation of string<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>The string can not be assigned to a variable. Operation for connecting the characters can be used.</p>
+<div><p>a variable can&#8217;t store a string. But,the operation for connecting the strings can be used.</p>
 <ul class="simple">
-<li><p class="first">characters + characters</p>
+<li><p class="first">string + string</p>
 </li>
-<li><p class="first">characters . characters</p>
+<li><p class="first">string . string</p>
 </li>
 </ul>
 </div></blockquote>
@@ -823,7 +823,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <tr class="row-odd"><td><p class="first last">#pragma RESOURCE path</p>
 </td>
 <td><div class="first last line-block">
-<div class="line">Output to the specified path as the resource data</div>
+<div class="line">Output it  to the specified path as resource data.</div>
 <div class="line">Example:</div>
 <div class="line">#pragma RESOURCE = Resources/windows.asset</div>
 </div>
