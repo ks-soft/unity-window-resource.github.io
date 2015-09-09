@@ -68,8 +68,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">環境構築方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cygwin">cygwinインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ms-windows-cygwin">MS-Windows環境:cygwinインストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-2-x">Python 2.x インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#osx-xcode">OSX環境:Xcodeのコマンドラインツールをインストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-messagedata">多言語対応を行うための準備</a></li>
 </ul>
 </li>
@@ -544,15 +545,15 @@
             
   <div class="section" id="id1">
 <h1>環境構築方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cygwin">
-<span id="install-cygwin"></span><h2>cygwinインストール<a class="headerlink" href="#cygwin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ms-windows-cygwin">
+<span id="install-cygwin"></span><h2>MS-Windows環境:cygwinインストール<a class="headerlink" href="#ms-windows-cygwin" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>本ウィンドウシステムでは、スクリプトをコンパイルしてウィンドウデータとします。
 スクリプトをコンパイルするときに、プリプロセッサとしてgccを使用しています。</p>
 <p>MS-Windows環境では、以下の手順でcygwinをインストールしてください。</p>
 </div></blockquote>
-<div class="section" id="id2">
-<h3>cygwinをダウンロード<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cygwin">
+<h3>cygwinをダウンロード<a class="headerlink" href="#cygwin" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>次のアドレスから <a class="reference external" href="http://www.cygwin.com/setup-x86.exe">setup-x86.exe</a> 若しくは <a class="reference external" href="http://www.cygwin.com/setup-x86_64.exe">setup-x86_64.exe</a> をダウンロードしてください。</p>
 <p><a class="reference external" href="http://www.cygwin.com/">http://www.cygwin.com/</a></p>
@@ -565,13 +566,13 @@
 <img alt="_images/cygwin.png" src="_images/cygwin.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h3>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>後は指定通りインストールしてください。</div></blockquote>
 </div>
-<div class="section" id="id4">
-<h3>パスを通す<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>パスを通す<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>インストールしたフォルダを基準に、binにパスを通してください。</p>
 <p>デフォルトでは、下記のフォルダになっています。</p>
@@ -580,8 +581,8 @@
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id5">
-<h3>確認<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>確認<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>コマンドプロンプトを開いて、gccと打ち込んでみてください。
 正しくインストールできていれば、以下のように表示されるはずです。</p>
@@ -599,8 +600,13 @@ MS-Excelから、データコンバートするためのツールは、Pythonで
 <p>本環境は、Python 2.6以降で動作確認をとっています。</p>
 </div></blockquote>
 </div>
+<div class="section" id="osx-xcode">
+<span id="install-xcode-cmd"></span><h2>OSX環境:Xcodeのコマンドラインツールをインストール<a class="headerlink" href="#osx-xcode" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>ターミナル上でgccが見つからないときは、各自Xcodeからコマンドラインツールをインストールしてください。</div></blockquote>
+</div>
 <div class="section" id="install-messagedata">
-<span id="id6"></span><h2>多言語対応を行うための準備<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>多言語対応を行うための準備<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>メッセージデータをExcelファイルからバイナリファイルにコンバートするためのツールをインストールする必要があります。</p>
 <p><a class="reference external" href="../MessageData.zip">こちら</a> からダウンロードしてください。</p>
