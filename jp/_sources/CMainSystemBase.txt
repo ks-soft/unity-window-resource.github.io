@@ -43,29 +43,14 @@ CMainSystemBase
      gameObject.AddComponent<CInput>();
      gameObject.AddComponent<CAssetBundleMgr>();
      gameObject.AddComponent<CSpriteFontMgr>();
-     gameObject.AddComponent<CMaterialMgr>();
-     gameObject.AddComponent<CMeshMgr>();
      gameObject.AddComponent<CTextureResourceMgr>();
      gameObject.AddComponent<CWindowMgr>();
-     gameObject.AddComponent<CMapResourceMgr>();
      gameObject.AddComponent<CBgmResourceMgr>();
      gameObject.AddComponent<CSeResourceMgr>();
-
-     gameObject.AddComponent<CSpriteDataMgr>();
-     gameObject.AddComponent<CBillboardEffectMgr>();
-     gameObject.AddComponent<CEffectAttributeMgr>();
-     gameObject.AddComponent<CModelEffectMgr>();
-     gameObject.AddComponent<CParticleEffectMgr>();
      gameObject.AddComponent<CSoundEffectMgr>();
 
      // 初期化の必要なマネージャ.
-     addManager(new CCharAnimMgr());
      addManager(new CMessageDataSheetMgr(Utility.getSystemLocale()));
-     addManager(new CNpcStatusSrcMgr());		//NPC status manager.
-     addManager(new CSkillMgr());				//skill manager
-     addManager(new CCombinationAttackMgr());	//combination attack manager
-     addManager(new CItemSrcMgr());				//item manager.
-     addManager(new CEffectMgr());				//effect manager.
  }
  
 ..

@@ -575,29 +575,14 @@
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CMaterialMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CMeshMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CMapResourceMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
-
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteDataMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBillboardEffectMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CEffectAttributeMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CModelEffectMgr</span><span class="p">&gt;();</span>
-    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CParticleEffectMgr</span><span class="p">&gt;();</span>
     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
 
     <span class="c1">// 初期化の必要なマネージャ.</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CCharAnimMgr</span><span class="p">());</span>
     <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CNpcStatusSrcMgr</span><span class="p">());</span>                <span class="c1">//NPC status manager.</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CSkillMgr</span><span class="p">());</span>                               <span class="c1">//skill manager</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CCombinationAttackMgr</span><span class="p">());</span>   <span class="c1">//combination attack manager</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CItemSrcMgr</span><span class="p">());</span>                             <span class="c1">//item manager.</span>
-    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CEffectMgr</span><span class="p">());</span>                              <span class="c1">//effect manager.</span>
 <span class="p">}</span>
 </pre></div>
 </div>
