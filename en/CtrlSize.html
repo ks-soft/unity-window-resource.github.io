@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,13 +548,13 @@
 <div class="section" id="id2">
 <h2>The relative size :<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>You can set the control size in the window of relative size . Setting method is as follows .</p>
+<div><p>You can set the control size in relative size of the window. Set as follows.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">16</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">16</span><span class="p">);</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>In this example it is set in the following.</p>
+<div><p>In this example it is set as the following.</p>
 <blockquote>
 <div><p>width = window width - 16</p>
 <p>height = window height + 16</p>
@@ -565,8 +565,8 @@
 <h2>The size default value<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The default value is set when the size of the control was omitted or specify 0 .</p>
-<p>The default value is to refer to the size of the texture parts .</p>
-<p>If you want to display a dot -by- dot , it may be set to default values ​​.</p>
+<p>The default value is the size of the texture parts.</p>
+<p>If you want to display by dot-by-dot , you set to 0 or don&#8217;t set.</p>
 </div></blockquote>
 </div>
 </div>

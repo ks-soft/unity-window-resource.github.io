@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -592,14 +592,14 @@
 <div class="section" id="id-id">
 <h3><strong>ID</strong> = Control ID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>define the control ID.</p>
+<div><p>Define the control ID.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you did not set , it can generate automatically from the hash value .</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
 </div>
 </div>
 <div class="section" id="position-x-y">
@@ -666,7 +666,7 @@
 <h3><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the color.</p>
-<p>Set R, G, B between 0-2 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
 <p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
 <p>Set A between 0-1.</p>
 </div></blockquote>
@@ -681,7 +681,7 @@
 <div class="section" id="se-id-se-id">
 <h3>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>To set the ID of the sound played when pressed . 0 is set as the default , not the sound .</p>
+<div><p>To set the ID of the sound played when pressed . 0 is set as the default. This default value means not to play a sound.</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -718,7 +718,7 @@
 <tr class="row-even"><td>ANCHOR_LEFT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the left.</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 <div class="line">The default control center position is set to BASE_LEFT.</div>
 </div>
 </td>
@@ -734,7 +734,7 @@
 <tr class="row-even"><td>ANCHOR_TOP</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the upper side</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 <div class="line">The default control center position is set to BASE_TOP.</div>
 </div>
 </td>
@@ -749,7 +749,7 @@
 <tr class="row-even"><td>ANCHOR_BOTTOM</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position at the bottom</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 <div class="line">The default control center position is set to BASE_BOTTOM.</div>
 </div>
 </td>
@@ -764,7 +764,7 @@
 <tr class="row-even"><td>ANCHOR_RIGHT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the right</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 <div class="line">The default control center position is set to BASE_RIGHT.</div>
 </div>
 </td>
@@ -783,7 +783,7 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p>You can set the center position of the control</p>
+<div><p>You can set the center position of the control.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
@@ -807,52 +807,52 @@
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTTOP</td>
-<td><p class="first last">Set the center position in the upper left corner of the control</p>
+<td><p class="first last">Set the center position to the upper left side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_LEFT</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position to the left</div>
-<div class="line">The middle of the control and the vertical</div>
+<div class="line">Set the center position to the left side.</div>
+<div class="line">and vertical centering.</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
-<td><p class="first last">Set the center position at the bottom left</p>
+<td><p class="first last">Set the center position to the bottom left side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_TOP</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the uppe</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the upper side.</div>
+<div class="line">and horizontal centering</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_CENTER</td>
-<td><p class="first last">Set the center position at the center</p>
+<td><p class="first last">Set the center position to the center.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_BOTTOM</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the bottom</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the bottom side.</div>
+<div class="line">And horizontal centering.</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTTOP</td>
-<td><p class="first last">Set the center position at the upper right</p>
+<td><p class="first last">Set the center position to the upper right side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_RIGHT</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the right</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the right side.</div>
+<div class="line">and horizontal centering</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the bottom right</div>
+<div class="line">Set the center position to the bottom right side.</div>
 </div>
 </td>
 </tr>
@@ -880,15 +880,15 @@
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
-<td><p class="first last">To enable drag .</p>
+<td><p class="first last">Enable a dragging.</p>
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">Press to not. And darken .</p>
+<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>
-<td><p class="first last">Press to not.</p>
+<td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
 </tbody>

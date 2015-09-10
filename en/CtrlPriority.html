@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -547,15 +547,15 @@
 <h1>The control priority<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>A window is rendered using a mesh .</p>
-<p>Mesh is one prepared to one texture.</p>
-<p>Thus, even increasing the number of controls so that draw call number of times do not increase .</p>
+<p>A mesh is generated in corresponding to one texture.</p>
+<p>Thus, the draw call does not increase even if the number of window control increase.</p>
 <p>However , there is a need to be careful about the priority between the control .</p>
 <p>Priority between the control to be rendered in a single draw call can be flexibly changed .</p>
 <p>On the other hand , priority between different texture ( = different mesh ) is dependent on the priority between the texture priority</p>
 <p>First , it is sorted by the textures , it is then sorted in the control priority within the same texture .</p>
-<p>For example, the following window is composed by four meshs (textures ) .</p>
+<p>For example, the following window is composed by four meshes (textures ) .</p>
 <img alt="_images/CtrlPriority.png" src="_images/CtrlPriority.png" />
-<p>This window is constructed from the font texture mesh and the texture mesh .</p>
+<p>This window is constructed from two font meshes and two texture meshes.</p>
 <blockquote>
 <div><ul class="simple">
 <li>fn40</li>
@@ -568,8 +568,8 @@
 <div class="section" id="id">
 <h2>If the same texture ID is specified<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It can be set by the property at a <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a>  of control .</p>
-<p>Control with a large <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> value is displayed in the front .</p>
+<div><p>It can be set by the <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a>  of the control .</p>
+<p>A control with a large <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> value is displayed in the front .</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
@@ -583,7 +583,7 @@
 <h3>If the priority is the same<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>If the priority is the same , it is automatically sorted according to the type of controls .</p>
-<p>As those in the above is rendered in front .</p>
+<p>The control which list order is high is rendered to the front.</p>
 <ul class="simple">
 <li>SCROLLBAR</li>
 <li>LISTBOX</li>
@@ -617,9 +617,9 @@
 <div class="section" id="id3">
 <h2>If the texture ID is different<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>If the texture ID is different , the texture&#8217;s Z offsets is preferentially rather than the priority of the control.</p>
+<div><p>If the texture ID is different , The texture&#8217;s z offset is priority than the priority of the control.</p>
 <p>It is possible to set the Z offset of texture by <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> of window properties .</p>
-<p>What its value is large is displayed in the back .</p>
+<p>The mesh that has larger value is displayed at the back.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">100</span><span class="n">_100_00010</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
@@ -633,7 +633,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>In this example , it is displayed in the following order .</p>
+<div><p>In this example , Meshes are rendered in the following order.</p>
 <ul class="simple">
 <li><p class="first">100_100_00000    front</p>
 </li>
@@ -644,11 +644,11 @@
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If not explicitly specify the Z offset and automatically set the Z offset to be rendered in front of the mesh set as the default texture .The order is difficult to explicitly control because it is handled automatically by the system .If you have three or more of the texture in one window , it is better you have to set the <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> .</p>
+<p class="last">If not explicitly specify the Z offset,this window system assigns a value as this texture mesh is rendered in front of the existing meshes. This order is difficult to explicitly control because it is handled automatically by the system. If your window has three or more texture, you are better to set the <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>It is possible to specify a rendering order in <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> also mesh that has been generated as a render target .</p>
+<p>You can change the rendering order of generated meshes for render target by setting this <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 <p class="last">refer to the <a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> , <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a> .</p>
 </div>
 </div>

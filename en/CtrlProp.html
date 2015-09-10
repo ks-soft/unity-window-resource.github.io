@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -546,21 +546,21 @@
   <div class="section" id="ctrl-prop">
 <span id="id1"></span><h1>Control common properties<a class="headerlink" href="#ctrl-prop" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>It is listed for the common property of the control .</p>
-<p>However , properties that are introduced here is also meaningless even if you set the value by the control type.</p>
+<div><p>It is enumerated the common property of controls.</p>
+<p>Even if you set the value to  some property depending on the control type, it may meaningless.</p>
 <p>For more information, please look at the description of each control .</p>
 </div></blockquote>
 <div class="section" id="id-id">
 <h2><strong>ID</strong> = Control ID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>define the control ID.</p>
+<div><p>Define the control ID.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you did not set , it can generate automatically from the hash value .</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
 </div>
 </div>
 <div class="section" id="position-x-y">
@@ -575,7 +575,7 @@
 <div class="section" id="size">
 <h2><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It will change the display size . When it is omitted , or , if you specify 0 , you have to get the size from the texture parts .</p>
+<div><p>It changes the display size. When it is omitted , or , if you specify 0 ,it gets the size from the texture parts.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//64x32</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>    <span class="c1">//Set the width of the texture part width</span>
@@ -586,7 +586,7 @@
 <div class="section" id="contents">
 <span id="ctrl-prop-contents"></span><h2><strong>CONTENTS</strong> = { control define … }<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It defines the content with the control .</p>
+<div><p>It defines contents int the control.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
        <span class="n">BUTTON</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
@@ -604,13 +604,13 @@
 <div class="section" id="contents-size">
 <h2><strong>CONTENTS_SIZE</strong> = width，height<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It defines the size of the content .</p>
+<div><p>It defines the size of the content.</p>
 </div></blockquote>
 </div>
 <div class="section" id="line-space">
 <h2><strong>LINE_SPACE</strong> = line spacing pixel value<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It defines the gaps between the content .</p>
+<div><p>It defines the gaps between the content.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
 </pre></div>
@@ -619,7 +619,7 @@
 <div class="section" id="group-id">
 <span id="ctrl-prop-group"></span><h2><strong>GROUP</strong> = Control ID,…<a class="headerlink" href="#group-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It defines the control ID to be grouped. It is also used when you want to associate a list box and scroll bar .</p>
+<div><p>It defines the group in the control. It is also used when you want to associate a listbox and scrollbar.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GROUP</span> <span class="p">=</span> <span class="n">RADIO</span><span class="p">(</span><span class="n">Spring</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Summer</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Autumn</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Winter</span><span class="p">),</span><span class="m">001</span><span class="n">_002_30000</span><span class="p">;</span>
 </pre></div>
@@ -628,7 +628,7 @@
 <div class="section" id="priority">
 <span id="ctrl-prop-priority"></span><h2><strong>PRIORITY</strong> = Priority value<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It defines the priority value . The higher the value, it will appear on top .</p>
+<div><p>It defines the priority value . The higher the value, it will appear on front.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PRIORITY</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
 </pre></div>
@@ -678,18 +678,18 @@
 <h2><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Set the color.</p>
-<p>Set R, G, B between 0-2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times .</p>
-<p>Set A between 0-1 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="color-n-r-g-b-a">
 <h2><strong>COLOR</strong> n = R,G,B,A<a class="headerlink" href="#color-n-r-g-b-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Set the color.</p>
-<p>Set R, G, B between 0-2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times .</p>
-<p>Set A between 0-1 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 <p>It can be specified in the range of n = [0..7].</p>
 <p>If n = 0, it operates the same texture as <strong>COLOR</strong> .</p>
 </div></blockquote>
@@ -717,7 +717,7 @@
 <h2><strong>CAPTION_COLOR</strong> = R,G,B,A<a class="headerlink" href="#caption-color-r-g-b-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can set the caption color .</p>
-<p>Set between 0-1</p>
+<p>Set a value in the range of 0～1.</p>
 </div></blockquote>
 </div>
 <div class="section" id="caption-offset-x-y">
@@ -727,9 +727,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h2><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h2>
+<h2>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>To set the ID of the sound played when pressed . 0 is set as the default , not the sound .</p>
+<div><p>To set the ID of the sound played when pressed . 0 is set as the default. This default value means not to play a sound.</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -766,7 +766,7 @@
 <tr class="row-even"><td>ANCHOR_LEFT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the left.</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 <div class="line">The default control center position is set to BASE_LEFT.</div>
 </div>
 </td>
@@ -782,7 +782,7 @@
 <tr class="row-even"><td>ANCHOR_TOP</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the upper side</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 <div class="line">The default control center position is set to BASE_TOP.</div>
 </div>
 </td>
@@ -797,7 +797,7 @@
 <tr class="row-even"><td>ANCHOR_BOTTOM</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position at the bottom</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 <div class="line">The default control center position is set to BASE_BOTTOM.</div>
 </div>
 </td>
@@ -812,7 +812,7 @@
 <tr class="row-even"><td>ANCHOR_RIGHT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the right</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 <div class="line">The default control center position is set to BASE_RIGHT.</div>
 </div>
 </td>
@@ -831,7 +831,7 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p>You can set the center position of the control</p>
+<div><p>You can set the center position of the control.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
@@ -855,52 +855,52 @@
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTTOP</td>
-<td><p class="first last">Set the center position in the upper left corner of the control</p>
+<td><p class="first last">Set the center position to the upper left side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_LEFT</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position to the left</div>
-<div class="line">The middle of the control and the vertical</div>
+<div class="line">Set the center position to the left side.</div>
+<div class="line">and vertical centering.</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
-<td><p class="first last">Set the center position at the bottom left</p>
+<td><p class="first last">Set the center position to the bottom left side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_TOP</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the uppe</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the upper side.</div>
+<div class="line">and horizontal centering</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_CENTER</td>
-<td><p class="first last">Set the center position at the center</p>
+<td><p class="first last">Set the center position to the center.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_BOTTOM</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the bottom</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the bottom side.</div>
+<div class="line">And horizontal centering.</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTTOP</td>
-<td><p class="first last">Set the center position at the upper right</p>
+<td><p class="first last">Set the center position to the upper right side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>BASE_RIGHT</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the right</div>
-<div class="line">Lateral control center</div>
+<div class="line">Set the center position to the right side.</div>
+<div class="line">and horizontal centering</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
 <td><div class="first last line-block">
-<div class="line">Set the center position at the bottom right</div>
+<div class="line">Set the center position to the bottom right side.</div>
 </div>
 </td>
 </tr>
@@ -909,7 +909,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>You set the caption of the center position .</p>
+<p>You set the caption position to the center.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -924,15 +924,15 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>TEXT_CENTER</td>
-<td><p class="first last">It is aligned with the center of the text display .</p>
+<td><p class="first last">It aligns the text to the center.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>TEXT_LEFT</td>
-<td><p class="first last">It aligns the text displayed on the left .</p>
+<td><p class="first last">It aligns the text to the left side.</p>
 </td>
 </tr>
 <tr class="row-even"><td>TEXT_RIGHT</td>
-<td><p class="first last">It aligns the text displayed on the right .</p>
+<td><p class="first last">It aligns the text to the right side.</p>
 </td>
 </tr>
 </tbody>
@@ -996,15 +996,15 @@
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
-<td><p class="first last">To enable drag .</p>
+<td><p class="first last">Enable a dragging.</p>
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">Press to not. And darken .</p>
+<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>
-<td><p class="first last">Press to not.</p>
+<td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
 </tbody>

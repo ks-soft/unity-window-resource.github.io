@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -566,8 +566,8 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>Make a TestWindow.cs, and inherit the TestWindowBase.</p>
-<p>You can specify by <a class="reference internal" href="#window-prop-path"><span>PATH</span></a>  the path that is output TestWindowBase.cs on the script.</p>
+<div><p>Create a TestWindow.cs, and inherit the TestWindowBase.</p>
+<p>The path for outputting the TestWindowBase.cs can be specified using the <a class="reference internal" href="#window-prop-path"><span>PATH</span></a> on the script.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
@@ -586,8 +586,8 @@
 <div class="section" id="resource-id">
 <span id="resource-ab"></span><h3><strong>RESOURCE = MulID</strong><a class="headerlink" href="#resource-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>If you do [KsTools]→[Export Window Resource], and outputs it as an asset bundle.</p>
-<p>If you set the same <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> , it summarizes the window data to one of the asset bundle.</p>
+<div><p>If you run a [KsTools]→[Export Window Resource],this system outputs it as an asset bundle.</p>
+<p>If you set the same <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> to some window ,these window data are included  in an asset bundle together.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="m">000</span><span class="n">_014_00000</span><span class="p">;</span>
 </pre></div>
@@ -600,7 +600,7 @@
 <span id="resource-a"></span><h3><strong>RESOURCE = output path</strong><a class="headerlink" href="#resource" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It outputs the asset data to the specified path.</p>
-<p>Window where you specify the same path to output as an asset that is combined into one.</p>
+<p>If you set the same path to some window ,these window data are included in an asset data together.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="s">&quot;Assets/KsSoft/Resources/windows&quot;</span><span class="p">;</span>
 </pre></div>
@@ -634,13 +634,13 @@
 <blockquote>
 <div><p>You set the default texture ID.</p>
 <p>If you omit the texture ID of the control, this value is used.</p>
-<p>In addition, it specifies here also texture to use for the frame and title bar.</p>
+<p>In addition, you use this property in the case you want to select the texture for the frame and title bar.</p>
 </div></blockquote>
 </div>
 <div class="section" id="caption-id">
 <h3><strong>CAPTION</strong> = Caption ID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You set the window&#8217;s caption character.</p>
+<div><p>You set the window’s caption string.</p>
 <p>If  <strong>WINDOW_STYLE_NOTITLEBAR</strong>  is set to <strong>STYLE</strong> , this value is ignored.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">020</span><span class="n">_000_00010</span><span class="p">;</span>
@@ -668,8 +668,8 @@
 <span id="window-prop-screen"></span><h3><strong>SCREEN</strong> = left top X,left Top Y,width,height<a class="headerlink" href="#screen-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the position and size of the screen.</p>
-<p>Window size and position is determined along the specified screen.</p>
-<p>Window position and RELATIVE_SIZE is calculated on the basis of the screen.</p>
+<p>A window size and position are able to determine along the screen.</p>
+<p>A window position and RELATIVE_SIZE are calculated on the basis of the screen.</p>
 <p>If you do not set the screen, the screen is set to full screen.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c1">//全画面と同義</span>
@@ -691,7 +691,7 @@
 <div class="section" id="priority">
 <span id="window-prop-priority"></span><h3><strong>PRIORITY</strong> = display priority<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the display priority of window. The higher the value, display priority is higher.Please be careful to differences between  <a class="reference internal" href="#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> .</p>
+<div><p>Set the display priority of window. The higher the value, display priority is higher. Please be careful to differences with  <a class="reference internal" href="#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">PRIORITY</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span>
 </pre></div>
@@ -700,9 +700,9 @@
 <div class="section" id="texture-zoffset-id-z">
 <span id="window-prop-texture-zoffset"></span><h3><strong>TEXTURE_ZOFFSET</strong> = Texture ID,Z offset<a class="headerlink" href="#texture-zoffset-id-z" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It tries to render the control that uses the same texture in a single mesh for rendering optimization</p>
-<p>Therefore, the priority between the control is display priority among those that are using the same texture.</p>
-<p>To change the display priority between each texture, you can use the TEXTURE_ZOFFSET.This property can be set to display priority order of the meshes using the same texture.</p>
+<div><p>If controls of window use the same texture,this window system renders with single mesh.</p>
+<p>Therefore, the priority between the control of window means the display priority between the control which assigned the same texture.</p>
+<p>To change the display priority between each texture, you can use the TEXTURE_ZOFFSET. You can change the display priority of the mesh by this property.</p>
 <p>The smaller this value, display priority is higher.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">014</span><span class="n">_000_00010</span><span class="p">,-</span><span class="m">1</span><span class="p">;</span>    <span class="c1">//手前に表示するように変更</span>
@@ -738,7 +738,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_LEFT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the left.</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 </div>
 </td>
 </tr>
@@ -752,7 +752,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_TOP</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the upper side</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 </div>
 </td>
 </tr>
@@ -763,7 +763,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_BOTTOM</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position at the bottom</div>
-<div class="line">Lateral centering</div>
+<div class="line">Centering at lateral.</div>
 </div>
 </td>
 </tr>
@@ -774,7 +774,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_RIGHT</td>
 <td><div class="first last line-block">
 <div class="line">Set the anchor position to the right</div>
-<div class="line">Vertical centering</div>
+<div class="line">And vertical centering</div>
 </div>
 </td>
 </tr>
@@ -816,7 +816,7 @@
 <div class="line">Set the display priority of the window to maximum.</div>
 <div class="line">It is priority than TOP, and a lower priority than TOPMOST.</div>
 <div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
-<div class="line">If you touch other than the window, automatically call the onClose.</div>
+<div class="line">if you touch the screen other than this window, this window is closed.</div>
 </div>
 </td>
 </tr>
@@ -830,7 +830,7 @@
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
 <td><div class="first last line-block">
-<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
+<div class="line">Even if this window is opened, you specify it when you do not want to darken the other window.(valid only when you have specified the TOP / POPUP)</div>
 </div>
 </td>
 </tr>
@@ -876,12 +876,11 @@
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_DISABLE</td>
-<td><p class="first last">To stop the function, and to not accept input.</p>
+<td><p class="first last">Stop the function, can&#8217;t accept input.</p>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_NODRAG</td>
-<td><p class="first last">Stop the window movement by drag.</p>
-</td>
+<td>ドラッグによるウィンドウの移動を抑制する</td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
 <td><p class="first last">It does not become active.</p>
@@ -893,7 +892,7 @@
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOBRINGTOTOP</td>
 <td><div class="first last line-block">
-<div class="line">If you set the NOTITLEBAR to flag, close button is not placed</div>
+<div class="line">The display priority of a window doesn&#8217;t allow to raise automatically  when it becomes active.</div>
 </div>
 </td>
 </tr>

@@ -64,7 +64,7 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="feature.html">The features of window system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
@@ -114,14 +114,14 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an asset bundle BGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">Character resources Excel conversion method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">A window placement</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">The anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Anchor:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">The base position</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">The relationship between the anchor and the base position</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -546,13 +546,13 @@
   <div class="section" id="ctrl-anchor">
 <span id="id1"></span><h1>An arrangement of the control<a class="headerlink" href="#ctrl-anchor" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
-<h2>The anchor:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Anchor:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It is possible to set the position of the origin of the window for each control.</p>
-<p>You can specify the position of the control by using the relative positoin from the origin.</p>
-<p>Thus, even if changed window size has become possible to make a hesitation window without collapse layout.</p>
-<p>it is named the setting of this origin position as an anchor in this window system.</p>
-<p>The anchor is freely set from nine as shown in the figure below .</p>
+<p>You can specify the position of the control by using the relative position from the origin.</p>
+<p>Thus,even if the screen size is changed,you can get a flexible layout not to collapse it.</p>
+<p>We call it the anchor in this window system.</p>
+<p>You can select nine kind anchor as shown in the figure below.</p>
 </div></blockquote>
 <img alt="_images/CtrlAnchor.png" src="_images/CtrlAnchor.png" />
 </div>
@@ -560,17 +560,17 @@
 <h2>The base position<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can set the center position of the control to the individual.</p>
-<p>Setting of the center position can be set from 9 locations.</p>
+<p>Setting of the center position can be set from a location of nine kind.</p>
 </div></blockquote>
 <img alt="_images/CtrlBase.png" src="_images/CtrlBase.png" />
 </div>
 <div class="section" id="id4">
 <h2>The relationship between the anchor and the base position<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Depending on the anchor, it has decided default base positions.</p>
-<p>For example, when the anchor is set in the upper-left base position it will also be set to the upper left corner .</p>
-<p>Please set explicitly when you want to specify the automatically -based position other than the set value .</p>
-<p>It should be enumerated automatically set the value of the base positions are when the anchor is set in the following .</p>
+<div><p>Depending on the anchor, the default value of the base position decide.</p>
+<p>For example, when the anchor is set in the upper-left base position, it will be set to the upper left corner.</p>
+<p>If you want to set the base position other than the default value, you need to explicitly set the value.</p>
+<p>Enumerate the default value of the base position corresponding to the anchor value at below.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
