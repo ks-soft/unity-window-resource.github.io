@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -575,7 +575,7 @@
 <div class="section" id="size">
 <h2><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It changes the display size. When it is omitted , or , if you specify 0 ,it gets the size from the texture parts.</p>
+<div><p>It changes the display size. If it is omitted , or , you specify 0 ,it gets the size from the texture parts.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//64x32</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>    <span class="c1">//Set the width of the texture part width</span>
@@ -707,7 +707,7 @@
 <div class="section" id="caption">
 <h2><strong>CAPTION</strong> = &#8220;string&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>You set the string .</p>
+<div><p>Set the string.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
@@ -727,7 +727,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h2>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h2>
+<h2><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>To set the ID of the sound played when pressed . 0 is set as the default. This default value means not to play a sound.</p>
 </div></blockquote>
@@ -992,7 +992,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -1000,7 +1000,7 @@
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

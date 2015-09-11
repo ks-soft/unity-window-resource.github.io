@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,12 +548,12 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlListboxEx.html#cwinctrllistboxex"><span>CWinCtrlListboxEx</span></a></p>
 <p>This is the control for the list box.</p>
-<p>List box has a plurality of contents that have been replicated .</p>
-<p>The number of content is freely set as long as it is allowed by the memory.</p>
+<p>It has replicated contents of the same number as the number of rows.</p>
+<p>It can have a lot of contents as long as the remaining memory.</p>
 <p>Not only the list box that is lined with content in the vertical direction , it is possible to arrange also in the horizontal direction .</p>
-<p>Differences between the LISTBOX is to measure the content size automatically.</p>
-<p>If the content is arranged in a vertical direction, it automatically calculated only height.</p>
-<p>If the content is arranged in a horizontal direction, it automatically calculated only width.</p>
+<p>Differences between the <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a> is to measure the content size automatically.</p>
+<p>If the content is arranged in a vertical direction, it automatically calculate only height.</p>
+<p>If the content is arranged in a horizontal direction, it automatically calculate only width.</p>
 <blockquote>
 <div><p>LISTBOXEX(Control name) {</p>
 <blockquote>
@@ -657,9 +657,9 @@ SCROLLBAR(List) {
 <h3><strong>CONTENTS_SIZE</strong> = width，height<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the size of the line.</p>
-<p>If the content is arranged in a vertical direction , the height of the content is automatically calculated.Therefore this property affects only the width of the content .</p>
-<p>On the other hand,if the content is arranged in a horizontal direction , the width of the content is automatically calculated.Therefore this property affects only the height of the content .</p>
-<p>Otherwise, it is the same as the LISTBOX.</p>
+<p>If the content is arranged in a vertical direction , the height of the content is automatically calculated. Therefore this property affects only the width of the content .</p>
+<p>On the other hand,if the content is arranged in a horizontal direction , the width of the content is automatically calculated. Therefore this property affects only the height of the content .</p>
+<p>Otherwise, it is the same as the <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a>.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// only vertical direction to scroll</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>                <span class="c1">//display size</span>
@@ -675,8 +675,8 @@ SCROLLBAR(List) {
 <h3><strong>CONTENTS</strong> = { Control define; … }<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set controls to define a line of LISTBOX.</p>
-<p>Position of the controls place with a relative from the position of the LISTBOX.</p>
-<p>It is possible to associate any type of control .</p>
+<p>A position of the controls place with a relative from the position of the <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a>.</p>
+<p>It is possible to include any type of control .</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// It is also possible to put the list box in the list box</span>
 <span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
@@ -692,7 +692,7 @@ SCROLLBAR(List) {
 </pre></div>
 </div>
 <blockquote>
-<div><p>Refer to <a class="reference internal" href="CWinCtrlBase.html#contentslist-access"><span>here</span></a>  for how to access for a specific control of the content list from C#.</p>
+<div><p>How to access to a particular control of the content list from C#, please refer to <a class="reference internal" href="CWinCtrlBase.html#contentslist-access"><span>here</span></a>.</p>
 </div></blockquote>
 </div>
 <div class="section" id="line-space">
@@ -709,7 +709,7 @@ SCROLLBAR(List) {
 <blockquote>
 <div><p>If you set scroll controls to the GROUP property,it display scroll bars in conjunction with the listbox.</p>
 <p>It should be careful not to set to CONTENTS.</p>
-<p>It is also possible to associate multiple scroll bar.</p>
+<p>It is also possible to assign multiple scrollbars.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Horizon</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Vertical</span><span class="p">);</span>
 </pre></div>
@@ -720,12 +720,12 @@ SCROLLBAR(List) {
 <blockquote>
 <div><p>It is possible to set the color values . By changing color , it affects all of the controls that are included .</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h3>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
+<h3><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>When the head of the content has changed during the scroll , set the ID of the sound effect. The default is &#8220;scrollSE&#8221;. if it is 0 , sound should not be.</p>
 </div></blockquote>
@@ -757,7 +757,7 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
-<td><p class="first last">When you scroll it to the end , it does not bounce even if there are still momentum</p>
+<td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
 </td>
 </tr>
 </tbody>
@@ -959,7 +959,7 @@ SCROLLBAR(List) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -967,7 +967,7 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>
@@ -975,7 +975,7 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>LISTBOX_LOCK</td>
-<td><p class="first last">Suppress the scrolling list box</p>
+<td><p class="first last">Suppress that scroll the listbox.</p>
 </td>
 </tr>
 </tbody>

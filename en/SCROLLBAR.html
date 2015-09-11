@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,11 +548,11 @@
 <blockquote>
 <div><blockquote>
 <div>C#: <a class="reference internal" href="CWinCtrlScrollbar.html#cwinctrlscrollbar"><span>CWinCtrlScrollbar</span></a></div></blockquote>
-<p>It is a control for displaying scroll bar.</p>
-<p>By associating a scrollable control, this control is enabled.</p>
+<p>This is a control to display the scroll bar.</p>
+<p>By assigning to the scrollable control, this control is enabled.</p>
 <p>By associating SCROLLBAR control the GROUP property, it is possible to display a scroll bar.</p>
-<p>It is also possible to associate multiple scroll bar in a scrollable control.</p>
-<p>It is listed scrollable control below.</p>
+<p>It is also possible to assign some scrollbars to a scrollable control.</p>
+<p>It is listed scrollable controls below.</p>
 <ul class="simple">
 <li><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></li>
 <li><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></li>
@@ -613,9 +613,9 @@ SCROLLBAR(List) {
 <h2>Position and size<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Unlike normal control, handling of location and size of this control is special.</p>
-<p>位置とサイズは、関連付いているスクロール可能なコントロールからの相対になります。</p>
+<p>The position and size are relative to the scrollable controls that are assigned.</p>
 <p>Position and size is a relative value from the scrollable are related control.</p>
-<p>Effective anchor to see <a class="reference internal" href="#anchor-scrollbar"><span>here</span></a> .</p>
+<p>Valid anchors to see <a class="reference internal" href="#anchor-scrollbar"><span>here</span></a> .</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 
@@ -690,8 +690,8 @@ SCROLLBAR(BOTTOM) {
 <div class="section" id="id4">
 <h2>Direction of the scroll bar<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Not only vertical scroll bar, also horizontal scroll bar can be set.</p>
-<p>Please set the following values for the style.</p>
+<div><p>You can use not only the vertical scroll bar but also the horizontal scroll bar.</p>
+<p>Please set the following values to the style.</p>
 <ul class="simple">
 <li><p class="first">Vertical direction: LISTBOX_ITEM_STACK_V</p>
 </li>
@@ -703,11 +703,11 @@ SCROLLBAR(BOTTOM) {
 <div class="section" id="scrollbar-display-flag">
 <span id="id5"></span><h2>Display control of the scroll bar.<a class="headerlink" href="#scrollbar-display-flag" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>By setting the style, you can choose the type of display / hide the scroll bar.</p>
+<div><p>By setting the style, you can choose the scrollbar display type whether display or hide.</p>
 <p>You can choose from the following three types.</p>
 <p><strong>SCROLLBAR_DISPLAY_NORMAL(Default)</strong></p>
 <blockquote>
-<div><p>It is displayed only when the area is scrollable and you have to scroll by touching the area.</p>
+<div><p>Only when the area is scrollable and you touch the scrollable area,it is displayed.</p>
 </div></blockquote>
 <p><strong>SCROLLBAR_DISPLAY_SCROLLABLE</strong></p>
 <blockquote>
@@ -745,8 +745,8 @@ SCROLLBAR(BOTTOM) {
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>表示位置を決定します。
-GROUPによって、関連付けされたコントロールからの相対位置になります。</div></blockquote>
+<div><p>It determine the display position. It becomes relative position from a scrollable control.</p>
+</div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">16</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -763,7 +763,7 @@ GROUPによって、関連付けされたコントロールからの相対位置
 <div class="section" id="size">
 <h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the display size of the scroll bar. It is the relative size of the scrollable control that relationship.</p>
+<div><p>Set the display size of the scroll bar. It is the relative size of the scrollable control.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>                    <span class="c1">//display size</span>
 </pre></div>
@@ -774,8 +774,8 @@ GROUPによって、関連付けされたコントロールからの相対位置
 <blockquote>
 <div><p>It is possible to set the color values . By changing color , it affects all of the controls that are included .</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -850,19 +850,19 @@ GROUPによって、関連付けされたコントロールからの相対位置
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>LISTBOX_ITEM_STACK_V</td>
-<td><p class="first last">Set the direction of the scroll bar in the vertical direction.</p>
+<td><p class="first last">Set to the direction of the scroll bar in the vertical direction.</p>
 </td>
 </tr>
 <tr class="row-even"><td>LISTBOX_ITEM_STACK_H</td>
-<td><p class="first last">Set the direction of the scroll bar in the horizontal direction.</p>
+<td><p class="first last">Set to the direction of the scroll bar in the horizontal direction.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>SCROLLBAR_DISPLAY_NORMAL</td>
-<td><p class="first last">It is displayed only when the area is scrollable and you have to scroll by touching the area.</p>
+<td><p class="first last">Only when the area is scrollable and you touch the scrollable area,it is displayed.</p>
 </td>
 </tr>
 <tr class="row-even"><td>SCROLLBAR_DISPLAY_SCROLLABLE</td>

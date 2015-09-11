@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -547,10 +547,10 @@
 <span id="id1"></span><h1>CWinCtrlRenderIcon<a class="headerlink" href="#cwinctrlrendericon" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Script: <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></p>
-<p>It is the control for rendering the icon.</p>
-<p>Rendering area automatically cut out rectangle on the specified rendered textures.</p>
-<p>Multiple rendering result may be included within a single render texture. Therefore, it is the high-speed drawing icon after rendering once.</p>
-<p>For example , it is effective to use , such as when you want to display the possible avatar icon dress up to the content of the list box .</p>
+<p>It is the control for the icon with using Render Texture.</p>
+<p>It automatically cut out rectangle from the Render Texture  area which you specify.</p>
+<p>Multiple rendering result may be included within single Render Texture. After you render to the texture,it can render many icons at low cost.</p>
+<p>For example ,it is effective to use that when you want to display the dress possible avatar icon on the listbox.</p>
 </div></blockquote>
 <div class="section" id="cwindowbase">
 <h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h2>

@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -621,7 +621,7 @@ CONTAINER(Map) {
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It determine the starting position .</p>
+<div><p>It determine the display position.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
@@ -642,7 +642,7 @@ CONTAINER(Map) {
 <h3><strong>CONTENTS_SIZE</strong> = width，height<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It defines the size of the virtual screen .</p>
-<p>When virtual screen size is larger than the display size , it is possible to the container.</p>
+<p>When virtual screen size is larger than the display size , it is possible to scroll the container.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>                <span class="c1">//display size</span>
 <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">800</span><span class="p">,</span><span class="m">800</span><span class="p">;</span>       <span class="c1">//virtual screen size</span>
@@ -653,8 +653,8 @@ CONTAINER(Map) {
 <h3><strong>CONTENTS</strong> = { control define … }<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It lists the control that contained in the CONTAINER.</p>
-<p>Coordinates of the control are contained is placed in a relative coordinate from the CONTAINER.</p>
-<p>It is possible to associate any type of control .</p>
+<p>Coordinates of the controls in the contents is placed in a relative coordinate from the CONTAINER.</p>
+<p>It is possible to include any type of control .</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
    <span class="n">BUTTON</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
@@ -678,8 +678,8 @@ CONTAINER(Map) {
 <blockquote>
 <div><p>It is possible to set the color values . By changing color , it affects all of the controls that are included .</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="group-scrollbarid">
@@ -687,7 +687,7 @@ CONTAINER(Map) {
 <blockquote>
 <div><p>If you set scroll controls to the GROUP property,it display scroll bars in conjunction with the container.</p>
 <p>It should be careful not to set to CONTENTS.</p>
-<p>It is also possible to associate multiple scroll bar.</p>
+<p>It is also possible to assign multiple scrollbars.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Horizon</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Vertical</span><span class="p">);</span>
 </pre></div>
@@ -712,7 +712,7 @@ CONTAINER(Map) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
-<td><p class="first last">When you scroll it to the end , it does not bounce even if there are still momentum</p>
+<td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
 </td>
 </tr>
 </tbody>
@@ -914,7 +914,7 @@ CONTAINER(Map) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -922,7 +922,7 @@ CONTAINER(Map) {
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

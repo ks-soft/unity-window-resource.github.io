@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,7 +548,7 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlEditbox.html#cwinctrleditbox"><span>CWinCtrlEditbox</span></a></p>
 <p>It is text editable control</p>
-<p>you can set the maximum rows and the maximum string size</p>
+<p>you can set the maximum rows and the maximum string size.</p>
 <blockquote>
 <div><p>EDITBOX(Control name)</p>
 <blockquote>
@@ -610,9 +610,9 @@
 <div><p>It replaces the fifth character of the part ID to 0/1.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">XXXX0: OFF state</p>
+<li><p class="first">XXXX0: off state</p>
 </li>
-<li><p class="first">XXXX0: ON state</p>
+<li><p class="first">XXXX1: on state</p>
 </li>
 </ul>
 </div></blockquote>
@@ -621,7 +621,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>If parts ID has been set in this way, you need to be prepared parts, such as the following.</p>
+<div><p>If parts ID has been set in this way, you need to prepare parts, such as the following.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p class="first">TXFD0: Focus is in the state of OFF</p>
@@ -649,13 +649,13 @@
 <h3><strong>EDIT</strong> = input character maximum number, input possible number of lines<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the input character maximum number and  input possible number of lines.</p>
-<p>If the input possible number of lines is 0 or 1 , a line input edit box .</p>
+<p>if a edit box is input possible number of lines that is 0 or 1, it is the line input edit box.</p>
 </div></blockquote>
 </div>
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It will determine the display position . Depending on the STYLE, it is possible flexibility in setting the criteria for display position .</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
@@ -664,7 +664,7 @@
 <div class="section" id="size">
 <h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It changes the display size. When it is omitted , or , if you specify 0 ,it gets the size from the texture parts.</p>
+<div><p>It changes the display size. If it is omitted , or , you specify 0 ,it gets the size from the texture parts.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//64x32</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>    <span class="c1">//Set the width of the texture part width</span>
@@ -686,14 +686,15 @@
 <blockquote>
 <div><p>Set the color.</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="line-space">
 <h3><strong>LINE_SPACE</strong> = line spacing pixel value<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>行間を設定します。</div></blockquote>
+<div><p>Set the line spacing.</p>
+</div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
 </pre></div>
 </div>
@@ -703,7 +704,7 @@
 <blockquote>
 <div><p>If you set scroll controls to the GROUP property,it display scroll bars in conjunction with the editbox.</p>
 <p>It should be careful not to set to CONTENTS.</p>
-<p>It is also possible to associate multiple scroll bar.</p>
+<p>It is also possible to assign multiple scrollbars.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Horizon</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Vertical</span><span class="p">);</span>
 </pre></div>
@@ -719,7 +720,7 @@
 <div class="section" id="caption">
 <h3><strong>CAPTION</strong> = &#8220;string&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You set the string .</p>
+<div><p>Set the string.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
@@ -1061,7 +1062,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -1069,7 +1070,7 @@
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

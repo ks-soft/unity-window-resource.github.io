@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,8 +548,8 @@
 <blockquote>
 <div><blockquote>
 <div>C#: <a class="reference internal" href="CWinCtrlRadio.html#cwinctrlradio"><span>CWinCtrlRadio</span></a></div></blockquote>
-<p>Radio buttons can be grouped in a radio button with each other.When one of the radio button is turned ON, the other radio button automatically turned OFF.</p>
-<p>It has the <a class="reference internal" href="#radio-contents"><span>CONTENTS</span></a> as <a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a> . So it is possible to act as a tab button.</p>
+<p>Radio buttons can be grouped radio buttons with each other. When one of the radio button is turned on, the other radio button automatically turns off.</p>
+<p>It has the <a class="reference internal" href="#radio-contents"><span>CONTENTS</span></a> as <a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a> . So it is possible to behave as a tab button.</p>
 <blockquote>
 <div><p>RADIO(Control name) {</p>
 <blockquote>
@@ -609,7 +609,7 @@ RADIO(Guild) {
 </div>
 <blockquote>
 <div><img alt="_images/RADIO.png" src="_images/RADIO.png" />
-<p>In this example , party button , friend button , the guild button is exclusively turned ON.</p>
+<p>In this example , party button , friend button , the guild button is exclusively turned on.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id3">
@@ -628,9 +628,9 @@ RADIO(Guild) {
 <div><p>It replaces the fifth character of the part ID to 0/1.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">XXXX0: OFF state</p>
+<li><p class="first">XXXX0: off state</p>
 </li>
-<li><p class="first">XXXX0: ON state</p>
+<li><p class="first">XXXX1: on state</p>
 </li>
 </ul>
 </div></blockquote>
@@ -639,12 +639,12 @@ RADIO(Guild) {
 </pre></div>
 </div>
 <blockquote>
-<div><p>If parts ID has been set in this way, you need to be prepared parts, such as the following.</p>
+<div><p>If parts ID has been set in this way, you need to prepare parts, such as the following.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">BNT00: OFF state</p>
+<li><p class="first">BNT00: off state</p>
 </li>
-<li><p class="first">BNT01: ON state</p>
+<li><p class="first">BNT01: on state</p>
 </li>
 </ul>
 </div></blockquote>
@@ -666,7 +666,7 @@ RADIO(Guild) {
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It will determine the display position . Depending on the STYLE, it is possible flexibility in setting the criteria for display position .</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
@@ -675,7 +675,7 @@ RADIO(Guild) {
 <div class="section" id="size">
 <h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It changes the display size. When it is omitted , or , if you specify 0 ,it gets the size from the texture parts.</p>
+<div><p>It changes the display size. If it is omitted , or , you specify 0 ,it gets the size from the texture parts.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//64x32</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>    <span class="c1">//Set the width of the texture part width</span>
@@ -697,12 +697,12 @@ RADIO(Guild) {
 <blockquote>
 <div><p>Set the color.</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h3>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
+<h3><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the ID of the sound to sound when pressed . The default is clickSE. The sound will not sound when set to 0 .</p>
 </div></blockquote>
@@ -720,7 +720,7 @@ RADIO(Guild) {
 <div class="section" id="caption">
 <h3><strong>CAPTION</strong> = &#8220;string&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You set the string .</p>
+<div><p>Set the string.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
@@ -745,21 +745,21 @@ RADIO(Guild) {
 <div class="section" id="tex-id-n-id">
 <h3><strong>TEX_ID</strong> n = Part ID<a class="headerlink" href="#tex-id-n-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It sets the texture ID and the part ID for the badge .</p>
+<div><p>Set the texture ID and the part ID of the badge.</p>
 <p>It can be set in the range of n = [1..7].</p>
 </div></blockquote>
 </div>
 <div class="section" id="texture-offset-n-x-y">
 <h3><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y<a class="headerlink" href="#texture-offset-n-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It sets the badge display offset .</p>
+<div><p>Set the display offset of the badge.</p>
 <p>It can be set in the range of n = [1..7].</p>
 </div></blockquote>
 </div>
 <div class="section" id="texture-size-n">
 <h3><strong>TEXTURE_SIZE</strong> n = width,height<a class="headerlink" href="#texture-size-n" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It sets the texture ID and the part ID for the badge .</p>
+<div><p>Set the texture ID and the part ID of the badge.</p>
 <p>It can be set in the range of n = [1..7].</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEXTURE_SIZE1</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span> <span class="c1">//64x32</span>
@@ -771,18 +771,18 @@ RADIO(Guild) {
 <div class="section" id="color-n-r-g-b-a">
 <h3><strong>COLOR</strong> n = R,G,B,A<a class="headerlink" href="#color-n-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It sets the badge color .</p>
+<div><p>Set the badge color .</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 <p>It can be set in the range of n = [1..7].</p>
 </div></blockquote>
 </div>
 <div class="section" id="contents">
 <span id="radio-contents"></span><h3><strong>CONTENTS</strong> = { control define … }<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It associates the controls to be activated when the checkbox button is on .</p>
-<p>Automatically become HIDE state in the OFF state .  It is possible to associate all of the control .</p>
+<div><p>It associates the controls to be activated when the button is on.</p>
+<p>Automatically the contents hide if a button is the off state. The contents is possible to include  all kind of the control.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
    <span class="n">BUTTON</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
@@ -804,13 +804,13 @@ RADIO(Guild) {
 <div class="section" id="group-id0-id1-idn">
 <h3><strong>GROUP</strong> = ID0,ID1,…,IDn<a class="headerlink" href="#group-id0-id1-idn" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>When you associate this control and radio buttons to each other , and one of the group is turned ON, the other radio button is automatically turned OFF.</p>
+<div><p>When you associate this control and radio buttons to each other , and one of the group is turned on, the other radio button is automatically turned off.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GRUOP</span> <span class="p">=</span> <span class="n">RADIO</span><span class="p">(</span><span class="n">A</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">B</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">C</span><span class="p">);</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>When RADIO (A) is turned ON, automatically RADIO (B), RADIO (C) is turned OFF.</p>
+<div><p>When RADIO (A) is turned on, automatically RADIO (B), RADIO (C) is turned off.</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -1071,7 +1071,7 @@ RADIO(Guild) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -1079,7 +1079,7 @@ RADIO(Guild) {
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

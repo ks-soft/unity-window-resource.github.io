@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -547,14 +547,14 @@
 <span id="id1"></span><h1>LOG<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlLog.html#cwinctrllog"><span>CWinCtrlLog</span></a></p>
-<p>This is the control to display the chat log.</p>
-<p>List box has a plurality of contents that have been replicated .</p>
-<p>Unlike the list box , the maximum number of content can be set.If is added more content , the content is circulated and it is re-use(The oldest log is overwritten).</p>
-<p>You can put the control of non- <a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a>  as content.</p>
+<p>This is the control to display a chat log.</p>
+<p>It has replicated contents of the same number as the number of rows.</p>
+<p>Unlike the list box , the maximum number of content can be set. If is added more content , the content is circulated and it is reused(The oldest log is overwritten).</p>
+<p><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a> and other controls can also be included as content.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You must put one of LOGTEXT in the <strong>LOG</strong> &#8216;s <strong>CONTENTS</strong></p>
+<p class="last">The LOG&#8217;s contents need to include only one <a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a>.</p>
 </div>
 <blockquote>
 <div><p>LOG(Control name) {</p>
@@ -651,8 +651,8 @@
 <div class="section" id="contents-size">
 <h3><strong>CONTENTS_SIZE</strong> = width，height<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Determine the listbox size of the line.  it scrolls in a vertical direction in the list box that are aligned in the vertical direction.</p>
-<p>However , if more of the width of the content size is larger than the display area , and I will scroll to the left or right.</p>
+<div><p>Determine the listbox size of the line. A listbox which arranged in the vertical direction, scrolls in the vertical direction.</p>
+<p>However ,if the width of the content size is larger than the display area, the listbox scrolls to the left or right.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// only vertical direction to scroll</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>                <span class="c1">//display size</span>
@@ -669,11 +669,11 @@
 <blockquote>
 <div><p>Enumerate the controls for defining a single line in the LOG.</p>
 <p>Position of the controls place with a relative from the position of the LOG.</p>
-<p>It is possible to associate any type of control .</p>
+<p>It is possible to include any type of control .</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You must put one of LOGTEXT in the <strong>LOG</strong> &#8216;s <strong>CONTENTS</strong></p>
+<p class="last">The LOG&#8217;s contents need to include only one <a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a>.</p>
 </div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
   <span class="n">ICON</span><span class="p">(</span><span class="n">Chat</span><span class="p">)</span> <span class="p">{</span>
@@ -691,7 +691,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>Refer to <a class="reference internal" href="CWinCtrlBase.html#contentslist-access"><span>here</span></a>  for how to access for a specific control of the content list from C#.</p>
+<div><p>How to access to a particular control of the content list from C#, please refer to <a class="reference internal" href="CWinCtrlBase.html#contentslist-access"><span>here</span></a>.</p>
 <p>However, since the content list is in the circulation list , it is dangerous to access directly. It should be set when you <a class="reference internal" href="CWinCtrlLog.html#add-log"><span>add a log</span></a> .</p>
 </div></blockquote>
 </div>
@@ -709,7 +709,7 @@
 <blockquote>
 <div><p>If you set scroll controls to the GROUP property,it display scroll bars in conjunction with the log.</p>
 <p>It should be careful not to set to CONTENTS.</p>
-<p>It is also possible to associate multiple scroll bar.</p>
+<p>It is also possible to assign multiple scrollbars.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Horizon</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Vertical</span><span class="p">);</span>
 </pre></div>
@@ -720,8 +720,8 @@
 <blockquote>
 <div><p>It is possible to set the color values . By changing color , it affects all of the controls that are included .</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -918,7 +918,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -926,7 +926,7 @@
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

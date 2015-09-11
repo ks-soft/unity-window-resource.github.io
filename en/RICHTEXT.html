@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,7 +548,7 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span>CWinCtrlRichText</span></a></p>
 <p>It is a control for displaying rich text.</p>
-<p>It is possible to change the text color , insert line feeds, and change the font type</p>
+<p>It is possible to change the text color , insert line feeds, or change the font type</p>
 <blockquote>
 <div><p>RICHTEXT(Control name) {</p>
 <blockquote>
@@ -626,7 +626,7 @@ RICHTEXT(Message) {
 <div class="section" id="caption">
 <h3><strong>CAPTION</strong> = &#8220;string&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You set the string .</p>
+<div><p>Set the string.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
@@ -642,7 +642,7 @@ RICHTEXT(Message) {
 <div class="section" id="line-space">
 <h3><strong>LINE_SPACE</strong> = line spacing pixel value<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the line spacing .</p>
+<div><p>Set the line spacing.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
 </pre></div>
@@ -877,7 +877,7 @@ RICHTEXT(Message) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -885,7 +885,7 @@ RICHTEXT(Message) {
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>
@@ -898,8 +898,8 @@ RICHTEXT(Message) {
 <div class="section" id="richtext-cmd">
 <span id="id4"></span><h3>Available control code in RichText<a class="headerlink" href="#richtext-cmd" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You can a variety of decoration by embedding the control code in the caption of a rich text.</p>
-<p>For example , when you want to interleave the texture in the middle of a sentence , to set the string such as the following in the caption.</p>
+<div><p>It is possible to apply a  variety decoration  by embedding the control code in the caption of a rich text.</p>
+<p>For example,if you want to insert the texture in the middle of a sentence , you set a string to the caption as follows.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;テクスチャテスト\t[001_001_01000,icon0,32,32,0]\n表示テスト&quot;</span>
 </pre></div>
@@ -922,43 +922,44 @@ RICHTEXT(Message) {
 </tr>
 <tr class="row-odd"><td><p class="first last">\f[font name]</p>
 </td>
-<td><p class="first last">To switch to the specified font.</p>
+<td><p class="first last">Switch to the specified font.</p>
 </td>
 </tr>
 <tr class="row-even"><td>\a[0] or \a[1]</td>
-<td><p class="first last">Horizontal:Left  Vertical:Top side</p>
+<td><p class="first last">Horizontal:Left side , Vertical:Top side</p>
 </td>
 </tr>
 <tr class="row-odd"><td>\a[2]</td>
-<td><p class="first last">Horizontal:Left  Vertical:Center</p>
+<td><p class="first last">Horizontal:Left side ,  Vertical:Center</p>
 </td>
 </tr>
 <tr class="row-even"><td>\a[3]</td>
-<td><p class="first last">Horizontal:Left  Vertical:Bottom side</p>
+<td><p class="first last">Horizontal:Left side ,  Vertical:Bottom side</p>
 </td>
 </tr>
 <tr class="row-odd"><td>\a[4]</td>
-<td><p class="first last">Horizontal:Center  Vertical:Top side</p>
+<td><p class="first last">Horizontal:Center , Vertical:Top side</p>
 </td>
 </tr>
 <tr class="row-even"><td>\a[5]</td>
-<td><p class="first last">Horizontal:Center  Vertical:Center</p>
+<td><p class="first last">Horizontal:Center , Vertical:Center</p>
 </td>
 </tr>
 <tr class="row-odd"><td>\a[6]</td>
-<td><p class="first last">Horizontal:Center  Vertical:Bottom side</p>
+<td><p class="first last">Horizontal:Center ,  Vertical:Bottom side</p>
 </td>
 </tr>
 <tr class="row-even"><td>\a[7]</td>
-<td><p class="first last">Horizontal:Right  Vertical:Top side</p>
+<td><p class="first last">Horizontal:Right side , Vertical:Top side</p>
 </td>
 </tr>
 <tr class="row-odd"><td>\a[8]</td>
-<td><p class="first last">Horizontal:Right  Vertical:Center</p>
+<td><p class="first last">Horizontal:Right side , Vertical:Center</p>
 </td>
 </tr>
 <tr class="row-even"><td>\a[9]</td>
-<td>横:右揃え 縦:下辺</td>
+<td><p class="first last">Horizontal:Right side , Vertical:Bottom side</p>
+</td>
 </tr>
 <tr class="row-odd"><td>\c[0]</td>
 <td><p class="first last">white color</p>
@@ -1015,7 +1016,7 @@ RICHTEXT(Message) {
 </tr>
 <tr class="row-even"><td><p class="first last">\tUserID[TextureID,PartID,width,height,y offset]</p>
 </td>
-<td><p class="first last">Interleave the texture <a class="reference internal" href="#richtext-texturecmd"><span>part</span></a> in the middle of a sentence.</p>
+<td><p class="first last">Insert the texture <a class="reference internal" href="#richtext-texturecmd"><span>part</span></a> in the middle of a sentence.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>\B or \b</td>
@@ -1033,22 +1034,22 @@ RICHTEXT(Message) {
 </tbody>
 </table>
 <blockquote>
-<div><p>If the anchor is changed by using the \a command(right,center,left) , the sentence is a new line automatically .</p>
+<div><p>If the anchor is changed by using the \a command(right,center,left), it put a line break into the sentence automatically.</p>
 </div></blockquote>
 <div class="section" id="w">
 <span id="richtext-windowcmd"></span><h4>Window command \w<a class="headerlink" href="#w" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p><a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>Callback</span></a> is called when you touch the set caption string.</p>
+<div><p>The <a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>callback</span></a> is called when you touch the set caption string.</p>
 <p>The format is as follows.</p>
 <blockquote>
 <div><p>\wUserID[WindowID,caption]</p>
 </div></blockquote>
 <ul class="simple">
-<li><p class="first">UserID: Set the integer(optional is. The default is 0. ).</p>
+<li><p class="first">UserID: Set the integer(this is option. The default is 0. ).</p>
 </li>
 <li><p class="first">WindowID: set the MulID</p>
 </li>
-<li><p class="first">Caption: Set the string. Callback is called when you press this string.</p>
+<li><p class="first">Caption: Set the string. The callback is called when you press this string.</p>
 </li>
 </ul>
 </div></blockquote>
@@ -1059,20 +1060,20 @@ RICHTEXT(Message) {
 <div class="section" id="t">
 <span id="richtext-texturecmd"></span><h4>Texture command \t<a class="headerlink" href="#t" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><p>Interleave the texture <a class="reference internal" href="#richtext-texturecmd"><span>part</span></a> in the middle of a sentence.</p>
+<div><p>Insert the texture <a class="reference internal" href="#richtext-texturecmd"><span>part</span></a> in the middle of a sentence.</p>
 <p><a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>Callback</span></a> is called when you touch this texture part.</p>
 <p>The format is as follows.</p>
 <blockquote>
 <div><p>\tUserID[TextureID,PartID,width,height,y offset]</p>
 </div></blockquote>
 <ul class="simple">
-<li><p class="first">UserID: Set the integer(optional is. The default is 0. ).</p>
+<li><p class="first">UserID: Set the integer(this is option. The default is 0. ).</p>
 </li>
 <li><p class="first">Texture ID: Set a MulID.</p>
 </li>
 <li><p class="first">width,height: Set the pixel size.</p>
 </li>
-<li><p class="first">Display Y offset(optional).</p>
+<li><p class="first">Display Y offset(this is option).</p>
 </li>
 </ul>
 </div></blockquote>

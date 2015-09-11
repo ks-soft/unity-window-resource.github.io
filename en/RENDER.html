@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -548,14 +548,14 @@
 <blockquote>
 <div><blockquote>
 <div>C#: <a class="reference internal" href="CWinCtrlRender.html#cwinctrlrender"><span>CWinCtrlRender</span></a></div></blockquote>
-<p>It is the control for rendering free to render texture.</p>
-<p>When the control is generated, also generates the camera together.</p>
+<p>It is a control for the Render Texture.</p>
+<p>When the control is generated, generates the camera together.</p>
 <p>Objects rendered on the camera is drawn.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Once you have created the resources for rendering using the RENDER, it is necessary to delete them when you close window.</p>
-<p class="last">If you deleted forget, memory leaks every time window close.</p>
+<p>if you have loaded resources, you need to delete them when you close window.</p>
+<p class="last">If you forget to delete them,your application memory will leak.</p>
 </div>
 <blockquote>
 <div><p>RENDER(Control name) {</p>
@@ -618,7 +618,7 @@ RENDER(AVATAR) {
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It will determine the display position . Depending on the STYLE, it is possible flexibility in setting the criteria for display position .</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
@@ -640,7 +640,7 @@ RENDER(AVATAR) {
 <div class="section" id="contents-size">
 <h3><strong>CONTENTS_SIZE</strong> = width,height<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the size of the render texture.</p>
+<div><p>Set the size of the Render Texture.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">1024</span><span class="p">,</span><span class="m">1024</span><span class="p">;</span>     <span class="c1">//render texture size</span>
 </pre></div>
@@ -655,19 +655,19 @@ RENDER(AVATAR) {
 <blockquote>
 <div><p>Set the color.</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="color1-r-g-b-a">
 <h3><strong>COLOR1</strong> = R,G,B,A<a class="headerlink" href="#color1-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the clearing of the background color when rendering.</p>
+<div><p>Set the background color.</p>
 <p>Set R, G, B, A between 0-1</p>
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h3>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
+<h3><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>To set the ID of the sound played when pressed . 0 is set as the default. This default value means not to play a sound.</p>
 </div></blockquote>
@@ -675,7 +675,7 @@ RENDER(AVATAR) {
 <div class="section" id="tex-id-id">
 <h3><strong>TEX_ID</strong> = Render texture ID<a class="headerlink" href="#tex-id-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It is used as a name when generating render texture .If you set this value to TEXTURE_ZOFFSET of WINDOW property , it is possible to control the rendering order.</p>
+<div><p>It is used as a name of the Render Texture. If you set this value to TEXTURE_ZOFFSET of WINDOW property , it is possible to control the rendering order.</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -874,7 +874,7 @@ RENDER(AVATAR) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -882,7 +882,7 @@ RENDER(AVATAR) {
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>

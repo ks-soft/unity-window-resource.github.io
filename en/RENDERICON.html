@@ -184,7 +184,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id">It is possible to move the position of the caption .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -547,10 +547,10 @@
 <span id="id1"></span><h1>RENDERICON<a class="headerlink" href="#rendericon" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlRenderIcon.html#cwinctrlrendericon"><span>CWinCtrlRenderIcon</span></a></p>
-<p>It is the control for rendering the icon.</p>
-<p>Rendering area automatically cut out rectangle on the specified rendered textures.</p>
-<p>Multiple rendering result may be included within a single render texture. Therefore, it is the high-speed drawing icon after rendering once.</p>
-<p>For example , it is effective to use , such as when you want to display the possible avatar icon dress up to the content of the list box .</p>
+<p>It is a control for the icon with using Render Texture.</p>
+<p>It automatically cut out rectangle from the Render Texture  area which you specify.</p>
+<p>Multiple rendering result may be included within single Render Texture. After you render to the texture,it can render many icons at low cost.</p>
+<p>For example ,it is effective to use that when you want to display the dress possible avatar icon on the listbox.</p>
 <blockquote>
 <div><p>RENDERICON(Control name)</p>
 <blockquote>
@@ -577,7 +577,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>In this example, you can be sharing the 256( = 1024/64 x 1024/64) icon on a single texture.In this case , when listing the icons in the list , it is possible to combine up to 256 icons on one of the render texture. And it can be rendered in one of the mesh.However, doing the sharing of more than 256 , it fails to allocate the area, and fails to render.</p>
+<div><p>In this example, you can be sharing the 256( = 1024/64 x 1024/64) icon on a single texture. And it can be rendered by the single mesh. However, doing the sharing of more than 256 , it fails to allocate the area, and can&#8217;t render.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id3">
@@ -605,7 +605,7 @@
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It will determine the display position . Depending on the STYLE, it is possible flexibility in setting the criteria for display position .</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
@@ -614,9 +614,9 @@
 <div class="section" id="tex-id-id">
 <h3><strong>TEX_ID</strong> = Texture ID<a class="headerlink" href="#tex-id-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the ID of the render texture. If you use the same ID as the other render texture , to share render texture.In this case, it is allocated by dividing the render texture to the icon size .</p>
+<div><p>Set the ID of the Render Texture.If you set the same ID as the other RENDERICON ,they share the same Render Texture.In this case, it is allocated by dividing the Render Texture to the icon size.</p>
 <p>By setting this value to <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET = Texture ID,Z offset</span></a> , it is possible to control the rendering order .</p>
-<p>Render texture size to be allocated is CONTENTS_SIZE.</p>
+<p>A Render Texture size to be allocated is CONTENTS_SIZE.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -624,20 +624,20 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Share the render texture only in the same window . Render textures are not shared across a window.</p>
+<p class="last">Share the Render Texture only in the same window . Render Textures are not shared across a window.</p>
 </div>
 </div>
 <div class="section" id="contents-size">
 <h3><strong>CONTENTS_SIZE</strong> = Render Texture size,Render Texture size<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the size of the render texture . It is necessary to set a common value between icons to share.</p>
-<p>When you set a different value , there is no guarantee of action.</p>
+<div><p>Set the size of the Render Texture . It is necessary to set a common value between icons to share.</p>
+<p>When you set a different value , there is no guarantee of behaviour.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Properties that must always be set.</p>
-<p>Set the same value between render texture that you want to share.</p>
-<p class="last">It is necessary to set a power value of two and set square.Also,by setting the 2048 value less equal than the maximum size , it increases compatibility.</p>
+<p>Set the same value between Render Texture that you want to share.</p>
+<p class="last">You can increase the compatibility if you note the following. the Render Texture size sets a power of two, sets square, and sets the less than or equal to 2048.</p>
 </div>
 </div>
 <div class="section" id="texture-offset-x-y">
@@ -650,7 +650,7 @@
 <h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the display size.</p>
-<p>It is used to determine whether allocating a rectangular how much the size of the render texture.</p>
+<p>And it is used to determine the allocation size from the Render Texture.</p>
 <p>Error occurs when you set a different value between the share to that icon.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//display size</span>
@@ -659,7 +659,7 @@
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Properties that must always be set.</p>
-<p class="last">Set the same value between render texture that you want to share.</p>
+<p class="last">Set the same value between Render Texture that you want to share.</p>
 </div>
 </div>
 <div class="section" id="color-r-g-b-a">
@@ -667,19 +667,19 @@
 <blockquote>
 <div><p>Set the color.</p>
 <p>Set R, G, B in the range of 0～2 .</p>
-<p>When you have more than one , you can the color components is multiplied up to 2 times.</p>
-<p>Set A between 0-1.</p>
+<p>If you set a value in excess of one , each color component can double the brightness.</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="color1-r-g-b-a">
 <h3><strong>COLOR1</strong> = R,G,B,A<a class="headerlink" href="#color1-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set the clearing of the background color when rendering.</p>
+<div><p>Set the background color.</p>
 <p>Set R, G, B, A between 0-1</p>
 </div></blockquote>
 </div>
 <div class="section" id="se-id-se-id">
-<h3>It is possible to move the position of the caption .<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
+<h3><strong>SE_ID</strong> = SE_ID<a class="headerlink" href="#se-id-se-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>To set the ID of the sound played when pressed . 0 is set as the default. This default value means not to play a sound.</p>
 </div></blockquote>
@@ -876,7 +876,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>HIDE</td>
-<td><p class="first last">It hides the display .</p>
+<td><p class="first last">Hide.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>DRAG</td>
@@ -884,7 +884,7 @@
 </td>
 </tr>
 <tr class="row-even"><td>DISABLE</td>
-<td><p class="first last">It is not able to pressing the control.And the contorl darken.</p>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>NOHIT</td>
