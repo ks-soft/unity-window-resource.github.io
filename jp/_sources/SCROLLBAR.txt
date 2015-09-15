@@ -44,7 +44,6 @@ SCROLLBAR
 
 ::
 
-  #include "wr.h"
   $w = 300;
   LISTBOX(List) {
     ID = 001_100_00000;

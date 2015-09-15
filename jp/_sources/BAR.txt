@@ -32,10 +32,7 @@ BAR
 ===========
 ::
 
-  #include "wr.h"
-  
-  WINDOW(TEST) {
-    ID = 255_000_00001;
+  WINDOW(255_000_00001) {
     STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
     POSITION = 0,-100;
     SIZE = 512,256;

@@ -566,45 +566,43 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
-WINDOW(TEST) {
-  ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
-  POSITION = 0,-100;
-  TEX_ID = 100_000_00001;
-  CAPTION = 000_000_00010;
-  SIZE = 512,256;
-};
-RADIO(Party) {
-  ID = 000_000_00100;
-  POSITION = 16,-10;
-  TEX_ID=0,&quot;BTNT?&quot;;
-  CAPTION_COLOR=COLOR32(30,30,30,220);
-  FONT_KIND=&quot;fn22&quot;;
-  SIZE=44*4+16,64;
-  CAPTION = 000_000_00015;
-  GROUP = RADIO(Party),RADIO(Friend),RADIO(Guild);
-};
-RADIO(Friend) {
-  ID = 000_000_00110;
-  POSITION = 16,-90;
-  TEX_ID=0,&quot;BTNT?&quot;;
-  CAPTION_COLOR=COLOR32(30,30,30,220);
-  FONT_KIND=&quot;fn22&quot;;
-  SIZE=44*4+16,64;
-  CAPTION = 010_000_00020;
-  GROUP = RADIO(Party),RADIO(Friend),RADIO(Guild);
-};
-RADIO(Guild) {
-  ID = 000_000_00120;
-  POSITION = 16,-170;
-  TEX_ID=0,&quot;BTNT?&quot;;
-  CAPTION_COLOR=COLOR32(30,30,30,220);
-  FONT_KIND=&quot;fn22&quot;;
-  SIZE=44*4+16,64;
-  CAPTION = 010_000_00010;
-  GROUP = RADIO(Party),RADIO(Friend),RADIO(Guild);
-};
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">RADIO</span><span class="p">(</span><span class="n">Party</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00100</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">16</span><span class="p">,-</span><span class="m">10</span><span class="p">;</span>
+  <span class="n">TEX_ID</span><span class="p">=</span><span class="m">0</span><span class="p">,</span><span class="s">&quot;BTNT?&quot;</span><span class="p">;</span>
+  <span class="n">CAPTION_COLOR</span><span class="p">=</span><span class="n">COLOR32</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">220</span><span class="p">);</span>
+  <span class="n">FONT_KIND</span><span class="p">=</span><span class="s">&quot;fn22&quot;</span><span class="p">;</span>
+  <span class="n">SIZE</span><span class="p">=</span><span class="m">44</span><span class="p">*</span><span class="m">4</span><span class="p">+</span><span class="m">16</span><span class="p">,</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00015</span><span class="p">;</span>
+  <span class="n">GROUP</span> <span class="p">=</span> <span class="n">RADIO</span><span class="p">(</span><span class="n">Party</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Friend</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Guild</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="n">RADIO</span><span class="p">(</span><span class="n">Friend</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00110</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">16</span><span class="p">,-</span><span class="m">90</span><span class="p">;</span>
+  <span class="n">TEX_ID</span><span class="p">=</span><span class="m">0</span><span class="p">,</span><span class="s">&quot;BTNT?&quot;</span><span class="p">;</span>
+  <span class="n">CAPTION_COLOR</span><span class="p">=</span><span class="n">COLOR32</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">220</span><span class="p">);</span>
+  <span class="n">FONT_KIND</span><span class="p">=</span><span class="s">&quot;fn22&quot;</span><span class="p">;</span>
+  <span class="n">SIZE</span><span class="p">=</span><span class="m">44</span><span class="p">*</span><span class="m">4</span><span class="p">+</span><span class="m">16</span><span class="p">,</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00020</span><span class="p">;</span>
+  <span class="n">GROUP</span> <span class="p">=</span> <span class="n">RADIO</span><span class="p">(</span><span class="n">Party</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Friend</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Guild</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="n">RADIO</span><span class="p">(</span><span class="n">Guild</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00120</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">16</span><span class="p">,-</span><span class="m">170</span><span class="p">;</span>
+  <span class="n">TEX_ID</span><span class="p">=</span><span class="m">0</span><span class="p">,</span><span class="s">&quot;BTNT?&quot;</span><span class="p">;</span>
+  <span class="n">CAPTION_COLOR</span><span class="p">=</span><span class="n">COLOR32</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">220</span><span class="p">);</span>
+  <span class="n">FONT_KIND</span><span class="p">=</span><span class="s">&quot;fn22&quot;</span><span class="p">;</span>
+  <span class="n">SIZE</span><span class="p">=</span><span class="m">44</span><span class="p">*</span><span class="m">4</span><span class="p">+</span><span class="m">16</span><span class="p">,</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">GROUP</span> <span class="p">=</span> <span class="n">RADIO</span><span class="p">(</span><span class="n">Party</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Friend</span><span class="p">),</span><span class="n">RADIO</span><span class="p">(</span><span class="n">Guild</span><span class="p">);</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>

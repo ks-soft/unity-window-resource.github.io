@@ -572,21 +572,19 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
-WINDOW(TEST) {
-  ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
-  POSITION = 0,-100;
-  SIZE = 512,256;
-};
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
 
-RENDER(AVATAR) {
-  ID = 000_000_00200;
-  STYLE = ANCHOR_CENTER;
-  POSITION = 0,0;
-  SIZE = RELATIVE_SIZE(-64),RELATIVE_SIZE(-64);
-  CONTENTS_SIZE = 512,512;
-};
+<span class="n">RENDER</span><span class="p">(</span><span class="n">AVATAR</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00200</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">64</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">64</span><span class="p">);</span>
+  <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">512</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>

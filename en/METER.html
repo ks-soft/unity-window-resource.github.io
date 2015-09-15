@@ -568,25 +568,23 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
-WINDOW(TEST) {
-  ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
-  POSITION = 0,-100;
-  TEX_ID = 100_000_00001;
-  CAPTION = 000_000_00010;
-  SIZE = 512,256;
-};
-METER(Progress) {
-  ID = 000_001_00000;
-  STYLE = WIN_CTRL_STYLE_ANCHOR_CENTER;
-  SIZE = RELATIVE_SIZE(-128);
-  POSITION = 0,0;
-  TEX_ID = 0,&quot;MTR&quot;;
-  COLOR = 1,1,1,1;
-  TEX_ID1 = 0,&quot;MTRB&quot;;
-  COLOR1 = 1,1,1,1;
-};
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">METER</span><span class="p">(</span><span class="n">Progress</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_001_00000</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WIN_CTRL_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">128</span><span class="p">);</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="s">&quot;MTR&quot;</span><span class="p">;</span>
+  <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+  <span class="n">TEX_ID1</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="s">&quot;MTRB&quot;</span><span class="p">;</span>
+  <span class="n">COLOR1</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>

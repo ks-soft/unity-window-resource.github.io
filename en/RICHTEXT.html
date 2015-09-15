@@ -565,21 +565,19 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_LEFT</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
 
-WINDOW(255_000_00001) {
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_LEFT;
-  POSITION = 0,-100;
-  SIZE = 512,256;
-};
-
-RICHTEXT(Message) {
-  ID = 00_000_00010;
-  POSITION = 0,-64;
-  CAPTION = &quot;\a[3]TESTabc\f[fn16]smallFont\t123[100_000_00001,ATTR1,32,32,0]&quot; +
-            &quot;\a[4]\w[001_002_00003,click here!]&quot;;
-  CONTENTS_SIZE = 380, 64;
-};
+<span class="n">RICHTEXT</span><span class="p">(</span><span class="n">Message</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">00</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;\a[3]TESTabc\f[fn16]smallFont\t123[100_000_00001,ATTR1,32,32,0]&quot;</span> <span class="p">+</span>
+            <span class="s">&quot;\a[4]\w[001_002_00003,click here!]&quot;</span><span class="p">;</span>
+  <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">380</span><span class="p">,</span> <span class="m">64</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <img alt="_images/RICHTEXT.png" src="_images/RICHTEXT.png" />

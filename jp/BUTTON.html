@@ -566,26 +566,24 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
-WINDOW(TEST) {
-  ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
-  POSITION = 0,-100;
-  TEX_ID = 100_000_00001;
-  CAPTION = 000_000_00010;
-  SIZE = 512,256;
-};
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
 
-BUTTON(Button) {
-  ID = 000_002_00001;
-  CAPTION = 000_000_00006;
-  STYLE = ANCHOR_CENTER;
-  POSITION = 0,0;
-  FONT_KIND= &quot;fn40&quot;;
-  TEX_ID1 = &quot;bd01&quot;;
-  TEXTURE_OFFSET1 = 0,10;
-  SIZE = 256;
-};
+<span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_002_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00006</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">FONT_KIND</span><span class="p">=</span> <span class="s">&quot;fn40&quot;</span><span class="p">;</span>
+  <span class="n">TEX_ID1</span> <span class="p">=</span> <span class="s">&quot;bd01&quot;</span><span class="p">;</span>
+  <span class="n">TEXTURE_OFFSET1</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">256</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>
