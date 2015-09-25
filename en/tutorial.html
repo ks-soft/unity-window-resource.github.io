@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; WindowSystem 1 ドキュメント</title>
+  <title>Tutorial &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="Mul ID,FiveCC" href="id.html"/>
         <link rel="prev" title="This window system’s samples" href="sample.html"/> 
 
@@ -258,9 +258,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>Tutorial<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
-<h2>Scripting / Editing<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Scripting / Editing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p class="first">Start your Unity Project.</p>
@@ -276,7 +276,7 @@
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id3">
-<h3>The include path<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>The include path is set to the following path.</p>
 </div></blockquote>
@@ -285,7 +285,7 @@
 </div>
 </div>
 <div class="section" id="wra">
-<h3>The wra file that includ a &#8220;wr.h&#8221; automaticaly.<a class="headerlink" href="#wra" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The wra file that includ a &#8220;wr.h&#8221; automaticaly.<a class="headerlink" href="#wra" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>When you compile a &#8220;wra&#8221; file,&#8221;wr.h&#8221; is automatically included in your script. Common settings and constants are set to this file.</p>
 </div></blockquote>
@@ -297,14 +297,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="id4">
-<h3>The location of the compiled file.<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The location of the compiled file.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>*.wrb files are created under the folder &#8220;Unity Project/wrb&#8221;. These files are the result of the compiled your script files.</p>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="id5">
-<h2>Window viewer<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Window viewer<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can just preview the compiled windows in the viewer.</p>
 <p>In addition,you can preview changes that the window was successful to compile once without stopping the viewer.</p>
@@ -324,7 +324,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="id6">
-<h2>Assetbundles/Resources<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Assetbundles/Resources<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It is possible to download the window data via HTTP.</p>
 <p>Select the [KsTools]-&gt;[Export Window Resource] menu on the Unity. An assetfile is output to the &#8220;assetbundles&#8221; folder.</p>
@@ -345,12 +345,12 @@
 </div></blockquote>
 </div>
 <div class="section" id="id7">
-<h2>How to handle the window in the app.<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>How to handle the window in the app.<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It can be handled in the same manner regardless to separate/not separate the window creation environment and application.</p>
 </div></blockquote>
 <div class="section" id="cmainsystem">
-<h3>Create/Edit CMainSystem<a class="headerlink" href="#cmainsystem" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Create/Edit CMainSystem<a class="headerlink" href="#cmainsystem" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
     <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
@@ -394,7 +394,7 @@
 </div>
 </div>
 <div class="section" id="id8">
-<h3>Register the CMainSystem the game object.<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Register the CMainSystem the game object.<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>As described below, to create an empty game object of that MainSystem, and add a CMainSystem as a script.</p>
 <img alt="_images/MainSystem.png" src="_images/MainSystem.png" />
@@ -404,13 +404,13 @@
 </div></blockquote>
 </div>
 <div class="section" id="cinput">
-<h3>CInput<a class="headerlink" href="#cinput" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>CInput<a class="headerlink" href="#cinput" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is a script that monitors the input.This is necessary.</p>
 </div></blockquote>
 </div>
 <div class="section" id="cspritefontmgr">
-<h3>CSpriteFontMgr<a class="headerlink" href="#cspritefontmgr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>CSpriteFontMgr<a class="headerlink" href="#cspritefontmgr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is managing the font data and font texture. This is necessary in order to render the character.</p>
 <p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the font data.</p>
@@ -418,7 +418,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ctextureresourcemgr">
-<h3>CTextureResourceMgr<a class="headerlink" href="#ctextureresourcemgr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>CTextureResourceMgr<a class="headerlink" href="#ctextureresourcemgr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It manages the texture atlas resources.This is necessary.</p>
 <p>If you attach an CAssetBundleMgr the game object, it is possible to use to download the texture data.</p>
@@ -426,7 +426,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="cassetbundlemgr">
-<h3>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It manages the asset bundle.</p>
 <p>It is used when loading an asset bundle data for sound effects,window layout data,texture resource data,font data,etc.</p>
@@ -436,13 +436,13 @@
 </div></blockquote>
 </div>
 <div class="section" id="cwindowmgr">
-<h3>CWindowMgr<a class="headerlink" href="#cwindowmgr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>CWindowMgr<a class="headerlink" href="#cwindowmgr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It manages the window.This is necessary.</p>
 <p>For more details, refer to <a class="reference internal" href="CWindowMgr.html#id1"><span>here</span></a> .</p>
 </div></blockquote>
 <div class="section" id="id9">
-<h4>When you load from the resource<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>When you load from the resource<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Load the assets were placed in the &#8220;Resources&#8221; folder.</p>
 <p>Once the load, window data resides.</p>
@@ -453,7 +453,7 @@
 </div>
 </div>
 <div class="section" id="id10">
-<h4>When you load from asset bundles<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>When you load from asset bundles<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>If you do <strong>[Export Window Resource]</strong> , following two of the file is updated.(the case of the PC, Mac &amp; Linux Standalone environment)</p>
 <ul class="simple">
@@ -463,12 +463,12 @@
 <p>Check whether  <a class="reference internal" href="Config.html#cf-address"><span>KsSoftConfig.httpserver</span></a>  is pointing to the correct HTTP server folders.</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">If you want to change the output file name ID, please refer to  <a class="reference internal" href="Config.html#cf-windowresource"><span>here</span></a> .</p>
 </div>
 </div>
 <div class="section" id="id11">
-<h4>How to create a window<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>How to create a window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>For example, it is assumed that defines the window in such a name</p>
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
 
@@ -541,7 +541,7 @@ TEXT(Message) {
 </div>
 </div>
 <div class="section" id="id12">
-<h4>How to get the windows that are create<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>How to get the windows that are create<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>The windows are create it can be obtained by using the A via window manager.You can get the window that is create by <a class="reference internal" href="CWindowMgr.html#window-find-function"><span>find</span></a> .</p>
 </div></blockquote>
@@ -555,14 +555,14 @@ TEXT(Message) {
 </div>
 </div>
 <div class="section" id="id13">
-<h4>How to bring the window to the top.<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>How to bring the window to the top.<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <p>you can bring the window to top by bringToTop.</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id14">
-<h4>About sound effects<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>About sound effects<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Set the CWindowMgr.soundeffect To play the sound effect.</p>
 <p>soundeffect is an object that has an interface that IWinSoundEffect.</p>
@@ -579,7 +579,7 @@ TEXT(Message) {
 <p>In the example below, it assumed that you are pack the sound effect of the window system in 052_000_00000.</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">It is also possible to associate the object with your own was IWinSoundEffect.</p>
 </div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
@@ -637,7 +637,7 @@ TEXT(Message) {
 </div>
 </div>
 <div class="section" id="id15">
-<h4>How to character resources to asset bundle and multilingual.<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>How to character resources to asset bundle and multilingual.<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>When converting from the caption ID to a string, it is converted through CWindowMgr.captiondata of interface.</p>
 <p>captiondata is IWinCaptionData interface.</p>
@@ -708,7 +708,7 @@ TEXT(Message) {
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">It is also possible to associate the object with your own was IWinCaptionData.</p>
 </div>
 </div>
@@ -766,7 +766,6 @@ TEXT(Message) {
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

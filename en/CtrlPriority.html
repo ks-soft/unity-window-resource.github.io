@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The control priority &mdash; WindowSystem 1 ドキュメント</title>
+  <title>The control priority &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="The control size" href="CtrlSize.html"/>
         <link rel="prev" title="An arrangement of the control" href="CtrlAnchor.html"/> 
 
@@ -236,7 +236,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>The control priority<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>The control priority<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>A window is rendered using a mesh .</p>
 <p>A mesh is generated in corresponding to one texture.</p>
@@ -258,7 +258,7 @@
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id">
-<h2>If the same texture ID is specified<a class="headerlink" href="#id" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>If the same texture ID is specified<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It can be set by the <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a>  of the control .</p>
 <p>A control with a large <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> value is displayed in the front .</p>
@@ -272,7 +272,7 @@
 </pre></div>
 </div>
 <div class="section" id="id2">
-<h3>If the priority is the same<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>If the priority is the same<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>If the priority is the same , it is automatically sorted according to the type of controls .</p>
 <p>The control which list order is high is rendered to the front.</p>
@@ -307,7 +307,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>If the texture ID is different<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>If the texture ID is different<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>If the texture ID is different , The texture&#8217;s z offset is priority than the priority of the control.</p>
 <p>It is possible to set the Z offset of texture by <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> of window properties .</p>
@@ -335,11 +335,11 @@
 </ul>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">If not explicitly specify the Z offset,this window system assigns a value as this texture mesh is rendered in front of the existing meshes. This order is difficult to explicitly control because it is handled automatically by the system. If your window has three or more texture, you are better to set the <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p>You can change the rendering order of generated meshes for render target by setting this <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 <p class="last">refer to the <a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> , <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a> .</p>
 </div>
@@ -396,7 +396,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

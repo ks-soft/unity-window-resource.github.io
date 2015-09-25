@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowBase &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CWindowBase &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html"/>
         <link rel="prev" title="CWindowMgr" href="CWindowMgr.html"/> 
 
@@ -235,9 +235,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cwindowbase">
-<span id="id1"></span><h1>CWindowBase<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
-<h2>How to create a window class<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>How to create a window class<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>If you succeed in compiling a window script , it generate the window binary file and the base file for using the window.</p>
 <p>For example</p>
@@ -283,7 +283,7 @@ TEXTBOX(Message) {
 </div>
 </div>
 <div class="section" id="callback">
-<span id="id3"></span><h2>The callback that reach to each window object<a class="headerlink" href="#callback" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id3"></span><h2>The callback that reach to each window object<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>A window is composed by many controls.</p>
 <p>If you perform operations as touch and drag to controls, the callback function in this window is called.</p>
@@ -292,37 +292,37 @@ TEXTBOX(Message) {
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv28onCreatev">
-<span id="onCreate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCreate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCreatev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onCreate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCreate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCreatev" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called immediately after the initialization of the window has been completed .</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onUpdatev">
-<span id="onUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onUpdatev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onUpdatev" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called before the update of each control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv213onAfterUpdatev">
-<span id="onAfterUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onAfterUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213onAfterUpdatev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onAfterUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onAfterUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213onAfterUpdatev" title="Permalink to this definition">¶</a></dt>
 <dd><p>It called after the update of each control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv211onPreRender15CWindowRenderer">
-<span id="onPreRender__CWindowRenderer"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onPreRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onPreRender15CWindowRenderer" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onPreRender__CWindowRenderer"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onPreRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onPreRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called before rendering the control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onRender15CWindowRenderer">
-<span id="onRender__CWindowRenderer"></span><em class="property">virtual</em> <code class="descclassname"></code><code class="descname">onRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onRender15CWindowRenderer" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onRender__CWindowRenderer"></span><em class="property">virtual</em> <code class="descclassname"></code><code class="descname">onRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called after the control of the rendering is finished.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv27onClosei">
-<span id="onClose__i"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onClose</code><span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClosei" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onClose__i"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onClose</code><span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClosei" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called when you close the window.</p>
 <p>true: actually close the window .</p>
 <p>false: cancel to close the window .</p>
@@ -330,262 +330,262 @@ TEXTBOX(Message) {
 
 <dl class="function">
 <dt id="_CPPv27onClick12CWinCtrlBase">
-<span id="onClick__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onClick__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onHold__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed and Holded the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onClickEnter12CWinCtrlBase">
-<span id="onClickEnter__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClickEnter</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onClickEnter12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onClickEnter__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClickEnter</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onClickEnter12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine the input of the edit box.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv27onClick12CWinCtrlBase12CRichTextOne">
-<span id="onClick__CWinCtrlBase.CRichTextOne"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase12CRichTextOne" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onClick__CWinCtrlBase.CRichTextOne"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase12CRichTextOne" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed a part of the rich text.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase">
-<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dragged the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dragged and moved the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2">
-<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you set true to this value,this window become not to respond.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called when the control being dragged has been released on the control of specific window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>if you drop the dragged control on the nothing place,it is called.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24onOKi">
-<span id="onOK__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onOK</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onOKi" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onOK__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onOK</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onOKi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed OK button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onNexti">
-<span id="onNext__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNext</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onNexti" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onNext__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNext</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onNexti" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed Next button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25onYesi">
-<span id="onYes__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onYes</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25onYesi" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onYes__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onYes</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25onYesi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed Yes button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24onNoi">
-<span id="onNo__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNo</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onNoi" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onNo__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNo</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onNoi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed No button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onCanceli">
-<span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed Cancel button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onScroll12CWinCtrlBase7Vector2">
-<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scroll by dragging a list box or container.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv224onRecreatedRenderTexture4uint">
-<span id="onRecreatedRenderTexture__uint"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onRecreatedRenderTexture</code><span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224onRecreatedRenderTexture4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onRecreatedRenderTexture__uint"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onRecreatedRenderTexture</code><span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224onRecreatedRenderTexture4uint" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function is called when lost Render Texture by some event. However , it is not necessary to override it because the automatic return to the system side is performed.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="id4">
-<h2>Window property/method<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Window property/method<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>I explain the accessible methods and properties of CWindowBase.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv25closei">
-<span id="close__i"></span>void <code class="descclassname"></code><code class="descname">close</code><span class="sig-paren">(</span>int <em>iCloseInfo</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25closei" title="この定義へのパーマリンク">¶</a></dt>
+<span id="close__i"></span>void <code class="descclassname"></code><code class="descname">close</code><span class="sig-paren">(</span>int <em>iCloseInfo</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25closei" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call when you want to close the window. iCloseInfo is passed as a parameter of onClose.</p>
 </dd></dl>
 
 <span class="target" id="cwindowbase-find"></span><dl class="function">
 <dt id="_CPPv24findI7WinCtrlE4uint">
-<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Look for a control with the ID.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24find4uint">
-<span id="find__uint"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="find__uint"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Look for a control with the ID.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv22id">
-<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="この定義へのパーマリンク">¶</a></dt>
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the window ID</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25child">
-<span id="child__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">child</code><a class="headerlink" href="#_CPPv25child" title="この定義へのパーマリンク">¶</a></dt>
+<span id="child__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">child</code><a class="headerlink" href="#_CPPv25child" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the child window</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26parent">
-<span id="parent__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="この定義へのパーマリンク">¶</a></dt>
+<span id="parent__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the parent window</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25layer">
-<span id="layer__e_LayerId"></span>e_LayerId <code class="descclassname"></code><code class="descname">layer</code><a class="headerlink" href="#_CPPv25layer" title="この定義へのパーマリンク">¶</a></dt>
+<span id="layer__e_LayerId"></span>e_LayerId <code class="descclassname"></code><code class="descname">layer</code><a class="headerlink" href="#_CPPv25layer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the rendering layer</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28priority">
-<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="この定義へのパーマリンク">¶</a></dt>
+<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the drawing priority .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25texid">
-<span id="texid__uint"></span>uint <code class="descclassname"></code><code class="descname">texid</code><a class="headerlink" href="#_CPPv25texid" title="この定義へのパーマリンク">¶</a></dt>
+<span id="texid__uint"></span>uint <code class="descclassname"></code><code class="descname">texid</code><a class="headerlink" href="#_CPPv25texid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the default texture ID of the window .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv21x">
-<span id="x__float"></span>float <code class="descclassname"></code><code class="descname">x</code><a class="headerlink" href="#_CPPv21x" title="この定義へのパーマリンク">¶</a></dt>
+<span id="x__float"></span>float <code class="descclassname"></code><code class="descname">x</code><a class="headerlink" href="#_CPPv21x" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv21y">
-<span id="y__float"></span>float <code class="descclassname"></code><code class="descname">y</code><a class="headerlink" href="#_CPPv21y" title="この定義へのパーマリンク">¶</a></dt>
+<span id="y__float"></span>float <code class="descclassname"></code><code class="descname">y</code><a class="headerlink" href="#_CPPv21y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the window position .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28position">
-<span id="position__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="この定義へのパーマリンク">¶</a></dt>
+<span id="position__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the window position .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv29transform">
-<span id="transform__Transform"></span>Transform <code class="descclassname"></code><code class="descname">transform</code><a class="headerlink" href="#_CPPv29transform" title="この定義へのパーマリンク">¶</a></dt>
+<span id="transform__Transform"></span>Transform <code class="descclassname"></code><code class="descname">transform</code><a class="headerlink" href="#_CPPv29transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the transform</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25scale">
-<span id="scale__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">scale</code><a class="headerlink" href="#_CPPv25scale" title="この定義へのパーマリンク">¶</a></dt>
+<span id="scale__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">scale</code><a class="headerlink" href="#_CPPv25scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set x,y scales</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26anchor">
-<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="この定義へのパーマリンク">¶</a></dt>
+<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="Permalink to this definition">¶</a></dt>
 <dd><p>set the anchor for display position.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25width">
-<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="この定義へのパーマリンク">¶</a></dt>
+<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26height">
-<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="この定義へのパーマリンク">¶</a></dt>
+<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the window size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv24size">
-<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="この定義へのパーマリンク">¶</a></dt>
+<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the window size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv211screenWidth">
-<span id="screenWidth__float"></span>float <code class="descclassname"></code><code class="descname">screenWidth</code><a class="headerlink" href="#_CPPv211screenWidth" title="この定義へのパーマリンク">¶</a></dt>
+<span id="screenWidth__float"></span>float <code class="descclassname"></code><code class="descname">screenWidth</code><a class="headerlink" href="#_CPPv211screenWidth" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv212screenHeight">
-<span id="screenHeight__float"></span>float <code class="descclassname"></code><code class="descname">screenHeight</code><a class="headerlink" href="#_CPPv212screenHeight" title="この定義へのパーマリンク">¶</a></dt>
+<span id="screenHeight__float"></span>float <code class="descclassname"></code><code class="descname">screenHeight</code><a class="headerlink" href="#_CPPv212screenHeight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the screen size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv27caption">
-<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="この定義へのパーマリンク">¶</a></dt>
+<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the title bar caption of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv212captionColor">
-<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="この定義へのパーマリンク">¶</a></dt>
+<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the title bar caption color of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv213captionOffset">
-<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="この定義へのパーマリンク">¶</a></dt>
+<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get / Set the title bar caption offset of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25color">
-<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="この定義へのパーマリンク">¶</a></dt>
+<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the window color. All controls in the window is affected.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25style">
-<span id="style__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="この定義へのパーマリンク">¶</a></dt>
+<span id="style__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the window style.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv213priorityStyle">
-<span id="priorityStyle__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">priorityStyle</code><a class="headerlink" href="#_CPPv213priorityStyle" title="この定義へのパーマリンク">¶</a></dt>
+<span id="priorityStyle__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">priorityStyle</code><a class="headerlink" href="#_CPPv213priorityStyle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the window priority style.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv24hide">
-<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="この定義へのパーマリンク">¶</a></dt>
+<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>true</dt>
 <dd><p class="first last">Hide the window display.</p>
@@ -598,7 +598,7 @@ TEXTBOX(Message) {
 
 <dl class="member">
 <dt id="_CPPv27disable">
-<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="この定義へのパーマリンク">¶</a></dt>
+<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><dl class="docutils">
 <dt>true</dt>
@@ -614,31 +614,31 @@ TEXTBOX(Message) {
 
 <dl class="member">
 <dt id="_CPPv27isClose">
-<span id="isClose__b"></span>bool <code class="descclassname"></code><code class="descname">isClose</code><a class="headerlink" href="#_CPPv27isClose" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isClose__b"></span>bool <code class="descclassname"></code><code class="descname">isClose</code><a class="headerlink" href="#_CPPv27isClose" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value is true among the window play the animation of closing.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28isLoaded">
-<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value is true among the texture loading.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26isFade">
-<span id="isFade__b"></span>bool <code class="descclassname"></code><code class="descname">isFade</code><a class="headerlink" href="#_CPPv26isFade" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isFade__b"></span>bool <code class="descclassname"></code><code class="descname">isFade</code><a class="headerlink" href="#_CPPv26isFade" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value is true among the fade state of window is in or out.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="id5">
-<h2>Other overridable methods<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Other overridable methods<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWindowBase has overridable methods other than callback. You need to override when you want to customize the fade animation when creating the window or closing the window.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv29startFade11e_FadeState">
-<span id="startFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">startFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29startFade11e_FadeState" title="この定義へのパーマリンク">¶</a></dt>
+<span id="startFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">startFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29startFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is called when the fade began. You can distinguish fade state whether IN or  OUT by the function argument.</p>
 <blockquote>
 <div><dl class="docutils">
@@ -654,7 +654,7 @@ TEXTBOX(Message) {
 
 <dl class="function">
 <dt id="_CPPv26doFade11e_FadeState">
-<span id="doFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">doFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26doFade11e_FadeState" title="この定義へのパーマリンク">¶</a></dt>
+<span id="doFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">doFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26doFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
 <dd><p>フェード中に呼ばれます。</p>
 <blockquote>
 <div><dl class="docutils">
@@ -736,7 +736,6 @@ TEXTBOX(Message) {
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

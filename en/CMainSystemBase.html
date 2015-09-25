@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CMainSystemBase &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CMainSystemBase &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CAssetBundleMgr" href="CAssetBundleMgr.html"/>
         <link rel="prev" title="BAR" href="BAR.html"/> 
 
@@ -233,7 +233,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cmainsystembase">
-<h1>CMainSystemBase<a class="headerlink" href="#cmainsystembase" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>CMainSystemBase<a class="headerlink" href="#cmainsystembase" title="Permalink to this headline">¶</a></h1>
 <blockquote id="id1">
 <div><p>The CMainSystemBase adds to the game object . The game object is not deleted even switched the scene</p>
 <p>By adding resident managers in this script , you can  download related assetbundles.</p>
@@ -242,13 +242,13 @@
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv25Awakev">
-<span id="Awake"></span>void <code class="descclassname"></code><code class="descname">Awake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25Awakev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="Awake"></span>void <code class="descclassname"></code><code class="descname">Awake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25Awakev" title="Permalink to this definition">¶</a></dt>
 <dd><p>In Awake method,by calling the AddComponent and addManager, your application can automatically load  asset bundles with the necessary initialization.</p>
 <p>A typical description method is as follows .</p>
 </dd></dl>
 
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">Start () should not be overwritten . It can not be successfully loading .</p>
 </div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
@@ -277,37 +277,37 @@
 </div>
 <dl class="function">
 <dt id="_CPPv210addManager8IManager">
-<span id="addManager__IManager"></span>void <code class="descclassname"></code><code class="descname">addManager</code><span class="sig-paren">(</span>IManager <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210addManager8IManager" title="この定義へのパーマリンク">¶</a></dt>
+<span id="addManager__IManager"></span>void <code class="descclassname"></code><code class="descname">addManager</code><span class="sig-paren">(</span>IManager <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210addManager8IManager" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ IManager mgr:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters IManager mgr:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Objects must be initialized by loading the asset bundles</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">In Awake, it is necessary to AddComponet.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.initialize">
-virtual void <code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="この定義へのパーマリンク">¶</a></dt>
+virtual void <code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><p>There is a need to override at a inheritance destination. After load assetbundles,load of ILoader,and complete IManager, it is called.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv213OnChangeScenev">
-<span id="OnChangeScene"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">OnChangeScene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213OnChangeScenev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="OnChangeScene"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">OnChangeScene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213OnChangeScenev" title="Permalink to this definition">¶</a></dt>
 <dd><p>Override at a inheritance destination . Called when you switch the scene .</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv211changeScene6stringb">
-<span id="changeScene__string.b"></span>bool <code class="descclassname"></code><code class="descname">changeScene</code><span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211changeScene6stringb" title="この定義へのパーマリンク">¶</a></dt>
+<span id="changeScene__string.b"></span>bool <code class="descclassname"></code><code class="descname">changeScene</code><span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211changeScene6stringb" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is switched to the specified scene .</p>
 <p>It is equivalent to the Application.LoadLevel , but it has difference points as follows.</p>
 <ol class="arabic simple">
@@ -323,46 +323,46 @@ virtual void <code class="descname">initialize</code><span class="sig-paren">(</
 
 <dl class="member">
 <dt id="_CPPv215isChangingScene">
-<span id="isChangingScene__b"></span>bool <code class="descclassname"></code><code class="descname">isChangingScene</code><a class="headerlink" href="#_CPPv215isChangingScene" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isChangingScene__b"></span>bool <code class="descclassname"></code><code class="descname">isChangingScene</code><a class="headerlink" href="#_CPPv215isChangingScene" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determining whether or not in the scene loading .</p>
 <p>It is effective only when you are switching the scene by CMainSystemBase.chageScene.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv213isInitialized">
-<span id="isInitialized__b"></span>bool <code class="descclassname"></code><code class="descname">isInitialized</code><a class="headerlink" href="#_CPPv213isInitialized" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isInitialized__b"></span>bool <code class="descclassname"></code><code class="descname">isInitialized</code><a class="headerlink" href="#_CPPv213isInitialized" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is determined whether it has been completed the initialization.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25randiv">
-<span id="randi"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="randi"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiv" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get a random number of integer values.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25randii">
-<span id="randi__i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randii" title="この定義へのパーマリンク">¶</a></dt>
+<span id="randi__i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randii" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get a random number in the specified range.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25randiii">
-<span id="randi__i.i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiii" title="この定義へのパーマリンク">¶</a></dt>
+<span id="randi__i.i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiii" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get a random number in the specified range.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25randfv">
-<span id="randf"></span><em class="property">static</em> float <code class="descclassname"></code><code class="descname">randf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randfv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="randf"></span><em class="property">static</em> float <code class="descclassname"></code><code class="descname">randf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randfv" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get a random number of floating point.</p>
 </dd></dl>
 
 <div class="section" id="iloader">
-<h2>ILoader interface<a class="headerlink" href="#iloader" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ILoader interface<a class="headerlink" href="#iloader" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="_CPPv29isLoadingv">
-<span id="isLoading"></span>bool <code class="descclassname"></code><code class="descname">isLoading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29isLoadingv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isLoading"></span>bool <code class="descclassname"></code><code class="descname">isLoading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29isLoadingv" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -376,7 +376,7 @@ virtual void <code class="descname">initialize</code><span class="sig-paren">(</
 <p>For scripts that implement the ILoader interface, it wait until ILoader.isLoading () becomes false.These scripts should be attached to the game object CMainSystemBase is attached.</p>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">In Awake, it is necessary to AddComponet.</p>
 </div>
 </div></blockquote>
@@ -384,7 +384,7 @@ virtual void <code class="descname">initialize</code><span class="sig-paren">(</
 
 </div>
 <div class="section" id="imanager">
-<h2>IManager interface<a class="headerlink" href="#imanager" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IManager interface<a class="headerlink" href="#imanager" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>These should be added using the CMainSystemBase.addManager in Awake method.</p>
 <p>It is an interface required for the objects that must be initialized with the loaded asset bundle.</p>
@@ -399,7 +399,7 @@ bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAs
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>aAssetBundles</strong> (<em>CAssetBundle[]</em>) &#8211; Array of loaded assetbundles</li>
 </ul>
 </td>
@@ -410,13 +410,13 @@ bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAs
 
 <dl class="function">
 <dt id="_CPPv27releasev">
-<span id="release"></span>void <code class="descclassname"></code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27releasev" title="この定義へのパーマリンク">¶</a></dt>
+<span id="release"></span>void <code class="descclassname"></code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27releasev" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release process that is called when the game object is freed</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.getAssetBundleIds">
-uint[] <code class="descname">getAssetBundleIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.getAssetBundleIds" title="この定義へのパーマリンク">¶</a></dt>
+uint[] <code class="descname">getAssetBundleIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.getAssetBundleIds" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -482,7 +482,6 @@ uint[] <code class="descname">getAssetBundleIds</code><span class="sig-paren">(<
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CAssetBundleMgr &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CAssetBundleMgr &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="About the AssetBundle version." href="AssetVersion.html"/>
         <link rel="prev" title="CMainSystemBase" href="CMainSystemBase.html"/> 
 
@@ -236,7 +236,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cassetbundlemgr">
-<h1>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="Permalink to this headline">¶</a></h1>
 <blockquote id="id1">
 <div><p>You need to add this script by AddComponent in &#8220;Awake&#8221; method of CMainSystem.</p>
 <p>This is the manager to cache or load the assetbundles.</p>
@@ -260,10 +260,10 @@
 </ol>
 </div></blockquote>
 <div class="section" id="id2">
-<h2>CAssetBundleMgr<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CAssetBundleMgr<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
 <dt id="_CPPv220MaxConcurrentLoadNum">
-<span id="MaxConcurrentLoadNum__iC"></span><em class="property">const</em> int <code class="descclassname"></code><code class="descname">MaxConcurrentLoadNum</code><a class="headerlink" href="#_CPPv220MaxConcurrentLoadNum" title="この定義へのパーマリンク">¶</a></dt>
+<span id="MaxConcurrentLoadNum__iC"></span><em class="property">const</em> int <code class="descclassname"></code><code class="descname">MaxConcurrentLoadNum</code><a class="headerlink" href="#_CPPv220MaxConcurrentLoadNum" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value means the maximum number that this script can download  at the same time.</p>
 <p>In other words,the number of a LoadFromCacheOrDownload calling can not exceed this maximum value.</p>
 <p>The default value is to 1.</p>
@@ -271,62 +271,62 @@
 
 <dl class="member">
 <dt id="_CPPv225MaximumAvailableDiskSpace">
-<span id="MaximumAvailableDiskSpace__lC"></span><em class="property">const</em> long <code class="descclassname"></code><code class="descname">MaximumAvailableDiskSpace</code><a class="headerlink" href="#_CPPv225MaximumAvailableDiskSpace" title="この定義へのパーマリンク">¶</a></dt>
+<span id="MaximumAvailableDiskSpace__lC"></span><em class="property">const</em> long <code class="descclassname"></code><code class="descname">MaximumAvailableDiskSpace</code><a class="headerlink" href="#_CPPv225MaximumAvailableDiskSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>It sets the maximum cache size of a local disk.</p>
 <p>The default value is set to 512 * 1024 * 1024 (512Mbyte).</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv214httpServerPath">
-<span id="httpServerPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">httpServerPath</code><a class="headerlink" href="#_CPPv214httpServerPath" title="この定義へのパーマリンク">¶</a></dt>
+<span id="httpServerPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">httpServerPath</code><a class="headerlink" href="#_CPPv214httpServerPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>It sets the HTTP address.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv29debugPath">
-<span id="debugPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">debugPath</code><a class="headerlink" href="#_CPPv29debugPath" title="この定義へのパーマリンク">¶</a></dt>
+<span id="debugPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">debugPath</code><a class="headerlink" href="#_CPPv29debugPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>It sets the debug path . It is effective only in MS-Windows / Mac environment .This manager preferentially loads assetbundles via this path.</p>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">A file that was loaded via the debug path does not perform the cache to the local disk.</p>
 </div>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv29lastError">
-<span id="lastError__i"></span>int <code class="descclassname"></code><code class="descname">lastError</code><a class="headerlink" href="#_CPPv29lastError" title="この定義へのパーマリンク">¶</a></dt>
+<span id="lastError__i"></span>int <code class="descclassname"></code><code class="descname">lastError</code><a class="headerlink" href="#_CPPv29lastError" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has the error number</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv212errorMessage">
-<span id="errorMessage__i"></span>int <code class="descclassname"></code><code class="descname">errorMessage</code><a class="headerlink" href="#_CPPv212errorMessage" title="この定義へのパーマリンク">¶</a></dt>
+<span id="errorMessage__i"></span>int <code class="descclassname"></code><code class="descname">errorMessage</code><a class="headerlink" href="#_CPPv212errorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has the error message</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.lodings">
-CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="#c.lodings" title="この定義へのパーマリンク">¶</a></dt>
+CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="#c.lodings" title="Permalink to this definition">¶</a></dt>
 <dd><p>This returns a list of asset bundles currently being downloaded .</p>
 <p>This list includes what the manager deferred assetbundle downloads.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv27loadNum">
-<span id="loadNum__i"></span>int <code class="descclassname"></code><code class="descname">loadNum</code><a class="headerlink" href="#_CPPv27loadNum" title="この定義へのパーマリンク">¶</a></dt>
+<span id="loadNum__i"></span>int <code class="descclassname"></code><code class="descname">loadNum</code><a class="headerlink" href="#_CPPv27loadNum" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has a number of asset bundle currently being downloaded .</p>
 <p>This number includes what the manager deferred assetbundle downloads.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28Instance">
-<span id="Instance__CAssetBundleMgr"></span>CAssetBundleMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="この定義へのパーマリンク">¶</a></dt>
+<span id="Instance__CAssetBundleMgr"></span>CAssetBundleMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has an instance of a manager</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv29reference4uint">
-<span id="reference__uint"></span>CAssetBundle <code class="descclassname"></code><code class="descname">reference</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29reference4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="reference__uint"></span>CAssetBundle <code class="descclassname"></code><code class="descname">reference</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29reference4uint" title="Permalink to this definition">¶</a></dt>
 <dd><p>It references a assetbundle. If you have not cache it , the manager downloads it .</p>
 <p>If it was already downloaded, it returns the existing CAssetBundle.</p>
 <p>Whether CAssetBundle was downloaded, it is possible to determine by CAssetBundle.isLoaded.</p>
@@ -336,61 +336,61 @@ CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="
 
 <dl class="function">
 <dt id="_CPPv27isExist4uint">
-<span id="isExist__uint"></span>bool <code class="descclassname"></code><code class="descname">isExist</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27isExist4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isExist__uint"></span>bool <code class="descclassname"></code><code class="descname">isExist</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27isExist4uint" title="Permalink to this definition">¶</a></dt>
 <dd><p>It examines whether the asset bundle exist .</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212startPreloadv">
-<span id="startPreload"></span>void <code class="descclassname"></code><code class="descname">startPreload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212startPreloadv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="startPreload"></span>void <code class="descclassname"></code><code class="descname">startPreload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212startPreloadv" title="Permalink to this definition">¶</a></dt>
 <dd><p>You need to call this function if  you want to download all asset bundles that exist in order to cache on the local disk.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv216loadAssetVersionv">
-<span id="loadAssetVersion"></span>void <code class="descclassname"></code><code class="descname">loadAssetVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216loadAssetVersionv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="loadAssetVersion"></span>void <code class="descclassname"></code><code class="descname">loadAssetVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216loadAssetVersionv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Asset version (version.unity3d) to download and again , and updates the cache of asset bundle.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv210releaseAllv">
-<span id="releaseAll"></span>void <code class="descclassname"></code><code class="descname">releaseAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210releaseAllv" title="この定義へのパーマリンク">¶</a></dt>
+<span id="releaseAll"></span>void <code class="descclassname"></code><code class="descname">releaseAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210releaseAllv" title="Permalink to this definition">¶</a></dt>
 <dd><p>It releases all asset bundle regardless of the resident / non-resident .</p>
 <p>After the release , you must call the loadAssetVersion.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="cassetbundle">
-<h2>CAssetBundle<a class="headerlink" href="#cassetbundle" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CAssetBundle<a class="headerlink" href="#cassetbundle" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It can be cast in AssetBundle.</p>
 </div></blockquote>
 <dl class="member">
 <dt id="_CPPv23get">
-AssetBundle <code class="descclassname"></code><code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv23get" title="この定義へのパーマリンク">¶</a></dt>
+AssetBundle <code class="descclassname"></code><code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv23get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the AssetBundle.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv22id">
-<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="この定義へのパーマリンク">¶</a></dt>
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has the ID.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28isLoaded">
-<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>if it is already loaded,this value sets to true.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28isRemain">
-<span id="isRemain__b"></span>bool <code class="descclassname"></code><code class="descname">isRemain</code><a class="headerlink" href="#_CPPv28isRemain" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isRemain__b"></span>bool <code class="descclassname"></code><code class="descname">isRemain</code><a class="headerlink" href="#_CPPv28isRemain" title="Permalink to this definition">¶</a></dt>
 <dd><p>You can see whether it is resident .</p>
 </dd></dl>
 
 <div class="section" id="id3">
-<h3>How to change a path to load local files.<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>How to change a path to load local files.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is only valid on Windows / Mac.</p>
 <p>You make the following files in the same location as the Assets folder.</p>
@@ -483,7 +483,6 @@ DEBUG_PATH = ../../../unified/AssetBuilder/assetbundles/Windows
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

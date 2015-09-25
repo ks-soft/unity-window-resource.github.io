@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The texture &mdash; WindowSystem 1 ドキュメント</title>
+  <title>The texture &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="Font" href="SpriteFont.html"/>
         <link rel="prev" title="Mul ID,FiveCC" href="id.html"/> 
 
@@ -256,7 +256,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="textureresource">
-<span id="id1"></span><h1>The texture<a class="headerlink" href="#textureresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>The texture<a class="headerlink" href="#textureresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Please refer <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>here</span></a> to access the texture resources on C#.</p>
 <p>This window system uses what summarizes some of the texture(texture atlas). And when do the texture atlas,the summarized texture automatically reduces color to 16 bit by dithering.</p>
@@ -272,7 +272,7 @@
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id2">
-<h2>How to make a texture resources<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>How to make a texture resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p class="first">Start your Unity Project.</p>
@@ -304,7 +304,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="parts-def">
-<span id="id3"></span><h2>The definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id3"></span><h2>The definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>If a &#8220;&#64;parts.def&#8221; placed in the texture folder, texture parts are converted along the definition file.</p>
 <p>Because it is a simple text file , you can write it with your favorite editor.</p>
@@ -334,7 +334,7 @@
 </pre></div>
 </div>
 <div class="section" id="id4">
-<h3>Texture Format<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Texture Format<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">FORMAT</span> <span class="p">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -356,7 +356,7 @@
 </div>
 </div>
 <div class="section" id="png-jpg">
-<span id="id5"></span><h3>How to texture atlas as PNG or JPG file.<a class="headerlink" href="#png-jpg" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="id5"></span><h3>How to texture atlas as PNG or JPG file.<a class="headerlink" href="#png-jpg" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is possible to convert the texture atlas to a PNG or JPG files.</p>
 <p>However, when it is loaded on the application, it is deployed as 32bit texture.</p>
@@ -393,14 +393,14 @@
 <div><p>Because it is deployed as a 32bit texture,it uses a lot of VRAM and main memory.</p>
 <p>In addition, the rendering becomes heavier.</p>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">On a narrow memory bandwidth smartphone, your application performance becomes degradation.</p>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="id6">
-<h3>The default value for dithering<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The default value for dithering<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -422,7 +422,7 @@
 </div>
 </div>
 <div class="section" id="id7">
-<h3>Switching of the shader<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Switching of the shader<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;SHADER PATH&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -440,7 +440,7 @@
 </div>
 </div>
 <div class="section" id="id8">
-<h3>Texture part definitions and aliases<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Texture part definitions and aliases<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Texture part definitions can be defined in the form such as follows.</p>
 </div></blockquote>
@@ -473,9 +473,9 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id9">
-<h3>The part definition properties<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The part definition properties<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="color-r-g-b-a">
-<h4>COLOR = R,G,B,A;<a class="headerlink" href="#color-r-g-b-a" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>COLOR = R,G,B,A;<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Change the color.</p>
 <p>Elements of each color, specified in 0-1.</p>
@@ -483,7 +483,7 @@ PART(Alias name,Texture part file name) {
 </div></blockquote>
 </div>
 <div class="section" id="dither-on-off">
-<h4>DITHER = ON/OFF;<a class="headerlink" href="#dither-on-off" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>DITHER = ON/OFF;<a class="headerlink" href="#dither-on-off" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is possible to select whether or not dithering a part.</p>
 <p>When the dithering is enabled,it is dithered with the &#8220;Jarvis, Judice, and Ninke&#8221; dithering.</p>
@@ -491,20 +491,20 @@ PART(Alias name,Texture part file name) {
 </div></blockquote>
 </div>
 <div class="section" id="nodivide">
-<h4>NODIVIDE;<a class="headerlink" href="#nodivide" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>NODIVIDE;<a class="headerlink" href="#nodivide" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="nopatch">
-<h4>NOPATCH;<a class="headerlink" href="#nopatch" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>NOPATCH;<a class="headerlink" href="#nopatch" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>A texture part is stretched equally.</p>
 <p>Division of parts default has become NODIVIDE.</p>
 </div></blockquote>
 </div>
 <div class="section" id="divide3h">
-<h4>DIVIDE3H = Left fixed width,Right fixed width<a class="headerlink" href="#divide3h" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>DIVIDE3H = Left fixed width,Right fixed width<a class="headerlink" href="#divide3h" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="patch3h">
-<h4>PATCH3H = Left fixed width,Right fixed width<a class="headerlink" href="#patch3h" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>PATCH3H = Left fixed width,Right fixed width<a class="headerlink" href="#patch3h" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>When a texture part is stretched,widths of left and right is fixed, and only the middle is stretched.</p>
 </div></blockquote>
@@ -519,10 +519,10 @@ PART(Alias name,Texture part file name) {
 </div></blockquote>
 </div>
 <div class="section" id="divide3v">
-<h4>DIVIDE3V = Top fixed height,Bottom fixed heighth<a class="headerlink" href="#divide3v" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>DIVIDE3V = Top fixed height,Bottom fixed heighth<a class="headerlink" href="#divide3v" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="patch3v">
-<h4>PATCH3V = Top fixed height,Bottom fixed heighth<a class="headerlink" href="#patch3v" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>PATCH3V = Top fixed height,Bottom fixed heighth<a class="headerlink" href="#patch3v" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>When a texture part is stretched,heights of top and bottom is fixed, and only the middle is stretched.</p>
 </div></blockquote>
@@ -537,10 +537,10 @@ PART(Alias name,Texture part file name) {
 </div></blockquote>
 </div>
 <div class="section" id="divide9">
-<h4>DIVIDE9 = Top left fixed width, Top left fixed height, Bottom right fixed width, Bottom right fixed high<a class="headerlink" href="#divide9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>DIVIDE9 = Top left fixed width, Top left fixed height, Bottom right fixed width, Bottom right fixed high<a class="headerlink" href="#divide9" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="patch9">
-<h4>PATCH9 = Top left fixed width, Top left fixed height, Bottom right fixed width, Bottom right fixed high<a class="headerlink" href="#patch9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>PATCH9 = Top left fixed width, Top left fixed height, Bottom right fixed width, Bottom right fixed high<a class="headerlink" href="#patch9" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>When a texture part is stretched, the four sides of the specified size is fixed and  only the middle  is stretched.</p>
 </div></blockquote>
@@ -556,7 +556,7 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id10">
-<h3>The include path<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>The include path is set to the following path.</p>
 </div></blockquote>
@@ -565,7 +565,7 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id11">
-<h3>&#64;parts.def file that is automatically included<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>&#64;parts.def file that is automatically included<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>When you convert a texture resource, the &#8220;tr.h&#8221; is automatically included in &#8220;&#64;part.def&#8221;.</p>
 </div></blockquote>
@@ -575,7 +575,7 @@ PART(Alias name,Texture part file name) {
 </div>
 </div>
 <div class="section" id="id12">
-<h2>Preprocessor<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Preprocessor<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can use the same as C language preprocessor.</p>
 </div></blockquote>
@@ -699,7 +699,6 @@ PART(Alias name,Texture part file name) {
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

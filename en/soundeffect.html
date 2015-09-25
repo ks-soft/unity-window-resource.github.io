@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SoundEffect,BGM &mdash; WindowSystem 1 ドキュメント</title>
+  <title>SoundEffect,BGM &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="The multilingual" href="caption.html"/>
         <link rel="prev" title="Font" href="SpriteFont.html"/> 
 
@@ -247,7 +247,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="bgm">
-<h1>SoundEffect,BGM<a class="headerlink" href="#bgm" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>SoundEffect,BGM<a class="headerlink" href="#bgm" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Sound control managers are following .</p>
 <ul class="simple">
@@ -258,11 +258,11 @@
 <p>These manager control the management of asset bundles,SE grouping,priority and simultaneous sound limit. When playing the BGM,It is used in order to play the intro part + loop part .</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">The SE grouping,priority, and simultaneous sound limit are supported by 3D sound only.  The manager controls 2D SEs so as not to play the same sound at the same time.</p>
 </div>
 <div class="section" id="se">
-<span id="se-assetbuild"></span><h2>How to create a Sound Effect asset bundle<a class="headerlink" href="#se" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="se-assetbuild"></span><h2>How to create a Sound Effect asset bundle<a class="headerlink" href="#se" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>To place an audio file to use for sound effects along to the next step.</p>
 <ol class="arabic simple">
@@ -283,7 +283,7 @@
 <img alt="_images/SeResource.png" src="_images/SeResource.png" />
 </div>
 <div class="section" id="se-def">
-<span id="id1"></span><h2>&#64;se.def syntax<a class="headerlink" href="#se-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id1"></span><h2>&#64;se.def syntax<a class="headerlink" href="#se-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>When creating an asset bundle,you can embed  various information to the SE.The following is this example. The file format is UTF-8(without BOM).</p>
 </div></blockquote>
@@ -348,11 +348,11 @@ SE(Alias name,SE file name) {
 </tbody>
 </table>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
+<p class="first admonition-title">Note</p>
 <p class="last">When you use the <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> , please do not forget to enclose with the &#8220;～&#8221;</p>
 </div>
 <div class="section" id="id2">
-<h3>The include path<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The include path<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>The include path is set to the following path.</p>
 </div></blockquote>
@@ -361,7 +361,7 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="id3">
-<h3>The &#64;se.def that includ a “se.h” automaticaly.<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>The &#64;se.def that includ a “se.h” automaticaly.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>When you compile a “&#64;se.def” file,&#8221;tr.h&#8221; is automatically included in your script. Common settings and constants are set to this file.</p>
 </div></blockquote>
@@ -370,9 +370,9 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="id4">
-<h3>&#64;se.def property<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>&#64;se.def property<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="volume">
-<h4>VOLUME = Number<a class="headerlink" href="#volume" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>VOLUME = Number<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Set the volume.</p>
 <p>You can specified by a float  of 0-1 , or you can use the 0-100% of the percentage.</p>
@@ -382,28 +382,28 @@ SE(Alias name,SE file name) {
 </div></blockquote>
 </div>
 <div class="section" id="group">
-<h4>GROUP = Group number<a class="headerlink" href="#group" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>GROUP = Group number<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is effective only when a sound  is a 3D.</p>
 <p>Group number is specified by an integer of 0-255. It affects the simultaneous sound limit and priority.</p>
 </div></blockquote>
 </div>
 <div class="section" id="priority">
-<h4>PRIORITY = Priority number<a class="headerlink" href="#priority" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>PRIORITY = Priority number<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is effective only when a sound  is a 3D.</p>
 <p>The priority in the group set an integer of 0-255.</p>
 </div></blockquote>
 </div>
 <div class="section" id="polyphony">
-<h4>POLYPHONY = the simultaneous sound limit<a class="headerlink" href="#polyphony" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>POLYPHONY = the simultaneous sound limit<a class="headerlink" href="#polyphony" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is effective only when a sound  is a 3D.</p>
 <p>Set between 1-255. It limits the number of simultaneous sound limit of the same group.If you exceed the number of simultaneous sound , this manager  compare the sound priorities.If the priority which you want to play the sound is higher,it stop the sound that have lowest priority,and start to play new sound.</p>
 </div></blockquote>
 </div>
 <div class="section" id="distance">
-<h4>DISTANCE = minimum distance,maximum distance<a class="headerlink" href="#distance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>DISTANCE = minimum distance,maximum distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is effective only when a sound  is a 3D.</p>
 <p>When it plays at place nearer than the minimum distance , it plays at maximum volume.</p>
@@ -412,7 +412,7 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="id5">
-<h3>Preprocessor<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Preprocessor<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>You can use the same as C language preprocessor.</p>
 </div></blockquote>
@@ -486,7 +486,7 @@ SE(Alias name,SE file name) {
 </div>
 </div>
 <div class="section" id="bgm-assetbuild">
-<span id="id6"></span><h2>How to create an BGM&#8217;s asset bundle<a class="headerlink" href="#bgm-assetbuild" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id6"></span><h2>How to create an BGM&#8217;s asset bundle<a class="headerlink" href="#bgm-assetbuild" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>If necessary,BGM divide to the intro part and the loop part.You can create an asset bundle that were included them.The manager can be played automatically in order to read it.</p>
 <p>It converted to asset bundle in the next procedure.</p>
@@ -560,7 +560,6 @@ SE(Alias name,SE file name) {
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

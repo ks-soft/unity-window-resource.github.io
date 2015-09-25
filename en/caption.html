@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The multilingual &mdash; WindowSystem 1 ドキュメント</title>
+  <title>The multilingual &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="The window script(wra) syntax" href="syntax.html"/>
         <link rel="prev" title="SoundEffect,BGM" href="soundeffect.html"/> 
 
@@ -244,7 +244,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="multi-language">
-<span id="id1"></span><h1>The multilingual<a class="headerlink" href="#multi-language" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>The multilingual<a class="headerlink" href="#multi-language" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>You can have the string resources as an asset data .</p>
 <p>This system can change string resources depending on your application locale.</p>
@@ -258,13 +258,13 @@
 </ul>
 </div></blockquote>
 <div class="section" id="excel">
-<h2>The excel format of string resources<a class="headerlink" href="#excel" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>The excel format of string resources<a class="headerlink" href="#excel" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The excel file format is shown in the following figure .</p>
 <img alt="_images/messagedata.png" src="_images/messagedata.png" />
 </div></blockquote>
 <div class="section" id="origin">
-<h3>[ORIGIN]<a class="headerlink" href="#origin" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>[ORIGIN]<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It parses the data on the basis of the column named [ORIGIN].</p>
 <p>It is necessary to place it on the location where the data begins.</p>
@@ -272,7 +272,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="d-r">
-<h3>[D],[R]<a class="headerlink" href="#d-r" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>[D],[R]<a class="headerlink" href="#d-r" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>[D] [R] of the B4 columns and C4 column select to  whether or not to output data for what the version. When individual column is blank , that line will suppress the data output.</p>
 <ul class="simple">
@@ -285,14 +285,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="id">
-<h3>ID<a class="headerlink" href="#id" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>ID<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>ID of D3 column is specify the string resource ID by the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.[D][R] of D4 represents that it is necessary for both the debug version and release version.</p>
 <p>Since access to the character resources using the ID,It is required for all versions.</p>
 </div></blockquote>
 </div>
 <div class="section" id="jp-en">
-<h3>JP,EN<a class="headerlink" href="#jp-en" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>JP,EN<a class="headerlink" href="#jp-en" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>E3, F3 column of JP, EN is the locale name of string resources. Data is output as follows .</p>
 <ul class="simple">
@@ -305,7 +305,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="wndw">
-<h3>Sheet name [WNDW]<a class="headerlink" href="#wndw" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Sheet name [WNDW]<a class="headerlink" href="#wndw" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Sheet names are encoded in <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>.</p>
 <p>There is a need to put the sheet name of up to 5 alphanumeric characters .</p>
@@ -314,7 +314,7 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2>How to convert from Excel data to string resource data<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>How to convert from Excel data to string resource data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can use messagedata.exe or messagedata.py.</p>
 <p>Installation please refer to  <a class="reference internal" href="install.html#install-messagedata"><span>here</span></a> .</p>
@@ -323,7 +323,7 @@
 <p>If you want to convert to the exe file from this python script , You are possible to use the pyinstaller.</p>
 </div></blockquote>
 <div class="section" id="messagedata-exe-or-messagedata-py">
-<h3>[ How to Use ] messagedata.exe or messagedata.py<a class="headerlink" href="#messagedata-exe-or-messagedata-py" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>[ How to Use ] messagedata.exe or messagedata.py<a class="headerlink" href="#messagedata-exe-or-messagedata-py" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>messagedata [-v version] Excel file name [output file name]</p>
 <ul class="simple">
@@ -355,7 +355,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h3>Asset bundling<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Asset bundling<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This is the procedure of asset bundling that is provided as standard .</p>
 <p>There is also a method which load a data as binary.</p>
@@ -417,7 +417,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

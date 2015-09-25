@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CSoundEffectMgr &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CSoundEffectMgr &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CMessageDataSheetMgr" href="CMessageDataSheetMgr.html"/>
         <link rel="prev" title="CTextureResourceMgr" href="CTextureResourceMgr.html"/> 
 
@@ -232,7 +232,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="csoundeffectmgr">
-<h1>CSoundEffectMgr<a class="headerlink" href="#csoundeffectmgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>CSoundEffectMgr<a class="headerlink" href="#csoundeffectmgr" title="Permalink to this headline">¶</a></h1>
 <blockquote id="id1">
 <div><p>This manager have some of the AudioSource in advance. it controls the concurrent sound number limit and their grouping.</p>
 <p>The default number of concurrent limits are set as follows:</p>
@@ -247,7 +247,7 @@
 <p>It manages AudioSource. You do not need to create a AudioSource to play sounds.</p>
 </div></blockquote>
 <div class="section" id="id2">
-<h2>How to incorporate the manager<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>How to incorporate the manager<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>To use CSoundEffectMgr, it is necessary to add managers to the game object as follows.</p>
 </div></blockquote>
@@ -281,12 +281,12 @@
 </div>
 <dl class="function">
 <dt id="c.playBgm">
-void <code class="descname">playBgm</code><span class="sig-paren">(</span>CBgmResource      <em>&nbsp;cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.playBgm" title="この定義へのパーマリンク">¶</a></dt>
+void <code class="descname">playBgm</code><span class="sig-paren">(</span>CBgmResource      <em>&nbsp;cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.playBgm" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>CBgmResource</strong> &#8211; The loaded BGM resource</li>
 </ul>
 </td>
@@ -329,12 +329,12 @@ void <code class="descname">playBgm</code><span class="sig-paren">(</span>uint<e
 </div>
 <dl class="function">
 <dt id="c.play">
-void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#c.play" title="この定義へのパーマリンク">¶</a></dt>
+void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#c.play" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; This is the SE objects that can get from CSeResource.</li>
 </ul>
 </td>
@@ -356,7 +356,7 @@ void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; Asset bundle ID</li>
 <li><strong>id</strong> (<em>uint</em>) &#8211; SE ID</li>
 </ul>
@@ -378,7 +378,7 @@ void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEff
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; This is the SE objects that can get from CSeResource.</li>
 <li><strong>emitter</strong> (<em>IEffectEmitter</em>) &#8211; Emitter the effect occurs .</li>
 <li><strong>trans</strong> (<em>Transform</em>) &#8211; The position at playing the sound.</li>
@@ -393,31 +393,31 @@ void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEff
 
 <dl class="member">
 <dt id="c.Instance">
-CSoundEffectMgr <code class="descname">Instance</code><a class="headerlink" href="#c.Instance" title="この定義へのパーマリンク">¶</a></dt>
+CSoundEffectMgr <code class="descname">Instance</code><a class="headerlink" href="#c.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has an instance of a manager</p>
 </dd></dl>
 
 </div>
 </div>
 <div class="section" id="cseresourcemgr">
-<span id="id3"></span><h1>CSeResourceMgr<a class="headerlink" href="#cseresourcemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id3"></span><h1>CSeResourceMgr<a class="headerlink" href="#cseresourcemgr" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>This is in the container to manage the CSeResource.</p>
 <p>After you download the asset bundle via CAssetBundleMgr, to manage the voice data that was loaded .</p>
 </div></blockquote>
 <dl class="function">
 <dt id="c.refenrece">
-CSeResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.refenrece" title="この定義へのパーマリンク">¶</a></dt>
+CSeResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.refenrece" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; Specify the SE resource ID ( asset bundle ID).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">It returns a SE resource .</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">It returns a SE resource .</p>
 </td>
 </tr>
 </tbody>
@@ -427,18 +427,18 @@ CSeResource <code class="descname">refenrece</code><span class="sig-paren">(</sp
 
 <dl class="function">
 <dt id="c.find">
-CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;mId</em><span class="sig-paren">)</span><a class="headerlink" href="#c.find" title="この定義へのパーマリンク">¶</a></dt>
+CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;mId</em><span class="sig-paren">)</span><a class="headerlink" href="#c.find" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; Specify the SE resource .</li>
 <li><strong>id</strong> (<em>uint</em>) &#8211; Specify the SE ID .</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">if the asset bundle does not exist or was still being load , it is returned null.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">if the asset bundle does not exist or was still being load , it is returned null.</p>
 </td>
 </tr>
 </tbody>
@@ -454,7 +454,7 @@ CSeResourceMgr <code class="descname">Instance</code></dt>
 
 </div>
 <div class="section" id="cseresource">
-<span id="id4"></span><h1>CSeResource<a class="headerlink" href="#cseresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id4"></span><h1>CSeResource<a class="headerlink" href="#cseresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>It has some of sound effects in the state that you can play them.</p>
 <p>A CSeResource has some of sound effects.</p>
@@ -468,12 +468,12 @@ CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>u
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>id</strong> (<em>uint</em>) &#8211; Specify a SE ID.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">It returns the SE.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">It returns the SE.</p>
 </td>
 </tr>
 </tbody>
@@ -488,7 +488,7 @@ void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>id</strong> (<em>uint</em>) &#8211; Specify the SE ID.</li>
 </ul>
 </td>
@@ -500,14 +500,14 @@ void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&
 
 <dl class="member">
 <dt id="c.isLoaded">
-bool <code class="descname">isLoaded</code><a class="headerlink" href="#c.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+bool <code class="descname">isLoaded</code><a class="headerlink" href="#c.isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>It examines whether the asset bundles are finished loading.</p>
 <p>If It returns true, the loading has been completed, and it is ready for use.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="cbgmresourcemgr">
-<span id="id5"></span><h1>CBgmResourceMgr<a class="headerlink" href="#cbgmresourcemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id5"></span><h1>CBgmResourceMgr<a class="headerlink" href="#cbgmresourcemgr" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>This is in the container to manage the CBgmResource.</p>
 <p>After you download the asset bundle via CAssetBundleMgr, to manage the BGM data that was loaded .</p>
@@ -520,12 +520,12 @@ CBgmResource <code class="descname">refenrece</code><span class="sig-paren">(</s
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; Specify the BGM resource ID (asset bundle ID).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">It returns the BGM resource.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">It returns the BGM resource.</p>
 </td>
 </tr>
 </tbody>
@@ -535,17 +535,17 @@ CBgmResource <code class="descname">refenrece</code><span class="sig-paren">(</s
 
 <dl class="function">
 <dt id="c.load">
-CBgmResource <code class="descname">load</code><span class="sig-paren">(</span>uint<em>&nbsp;mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="この定義へのパーマリンク">¶</a></dt>
+CBgmResource <code class="descname">load</code><span class="sig-paren">(</span>uint<em>&nbsp;mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>mResource</strong> (<em>uint</em>) &#8211; Specify the BGM resource ID ( asset bundle ID).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">It returns the BGM resource.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">It returns the BGM resource.</p>
 </td>
 </tr>
 </tbody>
@@ -565,7 +565,7 @@ CBgmResourceMgr <code class="descname">Instance</code></dt>
 
 </div>
 <div class="section" id="cbgmresource">
-<span id="id6"></span><h1>CBgmResource<a class="headerlink" href="#cbgmresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id6"></span><h1>CBgmResource<a class="headerlink" href="#cbgmresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>It has a BGM in the state that you can play it.</p>
 <p>CBgmResource has the voice data of the intro part and the loop part .</p>
@@ -573,13 +573,13 @@ CBgmResourceMgr <code class="descname">Instance</code></dt>
 </div></blockquote>
 <dl class="member">
 <dt id="c.loopClip">
-AudioClip <code class="descname">loopClip</code><a class="headerlink" href="#c.loopClip" title="この定義へのパーマリンク">¶</a></dt>
+AudioClip <code class="descname">loopClip</code><a class="headerlink" href="#c.loopClip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clip of loop part</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="c.introClip">
-AudioClip <code class="descname">introClip</code><a class="headerlink" href="#c.introClip" title="この定義へのパーマリンク">¶</a></dt>
+AudioClip <code class="descname">introClip</code><a class="headerlink" href="#c.introClip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clip of intro part</p>
 </dd></dl>
 
@@ -642,7 +642,6 @@ bool <code class="descname">isLoaded</code></dt>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlListbox &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CWinCtrlListbox &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CWinCtrlListboxEx" href="CWinCtrlListboxEx.html"/>
         <link rel="prev" title="CWinCtrlScrollbar" href="CWinCtrlScrollbar.html"/> 
 
@@ -234,7 +234,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cwinctrllistbox">
-<span id="id1"></span><h1>CWinCtrlListbox<a class="headerlink" href="#cwinctrllistbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>CWinCtrlListbox<a class="headerlink" href="#cwinctrllistbox" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Script: <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></p>
 <p>This is the control for the list box.</p>
@@ -243,15 +243,15 @@
 <p>Not only the list box that is lined with content in the vertical direction , it is possible to arrange also in the horizontal direction .</p>
 </div></blockquote>
 <div class="section" id="cwindowbase">
-<h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
 <li><strong>Vector2 pos</strong> &#8211; Drag position , or the position of the mouse cursor</li>
 <li><strong>Vector2 dragVelocity</strong> &#8211; Displacement of the touch position</li>
@@ -265,39 +265,39 @@
 
 </div>
 <div class="section" id="id2">
-<h2>Functions / Properties<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Functions / Properties<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
 <dt id="_CPPv28viewsize">
-<span id="viewsize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">viewsize</code><a class="headerlink" href="#_CPPv28viewsize" title="この定義へのパーマリンク">¶</a></dt>
+<span id="viewsize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">viewsize</code><a class="headerlink" href="#_CPPv28viewsize" title="Permalink to this definition">¶</a></dt>
 <dd><p>the size of list box. This is the same as the size property.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv210screensize">
-<span id="screensize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">screensize</code><a class="headerlink" href="#_CPPv210screensize" title="この定義へのパーマリンク">¶</a></dt>
+<span id="screensize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">screensize</code><a class="headerlink" href="#_CPPv210screensize" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is a virtual screen size of the list box. It becomes the sum total of all of the height of the contents list.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26offset">
-<span id="offset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">offset</code><a class="headerlink" href="#_CPPv26offset" title="この定義へのパーマリンク">¶</a></dt>
+<span id="offset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">offset</code><a class="headerlink" href="#_CPPv26offset" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is a place that is a point of virtual screen. Move at once If you set the value. If you&#8217;d like to scroll it  smoothly , you can use  <a class="reference internal" href="CWinCtrlLog.html#setsmoothoffset"><span>setSmoothOffset</span></a> .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv27isSwipe">
-<span id="isSwipe__b"></span>bool <code class="descclassname"></code><code class="descname">isSwipe</code><a class="headerlink" href="#_CPPv27isSwipe" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isSwipe__b"></span>bool <code class="descclassname"></code><code class="descname">isSwipe</code><a class="headerlink" href="#_CPPv27isSwipe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state whether is swiped.</p>
 </dd></dl>
 
 <span class="target" id="setsmoothoffset"></span><dl class="function">
 <dt id="_CPPv215setSmoothOffset7Vector2f">
-<span id="setSmoothOffset__Vector2.float"></span>void <code class="descclassname"></code><code class="descname">setSmoothOffset</code><span class="sig-paren">(</span>Vector2 <em>offset</em>, float <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215setSmoothOffset7Vector2f" title="この定義へのパーマリンク">¶</a></dt>
+<span id="setSmoothOffset__Vector2.float"></span>void <code class="descclassname"></code><code class="descname">setSmoothOffset</code><span class="sig-paren">(</span>Vector2 <em>offset</em>, float <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215setSmoothOffset7Vector2f" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>Vector2 offset</strong> &#8211; offset</li>
 <li><strong>float spd</strong> &#8211; Speed</li>
 </ul>
@@ -309,24 +309,24 @@
 
 <dl class="member">
 <dt id="_CPPv212smoothOffset">
-<span id="smoothOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">smoothOffset</code><a class="headerlink" href="#_CPPv212smoothOffset" title="この定義へのパーマリンク">¶</a></dt>
+<span id="smoothOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">smoothOffset</code><a class="headerlink" href="#_CPPv212smoothOffset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same behavior as <a class="reference internal" href="CWinCtrlLog.html#setsmoothoffset"><span>setSmoothOffset</span></a> with 0.25 speed</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv216isSmoothScrolled">
-<span id="isSmoothScrolled__b"></span>bool <code class="descclassname"></code><code class="descname">isSmoothScrolled</code><a class="headerlink" href="#_CPPv216isSmoothScrolled" title="この定義へのパーマリンク">¶</a></dt>
+<span id="isSmoothScrolled__b"></span>bool <code class="descclassname"></code><code class="descname">isSmoothScrolled</code><a class="headerlink" href="#_CPPv216isSmoothScrolled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state whether is scrolled by setSmoothOffset.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv217getContentsOffseti8e_Anchor">
-<span id="getContentsOffset__i.e_Anchor"></span>Vector2 <code class="descclassname"></code><code class="descname">getContentsOffset</code><span class="sig-paren">(</span>int <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217getContentsOffseti8e_Anchor" title="この定義へのパーマリンク">¶</a></dt>
+<span id="getContentsOffset__i.e_Anchor"></span>Vector2 <code class="descclassname"></code><code class="descname">getContentsOffset</code><span class="sig-paren">(</span>int <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217getContentsOffseti8e_Anchor" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>int index</strong> &#8211; The index of contents offset</li>
 <li><strong>e_Anchor eAnchor</strong> &#8211; The position of contents is specified with an anchor.</li>
 </ul>
@@ -393,7 +393,7 @@
 
 </div>
 <div class="section" id="id3">
-<h2>Example of use<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Example of use<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">override</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">onUpdate</span><span class="p">()</span> <span class="p">{</span>
    <span class="c1">// コントロールを取得する方法.</span>
    <span class="n">CWinCtrlListbox</span>     <span class="n">lbFriends</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlListbox</span><span class="p">&gt;(</span><span class="n">LISTBOX_Friends</span><span class="p">);</span>
@@ -468,7 +468,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

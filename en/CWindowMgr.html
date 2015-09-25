@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowMgr &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CWindowMgr &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CWindowBase" href="CWindowBase.html"/>
         <link rel="prev" title="CMessageDataSheetMgr" href="CMessageDataSheetMgr.html"/> 
 
@@ -232,34 +232,34 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cwindowmgr">
-<h1>CWindowMgr<a class="headerlink" href="#cwindowmgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>CWindowMgr<a class="headerlink" href="#cwindowmgr" title="Permalink to this headline">¶</a></h1>
 <blockquote id="id1">
 <div><p>You need to add this script by AddComponent in &#8220;Awake&#8221; method of CMainSystem.</p>
 <p>This script manages windows.</p>
 <p>All windows are created by this manager.</p>
 </div></blockquote>
 <div class="section" id="id2">
-<h2>CWindowMgr<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CWindowMgr<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="c.initialize">
-bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAssetBundle[]<em>&nbsp;aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="この定義へのパーマリンク">¶</a></dt>
+bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAssetBundle[]<em>&nbsp;aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Expand and Initialize the loaded window resources. If you have registered CAssetBundleMgr, this manager will automatically download the window resources from the server. After the completion of loading the window asset bundle, it is passed to this function.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.load">
-bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em>&nbsp;buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="この定義へのパーマリンク">¶</a></dt>
+bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em>&nbsp;buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="Permalink to this definition">¶</a></dt>
 <dd><p>It is initialized by the byte data of loaded window resource .</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24load6string">
-<span id="load__string"></span>bool <code class="descclassname"></code><code class="descname">load</code><span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24load6string" title="この定義へのパーマリンク">¶</a></dt>
+<span id="load__string"></span>bool <code class="descclassname"></code><code class="descname">load</code><span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24load6string" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ string assetname:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters string assetname:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body">A resource name</td>
 </tr>
 </tbody>
@@ -270,12 +270,12 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <span class="target" id="window-create-function"></span><dl class="function">
 <dt id="_CPPv26createI12WindowScriptE4uint11CWindowBase">
-<span id="create:WindowScript:__uint.CWindowBase"></span>WindowScript <code class="descclassname"></code><code class="descname">create</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em>, CWindowBase <em>cParent</em> = null<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26createI12WindowScriptE4uint11CWindowBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="create:WindowScript:__uint.CWindowBase"></span>WindowScript <code class="descclassname"></code><code class="descname">create</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em>, CWindowBase <em>cParent</em> = null<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26createI12WindowScriptE4uint11CWindowBase" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>WindowScript</strong> &#8211; Class name of the create the window</li>
 <li><strong>uint id</strong> &#8211; Window ID</li>
 <li><strong>CWindowBase cParet</strong> &#8211; Parent window</li>
@@ -289,12 +289,12 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <span class="target" id="window-find-function"></span><dl class="function">
 <dt id="_CPPv24findI12WindowScriptE4uint">
-<span id="find:WindowScript:__uint"></span>WindowScript <code class="descclassname"></code><code class="descname">find</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI12WindowScriptE4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="find:WindowScript:__uint"></span>WindowScript <code class="descclassname"></code><code class="descname">find</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI12WindowScriptE4uint" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>WindowScript</strong> &#8211; Window class name</li>
 <li><strong>uint id</strong> &#8211; Window ID</li>
 </ul>
@@ -307,12 +307,12 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <dl class="function">
 <dt id="_CPPv210bringToTop11CWindowBase">
-<span id="bringToTop__CWindowBase"></span>void <code class="descclassname"></code><code class="descname">bringToTop</code><span class="sig-paren">(</span>CWindowBase <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210bringToTop11CWindowBase" title="この定義へのパーマリンク">¶</a></dt>
+<span id="bringToTop__CWindowBase"></span>void <code class="descclassname"></code><code class="descname">bringToTop</code><span class="sig-paren">(</span>CWindowBase <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210bringToTop11CWindowBase" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWindowBase cWindow:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters CWindowBase cWindow:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body">window</td>
 </tr>
 </tbody>
@@ -322,12 +322,12 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <dl class="function">
 <dt id="_CPPv210getCaption4uint">
-<span id="getCaption__uint"></span>string <code class="descclassname"></code><code class="descname">getCaption</code><span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210getCaption4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="getCaption__uint"></span>string <code class="descclassname"></code><code class="descname">getCaption</code><span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210getCaption4uint" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ uint mCaptionId:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint mCaptionId:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Caption ID</td>
 </tr>
 </tbody>
@@ -337,12 +337,13 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <dl class="function">
 <dt id="_CPPv24play4uint">
-<span id="play__uint"></span>void <code class="descclassname"></code><code class="descname">play</code><span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24play4uint" title="この定義へのパーマリンク">¶</a></dt>
+<span id="play__uint"></span>void <code class="descclassname"></code><code class="descname">play</code><span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24play4uint" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ uint mSE:</th><td class="field-body">SE ID</td>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint mSE:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">SE ID</td>
 </tr>
 </tbody>
 </table>
@@ -351,19 +352,19 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
 
 <dl class="member">
 <dt id="_CPPv27clickSE">
-<span id="clickSE__uint"></span>uint <code class="descclassname"></code><code class="descname">clickSE</code><a class="headerlink" href="#_CPPv27clickSE" title="この定義へのパーマリンク">¶</a></dt>
+<span id="clickSE__uint"></span>uint <code class="descclassname"></code><code class="descname">clickSE</code><a class="headerlink" href="#_CPPv27clickSE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the standard playing sound when you touch.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28scrollSE">
-<span id="scrollSE__uint"></span>uint <code class="descclassname"></code><code class="descname">scrollSE</code><a class="headerlink" href="#_CPPv28scrollSE" title="この定義へのパーマリンク">¶</a></dt>
+<span id="scrollSE__uint"></span>uint <code class="descclassname"></code><code class="descname">scrollSE</code><a class="headerlink" href="#_CPPv28scrollSE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the standard playing sound when you scroll through the list box .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28Instance">
-<span id="Instance__CWindowMgr"></span><em class="property">static</em> CWindowMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="この定義へのパーマリンク">¶</a></dt>
+<span id="Instance__CWindowMgr"></span><em class="property">static</em> CWindowMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an instatnce of window manager</p>
 </dd></dl>
 
@@ -420,7 +421,6 @@ bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

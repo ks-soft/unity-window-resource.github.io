@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlMeter &mdash; WindowSystem 1 ドキュメント</title>
+  <title>CWinCtrlMeter &mdash; WindowSystem 1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
         <link rel="next" title="CWinCtrlScrollbar" href="CWinCtrlScrollbar.html"/>
         <link rel="prev" title="CWinCtrlRenderIcon" href="CWinCtrlRenderIcon.html"/> 
 
@@ -234,7 +234,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cwinctrlmeter">
-<span id="id1"></span><h1>CWinCtrlMeter<a class="headerlink" href="#cwinctrlmeter" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>CWinCtrlMeter<a class="headerlink" href="#cwinctrlmeter" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Script: <a class="reference internal" href="METER.html#meter"><span>METER</span></a></p>
 <p>This is the control to display a meter.</p>
@@ -244,21 +244,22 @@
 <p>If the length is set to 1, it display same look as <a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a> .</p>
 </div></blockquote>
 <div class="section" id="cwindowbase">
-<h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>None</p>
 </div></blockquote>
 </div>
 <div class="section" id="id2">
-<h2>Functions / Properties<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Functions / Properties<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="_CPPv25meteri">
-<span id="meter__i"></span>float <code class="descclassname"></code><code class="descname">meter</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25meteri" title="この定義へのパーマリンク">¶</a></dt>
+<span id="meter__i"></span>float <code class="descclassname"></code><code class="descname">meter</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25meteri" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ int index:</th><td class="field-body">Texture Part Index</td>
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int index:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Texture Part Index</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return float:</th><td class="field-body"><p class="first last">Length of the meter</p>
 </td>
@@ -272,12 +273,12 @@
 
 <dl class="function">
 <dt id="_CPPv28setMeteriff">
-<span id="setMeter__i.float.float"></span>void <code class="descclassname"></code><code class="descname">setMeter</code><span class="sig-paren">(</span>int <em>index</em>, float <em>value</em>, float <em>speed</em> = 0.2f<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setMeteriff" title="この定義へのパーマリンク">¶</a></dt>
+<span id="setMeter__i.float.float"></span>void <code class="descclassname"></code><code class="descname">setMeter</code><span class="sig-paren">(</span>int <em>index</em>, float <em>value</em>, float <em>speed</em> = 0.2f<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setMeteriff" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>int index</strong> &#8211; Texture Part Index</li>
 <li><strong>float value</strong> &#8211; Length of the meter(0～1)</li>
 <li><strong>float speed = 0.2f</strong> &#8211; Animation speed</li>
@@ -291,7 +292,7 @@
 
 </div>
 <div class="section" id="id3">
-<h2>Example of use<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Example of use<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// コントロールを取得する方法.</span>
 <span class="n">CWinCtrlMeter</span>  <span class="n">mtrLoading</span> <span class="p">=</span> <span class="n">find</span><span class="p">(</span><span class="n">METER_Loading</span><span class="p">)</span> <span class="k">as</span> <span class="n">CWinCtrlMeter</span><span class="p">;</span>
 
@@ -355,7 +356,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
