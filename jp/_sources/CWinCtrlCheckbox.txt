@@ -15,7 +15,7 @@ CWinCtrlCheckbox
  :ref:`コンテンツ<CHECKBOX_CONTENTS>` を持つことができ、ONの時だけ関連付いたコンテンツをアクティブにすることも可能です。
  
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. cpp:function:: void onClick(CWinCtrlBase cCtrl)

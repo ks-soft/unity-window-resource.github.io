@@ -12,7 +12,7 @@ CWinCtrlLabel
  :ref:`BAR<BAR>` と違い、onClickイベントを受け取れません。
 
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
   なし

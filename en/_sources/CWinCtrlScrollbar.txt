@@ -13,7 +13,7 @@ CWinCtrlScrollbar
  主にリストボックスの :ref:`GROUP<LISTBOX_GROUP>` に設定することによって自動的に表示を制御してくれます。
  
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
  無し

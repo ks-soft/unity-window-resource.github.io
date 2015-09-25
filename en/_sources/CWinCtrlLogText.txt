@@ -16,7 +16,7 @@ CWinCtrlLogText
 
 ..
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
  無し

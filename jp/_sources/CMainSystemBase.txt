@@ -125,11 +125,7 @@ ILoaderインターフェース
  
  CMainSystemBaseと同じゲームオブジェクト内のスクリプトにおいて、ILoaderを持つオブジェクトを調べ、
  ILoader.isLoading() がfalseになるまで待機します。
- 
- 待機終了後に、addManagerで追加したオブジェクトの読み込み待ちを行います。
- 
- IManagerの初期化が終わると、CMainSystemBase.initialize()が呼び出され、CMainSystemBase.isInitializedがtrueになります。
- 
+  
   .. note::
     Awake内で、AddComponetする必要があります。
  

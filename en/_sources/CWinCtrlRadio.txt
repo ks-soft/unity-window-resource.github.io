@@ -13,8 +13,7 @@ CWinCtrlRadio
  :ref:`CHECKBOX` 同様、:ref:`CONTENTS<RADIO_CONTENTS>` を持つことができ、タブボタンとして振る舞うことも可能です。
 
 
-  
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 ---------------------------------------------------
 
 .. cpp:function:: void onClick(CWinCtrlBase cCtrl)

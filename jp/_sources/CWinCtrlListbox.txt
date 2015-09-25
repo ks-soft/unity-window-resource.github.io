@@ -16,7 +16,7 @@ CWinCtrlListbox
  
  垂直方向にコンテンツが並んでいるリストボックスだけでなく、水平方向にも並べることも可能です。
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)

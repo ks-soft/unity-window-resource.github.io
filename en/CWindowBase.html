@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowBase &mdash; WindowSystem 1 documentation</title>
+  <title>CWindowBase &mdash; WindowSystem 1 ドキュメント</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,12 +30,12 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
         <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html"/>
         <link rel="prev" title="CWindowMgr" href="CWindowMgr.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,11 +45,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> WindowSystem</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WindowSystem
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -57,463 +73,129 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <ul>
+            
+            
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Environment Steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#ms-windows-cygwin">For MS-Windows:Install the cygwin.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#python-2-x">Install the Python 2.x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#osx-xcode">For OSX:Install the Command Line Tools in Xcode.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="id.html#mulid">Mul ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="id.html#fivecc">FiveCC</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id2">How to make a texture resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#parts-def">The definition file &#64;parts.def</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TextureResource.html#id12">Preprocessor</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id2">Created as a resource data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#id3">Created as an asset bundle data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SpriteFont.html#bmfont">The font data generating method of BMFont</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se">How to create a Sound Effect asset bundle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#se-def">&#64;se.def syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundeffect.html#bgm-assetbuild">How to create an BGM&#8217;s asset bundle</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#excel">The excel format of string resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="caption.html#id2">How to convert from Excel data to string resource data</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="syntax.html#id1">The wra syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntax.html#id2">Variables and expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntax.html#id7">Preprocessor</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id2">The screen:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="WindowAnchor.html#id3">Anchor:</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
-<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="WINDOW.html#id3">Property</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id2">Anchor:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id3">The base position</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlAnchor.html#id4">The relationship between the anchor and the base position</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id">If the same texture ID is specified</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlPriority.html#id3">If the texture ID is different</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id2">The relative size :</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlSize.html#id3">The size default value</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#id-id"><strong>ID</strong> = Control ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#size"><strong>SIZE</strong> = width,height</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents"><strong>CONTENTS</strong> = { control define … }</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#contents-size"><strong>CONTENTS_SIZE</strong> = width，height</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#group-id"><strong>GROUP</strong> = Control ID,…</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#priority"><strong>PRIORITY</strong> = Priority value</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id-id"><strong>TEX_ID</strong> n = Texture ID,Part ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#tex-id-n-id"><strong>TEX_ID</strong> n = Part ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#texture-size-n"><strong>TEXTURE_SIZE</strong> n = width,height</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CtrlProp.html#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TEXT.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RICHTEXT.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LOG.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LOG.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LOGTEXT.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TEXTBOX.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BUTTON.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RADIO.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHECKBOX.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TEXTURE.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LINE.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LINE.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RENDER.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ICON.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ICON.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RECASTICON.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RENDERICON.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="METER.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="METER.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id3">Position and size</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id4">Direction of the scroll bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-flag">Display control of the scroll bar.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SCROLLBAR.html#id6">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LISTBOX.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LISTBOXEX.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CONTAINER.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FRAME.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LABEL.html#id3">Property</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="BAR.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BAR.html#id3">Property</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#iloader">ILoader interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CMainSystemBase.html#imanager">IManager interface</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#id2">CAssetBundleMgr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CAssetBundleMgr.html#cassetbundle">CAssetBundle</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">An assetBundle</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-unity3d">When is version.unity3d updated?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id2">Resident of asset bundles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#version-txt">a version.txt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AssetVersion.html#id3">When a collision occurs in such as version control tool.</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#id2">CTextureResourceMgr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#ctextureresource">CTextureResource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CTextureResourceMgr.html#cspritedataone">CSpriteDataOne</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CSoundEffectMgr.html#id2">How to incorporate manager</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id2">How to incorporate the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#id3">CMessageDataSheetMgr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet">CMessageDataSheet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWindowMgr.html#id2">CWindowMgr</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">CWindowBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">How to create a window class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#callback">The callback that reach to each window object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">Window property/method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">Others can be overridden methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Other overridable methods</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contents-access">About content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#contentslist-access">Content list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBase.html#id4">The main property / method with the control</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinContents.html#id2">Function/Method</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlText.html#c">Access method from C#</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRichText.html#crichtextone">CRichTextOne</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#cwinctrllog-example">Example of use</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLog.html#id4">How to clear log.</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLogText.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlEditbox.html#id2">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">CWinCtrlTextbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTextbox.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlButton.html#id2">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRadio.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlCheckbox.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlTexture.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLine.html#c">Access method from C#</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRender.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlIcon.html#id2">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRecastIcon.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#cwindowbase">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id3">Example of use</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id4">The initial values of each layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#id5">The main flow of rendering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlRenderIcon.html#onbeginrender">Timing onBeginRender is called .</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#cwindowbase">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlMeter.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlScrollbar.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListbox.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id2">Specific function / property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlListboxEx.html#id3">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlContainer.html#id2">Example</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlFrame.html#id2">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlLabel.html#id2">Example of use</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#cwindowbase"><code class="docutils literal"><span class="pre">Callback</span></code> to arrive in CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CWinCtrlBar.html#id2">Example of use</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">CWinCtrlTextbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-assetbundle">Asset bundle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-windowresource">Window resource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-font">Fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Config.html#cf-messagedata">Message data sheet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Config.html#ip">Address/IP</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -528,27 +210,36 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>CWindowBase</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/CWindowBase.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CWindowBase.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="cwindowbase">
-<span id="id1"></span><h1>CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>CWindowBase<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
-<h2>How to create a window class<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>How to create a window class<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>If it succeeds in compiling a window script , it will generate a window binary file and a base file for using the window .</p>
+<div><p>If you succeed in compiling a window script , it generate the window binary file and the base file for using the window.</p>
 <p>For example</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
@@ -568,7 +259,7 @@ TEXTBOX(Message) {
 };
 </pre></div>
 </div>
-<p><strong>CTestBase.cs</strong>  is automatically generated when you compile it .</p>
+<p><strong>CTestBase.cs</strong> is automatically generated after the compilation of <strong>CTest.wra</strong> .</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TESTBase</span> <span class="p">:</span> <span class="n">CWindowBase</span> <span class="p">{</span>
     <span class="k">public</span> <span class="k">const</span> <span class="kt">uint</span> <span class="n">windowId</span> <span class="p">=</span> <span class="m">4278190081</span><span class="p">;</span>  <span class="c1">// 255_000_00001</span>
         <span class="k">static</span> <span class="k">public</span> <span class="n">TEST</span> <span class="nf">create</span><span class="p">(</span><span class="n">CWindowBase</span> <span class="n">cParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
@@ -578,60 +269,60 @@ TEXTBOX(Message) {
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>When you are embedded a window in your application , you make a window class that inherits <strong>CTestBase</strong> .</p>
+<p>You make a window class that inherits <strong>CTestBase</strong> .</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TEST</span> <span class="p">:</span> <span class="n">TestBase</span> <span class="p">{</span>
    <span class="p">:</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>And , if actually create the window, as follows .</p>
+<div><p>Then ,when actually create the window, as follows .</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEST</span> <span class="n">test</span> <span class="p">=</span> <span class="n">TEST</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="callback">
-<span id="id3"></span><h2>The callback that reach to each window object<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>The callback that reach to each window object<a class="headerlink" href="#callback" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>A window is composed of a plurality of control .</p>
-<p>When you perform operations such as touch and drag to control, it will be called callback function in the window.</p>
-<p>It lists the callback that receive below</p>
-<p>That implement the window, inherit the class that is generated when you compile the script window, it is a work that override these callbacks.</p>
+<div><p>A window is composed by many controls.</p>
+<p>If you perform operations as touch and drag to controls, the callback function in this window is called.</p>
+<p>It enumerates callback functions that a window can receive.</p>
+<p>Inherit the class that is generated when you compile the script window. Then,necessary,you need to override callback functions.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv28onCreatev">
-<span id="onCreate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCreate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCreatev" title="Permalink to this definition">¶</a></dt>
+<span id="onCreate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCreate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCreatev" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called immediately after the initialization of the window has been completed .</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onUpdatev">
-<span id="onUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onUpdatev" title="Permalink to this definition">¶</a></dt>
+<span id="onUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onUpdatev" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called before the update of each control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv213onAfterUpdatev">
-<span id="onAfterUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onAfterUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213onAfterUpdatev" title="Permalink to this definition">¶</a></dt>
+<span id="onAfterUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onAfterUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213onAfterUpdatev" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It called after the update of each control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv211onPreRender15CWindowRenderer">
-<span id="onPreRender__CWindowRenderer"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onPreRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onPreRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
+<span id="onPreRender__CWindowRenderer"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onPreRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onPreRender15CWindowRenderer" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called before rendering the control.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onRender15CWindowRenderer">
-<span id="onRender__CWindowRenderer"></span><em class="property">virtual</em> <code class="descclassname"></code><code class="descname">onRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
+<span id="onRender__CWindowRenderer"></span><em class="property">virtual</em> <code class="descclassname"></code><code class="descname">onRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onRender15CWindowRenderer" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called after the control of the rendering is finished.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv27onClosei">
-<span id="onClose__i"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onClose</code><span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClosei" title="Permalink to this definition">¶</a></dt>
+<span id="onClose__i"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onClose</code><span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClosei" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called when you close the window.</p>
 <p>true: actually close the window .</p>
 <p>false: cancel to close the window .</p>
@@ -639,278 +330,279 @@ TEXTBOX(Message) {
 
 <dl class="function">
 <dt id="_CPPv27onClick12CWinCtrlBase">
-<span id="onClick__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<span id="onClick__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Pressed the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<span id="onHold__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Pressed and Holded the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onClickEnter12CWinCtrlBase">
-<span id="onClickEnter__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClickEnter</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onClickEnter12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Input of the edit box has been determined .</p>
+<span id="onClickEnter__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClickEnter</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onClickEnter12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Determine the input of the edit box.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv27onClick12CWinCtrlBase12CRichTextOne">
-<span id="onClick__CWinCtrlBase.CRichTextOne"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase12CRichTextOne" title="Permalink to this definition">¶</a></dt>
+<span id="onClick__CWinCtrlBase.CRichTextOne"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase12CRichTextOne" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Pressed a part of the rich text.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase">
-<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Dragged the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Dragged and moved the control</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2">
-<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="Permalink to this definition">¶</a></dt>
-<dd><p>When the control is being dragged , it is called by the rendering. If you do not override it,then it is rendered .</p>
+<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>If you set true to this value,this window become not to respond.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>It is called when the control being dragged has been released on the control of specific window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>When you drop the dragged control at nothing,it is called.</p>
+<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>if you drop the dragged control on the nothing place,it is called.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24onOKi">
-<span id="onOK__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onOK</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onOKi" title="Permalink to this definition">¶</a></dt>
-<dd><p>OK button in the message window that create a child window is pressed.</p>
+<span id="onOK__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onOK</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onOKi" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Pressed OK button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onNexti">
-<span id="onNext__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNext</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onNexti" title="Permalink to this definition">¶</a></dt>
-<dd><p>Next button in the message window that create a child window is pressed.</p>
+<span id="onNext__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNext</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onNexti" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Pressed Next button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv25onYesi">
-<span id="onYes__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onYes</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25onYesi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Yes button in the message window that create a child window is pressed.</p>
+<span id="onYes__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onYes</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25onYesi" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Pressed Yes button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24onNoi">
-<span id="onNo__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNo</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onNoi" title="Permalink to this definition">¶</a></dt>
-<dd><p>No button in the message window that create a child window is pressed.</p>
+<span id="onNo__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNo</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onNoi" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Pressed No button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onCanceli">
-<span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cancel button in the message window that create a child window is pressed.</p>
+<span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Pressed Cancel button in the message window. This callback will reach the parent window of the message window.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv28onScroll12CWinCtrlBase7Vector2">
-<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Scroll by dragging a list box or container.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv224onRecreatedRenderTexture4uint">
-<span id="onRecreatedRenderTexture__uint"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onRecreatedRenderTexture</code><span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224onRecreatedRenderTexture4uint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Render texture called when lost by some event . However , it is not necessary to override base because the automatic return to the system side is performed.</p>
+<span id="onRecreatedRenderTexture__uint"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onRecreatedRenderTexture</code><span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224onRecreatedRenderTexture4uint" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>This function is called when lost Render Texture by some event. However , it is not necessary to override it because the automatic return to the system side is performed.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="id4">
-<h2>Window property/method<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>Window property/method<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>It explain the accessible methods and properties of CWindowBase.</p>
+<div><p>I explain the accessible methods and properties of CWindowBase.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv25closei">
-<span id="close__i"></span>void <code class="descclassname"></code><code class="descname">close</code><span class="sig-paren">(</span>int <em>iCloseInfo</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25closei" title="Permalink to this definition">¶</a></dt>
-<dd><p>call when you want to close the window. iCloseInfo is passed as a parameter of onClose.</p>
+<span id="close__i"></span>void <code class="descclassname"></code><code class="descname">close</code><span class="sig-paren">(</span>int <em>iCloseInfo</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25closei" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Call when you want to close the window. iCloseInfo is passed as a parameter of onClose.</p>
 </dd></dl>
 
 <span class="target" id="cwindowbase-find"></span><dl class="function">
 <dt id="_CPPv24findI7WinCtrlE4uint">
-<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="Permalink to this definition">¶</a></dt>
+<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Look for a control with the ID.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv24find4uint">
-<span id="find__uint"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="Permalink to this definition">¶</a></dt>
+<span id="find__uint"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Look for a control with the ID.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv22id">
-<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set the window ID</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25child">
-<span id="child__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">child</code><a class="headerlink" href="#_CPPv25child" title="Permalink to this definition">¶</a></dt>
+<span id="child__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">child</code><a class="headerlink" href="#_CPPv25child" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Return the child window</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26parent">
-<span id="parent__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
+<span id="parent__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Return the parent window</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25layer">
-<span id="layer__e_LayerId"></span>e_LayerId <code class="descclassname"></code><code class="descname">layer</code><a class="headerlink" href="#_CPPv25layer" title="Permalink to this definition">¶</a></dt>
+<span id="layer__e_LayerId"></span>e_LayerId <code class="descclassname"></code><code class="descname">layer</code><a class="headerlink" href="#_CPPv25layer" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get / Set the rendering layer</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28priority">
-<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="Permalink to this definition">¶</a></dt>
+<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get / Set the drawing priority .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25texid">
-<span id="texid__uint"></span>uint <code class="descclassname"></code><code class="descname">texid</code><a class="headerlink" href="#_CPPv25texid" title="Permalink to this definition">¶</a></dt>
+<span id="texid__uint"></span>uint <code class="descclassname"></code><code class="descname">texid</code><a class="headerlink" href="#_CPPv25texid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Return the default texture ID of the window .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv21x">
-<span id="x__float"></span>float <code class="descclassname"></code><code class="descname">x</code><a class="headerlink" href="#_CPPv21x" title="Permalink to this definition">¶</a></dt>
+<span id="x__float"></span>float <code class="descclassname"></code><code class="descname">x</code><a class="headerlink" href="#_CPPv21x" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv21y">
-<span id="y__float"></span>float <code class="descclassname"></code><code class="descname">y</code><a class="headerlink" href="#_CPPv21y" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get / Set window position .</p>
+<span id="y__float"></span>float <code class="descclassname"></code><code class="descname">y</code><a class="headerlink" href="#_CPPv21y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get / Set the window position .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28position">
-<span id="position__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get / Set window position .</p>
+<span id="position__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get / Set the window position .</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv29transform">
-<span id="transform__Transform"></span>Transform <code class="descclassname"></code><code class="descname">transform</code><a class="headerlink" href="#_CPPv29transform" title="Permalink to this definition">¶</a></dt>
+<span id="transform__Transform"></span>Transform <code class="descclassname"></code><code class="descname">transform</code><a class="headerlink" href="#_CPPv29transform" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get the transform</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25scale">
-<span id="scale__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">scale</code><a class="headerlink" href="#_CPPv25scale" title="Permalink to this definition">¶</a></dt>
+<span id="scale__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">scale</code><a class="headerlink" href="#_CPPv25scale" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set x,y scales</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26anchor">
-<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="Permalink to this definition">¶</a></dt>
+<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>set the anchor for display position.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25width">
-<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
+<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26height">
-<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
+<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set the window size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv24size">
-<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
+<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set the window size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv211screenWidth">
-<span id="screenWidth__float"></span>float <code class="descclassname"></code><code class="descname">screenWidth</code><a class="headerlink" href="#_CPPv211screenWidth" title="Permalink to this definition">¶</a></dt>
+<span id="screenWidth__float"></span>float <code class="descclassname"></code><code class="descname">screenWidth</code><a class="headerlink" href="#_CPPv211screenWidth" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv212screenHeight">
-<span id="screenHeight__float"></span>float <code class="descclassname"></code><code class="descname">screenHeight</code><a class="headerlink" href="#_CPPv212screenHeight" title="Permalink to this definition">¶</a></dt>
+<span id="screenHeight__float"></span>float <code class="descclassname"></code><code class="descname">screenHeight</code><a class="headerlink" href="#_CPPv212screenHeight" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set the screen size</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv27caption">
-<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="Permalink to this definition">¶</a></dt>
+<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get / Set the title bar caption of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv212captionColor">
-<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="Permalink to this definition">¶</a></dt>
+<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get / Set the title bar caption color of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv213captionOffset">
-<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="Permalink to this definition">¶</a></dt>
+<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get / Set the title bar caption offset of the window.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25color">
-<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="Permalink to this definition">¶</a></dt>
+<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Set the window color. All controls in the window is affected.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv25style">
-<span id="style__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="Permalink to this definition">¶</a></dt>
+<span id="style__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get the window style.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv213priorityStyle">
-<span id="priorityStyle__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">priorityStyle</code><a class="headerlink" href="#_CPPv213priorityStyle" title="Permalink to this definition">¶</a></dt>
+<span id="priorityStyle__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">priorityStyle</code><a class="headerlink" href="#_CPPv213priorityStyle" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Get/Set the window priority style.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv24hide">
-<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="Permalink to this definition">¶</a></dt>
+<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="この定義へのパーマリンク">¶</a></dt>
 <dd><dl class="docutils">
 <dt>true</dt>
-<dd>ウィンドウ表示を隠す。</dd>
-<dt>false</dt>
 <dd><p class="first last">Hide the window display.</p>
+</dd>
+<dt>false</dt>
+<dd><p class="first last">Display the window.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv27disable">
-<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="Permalink to this definition">¶</a></dt>
+<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="この定義へのパーマリンク">¶</a></dt>
 <dd><blockquote>
 <div><dl class="docutils">
 <dt>true</dt>
-<dd><p class="first last">It deprives the window of the function, and darken.</p>
+<dd><p class="first last">It deprives functions of the window, and the window darken.</p>
 </dd>
 <dt>false</dt>
 <dd><p class="first last">Display the window</p>
@@ -922,32 +614,32 @@ TEXTBOX(Message) {
 
 <dl class="member">
 <dt id="_CPPv27isClose">
-<span id="isClose__b"></span>bool <code class="descclassname"></code><code class="descname">isClose</code><a class="headerlink" href="#_CPPv27isClose" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the window is closing animation, this value will be true.</p>
+<span id="isClose__b"></span>bool <code class="descclassname"></code><code class="descname">isClose</code><a class="headerlink" href="#_CPPv27isClose" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>This value is true among the window play the animation of closing.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv28isLoaded">
-<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
-<dd><p>If Loading such as texture, this value will be true.</p>
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>This value is true among the texture loading.</p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv26isFade">
-<span id="isFade__b"></span>bool <code class="descclassname"></code><code class="descname">isFade</code><a class="headerlink" href="#_CPPv26isFade" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the window is in the fade-in / fade-out, this value will be true.</p>
+<span id="isFade__b"></span>bool <code class="descclassname"></code><code class="descname">isFade</code><a class="headerlink" href="#_CPPv26isFade" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>This value is true among the fade state of window is in or out.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="id5">
-<h2>Others can be overridden methods<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>Other overridable methods<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>There are overridable methods other than callback.It is necessary to override when you want to customize the fade animationwhen creating the window or closing the window.</p>
+<div><p>CWindowBase has overridable methods other than callback. You need to override when you want to customize the fade animation when creating the window or closing the window.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv29startFade11e_FadeState">
-<span id="startFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">startFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29startFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
-<dd><p>It is called when the fade began. Fade-in or fade-out can be seen by looking at the e_FadeState.</p>
+<span id="startFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">startFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29startFade11e_FadeState" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>It is called when the fade began. You can distinguish fade state whether IN or  OUT by the function argument.</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>e_FadeState.Open</dt>
@@ -962,30 +654,30 @@ TEXTBOX(Message) {
 
 <dl class="function">
 <dt id="_CPPv26doFade11e_FadeState">
-<span id="doFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">doFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26doFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
+<span id="doFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">doFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26doFade11e_FadeState" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>フェード中に呼ばれます。</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>true</dt>
-<dd><p class="first last">It called during the fade.</p>
+<dd><p class="first last">if you want to continue the fade state.</p>
 </dd>
 <dt>false</dt>
-<dd><p class="first last">Finished fade</p>
+<dd><p class="first last">if you want to finish the fade state.</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>If fade is finished, it will return the false.</p>
-<p>In addition, even when the e_FadeState.None is passed, there is a need to return the false.</p>
+<p>if you want to finish the fade state, you need to return false.</p>
+<p>In addition, even if this function argument is the e_FadeState.None,you need to return false.</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>e_FadeState.None</dt>
-<dd><p class="first last">Do not fade</p>
+<dd><p class="first last">Do not a fade</p>
 </dd>
 <dt>e_FadeState.Open</dt>
-<dd><p class="first last">During fade-in</p>
+<dd><p class="first last">Among a fade-in</p>
 </dd>
 <dt>e_FadeState.Close</dt>
-<dd><p class="first last">During fade-out</p>
+<dd><p class="first last">Among a fade-out</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -995,15 +687,16 @@ TEXTBOX(Message) {
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlBase.html" class="btn btn-neutral float-right" title="CWinCtrlBase">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlBase.html" class="btn btn-neutral float-right" title="CWinCtrlBase" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWindowMgr.html" class="btn btn-neutral" title="CWindowMgr"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWindowMgr.html" class="btn btn-neutral" title="CWindowMgr" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1013,12 +706,13 @@ TEXTBOX(Message) {
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, kanemura.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -1042,6 +736,7 @@ TEXTBOX(Message) {
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

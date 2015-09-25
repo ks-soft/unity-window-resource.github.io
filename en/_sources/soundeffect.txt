@@ -42,6 +42,8 @@ SEのアセットバンドルを作成する方法
 
 .. image:: images/SeResource.png
 
+.. _se_def:
+
 @se.def記述方法
 ---------------------------------
 

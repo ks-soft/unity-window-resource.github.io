@@ -12,7 +12,7 @@ CWinCtrlTextbox
 
  キャプションが、コントロールサイズに収まらないときは、テキストボックスをタッチするとスクロールします。
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. cpp:function:: void onClick(CWinCtrlBase cCtrl)

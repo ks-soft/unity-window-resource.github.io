@@ -13,7 +13,7 @@ CWinCtrlRichText
  改行や途中で文字色を変えたりすることが可能です。
 
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. _RICHTEXT_CLICK:
@@ -35,8 +35,6 @@ CWindowBaseに届く :ref:`コールバック<callback>`
  :param CWinCtrlBase cCtrl: ドラッグされたコントロール
  :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
  :param Vector2 dragVelocity: タッチ位置の変位
-
- void onClick(CWinCtrlBase cCtrl,CRichTextOne cText)
 
 .. note:
 

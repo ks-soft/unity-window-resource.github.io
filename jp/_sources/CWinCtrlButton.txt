@@ -15,7 +15,7 @@ CWinCtrlButton
  バッジは最大7つまで対応可能です。
 
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. cpp:function:: void onClick(CWinCtrlBase cCtrl)

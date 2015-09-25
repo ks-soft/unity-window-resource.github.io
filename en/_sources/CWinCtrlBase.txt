@@ -30,7 +30,7 @@ CWinCtrlBase
 
 ..
 
- また、CWindowBase. :ref:`find<CWindowBase_find>` 関数と、CWinContents. :ref:`find<Contents_find>` は、コンテンツ内も(再帰的に)検索対象にします。
+ また、 :ref:`CWindowBase.find<CWindowBase_find>` 関数と、 :ref:`CWinContents.find<Contents_find>` は、コンテンツ内も(再帰的に)検索対象にします。
  よって、単純に次のようにもBUTTON_Aを取り出すことができます。
 
 ::
@@ -81,7 +81,7 @@ CWinCtrlBase
 
 .. cpp:function:: CWinContents getContents()
 
- :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>` を取得する。
+ :return CWinContents: :ref:`CONTENTS<CTRL_PROP_CONTENTS>` プロパティによって定義された :ref:`コンテンツ<CWinContents>` を取得する。
 
 コンテンツリスト関連
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,7 +104,7 @@ CWinCtrlBase
 .. cpp:function:: CWinContents insert(int pos)
  
  :param int pos: コンテンツを作成し、コンテンツリストに挿入する場所
- :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>`
+ :return CWinContents: コンテンツリスト内の :ref:`コンテンツ<CWinContents>`
 
  コンテンツリストの特定の場所にコンテンツを生成し挿入する。
 
@@ -116,7 +116,7 @@ CWinCtrlBase
 
 
  :param int index: コンテンツリスト内の取得したいコンテンツのインデックス
- :return CWinContents: コントロールが保持する :ref:`コンテンツ<CWinContents>`
+ :return CWinContents: コンテンツリスト内の :ref:`コンテンツ<CWinContents>`
 
  コンテンツリストから、インデックスを用いて取得する。
 

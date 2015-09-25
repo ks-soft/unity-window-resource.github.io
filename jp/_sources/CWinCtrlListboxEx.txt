@@ -22,7 +22,7 @@ CWinCtrlListboxEx
 
  それに対して水平方向に並んでいる場合は、横幅のみ自動計算の対象になります。
 
-CWindowBaseに届く :ref:`コールバック<callback>`
+CWindowBaseに届くコールバック
 -------------------------------------------------
 
 .. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
