@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WINDOW &mdash; WindowSystem 1 ドキュメント</title>
+  <title>WINDOW &mdash; WindowSystem 1.01 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 ドキュメント" href="index.html"/>
         <link rel="next" title="コントロールの配置について" href="CtrlAnchor.html"/>
         <link rel="prev" title="ウィンドウプライオリティについて" href="WindowPriority.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -413,8 +413,8 @@
 <h3><strong>STYLE</strong> = スタイルフラグ0|スタイルフラグ1|..|スタイルフラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="53%" />
+<col width="47%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">表示位置アンカーフラグ</th>
@@ -423,72 +423,57 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左上に設定</div>
-<div class="line">ANCHOR_LEFTTOPと同じ</div>
-</div>
+<td><p class="first">アンカー位置を左上に設定</p>
+<blockquote class="last">
+<div>ANCHOR_LEFTTOPと同じ</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTTOP</td>
 <td>アンカー位置を左上に設定</td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左に設定</div>
-<div class="line">縦にはセンタリング</div>
-</div>
+<td><p class="first">アンカー位置を左に設定</p>
+<p class="last">縦にはセンタリング</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左に設定</div>
-<div class="line">縦には下辺を基準に配置</div>
-</div>
+<td><p class="first">アンカー位置を左に設定</p>
+<blockquote class="last">
+<div>縦には下辺を基準に配置</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_TOP</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を上辺に設定</div>
-<div class="line">横方向にはセンタリング</div>
-</div>
+<td><p class="first">アンカー位置を上辺に設定</p>
+<p class="last">横方向にはセンタリング</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_CENTER</td>
 <td>アンカー位置を画面中央にセンタリング</td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を底辺に設定</div>
-<div class="line">横方向にはセンタリング</div>
-</div>
+<td><p class="first">アンカー位置を底辺に設定</p>
+<p class="last">横方向にはセンタリング</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTTOP</td>
 <td>アンカー位置を右上に設定</td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を右に設定</div>
-<div class="line">縦にはセンタリング</div>
-</div>
+<td><p class="first">アンカー位置を右に設定</p>
+<p class="last">縦にはセンタリング</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を右に設定</div>
-<div class="line">縦には下辺を基準に配置</div>
-</div>
+<td><p class="first">アンカー位置を右に設定</p>
+<p class="last">縦には下辺を基準に配置</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">ウィンドウ描画優先順位フラグ</th>
@@ -497,45 +482,33 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_TOP</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にする。</div>
-<div class="line">POPUP、TOPMOSTよりは優先度は低い。</div>
-<div class="line">TOP同士では、PRIORITYプロパティに設定されている優先度に従います。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にする。</p>
+<p>POPUP、TOPMOSTよりは優先度は低い。</p>
+<p class="last">TOP同士では、PRIORITYプロパティに設定されている優先度に従います。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にします。</div>
-<div class="line">TOPより優先され、TOPMOSTよりは優先度は低い。</div>
-<div class="line">POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。</div>
-<div class="line">ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にします。</p>
+<p>TOPより優先され、TOPMOSTよりは優先度は低い。</p>
+<p>POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
+<p class="last">ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にする。</div>
-<div class="line">TOP、POPUPよりは優先度が高い。</div>
-<div class="line">TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にする。</p>
+<p>TOP、POPUPよりは優先度が高い。</p>
+<p class="last">TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)</div>
-</div>
-</td>
+<td>ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)</td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="34%" />
+<col width="66%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">ウィンドウ機能制御用フラグ</th>
@@ -544,10 +517,8 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_NOCLOSE</td>
-<td><div class="first last line-block">
-<div class="line">クローズボタンを配置しない。</div>
-<div class="line">NOTITLEBARが付いているとクローズボタンは配置されない</div>
-</div>
+<td><p class="first">クローズボタンを配置しない。</p>
+<p class="last">NOTITLEBARが付いているとクローズボタンは配置されない</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOMINIMIZATION</td>
@@ -575,19 +546,13 @@
 <td>ウィンドウ表示をオフにする</td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOBRINGTOTOP</td>
-<td><div class="first last line-block">
-<div class="line">アクティブになった時にプライオリティを自動的にあげない。</div>
-</div>
-</td>
+<td>アクティブになった時にプライオリティを自動的にあげない。</td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_OPENBOTTOM</td>
 <td>背面にウィンドウを開く</td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -636,7 +601,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

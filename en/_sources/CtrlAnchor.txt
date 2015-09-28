@@ -41,29 +41,27 @@
  
  以下にアンカーが設定されたときに自動的に設定されるベースポジションの値を列挙しておきます。
  
-.. list-table::
- :header-rows: 1
- :widths: 10,10
++-------------------+------------------+
+|アンカー           |ベースポジション  |
++===================+==================+
+|ANCHOR_DEFAULT     |BASE_DEFAULT      |
++-------------------+------------------+
+|ANCHOR_LEFTTOP     |BASE_LEFTTOP      |
++-------------------+------------------+
+|ANCHOR_LEFT        |BASE_LEFT         |
++-------------------+------------------+
+|ANCHOR_LEFTBOTTOM  |BASE_LEFTBOTTOM   |
++-------------------+------------------+
+|ANCHOR_TOP         |BASE_TOP          |
++-------------------+------------------+
+|ANCHOR_CENTER      |BASE_CENTER       |
++-------------------+------------------+
+|ANCHOR_BOTTOM      |BASE_BOTTOM       |
++-------------------+------------------+
+|ANCHOR_RIGHTTOP    |BASE_RIGHTTOP     |
++-------------------+------------------+
+|ANCHOR_RIGHT       |BASE_RIGHT        |
++-------------------+------------------+
+|ANCHOR_RIGHTBOTTOM |BASE_RIGHTBOTTOM  |
++-------------------+------------------+
 
- * - アンカー
-   - ベースポジション	
- * - ANCHOR_DEFAULT
-   - BASE_DEFAULT
- * - ANCHOR_LEFTTOP
-   - BASE_LEFTTOP
- * - ANCHOR_LEFT
-   - BASE_LEFT
- * - ANCHOR_LEFTBOTTOM
-   - BASE_LEFTBOTTOM
- * - ANCHOR_TOP
-   - BASE_TOP
- * - ANCHOR_CENTER
-   - BASE_CENTER
- * - ANCHOR_BOTTOM
-   - BASE_BOTTOM
- * - ANCHOR_RIGHTTOP
-   - BASE_RIGHTTOP
- * - ANCHOR_RIGHT
-   - BASE_RIGHT
- * - ANCHOR_RIGHTBOTTOM
-   - BASE_RIGHTBOTTOM

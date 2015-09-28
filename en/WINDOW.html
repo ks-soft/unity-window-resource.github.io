@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WINDOW &mdash; WindowSystem 1 documentation</title>
+  <title>WINDOW &mdash; WindowSystem 1.01 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 documentation" href="index.html"/>
         <link rel="next" title="An arrangement of the control" href="CtrlAnchor.html"/>
         <link rel="prev" title="Window priority" href="WindowPriority.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -416,8 +416,8 @@
 <h3><strong>STYLE</strong> = style flag 0|style flag 1|..|style flag n<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="53%" />
+<col width="47%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Display position anchor flag</p>
@@ -428,10 +428,10 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position in the upper left</div>
-<div class="line">Same as ANCHOR_LEFTTOP</div>
-</div>
+<td><p class="first">Set the anchor position in the upper left</p>
+<blockquote class="last">
+<div><p>Same as ANCHOR_LEFTTOP</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTTOP</td>
@@ -439,24 +439,20 @@
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the left.</div>
-<div class="line">And vertical centering</div>
-</div>
+<td><p class="first">Set the anchor position to the left.</p>
+<p class="last">And vertical centering</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the left.</div>
-<div class="line">Located along the lower edge</div>
-</div>
+<td><p class="first">Set the anchor position to the left.</p>
+<blockquote class="last">
+<div><p>Located along the lower edge</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_TOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the upper side</div>
-<div class="line">Centering at lateral.</div>
-</div>
+<td><p class="first">Set the anchor position to the upper side</p>
+<p class="last">Centering at lateral.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_CENTER</td>
@@ -464,10 +460,8 @@
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position at the bottom</div>
-<div class="line">Centering at lateral.</div>
-</div>
+<td><p class="first">Set the anchor position at the bottom</p>
+<p class="last">Centering at lateral.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTTOP</td>
@@ -475,28 +469,21 @@
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the right</div>
-<div class="line">And vertical centering</div>
-</div>
+<td><p class="first">Set the anchor position to the right</p>
+<p class="last">And vertical centering</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the right</div>
-<div class="line">Located along the lower edge</div>
-</div>
+<td><p class="first">Set the anchor position to the right</p>
+<p class="last">Located along the lower edge</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Window display priority flag</p>
@@ -507,45 +494,34 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_TOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the display priority of the window to maximum.</div>
-<div class="line">This is a lower priority than POPUP and TOPMOST.</div>
-<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
-</div>
+<td><p class="first">Set the display priority of the window to maximum.</p>
+<p>This is a lower priority than POPUP and TOPMOST.</p>
+<p class="last">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
-<td><div class="first last line-block">
-<div class="line">Set the display priority of the window to maximum.</div>
-<div class="line">It is priority than TOP, and a lower priority than TOPMOST.</div>
-<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
-<div class="line">if you touch the screen other than this window, this window is closed.</div>
-</div>
+<td><p class="first">Set the display priority of the window to maximum.</p>
+<p>It is priority than TOP, and a lower priority than TOPMOST.</p>
+<p>If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
+<p class="last">if you touch the screen other than this window, this window is closed.</p>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
-<td><div class="first last line-block">
-<div class="line">Set the display priority of the window to maximum.</div>
-<div class="line">This is a higher priority than TOP and POPUP.</div>
-<div class="line">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</div>
-</div>
+<td><p class="first">Set the display priority of the window to maximum.</p>
+<p>This is a higher priority than TOP and POPUP.</p>
+<p class="last">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
-<td><div class="first last line-block">
-<div class="line">Even if this window is opened, you specify it when you do not want to darken the other window.(valid only when you have specified the TOP / POPUP)</div>
-</div>
+<td><p class="first last">Even if this window is opened, you specify it when you do not want to darken the other window.(valid only when you have specified the TOP / POPUP)</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="34%" />
+<col width="66%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Window function control flag</p>
@@ -556,10 +532,8 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_NOCLOSE</td>
-<td><div class="first last line-block">
-<div class="line">Do not place the close button.</div>
-<div class="line">When NOTITLEBAR is attached, close button is not placed</div>
-</div>
+<td><p class="first">Do not place the close button.</p>
+<p class="last">When NOTITLEBAR is attached, close button is not placed</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOMINIMIZATION</td>
@@ -583,7 +557,8 @@
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_NODRAG</td>
-<td>ドラッグによるウィンドウの移動を抑制する</td>
+<td><p class="first last">Can&#8217;t move the window with  dragging.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
 <td><p class="first last">It does not become active.</p>
@@ -594,9 +569,7 @@
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOBRINGTOTOP</td>
-<td><div class="first last line-block">
-<div class="line">The display priority of a window doesn&#8217;t allow to raise automatically  when it becomes active.</div>
-</div>
+<td><p class="first last">The display priority of a window doesn&#8217;t allow to raise automatically  when it becomes active.</p>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_OPENBOTTOM</td>
@@ -605,9 +578,6 @@
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -656,7 +626,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

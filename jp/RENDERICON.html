@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RENDERICON &mdash; WindowSystem 1 ドキュメント</title>
+  <title>RENDERICON &mdash; WindowSystem 1.01 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 ドキュメント" href="index.html"/>
         <link rel="next" title="METER" href="METER.html"/>
         <link rel="prev" title="RECASTICON" href="RECASTICON.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -393,11 +393,12 @@ STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div>
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>コントロールの表示アンカーを指定できます。</p>
+<blockquote>
+<div>コントロールの表示アンカーを指定できます。</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">表示位置アンカーフラグ</th>
@@ -406,93 +407,70 @@ STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>ANCHOR_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左上に設定</div>
-<div class="line">ANCHOR_LEFTTOPと同じ</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</div>
-</div>
+<td><p class="first">アンカー位置を左上に設定</p>
+<p>ANCHOR_LEFTTOPと同じ</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左上に設定</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</div>
-</div>
+<td><p class="first">アンカー位置を左上に設定</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左に設定</div>
-<div class="line">縦にはセンタリング</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTになる。</div>
-</div>
+<td><p class="first">アンカー位置を左に設定</p>
+<p>縦にはセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTになる。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を左に設定</div>
-<div class="line">縦には下辺を基準に配置</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</div>
-</div>
+<td><p class="first">アンカー位置を左に設定</p>
+<p>縦には下辺を基準に配置</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_TOP</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を上辺に設定</div>
-<div class="line">横方向にはセンタリング</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_TOPになる。</div>
-</div>
+<td><p class="first">アンカー位置を上辺に設定</p>
+<p>横方向にはセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_TOPになる。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_CENTER</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を画面中央にセンタリング</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_CENTERになる。</div>
-</div>
+<td><p class="first">アンカー位置を画面中央にセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_CENTERになる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を底辺に設定</div>
-<div class="line">横方向にはセンタリング</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</div>
-</div>
+<td><p class="first">アンカー位置を底辺に設定</p>
+<p>横方向にはセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を右上に設定</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</div>
-</div>
+<td><p class="first">アンカー位置を右上に設定</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を右に設定</div>
-<div class="line">縦にはセンタリング</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</div>
-</div>
+<td><p class="first">アンカー位置を右に設定</p>
+<p>縦にはセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">アンカー位置を右に設定</div>
-<div class="line">縦には下辺を基準に配置</div>
-<div class="line">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</div>
-</div>
+<td><p class="first">アンカー位置を右に設定</p>
+<p>縦には下辺を基準に配置</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <blockquote>
 <div>コントロールの中心位置を指定できます。</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="32%" />
+<col width="68%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">中心位置変更フラグ</th>
@@ -501,69 +479,54 @@ STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>BASE_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">アンカーフラグに応じて変わる。</div>
-<div class="line">特に指定しなければ、これになります。</div>
-<div class="line">各アンカーフラグの説明を参照</div>
-</div>
+<td><p class="first">アンカーフラグに応じて変わる。</p>
+<p>特に指定しなければ、これになります。</p>
+<p class="last">各アンカーフラグの説明を参照</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTTOP</td>
 <td>中心位置をコントロールの左上に設定</td>
 </tr>
 <tr class="row-even"><td>BASE_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">中心位置を左に設定</div>
-<div class="line">縦にはコントロールの真中</div>
-</div>
+<td><p class="first">中心位置を左に設定</p>
+<p class="last">縦にはコントロールの真中</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
 <td>中心位置を左下に設定</td>
 </tr>
 <tr class="row-even"><td>BASE_TOP</td>
-<td><div class="first last line-block">
-<div class="line">中心位置を上辺に設定</div>
-<div class="line">横にはコントロールの中心</div>
-</div>
+<td><p class="first">中心位置を上辺に設定</p>
+<p class="last">横にはコントロールの中心</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_CENTER</td>
 <td>中心位置をコントロールの中心</td>
 </tr>
 <tr class="row-even"><td>BASE_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">中心位置を底辺に設定</div>
-<div class="line">横方向にはコントロールの真中</div>
-</div>
+<td><p class="first">中心位置を底辺に設定</p>
+<p class="last">横方向にはコントロールの真中</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTTOP</td>
 <td>中心位置をコントロールの右上に設定</td>
 </tr>
 <tr class="row-even"><td>BASE_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">中心位置を右に設定</div>
-<div class="line">横にはコントロールの中心</div>
-</div>
+<td><p class="first">中心位置を右に設定</p>
+<p class="last">横にはコントロールの中心</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">中心位置を右下に設定</div>
-</div>
-</td>
+<td>中心位置を右下に設定</td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>機能を制限するスタイルは以下のものがあります。</p>
+<blockquote>
+<div>機能を制限するスタイルは以下のものがあります。</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="36%" />
+<col width="64%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">機能制限スタイル</th>
@@ -630,7 +593,7 @@ STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

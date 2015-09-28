@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ウィンドウプライオリティについて &mdash; WindowSystem 1 ドキュメント</title>
+  <title>ウィンドウプライオリティについて &mdash; WindowSystem 1.01 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 ドキュメント" href="index.html"/>
         <link rel="next" title="WINDOW" href="WINDOW.html"/>
         <link rel="prev" title="ウィンドウの配置について" href="WindowAnchor.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -248,8 +248,8 @@
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">ウィンドウ描画優先順位フラグ</th>
@@ -258,41 +258,29 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>WINDOW_STYLE_TOP</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にする。</div>
-<div class="line">POPUP、TOPMOSTよりは優先度は低い。</div>
-<div class="line">TOP同士では、PRIORITYプロパティに設定されている優先度に従います。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にする。</p>
+<p>POPUP、TOPMOSTよりは優先度は低い。</p>
+<p class="last">TOP同士では、PRIORITYプロパティに設定されている優先度に従います。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にします。</div>
-<div class="line">TOPより優先され、TOPMOSTよりは優先度は低い。</div>
-<div class="line">POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。</div>
-<div class="line">ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にします。</p>
+<p>TOPより優先され、TOPMOSTよりは優先度は低い。</p>
+<p>POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
+<p class="last">ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。</p>
 </td>
 </tr>
 <tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウの表示優先度を最大にする。</div>
-<div class="line">TOP、POPUPよりは優先度が高い。</div>
-<div class="line">TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。</div>
-</div>
+<td><p class="first">ウィンドウの表示優先度を最大にする。</p>
+<p>TOP、POPUPよりは優先度が高い。</p>
+<p class="last">TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
-<td><div class="first last line-block">
-<div class="line">ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)</div>
-</div>
-</td>
+<td>ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)</td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 
 
@@ -336,7 +324,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

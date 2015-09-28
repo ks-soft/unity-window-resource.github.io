@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LISTBOXEX &mdash; WindowSystem 1 documentation</title>
+  <title>LISTBOXEX &mdash; WindowSystem 1.01 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 documentation" href="index.html"/>
         <link rel="next" title="CONTAINER" href="CONTAINER.html"/>
         <link rel="prev" title="LISTBOX" href="LISTBOX.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -431,13 +431,11 @@ SCROLLBAR(List) {
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = Flag0|Flag1|..|Flagn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Configurable unique styles in the list box are like the following .</p>
-</div></blockquote>
+<p>Configurable unique styles in the list box are like the following .</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="31%" />
+<col width="69%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Listbox control flag</p>
@@ -459,18 +457,19 @@ SCROLLBAR(List) {
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
 </td>
 </tr>
+<tr class="row-odd"><td>LISTBOX_LOCK</td>
+<td><p class="first last">Suppress that scroll the listbox.</p>
+</td>
+</tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <blockquote>
 <div><p>You can set the display anchor of control.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Display position anchor flag</p>
@@ -481,94 +480,71 @@ SCROLLBAR(List) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>ANCHOR_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position in the upper left</div>
-<div class="line">Same as ANCHOR_LEFTTOP</div>
-<div class="line">The default control center position is set to BASE_LEFT.</div>
-</div>
+<td><p class="first">Set the anchor position in the upper left</p>
+<p>Same as ANCHOR_LEFTTOP</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position in the upper left</div>
-<div class="line">The default control center position is set to BASE_LEFT.</div>
-</div>
+<td><p class="first">Set the anchor position in the upper left</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the left.</div>
-<div class="line">And vertical centering</div>
-<div class="line">The default control center position is set to BASE_LEFT.</div>
-</div>
+<td><p class="first">Set the anchor position to the left.</p>
+<p>And vertical centering</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the left.</div>
-<div class="line">Located along the lower edge</div>
-<div class="line">The default control center position is set to BASE_LEFTBOTTOM.</div>
-</div>
+<td><p class="first">Set the anchor position to the left.</p>
+<p>Located along the lower edge</p>
+<p class="last">The default control center position is set to BASE_LEFTBOTTOM.</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_TOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the upper side</div>
-<div class="line">Centering at lateral.</div>
-<div class="line">The default control center position is set to BASE_TOP.</div>
-</div>
+<td><p class="first">Set the anchor position to the upper side</p>
+<p>Centering at lateral.</p>
+<p class="last">The default control center position is set to BASE_TOP.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_CENTER</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position in the center of the window</div>
-<div class="line">The default control center position is set to BASE_CENTER.</div>
-</div>
+<td><p class="first">Set the anchor position in the center of the window</p>
+<p class="last">The default control center position is set to BASE_CENTER.</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position at the bottom</div>
-<div class="line">Centering at lateral.</div>
-<div class="line">The default control center position is set to BASE_BOTTOM.</div>
-</div>
+<td><p class="first">Set the anchor position at the bottom</p>
+<p>Centering at lateral.</p>
+<p class="last">The default control center position is set to BASE_BOTTOM.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position in the upper right</div>
-<div class="line">The default control center position is set to BASE_RIGHTBOTTOM.</div>
-</div>
+<td><p class="first">Set the anchor position in the upper right</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
 <tr class="row-even"><td>ANCHOR_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the right</div>
-<div class="line">And vertical centering</div>
-<div class="line">The default control center position is set to BASE_RIGHT.</div>
-</div>
+<td><p class="first">Set the anchor position to the right</p>
+<p>And vertical centering</p>
+<p class="last">The default control center position is set to BASE_RIGHT.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the anchor position to the right</div>
-<div class="line">Located along the lower edge</div>
-<div class="line">The default control center position is set to BASE_RIGHTBOTTOM.</div>
-</div>
+<td><p class="first">Set the anchor position to the right</p>
+<p>Located along the lower edge</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <blockquote>
 <div><p>You can set the center position of the control.</p>
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="32%" />
+<col width="68%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Base position change flag</p>
@@ -579,11 +555,9 @@ SCROLLBAR(List) {
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>BASE_DEFAULT</td>
-<td><div class="first last line-block">
-<div class="line">It varies depending on the anchor flag .</div>
-<div class="line">If you do not specifically set , this value is set .</div>
-<div class="line">See the description of each anchor flag</div>
-</div>
+<td><p class="first">It varies depending on the anchor flag .</p>
+<p>If you do not specifically set , this value is set .</p>
+<p class="last">See the description of each anchor flag</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTTOP</td>
@@ -591,10 +565,8 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>BASE_LEFT</td>
-<td><div class="first last line-block">
-<div class="line">Set the center position to the left side.</div>
-<div class="line">and vertical centering.</div>
-</div>
+<td><p class="first">Set the center position to the left side.</p>
+<p class="last">and vertical centering.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
@@ -602,10 +574,8 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>BASE_TOP</td>
-<td><div class="first last line-block">
-<div class="line">Set the center position to the upper side.</div>
-<div class="line">and horizontal centering</div>
-</div>
+<td><p class="first">Set the center position to the upper side.</p>
+<p class="last">and horizontal centering</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_CENTER</td>
@@ -613,10 +583,8 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>BASE_BOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the center position to the bottom side.</div>
-<div class="line">And horizontal centering.</div>
-</div>
+<td><p class="first">Set the center position to the bottom side.</p>
+<p class="last">And horizontal centering.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTTOP</td>
@@ -624,30 +592,23 @@ SCROLLBAR(List) {
 </td>
 </tr>
 <tr class="row-even"><td>BASE_RIGHT</td>
-<td><div class="first last line-block">
-<div class="line">Set the center position to the right side.</div>
-<div class="line">and horizontal centering</div>
-</div>
+<td><p class="first">Set the center position to the right side.</p>
+<p class="last">and horizontal centering</p>
 </td>
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
-<td><div class="first last line-block">
-<div class="line">Set the center position to the bottom right side.</div>
-</div>
+<td><p class="first last">Set the center position to the bottom right side.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <blockquote>
 <div><p>Style that limits the function as follows .</p>
 </div></blockquote>
-<table border="1" class="docutils" id="listboxex-style">
+<table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="31%" />
+<col width="69%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Function limit style</p>
@@ -673,7 +634,19 @@ SCROLLBAR(List) {
 <td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
-<tr class="row-even"><td>LISTBOX_LOCK</td>
+<tr class="row-even"><td>LISTBOX_ITEM_STACK_V</td>
+<td><p class="first last">List box arranged in the vertical direction.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>LISTBOX_ITEM_STACK_H</td>
+<td><p class="first last">List box arranged in the vertical direction.</p>
+</td>
+</tr>
+<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>LISTBOX_LOCK</td>
 <td><p class="first last">Suppress that scroll the listbox.</p>
 </td>
 </tr>
@@ -724,7 +697,7 @@ SCROLLBAR(List) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

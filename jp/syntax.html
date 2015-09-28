@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 1 ドキュメント</title>
+  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 1.01 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 ドキュメント" href="index.html"/>
         <link rel="next" title="ウィンドウの配置について" href="WindowAnchor.html"/>
         <link rel="prev" title="多言語対応について" href="caption.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -346,8 +346,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <h3>式において使える演算子<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">演算子</th>
@@ -377,8 +377,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <h3>式においての定数表現<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">定数例</th>
@@ -393,7 +393,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <td>16進整数</td>
 </tr>
 <tr class="row-even"><td>000_001_00010</td>
-<td><a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> (8bit,8bit,16bit形式)</td>
+<td>マルチID(8bit,8bit,16bit形式)</td>
 </tr>
 <tr class="row-odd"><td>0.345</td>
 <td>浮動小数点</td>
@@ -422,8 +422,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div>C言語,C++言語とほぼ同じプリプロセッサが使えます。</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="52%" />
+<col width="48%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">プリプロセッサ</th>
@@ -464,8 +464,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div>次に、wra独自のプリプロセッサ定義について列挙しておきます。</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="47%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">プリプロセッサ</th>
@@ -474,35 +474,35 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a></td>
-<td><div class="first last line-block">
-<div class="line">アセットバンドルとして出力する</div>
-<div class="line">例</div>
-<div class="line">#pragma RESOURCE 000_014_000000</div>
-</div>
+<td><p class="first">アセットバンドルとして出力する</p>
+<blockquote class="last">
+<div><p>例</p>
+<blockquote>
+<div>#pragma RESOURCE 000_014_000000</div></blockquote>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>#pragma RESOURCE パス</td>
-<td><div class="first last line-block">
-<div class="line">リソースデータとして指定されたパスに出力する</div>
-<div class="line">例:</div>
-<div class="line">#pragma RESOURCE = Resources/windows.asset</div>
-</div>
+<td><p class="first">リソースデータとして指定されたパスに出力する</p>
+<blockquote class="last">
+<div><p>例</p>
+<blockquote>
+<div>#pragma RESOURCE = Resources/windows.asset</div></blockquote>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td>#pragma PATH 出力パス</td>
-<td><div class="first last line-block">
-<div class="line">出力パスを変更する</div>
-<div class="line">デフォルトは、以下のフォルダ</div>
-<div class="line">#pragma PATH ../wrc/base</div>
-</div>
+<td><p class="first">出力パスを変更する</p>
+<p>デフォルトは、以下のフォルダ</p>
+<blockquote class="last">
+<div>#pragma PATH ../wrc/base</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>#pragma BASECLASS ベースクラス</td>
-<td><div class="first last line-block">
-<div class="line">ベースクラスを変更する</div>
-<div class="line">デフォルトは、以下のクラス</div>
-<div class="line">#pragma BASECALSS CWindowBase</div>
-</div>
+<td><p class="first">ベースクラスを変更する</p>
+<p>デフォルトは、以下のクラス</p>
+<blockquote class="last">
+<div>#pragma BASECALSS CWindowBase</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -551,7 +551,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

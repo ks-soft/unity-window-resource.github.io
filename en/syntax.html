@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The window script(wra) syntax &mdash; WindowSystem 1 documentation</title>
+  <title>The window script(wra) syntax &mdash; WindowSystem 1.01 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.01 documentation" href="index.html"/>
         <link rel="next" title="An arrangement of the window" href="WindowAnchor.html"/>
         <link rel="prev" title="The multilingual" href="caption.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1
+                1.01
               </div>
             
           
@@ -345,8 +345,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <h3>Operators that can be used in the expression.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Operators</p>
@@ -383,8 +383,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <h3>The constant representation of the expression<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Constants Examples</p>
@@ -403,8 +403,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </td>
 </tr>
 <tr class="row-even"><td>000_001_00010</td>
-<td><p class="first last"><a class="reference internal" href="id.html#mulid"><span>MulId</span></a> (8bit,8bit,16bit format)</p>
-</td>
+<td>マルチID(8bit,8bit,16bit形式)</td>
 </tr>
 <tr class="row-odd"><td>0.345</td>
 <td><p class="first last">Floating point</p>
@@ -436,8 +435,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="52%" />
+<col width="48%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Preprocessor</p>
@@ -496,8 +495,8 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="47%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Preprocessor</p>
@@ -509,38 +508,38 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <tbody valign="top">
 <tr class="row-even"><td><p class="first last">#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span>MulID</span></a></p>
 </td>
-<td><div class="first last line-block">
-<div class="line">output as an asset bundles</div>
-<div class="line">Example</div>
-<div class="line">#pragma RESOURCE 000_014_000000</div>
-</div>
+<td><p class="first">output as an asset bundles</p>
+<blockquote class="last">
+<div><p>Example</p>
+<blockquote>
+<div>#pragma RESOURCE 000_014_000000</div></blockquote>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p class="first last">#pragma RESOURCE path</p>
 </td>
-<td><div class="first last line-block">
-<div class="line">Output it  to the specified path as resource data.</div>
-<div class="line">Example:</div>
-<div class="line">#pragma RESOURCE = Resources/windows.asset</div>
-</div>
+<td><p class="first">Output it  to the specified path as resource data.</p>
+<blockquote class="last">
+<div><p>Example</p>
+<blockquote>
+<div>#pragma RESOURCE = Resources/windows.asset</div></blockquote>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p class="first last">#pragma PATH &#8220;export path&#8221;</p>
 </td>
-<td><div class="first last line-block">
-<div class="line">You want to change the output path.</div>
-<div class="line">By default , the following folder.</div>
-<div class="line">#pragma PATH ../wrc/base</div>
-</div>
+<td><p class="first">You want to change the output path.</p>
+<p>By default , the following folder.</p>
+<blockquote class="last">
+<div>#pragma PATH ../wrc/base</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p class="first last">#pragma BASECLASS Base class name</p>
 </td>
-<td><div class="first last line-block">
-<div class="line">You want to change the base class</div>
-<div class="line">By default , the following class</div>
-<div class="line">#pragma BASECALSS CWindowBase</div>
-</div>
+<td><p class="first">You want to change the base class</p>
+<p>By default , the following class</p>
+<blockquote class="last">
+<div>#pragma BASECALSS CWindowBase</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -589,7 +588,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'1.01',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
