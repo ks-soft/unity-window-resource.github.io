@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WINDOW &mdash; WindowSystem 1.01 ドキュメント</title>
+  <title>WINDOW &mdash; WindowSystem 1.02 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.01 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
         <link rel="next" title="コントロールの配置について" href="CtrlAnchor.html"/>
         <link rel="prev" title="ウィンドウプライオリティについて" href="WindowPriority.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.01
+                1.02
               </div>
             
           
@@ -111,8 +111,15 @@
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">WINDOW</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">プロパティ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">最少のウィンドウスクリプト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">クローズボタンのないウィンドウスクリプト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">タイトルバーを無くしたウィンドウスクリプト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">全てのデフォルト表示を消したウィンドウスクリプト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">ウィンドウのドラッグ移動について</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">プロパティ</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#resource-id"><strong>RESOURCE = マルチID</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#resource"><strong>RESOURCE = パス</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#path"><strong>PATH</strong> = パス文字列</a></li>
@@ -283,9 +290,98 @@
 </div>
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-</div>
 <div class="section" id="id3">
-<h2>プロパティ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h3>最少のウィンドウスクリプト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<blockquote>
+<div>このスクリプトで次のようなウィンドウが表示されます。</div></blockquote>
+<img alt="_images/WindowSample0.png" src="_images/WindowSample0.png" />
+<p>ウィンドウの原点位置は、フレームの左上です(タイトルバーの左上ではありません)。</p>
+<p>次のように記述するとタイトルバーが見えなくなります。</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>次のように記述するとタイトルバーが表れます。</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>クローズボタンのないウィンドウスクリプト<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>クローズボタンを削除するには次のようにスタイルを設定します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOCLOSE</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample1.png" src="_images/WindowSample1.png" />
+</div>
+<div class="section" id="id5">
+<h3>タイトルバーを無くしたウィンドウスクリプト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>タイトルバーを無くしたウィンドウスクリプト</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample2.png" src="_images/WindowSample2.png" />
+</div>
+<div class="section" id="id6">
+<h3>全てのデフォルト表示を消したウィンドウスクリプト<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>全てのデフォルト表示を消したウィンドウスクリプト</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample3.png" src="_images/WindowSample3.png" />
+<p>全ての表示をコントロールを直接記述することで見た目のカスタマイズを最大限行えます。</p>
+</div>
+<div class="section" id="id7">
+<h3>ウィンドウのドラッグ移動について<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><p>STYLEにWINDOW_STYLE_DRAGを付けることによって、ドラッグによるウィンドウの移動を許可します。</p>
+<p>タイトルバー、フレームやユーザー定義のコントロールをドラッグしたときに、ウィンドウを移動できます。
+ただし、コントロールのスタイルにWIN_CTRL_STYLE_DRAGが付いているときは、ウィンドウの移動は発生しません。
+以下の例を試してください。</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_DRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">CLOSE_POSITION</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">FRAME</span><span class="p">(</span><span class="n">Test</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WIN_CTRL_STYLE_DRAG</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample4.png" src="_images/WindowSample4.png" />
+<p>この例では、フレームをドラッグすると、フレームが複製され、その複製が移動します。
+その反面、タイトルバーをドラッグするとウィンドウを移動することができます。</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>プロパティ<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="resource-id">
 <span id="resource-ab"></span><h3><strong>RESOURCE = マルチID</strong><a class="headerlink" href="#resource-id" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
@@ -425,7 +521,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
 <td><p class="first">アンカー位置を左上に設定</p>
 <blockquote class="last">
-<div>ANCHOR_LEFTTOPと同じ</div></blockquote>
+<div>ANCHOR_CENTERと同じ</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTTOP</td>
@@ -536,8 +632,8 @@
 <tr class="row-odd"><td>WINDOW_STYLE_DISABLE</td>
 <td>機能を奪い、入力を受け付けなくする</td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_NODRAG</td>
-<td>ドラッグによるウィンドウの移動を抑制する</td>
+<tr class="row-even"><td>WINDOW_STYLE_DRAG</td>
+<td>ドラッグによるウィンドウの移動を許可する</td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
 <td>アクティブにならない</td>
@@ -553,7 +649,7 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -601,7 +697,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.01',
+            VERSION:'1.02',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WINDOW &mdash; WindowSystem 1.01 documentation</title>
+  <title>WINDOW &mdash; WindowSystem 1.02 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.01 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
         <link rel="next" title="An arrangement of the control" href="CtrlAnchor.html"/>
         <link rel="prev" title="Window priority" href="WindowPriority.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.01
+                1.02
               </div>
             
           
@@ -111,8 +111,15 @@
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">WINDOW</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Property</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Minimum window script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Window script without the closing button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Window script without the title bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">The window script which deleted all default indication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">About the drug movement of the window</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Property</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#resource-id"><strong>RESOURCE = MulID</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#resource"><strong>RESOURCE = output path</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#path"><strong>PATH</strong> = window base class output path</a></li>
@@ -283,9 +290,99 @@
 </div>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="id3">
-<h2>Property<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h3>Minimum window script<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>The following window is displayed in this script.</p>
+</div></blockquote>
+<img alt="_images/WindowSample0.png" src="_images/WindowSample0.png" />
+<p>The origin position of the window is the upper left corner of the frame.(It is not the upper left corner of the title bar.)</p>
+<p>Title bar will not be visible when you described as follows.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Title bar will appear when you described as follows.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Window script without the closing button<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You set a style as follows to delete the closing button.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOCLOSE</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample1.png" src="_images/WindowSample1.png" />
+</div>
+<div class="section" id="id5">
+<h3>Window script without the title bar<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Window script without the title bar</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample2.png" src="_images/WindowSample2.png" />
+</div>
+<div class="section" id="id6">
+<h3>The window script which deleted all default indication<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The window script which deleted all default indication</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample3.png" src="_images/WindowSample3.png" />
+<p>The window script which deleted all default indication.</p>
+</div>
+<div class="section" id="id7">
+<h3>About the drug movement of the window<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You can allow the movement of the window by WINDOW_STYLE_DRAG adding to STYLE.</p>
+<p>When you drag the title bar,the frame,a user-defined control, you can move the window. But the window movement is not possible when a style of the control has WIN_CTRL_STYLE_DRAG. Please try the following examples.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_DRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">CLOSE_POSITION</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">FRAME</span><span class="p">(</span><span class="n">Test</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WIN_CTRL_STYLE_DRAG</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<img alt="_images/WindowSample4.png" src="_images/WindowSample4.png" />
+<p>In this example,when you drag a frame , the frame is copied , it will move. On the other hand, you can move the window when you drag the title bar.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Property<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="resource-id">
 <span id="resource-ab"></span><h3><strong>RESOURCE = MulID</strong><a class="headerlink" href="#resource-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
@@ -430,7 +527,7 @@
 <tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
 <td><p class="first">Set the anchor position in the upper left</p>
 <blockquote class="last">
-<div><p>Same as ANCHOR_LEFTTOP</p>
+<div><p>Same as ANCHOR_CENTER</p>
 </div></blockquote>
 </td>
 </tr>
@@ -556,8 +653,8 @@
 <td><p class="first last">Stop the function, can&#8217;t accept input.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_NODRAG</td>
-<td><p class="first last">Can&#8217;t move the window with  dragging.</p>
+<tr class="row-even"><td>WINDOW_STYLE_DRAG</td>
+<td><p class="first last">Allow the  window move with dragging.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
@@ -578,7 +675,7 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NODRAG</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -626,7 +723,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.01',
+            VERSION:'1.02',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
