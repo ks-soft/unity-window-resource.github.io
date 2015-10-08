@@ -124,11 +124,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Property</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = Control ID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = new line width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#font-kind"><strong>FONT_KIND</strong> = Font kind</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = new line width</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
@@ -253,7 +254,7 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span>CWinCtrlRichText</span></a></p>
 <p>It is a control for displaying rich text.</p>
-<p>It is possible to change the text color , insert line feeds, or change the font type</p>
+<p>It is possible to change the text color , insert some texture part, and change the font type</p>
 <blockquote>
 <div><p>RICHTEXT(Control name) {</p>
 <blockquote>
@@ -297,13 +298,17 @@
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
 </div>
-<div class="section" id="size">
-<h3><strong>SIZE</strong> = new line width<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="position-x-y">
+<h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>When the string is longer than new line width , it will be a new line automatically.</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>    <span class="c1">//128pixel</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -341,6 +346,15 @@
 <div><p>You can set the caption color .</p>
 <p>Set a value in the range of 0～1.</p>
 </div></blockquote>
+</div>
+<div class="section" id="contents-size">
+<h3><strong>CONTENTS_SIZE</strong> = new line width<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>When the string is longer than new line width , it will be a new line automatically.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="line-space">
 <h3><strong>LINE_SPACE</strong> = line spacing pixel value<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>

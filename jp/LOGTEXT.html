@@ -128,12 +128,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#id4">代表的なデフォルト値</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = コントロールID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = 横幅,縦幅</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#font-kind"><strong>FONT_KIND</strong> = フォント種類</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = 改行サイズ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
 </ul>
 </li>
@@ -249,6 +250,7 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlLogText.html#cwinctrllogtext"><span>CWinCtrlLogText</span></a></p>
 <p>チャットログの一文を保持するためのコントロールです。</p>
+<p>ほぼ、振る舞いは <a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a> と同じです。</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
@@ -275,7 +277,18 @@
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="n">OFFSET_Y</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="n">WINDOW_SIZE_FULL</span><span class="p">,</span> <span class="m">80</span><span class="p">-</span><span class="m">2</span><span class="p">;</span>
   <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="n">WINDOW_SIZE_FULL</span><span class="p">,</span> <span class="m">80</span><span class="p">-</span><span class="m">2</span><span class="p">;</span>
-  <span class="n">CONTENTS</span> <span class="p">=</span> <span class="n">ICON</span><span class="p">(</span><span class="n">Chat</span><span class="p">),</span><span class="n">TEXT</span><span class="p">(</span><span class="n">Name</span><span class="p">),</span><span class="n">FRAME</span><span class="p">(</span><span class="n">Balloon</span><span class="p">),</span><span class="n">LOGTEXT</span><span class="p">(</span><span class="n">Chat</span><span class="p">);</span>
+  <span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
+    <span class="n">LOGTEXT</span><span class="p">(</span><span class="n">Chat</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_001_00100</span><span class="p">;</span>
+      <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOHIT</span><span class="p">;</span>
+      <span class="n">POSITION</span> <span class="p">=</span> <span class="m">105</span><span class="p">,</span> <span class="p">-</span><span class="m">44</span><span class="p">;</span>
+      <span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+      <span class="n">FONT_KIND</span> <span class="p">=</span> <span class="s">&quot;fn24&quot;</span><span class="p">;</span>
+      <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
+      <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="n">WINDOW_SIZE_FULL</span> <span class="p">-</span><span class="m">235</span><span class="p">;</span>
+      <span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
   <span class="n">COLOR</span> <span class="p">=</span> <span class="n">COLOR32</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">255</span><span class="p">);</span>
   <span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
   <span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Chat</span><span class="p">);</span>
@@ -286,16 +299,6 @@
   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0.5</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="p">-</span><span class="m">2</span><span class="p">,-</span><span class="m">5</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">64</span><span class="p">-</span><span class="m">10</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="n">LOGTEXT</span><span class="p">(</span><span class="n">Chat</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_001_00100</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOHIT</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">105</span><span class="p">,</span> <span class="p">-</span><span class="m">44</span><span class="p">;</span>
-  <span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
-  <span class="n">FONT_KIND</span> <span class="p">=</span> <span class="s">&quot;fn24&quot;</span><span class="p">;</span>
-  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
-  <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="n">WINDOW_SIZE_FULL</span> <span class="p">-</span><span class="m">235</span><span class="p">,</span> <span class="m">25</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="p">=</span> <span class="n">WINDOW_SIZE_FULL</span><span class="p">-</span><span class="m">135</span><span class="p">,</span><span class="m">55</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -324,20 +327,12 @@
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>表示位置を決定します。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="size">
-<h3><strong>SIZE</strong> = 横幅,縦幅<a class="headerlink" href="#size" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<blockquote>
-<div><p>リストボックスの表示領域を定義します。</p>
-<p>表示領域をはみ出たコントロールは、クリッピングされます。</p>
-</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>                        <span class="c1">//display size</span>
-<span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">800</span><span class="p">,</span><span class="m">80</span><span class="p">;</span>        <span class="c1">//one contents size</span>
-</pre></div>
+<div>表示位置を決定します。
+STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>表示位置アンカーフラグと中心位置変更フラグによって、位置が決定します。</p>
+<p class="last">テキストアンカーは設定しても表示に影響与えません</p>
 </div>
 </div>
 <div class="section" id="font-kind">
@@ -377,6 +372,23 @@
 <h3><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ<a class="headerlink" href="#caption-offset-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div>キャプションの位置を移動することができます。</div></blockquote>
+</div>
+<div class="section" id="contents-size">
+<h3><strong>CONTENTS_SIZE</strong> = 改行サイズ<a class="headerlink" href="#contents-size" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。
+指定しないときは、自動的に改行しません。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-space">
+<h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>行間をこのプロパティで設定可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -505,30 +517,6 @@
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
 <td>中心位置を右下に設定</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<div>キャプションの中心位置を指定できます。</div></blockquote>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="67%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">テキストアンカー</th>
-<th class="head">説明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>TEXT_CENTER</td>
-<td>テキスト表示を中心に合わせます。</td>
-</tr>
-<tr class="row-odd"><td>TEXT_LEFT</td>
-<td>テキスト表示を左に合わせます。</td>
-</tr>
-<tr class="row-even"><td>TEXT_RIGHT</td>
-<td>テキスト表示を右に合わせます。</td>
 </tr>
 </tbody>
 </table>

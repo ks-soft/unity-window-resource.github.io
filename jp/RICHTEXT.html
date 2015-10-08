@@ -124,11 +124,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">プロパティ</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = コントロールID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = 改行サイズ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#font-kind"><strong>FONT_KIND</strong> = フォント種類</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = 改行サイズ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
@@ -253,7 +254,7 @@
 <blockquote>
 <div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span>CWinCtrlRichText</span></a></p>
 <p>リッチテキストを表示するためのコントロールです。</p>
-<p>改行や途中で文字色を変えたりすることが可能です。</p>
+<p>途中で文字色を変えたり、テクスチャを埋め込んだりすることが可能です。</p>
 <blockquote>
 <div><p>RICHTEXT(コントロール名) {</p>
 <blockquote>
@@ -296,12 +297,17 @@
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">設定しなかったときは、自動的にハッシュ値から生成します。</p>
 </div>
-<div class="section" id="size">
-<h3><strong>SIZE</strong> = 改行サイズ<a class="headerlink" href="#size" title="このヘッドラインへのパーマリンク">¶</a></h3>
+</div>
+<div class="section" id="position-x-y">
+<h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>    <span class="c1">//128pixel</span>
+<div>表示位置を決定します。
+STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -337,6 +343,14 @@
 <div><p>キャプションのカラーを指定できます。</p>
 <p>0～1の間で指定してください。</p>
 </div></blockquote>
+</div>
+<div class="section" id="contents-size">
+<h3><strong>CONTENTS_SIZE</strong> = 改行サイズ<a class="headerlink" href="#contents-size" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="line-space">
 <h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="このヘッドラインへのパーマリンク">¶</a></h3>

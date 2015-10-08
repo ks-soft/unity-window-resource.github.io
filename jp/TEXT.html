@@ -129,6 +129,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = 改行サイズ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
 </ul>
 </li>
@@ -248,7 +250,8 @@
 <div><blockquote>
 <div>C#: <a class="reference internal" href="CWinCtrlText.html#cwinctrltext"><span>CWinCtrlText</span></a></div></blockquote>
 <p>テキストを表示するためのコントロールです。</p>
-<p>改行や途中で文字色を変えたりしたいときは、 <a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a> を使ってください。</p>
+<p>途中で文字色を変えたりしたいときは、 <a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a> を使ってください。
+改行は可能です。</p>
 <blockquote>
 <div><p>TEXT(コントロール名) {</p>
 <blockquote>
@@ -294,11 +297,21 @@
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">設定しなかったときは、自動的にハッシュ値から生成します。</p>
+</div>
 </div>
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>表示位置を指定します。</div></blockquote>
+<div>表示位置を決定します。
+STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>表示位置アンカーフラグと中心位置変更フラグによって、位置が決定します。</p>
+<p class="last">テキストアンカーを設定しても表示に影響与えません</p>
+</div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -340,6 +353,23 @@
 <h3><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ<a class="headerlink" href="#caption-offset-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div>キャプションの位置を移動することができます。</div></blockquote>
+</div>
+<div class="section" id="contents-size">
+<h3><strong>CONTENTS_SIZE</strong> = 改行サイズ<a class="headerlink" href="#contents-size" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。
+指定しないときは、自動的に改行しません。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-space">
+<h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div>行間をこのプロパティで設定可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -468,30 +498,6 @@
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
 <td>中心位置を右下に設定</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<div>キャプションの中心位置を指定できます。</div></blockquote>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="67%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">テキストアンカー</th>
-<th class="head">説明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>TEXT_CENTER</td>
-<td>テキスト表示を中心に合わせます。</td>
-</tr>
-<tr class="row-odd"><td>TEXT_LEFT</td>
-<td>テキスト表示を左に合わせます。</td>
-</tr>
-<tr class="row-even"><td>TEXT_RIGHT</td>
-<td>テキスト表示を右に合わせます。</td>
 </tr>
 </tbody>
 </table>

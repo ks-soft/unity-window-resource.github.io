@@ -129,6 +129,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = new line width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = Flag0|Flag1|..|Flagn</a></li>
 </ul>
 </li>
@@ -295,12 +297,21 @@
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
+</div>
 </div>
 <div class="section" id="position-x-y">
 <h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>It determine the display position.</p>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
 </div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This display position determines by display position anchor flag and Base position change flag.</p>
+<p class="last">A text anchor flag don&#8217;t affects to the display positon.</p>
+</div>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -345,6 +356,24 @@
 <blockquote>
 <div><p>It adjust the caption position.</p>
 </div></blockquote>
+</div>
+<div class="section" id="contents-size">
+<h3><strong>CONTENTS_SIZE</strong> = new line width<a class="headerlink" href="#contents-size" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>When the string is longer than new line width , it will be a new line automatically.When it is not specified , it does not automatically line break.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-space">
+<h3><strong>LINE_SPACE</strong> = line spacing pixel value<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set the line spacing.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = Flag0|Flag1|..|Flagn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
@@ -483,36 +512,6 @@
 </tr>
 <tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
 <td><p class="first last">Set the center position to the bottom right side.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<div><p>You set the caption position to the center.</p>
-</div></blockquote>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="67%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Text anchor</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>TEXT_CENTER</td>
-<td><p class="first last">It aligns the text to the center.</p>
-</td>
-</tr>
-<tr class="row-odd"><td>TEXT_LEFT</td>
-<td><p class="first last">It aligns the text to the left side.</p>
-</td>
-</tr>
-<tr class="row-even"><td>TEXT_RIGHT</td>
-<td><p class="first last">It aligns the text to the right side.</p>
 </td>
 </tr>
 </tbody>

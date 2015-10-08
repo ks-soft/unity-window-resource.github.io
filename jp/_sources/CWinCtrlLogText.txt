@@ -9,7 +9,8 @@ CWinCtrlLogText
  スクリプト: :ref:`LOGTEXT`
 
  チャットログの一文を保持するためのコントロールです。
-  
+ ほぼ、振る舞いは :ref:`TEXT` と同じです。
+
 .. note:: 
 
  :ref:`LOG` 内の :ref:`CONTENTS<LOG_CONTENTS>` には、必ず一つの :ref:`LOGTEXT` を入れておく必要があります。
