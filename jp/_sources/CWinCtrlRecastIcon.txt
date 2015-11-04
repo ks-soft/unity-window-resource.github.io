@@ -29,11 +29,42 @@ CWindowBaseに届くコールバック
 
  :param CWinCtrlBase cCtrl: 長押しされたコントロール
 
+.. cpp:function:: void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
+
 .. cpp:function:: void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)
 
  :param CWinCtrlBase cCtrl: ドラッグされたコントロール
  :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
  :param Vector2 dragVelocity: タッチ位置の変位
+
+.. cpp:function:: bool onDragRender(CWinCtrlBase cCtrl,Transform transform)
+
+ :param CWinCtrlBase cCtrl: ドラッグされたコントロール
+ :param Transform transform: ドラッグされたコントロールのトランスフォーム
+ :return bool: 複製したコントロールをレンダリングするかどうかを選択する。
+
+  * true: ドラッグ中のコントロールの複製をレンダリングする。
+  * false: ドラッグ中のコントロールの複製をレンダリングしない。
+
+.. cpp:function:: void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)
+
+ :param CWinCtrlBase cCtrl: ドロップされたコントロール
+ :param CWindowBase cDragWindow: ドラッグされたコントロールの含まれるウィンドウ
+ :param CWinCtrlBase cDragCtrl: ドラッグされたコントロール
+ 
+ このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。
+
+.. cpp:function:: void onDropGround(CWinCtrlBase cCtrl)
+
+ :param CWinCtrlBase cCtrl: ドロップされたコントロール
+
+ 何もないところでドラッグ中のコントロールが離されたとき呼ばれる。
+
+ また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。
+
 
 固有の関数/プロパティ
 -------------------------------------------------

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlContainer &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>CWinCtrlContainer &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="CWinCtrlFrame" href="CWinCtrlFrame.html"/>
         <link rel="prev" title="CWinCtrlListboxEx" href="CWinCtrlListboxEx.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -188,6 +188,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -258,7 +263,27 @@
 </tr>
 </tbody>
 </table>
-<p>スクロールしたときに呼ばれます。</p>
+<p>領域をドラッグしたとき呼び出されます。
+<a class="reference internal" href="LISTBOX.html#listbox-style"><span>ロック</span></a> しているときだけ、このコールバックは呼ばれます。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
+<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
+<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
 </dd></dl>
 
 </div>
@@ -315,7 +340,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

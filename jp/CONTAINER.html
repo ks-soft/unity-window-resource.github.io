@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CONTAINER &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>CONTAINER &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="FRAME" href="FRAME.html"/>
         <link rel="prev" title="LISTBOXEX" href="LISTBOXEX.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -199,6 +199,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -250,6 +255,9 @@
 <p>複数のコントロールを纏めるためのコントロールです。</p>
 <p>SIZEによって、コンテナのサイズが決定し、CONTENTS_SIZEによって仮想画面のサイズが決定します。</p>
 <p>仮想画面サイズがサイズより大きいときは、内包しているコントロールをスクロールさせることができます。</p>
+<p>このコントロールはスクロール可能なコントロールです。</p>
+<p>STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> をつけておくと、onDragコールバックが呼び出され、ドラッグした方向を検出できます。
+DRAGをつけても、これらコントロールには効果がないことに気を付けてください。</p>
 <p>CONTAINER(コントロール名) {</p>
 <blockquote>
 <div><p>プロパティ1;</p>
@@ -265,7 +273,7 @@
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre>WINDOW(255_000_00001) {
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
   TEX_ID = 100_010_00000;
@@ -404,8 +412,14 @@ CONTAINER(Map) {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-even"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_UNLOCK</td>
+<td>スクロールを許可する。</td>
+</tr>
+<tr class="row-even"><td>SCROLL_LOCK</td>
+<td>スクロールを抑制する。</td>
 </tr>
 </tbody>
 </table>
@@ -553,17 +567,20 @@ CONTAINER(Map) {
 <tr class="row-even"><td>HIDE</td>
 <td>表示を隠す。</td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td>ドラッグ可能にする。</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td>押せなくし、暗くする。</td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td>押せなくする。</td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
+</tr>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td>スクロールを許可する。</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td>スクロールを抑制する。</td>
 </tr>
 </tbody>
 </table>
@@ -612,7 +629,7 @@ CONTAINER(Map) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

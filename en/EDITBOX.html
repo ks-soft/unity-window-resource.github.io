@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EDITBOX &mdash; WindowSystem 1.02 documentation</title>
+  <title>EDITBOX &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="TEXTBOX" href="TEXTBOX.html"/>
         <link rel="prev" title="LOGTEXT" href="LOGTEXT.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -125,8 +125,9 @@
 <li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">EDITBOX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Property</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Default value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Editing features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Property</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Default value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id">Part ID rule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = Control ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#edit"><strong>EDIT</strong> = input character maximum number, input possible number of lines</a></li>
@@ -134,6 +135,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = width,height</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tex-id1-id-id"><strong>TEX_ID1</strong> = Texture ID, part ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tex-id1-id"><strong>TEX_ID1</strong> = part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = line spacing pixel value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#group-scrollbarid"><strong>GROUP</strong> = SCROLLBAR Control ID,…</a></li>
@@ -206,6 +209,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -256,6 +264,8 @@
 <div><p>C#: <a class="reference internal" href="CWinCtrlEditbox.html#cwinctrleditbox"><span>CWinCtrlEditbox</span></a></p>
 <p>It is a text editable control.</p>
 <p>You can set the maximum rows and the maximum string size.</p>
+<p>This control is scrollable control.</p>
+<p>if you set <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> to STYLE property, the window system calls onDrag when you drag these controls.And you can get a dragged direction of these controls.Even if you set DRAG to STYLE property, these controls do not affect anything.</p>
 <blockquote>
 <div><p>EDITBOX(Control name)</p>
 <blockquote>
@@ -302,11 +312,175 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>Property<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>Editing features<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This control have simple editing features on other than Android and iOS environment.</p>
+<p>The editing shortcut keys are different from the UnityEditor and your application by the UnityEditor limitaion.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="28%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Cursor movement</p>
+</th>
+<th class="head"><p class="first last">On you application</p>
+</th>
+<th class="head"><p class="first last">On UnityEditor</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Move the cursor to the right</p>
+</td>
+<td><p class="first last">Right</p>
+</td>
+<td><p class="first last">Right</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Move the cursor to the left</p>
+</td>
+<td><p class="first last">Left</p>
+</td>
+<td><p class="first last">Left</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Move the cursor to the up</p>
+</td>
+<td><p class="first last">Up</p>
+</td>
+<td><p class="first last">Up</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Move the cursor to the down</p>
+</td>
+<td><p class="first last">Down</p>
+</td>
+<td><p class="first last">Down</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Move the cursor to the top</p>
+</td>
+<td>Home</td>
+<td>Home</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Move the cursor to the end</p>
+</td>
+<td>End</td>
+<td>End</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="28%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Selected range.</p>
+</th>
+<th class="head"><p class="first last">On you application</p>
+</th>
+<th class="head"><p class="first last">On UnityEditor</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Extend the selection to the right.</p>
+</td>
+<td><p class="first last">Shift + Right</p>
+</td>
+<td><p class="first last">Shift + Right</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Extend the selection to the left.</p>
+</td>
+<td><p class="first last">Shift + Left</p>
+</td>
+<td><p class="first last">Shift + Left</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Extend the selection to the up.</p>
+</td>
+<td><p class="first last">Shift + Up</p>
+</td>
+<td><p class="first last">Shift + Up</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Extend the selection to the down.</p>
+</td>
+<td><p class="first last">Shift + Down</p>
+</td>
+<td><p class="first last">Shift + Down</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Extend the selection to the top.</p>
+</td>
+<td>Shift + Home</td>
+<td>Shift + Home</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Extend the selection to the end.</p>
+</td>
+<td>Shift + End</td>
+<td>Shift + End</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="30%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Editing features</p>
+</th>
+<th class="head"><p class="first last">On you application</p>
+</th>
+<th class="head"><p class="first last">On UnityEditor</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Back space</p>
+</td>
+<td>BackSpace</td>
+<td>BackSpace</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Delete</p>
+</td>
+<td>Delete</td>
+<td>Delete</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Cut</p>
+</td>
+<td>Ctrl + X</td>
+<td>Ctrl + <strong>Shift</strong> + X</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Paste</p>
+</td>
+<td>Ctrl + V</td>
+<td>Ctrl + <strong>Shift</strong> + V</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Cpopy</p>
+</td>
+<td>Ctrl + C</td>
+<td>Ctrl + <strong>Shift</strong> + <strong>Z</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="id4">
-<h3>Default value<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h2>Property<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Default value<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;TXFD?&quot;</span><span class="p">;</span>
+<span class="n">TEX_ID1</span> <span class="p">=</span> <span class="s">&quot;CURSR&quot;</span><span class="p">;</span> <span class="c1">//Cursor parts id</span>
 <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">COLOR1</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>  <span class="c1">//Cursor color</span>
 <span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -388,6 +562,15 @@
 <div><p>You set the texture ID and the part ID.</p>
 </div></blockquote>
 </div>
+<div class="section" id="tex-id1-id-id">
+<h3><strong>TEX_ID1</strong> = Texture ID, part ID<a class="headerlink" href="#tex-id1-id-id" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tex-id1-id">
+<h3><strong>TEX_ID1</strong> = part ID<a class="headerlink" href="#tex-id1-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You set the texture ID and the part ID.</p>
+</div></blockquote>
+</div>
 <div class="section" id="color-r-g-b-a">
 <h3><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
@@ -448,7 +631,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
-<h3>** STYLE ** = style 0 | style 1 | .. | style n<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
+<span id="editbox-style"></span><h3>** STYLE ** = style 0 | style 1 | .. | style n<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>set the editbox style.</p>
 </div></blockquote>
@@ -697,20 +880,24 @@
 <td><p class="first last">Hide.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td><p class="first last">Enable a dragging.</p>
-</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
+</td>
+</tr>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td><p class="first last">Enable the scroll of contents.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td><p class="first last">Disable the scroll of contents.</p>
 </td>
 </tr>
 </tbody>
@@ -760,7 +947,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

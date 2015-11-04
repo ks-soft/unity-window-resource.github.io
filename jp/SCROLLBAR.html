@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SCROLLBAR &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>SCROLLBAR &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="LISTBOX" href="LISTBOX.html"/>
         <link rel="prev" title="METER" href="METER.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -201,6 +201,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -263,6 +268,7 @@
 <li><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></li>
 <li><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></li>
 </ul>
+<p>STYLEにHIT/NOHIT共に指定することができません。</p>
 <blockquote>
 <div><p>SCROLLBAR(コントロール名) {</p>
 <blockquote>
@@ -321,7 +327,7 @@ SCROLLBAR(List) {
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 
 WINDOW(255_000_00001) {
-       STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+       STYLE = NOTITLEBAR|ANCHOR_CENTER;
        POSITION = 0,0;
        SIZE = 256,256;
        TEX_ID = 100_000_00001;
@@ -374,13 +380,13 @@ SCROLLBAR(RIGHT) {
        SIZE = 0,0;
 };
 SCROLLBAR(TOP) {
-       STYLE = ANCHOR_LEFTTOP|LISTBOX_ITEM_STACK_H;
+       STYLE = ANCHOR_LEFTTOP|ITEM_STACK_H;
        TEX_ID = &quot;SCBBV&quot;;
        POSITION = 0,0;
        SIZE = 0,0;
 };
 SCROLLBAR(BOTTOM) {
-       STYLE = ANCHOR_LEFTBOTTOM|LISTBOX_ITEM_STACK_H;
+       STYLE = ANCHOR_LEFTBOTTOM|ITEM_STACK_H;
        TEX_ID = &quot;SCBBV&quot;;
        POSITION = 0,0;
        SIZE = 0,0;
@@ -394,8 +400,8 @@ SCROLLBAR(BOTTOM) {
 <div><p>縦方向のスクロールバーだけでなく横方向のスクロールバーも設定可能です。</p>
 <p>スタイルに次の値を設定してください。</p>
 <ul class="simple">
-<li>縦方向: LISTBOX_ITEM_STACK_V</li>
-<li>横方向: LISTBOX_ITEM_STACK_H</li>
+<li>縦方向: ITEM_STACK_V</li>
+<li>横方向: ITEM_STACK_H</li>
 </ul>
 </div></blockquote>
 </div>
@@ -420,7 +426,7 @@ SCROLLBAR(BOTTOM) {
 <div class="section" id="id7">
 <h3>代表的なデフォルト値<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;SCBRH&quot;</span><span class="p">;</span>
-<span class="n">STYLE</span> <span class="p">=</span> <span class="n">LISTBOX_ITEM_STACK_V</span><span class="p">;</span>
+<span class="n">STYLE</span> <span class="p">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>
 <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -474,7 +480,7 @@ GROUPによって、関連付けされたコントロールサイズとの相対
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
-<h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="anchor-scrollbar"></span><span id="scrollbar-display-style"></span><h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div>コントロールの表示アンカーを指定できます。</div></blockquote>
 <table border="1" class="docutils">
@@ -537,10 +543,10 @@ GROUPによって、関連付けされたコントロールサイズとの相対
 <tr class="row-even"><td>HIDE</td>
 <td>表示を隠す。</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-odd"><td>ITEM_STACK_V</td>
 <td>スクロールバーの方向を縦方向に設定する</td>
 </tr>
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-even"><td>ITEM_STACK_H</td>
 <td>スクロールバーの方向を横方向に設定する</td>
 </tr>
 <tr class="row-odd"><td>SCROLLBAR_DISPLAY_NORMAL</td>
@@ -599,7 +605,7 @@ GROUPによって、関連付けされたコントロールサイズとの相対
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

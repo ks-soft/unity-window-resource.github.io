@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ウィンドウプライオリティについて &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>ウィンドウプライオリティについて &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="WINDOW" href="WINDOW.html"/>
         <link rel="prev" title="ウィンドウの配置について" href="WindowAnchor.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -184,6 +184,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -257,26 +262,26 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WINDOW_STYLE_TOP</td>
+<tr class="row-even"><td>TOP</td>
 <td><p class="first">ウィンドウの表示優先度を最大にする。</p>
 <p>POPUP、TOPMOSTよりは優先度は低い。</p>
 <p class="last">TOP同士では、PRIORITYプロパティに設定されている優先度に従います。</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
+<tr class="row-odd"><td>POPUP</td>
 <td><p class="first">ウィンドウの表示優先度を最大にします。</p>
 <p>TOPより優先され、TOPMOSTよりは優先度は低い。</p>
 <p>POPUP同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
 <p class="last">ウィンドウ以外をタッチしたとき、自動的にonCloseが呼ばれる。</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
+<tr class="row-even"><td>TOPMOST</td>
 <td><p class="first">ウィンドウの表示優先度を最大にする。</p>
 <p>TOP、POPUPよりは優先度が高い。</p>
 <p class="last">TOPMOST同士では、PRIORITYプロパティに設定されている優先度に従う。</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
+<tr class="row-odd"><td>NOECLIPSE</td>
 <td>ウィンドウが開いたときに他のウィンドウを暗くしない(TOP/POPUP時のみ有効)</td>
 </tr>
 </tbody>
@@ -324,7 +329,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="ウィンドウの配置について" href="WindowAnchor.html"/>
         <link rel="prev" title="多言語対応について" href="caption.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -195,6 +195,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -292,7 +297,7 @@ WINDOW(250_000_00010) {
     ID = 001_000_00000;
     TEX_ID = 100_000_00000;
     CAPTION = 000_000_0000;
-    STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_ANCHOR_CENTER|WINDOW_STYLE_TOP;
+    STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
     SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
     PRIORITY = PROGRESSBAR_PRIORITY;
 };
@@ -551,7 +556,7 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

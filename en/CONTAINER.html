@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CONTAINER &mdash; WindowSystem 1.02 documentation</title>
+  <title>CONTAINER &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="FRAME" href="FRAME.html"/>
         <link rel="prev" title="LISTBOXEX" href="LISTBOXEX.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -199,6 +199,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -250,6 +255,8 @@
 <p>It is a control for grouping multiple controls .</p>
 <p>Size of the container is determined by the SIZE. The size of the virtual screen is determined by CONTENTS_SIZE.</p>
 <p>When virtual screen size is larger than the display size , it is possible to scroll the container.</p>
+<p>This control is scrollable control.</p>
+<p>if you set <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> to STYLE property, the window system calls onDrag when you drag these controls.And you can get a dragged direction of these controls.Even if you set DRAG to STYLE property, these controls do not affect anything.</p>
 <p>CONTAINER(Control name) {</p>
 <blockquote>
 <div><p>Property 1;</p>
@@ -265,7 +272,7 @@
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre>WINDOW(255_000_00001) {
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
   TEX_ID = 100_010_00000;
@@ -409,8 +416,16 @@ CONTAINER(Map) {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-even"><td>NOBOUNCES</td>
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_UNLOCK</td>
+<td><p class="first last">Enable the scroll of contents.</p>
+</td>
+</tr>
+<tr class="row-even"><td>SCROLL_LOCK</td>
+<td><p class="first last">Disable the scroll of contents.</p>
 </td>
 </tr>
 </tbody>
@@ -574,20 +589,24 @@ CONTAINER(Map) {
 <td><p class="first last">Hide.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td><p class="first last">Enable a dragging.</p>
-</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
+</td>
+</tr>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td><p class="first last">Enable the scroll of contents.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td><p class="first last">Disable the scroll of contents.</p>
 </td>
 </tr>
 </tbody>
@@ -637,7 +656,7 @@ CONTAINER(Map) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

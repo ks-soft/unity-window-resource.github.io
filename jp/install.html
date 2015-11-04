@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>環境構築方法 &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>環境構築方法 &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="サンプル" href="sample.html"/>
         <link rel="prev" title="特徴" href="feature.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -90,7 +90,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#cygwin">cygwinをダウンロード</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#devel">Devel パッケージを選択しインストール</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">インストール</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">パスを通す</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-system-path">パスを通す</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">確認</a></li>
 </ul>
 </li>
@@ -197,6 +197,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -258,7 +263,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="devel">
-<h3>Devel パッケージを選択しインストール<a class="headerlink" href="#devel" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="install-cygwin-devel"></span><h3>Devel パッケージを選択しインストール<a class="headerlink" href="#devel" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>Select Packagesの項目で図のように、Develを <strong>Default</strong> → <strong>Install</strong> に変更してください。</p>
 <img alt="_images/cygwin.png" src="_images/cygwin.png" />
@@ -269,22 +274,59 @@
 <blockquote>
 <div>後は指定通りインストールしてください。</div></blockquote>
 </div>
-<div class="section" id="id3">
-<h3>パスを通す<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="set-system-path">
+<span id="id3"></span><h3>パスを通す<a class="headerlink" href="#set-system-path" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>インストールしたフォルダを基準に、binにパスを通してください。</p>
+<div><p>インストールしたフォルダを基準に、binのパスを環境変数のシステムパスに追加してください。</p>
 <p>デフォルトでは、下記のフォルダになっています。</p>
 <ul class="simple">
-<li>C:/cygwin/bin (64bit版なら、c:/cygwin64/bin)</li>
+<li>C:\cygwin\bin (64bit版なら、c:\cygwin64\bin)</li>
 </ul>
 </div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">この環境変数は、cygwinの環境変数ではなく、Windowsのシステム環境変数です。</p>
+</div>
+<p>詳しい手順は次の通りです。</p>
+<blockquote>
+<div><p>スタートメニューを押してください。</p>
+<img alt="_images/Startmenu.png" src="_images/Startmenu.png" />
+<p>「プログラムとファイルの検索」に、sysdm.cplを入力し、「システムプロパティ」を開いてください。</p>
+<img alt="_images/SystemProperties.png" src="_images/SystemProperties.png" />
+<p>詳細設定パネルを選択し、「環境変数」ボタンをクリックしてください。</p>
+<img alt="_images/EnviromentVariables.png" src="_images/EnviromentVariables.png" />
+<p>次に、システム環境変数のリストから、スクロールダウンしてPathという値を探してください。見つけたらPathという値をクリックし選択後、もう一度クリックすると次のようなエディットボタンが開きます。</p>
+<img alt="_images/SettingPATH.png" src="_images/SettingPATH.png" />
+<p>ウィンドウが開いたら、現在の値がハイライトされているはずです。現在の値を消したり、変更しないように気を付けてください。あなたの設定を破壊してしまいます。</p>
+<p>恐らくデフォルトの設定では以下のような値が設定されているかと思われます。</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem
+</pre></div>
+</div>
+<blockquote>
+<div>セミコロンで値が区切られているので、デフォルトでは三つの要素から構成されています。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32
+%SystemRoot%
+%SystemRoot%\System32\Wbem
+</pre></div>
+</div>
+<blockquote>
+<div>あなたが &#8221;;c:\cygwin\bin&#8221; を最後に追加したいなら、次のようになります。しかしこれはあくまでも例であって、あなたの環境に合わせて従来の設定を変えずに最後に追加するようにしてください。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;c:\cygwin\bin
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
 <h3>確認<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>コマンドプロンプトを開いて、gccと打ち込んでみてください。
+<div><p>ウィンドウズコマンドプロンプト(cygwinのbashでは確認になりません)を開いて、gcc &#8211;versionと打ち込んでみてください。
 正しくインストールできていれば、以下のように表示されるはずです。</p>
 <img alt="_images/check_gcc.png" src="_images/check_gcc.png" />
+<p>同様の結果を得られないときは、二つのことを確認してください。</p>
+<ol class="arabic simple">
+<li>gcc.exeがC:\cygwin\binディレクトリに存在するか確認してください。もし存在しなければ、 <a class="reference internal" href="#install-cygwin-devel"><span>インストール手順</span></a> を見直してください。</li>
+<li>gcc.exeが所定のディレクトリに存在しているなら、 <a class="reference internal" href="#set-system-path"><span>パス</span></a> が正しく設定されているかもう一度確認しなおして下さい。</li>
+</ol>
 </div></blockquote>
 </div>
 </div>
@@ -359,7 +401,7 @@ MS-Excelから、データコンバートするためのツールは、Pythonで
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

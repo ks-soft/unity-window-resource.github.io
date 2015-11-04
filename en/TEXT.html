@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TEXT &mdash; WindowSystem 1.02 documentation</title>
+  <title>TEXT &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="RICHTEXT" href="RICHTEXT.html"/>
         <link rel="prev" title="Control common properties" href="CtrlProp.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -200,6 +200,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -251,6 +256,7 @@
 <div>C#: <a class="reference internal" href="CWinCtrlText.html#cwinctrltext"><span>CWinCtrlText</span></a></div></blockquote>
 <p>It is a control for displaying text .</p>
 <p>If you want to change the text color,insert line feeds,or change the font type, please use the <a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a> .</p>
+<p>You can not receive a callback when this control is pressed as default. If you want to receive any callbacks, you need to set HIT flag to STYLE property.</p>
 <blockquote>
 <div><p>TEXT(Control name) {</p>
 <blockquote>
@@ -268,7 +274,7 @@
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">;</span>
   <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
@@ -578,8 +584,8 @@
 <td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
-<td><p class="first last">It is not able to pressing the control.</p>
+<tr class="row-odd"><td>HIT</td>
+<td><p class="first last">It is  able to pressing the control.</p>
 </td>
 </tr>
 </tbody>
@@ -629,7 +635,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

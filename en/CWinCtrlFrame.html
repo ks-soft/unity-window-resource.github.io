@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlFrame &mdash; WindowSystem 1.02 documentation</title>
+  <title>CWinCtrlFrame &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="CWinCtrlLabel" href="CWinCtrlLabel.html"/>
         <link rel="prev" title="CWinCtrlContainer" href="CWinCtrlContainer.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -188,6 +188,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -270,6 +275,23 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
+<li><strong>Vector2 pos</strong> &#8211; Drag position , or the position of the mouse cursor</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
 <span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -285,6 +307,67 @@
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
+<li><strong>Transform transform</strong> &#8211; The transform of dragged control</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">You can choice whether to render the duplicated control.</p>
+<ul class="last simple">
+<li><p class="first">true: Render the duplicated control.</p>
+</li>
+<li><p class="first">false: Don&#8217;t render the duplicated control.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; Dropped control.</li>
+<li><strong>CWindowBase cDragWindow</strong> &#8211; The window of dragged control</li>
+<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; The dragged control</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This callback sent to the window of cCtrl.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters CWinCtrlBase cCtrl:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Dropped control.</td>
+</tr>
+</tbody>
+</table>
+<p>Release the dragged control at open place.</p>
+<p>Or when the window of dragged control is closed, this callback is called before closing.</p>
 </dd></dl>
 
 </div>
@@ -347,7 +430,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

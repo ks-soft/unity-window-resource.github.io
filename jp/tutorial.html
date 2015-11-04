@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>チュートリアル &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>チュートリアル &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="マルチID,FiveCC" href="id.html"/>
         <link rel="prev" title="サンプル" href="sample.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -89,13 +89,14 @@
 <li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">チュートリアル</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">スクリプト作成/編集方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wra-wrb">wraファイル/wrbファイル</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">インクルードパス</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wra">wraファイルをコンパイルするときにインクルードされるファイル</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">コンパイルされたファイルの場所</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">ウィンドウビューワー</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">アセットバンドル/リソースデータ化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-windowresource">アセットバンドル/リソースデータ化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">実際のゲーム内でウィンドウを扱う方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cmainsystem">CMainSystemを作成/編集する</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id8">CMainSystemをゲームオブジェクトに登録</a></li>
@@ -213,6 +214,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -273,6 +279,15 @@
 ファイルのエンコーディングは、UTF8です。</p>
 </div></blockquote>
 </div></blockquote>
+<div class="section" id="wra-wrb">
+<h3>wraファイル/wrbファイル<a class="headerlink" href="#wra-wrb" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><p><strong>wra</strong> ファイルは、Window Resource Asciiの略です。
+ウィンドウのコントロールとビューを定義するためのスクリプトファイルです。</p>
+<p><strong>wrb</strong> ファイルは、Window Resource Binaryの略です。
+<strong>wra</strong> ファイルをUnity Editor上でコンパイルに成功すると、対応したwrbファイルが生成されます。</p>
+</div></blockquote>
+</div>
 <div class="section" id="id3">
 <h3>インクルードパス<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
@@ -321,10 +336,17 @@
 <div><img alt="_images/viewer.png" src="_images/viewer.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id6">
-<h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="export-windowresource">
+<span id="id6"></span><h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#export-windowresource" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>HTTP経由でウィンドウデータをダウンロードする形にすることが可能です。</p>
+<div><p>WWindowViewerは、各wraファイルから、コンパイルしたwrbファイルを直接読み込んで動作します。
+よって、wraファイルをコンパイルした後、即座にその変更をチェックすることができます。</p>
+<img alt="_images/load_viewer.png" src="_images/load_viewer.png" />
+<p>しかし、実際のアプリケーションでは、各wrbファイルをアプリケーションに入れたり、読み込んだりするのは管理上煩雑になります。
+そこで、本ウィンドウシステムでは、コンパイル済みのファイルを纏めて、一つ、若しくは複数のアセットバンドルやリソースファイルに出力することが可能になっています。
+アプリケーションでは、その纏められたファイルを予め読み込んでおけば、いつでも全てのウィンドウを好きなタイミングでクリエイトすることが可能になります。</p>
+<p>この纏められたファイルは、HTTP経由でダウンロードしたり、Resource経由で読み込んだりすることが可能です。</p>
+<img alt="_images/load_application.png" src="_images/load_application.png" />
 <p>Unity上のメニューの[KsTools]→[Export Window Resource]を選ぶとassetbundlesフォルダにアセットファイルが出力されます。</p>
 <p>ファイル名は、 デフォルトで <strong>000_000_00010.unity3d</strong> です。</p>
 <p>読み込むファイルを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span>参考</span></a> にしてください。</p>
@@ -483,7 +505,7 @@ WINDOW(001_000_00000) {
    PATH = NETWORKPATH;
    TEX_ID = 100_000_00000;
    CAPTION = 000_000_0000;
-   STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_ANCHOR_CENTER|WINDOW_STYLE_TOP;
+   STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
    SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
    PRIORITY = PROGRESSBAR_PRIORITY;
 };
@@ -760,7 +782,7 @@ TEXT(Message) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

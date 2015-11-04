@@ -25,6 +25,8 @@ SCROLLBAR
  * :ref:`CONTAINER`
  * :ref:`LOG`
 
+ STYLEにHIT/NOHIT共に指定することができません。
+
   SCROLLBAR(コントロール名) {
 
     プロパティ1;
@@ -89,7 +91,7 @@ SCROLLBAR
  #include "wr.h"
 
  WINDOW(255_000_00001) {
- 	STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+ 	STYLE = NOTITLEBAR|ANCHOR_CENTER;
  	POSITION = 0,0;
  	SIZE = 256,256;
  	TEX_ID = 100_000_00001;
@@ -142,13 +144,13 @@ SCROLLBAR
  	SIZE = 0,0;
  };
  SCROLLBAR(TOP) {
- 	STYLE = ANCHOR_LEFTTOP|LISTBOX_ITEM_STACK_H;
+ 	STYLE = ANCHOR_LEFTTOP|ITEM_STACK_H;
  	TEX_ID = "SCBBV";
  	POSITION = 0,0;
  	SIZE = 0,0;
  };
  SCROLLBAR(BOTTOM) {
- 	STYLE = ANCHOR_LEFTBOTTOM|LISTBOX_ITEM_STACK_H;
+ 	STYLE = ANCHOR_LEFTBOTTOM|ITEM_STACK_H;
  	TEX_ID = "SCBBV";
  	POSITION = 0,0;
  	SIZE = 0,0;
@@ -163,8 +165,8 @@ SCROLLBAR
  
  スタイルに次の値を設定してください。
  
- * 縦方向: LISTBOX_ITEM_STACK_V
- * 横方向: LISTBOX_ITEM_STACK_H
+ * 縦方向: ITEM_STACK_V
+ * 横方向: ITEM_STACK_H
 
 .. _SCROLLBAR_DISPLAY_FLAG:
 
@@ -196,7 +198,7 @@ SCROLLBAR
 ::
 
  TEX_ID = "SCBRH";
- STYLE = LISTBOX_ITEM_STACK_V;
+ STYLE = ITEM_STACK_V;
  COLOR = 1,1,1,1;
 
 **ID** = コントロールID
@@ -251,12 +253,15 @@ SCROLLBAR
 
  Aについては、0～1の間で指定してください。
 
+.. _SCROLLBAR_DISPLAY_STYLE:
+
+.. _ANCHOR_SCROLLBAR:
+
 **STYLE** = フラグ0|フラグ1|..|フラグn
 ------------------------------------------------------------------
 
  コントロールの表示アンカーを指定できます。
 
-.. _ANCHOR_SCROLLBAR:
 
 .. tabularcolumns:: |p{0.4\linewidth}|p{0.6\linewidth}|
 
@@ -303,9 +308,9 @@ SCROLLBAR
 +============================+=========================================================================================+
 |HIDE                        |表示を隠す。                                                                             |
 +----------------------------+-----------------------------------------------------------------------------------------+
-|LISTBOX_ITEM_STACK_V        |スクロールバーの方向を縦方向に設定する                                                   |
+|ITEM_STACK_V                |スクロールバーの方向を縦方向に設定する                                                   |
 +----------------------------+-----------------------------------------------------------------------------------------+
-|LISTBOX_ITEM_STACK_H        |スクロールバーの方向を横方向に設定する                                                   |
+|ITEM_STACK_H                |スクロールバーの方向を横方向に設定する                                                   |
 +----------------------------+-----------------------------------------------------------------------------------------+
 |SCROLLBAR_DISPLAY_NORMAL    |領域がスクロール可能で、かつその領域をタッチしてスクロールさせているときだけ表示します。 |
 +----------------------------+-----------------------------------------------------------------------------------------+

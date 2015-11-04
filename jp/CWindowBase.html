@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowBase &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>CWindowBase &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html"/>
         <link rel="prev" title="CWindowMgrについて" href="CWindowMgr.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -190,6 +190,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -245,7 +250,7 @@
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 WINDOW(TEST) {
   ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
 };
@@ -352,34 +357,47 @@ TEXTBOX(Message) {
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase">
-<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールがドラッグされた。</p>
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コントロールがドラッグされた。
+最初に一度、呼び出される。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
 <span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールがドラッグされ、移動している。</p>
+<dd><p>コントロールがドラッグされている。
+ドラッグ中、呼び続けられる。</p>
+<p>スクロール可能なコントロールは、どの方向にコントロールがドラッグされたかをonDragによって知ることができる。
+ただし、STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> をつけておく必要がある。
+onDragによって、ドラッグした方向を検出できる。
+DRAGをつけても、これらコントロールには効果がないことに気を付ける必要がある。</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2">
-<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>コントロールがドラッグされているときに、レンダリングタイミングで呼ばれる。
 overrideしなければ普通にコントロールがレンダリングされる。</p>
+<p>戻り値の意味は以下の通りです。</p>
+<ul class="simple">
+<li>true ドラッグ中のコントロールの複製をレンダリングする。</li>
+<li>false ドラッグ中のコントロールの複製をレンダリングしない。</li>
+</ul>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
 <span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>特定ウィンドウのコントロール上でドラッグ中のコントロールが離されたとき呼ばれる。</p>
+<dd><p>特定ウィンドウのコントロール上でドラッグ中のコントロールが離されたとき呼ばれる。
+このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
+<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
 </dd></dl>
 
 <dl class="function">
@@ -410,12 +428,6 @@ overrideしなければ普通にコントロールがレンダリングされる
 <dt id="_CPPv28onCanceli">
 <span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でCancelボタンが押された。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv28onScroll12CWinCtrlBase7Vector2">
-<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リストボックス、コンテナをドラッグし、スクロールした。</p>
 </dd></dl>
 
 <dl class="function">
@@ -721,7 +733,7 @@ iCloseInfoは、onCloseのパラメータとして渡されます。</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

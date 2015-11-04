@@ -164,12 +164,17 @@ Welcome to Window System's documentation!
    CWinCtrlLabel
    CWinCtrlBar
 
-デフォルト値の変更方法:
+付録
+-------------------------------------
 
 .. toctree::
    :maxdepth: 2
 
    Config
+   TextureDefault
+   Callback
+   CantDrag
+   CtrlStyle
 
 Indices and tables
 ==================

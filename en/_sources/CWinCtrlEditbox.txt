@@ -31,6 +31,15 @@ CWindowBaseに届くコールバック
   
  文字が確定したとき呼び出されます。
  入力文字は、captionに格納されています。
+ 
+.. cpp:function:: void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)
+
+ :param CWinCtrlBase cCtrl: ドロップされたコントロール
+ :param CWindowBase cDragWindow: ドラッグされたコントロールの含まれるウィンドウ
+ :param CWinCtrlBase cDragCtrl: ドラッグされたコントロール
+ 
+ このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。
+
 
 使用例
 -----------------------------

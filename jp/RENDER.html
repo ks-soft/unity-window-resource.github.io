@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RENDER &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>RENDER &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="ICON" href="ICON.html"/>
         <link rel="prev" title="LINE" href="LINE.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -200,6 +200,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -274,7 +279,7 @@
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
 <span class="p">};</span>
@@ -580,7 +585,7 @@ STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

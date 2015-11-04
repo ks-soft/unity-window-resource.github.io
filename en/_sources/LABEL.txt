@@ -9,7 +9,9 @@ LABEL
  C#: :ref:`CWinCtrlLabel`
 
  ラベルを表示するためのコントロールです。
- :ref:`BAR` と違い、onClickイベントを受け取れません。
+
+ デフォルトでは、押したことを検出できません。
+ コールバックが必要なときは、STYLEにHITを指定してください。
 
   LABEL(コントロール名) {
 
@@ -31,7 +33,7 @@ LABEL
 ::
 
   WINDOW(255_000_00001) {
-    STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+    STYLE = NOTITLEBAR|ANCHOR_CENTER;
     POSITION = 0,-100;
     SIZE = 512,256;
   };
@@ -299,6 +301,6 @@ LABEL
 +----------------+-----------------------------+
 |DISABLE         |押せなくし、暗くする。       |
 +----------------+-----------------------------+
-|NOHIT           |押せなくする。               |
+|HIT             |押せるようにする。           |
 +----------------+-----------------------------+
 

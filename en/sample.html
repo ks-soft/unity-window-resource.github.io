@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>This window system’s samples &mdash; WindowSystem 1.02 documentation</title>
+  <title>window system’s samples &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="Tutorial" href="tutorial.html"/>
         <link rel="prev" title="Environment setting" href="install.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,21 +86,22 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">This window system&#8217;s samples</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">window system&#8217;s samples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">A preparation for run the sample</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wra">Compile &#8220;wra&#8221; files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Output all of the asset bundle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">Run the sample scene</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">The explanation of Sample Screens</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">The title</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">The Home</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">The chat window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">The profile window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">The friend list window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">The sample which you can confirm each control behaviour.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">The sample which assumed that you used this in your application.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">The title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">The Home</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">The chat window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">The profile window</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id11">The friend list window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">The quest window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">The friend list window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">The quest window</a></li>
 </ul>
 </li>
 </ul>
@@ -202,6 +203,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -232,7 +238,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>This window system&#8217;s samples</li>
+    <li>window system&#8217;s samples</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -247,7 +253,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>This window system&#8217;s samples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>window system&#8217;s samples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>A preparation for run the sample<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="wra">
@@ -272,15 +278,48 @@
 <div class="section" id="id4">
 <h3>Run the sample scene<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Run &#8220;KsSoft/Scene/Initialize.unity&#8221;.</p>
+<div><p>I prepare two samples.</p>
+<ul class="simple">
+<li><p class="first">The sample which you can confirm each control behaviour.</p>
+</li>
+</ul>
+<blockquote>
+<div>KsSoft/Scene/Test/Test.unity</div></blockquote>
+<ul class="simple">
+<li><p class="first">The sample which assumed that you used this in your application.</p>
+</li>
+</ul>
+<blockquote>
+<div>KsSoft/Scene/Initialize.unity</div></blockquote>
 <img alt="_images/exec_initialize.png" src="_images/exec_initialize.png" />
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="id5">
-<h2>The explanation of Sample Screens<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>The sample which you can confirm each control behaviour.<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This is the sample that you can confirm behavior of almost all control.</p>
+<p>On the Console, this sample outputs logs in console when various callbacks were sent. You can see when a window receive various callback. And dragable controls are able to drag by the description of wra scripts.</p>
+<p>Related codes are as follows.</p>
+<ul class="simple">
+<li>KsSoft/Script/Test/Test.cs</li>
+<li>KsSoft/Script/Test/CWinTest.cs</li>
+<li>KsSoft/Script/Test/CWinTestBase.cs</li>
+<li>KsSoft/WindowResource/CWinTitle.wra</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">After you edit the CWinTest.wra, if you want to check changes, you need to do <a class="reference internal" href="tutorial.html#export-windowresource"><span>Export Window Resource</span></a> .</p>
+</div>
+<blockquote>
+<div><img alt="_images/CWinTest_sample.png" src="_images/CWinTest_sample.png" />
+</div></blockquote>
+</div>
 <div class="section" id="id6">
-<h3>The title<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h2>The sample which assumed that you used this in your application.<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>The title<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinTitle.cs</p>
 <blockquote>
@@ -293,8 +332,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h3>The Home<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>The Home<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinHome</p>
 <blockquote>
@@ -338,8 +377,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h3>The chat window<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>The chat window<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinChat</p>
 <blockquote>
@@ -371,8 +410,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h3>The profile window<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>The profile window<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinProfile</p>
 <blockquote>
@@ -386,8 +425,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id10">
-<h3>The friend list window<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>The friend list window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinFriend,CWinFriendList,CWinFriendApply,CWinFriendBalcklist</p>
 <blockquote>
@@ -410,8 +449,8 @@
 <p>This is an example of how to update the contents of the list box.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id11">
-<h3>The friend list window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h3>The friend list window<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -434,8 +473,8 @@
 <p>This is an example of how to update the contents of the list box.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id12">
-<h3>The quest window<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>The quest window<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -495,7 +534,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

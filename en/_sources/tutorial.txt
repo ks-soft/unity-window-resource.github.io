@@ -16,6 +16,16 @@
   ファイル名は、 ウィンドウ名.wra(例: CMessageWindow.wra)という形式でつけてください。
   ファイルのエンコーディングは、UTF8です。
 
+wraファイル/wrbファイル
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ **wra** ファイルは、Window Resource Asciiの略です。
+ ウィンドウのコントロールとビューを定義するためのスクリプトファイルです。
+ 
+ **wrb** ファイルは、Window Resource Binaryの略です。
+ **wra** ファイルをUnity Editor上でコンパイルに成功すると、対応したwrbファイルが生成されます。
+
+
 インクルードパス
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -69,10 +79,24 @@ wraファイルをコンパイルするときにインクルードされるフ�
  .. image:: images/viewer.png
 
 
+.. _export_windowresource:
+
 アセットバンドル/リソースデータ化
 ----------------------------------
 
- HTTP経由でウィンドウデータをダウンロードする形にすることが可能です。
+ WWindowViewerは、各wraファイルから、コンパイルしたwrbファイルを直接読み込んで動作します。
+ よって、wraファイルをコンパイルした後、即座にその変更をチェックすることができます。
+ 
+ .. image:: images/load_viewer.png
+ 
+ しかし、実際のアプリケーションでは、各wrbファイルをアプリケーションに入れたり、読み込んだりするのは管理上煩雑になります。
+ そこで、本ウィンドウシステムでは、コンパイル済みのファイルを纏めて、一つ、若しくは複数のアセットバンドルやリソースファイルに出力することが可能になっています。
+ アプリケーションでは、その纏められたファイルを予め読み込んでおけば、いつでも全てのウィンドウを好きなタイミングでクリエイトすることが可能になります。
+
+ この纏められたファイルは、HTTP経由でダウンロードしたり、Resource経由で読み込んだりすることが可能です。
+
+ .. image:: images/load_application.png
+
 
  Unity上のメニューの[KsTools]→[Export Window Resource]を選ぶとassetbundlesフォルダにアセットファイルが出力されます。
 
@@ -255,7 +279,7 @@ CWindowMgr
     PATH = NETWORKPATH;
     TEX_ID = 100_000_00000;
     CAPTION = 000_000_0000;
-    STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_ANCHOR_CENTER|WINDOW_STYLE_TOP;
+    STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
     SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
     PRIORITY = PROGRESSBAR_PRIORITY;
  };

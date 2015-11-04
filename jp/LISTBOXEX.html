@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LISTBOXEX &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>LISTBOXEX &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="CONTAINER" href="CONTAINER.html"/>
         <link rel="prev" title="LISTBOX" href="LISTBOX.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -201,6 +201,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -256,6 +261,9 @@
 <p>LISTBOXと違う点は、コンテンツサイズを自動的に計測するところです。</p>
 <p>垂直方向に並んでいる場合は、縦幅のみ自動計算の対象になります。</p>
 <p>それに対して水平方向に並んでいる場合は、横幅のみ自動計算の対象になります。</p>
+<p>このコントロールはスクロール可能なコントロールです。</p>
+<p>STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> をつけておくと、onDragコールバックが呼び出され、ドラッグした方向を検出できます。
+DRAGをつけても、これらコントロールには効果がないことに気を付けてください。</p>
 <blockquote>
 <div><p>LISTBOXEX(コントロール名) {</p>
 <blockquote>
@@ -273,7 +281,7 @@
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre>WINDOW(255_000_00001) {
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
 };
@@ -312,7 +320,7 @@ SCROLLBAR(List) {
 <h2>プロパティ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="id4">
 <h3>代表的なデフォルト値<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">LISTBOX_ITEM_STACK_V</span><span class="p">;</span>  <span class="c1">//Arranged in the vertical direction</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>  <span class="c1">//Arranged in the vertical direction</span>
 <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 <span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 <span class="n">SE_ID</span> <span class="p">=</span> <span class="n">scrollSE</span><span class="p">;</span>
@@ -441,17 +449,20 @@ SCROLLBAR(List) {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-even"><td>ITEM_STACK_V</td>
 <td>垂直方向に並んでいるリストボックス</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-odd"><td>ITEM_STACK_H</td>
 <td>水平方向に並んでいるリストボックス</td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-even"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
-<td>リストボックスのスクロールを抑制する。</td>
+<tr class="row-odd"><td>SCROLL_UNLOCK</td>
+<td>スクロールを許可する。</td>
+</tr>
+<tr class="row-even"><td>SCROLL_LOCK</td>
+<td>スクロールを抑制する。</td>
 </tr>
 </tbody>
 </table>
@@ -599,26 +610,26 @@ SCROLLBAR(List) {
 <tr class="row-even"><td>HIDE</td>
 <td>表示を隠す。</td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td>ドラッグ可能にする。</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td>押せなくし、暗くする。</td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td>押せなくする。</td>
 </tr>
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-odd"><td>ITEM_STACK_V</td>
 <td>垂直方向に並んでいるリストボックス</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-even"><td>ITEM_STACK_H</td>
 <td>水平方向に並んでいるリストボックス</td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
-<td>リストボックスのスクロールを抑制する。</td>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td>スクロールを許可する。</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td>スクロールを抑制する。</td>
 </tr>
 </tbody>
 </table>
@@ -667,7 +678,7 @@ SCROLLBAR(List) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

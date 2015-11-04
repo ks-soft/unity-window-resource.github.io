@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>コントロールのプライオリティについて &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>コントロールのプライオリティについて &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="コントロールのサイズについて" href="CtrlSize.html"/>
         <link rel="prev" title="コントロールの配置について" href="CtrlAnchor.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -191,6 +191,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -315,7 +320,7 @@
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">100</span><span class="n">_100_00010</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">TEX_ID</span> <span class="p">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_POPUP</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">POPUP</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">|</span><span class="n">NOTITLEBAR</span><span class="p">;</span>
   <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_100_00000</span><span class="p">,-</span><span class="m">1</span><span class="p">;</span>
   <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_010_00000</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
@@ -387,7 +392,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

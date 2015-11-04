@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SCROLLBAR &mdash; WindowSystem 1.02 documentation</title>
+  <title>SCROLLBAR &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="LISTBOX" href="LISTBOX.html"/>
         <link rel="prev" title="METER" href="METER.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -201,6 +201,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -263,6 +268,7 @@
 <li><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></li>
 <li><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></li>
 </ul>
+<p>You can not set HIT or NOHIT flag to STYLE property.</p>
 <blockquote>
 <div><p>SCROLLBAR(Control name) {</p>
 <blockquote>
@@ -321,7 +327,7 @@ SCROLLBAR(List) {
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 
 WINDOW(255_000_00001) {
-       STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+       STYLE = NOTITLEBAR|ANCHOR_CENTER;
        POSITION = 0,0;
        SIZE = 256,256;
        TEX_ID = 100_000_00001;
@@ -374,13 +380,13 @@ SCROLLBAR(RIGHT) {
        SIZE = 0,0;
 };
 SCROLLBAR(TOP) {
-       STYLE = ANCHOR_LEFTTOP|LISTBOX_ITEM_STACK_H;
+       STYLE = ANCHOR_LEFTTOP|ITEM_STACK_H;
        TEX_ID = &quot;SCBBV&quot;;
        POSITION = 0,0;
        SIZE = 0,0;
 };
 SCROLLBAR(BOTTOM) {
-       STYLE = ANCHOR_LEFTBOTTOM|LISTBOX_ITEM_STACK_H;
+       STYLE = ANCHOR_LEFTBOTTOM|ITEM_STACK_H;
        TEX_ID = &quot;SCBBV&quot;;
        POSITION = 0,0;
        SIZE = 0,0;
@@ -394,10 +400,8 @@ SCROLLBAR(BOTTOM) {
 <div><p>You can use not only the vertical scroll bar but also the horizontal scroll bar.</p>
 <p>Please set the following values to the style.</p>
 <ul class="simple">
-<li><p class="first">Vertical direction: LISTBOX_ITEM_STACK_V</p>
-</li>
-<li><p class="first">Horizontal direction: LISTBOX_ITEM_STACK_H</p>
-</li>
+<li>縦方向: ITEM_STACK_V</li>
+<li>横方向: ITEM_STACK_H</li>
 </ul>
 </div></blockquote>
 </div>
@@ -425,7 +429,7 @@ SCROLLBAR(BOTTOM) {
 <div class="section" id="id7">
 <h3>Default value<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;SCBRH&quot;</span><span class="p">;</span>
-<span class="n">STYLE</span> <span class="p">=</span> <span class="n">LISTBOX_ITEM_STACK_V</span><span class="p">;</span>
+<span class="n">STYLE</span> <span class="p">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>
 <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -480,7 +484,7 @@ SCROLLBAR(BOTTOM) {
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
-<h3><strong>STYLE</strong> = Flag0|Flag1|..|Flagn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
+<span id="anchor-scrollbar"></span><span id="scrollbar-display-style"></span><h3><strong>STYLE</strong> = Flag0|Flag1|..|Flagn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>You can set the display anchor of control.</p>
 </div></blockquote>
@@ -549,11 +553,11 @@ SCROLLBAR(BOTTOM) {
 <td><p class="first last">Hide.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-odd"><td>ITEM_STACK_V</td>
 <td><p class="first last">Set to the direction of the scroll bar in the vertical direction.</p>
 </td>
 </tr>
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-even"><td>ITEM_STACK_H</td>
 <td><p class="first last">Set to the direction of the scroll bar in the horizontal direction.</p>
 </td>
 </tr>
@@ -616,7 +620,7 @@ SCROLLBAR(BOTTOM) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

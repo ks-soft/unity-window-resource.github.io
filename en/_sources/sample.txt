@@ -34,13 +34,45 @@ wraファイルをコンパイル
 サンプルシーンを実行する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- KsSoft/Scene/Initialize.unityを実行してください。
+ 二つのサンプルシーンを用意しています。
  
+ * 各コントロールの振る舞い確認できるサンプル
+  
+  KsSoft/Scene/Test/Test.unity
+
+ * 実際のゲームを想定したサンプル
+ 
+  KsSoft/Scene/Initialize.unity
+
  .. image:: images/exec_initialize.png
 
 
-サンプル画面説明
------------------------------
+各コントロールの振る舞い確認できるサンプル
+---------------------------------------------
+
+ ほぼすべてのコントロールの振る舞いを確認できるサンプルです。
+ 
+ Consoleログには各種コールバック(onClick,onDrag等々)のログが出力するように作られています。
+ コールバックが実際にどのタイミング発行されるかを確認できます。
+ また、ドラッグ可能なコントロールは、全てドラッグできるようにスクリプト上で設定されています。
+
+ 関係するコードは、次の通りです。
+
+ * KsSoft/Script/Test/Test.cs
+ * KsSoft/Script/Test/CWinTest.cs
+ * KsSoft/Script/Test/CWinTestBase.cs
+ * KsSoft/WindowResource/CWinTitle.wra
+
+.. note::
+
+ CWinTitle.wraを編集後、その動きを確認したいときは、実行前に :ref:`Export Window Resource<export_windowresource>` を呼び忘れないようにしてください。
+
+..
+
+ .. image:: images/CWinTest_sample.png
+
+実際のゲームを想定したサンプル
+--------------------------------
 
 タイトル画面
 ^^^^^^^^^^^^^^^^^^^^^

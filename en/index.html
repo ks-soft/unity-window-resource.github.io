@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to WindowResource’s documentation! &mdash; WindowSystem 1.02 documentation</title>
+  <title>Welcome to WindowResource’s documentation! &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="#"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="#"/>
         <link rel="next" title="Features of window system" href="feature.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -85,7 +85,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -183,6 +183,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -248,15 +253,16 @@
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-messagedata">A preparation for the multi-lingual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id2">A preparation for run the sample</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The explanation of Sample Screens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">The sample which you can confirm each control behaviour.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id6">The sample which assumed that you used this in your application.</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">Scripting / Editing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">Window viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">Assetbundles/Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#export-windowresource">Assetbundles/Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">How to handle the window in the app.</a></li>
 </ul>
 </li>
@@ -430,7 +436,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">Editing features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id4">Property</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
@@ -725,7 +732,9 @@
 </li>
 </ul>
 </div>
-<p>How to change the default value:</p>
+</div>
+<div class="section" id="id9">
+<h2>Appendixes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a><ul>
@@ -734,6 +743,14 @@
 <li class="toctree-l2"><a class="reference internal" href="Config.html#cf-font">Fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Config.html#cf-messagedata">Message data sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Config.html#ip">Address/IP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlStyle.html#nohit-hit">About NOHIT/HIT</a></li>
 </ul>
 </li>
 </ul>
@@ -788,7 +805,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

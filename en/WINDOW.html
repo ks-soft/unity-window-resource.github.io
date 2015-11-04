@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WINDOW &mdash; WindowSystem 1.02 documentation</title>
+  <title>WINDOW &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="An arrangement of the control" href="CtrlAnchor.html"/>
         <link rel="prev" title="Window priority" href="WindowPriority.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -209,6 +209,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -293,7 +298,7 @@
 <div class="section" id="id3">
 <h3>Minimum window script<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
@@ -305,14 +310,14 @@
 <p>The origin position of the window is the upper left corner of the frame.(It is not the upper left corner of the title bar.)</p>
 <p>Title bar will not be visible when you described as follows.</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_TOP</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>Title bar will appear when you described as follows.</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_TOP</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_TOP</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
@@ -325,7 +330,7 @@
 <div><p>You set a style as follows to delete the closing button.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOCLOSE</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOCLOSE</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
@@ -338,7 +343,7 @@
 <div><p>Window script without the title bar</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
@@ -351,7 +356,7 @@
 <div><p>The window script which deleted all default indication</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">|</span><span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
@@ -362,17 +367,17 @@
 <div class="section" id="id7">
 <h3>About the drug movement of the window<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You can allow the movement of the window by WINDOW_STYLE_DRAG adding to STYLE.</p>
-<p>When you drag the title bar,the frame,a user-defined control, you can move the window. But the window movement is not possible when a style of the control has WIN_CTRL_STYLE_DRAG. Please try the following examples.</p>
+<div><p>You can allow the movement of the window by DRAG adding to STYLE.</p>
+<p>When you drag the title bar,the frame,a user-defined control, you can move the window. But the window movement is not possible when a style of the control has DRAG. Please try the following examples.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">250</span><span class="n">_000_00000</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">|</span><span class="n">WINDOW_STYLE_DRAG</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">|</span><span class="n">DRAG</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">;</span>
   <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
   <span class="n">CLOSE_POSITION</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="n">FRAME</span><span class="p">(</span><span class="n">Test</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">WIN_CTRL_STYLE_DRAG</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">DRAG</span><span class="p">;</span>
   <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
@@ -441,7 +446,7 @@
 <h3><strong>CAPTION</strong> = Caption ID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>You set the window’s caption string.</p>
-<p>If  <strong>WINDOW_STYLE_NOTITLEBAR</strong>  is set to <strong>STYLE</strong> , this value is ignored.</p>
+<p>If  <strong>NOTITLEBAR</strong>  is set to <strong>STYLE</strong> , this value is ignored.</p>
 </div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">020</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
@@ -478,7 +483,7 @@
 <blockquote>
 <div><p>By using the RELATIVE_SIZE, it can be set in a relative from the screen size.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_ANCHOR_CENTER</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
 <span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="m">150</span><span class="p">);</span>
 <span class="n">SIZE</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span><span class="m">400</span><span class="p">;</span>
 </pre></div>
@@ -524,53 +529,53 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_DEFAULT</td>
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
 <td><p class="first">Set the anchor position in the upper left</p>
 <blockquote class="last">
 <div><p>Same as ANCHOR_CENTER</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTTOP</td>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
 <td><p class="first last">Set the anchor position in the upper left</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_LEFT</td>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
 <td><p class="first">Set the anchor position to the left.</p>
 <p class="last">And vertical centering</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_LEFTBOTTOM</td>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
 <td><p class="first">Set the anchor position to the left.</p>
 <blockquote class="last">
 <div><p>Located along the lower edge</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_TOP</td>
+<tr class="row-even"><td>ANCHOR_TOP</td>
 <td><p class="first">Set the anchor position to the upper side</p>
 <p class="last">Centering at lateral.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_CENTER</td>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
 <td><p class="first last">Set the anchor position in the center of the window</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_BOTTOM</td>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
 <td><p class="first">Set the anchor position at the bottom</p>
 <p class="last">Centering at lateral.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTTOP</td>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
 <td><p class="first last">Set the anchor position in the upper right</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_ANCHOR_RIGHT</td>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
 <td><p class="first">Set the anchor position to the right</p>
 <p class="last">And vertical centering</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_ANCHOR_RIGHTBOTTOM</td>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
 <td><p class="first">Set the anchor position to the right</p>
 <p class="last">Located along the lower edge</p>
 </td>
@@ -590,26 +595,26 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WINDOW_STYLE_TOP</td>
+<tr class="row-even"><td>TOP</td>
 <td><p class="first">Set the display priority of the window to maximum.</p>
 <p>This is a lower priority than POPUP and TOPMOST.</p>
 <p class="last">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_POPUP</td>
+<tr class="row-odd"><td>POPUP</td>
 <td><p class="first">Set the display priority of the window to maximum.</p>
 <p>It is priority than TOP, and a lower priority than TOPMOST.</p>
 <p>If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
 <p class="last">if you touch the screen other than this window, this window is closed.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_TOPMOST</td>
+<tr class="row-even"><td>TOPMOST</td>
 <td><p class="first">Set the display priority of the window to maximum.</p>
 <p>This is a higher priority than TOP and POPUP.</p>
 <p class="last">If the same priority flag has been specified,display priority is determined by the PRIORITY property.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOECLIPSE</td>
+<tr class="row-odd"><td>NOECLIPSE</td>
 <td><p class="first last">Even if this window is opened, you specify it when you do not want to darken the other window.(valid only when you have specified the TOP / POPUP)</p>
 </td>
 </tr>
@@ -628,54 +633,54 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WINDOW_STYLE_NOCLOSE</td>
+<tr class="row-even"><td>NOCLOSE</td>
 <td><p class="first">Do not place the close button.</p>
 <p class="last">When NOTITLEBAR is attached, close button is not placed</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOMINIMIZATION</td>
+<tr class="row-odd"><td>NOMINIMIZATION</td>
 <td><p class="first last">Unimplemented</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_NOHELP</td>
+<tr class="row-even"><td>NOHELP</td>
 <td><p class="first last">Unimplemented</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOTITLEBAR</td>
+<tr class="row-odd"><td>NOTITLEBAR</td>
 <td><p class="first last">Do not display the title bar.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_NOFRAME</td>
+<tr class="row-even"><td>NOFRAME</td>
 <td><p class="first last">Do not display the frame.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td><p class="first last">Stop the function, can&#8217;t accept input.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_DRAG</td>
+<tr class="row-even"><td>DRAG</td>
 <td><p class="first last">Allow the  window move with dragging.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOACTIVE</td>
+<tr class="row-odd"><td>NOACTIVE</td>
 <td><p class="first last">It does not become active.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_HIDE</td>
+<tr class="row-even"><td>HIDE</td>
 <td><p class="first last">Turn off the window display.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>WINDOW_STYLE_NOBRINGTOTOP</td>
+<tr class="row-odd"><td>NOBRINGTOTOP</td>
 <td><p class="first last">The display priority of a window doesn&#8217;t allow to raise automatically  when it becomes active.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WINDOW_STYLE_OPENBOTTOM</td>
+<tr class="row-even"><td>OPENBOTTOM</td>
 <td><p class="first last">Open the window on the back.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">WINDOW_STYLE_NOTITLEBAR</span><span class="p">|</span><span class="n">WINDOW_STYLE_NOFRAME</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -723,7 +728,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

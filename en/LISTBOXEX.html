@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LISTBOXEX &mdash; WindowSystem 1.02 documentation</title>
+  <title>LISTBOXEX &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="CONTAINER" href="CONTAINER.html"/>
         <link rel="prev" title="LISTBOX" href="LISTBOX.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -201,6 +201,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -256,6 +261,8 @@
 <p>Differences between the <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a> is to measure the content size automatically.</p>
 <p>If the content is arranged in a vertical direction, it automatically calculate only height.</p>
 <p>If the content is arranged in a horizontal direction, it automatically calculate only width.</p>
+<p>This control is scrollable control.</p>
+<p>if you set <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> to STYLE property, the window system calls onDrag when you drag these controls.And you can get a dragged direction of these controls.Even if you set DRAG to STYLE property, these controls do not affect anything.</p>
 <blockquote>
 <div><p>LISTBOXEX(Control name) {</p>
 <blockquote>
@@ -273,7 +280,7 @@
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp"><div class="highlight"><pre>WINDOW(255_000_00001) {
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_NOFRAME|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
 };
@@ -312,7 +319,7 @@ SCROLLBAR(List) {
 <h2>Property<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
 <h3>Default value<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">LISTBOX_ITEM_STACK_V</span><span class="p">;</span>  <span class="c1">//Arranged in the vertical direction</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">STYLE</span> <span class="p">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>  <span class="c1">//Arranged in the vertical direction</span>
 <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 <span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 <span class="n">SE_ID</span> <span class="p">=</span> <span class="n">scrollSE</span><span class="p">;</span>
@@ -445,20 +452,24 @@ SCROLLBAR(List) {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-even"><td>ITEM_STACK_V</td>
 <td><p class="first last">List box arranged in the vertical direction.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-odd"><td>ITEM_STACK_H</td>
 <td><p class="first last">List box arranged in the vertical direction.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-even"><td>NOBOUNCES</td>
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
-<td><p class="first last">Suppress that scroll the listbox.</p>
+<tr class="row-odd"><td>SCROLL_UNLOCK</td>
+<td><p class="first last">Enable the scroll of contents.</p>
+</td>
+</tr>
+<tr class="row-even"><td>SCROLL_LOCK</td>
+<td><p class="first last">Disable the scroll of contents.</p>
 </td>
 </tr>
 </tbody>
@@ -622,32 +633,32 @@ SCROLLBAR(List) {
 <td><p class="first last">Hide.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td><p class="first last">Enable a dragging.</p>
-</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td><p class="first last">It is not able to pressing the control.</p>
 </td>
 </tr>
-<tr class="row-even"><td>LISTBOX_ITEM_STACK_V</td>
+<tr class="row-odd"><td>ITEM_STACK_V</td>
 <td><p class="first last">List box arranged in the vertical direction.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_ITEM_STACK_H</td>
+<tr class="row-even"><td>ITEM_STACK_H</td>
 <td><p class="first last">List box arranged in the vertical direction.</p>
 </td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td><p class="first last">When you&#8217;ve stopped it to scroll ,it is stopped even if there are still the momentum.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
-<td><p class="first last">Suppress that scroll the listbox.</p>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td><p class="first last">Enable the scroll of contents.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td><p class="first last">Disable the scroll of contents.</p>
 </td>
 </tr>
 </tbody>
@@ -697,7 +708,7 @@ SCROLLBAR(List) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

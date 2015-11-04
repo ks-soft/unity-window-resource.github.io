@@ -25,6 +25,14 @@ CWindowBaseに届くコールバック
  :param Vector2	pos: ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)
  :param Vector2 dragVelocity: タッチ位置の変位
 
+.. cpp:function:: void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)
+
+ :param CWinCtrlBase cCtrl: ドロップされたコントロール
+ :param CWindowBase cDragWindow: ドラッグされたコントロールの含まれるウィンドウ
+ :param CWinCtrlBase cDragCtrl: ドラッグされたコントロール
+ 
+ このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。
+
 
 固有の関数/プロパティ
 -------------------------------------------------

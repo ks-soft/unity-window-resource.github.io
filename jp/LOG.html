@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LOG &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>LOG &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="LOGTEXT" href="LOGTEXT.html"/>
         <link rel="prev" title="RICHTEXT" href="RICHTEXT.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -200,6 +200,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -252,6 +257,9 @@
 <p>コンテンツを複製し、それを一行とします。</p>
 <p>リストボックスと違い、コンテンツの最大数が設定でき、それ以上のコンテンツを追加しようとしたとき、内部で循環(一番古いものが破棄されます)するようになっています。</p>
 <p><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a> 以外のコントロールもコンテンツとして入れることができます。</p>
+<p>このコントロールはスクロール可能なコントロールです。</p>
+<p>STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> をつけておくと、onDragコールバックが呼び出され、ドラッグした方向を検出できます。
+DRAGをつけても、これらコントロールには効果がないことに気を付けてください。</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
@@ -439,10 +447,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-even"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
+<tr class="row-odd"><td>SCROLL_UNLOCK</td>
+<td>リストボックスのスクロールを許可する。</td>
+</tr>
+<tr class="row-even"><td>SCROLL_LOCK</td>
 <td>リストボックスのスクロールを抑制する。</td>
 </tr>
 </tbody>
@@ -591,20 +602,20 @@
 <tr class="row-even"><td>HIDE</td>
 <td>表示を隠す。</td>
 </tr>
-<tr class="row-odd"><td>DRAG</td>
-<td>ドラッグ可能にする。</td>
-</tr>
-<tr class="row-even"><td>DISABLE</td>
+<tr class="row-odd"><td>DISABLE</td>
 <td>押せなくし、暗くする。</td>
 </tr>
-<tr class="row-odd"><td>NOHIT</td>
+<tr class="row-even"><td>NOHIT</td>
 <td>押せなくする。</td>
 </tr>
-<tr class="row-even"><td>WIN_CTRL_STYLE_NOBOUNCES</td>
+<tr class="row-odd"><td>NOBOUNCES</td>
 <td>端までスクロールしたとき、勢いが残っていても跳ね返らない</td>
 </tr>
-<tr class="row-odd"><td>LISTBOX_LOCK</td>
-<td>リストボックスのスクロールを抑制する。</td>
+<tr class="row-even"><td>SCROLL_UNLOCK</td>
+<td>スクロールを許可する。</td>
+</tr>
+<tr class="row-odd"><td>SCROLL_LOCK</td>
+<td>スクロールを抑制する。</td>
 </tr>
 </tbody>
 </table>
@@ -653,7 +664,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

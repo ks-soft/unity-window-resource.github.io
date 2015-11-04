@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>サンプル &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>サンプル &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="チュートリアル" href="tutorial.html"/>
         <link rel="prev" title="環境構築方法" href="install.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -93,14 +93,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#id4">サンプルシーンを実行する</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">サンプル画面説明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">タイトル画面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">ホーム画面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">チャットウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">プロフィールウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">フレンドリストウィンドウ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">各コントロールの振る舞い確認できるサンプル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">実際のゲームを想定したサンプル</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">タイトル画面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">ホーム画面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">チャットウィンドウ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">プロフィールウィンドウ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id11">フレンドリストウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">クエストウィンドウ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">フレンドリストウィンドウ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">クエストウィンドウ</a></li>
 </ul>
 </li>
 </ul>
@@ -202,6 +203,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -271,15 +277,48 @@
 <div class="section" id="id4">
 <h3>サンプルシーンを実行する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>KsSoft/Scene/Initialize.unityを実行してください。</p>
+<div><p>二つのサンプルシーンを用意しています。</p>
+<ul class="simple">
+<li>各コントロールの振る舞い確認できるサンプル</li>
+</ul>
+<blockquote>
+<div>KsSoft/Scene/Test/Test.unity</div></blockquote>
+<ul class="simple">
+<li>実際のゲームを想定したサンプル</li>
+</ul>
+<blockquote>
+<div>KsSoft/Scene/Initialize.unity</div></blockquote>
 <img alt="_images/exec_initialize.png" src="_images/exec_initialize.png" />
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="id5">
-<h2>サンプル画面説明<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>各コントロールの振る舞い確認できるサンプル<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>ほぼすべてのコントロールの振る舞いを確認できるサンプルです。</p>
+<p>Consoleログには各種コールバック(onClick,onDrag等々)のログが出力するように作られています。
+コールバックが実際にどのタイミング発行されるかを確認できます。
+また、ドラッグ可能なコントロールは、全てドラッグできるようにスクリプト上で設定されています。</p>
+<p>関係するコードは、次の通りです。</p>
+<ul class="simple">
+<li>KsSoft/Script/Test/Test.cs</li>
+<li>KsSoft/Script/Test/CWinTest.cs</li>
+<li>KsSoft/Script/Test/CWinTestBase.cs</li>
+<li>KsSoft/WindowResource/CWinTitle.wra</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">CWinTitle.wraを編集後、その動きを確認したいときは、実行前に <a class="reference internal" href="tutorial.html#export-windowresource"><span>Export Window Resource</span></a> を呼び忘れないようにしてください。</p>
+</div>
+<blockquote>
+<div><img alt="_images/CWinTest_sample.png" src="_images/CWinTest_sample.png" />
+</div></blockquote>
+</div>
 <div class="section" id="id6">
-<h3>タイトル画面<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h2>実際のゲームを想定したサンプル<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id7">
+<h3>タイトル画面<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinTitle.cs</p>
 <blockquote>
@@ -292,8 +331,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h3>ホーム画面<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h3>ホーム画面<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinHome</p>
 <blockquote>
@@ -338,8 +377,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h3>チャットウィンドウ<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id9">
+<h3>チャットウィンドウ<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinChat</p>
 <blockquote>
@@ -372,8 +411,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h3>プロフィールウィンドウ<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id10">
+<h3>プロフィールウィンドウ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinProfile</p>
 <blockquote>
@@ -388,8 +427,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id10">
-<h3>フレンドリストウィンドウ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id11">
+<h3>フレンドリストウィンドウ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinFriend,CWinFriendList,CWinFriendApply,CWinFriendBalcklist</p>
 <blockquote>
@@ -412,8 +451,8 @@
 <p>リストボックスのコンテンツ内容をアップデートする方法の一例です。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id11">
-<h3>フレンドリストウィンドウ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id12">
+<h3>フレンドリストウィンドウ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -436,8 +475,8 @@
 <p>リストボックスのコンテンツ内容をアップデートする方法の一例です。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id12">
-<h3>クエストウィンドウ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id13">
+<h3>クエストウィンドウ<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -497,7 +536,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

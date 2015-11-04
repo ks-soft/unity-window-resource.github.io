@@ -18,6 +18,10 @@ METER
 
  長さを１に設定すると、ちょうど :ref:`TEXTURE` と同じ見た目で表示されるようになっています。
 
+ デフォルトでは、押したことを検出できません。
+ コールバックが必要なときは、STYLEにHITを指定してください。
+
+
   METER(コントロール名) {
 
     プロパティ1;
@@ -39,7 +43,7 @@ METER
 ::
 
   WINDOW(255_000_00001) {
-    STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+    STYLE = NOTITLEBAR|ANCHOR_CENTER;
     POSITION = 0,-100;
     TEX_ID = 100_000_00001;
     CAPTION = 000_000_00010;
@@ -47,7 +51,7 @@ METER
   };
   METER(Progress) {
     ID = 000_001_00000;
-    STYLE = WIN_CTRL_STYLE_ANCHOR_CENTER;
+    STYLE = ANCHOR_CENTER;
     SIZE = RELATIVE_SIZE(-128);
     POSITION = 0,0;
     TEX_ID = 0,"MTR";
@@ -303,6 +307,6 @@ METER
 +----------------+-----------------------------+
 |DISABLE         |押せなくし、暗くする。       |
 +----------------+-----------------------------+
-|NOHIT           |押せなくする。               |
+|HIT             |押せるようにする。           |
 +----------------+-----------------------------+
 

@@ -84,7 +84,8 @@
  
 ::
 
-  static private Dictionary<e_Locale, uint> m_dicStrMessageDataMulId = new Dictionary<e_Locale, uint>() {
+  static private Dictionary<e_Locale, uint> m_dicStrMessageDataMulId
+                     = new Dictionary<e_Locale, uint>() {
     {e_Locale.JP, MulId.Id (0,2,0)},
     {e_Locale.EN, MulId.Id (0,2,1)},
   };

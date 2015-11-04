@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowBase &mdash; WindowSystem 1.02 documentation</title>
+  <title>CWindowBase &mdash; WindowSystem 1.04 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 documentation" href="index.html"/>
         <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html"/>
         <link rel="prev" title="CWindowMgr" href="CWindowMgr.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -86,7 +86,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">This window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -190,6 +190,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
             
@@ -245,7 +250,7 @@
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 WINDOW(TEST) {
   ID = 255_000_00001;
-  STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+  STYLE = NOTITLEBAR|ANCHOR_CENTER;
   POSITION = 0,-100;
   SIZE = 512,256;
 };
@@ -288,7 +293,7 @@ TEXTBOX(Message) {
 <div><p>A window is composed by many controls.</p>
 <p>If you perform operations as touch and drag to controls, the callback function in this window is called.</p>
 <p>It enumerates callback functions that a window can receive.</p>
-<p>Inherit the class that is generated when you compile the script window. Then,necessary,you need to override callback functions.</p>
+<p>You need to create new class which is inherited the class that is generated when you compile the script window. And you override callback functions in this new class.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="_CPPv28onCreatev">
@@ -353,33 +358,42 @@ TEXTBOX(Message) {
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase">
-<span id="onDrag__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Dragged the control</p>
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The control is dragged. This callback is called once.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
 <span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Dragged and moved the control</p>
+<dd><p>You are dragging the control. This callback is called while you drag it.</p>
+<p>You can get a dragged direction of Scrollable controls by onDrag. In this case,you need to set the <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> to STYLE, and you can get a dragged direction. Even if you set DRAG to STYLE property, these controls do not affect anything.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2">
-<span id="onDragRender__CWinCtrlBase.CWindowRenderer.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowRenderer <em>renderer</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase15CWindowRenderer7Vector2" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you set true to this value,this window become not to respond.</p>
+<p>The return value means as follows</p>
+<ul class="simple">
+<li><p class="first">true: Render the duplicated control.</p>
+</li>
+<li><p class="first">false: Don&#8217;t render the duplicated control.</p>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
 <span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>It is called when the control being dragged has been released on the control of specific window.</p>
+<dd><p>When you release the dragged control at other control, this callback is called. This callback sent to the window of cCtrl.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>if you drop the dragged control on the nothing place,it is called.</p>
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the dragged control at open place.</p>
+<p>Or when the window of dragged control is closed, this callback is called before closing.</p>
 </dd></dl>
 
 <dl class="function">
@@ -410,12 +424,6 @@ TEXTBOX(Message) {
 <dt id="_CPPv28onCanceli">
 <span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pressed Cancel button in the message window. This callback will reach the parent window of the message window.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv28onScroll12CWinCtrlBase7Vector2">
-<span id="onScroll__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onScroll</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onScroll12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scroll by dragging a list box or container.</p>
 </dd></dl>
 
 <dl class="function">
@@ -727,7 +735,7 @@ TEXTBOX(Message) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

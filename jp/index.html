@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Window System’s documentation! &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>Welcome to Window System’s documentation! &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="#"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="#"/>
         <link rel="next" title="特徴" href="feature.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -183,6 +183,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -250,13 +255,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sample.html#id2">サンプルを動かすための準備</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">サンプル画面説明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id5">各コントロールの振る舞い確認できるサンプル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample.html#id6">実際のゲームを想定したサンプル</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">チュートリアル</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id2">スクリプト作成/編集方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id5">ウィンドウビューワー</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#id6">アセットバンドル/リソースデータ化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#export-windowresource">アセットバンドル/リソースデータ化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#id7">実際のゲーム内でウィンドウを扱う方法</a></li>
 </ul>
 </li>
@@ -430,7 +436,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id2">記述例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id3">編集機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EDITBOX.html#id4">プロパティ</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a><ul>
@@ -725,7 +732,9 @@
 </li>
 </ul>
 </div>
-<p>デフォルト値の変更方法:</p>
+</div>
+<div class="section" id="id9">
+<h2>付録<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a><ul>
@@ -734,6 +743,14 @@
 <li class="toctree-l2"><a class="reference internal" href="Config.html#cf-font">フォント系</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Config.html#cf-messagedata">メッセージデータシート系</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Config.html#ip">アドレス/IP系</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CtrlStyle.html#nohit-hit">NOHIT/HITについて</a></li>
 </ul>
 </li>
 </ul>
@@ -788,7 +805,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

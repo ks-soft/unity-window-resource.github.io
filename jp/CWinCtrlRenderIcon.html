@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlRenderIcon &mdash; WindowSystem 1.02 ドキュメント</title>
+  <title>CWinCtrlRenderIcon &mdash; WindowSystem 1.04 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.02 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.04 ドキュメント" href="index.html"/>
         <link rel="next" title="CWinCtrlMeter" href="CWinCtrlMeter.html"/>
         <link rel="prev" title="CWinCtrlRecastIcon" href="CWinCtrlRecastIcon.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.02
+                1.04
               </div>
             
           
@@ -192,6 +192,11 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
 </ul>
 
             
@@ -276,21 +281,97 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
 <li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Vector2 pos</strong> &#8211; ドラッグされたコントロールの位置</li>
+<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>押している状態で動かした(ドラッグ)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
+<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
+<li><strong>Vector2 dragVelocity</strong> &#8211; タッチ位置の変位</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Transform transform</strong> &#8211; ドラッグされたコントロールのトランスフォーム</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">複製したコントロールをレンダリングするかどうかを選択する。</p>
+<ul class="last simple">
+<li>true: ドラッグ中のコントロールの複製をレンダリングする。</li>
+<li>false: ドラッグ中のコントロールの複製をレンダリングしない。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
+<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
+<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">ドロップされたコントロール</td>
+</tr>
+</tbody>
+</table>
+<p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
+<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
 </dd></dl>
 
 <span class="target" id="onbeginrendericon"></span><dl class="function">
@@ -561,7 +642,7 @@ falseを返した時は、 <a class="reference internal" href="#onendrendericon"
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.02',
+            VERSION:'1.04',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

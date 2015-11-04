@@ -19,7 +19,7 @@ CWindowBase
   #include "wr.h"
   WINDOW(TEST) {
     ID = 255_000_00001;
-    STYLE = WINDOW_STYLE_NOTITLEBAR|WINDOW_STYLE_ANCHOR_CENTER;
+    STYLE = NOTITLEBAR|ANCHOR_CENTER;
     POSITION = 0,-100;
     SIZE = 512,256;
   };
@@ -123,26 +123,41 @@ CWindowBase
 
  リッチテキストの一部が押された
 
-.. cpp:function:: virtual void onDrag(CWinCtrlBase cCtrl)
+.. cpp:function:: virtual void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)
 
  コントロールがドラッグされた。
+ 最初に一度、呼び出される。
 
 .. cpp:function:: virtual void onDrag(CWinCtrlBase cCtrl,Vector2 pos)
 
- コントロールがドラッグされ、移動している。
+ コントロールがドラッグされている。
+ ドラッグ中、呼び続けられる。
 
-.. cpp:function:: virtual void onDragRender(CWinCtrlBase cCtrl,CWindowRenderer renderer,Vector2 pos)
+ スクロール可能なコントロールは、どの方向にコントロールがドラッグされたかをonDragによって知ることができる。
+ ただし、STYLEに :ref:`SCROLL_LOCK<LISTBOX_STYLE>` をつけておく必要がある。
+ onDragによって、ドラッグした方向を検出できる。
+ DRAGをつけても、これらコントロールには効果がないことに気を付ける必要がある。
+ 
+.. cpp:function:: virtual bool onDragRender(CWinCtrlBase cCtrl,Transform transform)
 
  コントロールがドラッグされているときに、レンダリングタイミングで呼ばれる。
  overrideしなければ普通にコントロールがレンダリングされる。
+
+ 戻り値の意味は以下の通りです。
+ 
+ * true ドラッグ中のコントロールの複製をレンダリングする。
+ * false ドラッグ中のコントロールの複製をレンダリングしない。
  
 .. cpp:function:: virtual void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)
 
  特定ウィンドウのコントロール上でドラッグ中のコントロールが離されたとき呼ばれる。
+ このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。
  
-.. cpp:function:: virtual void onDropGround(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)
+.. cpp:function:: virtual void onDropGround(CWinCtrlBase cCtrl)
 
  何もないところでドラッグ中のコントロールが離されたとき呼ばれる。
+
+ また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。
 
 .. cpp:function:: virtual void onOK(int msgBoxWinID)
 
@@ -163,10 +178,6 @@ CWindowBase
 .. cpp:function:: virtual void onCancel(int msgBoxWinID)
 
  子ウィンドウとしてクリエイトしたメッセージウィンドウ上でCancelボタンが押された。
-
-.. cpp:function:: virtual void onScroll(CWinCtrlBase cCtrl,Vector2 velocity)
-
- リストボックス、コンテナをドラッグし、スクロールした。
 
 .. cpp:function:: virtual void onRecreatedRenderTexture(uint mRenderTextureId)
 
