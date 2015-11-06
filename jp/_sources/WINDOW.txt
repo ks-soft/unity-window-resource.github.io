@@ -179,7 +179,7 @@ WINDOW
 **RESOURCE = マルチID**
 -----------------------------------
 
- [KsTools]→[Export Window Resource]を行ったとき、アセットバンドルとして出力します。
+ [Tools]->[KsSoft]->[Export Window Resource]を行ったとき、アセットバンドルとして出力します。
  
  同一の :ref:`マルチID<MulID>` を指定していると、一つにまとめてアセットバンドル化してくれます。
 

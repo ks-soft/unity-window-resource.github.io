@@ -11,9 +11,9 @@
 version.unity3dが作られるタイミング
 ---------------------------------------
  
- * [KsTools]->[Export Binary Data]
+ * [Tools]->[KsSoft]->[Export Binary Data]
  
- * [KsTools]->[Export Window Resource]
+ * [Tools]->[KsSoft]->[Export Window Resource]
  
  何らかのアセットバンドルを作成、更新したときに自動的に更新されます。
  
@@ -93,6 +93,6 @@ version.unity3dが衝突したとき
  その後、アップロードされているversion.unity3dを落としてきます。
  最後にローカル環境で以下の方法でversion.unity3dを出力しなおします。
  
- * [KsTools]->[Test]->[Export Version]
+ * [Tools]->[KsSoft]->[Re-Export Version]
  
  

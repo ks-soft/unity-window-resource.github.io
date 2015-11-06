@@ -134,7 +134,7 @@ JP,EN
 
  バイナリを自前で読み込みデータを展開する方法もあります。
  
- メニュータブから、[KsTools]->[Export Binary Data]を選択してください。
+ メニュータブから、[Tools]->[KsSoft]->[Export Binary Data]を選択してください。
  
  .. image:: images/exportbinary.png
 

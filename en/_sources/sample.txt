@@ -22,7 +22,7 @@ wraファイルをコンパイル
 全てのアセットバンドルを出力する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- [メニュー]から[KsTools]→[Utilty]→[Export All for Windows]
+ [メニュー]から[Tools]->[KsSoft]->[Export All]->[Windows,Mac]
  
 
 .. note::

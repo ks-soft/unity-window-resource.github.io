@@ -98,7 +98,7 @@ wraファイルをコンパイルするときにインクルードされるフ�
  .. image:: images/load_application.png
 
 
- Unity上のメニューの[KsTools]→[Export Window Resource]を選ぶとassetbundlesフォルダにアセットファイルが出力されます。
+ Unity上のメニューの[Tools]->[KsSoft]->[Export Window Resource]を選ぶとassetbundlesフォルダにアセットファイルが出力されます。
 
  ファイル名は、 デフォルトで **000_000_00010.unity3d** です。
  
