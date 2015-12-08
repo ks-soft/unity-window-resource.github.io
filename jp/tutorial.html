@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>チュートリアル &mdash; WindowSystem 1.05 ドキュメント</title>
+  <title>チュートリアル &mdash; WindowSystem 1.06 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.05 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.06 ドキュメント" href="index.html"/>
         <link rel="next" title="マルチID,FiveCC" href="id.html"/>
         <link rel="prev" title="サンプル" href="sample.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.05
+                1.06
               </div>
             
           
@@ -88,30 +88,32 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">環境構築方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">チュートリアル</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">スクリプト作成/編集方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wra">wraファイルをコンパイルする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">全てのアセットバンドルを出力する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">スクリプト作成/編集方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wra-wrb">wraファイル/wrbファイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">インクルードパス</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wra">wraファイルをコンパイルするときにインクルードされるファイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">コンパイルされたファイルの場所</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">インクルードパス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">wraファイルをコンパイルするときにインクルードされるファイル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">コンパイルされたファイルの場所</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">ウィンドウビューワー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">ウィンドウビューワー</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#export-windowresource">アセットバンドル/リソースデータ化</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">実際のゲーム内でウィンドウを扱う方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id9">実際のゲーム内でウィンドウを扱う方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cmainsystem">CMainSystemを作成/編集する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">CMainSystemをゲームオブジェクトに登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">CMainSystemをゲームオブジェクトに登録</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cinput">CInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cspritefontmgr">CSpriteFontMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ctextureresourcemgr">CTextureResourceMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cassetbundlemgr">CAssetBundleMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cwindowmgr">CWindowMgr</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">リソースから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">アセットバンドルから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">ウィンドウをクリエイトする方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">クリエイト済のウィンドウを取得する方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">特定のウィンドウを全面に出す方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">効果音について</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">リソースから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">アセットバンドルから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">ウィンドウをクリエイトする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">クリエイト済のウィンドウを取得する方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">特定のウィンドウを全面に出す方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">効果音について</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
 </ul>
 </li>
 </ul>
@@ -265,8 +267,26 @@
             
   <div class="section" id="id1">
 <h1>チュートリアル<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="wra">
+<h2>wraファイルをコンパイルする<a class="headerlink" href="#wra" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p><a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を、済ましているか確認してください。</p>
+<p>済ましているなら、KsSoft/WindowResource/を選択した状態で、右クリック→Exportを選んでください。</p>
+<p>全てのwraファイルがコンパイルされます。</p>
+<p>エラーが出でたときには、 <a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を見直してください。</p>
+</div></blockquote>
+</div>
 <div class="section" id="id2">
-<h2>スクリプト作成/編集方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>全てのアセットバンドルを出力する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div>[メニュー]から[Tools]-&gt;[KsSoft]-&gt;[Export All]-&gt;[Windows,Mac]</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Mac環境で試すときは、Xcodeのコマンドラインツールがインストールしているか確認してください。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>スクリプト作成/編集方法<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Unity Projectを起動します。</li>
@@ -288,8 +308,8 @@
 <strong>wra</strong> ファイルをUnity Editor上でコンパイルに成功すると、対応したwrbファイルが生成されます。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h3>インクルードパス<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id4">
+<h3>インクルードパス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div>以下のパスにインクルードパスが、通っています。
 インクルードファイルを作成する際は、ファイルをここに置いてください。</div></blockquote>
@@ -297,8 +317,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="wra">
-<h3>wraファイルをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#wra" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id5">
+<h3>wraファイルをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div>次のファイルは、wraファイルをコンパイルするときに、自動的にインクルードされます。
 共通の設定や定数は、このファイルに設定されています。</div></blockquote>
@@ -309,15 +329,15 @@
 <div><img alt="_images/edit.png" src="_images/edit.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id4">
-<h3>コンパイルされたファイルの場所<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id6">
+<h3>コンパイルされたファイルの場所<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>Unity Project/wrbというフォルダの直下に、*.wrbというファイルが生成されています。
+<div>Assets/KsSoft/WindowResource/wrbというフォルダの直下に、*.wrbというファイルが生成されています。
 このファイルがコンパイルされたファイルです。</div></blockquote>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>ウィンドウビューワー<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id7">
+<h2>ウィンドウビューワー<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>コンパイルしたウィンドウをビューワーですぐ確認できます。</p>
 <p>また、一度コンパイルに成功したウィンドウはビューワーを起動しっ放しでも変更を確認できます。</p>
@@ -337,7 +357,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="export-windowresource">
-<span id="id6"></span><h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#export-windowresource" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id8"></span><h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#export-windowresource" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>WWindowViewerは、各wraファイルから、コンパイルしたwrbファイルを直接読み込んで動作します。
 よって、wraファイルをコンパイルした後、即座にその変更をチェックすることができます。</p>
@@ -366,8 +386,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h2>実際のゲーム内でウィンドウを扱う方法<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id9">
+<h2>実際のゲーム内でウィンドウを扱う方法<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div>ウィンドウ作成環境とアプリケーションを分ける/分けないにかかわらず同じ方法で扱えます。</div></blockquote>
 <div class="section" id="cmainsystem">
@@ -414,8 +434,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id8">
-<h3>CMainSystemをゲームオブジェクトに登録<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id10">
+<h3>CMainSystemをゲームオブジェクトに登録<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>下記の通り、MainSystemという空のゲームオブジェクトを作成し、そこにCMainSystemをスクリプトとして追加します。</p>
 <img alt="_images/MainSystem.png" src="_images/MainSystem.png" />
@@ -466,8 +486,8 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 必須です。</p>
 <p>詳しくは、<a class="reference internal" href="CWindowMgr.html#id1"><span>こちら</span></a> を参照ください。</p>
 </div></blockquote>
-<div class="section" id="id9">
-<h4>リソースから読み込むとき<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id11">
+<h4>リソースから読み込むとき<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>Resourcesフォルダに配置した、アセットを読み込みます。</p>
 <p>一度、読み込むと、ウィンドウデータは常駐します。</p>
@@ -477,8 +497,8 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 </pre></div>
 </div>
 </div>
-<div class="section" id="id10">
-<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id12">
+<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p><strong>[Export Window Resource]</strong> を行うと次の二つのファイルが更新されます(PC,Mac &amp; Linux Standalone環境の場合)。</p>
 <ul class="simple">
@@ -492,8 +512,8 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <p class="last">出力するファイルIDを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span>参考</span></a> にしてください。</p>
 </div>
 </div>
-<div class="section" id="id11">
-<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id13">
+<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>例えば、このような名前でウィンドウを定義したとします。</p>
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
 
@@ -565,8 +585,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id12">
-<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id14">
+<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div>クリエイト済のウィンドウをウィンドウマネージャ経由で <a class="reference internal" href="CWindowMgr.html#window-find-function"><span>find</span></a> を使って取得することができます。</div></blockquote>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinAssetbundleLoading</span> <span class="n">cLoading</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">windowId</span><span class="p">);</span>
@@ -578,15 +598,15 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id13">
-<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id15">
+<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>ウィンドウマネージャが持つ、bringToTopを使って、特定のウィンドウを最前面に出すことができます。</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id14">
-<h4>効果音について<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id16">
+<h4>効果音について<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>効果音を鳴らすには、CWindowMgr.soundeffectを書き換えます。</p>
 <p>soundeffectは、IWinSoundEffectというインターフェースを持つオブジェクトです。</p>
@@ -661,8 +681,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id15">
-<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id17">
+<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>キャプションIDから、文字列に変換する際、CWindowMgr.captiondataに設定されたオブジェクトを通して変換されます。</p>
 <p>captiondataは、IWinCaptionDataインターフェースです。</p>
@@ -782,7 +802,7 @@ TEXT(Message) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.05',
+            VERSION:'1.06',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

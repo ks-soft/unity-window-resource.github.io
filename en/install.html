@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Environment setting &mdash; WindowSystem 1.05 documentation</title>
+  <title>Environment setting &mdash; WindowSystem 1.06 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.05 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.06 documentation" href="index.html"/>
         <link rel="next" title="window system’s samples" href="sample.html"/>
         <link rel="prev" title="Features of window system" href="feature.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.05
+                1.06
               </div>
             
           
@@ -94,9 +94,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#id4">The confirmation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#python-2-x">Install the Python 2.x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#osx-xcode">For OSX:Install the Command Line Tools in Xcode.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-messagedata">A preparation for the multi-lingual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-messagedata">A preparation for the multi-lingual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-2-7">Install the Python 2.7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python">Add the windows system path for the Python.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files">Install the opeppyxl library(A Python library to read/write Excel 2010 xlsx/xlsm files)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
@@ -279,11 +283,10 @@
 <blockquote>
 <div><p>Add the system path to &#8220;bin&#8221; of the installed folder .</p>
 <p>It has become in the following folder by the default</p>
-<ul class="simple">
-<li><p class="first">C:\cygwin\bin (if 64bit version, c:\cygwin64\bin)</p>
-</li>
-</ul>
 </div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>C:\cygwin\bin (64bit版なら、c:\cygwin64\bin)
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">It is not the environment variable of cygwin, it is the system environment variable of windows.</p>
@@ -334,14 +337,6 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="python-2-x">
-<h2>Install the Python 2.x<a class="headerlink" href="#python-2-x" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>If you make a character resources for multi-lingual , use MS-Excel.This tool for data conversion from a Excel file is written in Python.</p>
-<p>Library to read Excel file uses a <strong>openpyxl</strong>. Please install their own.</p>
-<p>This environment has taken the operation check in Python 2.6 or later.</p>
-</div></blockquote>
-</div>
 <div class="section" id="osx-xcode">
 <span id="install-xcode-cmd"></span><h2>For OSX:Install the Command Line Tools in Xcode.<a class="headerlink" href="#osx-xcode" title="Permalink to this headline">¶</a></h2>
 <blockquote>
@@ -350,18 +345,33 @@
 </div>
 <div class="section" id="install-messagedata">
 <span id="id5"></span><h2>A preparation for the multi-lingual<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python-2-7">
+<h3>Install the Python 2.7<a class="headerlink" href="#python-2-7" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You need to install the tools to convert to a binary file from Excel file for message data.</p>
-<p>Please download it from  <a class="reference external" href="../MessageData.zip">here</a> .</p>
-<ol class="arabic simple">
-<li><p class="first">Expand the zip file to a top folder on your Unity Project.</p>
-</li>
-<li><p class="first">The &#8220;pythonlib&#8221; folder is added as a library path of python (see python manual).</p>
-</li>
-</ol>
-<img alt="_images/messagedata_install.png" src="_images/messagedata_install.png" />
-<p>In this example,&#8221;Project/KsWindow&#8221; is the top folder of UnityProject</p>
+<div><p>If you make a character resources for multi-lingual , use MS-Excel.This tool for data conversion from a Excel file is written in Python.</p>
+<p>Install the <a class="reference external" href="https://www.python.org/downloads/">Python2.7</a></p>
 </div></blockquote>
+</div>
+<div class="section" id="python">
+<h3>Add the windows system path for the Python.<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add the system path of the installed folder .</p>
+<p>Please refer to here how to set the python path.</p>
+<p>The default path is as follows.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>C:\Python27
+</pre></div>
+</div>
+</div>
+<div class="section" id="openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files">
+<h3>Install the opeppyxl library(A Python library to read/write Excel 2010 xlsx/xlsm files)<a class="headerlink" href="#openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>This multiligual message data tool used the <strong>openpyxl</strong> library. you need to install this library.Install the openpyxl on the command prompt as follows.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">openpyxl</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -406,7 +416,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.05',
+            VERSION:'1.06',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

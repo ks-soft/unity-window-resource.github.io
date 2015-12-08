@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>サンプル &mdash; WindowSystem 1.05 ドキュメント</title>
+  <title>サンプル &mdash; WindowSystem 1.06 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.05 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.06 ドキュメント" href="index.html"/>
         <link rel="next" title="チュートリアル" href="tutorial.html"/>
         <link rel="prev" title="環境構築方法" href="install.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.05
+                1.06
               </div>
             
           
@@ -87,23 +87,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">環境構築方法</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">サンプル</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">サンプルを動かすための準備</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#wra">wraファイルをコンパイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">全てのアセットバンドルを出力する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">サンプルシーンを実行する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">サンプルシーン</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">各コントロールの振る舞い確認できるサンプル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">実際のゲームを想定したサンプル</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">各コントロールの振る舞い確認できるサンプル</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">実際のゲームを想定したサンプル</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id7">タイトル画面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">ホーム画面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">チャットウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">プロフィールウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">フレンドリストウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">フレンドリストウィンドウ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">クエストウィンドウ</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">タイトル画面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">ホーム画面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">チャットウィンドウ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">プロフィールウィンドウ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">フレンドリストウィンドウ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">フレンドリストウィンドウ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">クエストウィンドウ</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">チュートリアル</a></li>
@@ -255,27 +250,7 @@
   <div class="section" id="id1">
 <h1>サンプル<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
-<h2>サンプルを動かすための準備<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="section" id="wra">
-<h3>wraファイルをコンパイル<a class="headerlink" href="#wra" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<blockquote>
-<div><p><a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を、済ましているか確認してください。</p>
-<p>済ましているなら、KsSoft/WindowResource/を選択した状態で、右クリック→Exportを選んでください。</p>
-<p>全てのwraファイルがコンパイルされます。</p>
-<p>エラーが出でたときには、 <a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を見直してください。</p>
-</div></blockquote>
-</div>
-<div class="section" id="id3">
-<h3>全てのアセットバンドルを出力する<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<blockquote>
-<div>[メニュー]から[Tools]-&gt;[KsSoft]-&gt;[Export All]-&gt;[Windows,Mac]</div></blockquote>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">Mac環境で試すときは、Xcodeのコマンドラインツールがインストールしているか確認してください。</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h3>サンプルシーンを実行する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h2>サンプルシーン<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>二つのサンプルシーンを用意しています。</p>
 <ul class="simple">
@@ -290,10 +265,8 @@
 <div>KsSoft/Scene/Initialize.unity</div></blockquote>
 <img alt="_images/exec_initialize.png" src="_images/exec_initialize.png" />
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>各コントロールの振る舞い確認できるサンプル<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h3>各コントロールの振る舞い確認できるサンプル<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>ほぼすべてのコントロールの振る舞いを確認できるサンプルです。</p>
 <p>Consoleログには各種コールバック(onClick,onDrag等々)のログが出力するように作られています。
@@ -315,10 +288,12 @@
 <div><img alt="_images/CWinTest_sample.png" src="_images/CWinTest_sample.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id6">
-<h2>実際のゲームを想定したサンプル<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="section" id="id7">
-<h3>タイトル画面<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id4">
+<h3>実際のゲームを想定したサンプル<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>タイトル画面<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinTitle.cs</p>
 <blockquote>
@@ -331,8 +306,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h3>ホーム画面<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id6">
+<h2>ホーム画面<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinHome</p>
 <blockquote>
@@ -377,8 +352,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h3>チャットウィンドウ<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id7">
+<h2>チャットウィンドウ<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinChat</p>
 <blockquote>
@@ -411,8 +386,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id10">
-<h3>プロフィールウィンドウ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h2>プロフィールウィンドウ<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinProfile</p>
 <blockquote>
@@ -427,8 +402,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id11">
-<h3>フレンドリストウィンドウ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id9">
+<h2>フレンドリストウィンドウ<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinFriend,CWinFriendList,CWinFriendApply,CWinFriendBalcklist</p>
 <blockquote>
@@ -451,8 +426,8 @@
 <p>リストボックスのコンテンツ内容をアップデートする方法の一例です。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id12">
-<h3>フレンドリストウィンドウ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id10">
+<h2>フレンドリストウィンドウ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -475,8 +450,8 @@
 <p>リストボックスのコンテンツ内容をアップデートする方法の一例です。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id13">
-<h3>クエストウィンドウ<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id11">
+<h2>クエストウィンドウ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
@@ -491,7 +466,6 @@
 <div><img alt="_images/quest_sample.png" src="_images/quest_sample.png" />
 </div></blockquote>
 </div></blockquote>
-</div>
 </div>
 </div>
 
@@ -536,7 +510,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.05',
+            VERSION:'1.06',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

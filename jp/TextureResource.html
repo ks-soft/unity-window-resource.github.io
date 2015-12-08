@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>テクスチャについて &mdash; WindowSystem 1.05 ドキュメント</title>
+  <title>テクスチャについて &mdash; WindowSystem 1.06 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.05 ドキュメント" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.06 ドキュメント" href="index.html"/>
         <link rel="next" title="フォントについて" href="SpriteFont.html"/>
         <link rel="prev" title="マルチID,FiveCC" href="id.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.05
+                1.06
               </div>
             
           
@@ -323,8 +323,9 @@
 <li>001_000_00000.spr</li>
 <li>001_000_00000.tex</li>
 </ul>
-<p>この二つのファイルを読み込むことによりアセットバンドル経由で読み込まず、リソース経由で読み込むことが可能になります。</p>
 </div></blockquote>
+<p>アセットバンドル経由で読み込まず、この二つのファイルをリソース経由で読み込みます。
+デフォルトでは、アセットバンドルを出力するようになっています。</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
 
 <span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
@@ -666,7 +667,7 @@ PART(Alias name,Texture part file name) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.05',
+            VERSION:'1.06',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
