@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; WindowSystem 1.06 documentation</title>
+  <title>Tutorial &mdash; WindowSystem 1.07 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.06 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
         <link rel="next" title="Mul ID,FiveCC" href="id.html"/>
         <link rel="prev" title="window system’s samples" href="sample.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.06
+                1.07
               </div>
             
           
@@ -88,32 +88,37 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#wra">Compile &#8220;wra&#8221; files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Output all of the asset bundle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Scripting / Editing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#wra-wrb">wra files/wrb files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">The include path</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">The wra file that includ a &#8220;wr.h&#8221; automaticaly.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">The location of the compiled file.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Decide whether you use only a resources or use assetbundles and the resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-assetbundle-or-resource">Only resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Assetbundles and Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">Window viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wra">Compile &#8220;wra&#8221; files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Output all of the asset bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Scripting / Editing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wra-wrb">wra files/wrb files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">The include path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">The wra file that includ a &#8220;wr.h&#8221; automaticaly.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">The location of the compiled file.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Window viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#export-windowresource">Assetbundles/Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">How to handle the window in the app.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id12">How to handle the window in the app.</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cmainsystem">Create/Edit CMainSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Register the CMainSystem the game object.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Register the CMainSystem the game object.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cinput">CInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cspritefontmgr">CSpriteFontMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ctextureresourcemgr">CTextureResourceMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cassetbundlemgr">CAssetBundleMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cwindowmgr">CWindowMgr</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id11">When you load from the resource</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">When you load from asset bundles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">How to create a window</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">How to get the windows that are create</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">How to bring the window to the top.</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">About sound effects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">How to character resources to asset bundle and multilingual.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">When you load from the resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">When you load from asset bundles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">How to create a window</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">How to get the windows that are create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">How to bring the window to the top.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">About sound effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">How to character resources to asset bundle and multilingual.</a></li>
 </ul>
 </li>
 </ul>
@@ -267,6 +272,40 @@
             
   <div class="section" id="id1">
 <h1>Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Decide whether you use only a resources or use assetbundles and the resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-assetbundle-or-resource">
+<span id="id3"></span><h3>Only resources<a class="headerlink" href="#use-assetbundle-or-resource" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Please set it as follows if you load data only using a resource without using the assetbundles.</p>
+<p>Assets/KsSoft/Plugins/KsSoftConfig.cs, line = 27</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">UseAssetBundle</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>   <span class="c1">//if you use resources without using assetbunle,you need to return false.</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>this is default value.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h3>Assetbundles and Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>If your application has to download data via HTTP using asset bundle, please set it as follows.</p>
+<p>Assets/KsSoft/Plugins/KsSoftConfig.cs, line = 27</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">UseAssetBundle</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>    <span class="c1">//if you use resources without using assetbunle,you need to return false.</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="wra">
 <h2>Compile &#8220;wra&#8221; files<a class="headerlink" href="#wra" title="Permalink to this headline">¶</a></h2>
 <blockquote>
@@ -276,8 +315,8 @@
 <p>If errors occur, please review the  <a class="reference internal" href="install.html#install-cygwin"><span>environment setting</span></a> .</p>
 </div></blockquote>
 </div>
-<div class="section" id="id2">
-<h2>Output all of the asset bundle<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>Output all of the asset bundle<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>From the [menu] [Tools]-&gt;[KsSoft]-&gt;[Export All]-&gt;[Windows,Mac]</p>
 </div></blockquote>
@@ -285,9 +324,13 @@
 <p class="first admonition-title">Note</p>
 <p class="last">If you try it in Mac environment, please confirm whether you install  a command-line tool of the Xcode.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When it is configured to <span class="xref std std-ref">use the resources</span> , the window system exports the resource data rather than assetbundles .</p>
 </div>
-<div class="section" id="id3">
-<h2>Scripting / Editing<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>Scripting / Editing<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p class="first">Start your Unity Project.</p>
@@ -309,8 +352,8 @@
 <p><strong>wrb</strong> is an abbreviation of Window Resource Binary.If you succeed to compile a wra file on Unity Editor, you can get the wrb file.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id4">
-<h3>The include path<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>The include path<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>The include path is set to the following path.</p>
 </div></blockquote>
@@ -318,8 +361,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>The wra file that includ a &#8220;wr.h&#8221; automaticaly.<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>The wra file that includ a &#8220;wr.h&#8221; automaticaly.<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>When you compile a &#8220;wra&#8221; file,&#8221;wr.h&#8221; is automatically included in your script. Common settings and constants are set to this file.</p>
 </div></blockquote>
@@ -330,15 +373,15 @@
 <div><img alt="_images/edit.png" src="_images/edit.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id6">
-<h3>The location of the compiled file.<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>The location of the compiled file.<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>*.wrb files are created under the folder &#8220;Assets/KsSoft/WindowResource/wrb&#8221;. These files are the result of the compiled your script files.</p>
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>Window viewer<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h2>Window viewer<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can just preview the compiled windows in the viewer.</p>
 <p>In addition,you can preview changes that the window was successful to compile once without stopping the viewer.</p>
@@ -358,7 +401,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="export-windowresource">
-<span id="id8"></span><h2>Assetbundles/Resources<a class="headerlink" href="#export-windowresource" title="Permalink to this headline">¶</a></h2>
+<span id="id11"></span><h2>Assetbundles/Resources<a class="headerlink" href="#export-windowresource" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The WWindowViewer directly loads wrb files which were compiled from wra files. You can check changes of wra file as soon after wra file was compiled.</p>
 <img alt="_images/load_viewer.png" src="_images/load_viewer.png" />
@@ -382,8 +425,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h2>How to handle the window in the app.<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h2>How to handle the window in the app.<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It can be handled in the same manner regardless to separate/not separate the window creation environment and application.</p>
 </div></blockquote>
@@ -431,8 +474,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id10">
-<h3>Register the CMainSystem the game object.<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>Register the CMainSystem the game object.<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>As described below, to create an empty game object of that MainSystem, and add a CMainSystem as a script.</p>
 <img alt="_images/MainSystem.png" src="_images/MainSystem.png" />
@@ -479,8 +522,8 @@
 <div><p>It manages the window.This is necessary.</p>
 <p>For more details, refer to <a class="reference internal" href="CWindowMgr.html#id1"><span>here</span></a> .</p>
 </div></blockquote>
-<div class="section" id="id11">
-<h4>When you load from the resource<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id14">
+<h4>When you load from the resource<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Load the assets were placed in the &#8220;Resources&#8221; folder.</p>
 <p>Once the load, window data resides.</p>
@@ -490,8 +533,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id12">
-<h4>When you load from asset bundles<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id15">
+<h4>When you load from asset bundles<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>If you do <strong>[Export Window Resource]</strong> , following two of the file is updated.(the case of the PC, Mac &amp; Linux Standalone environment)</p>
 <ul class="simple">
@@ -505,8 +548,8 @@
 <p class="last">If you want to change the output file name ID, please refer to  <a class="reference internal" href="Config.html#cf-windowresource"><span>here</span></a> .</p>
 </div>
 </div>
-<div class="section" id="id13">
-<h4>How to create a window<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id16">
+<h4>How to create a window<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <p>For example, it is assumed that defines the window in such a name</p>
 <div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
 
@@ -578,8 +621,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id14">
-<h4>How to get the windows that are create<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id17">
+<h4>How to get the windows that are create<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>The windows are create it can be obtained by using the A via window manager.You can get the window that is create by <a class="reference internal" href="CWindowMgr.html#window-find-function"><span>find</span></a> .</p>
 </div></blockquote>
@@ -592,15 +635,15 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id15">
-<h4>How to bring the window to the top.<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id18">
+<h4>How to bring the window to the top.<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p>you can bring the window to top by bringToTop.</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id16">
-<h4>About sound effects<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id19">
+<h4>About sound effects<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Set the CWindowMgr.soundeffect To play the sound effect.</p>
 <p>soundeffect is an object that has an interface that IWinSoundEffect.</p>
@@ -636,7 +679,9 @@ TEXT(Message) {
 
         <span class="c1">// Add Component</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
-        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+            <span class="p">}</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
@@ -655,7 +700,7 @@ TEXT(Message) {
         <span class="c1">//--------------------------------------------</span>
         <span class="n">CWindowMgr</span>     <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
         <span class="c1">// Assign standard SEs.</span>
-        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span> <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">));</span> <span class="c1">//2D系;</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span> <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="k">true</span><span class="p">);</span>    <span class="c1">//2D系;</span>
         <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">clickSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">20</span><span class="p">);</span>
         <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">scrollSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">110</span><span class="p">);</span>
     <span class="p">}</span>
@@ -674,8 +719,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id17">
-<h4>How to character resources to asset bundle and multilingual.<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id20">
+<h4>How to character resources to asset bundle and multilingual.<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>When converting from the caption ID to a string, it is converted through CWindowMgr.captiondata of interface.</p>
 <p>captiondata is IWinCaptionData interface.</p>
@@ -705,7 +750,9 @@ TEXT(Message) {
 
         <span class="c1">// Add Component</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
-        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+            <span class="p">}</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
@@ -795,7 +842,7 @@ TEXT(Message) {
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.06',
+            VERSION:'1.07',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

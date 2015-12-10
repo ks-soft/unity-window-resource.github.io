@@ -41,7 +41,9 @@ CSoundEffectMgr
 
          // Add Component
          gameObject.AddComponent<CInput>();
-         gameObject.AddComponent<CAssetBundleMgr>();
+         if (KsSoftConfig.UseAssetBundle) {
+	         gameObject.AddComponent<CAssetBundleMgr>();
+	     }
          gameObject.AddComponent<CSpriteFontMgr>();
          gameObject.AddComponent<CTextureResourceMgr>();
          gameObject.AddComponent<CWindowMgr>();

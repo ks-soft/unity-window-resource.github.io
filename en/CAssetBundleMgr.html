@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CAssetBundleMgr &mdash; WindowSystem 1.06 documentation</title>
+  <title>CAssetBundleMgr &mdash; WindowSystem 1.07 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.06 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
         <link rel="next" title="About the AssetBundle version." href="AssetVersion.html"/>
         <link rel="prev" title="CMainSystemBase" href="CMainSystemBase.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.06
+                1.07
               </div>
             
           
@@ -431,7 +431,9 @@ DEBUG_PATH = ../../../unified/AssetBuilder/assetbundles/Windows
      <span class="cp">#if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBPLAYER)</span>
          <span class="n">CAssetBundleMgr</span><span class="p">.</span><span class="n">debugPath</span> <span class="p">=</span> <span class="n">CConfig</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="k">get</span> <span class="p">(</span><span class="s">&quot;DEBUG_PATH&quot;</span><span class="p">,</span><span class="s">&quot;../Debug/&quot;</span><span class="p">);</span>
      <span class="cp">#endif</span>
-     <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+         <span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -479,7 +481,7 @@ DEBUG_PATH = ../../../unified/AssetBuilder/assetbundles/Windows
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.06',
+            VERSION:'1.07',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

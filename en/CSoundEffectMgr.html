@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CSoundEffectMgr &mdash; WindowSystem 1.06 documentation</title>
+  <title>CSoundEffectMgr &mdash; WindowSystem 1.07 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="WindowSystem 1.06 documentation" href="index.html"/>
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
         <link rel="next" title="CMessageDataSheetMgr" href="CMessageDataSheetMgr.html"/>
         <link rel="prev" title="CTextureResourceMgr" href="CTextureResourceMgr.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.06
+                1.07
               </div>
             
           
@@ -272,7 +272,9 @@
 
         <span class="c1">// Add Component</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
-        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+            <span class="p">}</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
@@ -638,7 +640,7 @@ bool <code class="descname">isLoaded</code></dt>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.06',
+            VERSION:'1.07',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

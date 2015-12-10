@@ -4,6 +4,48 @@
 チュートリアル
 ===================================
 
+アセットバンドルとリソースを使うか、リソースのみ使うかを決定
+---------------------------------------------------------------
+
+.. _use_assetbundle_or_resource:
+
+リソースのみを使う
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ アセットバンドルを使わず、リソースのみを用いてデータをロードするなら、次のように設定してください。
+
+ Assets/KsSoft/Plugins/KsSoftConfig.cs,27行目
+
+.. code-block:: csharp
+ 
+	public static bool UseAssetBundle {
+		get {
+			return false;	//if you use resources without using assetbunle,you need to return false.
+		}
+	}
+
+..
+
+ デフォルトではこちらになっています。
+
+
+アセットバンドルとリソースを使う
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ あなたのアプリケーションが、アセットバンドルを用いてHTTP経由でデータを落としてくる必要があるなら次のように設定してください。
+
+ Assets/KsSoft/Plugins/KsSoftConfig.cs,27行目
+
+.. code-block:: csharp
+ 
+	public static bool UseAssetBundle {
+		get {
+			return true;	//if you use resources without using assetbunle,you need to return false.
+		}
+	}
+
+..
+
+
 wraファイルをコンパイルする
 ---------------------------------
  
@@ -24,6 +66,12 @@ wraファイルをコンパイルする
 .. note::
 
  Mac環境で試すときは、Xcodeのコマンドラインツールがインストールしているか確認してください。
+ 
+..
+
+.. note::
+
+ リソースを使う :ref:`設定<_use_assetbundle_or_resource>` になっているときは、アセットバンドルではなく、リソースデータを出力します。
  
 ..
 
@@ -447,7 +495,9 @@ CWindowMgr
 
          // Add Component
          gameObject.AddComponent<CInput>();
-         gameObject.AddComponent<CAssetBundleMgr>();
+         if (KsSoftConfig.UseAssetBundle) {
+	         gameObject.AddComponent<CAssetBundleMgr>();
+	     }
          gameObject.AddComponent<CSpriteFontMgr>();
          gameObject.AddComponent<CTextureResourceMgr>();
          gameObject.AddComponent<CWindowMgr>();
@@ -466,7 +516,7 @@ CWindowMgr
          //--------------------------------------------
          CWindowMgr	cWindowMgr = CWindowMgr.Instance;
          // Assign standard SEs.
-         cWindowMgr.soundeffect = CSeResourceMgr.Instance.reference(new MulId(52,0,0));	//2D系;
+         cWindowMgr.soundeffect = CSeResourceMgr.Instance.reference(new MulId(52,0,0),true);	//2D系;
          cWindowMgr.clickSE = new MulId(52,0,20);
          cWindowMgr.scrollSE = new MulId(52,0,110);
      }
@@ -524,7 +574,9 @@ CWindowMgr
 
          // Add Component
          gameObject.AddComponent<CInput>();
-         gameObject.AddComponent<CAssetBundleMgr>();
+         if (KsSoftConfig.UseAssetBundle) {
+	         gameObject.AddComponent<CAssetBundleMgr>();
+	     }
          gameObject.AddComponent<CSpriteFontMgr>();
          gameObject.AddComponent<CTextureResourceMgr>();
          gameObject.AddComponent<CWindowMgr>();

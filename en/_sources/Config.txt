@@ -15,6 +15,12 @@
 アセットバンドル系
 ------------------------
 
+.. cpp:member:: bool UseAssetBundle
+
+ アセットバンドルを使ってデータを読み込むか、リソースデータを使って読み込むかを選択できます。
+ この値に応じて、各エキスポート先が変わります。
+ こちらも :ref:`参照<_use_assetbundle_or_resource>` ください。
+
 .. cpp:member:: string AssetbundlePath
  
  アセットバンドルの出力フォルダを変更

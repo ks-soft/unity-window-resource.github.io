@@ -178,7 +178,9 @@ CAssetBundle
          #if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBPLAYER)
              CAssetBundleMgr.debugPath = CConfig.Instance.get ("DEBUG_PATH","../Debug/");
          #endif
-         gameObject.AddComponent<CAssetBundleMgr>();
+         if (KsSoftConfig.UseAssetBundle) {
+	         gameObject.AddComponent<CAssetBundleMgr>();
+	     }
          
 ..
 
