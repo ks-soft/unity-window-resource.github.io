@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How to change the default value &mdash; WindowSystem 2.00 documentation</title>
+  <title>How to change the default value &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Texture parts default" href="TextureDefault.html" />
-    <link rel="prev" title="CWinCtrlBar" href="CWinCtrlBar.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="Texture parts default" href="TextureDefault.html"/>
+        <link rel="prev" title="CWinCtrlBar" href="CWinCtrlBar.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,9 +146,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -186,21 +183,18 @@
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">How to change the default value</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">How to change the default value</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#cf-assetbundle">Asset bundle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cf-windowresource">Window resource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cf-textureresrouce">Texture Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#se">Sound Effect Resources.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bgm">BGM Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cf-font">Fonts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cf-messagedata">Message data sheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ip">Address/IP</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -213,54 +207,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>How to change the default value</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>How to change the default value</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/Config.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/Config.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -269,68 +243,42 @@
   <div class="section" id="id1">
 <h1>How to change the default value<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote id="config">
-<div><p>“KsSoft/Plugins/KsSoftConfig.cs” is set various default values.</p>
-<p>The default value can be changed in KsSoftConfig.initialize.</p>
+<div><p>&#8220;KsSoft/Plugins/KsSoftConfig.cs&#8221; is set various default values.</p>
+<p>When you want to change the default value, please fix this file.</p>
 </div></blockquote>
 <div class="section" id="cf-assetbundle">
 <span id="id2"></span><h2>Asset bundle<a class="headerlink" href="#cf-assetbundle" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv414m_UseStreaming">
-<span id="_CPPv314m_UseStreaming"></span><span id="_CPPv214m_UseStreaming"></span><span id="m_UseStreaming__b"></span>bool <code class="descname">m_UseStreaming</code> = true<a class="headerlink" href="#_CPPv414m_UseStreaming" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv214UseAssetBundle">
+<span id="UseAssetBundle__b"></span>bool <code class="descclassname"></code><code class="descname">UseAssetBundle</code><a class="headerlink" href="#_CPPv214UseAssetBundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>you can select using assetbundles or resources. Depending on this value, each export changes.Please refer to <span class="xref std std-ref">here</span></p>
-<ul>
-<li><p>If false</p>
-<blockquote>
-<div><p>Asset bundle: export path</p>
-<blockquote>
-<div><p><a class="reference internal" href="#cf-assetbundlepath"><span class="std std-ref">KsSoftConfig.m_assetbundlePath</span></a> value</p>
-</div></blockquote>
-<p>Download assets from.</p>
-<blockquote>
-<div><p><a class="reference internal" href="#cf-address"><span class="std std-ref">KsSoftConfig.m_httpserver</span></a>  value</p>
-</div></blockquote>
-</div></blockquote>
-</li>
-<li><p>If true</p>
-<blockquote>
-<div><p>Asset bundle: export path</p>
-<blockquote>
-<div><p><a class="reference internal" href="#cf-assetbundlepath"><span class="std std-ref">KsSoftConfig.m_assetbundlePath</span></a> value</p>
-</div></blockquote>
-<p>Download assets from.</p>
-<blockquote>
-<div><p>Where “Assets/StreamingAssets/” is indicated by “<a class="reference internal" href="#cf-assetbundlepath"><span class="std std-ref">KsSoftConfig.m_assetbundlePath</span></a> ” if “StreamingAsset” does not exist.</p>
-</div></blockquote>
-</div></blockquote>
-</li>
-</ul>
 </dd></dl>
 
-<span class="target" id="cf-assetbundlepath"></span><dl class="member">
-<dt id="_CPPv417m_assetbundlePath">
-<span id="_CPPv317m_assetbundlePath"></span><span id="_CPPv217m_assetbundlePath"></span><span id="m_assetbundlePath__string"></span>string <code class="descname">m_assetbundlePath</code> = &quot;assetbundles/&quot;<a class="headerlink" href="#_CPPv417m_assetbundlePath" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="member">
+<dt id="_CPPv215AssetbundlePath">
+<span id="AssetbundlePath__string"></span>string <code class="descclassname"></code><code class="descname">AssetbundlePath</code><a class="headerlink" href="#_CPPv215AssetbundlePath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Change the output folder of the asset bundle.</p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv416m_assetbundleExt">
-<span id="_CPPv316m_assetbundleExt"></span><span id="_CPPv216m_assetbundleExt"></span><span id="m_assetbundleExt__string"></span>string <code class="descname">m_assetbundleExt</code> = &quot;.unity3d&quot;<a class="headerlink" href="#_CPPv416m_assetbundleExt" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv214AssetbundleExt">
+<span id="AssetbundleExt__string"></span>string <code class="descclassname"></code><code class="descname">AssetbundleExt</code><a class="headerlink" href="#_CPPv214AssetbundleExt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extension of the asset bundle file.</p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv414m_resourcePath">
-<span id="_CPPv314m_resourcePath"></span><span id="_CPPv214m_resourcePath"></span><span id="m_resourcePath__string"></span>string <code class="descname">m_resourcePath</code> = &quot;Assets/Resources/&quot;<a class="headerlink" href="#_CPPv414m_resourcePath" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv212ResourcePath">
+<span id="ResourcePath__string"></span>string <code class="descclassname"></code><code class="descname">ResourcePath</code><a class="headerlink" href="#_CPPv212ResourcePath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Folder path to be output as a resource data.</p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv48deugPath">
-<span id="_CPPv38deugPath"></span><span id="_CPPv28deugPath"></span><span id="deugPath__string"></span>string <code class="descname">deugPath</code><a class="headerlink" href="#_CPPv48deugPath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>It is used when loading the asset bundle via “<a class="reference external" href="file://">file://</a>…”.</p>
+<dt id="_CPPv28deugPath">
+<span id="deugPath__string"></span>string <code class="descclassname"></code><code class="descname">deugPath</code><a class="headerlink" href="#_CPPv28deugPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is used when loading the asset bundle via &#8220;<a class="reference external" href="file://">file://</a>…&#8221;.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Invalid value in the application.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Invalid value in the application.</p>
 </div>
 </dd></dl>
 
@@ -338,81 +286,42 @@
 <div class="section" id="cf-windowresource">
 <span id="id3"></span><h2>Window resource<a class="headerlink" href="#cf-windowresource" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv420m_windowResourcePath">
-<span id="_CPPv320m_windowResourcePath"></span><span id="_CPPv220m_windowResourcePath"></span><span id="m_windowResourcePath__string"></span>string <code class="descname">m_windowResourcePath</code> = &quot;Assets/WindowResource/&quot;<a class="headerlink" href="#_CPPv420m_windowResourcePath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specifies the folder where the ‘wra’ file is stored.</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv426m_WindowResourceBinaryPath">
-<span id="_CPPv326m_WindowResourceBinaryPath"></span><span id="_CPPv226m_WindowResourceBinaryPath"></span><span id="m_WindowResourceBinaryPath__string"></span>string <code class="descname">m_WindowResourceBinaryPath</code> = &quot;wrb/&quot;<a class="headerlink" href="#_CPPv426m_WindowResourceBinaryPath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specify a folder to store the results of compiling the ‘wra’ file.</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv419WindowAssetbundleId">
-<span id="_CPPv319WindowAssetbundleId"></span><span id="_CPPv219WindowAssetbundleId"></span><span id="WindowAssetbundleId__uint"></span>uint <code class="descname">WindowAssetbundleId</code><a class="headerlink" href="#_CPPv419WindowAssetbundleId" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv219WindowAssetbundleId">
+<span id="WindowAssetbundleId__uint"></span>uint <code class="descclassname"></code><code class="descname">WindowAssetbundleId</code><a class="headerlink" href="#_CPPv219WindowAssetbundleId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Window asset bundle ID to download by default</p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv417m_defaultFontKind">
-<span id="_CPPv317m_defaultFontKind"></span><span id="_CPPv217m_defaultFontKind"></span><span id="m_defaultFontKind__uint"></span>uint <code class="descname">m_defaultFontKind</code><a class="headerlink" href="#_CPPv417m_defaultFontKind" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv215DefaultFontKind">
+<span id="DefaultFontKind__uint"></span>uint <code class="descclassname"></code><code class="descname">DefaultFontKind</code><a class="headerlink" href="#_CPPv215DefaultFontKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default value for the font ID is used when not specified.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="cf-textureresrouce">
-<span id="id4"></span><h2>Texture Resources<a class="headerlink" href="#cf-textureresrouce" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv421m_textureResourcePath">
-<span id="_CPPv321m_textureResourcePath"></span><span id="_CPPv221m_textureResourcePath"></span><span id="m_textureResourcePath__string"></span>string <code class="descname">m_textureResourcePath</code> = &quot;Assets/TextureResource/&quot;<a class="headerlink" href="#_CPPv421m_textureResourcePath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specifies the folder where texture resources are stored.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="se">
-<span id="cf-seresource"></span><h2>Sound Effect Resources.<a class="headerlink" href="#se" title="Permalink to this headline">¶</a></h2>
-<dl class="member">
-<dt id="_CPPv416m_SEResourcePath">
-<span id="_CPPv316m_SEResourcePath"></span><span id="_CPPv216m_SEResourcePath"></span><span id="m_SEResourcePath__string"></span>string <code class="descname">m_SEResourcePath</code> = &quot;Assets/SE/&quot;<a class="headerlink" href="#_CPPv416m_SEResourcePath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specify the folder where Sound Effect resources are stored.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="bgm">
-<span id="cf-bgmresource"></span><h2>BGM Resources<a class="headerlink" href="#bgm" title="Permalink to this headline">¶</a></h2>
-<dl class="member">
-<dt id="_CPPv417m_BgmResourcePath">
-<span id="_CPPv317m_BgmResourcePath"></span><span id="_CPPv217m_BgmResourcePath"></span><span id="m_BgmResourcePath__string"></span>string <code class="descname">m_BgmResourcePath</code> = &quot;Assets/Bgm/&quot;<a class="headerlink" href="#_CPPv417m_BgmResourcePath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specify the folder where BGM resources are stored.</p>
+<dt id="_CPPv216DefaultTextureId">
+<span id="DefaultTextureId__uint"></span>uint <code class="descclassname"></code><code class="descname">DefaultTextureId</code><a class="headerlink" href="#_CPPv216DefaultTextureId" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default value for the texture ID is used when not specified.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="cf-font">
-<span id="id5"></span><h2>Fonts<a class="headerlink" href="#cf-font" title="Permalink to this headline">¶</a></h2>
+<span id="id4"></span><h2>Fonts<a class="headerlink" href="#cf-font" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv418m_FontResourcePath">
-<span id="_CPPv318m_FontResourcePath"></span><span id="_CPPv218m_FontResourcePath"></span><span id="m_FontResourcePath__string"></span>string <code class="descname">m_FontResourcePath</code> = &quot;Assets/FontResource/&quot;<a class="headerlink" href="#_CPPv418m_FontResourcePath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specify a folder to store font data to be resourced.</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv410m_FontPath">
-<span id="_CPPv310m_FontPath"></span><span id="_CPPv210m_FontPath"></span><span id="m_FontPath__string"></span>string <code class="descname">m_FontPath</code> = &quot;Assets/Fonts/&quot;<a class="headerlink" href="#_CPPv410m_FontPath" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Specify the folder to store the font data to be asset-bundled.</p>
+<dt id="_CPPv218FontsAssetbundleId">
+<span id="FontsAssetbundleId__uint"></span>uint <code class="descclassname"></code><code class="descname">FontsAssetbundleId</code><a class="headerlink" href="#_CPPv218FontsAssetbundleId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asset bundle ID, which is using a font group when asset bundling</p>
 </dd></dl>
 
 </div>
 <div class="section" id="cf-messagedata">
-<span id="id6"></span><h2>Message data sheet<a class="headerlink" href="#cf-messagedata" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>Message data sheet<a class="headerlink" href="#cf-messagedata" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv413MessageDataId">
-<span id="_CPPv313MessageDataId"></span><span id="_CPPv213MessageDataId"></span><span id="MessageDataId__Dictionary:e_Locale.uint:"></span>Dictionary&lt;e_Locale, uint&gt; <code class="descname">MessageDataId</code><a class="headerlink" href="#_CPPv413MessageDataId" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv213MessageDataId">
+<span id="MessageDataId__Dictionary:e_Locale.uint:"></span>Dictionary&lt;e_Locale, uint&gt; <code class="descclassname"></code><code class="descname">MessageDataId</code><a class="headerlink" href="#_CPPv213MessageDataId" title="Permalink to this definition">¶</a></dt>
 <dd><p>When you add a locale data, please add the information below. Value is the asset bundle ID to be used when asset bundling the locale data.</p>
 </dd></dl>
 
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">e_Locale</span><span class="p">,</span> <span class="kt">uint</span><span class="p">&gt;</span> <span class="n">m_dicStrMessageDataMulId</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">e_Locale</span><span class="p">,</span> <span class="kt">uint</span><span class="p">&gt;</span> <span class="n">m_dicStrMessageDataMulId</span>
                    <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">e_Locale</span><span class="p">,</span> <span class="kt">uint</span><span class="p">&gt;()</span> <span class="p">{</span>
   <span class="p">{</span><span class="n">e_Locale</span><span class="p">.</span><span class="n">JP</span><span class="p">,</span> <span class="n">MulId</span><span class="p">.</span><span class="n">Id</span> <span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">)},</span>
   <span class="p">{</span><span class="n">e_Locale</span><span class="p">.</span><span class="n">EN</span><span class="p">,</span> <span class="n">MulId</span><span class="p">.</span><span class="n">Id</span> <span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">)},</span>
@@ -423,8 +332,8 @@
 <div class="section" id="ip">
 <span id="cf-address"></span><h2>Address/IP<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h2>
 <dl class="member">
-<dt id="_CPPv410httpserver">
-<span id="_CPPv310httpserver"></span><span id="_CPPv210httpserver"></span><span id="httpserver__string"></span>string <code class="descname">httpserver</code> = &quot;http://xxx.xxx.xxx.xxx/&quot;<a class="headerlink" href="#_CPPv410httpserver" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv210httpserver">
+<span id="httpserver__string"></span>string <code class="descclassname"></code><code class="descname">httpserver</code> = &quot;http://xxx.xxx.xxx.xxx/&quot;<a class="headerlink" href="#_CPPv210httpserver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the address when you download the asset bundle via HTTP</p>
 </dd></dl>
 
@@ -433,16 +342,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TextureDefault.html" class="btn btn-neutral float-right" title="Texture parts default" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="TextureDefault.html" class="btn btn-neutral float-right" title="Texture parts default" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlBar.html" class="btn btn-neutral float-left" title="CWinCtrlBar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlBar.html" class="btn btn-neutral" title="CWinCtrlBar" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -451,11 +359,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -468,15 +376,36 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

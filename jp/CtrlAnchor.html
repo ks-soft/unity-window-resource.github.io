@@ -1,53 +1,52 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>コントロールの配置について &mdash; WindowSystem 2.00 ドキュメント</title>
+  <title>コントロールの配置について &mdash; WindowSystem 1.07 ドキュメント</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="コントロールのプライオリティについて" href="CtrlPriority.html" />
-    <link rel="prev" title="WINDOW" href="WINDOW.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
+        <link rel="next" title="コントロールのプライオリティについて" href="CtrlPriority.html"/>
+        <link rel="prev" title="WINDOW" href="WINDOW.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -61,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -82,10 +81,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -112,20 +108,15 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">コントロールの配置について</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">座標の <span class="xref std std-ref">割合指定</span> :</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">アンカー：</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">ベースポジション:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">アンカーとベースポジションの関係</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">コントロールの配置について</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">アンカー：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">ベースポジション:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">アンカーとベースポジションの関係</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">コントロールのプライオリティについて</a></li>
@@ -163,6 +154,10 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -195,7 +190,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -210,54 +205,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>コントロールの配置について</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>コントロールの配置について</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CtrlAnchor.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CtrlAnchor.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -266,20 +241,7 @@
   <div class="section" id="ctrl-anchor">
 <span id="id1"></span><h1>コントロールの配置について<a class="headerlink" href="#ctrl-anchor" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
-<h2>座標の <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> :<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<blockquote>
-<div><p>コントロールの位置を親のサイズ(多くはウィンドウサイズ)の <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合</span></a> から計算することが可能です。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">{</span><span class="mi">20</span><span class="p">},</span><span class="mi">50</span><span class="p">{</span><span class="mi">30</span><span class="p">};</span>
-</pre></div>
-</div>
-<blockquote>
-<div><p>X = 0 + ウィンドウ幅 * 50/100</p>
-<p>Y = 50 + ウィンドウ高 * 30/100</p>
-</div></blockquote>
-</div></blockquote>
-</div>
-<div class="section" id="id3">
-<h2>アンカー：<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>アンカー：<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>ウィンドウ上の原点位置をコントロール毎に設定可能です。</p>
 <p>その原点位置から、相対座標を用いてコントロールの位置を指定できます。</p>
@@ -289,62 +251,62 @@
 </div></blockquote>
 <img alt="_images/CtrlAnchor.png" src="_images/CtrlAnchor.png" />
 </div>
-<div class="section" id="id4">
-<h2>ベースポジション:<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h2>ベースポジション:<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>コントロールの中心位置を自由に設定できます。</p>
 <p>中心位置の指定は、下図の通り9か所から設定可能です。</p>
 </div></blockquote>
 <img alt="_images/CtrlBase.png" src="_images/CtrlBase.png" />
 </div>
-<div class="section" id="id5">
-<h2>アンカーとベースポジションの関係<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h2>アンカーとベースポジションの関係<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>アンカーに応じて、ベースポジションのデフォルトが決まっています。</p>
 <p>例えば、アンカーが左上に設定されるとベースポジションも左上に設定されます。</p>
 <p>自動的に設定される値以外のベースポジションを指定したいときは、明示的に設定してください。</p>
 <p>以下にアンカーが設定されたときに自動的に設定されるベースポジションの値を列挙しておきます。</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
+<col width="51%" />
+<col width="49%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>アンカー</p></th>
-<th class="head"><p>ベースポジション</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">アンカー</th>
+<th class="head">ベースポジション</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
-<td><p>BASE_DEFAULT</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td>BASE_DEFAULT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
-<td><p>BASE_LEFTTOP</p></td>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td>BASE_LEFTTOP</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_LEFT</p></td>
-<td><p>BASE_LEFT</p></td>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
+<td>BASE_LEFT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTBOTTOM</p></td>
-<td><p>BASE_LEFTBOTTOM</p></td>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
+<td>BASE_LEFTBOTTOM</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_TOP</p></td>
-<td><p>BASE_TOP</p></td>
+<tr class="row-even"><td>ANCHOR_TOP</td>
+<td>BASE_TOP</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_CENTER</p></td>
-<td><p>BASE_CENTER</p></td>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
+<td>BASE_CENTER</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_BOTTOM</p></td>
-<td><p>BASE_BOTTOM</p></td>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
+<td>BASE_BOTTOM</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
-<td><p>BASE_RIGHTTOP</p></td>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td>BASE_RIGHTTOP</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_RIGHT</p></td>
-<td><p>BASE_RIGHT</p></td>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
+<td>BASE_RIGHT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
-<td><p>BASE_RIGHTBOTTOM</p></td>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
+<td>BASE_RIGHTBOTTOM</td>
 </tr>
 </tbody>
 </table>
@@ -353,16 +315,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CtrlPriority.html" class="btn btn-neutral float-right" title="コントロールのプライオリティについて" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CtrlPriority.html" class="btn btn-neutral float-right" title="コントロールのプライオリティについて" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="WINDOW.html" class="btn btn-neutral float-left" title="WINDOW" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="WINDOW.html" class="btn btn-neutral" title="WINDOW" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -371,11 +332,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -388,15 +349,37 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

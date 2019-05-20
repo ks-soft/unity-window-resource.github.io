@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>An arrangement of the control &mdash; WindowSystem 2.00 documentation</title>
+  <title>An arrangement of the control &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="The control priority" href="CtrlPriority.html" />
-    <link rel="prev" title="WINDOW" href="WINDOW.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="The control priority" href="CtrlPriority.html"/>
+        <link rel="prev" title="WINDOW" href="WINDOW.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -111,20 +108,15 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">An arrangement of the control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">specifying coordinate <span class="xref std std-ref">ratios</span> :</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Anchor:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">The base position</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">The relationship between the anchor and the base position</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">An arrangement of the control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Anchor:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">The base position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">The relationship between the anchor and the base position</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a></li>
@@ -159,9 +151,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -194,9 +190,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -209,54 +205,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>An arrangement of the control</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>An arrangement of the control</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CtrlAnchor.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CtrlAnchor.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -265,20 +241,7 @@
   <div class="section" id="ctrl-anchor">
 <span id="id1"></span><h1>An arrangement of the control<a class="headerlink" href="#ctrl-anchor" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
-<h2>specifying coordinate <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">ratios</span></a> :<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>You can calculate the position of a control from <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">ratios</span></a>  of its parent’s size (often the window size).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">{</span><span class="mi">20</span><span class="p">},</span><span class="mi">50</span><span class="p">{</span><span class="mi">30</span><span class="p">};</span>
-</pre></div>
-</div>
-<blockquote>
-<div><p>X = 0 + window width * 50/100</p>
-<p>Y = 50 + window height * 30/100</p>
-</div></blockquote>
-</div></blockquote>
-</div>
-<div class="section" id="id3">
-<h2>Anchor:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>Anchor:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>It is possible to set the position of the origin of the window for each control.</p>
 <p>You can specify the position of the control by using the relative position from the origin.</p>
@@ -288,62 +251,64 @@
 </div></blockquote>
 <img alt="_images/CtrlAnchor.png" src="_images/CtrlAnchor.png" />
 </div>
-<div class="section" id="id4">
-<h2>The base position<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>The base position<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can set the center position of the control to the individual.</p>
 <p>Setting of the center position can be set from a location of nine kind.</p>
 </div></blockquote>
 <img alt="_images/CtrlBase.png" src="_images/CtrlBase.png" />
 </div>
-<div class="section" id="id5">
-<h2>The relationship between the anchor and the base position<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>The relationship between the anchor and the base position<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Depending on the anchor, the default value of the base position decide.</p>
 <p>For example, when the anchor is set in the upper-left base position, it will be set to the upper left corner.</p>
 <p>If you want to set the base position other than the default value, you need to explicitly set the value.</p>
 <p>Enumerate the default value of the base position corresponding to the anchor value at below.</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
+<col width="51%" />
+<col width="49%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Anchor</p></th>
-<th class="head"><p>Base position</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Anchor</p>
+</th>
+<th class="head"><p class="first last">Base position</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
-<td><p>BASE_DEFAULT</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td>BASE_DEFAULT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
-<td><p>BASE_LEFTTOP</p></td>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td>BASE_LEFTTOP</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_LEFT</p></td>
-<td><p>BASE_LEFT</p></td>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
+<td>BASE_LEFT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTBOTTOM</p></td>
-<td><p>BASE_LEFTBOTTOM</p></td>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
+<td>BASE_LEFTBOTTOM</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_TOP</p></td>
-<td><p>BASE_TOP</p></td>
+<tr class="row-even"><td>ANCHOR_TOP</td>
+<td>BASE_TOP</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_CENTER</p></td>
-<td><p>BASE_CENTER</p></td>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
+<td>BASE_CENTER</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_BOTTOM</p></td>
-<td><p>BASE_BOTTOM</p></td>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
+<td>BASE_BOTTOM</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
-<td><p>BASE_RIGHTTOP</p></td>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td>BASE_RIGHTTOP</td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_RIGHT</p></td>
-<td><p>BASE_RIGHT</p></td>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
+<td>BASE_RIGHT</td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
-<td><p>BASE_RIGHTBOTTOM</p></td>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
+<td>BASE_RIGHTBOTTOM</td>
 </tr>
 </tbody>
 </table>
@@ -352,16 +317,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CtrlPriority.html" class="btn btn-neutral float-right" title="The control priority" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CtrlPriority.html" class="btn btn-neutral float-right" title="The control priority" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="WINDOW.html" class="btn btn-neutral float-left" title="WINDOW" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="WINDOW.html" class="btn btn-neutral" title="WINDOW" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -370,11 +334,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -387,15 +351,36 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

@@ -1,53 +1,52 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CMainSystemBase &mdash; WindowSystem 2.00 ドキュメント</title>
+  <title>CMainSystemBase &mdash; WindowSystem 1.07 ドキュメント</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="CAssetBundleMgrについて" href="CAssetBundleMgr.html" />
-    <link rel="prev" title="BAR" href="BAR.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
+        <link rel="next" title="CAssetBundleMgrについて" href="CAssetBundleMgr.html"/>
+        <link rel="prev" title="BAR" href="BAR.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -61,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -82,10 +81,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -110,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -152,11 +144,19 @@
 <li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CMainSystemBase</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CMainSystemBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#iloader">ILoaderインターフェース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imanager">IManagerインターフェース</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -189,7 +189,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -204,54 +204,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CMainSystemBase</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CMainSystemBase</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CMainSystemBase.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CMainSystemBase.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -259,208 +239,216 @@
             
   <div class="section" id="cmainsystembase">
 <h1>CMainSystemBase<a class="headerlink" href="#cmainsystembase" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote>
+<blockquote id="id1">
 <div><p>ゲームオブジェクトに貼り付けた後、常駐します(シーンが切り替わっても削除されません)。</p>
 <p>常駐するマネージャなどをこのスクリプト経由で追加することによって、必要なアセットをダウンロードしてくれます。</p>
 <p>また、シーン切り替え等に、このスクリプトを使うとAssetBundleダウンロード時などに切り替えをペンディングしてくれます。</p>
 <p>使うときは、CMainSystemクラスを作成し、継承するようにしてください。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CMainSystemBase">
-<code class="descname">class CMainSystemBase</code><a class="headerlink" href="#class-CMainSystemBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CMainSystemBase.Awake">
-void <code class="descname">Awake</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CMainSystemBase.Awake" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>Awake関数の中で AddComponent,addManagerをすることによって、Start関数内で自動的に必要な初期化や必要なアセットバンドルの読み込みを自動的に行います。</p>
+<dl class="function">
+<dt id="_CPPv25Awakev">
+<span id="Awake"></span>void <code class="descclassname"></code><code class="descname">Awake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25Awakev" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Awakeの中で AddComponent,addManagerなどをすることによって、必要な初期化や、Start内でアセットバンドルに対して、読み込みを自動的に行ってくれます。</p>
 <p>代表的な記述方法は次の通りです。</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>void Start() は、継承先でnewによって上書きしないようにしてください。
-読み込みが正常に行えなくなります。</p>
-</div>
 </dd></dl>
 
-<blockquote>
-<div><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">void Start() は、継承先でnewによって上書きしないようにしてください。
+読み込みが正常に行えなくなります。</p>
+</div>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+       <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
 
-   <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-       <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
-       <span class="k">return</span><span class="p">;</span>
-   <span class="p">}</span>
-   <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
 
-   <span class="c1">// Add Component</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
-       <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
-   <span class="p">}</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
-   <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
+    <span class="c1">// Add Component</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+    <span class="p">}</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CBgmResourceMgr</span><span class="p">&gt;();</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSeResourceMgr</span><span class="p">&gt;();</span>
+    <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSoundEffectMgr</span><span class="p">&gt;();</span>
 
-   <span class="c1">// Managers that need to be initialized.</span>
-   <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
+    <span class="c1">// 初期化の必要なマネージャ.</span>
+    <span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="method-addManager">
-void <code class="descname">addManager</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-IManager" title="IManager class">IManager</a> <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#method-addManager" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param IManager mgr</dt>
-<dd class="field-odd"><p>アセットバンドルを読み込み初期化する必要のあるオブジェクト</p>
-</dd>
-</dl>
+<dl class="function">
+<dt id="_CPPv210addManager8IManager">
+<span id="addManager__IManager"></span>void <code class="descclassname"></code><code class="descname">addManager</code><span class="sig-paren">(</span>IManager <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210addManager8IManager" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ IManager mgr:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">アセットバンドルを読み込み初期化する必要のあるオブジェクト</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Awake内で、AddComponetする必要があります。</p>
+</div>
 </dd></dl>
 
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>Awake内で、AddComponetする必要があります。</p>
-</div>
-<dl class="method">
-<dt id="method-initialize">
-<em>virtual</em> void <code class="descname">initialize</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>継承先でオーバライドしてください。
+<dl class="function">
+<dt id="c.initialize">
+virtual void <code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>継承先でオーバライドしてください。
 アセットバンドルの読み込みが終わり、ILoader,IManagerの読み込みが完了した後、呼び出される。</p>
-<dl class="method">
-<dt id="method-OnChangeScene">
-<em>virtual</em> void <code class="descname">OnChangeScene</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-OnChangeScene" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>継承先でオーバライドしてください。
+<dl class="function">
+<dt id="_CPPv213OnChangeScenev">
+<span id="OnChangeScene"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">OnChangeScene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213OnChangeScenev" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>継承先でオーバライドしてください。
 シーンを切り替えたときに呼び出されます。</p>
-<dl class="method">
-<dt id="method-changeScene">
-bool <code class="descname">changeScene</code> <span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange=false</em><span class="sig-paren">)</span><a class="headerlink" href="#method-changeScene" title="この定義へのパーマリンク">¶</a></dt>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211changeScene6stringb">
+<span id="changeScene__string.b"></span>bool <code class="descclassname"></code><code class="descname">changeScene</code><span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211changeScene6stringb" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定したシーンに切り替えます。</p>
 <p>Application.LoadLevelと同等ですが、以下の点で異なります。</p>
 <ol class="arabic simple">
-<li><p>フェードオブジェクトのフェードが終わるまで待ちます。</p></li>
-<li><p>アセットバンドル読み込み中などにシーン切り替えをペンディングしてくれます。</p></li>
-<li><p>クリエイト済のウィンドウを自動的に閉じてくれます。</p></li>
+<li>フェードオブジェクトのフェードが終わるまで待ちます。</li>
+<li>アセットバンドル読み込み中などにシーン切り替えをペンディングしてくれます。</li>
+<li>クリエイト済のウィンドウを自動的に閉じてくれます。</li>
 </ol>
 <p>シーン切り替え直前(Application.LoadLevelが呼び出される直前)に、OnChageSceneが呼び出されます。</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-isChangingScene">
-bool <code class="descname">isChangingScene</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isChangingScene" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>シーン読み込み中かどうか判定します。</p>
+<dl class="member">
+<dt id="_CPPv215isChangingScene">
+<span id="isChangingScene__b"></span>bool <code class="descclassname"></code><code class="descname">isChangingScene</code><a class="headerlink" href="#_CPPv215isChangingScene" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シーン読み込み中かどうか判定します。</p>
 <p>CMainSystemBase.chageSceneによってシーンを切り替えているときのみ有効です。</p>
-<dl class="property">
-<dt id="property-isInitialized">
-bool <code class="descname">isInitialized</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isInitialized" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>初期化が終わっているかどうか判定します。</p>
-<dl class="method">
-<dt id="method-randi">
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randi" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>整数値の乱数を取得します。</p>
-<dl class="method">
-<dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
-<p>指定された範囲の乱数を取得します。</p>
-<dl class="method">
-<dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
-<p>指定された範囲の乱数を取得します。</p>
-<dl class="method">
-<dt id="method-randf">
-<em>static</em> float <code class="descname">randf</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randf" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>浮動小数点の乱数を取得します。</p>
-</div></blockquote>
-<dl class="class">
-<dt id="class-ILoader">
-<code class="descname">class ILoader</code><a class="headerlink" href="#class-ILoader" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-ILoader.isLoading">
-bool <code class="descname">isLoading</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ILoader.isLoading" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return bool</dt>
-<dd class="field-odd"><p>読み込み中はtrue,読み込み終了状態の時はfalse</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="member">
+<dt id="_CPPv213isInitialized">
+<span id="isInitialized__b"></span>bool <code class="descclassname"></code><code class="descname">isInitialized</code><a class="headerlink" href="#_CPPv213isInitialized" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>初期化が終わっているかどうか判定します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv25randiv">
+<span id="randi"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiv" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>整数値の乱数を取得します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv25randii">
+<span id="randi__i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randii" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定された範囲の乱数を取得します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv25randiii">
+<span id="randi__i.i"></span><em class="property">static</em> int <code class="descclassname"></code><code class="descname">randi</code><span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randiii" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定された範囲の乱数を取得します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv25randfv">
+<span id="randf"></span><em class="property">static</em> float <code class="descclassname"></code><code class="descname">randf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25randfv" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>浮動小数点の乱数を取得します。</p>
+</dd></dl>
+
+<div class="section" id="iloader">
+<h2>ILoaderインターフェース<a class="headerlink" href="#iloader" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="function">
+<dt id="_CPPv29isLoadingv">
+<span id="isLoading"></span>bool <code class="descclassname"></code><code class="descname">isLoading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29isLoadingv" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return bool:</th><td class="field-body">読み込み中はtrue,読み込み終了状態の時はfalse</td>
+</tr>
+</tbody>
+</table>
 <p>MonoBehaviourを継承したスクリプトにつけてください。</p>
 <p>CMainSystemBaseと同じゲームオブジェクト内のスクリプトにおいて、ILoaderを持つオブジェクトを調べ、
 ILoader.isLoading() がfalseになるまで待機します。</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>Awake内で、AddComponetする必要があります。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Awake内で、AddComponetする必要があります。</p>
 </div>
+</div></blockquote>
 </dd></dl>
 
-<dl class="class">
-<dt id="class-IManager">
-<code class="descname">class IManager</code><a class="headerlink" href="#class-IManager" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Awake()内で、CMainSystemBase.addManagerで追加してください。</p>
+</div>
+<div class="section" id="imanager">
+<h2>IManagerインターフェース<a class="headerlink" href="#imanager" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>Awake()内で、CMainSystemBase.addManagerで追加してください。</p>
 <p>アセットバンドルを読み込んだのち、それを使って初期化する必要のあるオブジェクトに対してつけておく必要があります。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">());</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">(</span><span class="n">Utility</span><span class="p">.</span><span class="n">getSystemLocale</span><span class="p">()));</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="method-IManager.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAssetBundles</em><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CAssetBundle[] aAssetBundles</dt>
-<dd class="field-odd"><p>読み込み終わったアセットバンドルの配列</p>
-</dd>
-</dl>
+<dl class="function">
+<dt>
+bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAssetBundle[]<em>&nbsp;aAssetBundles</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>aAssetBundles</strong> (<em>CAssetBundle[]</em>) &#8211; 読み込み終わったアセットバンドルの配列</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
-<dl class="method">
-<dt id="method-IManager.release">
-void <code class="descname">release</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.release" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ゲームオブジェクトが解放されるときに、呼ばれる解放処理</p>
-<dl class="method">
-<dt id="method-IManager.getAssetBundleIds">
-uint[] <code class="descname">getAssetBundleIds</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.getAssetBundleIds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return uint[]</dt>
-<dd class="field-odd"><p>初期化時に読み込んでおく必要のあるアセットバンドルのID</p>
-</dd>
-</dl>
+<dl class="function">
+<dt id="_CPPv27releasev">
+<span id="release"></span>void <code class="descclassname"></code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27releasev" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ゲームオブジェクトが解放されるときに、呼ばれる解放処理</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="c.getAssetBundleIds">
+uint[] <code class="descname">getAssetBundleIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.getAssetBundleIds" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return uint[]:</th><td class="field-body">初期化時に読み込んでおく必要のあるアセットバンドルのID</td>
+</tr>
+</tbody>
+</table>
 <p>読み込む必要のあるアセットバンドルIDの配列を返す関数です。</p>
 </dd></dl>
 
 </div>
+</div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CAssetBundleMgr.html" class="btn btn-neutral float-right" title="CAssetBundleMgrについて" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CAssetBundleMgr.html" class="btn btn-neutral float-right" title="CAssetBundleMgrについて" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BAR.html" class="btn btn-neutral float-left" title="BAR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BAR.html" class="btn btn-neutral" title="BAR" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -469,11 +457,11 @@ uint[] <code class="descname">getAssetBundleIds</code> <span class="sig-paren">(
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -486,15 +474,37 @@ uint[] <code class="descname">getAssetBundleIds</code> <span class="sig-paren">(
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

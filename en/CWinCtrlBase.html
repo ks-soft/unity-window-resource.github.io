@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlBase &mdash; WindowSystem 2.00 documentation</title>
+  <title>CWinCtrlBase &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CWinContents" href="CWinContents.html" />
-    <link rel="prev" title="CWindowBase" href="CWindowBase.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="CWinContents" href="CWinContents.html"/>
+        <link rel="prev" title="CWindowBase" href="CWindowBase.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,15 +146,25 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlBase</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#contents-access">About contents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contentslist-access">Contents list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">The main properties / methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">For the contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">For the contents list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Others</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
@@ -192,9 +195,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -207,73 +210,53 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CWinCtrlBase</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CWinCtrlBase</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CWinCtrlBase.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CWinCtrlBase.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="cwinctrlbase">
-<h1>CWinCtrlBase<a class="headerlink" href="#cwinctrlbase" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>CWinCtrlBase<a class="headerlink" href="#cwinctrlbase" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>All controls have inherited CWinCtrlBase.</p>
 <p>CWinCtrlBase has common methods / properties of each control.</p>
 <p>Control that inherits CWinCtrlBase is also one that has its own properties. Please refer to the description of each control about it.</p>
 </div></blockquote>
 <div class="section" id="contents-access">
-<span id="id1"></span><h2>About contents<a class="headerlink" href="#contents-access" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>About contents<a class="headerlink" href="#contents-access" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>By <span class="xref std std-ref">getContents()</span>, you can access controls that are defined by the CONTENTS property.</p>
-<p>The corresponding control: <a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a> , <a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a> , <a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p>
+<div><p>By <a class="reference internal" href="#getcontents"><span>getContents()</span></a>, you can access controls that are defined by the CONTENTS property.</p>
+<p>The corresponding control: <a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a> 、 <a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a> 、 <a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Get the CONTAINER(Map)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Get the CONTAINER(Map)</span>
 <span class="n">CWinCtrlContainer</span>      <span class="n">ctnMap</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlContainer</span><span class="p">&gt;(</span><span class="n">CONTAINER_Map</span><span class="p">);</span>
 <span class="n">CWinContents</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">ctnMap</span><span class="p">.</span><span class="n">getContents</span><span class="p">();</span>
 <span class="c1">// Get the BUTTON(A) in contents</span>
@@ -281,20 +264,20 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>By <span class="xref std std-ref">CWindowBase.find</span> and <span class="xref std std-ref">CWinContents.find</span> , you can get the specific control on the contents.</p>
+<div><p>By <a class="reference internal" href="CWindowBase.html#cwindowbase-find"><span>CWindowBase.find</span></a> and <a class="reference internal" href="CWinContents.html#contents-find"><span>CWinContents.find</span></a> , you can get the specific control on the contents.</p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="contentslist-access">
-<span id="id2"></span><h2>Contents list<a class="headerlink" href="#contentslist-access" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>Contents list<a class="headerlink" href="#contentslist-access" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>List box have a lot of contents. To add a row in the list box, you need to  duplicate the <a class="reference internal" href="#contents-access"><span class="std std-ref">contents</span></a> as a template. Therefore, the control with the same control ID exists on the contents list. To get a control on the contents list, it is necessary to identify the contents from the contents list.</p>
-<p>In this case, you use the  <span class="xref std std-ref">getContentsFromIndex(int index)</span> .</p>
+<div><p>List box have a lot of contents. To add a row in the list box, you need to  duplicate the <a class="reference internal" href="#contents-access"><span>contents</span></a> as a template. Therefore, the control with the same control ID exists on the contents list. To get a control on the contents list, it is necessary to identify the contents from the contents list.</p>
+<p>In this case, you use the  <a class="reference internal" href="#getcontentsfromindex"><span>getContentsFromIndex(int index)</span></a> .</p>
 <p>It shows a typical code for access to the control in the list box.</p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get the listbox control</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// get the listbox control</span>
 <span class="n">CWinCtrlListbox</span>     <span class="n">lbFriends</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlListbox</span><span class="p">&gt;(</span><span class="n">LISTBOX_Friends</span><span class="p">);</span>
 
 <span class="c1">// set the listbox contents number</span>
@@ -308,422 +291,448 @@
     <span class="n">CWInCtrlIcon</span> <span class="n">icon</span> <span class="p">=</span> <span class="n">contents</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlIcon</span><span class="p">&gt;(</span><span class="n">ICON_Avatar</span><span class="p">);</span>
 </pre></div>
 </div>
-<dl class="class">
-<dt id="class-CWinCtrlBase">
-<code class="descname">class CWinCtrlBase</code><a class="headerlink" href="#class-CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>For the contents</p>
-<blockquote>
-<div><dl class="method">
-<dt id="method-getContents">
-<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">getContents</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-getContents" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="field-list simple">
-<dt class="field-odd">return CWinContents</dt>
-<dd class="field-odd"><p>Gets the  <a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">contents</span></code></a>  defined by the <a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span class="std std-ref">CONTENTS</span></a> properties.</p>
-</dd>
-</dl>
-<p><em>For the contents list</em></p>
-<dl class="property">
-<dt id="property-count">
-int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-count" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get the number of content lists.</p>
-<dl class="method">
-<dt id="method-resize">
-void <code class="descname">resize</code> <span class="sig-paren">(</span>int <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#method-resize" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int num</dt>
-<dd class="field-odd"><p>Contents list</p>
-</dd>
-</dl>
+</div>
+<div class="section" id="id4">
+<h2>The main properties / methods<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>For the contents<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="getcontents"></span><dl class="function">
+<dt id="_CPPv211getContentsv">
+<span id="getContents"></span>CWinContents <code class="descclassname"></code><code class="descname">getContents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211getContentsv" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first last">Get the <a class="reference internal" href="CWinContents.html#cwincontents"><span>contents</span></a>  that is defined by <a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span>CONTENTS</span></a> property.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
-<p>Set the number of content lists.</p>
-<p>As the number of content lists increases, duplicate the content as needed as a template.</p>
-<p>It does not work with elements in content lists that already exist.</p>
-<dl class="method">
-<dt id="method-insert">
-<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">insert</code> <span class="sig-paren">(</span>int <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-insert" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int pos</dt>
-<dd class="field-odd"><p>Where to create and insert content into the content list.</p>
-</dd>
-<dt class="field-even">Return CWinContents</dt>
-<dd class="field-even"><p>:type:Content&lt;CWinContents&gt;`  in the content list</p>
-</dd>
-</dl>
+</div>
+<div class="section" id="id6">
+<h3>For the contents list<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="member">
+<dt id="_CPPv25count">
+<span id="count__i"></span>int <code class="descclassname"></code><code class="descname">count</code><a class="headerlink" href="#_CPPv25count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a number of contents list .</p>
 </dd></dl>
 
-<p>Generate and insert content to a specific location in the content list.</p>
-<dl class="method">
-<dt id="method-getContentsFromIndex">
-<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">getContentsFromIndex</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getContentsFromIndex" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int index</dt>
-<dd class="field-odd"><p>Index of the content you want to get in the content list.</p>
-</dd>
-<dt class="field-even">Return CWinContents</dt>
-<dd class="field-even"><p>:type:Content&lt;CWinContents&gt;`  in the content list</p>
-</dd>
-</dl>
+<dl class="function">
+<dt id="_CPPv26resizei">
+<span id="resize__i"></span>void <code class="descclassname"></code><code class="descname">resize</code><span class="sig-paren">(</span>int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26resizei" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int count:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The number of contents list</td>
+</tr>
+</tbody>
+</table>
+<p>Set the number of contents list .</p>
+<p>When the number of the contents list increased, a necessary number are copied from the contents as a template.</p>
+<p>It does not operate an element in the list of contents which existed already.</p>
 </dd></dl>
 
-<p>Get from a content list by index.</p>
-<dl class="method">
-<dt id="method-getContentsIndex">
-int <code class="descname">getContentsIndex</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>ctrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getContentsIndex" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="_CPPv26inserti">
+<span id="insert__i"></span>CWinContents <code class="descclassname"></code><code class="descname">insert</code><span class="sig-paren">(</span>int <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26inserti" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int pos:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">After contents generation , you specify a position  that you want to insert it on the contents list.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last"><a class="reference internal" href="CWinContents.html#cwincontents"><span>Contents</span></a> on the contents list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Copy the contents as a template,and insert it to the specified location.</p>
+</dd></dl>
+
+<span class="target" id="getcontentsfromindex"></span><dl class="function">
+<dt id="_CPPv220getContentsFromIndexi">
+<span id="getContentsFromIndex__i"></span>CWinContents <code class="descclassname"></code><code class="descname">getContentsFromIndex</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220getContentsFromIndexi" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters int index:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Contents index that you want to get it on the contents list</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last"><a class="reference internal" href="CWinContents.html#cwincontents"><span>Contents</span></a> on the contents list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Get the contents using the index from the contents list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216getContentsIndex12CWinCtrlBase">
+<span id="getContentsIndex__CWinCtrlBase"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinCtrlBase <em>ctrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>It returns the index that the control  on the contents list is included in. if the control is not included on the contents list,It returns -1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216getContentsIndex12CWinContents">
+<span id="getContentsIndex__CWinContents"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinContents <em>contents</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>It returns the index that the contents on the contents list is included in. if the contents is not included on the contents list,It returns -1.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h3>Others<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="_CPPv28ToStringv">
+<span id="ToString"></span>string <code class="descclassname"></code><code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28ToStringv" title="Permalink to this definition">¶</a></dt>
+<dd><p>It generates a string by the type and ID of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv22id">
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the ID of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24kind">
+<span id="kind__e_WinCtrlKind"></span>e_WinCtrlKind <code class="descclassname"></code><code class="descname">kind</code><a class="headerlink" href="#_CPPv24kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>the kind of control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28priority">
+<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>the priority of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28position">
+<span id="position__Vector3"></span>Vector3 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the control position.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv211absPosition">
+<span id="absPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">absPosition</code><a class="headerlink" href="#_CPPv211absPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the window relative position of the control.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv214screenPosition">
+<span id="screenPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">screenPosition</code><a class="headerlink" href="#_CPPv214screenPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the absolute position of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25width">
+<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Returns the index of the content list that contains the specified control.If it is not in any content list element, -1 is returned.</p>
-<dl class="method">
-<dt>
-int <code class="descname">getContentsIndex</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <em>contents</em><span class="sig-paren">)</span></dt>
+<dl class="member">
+<dt id="_CPPv26height">
+<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24size">
+<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212contentsSize">
+<span id="contentsSize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">contentsSize</code><a class="headerlink" href="#_CPPv212contentsSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the size of the contents</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28getColori">
+<span id="getColor__i"></span>WinColor <code class="descclassname"></code><code class="descname">getColor</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28getColori" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ~ 7. Set the color. You can define up to eight texture parts . Therefore, you can define the eight color at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28setColori8WinColor">
+<span id="setColor__i.WinColor"></span>void <code class="descclassname"></code><code class="descname">setColor</code><span class="sig-paren">(</span>int <em>index</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setColori8WinColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the color. You can define up to eight texture parts . Therefore, you can define the eight color at the maximum.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25color">
+<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the color of the texture part number 0 .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26color1">
+<span id="color1__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color1</code><a class="headerlink" href="#_CPPv26color1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Returns the index of the content list that contains the specified content.If it is not in any content list element, -1 is returned.</p>
-<p>Others</p>
-<dl class="method">
-<dt id="method-ToString">
-string <code class="descname">ToString</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ToString" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color2">
+<span id="color2__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color2</code><a class="headerlink" href="#_CPPv26color2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Generate a string by control type and ID.</p>
-<dl class="property">
-<dt id="property-id">
-uint <code class="descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-id" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color3">
+<span id="color3__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color3</code><a class="headerlink" href="#_CPPv26color3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get/Set the ID of the control.</p>
-<dl class="property">
-<dt id="property-kind">
-e_WinCtrlKind <code class="descname">kind</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-kind" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color4">
+<span id="color4__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color4</code><a class="headerlink" href="#_CPPv26color4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Return the type of control.</p>
-<dl class="property">
-<dt id="property-priority">
-int <code class="descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-priority" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color5">
+<span id="color5__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color5</code><a class="headerlink" href="#_CPPv26color5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get/Set the priority of the control.</p>
-<dl class="property">
-<dt id="property-position">
-Vector3 <code class="descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-position" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color6">
+<span id="color6__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color6</code><a class="headerlink" href="#_CPPv26color6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Set the coordinates of a control.</p>
-<dl class="property">
-<dt id="property-absPosition">
-Vector2 <code class="descname">absPosition</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-absPosition" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26color7">
+<span id="color7__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color7</code><a class="headerlink" href="#_CPPv26color7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the color of the texture part number 1 (～ 7 ) .</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212setTextureIdi4uint">
+<span id="setTextureId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setTextureId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>texid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212setTextureIdi4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture ID.  You can define up to eight texture parts . Therefore, you can define the eight texture at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212getTextureIdi">
+<span id="getTextureId__i"></span>WinColor <code class="descclassname"></code><code class="descname">getTextureId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212getTextureIdi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the texture ID.  You can define up to eight texture parts . Therefore, you can define the eight texture at the maximum.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25texId">
+<span id="texId__uint"></span>uint <code class="descclassname"></code><code class="descname">texId</code><a class="headerlink" href="#_CPPv25texId" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get Control Coordinates From Window Base</p>
-<dl class="property">
-<dt id="property-screenPosition">
-Vector2 <code class="descname">screenPosition</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-screenPosition" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv26texId1">
+<span id="texId1__uint"></span>uint <code class="descclassname"></code><code class="descname">texId1</code><a class="headerlink" href="#_CPPv26texId1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set a texture ID.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv29setPartIdi4uint">
+<span id="setPartId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setPartId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>partId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29setPartIdi4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture part ID.  You can define up to eight texture parts . Therefore, you can define the eight texture part ID at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv29getPartIdi">
+<span id="getPartId__i"></span>uint <code class="descclassname"></code><code class="descname">getPartId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29getPartIdi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the texture part ID.  You can define up to eight texture parts . Therefore, you can define the eight texture part ID at the maximum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214setTextureSizei7Vector2">
+<span id="setTextureSize__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureSize</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214setTextureSizei7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the texture part size.  You can define up to eight texture parts . Therefore, you can define the eight texture part size at the maximum.When index = 0, it becomes the equivalent of accessing (width, height).</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25parts">
+<span id="parts__uint"></span>uint <code class="descclassname"></code><code class="descname">parts</code><a class="headerlink" href="#_CPPv25parts" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get Control Coordinates From Screen Reference</p>
-<dl class="property">
-<dt id="property-width">
-float <code class="descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-width" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId1">
+<span id="partId1__uint"></span>uint <code class="descclassname"></code><code class="descname">partId1</code><a class="headerlink" href="#_CPPv27partId1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="property">
-<dt id="property-height">
-float <code class="descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-height" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId2">
+<span id="partId2__uint"></span>uint <code class="descclassname"></code><code class="descname">partId2</code><a class="headerlink" href="#_CPPv27partId2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get/Set the size of the control.</p>
-<dl class="property">
-<dt id="property-size">
-Vector2 <code class="descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-size" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId3">
+<span id="partId3__uint"></span>uint <code class="descclassname"></code><code class="descname">partId3</code><a class="headerlink" href="#_CPPv27partId3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get/Set the size of the control.</p>
-<dl class="property">
-<dt id="property-contentsSize">
-Vector2 <code class="descname">contentsSize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-contentsSize" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId4">
+<span id="partId4__uint"></span>uint <code class="descclassname"></code><code class="descname">partId4</code><a class="headerlink" href="#_CPPv27partId4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Get/Set the size of the content.</p>
-<dl class="method">
-<dt id="method-getColor">
-WinColor <code class="descname">getColor</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getColor" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId5">
+<span id="partId5__uint"></span>uint <code class="descclassname"></code><code class="descname">partId5</code><a class="headerlink" href="#_CPPv27partId5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>index = 0 … 7. Get the color. A control can have up to 8 texture parts, so you can have up to 8 colors.</p>
-<dl class="method">
-<dt id="method-setColor">
-void <code class="descname">setColor</code> <span class="sig-paren">(</span>int <em>index</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setColor" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27partId6">
+<span id="partId6__uint"></span>uint <code class="descclassname"></code><code class="descname">partId6</code><a class="headerlink" href="#_CPPv27partId6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>index = 0 … 7. Set the color. A control can have up to 8 texture parts, so you can have up to 8 colors.</p>
-<dl class="property">
-<dt id="property-color">
-WinColor <code class="descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv27partId7">
+<span id="partId7__uint"></span>uint <code class="descclassname"></code><code class="descname">partId7</code><a class="headerlink" href="#_CPPv27partId7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the texture part ID.</p>
+</dd></dl>
 
-<p>Get/set the color of texture part number 0.</p>
-<dl class="property">
-<dt id="property-color1">
-WinColor <code class="descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv216setTextureOffseti7Vector2">
+<span id="setTextureOffset__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureOffset</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216setTextureOffseti7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Set the display offset of texture parts.  You can define up to eight texture parts . Therefore, you can define the eight display offsets at the maximum.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color2">
-WinColor <code class="descname">color2</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv216getTextureOffseti">
+<span id="getTextureOffset__i"></span>Vector2 <code class="descclassname"></code><code class="descname">getTextureOffset</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getTextureOffseti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set between index = 0 ～ 7. Get the display offset of texture parts.  You can define up to eight texture parts . Therefore, you can define the eight display offsets at the maximum.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color3">
-WinColor <code class="descname">color3</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv26anchor">
+<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the anchor to determine the origin .</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color4">
-WinColor <code class="descname">color4</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color4" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv210baseAnchor">
+<span id="baseAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">baseAnchor</code><a class="headerlink" href="#_CPPv210baseAnchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set/Get the base anchor to determine to where the center of the control .</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color5">
-WinColor <code class="descname">color5</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color5" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv210textAnchor">
+<span id="textAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">textAnchor</code><a class="headerlink" href="#_CPPv210textAnchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set/Get the text anchor to decide to where the center of the caption .</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color6">
-WinColor <code class="descname">color6</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color6" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv28fontKind">
+<span id="fontKind__uint"></span>uint <code class="descclassname"></code><code class="descname">fontKind</code><a class="headerlink" href="#_CPPv28fontKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the type of font.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-color7">
-WinColor <code class="descname">color7</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color7" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv27caption">
+<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the caption.</p>
+</dd></dl>
 
-<p>Get/set the color of texture part number 1 (… 7).</p>
-<dl class="method">
-<dt id="method-setTextureId">
-void <code class="descname">setTextureId</code> <span class="sig-paren">(</span>int <em>index</em>, uint <em>texid</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv29captionId">
+<span id="captionId__uint"></span>uint <code class="descclassname"></code><code class="descname">captionId</code><a class="headerlink" href="#_CPPv29captionId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set caption ID. However, the setting does not affect caption..</p>
+</dd></dl>
 
-<p>index = 0 … 7. Set a specific texture ID.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture IDs.</p>
-<dl class="method">
-<dt id="method-getTextureId">
-WinColor <code class="descname">getTextureId</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getTextureId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv212captionColor">
+<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the caption color.</p>
+</dd></dl>
 
-<p>index = 0 … 7. Set a specific texture ID.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture IDs.</p>
-<dl class="property">
-<dt id="property-texId">
-uint <code class="descname">texId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-texId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv213captionOffset">
+<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the display offset of caption.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-texId1">
-uint <code class="descname">texId1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-texId1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv29lineSpace">
+<span id="lineSpace__float"></span>float <code class="descclassname"></code><code class="descname">lineSpace</code><a class="headerlink" href="#_CPPv29lineSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the space between the contents. In addition, in a RichText, it becomes the width of the space between the lines.</p>
+</dd></dl>
 
-<p>Get/Set the Texture ID.</p>
-<dl class="method">
-<dt id="method-setPartId">
-void <code class="descname">setPartId</code> <span class="sig-paren">(</span>int <em>index</em>, uint <em>partId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setPartId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv24SEId">
+<span id="SEId__uint"></span>uint <code class="descclassname"></code><code class="descname">SEId</code><a class="headerlink" href="#_CPPv24SEId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the ID of the SE assigned to the control .</p>
+</dd></dl>
 
-<p>index = 0 … 7. Set a specific texture part ID.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture part IDs.</p>
-<dl class="method">
-<dt id="method-getPartId">
-uint <code class="descname">getPartId</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getPartId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv26parent">
+<span id="parent__CWinContents"></span>CWinContents <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the contents that this control is included in.</p>
+</dd></dl>
 
-<p>index = 0 … 7. Set a specific texture part ID.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture part IDs.</p>
-<dl class="method">
-<dt id="method-setTextureSize">
-void <code class="descname">setTextureSize</code> <span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureSize" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="c.groups">
+CWinCtrlBase[] <code class="descname">groups</code><a class="headerlink" href="#c.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the group with the control .</p>
+</dd></dl>
 
-<p>index = 0 … 7. Set a specific texture part size.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture sizes.In particular, when index = 0, it is equivalent to accessing width, height.</p>
-<dl class="property">
-<dt id="property-parts">
-uint <code class="descname">parts</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-parts" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv26window">
+<span id="window__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">window</code><a class="headerlink" href="#_CPPv26window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the window that contains the control.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-partId1">
-uint <code class="descname">partId1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv25style">
+<span id="style__e_WinCtrlStyle"></span>e_WinCtrlStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the control style flag.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-partId2">
-uint <code class="descname">partId2</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-partId3">
-uint <code class="descname">partId3</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-partId4">
-uint <code class="descname">partId4</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId4" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-partId5">
-uint <code class="descname">partId5</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId5" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-partId6">
-uint <code class="descname">partId6</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId6" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-partId7">
-uint <code class="descname">partId7</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId7" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the Texture part ID.</p>
-<dl class="method">
-<dt id="method-setTextureOffset">
-void <code class="descname">setTextureOffset</code> <span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureOffset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>index = 0 … 7. Set a specific texture part offset.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture part offsets.</p>
-<dl class="method">
-<dt id="method-getTextureOffset">
-Vector2 <code class="descname">getTextureOffset</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getTextureOffset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>index = 0 … 7. Set a specific texture part offset.Since a control can have up to 8 texture parts, it can also have 8 corresponding texture part offsets.</p>
-<dl class="property">
-<dt id="property-anchor">
-e_Anchor <code class="descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-anchor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the anchor for determining the origin position.</p>
-<dl class="property">
-<dt id="property-baseAnchor">
-e_Anchor <code class="descname">baseAnchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-baseAnchor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the base anchor that determines where the control’s origin will be.</p>
-<dl class="property">
-<dt id="property-textAnchor">
-e_Anchor <code class="descname">textAnchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-textAnchor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/set the text anchor that determines where the caption’s origin will be.</p>
-<dl class="property">
-<dt id="property-fontKind">
-uint <code class="descname">fontKind</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-fontKind" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the font type.</p>
-<dl class="property">
-<dt id="property-caption">
-string <code class="descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-caption" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the caption.</p>
-<dl class="property">
-<dt id="property-captionId">
-uint <code class="descname">captionId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-captionId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the Caption ID. However, this does not affect caption.</p>
-<dl class="property">
-<dt id="property-captionColor">
-WinColor <code class="descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-captionColor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the caption color.</p>
-<dl class="property">
-<dt id="property-captionOffset">
-Vector2 <code class="descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-captionOffset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Set the display offset of the caption.</p>
-<dl class="property">
-<dt id="property-lineSpace">
-float <code class="descname">lineSpace</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-lineSpace" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Set the spacing between content. In rich text, for example, this is the value between lines.</p>
-<dl class="property">
-<dt id="property-SEId">
-uint <code class="descname">SEId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-SEId" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the ID of the SE assigned to the control.</p>
-<dl class="property">
-<dt id="property-parent">
-<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">parent</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Gets the content that contains the control.</p>
-<dl class="property">
-<dt id="property-groups">
-<a class="reference internal" href="#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a>[] <code class="descname">groups</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-groups" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Gets the GROUP that the control has.</p>
-<dl class="property">
-<dt id="property-window">
-<a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">window</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-window" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Return the window that contains the control.</p>
-<dl class="property">
-<dt id="property-style">
-e_WinCtrlStyle <code class="descname">style</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-style" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Gets the style flag for a control.</p>
-<dl class="property">
-<dt id="property-hide">
-bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-hide" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>true: Turns off the display of the control.</p>
-<p>false: Show controls.</p>
-<dl class="property">
-<dt id="property-disable">
-bool <code class="descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-disable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<ul class="simple">
-<li><p>true: makes the control inoperable and darkens.</p></li>
-<li><p>false: The control is normally visible.</p></li>
-</ul>
-<dl class="property">
-<dt id="property-nohit">
-bool <code class="descname">nohit</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-nohit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<ul class="simple">
-<li><p>true: makes the control inoperable(Not as dark as disable).</p></li>
-<li><p>false: The control is normally visible.</p></li>
-</ul>
+<dl class="member">
+<dt id="_CPPv24hide">
+<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>true: Hide the control.</p>
 </div></blockquote>
+<p>false: Display the control</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv27disable">
+<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p class="first">true: Inactivate control and darken.</p>
+</li>
+<li><p class="first">false: Activate control.</p>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25nohit">
+<span id="nohit__b"></span>bool <code class="descclassname"></code><code class="descname">nohit</code><a class="headerlink" href="#_CPPv25nohit" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p class="first">true: Take away the functions of the control(does not become dark unlike disable).</p>
+</li>
+<li><p class="first">false: Activate control.</p>
+</li>
+</ul>
+</dd></dl>
+
+</div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinContents.html" class="btn btn-neutral float-right" title="CWinContents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinContents.html" class="btn btn-neutral float-right" title="CWinContents" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWindowBase.html" class="btn btn-neutral float-left" title="CWindowBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWindowBase.html" class="btn btn-neutral" title="CWindowBase" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -732,11 +741,11 @@ bool <code class="descname">nohit</code> { <em class="property">get; set;</em> }
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -749,15 +758,36 @@ bool <code class="descname">nohit</code> { <em class="property">get; set;</em> }
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

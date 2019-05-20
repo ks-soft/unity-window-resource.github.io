@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CMessageDataSheetMgr &mdash; WindowSystem 2.00 documentation</title>
+  <title>CMessageDataSheetMgr &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CWindowMgr" href="CWindowMgr.html" />
-    <link rel="prev" title="CSoundEffectMgr" href="CSoundEffectMgr.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="CWindowMgr" href="CWindowMgr.html"/>
+        <link rel="prev" title="CSoundEffectMgr" href="CSoundEffectMgr.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,11 +146,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CMessageDataSheetMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">How to use in your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CMessageDataSheetMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">How to use in your application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">CMessageDataSheetMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmessagedatasheet">CMessageDataSheet</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
@@ -191,9 +190,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -206,54 +205,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CMessageDataSheetMgr</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CMessageDataSheetMgr</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CMessageDataSheetMgr.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CMessageDataSheetMgr.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -261,18 +240,18 @@
             
   <div class="section" id="cmessagedatasheetmgr">
 <h1>CMessageDataSheetMgr<a class="headerlink" href="#cmessagedatasheetmgr" title="Permalink to this headline">¶</a></h1>
-<blockquote>
+<blockquote id="id1">
 <div><p>It is an object that is used to manage the string resources.</p>
 <p>CMessageDataSheet corresponds to the an Excel sheet .</p>
 <p>CMessageDataSheetMgr is the container of CMessageDataSheet.</p>
 <p>Just CMessageDataSheetMgr corresponds to an Excel file .</p>
 </div></blockquote>
-<div class="section" id="id1">
-<h2>How to use in your application<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>How to use in your application<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You need to add this script by addManager in “Awake” method of CMainSystem.</p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
    <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
 <span class="cm">    * @brief   Unity Callback</span>
@@ -303,7 +282,7 @@
 <blockquote>
 <div><p>Also, if you want to associate it with the caption of CWindowMgr, you need to describe as follows in the initialize of CMainSystem.</p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
    <span class="c1">//==========================================================================</span>
    <span class="cm">/*!Initialize</span>
 <span class="cm">   * @brief    initialize</span>
@@ -322,73 +301,103 @@
 <blockquote>
 <div><p>Since CMessageDataSheetMgr has a IWinCaptionData interface , this is possible .</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CMessageDataSheetMgr">
-<code class="descname">class CMessageDataSheetMgr</code><a class="headerlink" href="#class-CMessageDataSheetMgr" title="Permalink to this definition">¶</a></dt>
-<dd><p>CMessageDataSheetMgr is a container of CMessageDataSheet.</p>
+</div>
+<div class="section" id="id3">
+<h2>CMessageDataSheetMgr<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>CMessageDataSheetMgr is a container of CMessageDataSheet.</p>
 <p>CMessageDataSheet corresponds to the an Excel sheet .</p>
 <p>In other words,CMessageDataSheetMgr is the container of your Excel sheets.</p>
 <p>However,the assetbundle of string resource has only one locale.(it does not have multiple locale data).</p>
-<dl class="method">
-<dt id="method-CMessageDataSheetMgr.initialize">
-void <code class="descname">initialize</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.initialize" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param byte[] buffer</dt>
-<dd class="field-odd"><p>Binary data read</p>
-</dd>
-</dl>
+</div></blockquote>
+<dl class="function">
+<dt id="c.initialize">
+void <code class="descname">initialize</code><span class="sig-paren">(</span>byte[]<em>&nbsp;buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>buffer</strong> (<em>byte[]</em>) &#8211; The loaded binary data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It specifies the binary data generated from Excel.</p>
 </dd></dl>
 
-<p>Specifies binary data generated from Excel.</p>
-<dl class="method">
-<dt id="method-CMessageDataSheetMgr.find">
-<a class="reference internal" href="#class-CMessageDataSheet" title="CMessageDataSheet class">CMessageDataSheet</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>sheetname</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.find" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint type</dt>
-<dd class="field-odd"><p>Pass the sheet name with <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a>.</p>
-</dd>
-</dl>
+<dl class="function">
+<dt id="_CPPv24find4uint">
+<span id="find__uint"></span>CMessageDataSheet <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>sheetname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint type:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Sheet be named in <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</td>
+</tr>
+</tbody>
+</table>
+<p>Reference a sheet .</p>
 </dd></dl>
 
-<p>Gets one sheet.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CMessageDataSheet</span> <span class="n">cSheet</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="k">new</span> <span class="n">FiveCC</span><span class="p">(</span><span class="s">&quot;WNDW&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CMessageDataSheet</span> <span class="n">cSheet</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="k">new</span> <span class="n">FiveCC</span><span class="p">(</span><span class="s">&quot;WNDW&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Get the currently set locale .</p>
-<p>Gets an instance of CMessageDataSheetMgr.</p>
+<dl class="member">
+<dt id="_CPPv27eLocale">
+<span id="eLocale__e_Locale"></span>e_Locale <code class="descclassname"></code><code class="descname">eLocale</code><a class="headerlink" href="#_CPPv27eLocale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currently set locale .</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="class-CMessageDataSheet">
-<code class="descname">class CMessageDataSheet</code><a class="headerlink" href="#class-CMessageDataSheet" title="Permalink to this definition">¶</a></dt>
-<dd><p>It corresponds to the one sheet on an Excel file.</p>
-<dl class="method">
-<dt id="method-CMessageDataSheet.find">
-string <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.find" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>Specifies <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MultiID</span></a>  and retrieves text resources.</p>
-</dd>
-</dl>
+<dl class="member">
+<dt id="_CPPv28Instance">
+<span id="Instance__CMessageDataSheetMgr"></span>CMessageDataSheetMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an instance of CMessageDataSheetMgr.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="method-CMessageDataSheet.format">
-string <code class="descname">format</code> <span class="sig-paren">(</span>uint <em>id</em>, <em>params</em> object[] <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.format" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>Specifies <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MultiID</span></a>  and retrieves text resources.</p>
-</dd>
-<dt class="field-even">Param params object[] args</dt>
-<dd class="field-even"><p>variable argument</p>
-</dd>
-</dl>
+</div>
+<div class="section" id="cmessagedatasheet">
+<span id="id4"></span><h2>CMessageDataSheet<a class="headerlink" href="#cmessagedatasheet" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>It corresponds to the one sheet on an Excel file.</p>
+</div></blockquote>
+<dl class="function">
+<dt id="c.find">
+string <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.find" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>uint</em>) &#8211; It gets the string resources by specifying the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
-<p>Generates and returns a character resource according to the format.</p>
+<dl class="function">
+<dt id="c.format">
+string <code class="descname">format</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em>, params object[]<em>&nbsp;args</em><span class="sig-paren">)</span><a class="headerlink" href="#c.format" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>uint</em>) &#8211; It gets the string resources by specifying the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</li>
+<li><strong>object[] args</strong> (<em>params</em>) &#8211; Variable argument</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Return the generated string data along the format.</p>
 </dd></dl>
 
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="s">&quot;Test&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="k">value</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="s">&quot;Test&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="k">value</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -396,16 +405,15 @@ string <code class="descname">format</code> <span class="sig-paren">(</span>uint
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWindowMgr.html" class="btn btn-neutral float-right" title="CWindowMgr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWindowMgr.html" class="btn btn-neutral float-right" title="CWindowMgr" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CSoundEffectMgr.html" class="btn btn-neutral float-left" title="CSoundEffectMgr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CSoundEffectMgr.html" class="btn btn-neutral" title="CSoundEffectMgr" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -414,11 +422,11 @@ string <code class="descname">format</code> <span class="sig-paren">(</span>uint
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -431,15 +439,36 @@ string <code class="descname">format</code> <span class="sig-paren">(</span>uint
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

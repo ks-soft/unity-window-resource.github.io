@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CTextureResourceMgr &mdash; WindowSystem 2.00 documentation</title>
+  <title>CTextureResourceMgr &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CSoundEffectMgr" href="CSoundEffectMgr.html" />
-    <link rel="prev" title="About asset bundle" href="AssetVersion.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="CSoundEffectMgr" href="CSoundEffectMgr.html"/>
+        <link rel="prev" title="About the AssetBundle version." href="AssetVersion.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,9 +146,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CTextureResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CTextureResourceMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">CTextureResourceMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ctextureresource">CTextureResource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cspritedataone">CSpriteDataOne</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -188,9 +190,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -203,54 +205,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CTextureResourceMgr</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CTextureResourceMgr</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CTextureResourceMgr.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CTextureResourceMgr.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -258,102 +240,103 @@
             
   <div class="section" id="ctextureresourcemgr">
 <h1>CTextureResourceMgr<a class="headerlink" href="#ctextureresourcemgr" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><p>You need to add this script by AddComponent in “Awake” method of CMainSystem.</p>
+<blockquote id="id1">
+<div><p>You need to add this script by AddComponent in &#8220;Awake&#8221; method of CMainSystem.</p>
 <p>This is intended to manage the texture resources .</p>
 <p>It is a container of CTextureResource.</p>
 <p>The CTextureResource is downloaded or loaded from resources. This manager returns the cache if it was already loaded.</p>
 <p>This window system also load a texture via this manager .</p>
-<p>The resource creation method please refer to <a class="reference internal" href="TextureResource.html#textureresource"><span class="std std-ref">here</span></a> .</p>
+<p>The resource creation method please refer to <a class="reference internal" href="TextureResource.html#textureresource"><span>here</span></a> .</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To read via asset bundle , you need to register the <span class="xref std std-ref">CAssetBundleMgr</span> .</p>
+<p class="first admonition-title">Note</p>
+<p class="last">To read via asset bundle , you need to register the <a class="reference internal" href="CAssetBundleMgr.html#id1"><span>CAssetBundleMgr</span></a> .</p>
 </div>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CTextureResourceMgr">
-<code class="descname">class CTextureResourceMgr</code><a class="headerlink" href="#class-CTextureResourceMgr" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CTextureResourceMgr.reference">
-<a class="reference internal" href="#class-CTextureResource" title="CTextureResource class">CTextureResource</a> <code class="descname">reference</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CTextureResourceMgr.reference" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>Asset Bundle ID</p>
-</dd>
-</dl>
-<p>Refers to a texture resource. If not cached, download it.</p>
-<p>Returns CTextureResource if the texture resource exists even if it has not already been downloaded.</p>
-<p>The returned CTextureResource is being downloaded can be determined by CTextureResource.isLoaded.</p>
+<div class="section" id="id2">
+<h2>CTextureResourceMgr<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="_CPPv29reference4uint">
+<span id="reference__uint"></span>CTextureResource <code class="descclassname"></code><code class="descname">reference</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29reference4uint" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint id:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Asset bundle ID</td>
+</tr>
+</tbody>
+</table>
+<p>It returns the texture resources. If the resource is not cached ,then it start to download.</p>
+<p>When the texture resource exists even if not already downloaded , it will return the CTextureResource.</p>
+<p>By examining the CTextureResource.isLoaded, you can know whether was download it.</p>
 <p>if it returns true,the asset is already loaded.</p>
-<p>If it cannot be downloaded as an asset bundle, try to import it as resource data.</p>
-<p>If none exists, null is returned.</p>
+<p>If the manager can not download as an assetbundle,it tries to load as resource data.</p>
+<p>If it does not exist , the manager returns a null.</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-CTextureResourceMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CTextureResourceMgr" title="CTextureResourceMgr class">CTextureResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResourceMgr.Instance" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv28Instance">
+<span id="Instance__CTextureResourceMgr"></span>CTextureResourceMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has an instance of a manager</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CTextureResource">
-<code class="descname">class CTextureResource</code><a class="headerlink" href="#class-CTextureResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>This can be cast to the Material.</p>
-<dl class="method">
-<dt id="method-CTextureResource.get">
-Material <code class="descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CTextureResource.get" title="Permalink to this definition">¶</a></dt>
+</div>
+<div class="section" id="ctextureresource">
+<h2>CTextureResource<a class="headerlink" href="#ctextureresource" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This can be cast to the Material.</p>
+</div></blockquote>
+<dl class="member">
+<dt id="_CPPv23get">
+Material <code class="descclassname"></code><code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv23get" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get the Material .</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-CTextureResource.id">
-uint <code class="descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.id" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv22id">
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
 <dd><p>It has the ID.</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-CTextureResource.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.isLoaded" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv28isLoaded">
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>if it is already loaded,this value sets to true.</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-CTextureResource.isRemain">
-bool <code class="descname">isRemain</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.isRemain" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv28isRemain">
+<span id="isRemain__b"></span>bool <code class="descclassname"></code><code class="descname">isRemain</code><a class="headerlink" href="#_CPPv28isRemain" title="Permalink to this definition">¶</a></dt>
 <dd><p>You can see whether it is resident .</p>
 </dd></dl>
 
-<dl class="property">
-<dt id="property-CTextureResource.spriteData">
-<a class="reference internal" href="#class-CSpriteDataOne" title="CSpriteDataOne class">CSpriteDataOne</a>[] <code class="descname">spriteData</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.spriteData" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="c.spriteData">
+CSpriteDataOne[] <code class="descname">spriteData</code><a class="headerlink" href="#c.spriteData" title="Permalink to this definition">¶</a></dt>
 <dd><p>You get the sprite data .</p>
 <p>Parts of UV information, patch information , and color information are stored.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CSpriteDataOne">
-<code class="descname">class CSpriteDataOne</code><a class="headerlink" href="#class-CSpriteDataOne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parts of UV information, patch information , and color information are stored.</p>
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_id">
-uint <code class="descname">m_id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_id" title="Permalink to this definition">¶</a></dt>
+</div>
+<div class="section" id="cspritedataone">
+<h2>CSpriteDataOne<a class="headerlink" href="#cspritedataone" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Parts of UV information, patch information , and color information are stored.</p>
+</div></blockquote>
+<dl class="member">
+<dt id="_CPPv24m_id">
+<span id="m_id__uint"></span>uint <code class="descclassname"></code><code class="descname">m_id</code><a class="headerlink" href="#_CPPv24m_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_color">
-WinColor <code class="descname">m_color</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_color" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv27m_color">
+<span id="m_color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">m_color</code><a class="headerlink" href="#_CPPv27m_color" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_ePatch">
-e_Patch <code class="descname">m_ePatch</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_ePatch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">enum</span> <span class="n">e_Patch</span> <span class="p">{</span>
+<dl class="member">
+<dt id="_CPPv28m_ePatch">
+<span id="m_ePatch__e_Patch"></span>e_Patch <code class="descclassname"></code><code class="descname">m_ePatch</code><a class="headerlink" href="#_CPPv28m_ePatch" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">enum</span> <span class="n">e_Patch</span> <span class="p">{</span>
     <span class="n">None</span><span class="p">,</span>   <span class="c1">//patch none</span>
     <span class="n">H3</span><span class="p">,</span>     <span class="c1">//3 patch in a horizontal direction</span>
     <span class="n">V3</span><span class="p">,</span>     <span class="c1">//3 patch in the vertical direction</span>
@@ -363,34 +346,32 @@ e_Patch <code class="descname">m_ePatch</code> { <em class="property">get;</em> 
 </div>
 </dd></dl>
 
-<blockquote>
-<div><dl class="property">
-<dt id="property-m_uv">
-Vector4 <code class="descname">m_uv</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-m_uv" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv24m_uv">
+<span id="m_uv__Vector4"></span>Vector4 <code class="descclassname"></code><code class="descname">m_uv</code><a class="headerlink" href="#_CPPv24m_uv" title="Permalink to this definition">¶</a></dt>
+<dd><p>UV texture information are stored .</p>
+</dd></dl>
 
-<p>UV texture information are stored .</p>
-<dl class="property">
-<dt id="property-m_aUV">
-Vector4[] <code class="descname">m_aUV</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-m_aUV" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="c.m_aUV">
+Vector4[] <code class="descname">m_aUV</code><a class="headerlink" href="#c.m_aUV" title="Permalink to this definition">¶</a></dt>
+<dd><p>If e_Patch is H3 or V3, it is stored three UV information. If e_Patch is HV9, it is stored nine UV information .</p>
+</dd></dl>
 
-<p>If e_Patch is H3 or V3, it is stored three UV information. If e_Patch is HV9, it is stored nine UV information .</p>
-</div></blockquote>
+</div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CSoundEffectMgr.html" class="btn btn-neutral float-right" title="CSoundEffectMgr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CSoundEffectMgr.html" class="btn btn-neutral float-right" title="CSoundEffectMgr" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="AssetVersion.html" class="btn btn-neutral float-left" title="About asset bundle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="AssetVersion.html" class="btn btn-neutral" title="About the AssetBundle version." accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -399,11 +380,11 @@ Vector4[] <code class="descname">m_aUV</code> { <em class="property">get; set;</
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -416,15 +397,36 @@ Vector4[] <code class="descname">m_aUV</code> { <em class="property">get; set;</
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

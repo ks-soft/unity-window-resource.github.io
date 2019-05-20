@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowBase &mdash; WindowSystem 2.00 documentation</title>
+  <title>CWindowBase &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html" />
-    <link rel="prev" title="CWindowMgr" href="CWindowMgr.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="CWinCtrlBase" href="CWinCtrlBase.html"/>
+        <link rel="prev" title="CWindowMgr" href="CWindowMgr.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,13 +146,20 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CWindowBase</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CWindowBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">How to create a window class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#callback">The callback that reach to each window object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Window property/method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Other overridable methods</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
@@ -191,9 +191,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -206,54 +206,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CWindowBase</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CWindowBase</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CWindowBase.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CWindowBase.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -267,25 +247,25 @@
 <div><p>If you succeed in compiling a window script , it generate the window binary file and the base file for using the window.</p>
 <p>For example</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;wr.h&quot;</span>
-<span class="n">WINDOW</span><span class="p">(</span><span class="n">TEST</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="o">=</span> <span class="mi">255_000_00001</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">NOTITLEBAR</span><span class="o">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
-<span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
+WINDOW(TEST) {
+  ID = 255_000_00001;
+  STYLE = NOTITLEBAR|ANCHOR_CENTER;
+  POSITION = 0,-100;
+  SIZE = 512,256;
+};
 
-<span class="n">TEXTBOX</span><span class="p">(</span><span class="n">Message</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="o">=</span> <span class="mi">000_000_00010</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">80</span><span class="p">;</span>
-  <span class="n">CAPTION</span> <span class="o">=</span> <span class="mi">000_111_00020</span><span class="p">;</span>
-  <span class="n">EDIT</span> <span class="o">=</span> <span class="mi">255</span><span class="p">,</span><span class="mi">2</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">64</span><span class="p">;</span>
-<span class="p">};</span>
+TEXTBOX(Message) {
+  ID = 000_000_00010;
+  POSITION = 100,-80;
+  CAPTION = 000_111_00020;
+  EDIT = 255,2;
+  SIZE = 380, 64;
+};
 </pre></div>
 </div>
 <p><strong>CTestBase.cs</strong> is automatically generated after the compilation of <strong>CTest.wra</strong> .</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">TESTBase</span> <span class="p">:</span> <span class="n">CWindowBase</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TESTBase</span> <span class="p">:</span> <span class="n">CWindowBase</span> <span class="p">{</span>
     <span class="k">public</span> <span class="k">const</span> <span class="kt">uint</span> <span class="n">windowId</span> <span class="p">=</span> <span class="m">4278190081</span><span class="p">;</span>  <span class="c1">// 255_000_00001</span>
         <span class="k">static</span> <span class="k">public</span> <span class="n">TEST</span> <span class="nf">create</span><span class="p">(</span><span class="n">CWindowBase</span> <span class="n">cParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">create</span><span class="p">&lt;</span><span class="n">TEST</span><span class="p">&gt;(</span><span class="n">windowId</span><span class="p">,</span><span class="n">cParent</span><span class="p">);</span>
@@ -295,7 +275,7 @@
 </pre></div>
 </div>
 <p>You make a window class that inherits <strong>CTestBase</strong> .</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">TEST</span> <span class="p">:</span> <span class="n">TestBase</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TEST</span> <span class="p">:</span> <span class="n">TestBase</span> <span class="p">{</span>
    <span class="p">:</span>
 <span class="p">};</span>
 </pre></div>
@@ -303,462 +283,411 @@
 <blockquote>
 <div><p>Then ,when actually create the window, as follows .</p>
 </div></blockquote>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">TEST</span> <span class="n">test</span> <span class="p">=</span> <span class="n">TEST</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEST</span> <span class="n">test</span> <span class="p">=</span> <span class="n">TEST</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="callback">
+<span id="id3"></span><h2>The callback that reach to each window object<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li><p>The callback that reach to each window object</p></li>
-</ul>
-</div></blockquote>
-<dl class="class">
-<dt id="class-CWindowBase">
-<code class="descname">class CWindowBase</code><a class="headerlink" href="#class-CWindowBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>A window is composed by many controls.</p>
+<div><p>A window is composed by many controls.</p>
 <p>If you perform operations as touch and drag to controls, the callback function in this window is called.</p>
 <p>It enumerates callback functions that a window can receive.</p>
 <p>You need to create new class which is inherited the class that is generated when you compile the script window. And you override callback functions in this new class.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onCreate">
-<em>virtual</em> void <code class="descname">onCreate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCreate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>called immediately after the window has been initialized.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onUpdate">
-<em>virtual</em> void <code class="descname">onUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onUpdate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called before each control update.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onAfterUpdate">
-<em>virtual</em> void <code class="descname">onAfterUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onAfterUpdate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called after each control update.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onPreRender">
-<em>virtual</em> void <code class="descname">onPreRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onPreRender" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called before each control render.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onRender">
-<em>virtual</em> <code class="descname">onRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRender" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called after each control render.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onClose">
-<em>virtual</em> bool <code class="descname">onClose</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClose" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called when the window is closed.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>true: close window</p></li>
-<li><p>false: Stop closing window</p></li>
-</ul>
 </div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.onClick">
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClick" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv28onCreatev">
+<span id="onCreate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCreate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCreatev" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called immediately after the initialization of the window has been completed .</p>
+</dd></dl>
 
-<p>Control is pressed.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onHold">
-<em>virtual</em> void <code class="descname">onHold</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onHold" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv28onUpdatev">
+<span id="onUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onUpdatev" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called before the update of each control.</p>
+</dd></dl>
 
-<p>Control is hold.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onClickEnter">
-<em>virtual</em> void <code class="descname">onClickEnter</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClickEnter" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv213onAfterUpdatev">
+<span id="onAfterUpdate"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onAfterUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213onAfterUpdatev" title="Permalink to this definition">¶</a></dt>
+<dd><p>It called after the update of each control.</p>
+</dd></dl>
 
-<p>Input of edit box is confirmed.</p>
-<dl class="method">
-<dt>
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="CWinCtrlRichText.html#class-CRichTextOne" title="CRichTextOne class">CRichTextOne</a> <em>cText</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv211onPreRender15CWindowRenderer">
+<span id="onPreRender__CWindowRenderer"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onPreRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onPreRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called before rendering the control.</p>
+</dd></dl>
 
-<p>A part of the rich text is pressed</p>
-<dl class="method">
-<dt id="method-CWindowBase.onBeginDrag">
-<em>virtual</em> void <code class="descname">onBeginDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginDrag" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv28onRender15CWindowRenderer">
+<span id="onRender__CWindowRenderer"></span><em class="property">virtual</em> <code class="descclassname"></code><code class="descname">onRender</code><span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onRender15CWindowRenderer" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called after the control of the rendering is finished.</p>
+</dd></dl>
 
-<p>The control is dragged. called once first when it is dragged.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDrag">
-<em>virtual</em> void <code class="descname">onDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrag" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv27onClosei">
+<span id="onClose__i"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onClose</code><span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClosei" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called when you close the window.</p>
+<p>true: actually close the window .</p>
+<p>false: cancel to close the window .</p>
+</dd></dl>
 
-<p>The control is being dragged. kept calling while dragging.</p>
-<p>You can tell which direction a scrollable control has been dragged by onDrag.However, STYLE must have  <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">SCROLL_LOCK</span></a> .onDrag can detect the direction of the drag.Note that DRAG does not affect these controls.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDragRender">
-<em>virtual</em> bool <code class="descname">onDragRender</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDragRender" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv27onClick12CWinCtrlBase">
+<span id="onClick__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed the control</p>
+</dd></dl>
 
-<p>When a control is being dragged, called the render timing. If not overridden, the control is rendered normally.</p>
-<p>The return value has the following meaning:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>true: Renders a duplicate of the control being dragged.</p></li>
-<li><p>false: Do not render duplicates of the controls being dragged.</p></li>
-</ul>
-</div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.onDrop">
-<em>virtual</em> void <code class="descname">onDrop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cDragWindow</em>, <a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrop" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv26onHold12CWinCtrlBase">
+<span id="onHold__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed and Holded the control</p>
+</dd></dl>
 
-<p>When the control being dragged is released, it is called on the window containing the control that exists under the released location.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDropGround">
-<em>virtual</em> void <code class="descname">onDropGround</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDropGround" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv212onClickEnter12CWinCtrlBase">
+<span id="onClickEnter__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClickEnter</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onClickEnter12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the input of the edit box.</p>
+</dd></dl>
 
-<p>Called when control being dragged is released in empty space.</p>
-<p>It is also called when the window containing the control being dragged has disappeared, just before the disappearance.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onOK">
-<em>virtual</em> void <code class="descname">onOK</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onOK" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv27onClick12CWinCtrlBase12CRichTextOne">
+<span id="onClick__CWinCtrlBase.CRichTextOne"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase12CRichTextOne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed a part of the rich text.</p>
+</dd></dl>
 
-<p><cite>OK</cite> button was pressed in the message window that was created as a child window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onNext">
-<em>virtual</em> void <code class="descname">onNext</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNext" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The control is dragged. This callback is called once.</p>
+</dd></dl>
 
-<p><cite>Next</cite> button was pressed in the message window that was created as a child window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onYes">
-<em>virtual</em> void <code class="descname">onYes</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onYes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv26onDrag12CWinCtrlBase7Vector2">
+<span id="onDrag__CWinCtrlBase.Vector2"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>You are dragging the control. This callback is called while you drag it.</p>
+<p>You can get a dragged direction of Scrollable controls by onDrag. In this case,you need to set the <a class="reference internal" href="LISTBOX.html#listbox-style"><span>SCROLL_LOCK</span></a> to STYLE, and you can get a dragged direction. Even if you set DRAG to STYLE property, these controls do not affect anything.</p>
+</dd></dl>
 
-<p><cite>Yes</cite> button was pressed in the message window that was created as a child window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onNo">
-<em>virtual</em> void <code class="descname">onNo</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNo" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p><cite>No</cite> button was pressed in the message window that was created as a child window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onCancel">
-<em>virtual</em> void <code class="descname">onCancel</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCancel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p><cite>Cancel</cite> button was pressed in the message window that was created as a child window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onRecreatedRenderTexture">
-<em>virtual</em> void <code class="descname">onRecreatedRenderTexture</code> <span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRecreatedRenderTexture" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>It is called when a render texture disappears due to some event. However, since the automatic reset is performed by the system, it is not necessary to override the automatic reset.</p>
+<dl class="function">
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span><em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>If you set true to this value,this window become not to respond.</p>
+<p>The return value means as follows</p>
 <ul class="simple">
-<li><p>Window property/method</p></li>
+<li><p class="first">true: Render the duplicated control.</p>
+</li>
+<li><p class="first">false: Don&#8217;t render the duplicated control.</p>
+</li>
 </ul>
-<p>I explain the accessible methods and properties of CWindowBase.</p>
-<dl class="method">
-<dt id="method-CWindowBase.onBeginRenderIcon">
-<em>virtual</em> bool <code class="descname">onBeginRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginRenderIcon" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>Start rendering to the icon. <a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a>  is called only when the window contains it.</p>
-<p>Meaning of the return value of this function.</p>
-<ul class="simple">
-<li><p>If you returns true, this control will render to the texture.</p></li>
-<li><p>On the other hand, if you return a false, it does not render. And <span class="xref std std-ref">onEndRenderIcon</span> is not called.</p></li>
-</ul>
-<dl class="method">
-<dt id="method-CWindowBase.onEndRenderIcon">
-<em>virtual</em> bool <code class="descname">onEndRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onEndRenderIcon" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>When you release the dragged control at other control, this callback is called. This callback sent to the window of cCtrl.</p>
+</dd></dl>
 
-<p>Called when rendering is finished. <a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a>  is called only when the window contains it.</p>
-<p>Meaning of the return value of this function.</p>
+<dl class="function">
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the dragged control at open place.</p>
+<p>Or when the window of dragged control is closed, this callback is called before closing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv24onOKi">
+<span id="onOK__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onOK</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onOKi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed OK button in the message window. This callback will reach the parent window of the message window.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onNexti">
+<span id="onNext__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNext</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onNexti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed Next button in the message window. This callback will reach the parent window of the message window.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv25onYesi">
+<span id="onYes__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onYes</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25onYesi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed Yes button in the message window. This callback will reach the parent window of the message window.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv24onNoi">
+<span id="onNo__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onNo</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24onNoi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed No button in the message window. This callback will reach the parent window of the message window.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28onCanceli">
+<span id="onCancel__i"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onCancel</code><span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28onCanceli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressed Cancel button in the message window. This callback will reach the parent window of the message window.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv224onRecreatedRenderTexture4uint">
+<span id="onRecreatedRenderTexture__uint"></span><em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">onRecreatedRenderTexture</code><span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224onRecreatedRenderTexture4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when lost Render Texture by some event. However , it is not necessary to override it because the automatic return to the system side is performed.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h2>Window property/method<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li><p>If you return a true, rendering of the next frame is continued( <span class="xref std std-ref">onBeginRenderIcon</span> is called at the next frame. ).</p></li>
-<li><p>On the other hand, If you return a false, It is not rendered in the next frame.</p></li>
-</ul>
+<div><p>I explain the accessible methods and properties of CWindowBase.</p>
 </div></blockquote>
-<p>If you want to resume the stopped rendering , you set the needToRender to true.</p>
-<dl class="method">
-<dt id="method-CWindowBase.close">
-void <code class="descname">close</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><em> = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.close" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="_CPPv25closei">
+<span id="close__i"></span>void <code class="descclassname"></code><code class="descname">close</code><span class="sig-paren">(</span>int <em>iCloseInfo</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25closei" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call when you want to close the window. iCloseInfo is passed as a parameter of onClose.</p>
+</dd></dl>
+
+<span class="target" id="cwindowbase-find"></span><dl class="function">
+<dt id="_CPPv24findI7WinCtrlE4uint">
+<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look for a control with the ID.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv24find4uint">
+<span id="find__uint"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">find</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24find4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look for a control with the ID.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv22id">
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the window ID</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25child">
+<span id="child__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">child</code><a class="headerlink" href="#_CPPv25child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the child window</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26parent">
+<span id="parent__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the parent window</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25layer">
+<span id="layer__e_LayerId"></span>e_LayerId <code class="descclassname"></code><code class="descname">layer</code><a class="headerlink" href="#_CPPv25layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the rendering layer</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28priority">
+<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the drawing priority .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25texid">
+<span id="texid__uint"></span>uint <code class="descclassname"></code><code class="descname">texid</code><a class="headerlink" href="#_CPPv25texid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default texture ID of the window .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv21x">
+<span id="x__float"></span>float <code class="descclassname"></code><code class="descname">x</code><a class="headerlink" href="#_CPPv21x" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Call when you want to close a window. iCloseInfo is passed as a parameter to onClose.</p>
-<dl class="method">
-<dt id="method-CWindowBase.find">
-WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.find" title="Permalink to this definition">¶</a></dt>
+<dl class="member">
+<dt id="_CPPv21y">
+<span id="y__float"></span>float <code class="descclassname"></code><code class="descname">y</code><a class="headerlink" href="#_CPPv21y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the window position .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28position">
+<span id="position__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the window position .</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv29transform">
+<span id="transform__Transform"></span>Transform <code class="descclassname"></code><code class="descname">transform</code><a class="headerlink" href="#_CPPv29transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the transform</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25scale">
+<span id="scale__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">scale</code><a class="headerlink" href="#_CPPv25scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set x,y scales</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26anchor">
+<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the anchor for display position.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv25width">
+<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Find the control with that ID.</p>
-<dl class="method">
-<dt>
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span></dt>
+<dl class="member">
+<dt id="_CPPv26height">
+<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the window size</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv24size">
+<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the window size</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv211screenWidth">
+<span id="screenWidth__float"></span>float <code class="descclassname"></code><code class="descname">screenWidth</code><a class="headerlink" href="#_CPPv211screenWidth" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>Find the control with that ID.</p>
-<dl class="property">
-<dt id="property-CWindowBase.id">
-uint <code class="descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv212screenHeight">
+<span id="screenHeight__float"></span>float <code class="descclassname"></code><code class="descname">screenHeight</code><a class="headerlink" href="#_CPPv212screenHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the screen size</p>
+</dd></dl>
 
-<p>Get/Set the window ID.</p>
-<dl class="property">
-<dt id="property-CWindowBase.child">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">child</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv27caption">
+<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the title bar caption of the window.</p>
+</dd></dl>
 
-<p>return child window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.parent">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv212captionColor">
+<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the title bar caption color of the window.</p>
+</dd></dl>
 
-<p>return parent window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.layer">
-e_LayerId <code class="descname">layer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.layer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv213captionOffset">
+<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get / Set the title bar caption offset of the window.</p>
+</dd></dl>
 
-<p>Get/Set rendering layer.</p>
-<dl class="property">
-<dt id="property-CWindowBase.priority">
-int <code class="descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priority" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv25color">
+<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the window color. All controls in the window is affected.</p>
+</dd></dl>
 
-<p>Get/Set drawing priority.</p>
-<dl class="property">
-<dt id="property-CWindowBase.texid">
-uint <code class="descname">texid</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.texid" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv25style">
+<span id="style__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the window style.</p>
+</dd></dl>
 
-<p>return the default texture id of this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.x">
-float <code class="descname">x</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.x" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv213priorityStyle">
+<span id="priorityStyle__e_WinStyle"></span>e_WinStyle <code class="descclassname"></code><code class="descname">priorityStyle</code><a class="headerlink" href="#_CPPv213priorityStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the window priority style.</p>
+</dd></dl>
 
-<dl class="property">
-<dt id="property-CWindowBase.y">
-float <code class="descname">y</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.y" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv24hide">
+<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>true</dt>
+<dd><p class="first last">Hide the window display.</p>
+</dd>
+<dt>false</dt>
+<dd><p class="first last">Display the window.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<p>Get/Set window coordinate</p>
-<dl class="property">
-<dt id="property-CWindowBase.position">
-Vector2 <code class="descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.position" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set window coordinate</p>
-<dl class="property">
-<dt id="property-CWindowBase.transform">
-Transform <code class="descname">transform</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.transform" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get transform of this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.scale">
-Vector2 <code class="descname">scale</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.scale" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set x,y scale of this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.anchor">
-e_Anchor <code class="descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.anchor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set the display position anchor setting.</p>
-<dl class="property">
-<dt id="property-CWindowBase.width">
-float <code class="descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.width" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CWindowBase.height">
-float <code class="descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.height" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set this window size.</p>
-<dl class="property">
-<dt id="property-CWindowBase.size">
-Vector2 <code class="descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.size" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set this window size.</p>
-<dl class="property">
-<dt id="property-CWindowBase.screenWidth">
-float <code class="descname">screenWidth</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenWidth" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CWindowBase.screenHeight">
-float <code class="descname">screenHeight</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenHeight" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set this window screen size.</p>
-<dl class="property">
-<dt id="property-CWindowBase.caption">
-string <code class="descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.caption" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set a title bar’s caption of this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.captionColor">
-WinColor <code class="descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionColor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set a title bar’s color fo this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.captionOffset">
-Vector2 <code class="descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionOffset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set a title bar’s caption offset of this window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.color">
-WinColor <code class="descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.color" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set this window color. this color is all affect all contorl under the window.</p>
-<dl class="property">
-<dt id="property-CWindowBase.style">
-e_WinStyle <code class="descname">style</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.style" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get this window style.</p>
-<dl class="property">
-<dt id="property-CWindowBase.priorityStyle">
-e_WinStyle <code class="descname">priorityStyle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priorityStyle" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get/Set this window priority style.</p>
-<dl class="property">
-<dt id="property-CWindowBase.hide">
-bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.hide" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<ul class="simple">
-<li><p>true</p></li>
-</ul>
-<blockquote>
-<div><p>Hide window.</p>
+<dl class="member">
+<dt id="_CPPv27disable">
+<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><dl class="docutils">
+<dt>true</dt>
+<dd><p class="first last">It deprives functions of the window, and the window darken.</p>
+</dd>
+<dt>false</dt>
+<dd><p class="first last">Display the window</p>
+</dd>
+</dl>
 </div></blockquote>
-<ul class="simple">
-<li><p>false</p></li>
-</ul>
-<blockquote>
-<div><p>How to create a window class</p>
-</div></blockquote>
-<dl class="property">
-<dt id="property-CWindowBase.disable">
-bool <code class="descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.disable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<p>When depriving the window function, it will not respond even touching.</p>
+</dd></dl>
 
-<ul class="simple">
-<li><p>true</p></li>
-</ul>
-<blockquote>
-<div><p>Stop a window from functioning and dim the window.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>false</p></li>
-</ul>
-<blockquote>
-<div><p>Display the window normally.</p>
-</div></blockquote>
-<p>if stop a window from functioning, it won’t respond when you touch it.</p>
-<dl class="property">
-<dt id="property-CWindowBase.isClose">
-bool <code class="descname">isClose</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isClose" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv27isClose">
+<span id="isClose__b"></span>bool <code class="descclassname"></code><code class="descname">isClose</code><a class="headerlink" href="#_CPPv27isClose" title="Permalink to this definition">¶</a></dt>
+<dd><p>This value is true among the window play the animation of closing.</p>
+</dd></dl>
 
-<p>True if the window is during close animation.</p>
-<dl class="property">
-<dt id="property-CWindowBase.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isLoaded" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv28isLoaded">
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>This value is true among the texture loading.</p>
+</dd></dl>
 
-<p>True if textures are being imported.</p>
-<dl class="property">
-<dt id="property-CWindowBase.isFade">
-bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isFade" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv26isFade">
+<span id="isFade__b"></span>bool <code class="descclassname"></code><code class="descname">isFade</code><a class="headerlink" href="#_CPPv26isFade" title="Permalink to this definition">¶</a></dt>
+<dd><p>This value is true among the fade state of window is in or out.</p>
+</dd></dl>
 
-<p>True if the window is fade-in/fade-out.</p>
-<ul class="simple">
-<li><p>Other overridable methods</p></li>
-</ul>
-<p>CWindowBase has overridable methods other than callback. You need to override when you want to customize the fade animation when creating the window or closing the window.</p>
-<dl class="method">
-<dt id="method-CWindowBase.startFade">
-<em>protected</em> <em>virtual</em> void <code class="descname">startFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.startFade" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</div>
+<div class="section" id="id5">
+<h2>Other overridable methods<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>CWindowBase has overridable methods other than callback. You need to override when you want to customize the fade animation when creating the window or closing the window.</p>
+</div></blockquote>
+<dl class="function">
+<dt id="_CPPv29startFade11e_FadeState">
+<span id="startFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> void <code class="descclassname"></code><code class="descname">startFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29startFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is called when the fade began. You can distinguish fade state whether IN or  OUT by the function argument.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>e_FadeState.Open</dt>
+<dd><p class="first last">Fade in</p>
+</dd>
+<dt>e_FadeState.Close</dt>
+<dd><p class="first last">Fade out</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
 
-<p>Called when a fade begins.The fade-in/fade-out can be determined by looking at e _ FadeState.Perform the initialization required for fade processing.</p>
+<dl class="function">
+<dt id="_CPPv26doFade11e_FadeState">
+<span id="doFade__e_FadeState"></span><em class="property">protected</em> <em class="property">virtual</em> bool <code class="descclassname"></code><code class="descname">doFade</code><span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26doFade11e_FadeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>フェード中に呼ばれます。</p>
 <blockquote>
-<div><ul class="simple">
-<li><p>e_FadeState.Open</p></li>
-</ul>
-<blockquote>
-<div><p>Fade-In</p>
+<div><dl class="docutils">
+<dt>true</dt>
+<dd><p class="first last">if you want to continue the fade state.</p>
+</dd>
+<dt>false</dt>
+<dd><p class="first last">if you want to finish the fade state.</p>
+</dd>
+</dl>
 </div></blockquote>
-<ul class="simple">
-<li><p>e_FadeState.Close</p></li>
-</ul>
+<p>if you want to finish the fade state, you need to return false.</p>
+<p>In addition, even if this function argument is the e_FadeState.None,you need to return false.</p>
 <blockquote>
-<div><p>Fade-Out</p>
-</div></blockquote>
-</div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.doFade">
-<em>protected</em> <em>virtual</em> bool <code class="descname">doFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.doFade" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Called during fade.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>true</p></li>
-</ul>
-<blockquote>
-<div><p>Fading</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>false</p></li>
-</ul>
-<blockquote>
-<div><p>Fade End</p>
-</div></blockquote>
-</div></blockquote>
-<p>When the fade is finished, you need to return false.</p>
-<p>Also, when e_FadeState.None is passed, it should return false.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>e_FadeState.None</p></li>
-</ul>
-<blockquote>
-<div><p>No Fading.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>e_FadeState.Open</p></li>
-</ul>
-<blockquote>
-<div><p>Fading In</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>e_FadeState.Close</p></li>
-</ul>
-<blockquote>
-<div><p>Fading Out</p>
-</div></blockquote>
+<div><dl class="docutils">
+<dt>e_FadeState.None</dt>
+<dd><p class="first last">Do not a fade</p>
+</dd>
+<dt>e_FadeState.Open</dt>
+<dd><p class="first last">Among a fade-in</p>
+</dd>
+<dt>e_FadeState.Close</dt>
+<dd><p class="first last">Among a fade-out</p>
+</dd>
+</dl>
 </div></blockquote>
 </dd></dl>
 
@@ -767,16 +696,15 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlBase.html" class="btn btn-neutral float-right" title="CWinCtrlBase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlBase.html" class="btn btn-neutral float-right" title="CWinCtrlBase" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWindowMgr.html" class="btn btn-neutral float-left" title="CWindowMgr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWindowMgr.html" class="btn btn-neutral" title="CWindowMgr" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -785,11 +713,11 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -802,15 +730,36 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

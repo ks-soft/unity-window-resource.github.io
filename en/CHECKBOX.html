@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CHECKBOX &mdash; WindowSystem 2.00 documentation</title>
+  <title>CHECKBOX &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TEXTURE" href="TEXTURE.html" />
-    <link rel="prev" title="RADIO" href="RADIO.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="TEXTURE" href="TEXTURE.html"/>
+        <link rel="prev" title="RADIO" href="RADIO.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -111,10 +108,6 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
@@ -134,25 +127,25 @@
 <li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CHECKBOX</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CHECKBOX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Property</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">Default value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id">Part ID rule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = Control ID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = <span class="xref std std-ref">X, Y</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = <span class="xref std std-ref">width,height</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = width,height</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = “string”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;string&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = <span class="xref std std-ref">X, Y</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-n-id-id"><strong>TEX_ID</strong> n = Texture ID,Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-n-id"><strong>TEX_ID</strong> n = Part ID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = <span class="xref std std-ref">offset X,offset Y</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#texture-size-n">Texture offset can be specified by a <span class="xref std std-ref">percentage</span> .</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#texture-offset-n-x-y"><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#texture-size-n"><strong>TEXTURE_SIZE</strong> n = width,height</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#color-n-r-g-b-a"><strong>COLOR</strong> n = R,G,B,A</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#se-id-se-id"><strong>SE_ID</strong> = SE_ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#contents"><strong>CONTENTS</strong> = { control define … }</a></li>
@@ -179,9 +172,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -214,9 +211,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -229,54 +226,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CHECKBOX</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CHECKBOX</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CHECKBOX.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CHECKBOX.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -285,10 +262,10 @@
   <div class="section" id="checkbox">
 <span id="id1"></span><h1>CHECKBOX<a class="headerlink" href="#checkbox" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>C#: <a class="reference internal" href="CWinCtrlCheckbox.html#cwinctrlcheckbox"><span class="std std-ref">CWinCtrlCheckbox</span></a></p>
+<div><p>C#: <a class="reference internal" href="CWinCtrlCheckbox.html#cwinctrlcheckbox"><span>CWinCtrlCheckbox</span></a></p>
 <p>This is a checkbox button control .</p>
 <p>It can display seven badges in the same way as buttons .</p>
-<p>It is possible to have <a class="reference internal" href="#checkbox-contents"><span class="std std-ref">contents</span></a>.  It associates the controls to be activated when the button is on.</p>
+<p>It is possible to have <a class="reference internal" href="#checkbox-contents"><span>contents</span></a>.  It associates the controls to be activated when the button is on.</p>
 <blockquote>
 <div><p>CHECKBOX(Control name) {</p>
 <blockquote>
@@ -305,37 +282,37 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WINDOW</span><span class="p">(</span><span class="mi">255_000_00001</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">NOTITLEBAR</span><span class="o">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">;</span>
-  <span class="n">TEX_ID</span> <span class="o">=</span> <span class="mi">100_000_00001</span><span class="p">;</span>
-  <span class="n">CAPTION</span> <span class="o">=</span> <span class="mi">000_000_00010</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="n">CHECKBOX</span><span class="p">(</span><span class="n">TEST</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="o">=</span> <span class="mi">000_002_00001</span><span class="p">;</span>
-  <span class="n">CAPTION</span> <span class="o">=</span> <span class="mi">000_000_00006</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>
-  <span class="n">FONT_KIND</span><span class="o">=</span> <span class="s2">&quot;fn40&quot;</span><span class="p">;</span>
-  <span class="n">TEX_ID1</span> <span class="o">=</span> <span class="s2">&quot;bd01&quot;</span><span class="p">;</span>
-  <span class="n">TEXTURE_OFFSET1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
-  <span class="n">CONTENTS</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_002_00001</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="m">000</span><span class="n">_000_00006</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">ANCHOR_CENTER</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">32</span><span class="p">;</span>
+  <span class="n">FONT_KIND</span><span class="p">=</span> <span class="s">&quot;fn40&quot;</span><span class="p">;</span>
+  <span class="n">TEX_ID1</span> <span class="p">=</span> <span class="s">&quot;bd01&quot;</span><span class="p">;</span>
+  <span class="n">TEXTURE_OFFSET1</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">256</span><span class="p">;</span>
+  <span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
     <span class="n">ICON</span><span class="p">(</span><span class="n">TEST</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">ID</span> <span class="o">=</span> <span class="mi">000_001_00010</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span><span class="mi">16</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="mi">100_000_00001</span><span class="p">,</span><span class="s2">&quot;CRYS&quot;</span><span class="p">;</span>
+      <span class="n">ID</span> <span class="p">=</span> <span class="m">000</span><span class="n">_001_00010</span><span class="p">;</span>
+      <span class="n">POSITION</span> <span class="p">=</span> <span class="m">256</span><span class="p">,-</span><span class="m">16</span><span class="p">;</span>
+      <span class="n">SIZE</span> <span class="p">=</span><span class="m">80</span><span class="p">,</span><span class="m">80</span><span class="p">;</span>
+      <span class="n">TEX_ID</span> <span class="p">=</span> <span class="m">100</span><span class="n">_000_00001</span><span class="p">,</span><span class="s">&quot;CRYS&quot;</span><span class="p">;</span>
     <span class="p">};</span>
   <span class="p">}</span>
 
 <span class="p">};</span>
 </pre></div>
 </div>
-<img alt="_images/CHECKBOX.png" src="_images/CHECKBOX.png" />
+<blockquote>
+<div><img alt="_images/CHECKBOX.png" src="_images/CHECKBOX.png" />
 <p>if the button state is on , ICON (TEST) is active .</p>
 <p>if the button state is off , ICON (TEST) is not active .</p>
 </div></blockquote>
@@ -344,13 +321,11 @@
 <h2>Property<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
 <h3>Default value<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;BTN0?&quot;</span><span class="p">;</span>
-<span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
-<span class="n">CAPTION_COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;BTN0?&quot;</span><span class="p">;</span>
+<span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="id">
 <h3>Part ID rule<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
@@ -358,18 +333,24 @@
 <div><p>It replaces the fifth character of the part ID to 0/1.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>XXXX0: off state</p></li>
-<li><p>XXXX1: on state</p></li>
+<li><p class="first">XXXX0: off state</p>
+</li>
+<li><p class="first">XXXX1: on state</p>
+</li>
 </ul>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;BTN0?&quot;</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;BTN0?&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>If parts ID has been set in this way, you need to prepare parts, such as the following.</p>
+<blockquote>
+<div><p>If parts ID has been set in this way, you need to prepare parts, such as the following.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>BNT00: off state</p></li>
-<li><p>BNT01: on state</p></li>
+<li><p class="first">BNT00: off state</p>
+</li>
+<li><p class="first">BNT01: on state</p>
+</li>
 </ul>
 </div></blockquote>
 </div></blockquote>
@@ -378,37 +359,34 @@
 <h3><strong>ID</strong> = Control ID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Define the control ID.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="o">=</span> <span class="mi">001_000_00010</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you don’t set the ID, it generates automatically from the hash value.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="position-x-y">
-<h3><strong>POSITION</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">X, Y</span></a><a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
+<h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Determine the display position. The base position changes according to the <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span class="std std-ref">anchor</span></a> in STYLE.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,{</span><span class="mi">50</span><span class="p">}</span> <span class="o">+</span> <span class="mi">64</span><span class="p">;</span>
+<div><p>It determine the display position . By the setting of STYLE, you can change the criteria for display position.</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Coordinates can be specified as a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .</p>
-</div></blockquote>
 </div>
 <div class="section" id="size">
-<h3><strong>SIZE</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">width,height</span></a><a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It changes the display size. If it is omitted , or , you specify 0 ,it gets the size from the texture parts.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SIZE</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span> <span class="o">//</span><span class="mi">64</span><span class="n">x32</span>
-<span class="n">SIZE</span> <span class="o">=</span> <span class="p">,</span><span class="mi">32</span><span class="p">;</span>   <span class="o">//</span><span class="n">Set</span> <span class="n">the</span> <span class="n">width</span> <span class="n">of</span> <span class="n">the</span> <span class="n">texture</span> <span class="n">part</span> <span class="n">width</span>
-<span class="n">SIZE</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>            <span class="o">//</span><span class="n">Set</span> <span class="n">the</span> <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">texture</span> <span class="n">part</span> <span class="n">height</span>
-<span class="n">SIZE</span> <span class="o">=</span> <span class="p">{</span><span class="mi">50</span><span class="p">}</span> <span class="o">-</span> <span class="mi">25</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span>  <span class="c1">//64x32</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>    <span class="c1">//Set the width of the texture part width</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">;</span>             <span class="c1">//Set the height of the texture part height</span>
 </pre></div>
 </div>
-<p>Size can be specified as a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .</p>
-</div></blockquote>
 </div>
 <div class="section" id="tex-id-id-id">
 <h3><strong>TEX_ID</strong> = Texture ID,Part ID<a class="headerlink" href="#tex-id-id-id" title="Permalink to this headline">¶</a></h3>
@@ -423,39 +401,38 @@
 <h3><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the color.</p>
-<p>Set R, G, B in the range of 0…2 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
 <p>If you set a value in excess of one , each color component can double the brightness.</p>
-<p>Set A in the range of 0…1 .</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="caption-id">
 <h3><strong>CAPTION</strong> = Caption ID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the ID of the string .</p>
-<p>Please refer to <a class="reference internal" href="caption.html#multi-language"><span class="std std-ref">here</span></a>  .</p>
+<p>Please refer to <a class="reference internal" href="caption.html#multi-language"><span>here</span></a>  .</p>
 </div></blockquote>
 </div>
 <div class="section" id="caption">
-<h3><strong>CAPTION</strong> = “string”<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
+<h3><strong>CAPTION</strong> = &#8220;string&#8221;<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the string.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;Hellow world!&quot;</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="caption-color-r-g-b-a">
 <h3><strong>CAPTION_COLOR</strong> = R,G,B,A<a class="headerlink" href="#caption-color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>You can set the caption color .</p>
-<p>Set a value in the range of 0…1.</p>
+<p>Set a value in the range of 0～1.</p>
 </div></blockquote>
 </div>
 <div class="section" id="caption-offset-x-y">
-<h3><strong>CAPTION_OFFSET</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">X, Y</span></a><a class="headerlink" href="#caption-offset-x-y" title="Permalink to this headline">¶</a></h3>
+<h3><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ<a class="headerlink" href="#caption-offset-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It adjust the caption position.</p>
-<p>Caption offset can be specified by a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .</p>
 </div></blockquote>
 </div>
 <div class="section" id="tex-id-n-id-id">
@@ -469,34 +446,31 @@
 </div></blockquote>
 </div>
 <div class="section" id="texture-offset-n-x-y">
-<h3><strong>TEXTURE_OFFSET</strong> n = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">offset X,offset Y</span></a><a class="headerlink" href="#texture-offset-n-x-y" title="Permalink to this headline">¶</a></h3>
+<h3><strong>TEXTURE_OFFSET</strong> n = offset X,offset Y<a class="headerlink" href="#texture-offset-n-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the display offset of the badge.</p>
 <p>It can be set in the range of n = [1..7].</p>
-<p>Texture offset can be specified by a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .</p>
 </div></blockquote>
 </div>
 <div class="section" id="texture-size-n">
-<h3>Texture offset can be specified by a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .<a class="headerlink" href="#texture-size-n" title="Permalink to this headline">¶</a></h3>
+<h3><strong>TEXTURE_SIZE</strong> n = width,height<a class="headerlink" href="#texture-size-n" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You set the texture ID and the part ID.</p>
+<div><p>Set the texture ID and the part ID of the badge.</p>
 <p>It can be set in the range of n = [1..7].</p>
-<p>When n = 0, it has the same meaning as <strong>SIZE</strong>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TEXTURE_SIZE1</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span><span class="mi">32</span><span class="p">;</span>        <span class="o">//</span><span class="mi">64</span><span class="n">x32</span>
-<span class="n">TEXTURE_SIZE2</span> <span class="o">=</span> <span class="p">,</span><span class="mi">32</span><span class="p">;</span>  <span class="o">//</span><span class="n">Set</span> <span class="n">the</span> <span class="n">width</span> <span class="n">of</span> <span class="n">the</span> <span class="n">texture</span> <span class="n">part</span> <span class="n">width</span>
-<span class="n">TEXTURE_SIZE3</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>   <span class="o">//</span><span class="n">Set</span> <span class="n">the</span> <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">texture</span> <span class="n">part</span> <span class="n">height</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEXTURE_SIZE1</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span> <span class="c1">//64x32</span>
+<span class="n">TEXTURE_SIZE2</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>   <span class="c1">//Set the width of the texture part width</span>
+<span class="n">TEXTURE_SIZE3</span> <span class="p">=</span> <span class="m">64</span><span class="p">;</span>    <span class="c1">//Set the height of the texture part height</span>
 </pre></div>
 </div>
-<p>Texture size can be specified by a <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage</span></a> .</p>
-</div></blockquote>
 </div>
 <div class="section" id="color-n-r-g-b-a">
 <h3><strong>COLOR</strong> n = R,G,B,A<a class="headerlink" href="#color-n-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the badge color .</p>
-<p>Set R, G, B in the range of 0…2 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
 <p>If you set a value in excess of one , each color component can double the brightness.</p>
-<p>Set A in the range of 0…1 .</p>
+<p>Set A in the range of 0～1 .</p>
 <p>It can be set in the range of n = [1..7].</p>
 </div></blockquote>
 </div>
@@ -511,7 +485,8 @@
 <blockquote>
 <div><p>It associates the controls to be activated when the button is on.</p>
 <p>Automatically the contents hide if a button is the off state. The contents is possible to include  all kind of the control.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONTENTS</span> <span class="o">=</span> <span class="p">{</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS</span> <span class="p">=</span> <span class="p">{</span>
    <span class="n">BUTTON</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
       <span class="p">:</span>
    <span class="p">}</span>
@@ -524,11 +499,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Method of accessing content using C # : <a class="reference internal" href="CWinCtrlBase.html#contents-access"><span class="std std-ref">here</span></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Unlike a list box, the coordinates and size <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">percentage specifications</span></a>  for controls in the content are calculated from the window size.</p>
-</div>
+<blockquote>
+<div><p>Method of accessing content using C # : <a class="reference internal" href="CWinCtrlBase.html#contents-access"><span>here</span></a></p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -536,72 +508,74 @@
 <blockquote>
 <div><p>You can set the display anchor of control.</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Display position anchor flag</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Display position anchor flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
-<td><p>Set the anchor position in the upper left</p>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td><p class="first">Set the anchor position in the upper left</p>
 <p>Same as ANCHOR_LEFTTOP</p>
-<p>The default control center position is set to BASE_LEFT.</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
-<td><p>Set the anchor position in the upper left</p>
-<p>The default control center position is set to BASE_LEFT.</p>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td><p class="first">Set the anchor position in the upper left</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_LEFT</p></td>
-<td><p>Set the anchor position to the left.</p>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
+<td><p class="first">Set the anchor position to the left.</p>
 <p>And vertical centering</p>
-<p>The default control center position is set to BASE_LEFT.</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTBOTTOM</p></td>
-<td><p>Set the anchor position to the left.</p>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
+<td><p class="first">Set the anchor position to the left.</p>
 <p>Located along the lower edge</p>
-<p>The default control center position is set to BASE_LEFTBOTTOM.</p>
+<p class="last">The default control center position is set to BASE_LEFTBOTTOM.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_TOP</p></td>
-<td><p>Set the anchor position to the upper side</p>
+<tr class="row-even"><td>ANCHOR_TOP</td>
+<td><p class="first">Set the anchor position to the upper side</p>
 <p>Centering at lateral.</p>
-<p>The default control center position is set to BASE_TOP.</p>
+<p class="last">The default control center position is set to BASE_TOP.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_CENTER</p></td>
-<td><p>Set the anchor position in the center of the window</p>
-<p>The default control center position is set to BASE_CENTER.</p>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
+<td><p class="first">Set the anchor position in the center of the window</p>
+<p class="last">The default control center position is set to BASE_CENTER.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_BOTTOM</p></td>
-<td><p>Set the anchor position at the bottom</p>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
+<td><p class="first">Set the anchor position at the bottom</p>
 <p>Centering at lateral.</p>
-<p>The default control center position is set to BASE_BOTTOM.</p>
+<p class="last">The default control center position is set to BASE_BOTTOM.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
-<td><p>Set the anchor position in the upper right</p>
-<p>The default control center position is set to BASE_RIGHTBOTTOM.</p>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td><p class="first">Set the anchor position in the upper right</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_RIGHT</p></td>
-<td><p>Set the anchor position to the right</p>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
+<td><p class="first">Set the anchor position to the right</p>
 <p>And vertical centering</p>
-<p>The default control center position is set to BASE_RIGHT.</p>
+<p class="last">The default control center position is set to BASE_RIGHT.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
-<td><p>Set the anchor position to the right</p>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
+<td><p class="first">Set the anchor position to the right</p>
 <p>Located along the lower edge</p>
-<p>The default control center position is set to BASE_RIGHTBOTTOM.</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
 </tbody>
@@ -609,138 +583,162 @@
 <blockquote>
 <div><p>You can set the center position of the control.</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 32%" />
-<col style="width: 68%" />
+<col width="32%" />
+<col width="68%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Base position change flag</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Base position change flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>BASE_DEFAULT</p></td>
-<td><p>It varies depending on the anchor flag .</p>
+<tbody valign="top">
+<tr class="row-even"><td>BASE_DEFAULT</td>
+<td><p class="first">It varies depending on the anchor flag .</p>
 <p>If you do not specifically set , this value is set .</p>
-<p>See the description of each anchor flag</p>
+<p class="last">See the description of each anchor flag</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_LEFTTOP</p></td>
-<td><p>Set the center position to the upper left side.</p></td>
-</tr>
-<tr class="row-even"><td><p>BASE_LEFT</p></td>
-<td><p>Set the center position to the left side.</p>
-<p>and vertical centering.</p>
+<tr class="row-odd"><td>BASE_LEFTTOP</td>
+<td><p class="first last">Set the center position to the upper left side.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_LEFTBOTTOM</p></td>
-<td><p>Set the center position to the bottom left side.</p></td>
-</tr>
-<tr class="row-even"><td><p>BASE_TOP</p></td>
-<td><p>Set the center position to the upper side.</p>
-<p>and horizontal centering</p>
+<tr class="row-even"><td>BASE_LEFT</td>
+<td><p class="first">Set the center position to the left side.</p>
+<p class="last">and vertical centering.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_CENTER</p></td>
-<td><p>Set the center position to the center.</p></td>
-</tr>
-<tr class="row-even"><td><p>BASE_BOTTOM</p></td>
-<td><p>Set the center position to the bottom side.</p>
-<p>And horizontal centering.</p>
+<tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
+<td><p class="first last">Set the center position to the bottom left side.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_RIGHTTOP</p></td>
-<td><p>Set the center position to the upper right side.</p></td>
-</tr>
-<tr class="row-even"><td><p>BASE_RIGHT</p></td>
-<td><p>Set the center position to the right side.</p>
-<p>and horizontal centering</p>
+<tr class="row-even"><td>BASE_TOP</td>
+<td><p class="first">Set the center position to the upper side.</p>
+<p class="last">and horizontal centering</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_RIGHTBOTTOM</p></td>
-<td><p>Set the center position to the bottom right side.</p></td>
+<tr class="row-odd"><td>BASE_CENTER</td>
+<td><p class="first last">Set the center position to the center.</p>
+</td>
+</tr>
+<tr class="row-even"><td>BASE_BOTTOM</td>
+<td><p class="first">Set the center position to the bottom side.</p>
+<p class="last">And horizontal centering.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_RIGHTTOP</td>
+<td><p class="first last">Set the center position to the upper right side.</p>
+</td>
+</tr>
+<tr class="row-even"><td>BASE_RIGHT</td>
+<td><p class="first">Set the center position to the right side.</p>
+<p class="last">and horizontal centering</p>
+</td>
+</tr>
+<tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
+<td><p class="first last">Set the center position to the bottom right side.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p>You set the caption position to the center.</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Text anchor</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Text anchor</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>TEXT_CENTER</p></td>
-<td><p>It aligns the text to the center.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>TEXT_CENTER</td>
+<td><p class="first last">It aligns the text to the center.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_LEFT</p></td>
-<td><p>It aligns the text to the left side.</p></td>
+<tr class="row-odd"><td>TEXT_LEFT</td>
+<td><p class="first last">It aligns the text to the left side.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>TEXT_RIGHT</p></td>
-<td><p>It aligns the text to the right side.</p></td>
+<tr class="row-even"><td>TEXT_RIGHT</td>
+<td><p class="first last">It aligns the text to the right side.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p>Change the font decoration of the caption .</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>You can change the font decoration of the caption .</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">You can change the font decoration of the caption .</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>TEXT_NORMAL</p></td>
-<td><p>No decoration</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>TEXT_NORMAL</td>
+<td><p class="first last">No decoration</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_BOLD</p></td>
-<td><p>Bold type</p></td>
+<tr class="row-odd"><td>TEXT_BOLD</td>
+<td><p class="first last">Bold type</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>TEXT_DENT</p></td>
-<td><p>Dent type</p></td>
+<tr class="row-even"><td>TEXT_DENT</td>
+<td><p class="first last">Dent type</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_SHADOW</p></td>
-<td><p>Shadow Type</p></td>
+<tr class="row-odd"><td>TEXT_SHADOW</td>
+<td><p class="first last">Shadow Type</p>
+</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p>Style that limits the function as follows .</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 64%" />
+<col width="36%" />
+<col width="64%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Function limit style</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Function limit style</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>HIDE</p></td>
-<td><p>Hide.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>HIDE</td>
+<td><p class="first last">Hide.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>DRAG</p></td>
-<td><p>Enable a dragging.</p></td>
+<tr class="row-odd"><td>DRAG</td>
+<td><p class="first last">Enable a dragging.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>DISABLE</p></td>
-<td><p>It is not able to pressing the control. And the control color darken.</p></td>
+<tr class="row-even"><td>DISABLE</td>
+<td><p class="first last">It is not able to pressing the control. And the control color darken.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>NOHIT</p></td>
-<td><p>It is not able to pressing the control.</p></td>
+<tr class="row-odd"><td>NOHIT</td>
+<td><p class="first last">It is not able to pressing the control.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -750,16 +748,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TEXTURE.html" class="btn btn-neutral float-right" title="TEXTURE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="TEXTURE.html" class="btn btn-neutral float-right" title="TEXTURE" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="RADIO.html" class="btn btn-neutral float-left" title="RADIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="RADIO.html" class="btn btn-neutral" title="RADIO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -768,11 +765,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -785,15 +782,36 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

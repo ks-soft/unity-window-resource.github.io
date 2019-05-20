@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The control priority &mdash; WindowSystem 2.00 documentation</title>
+  <title>The control priority &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="The control size" href="CtrlSize.html" />
-    <link rel="prev" title="An arrangement of the control" href="CtrlAnchor.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="The control size" href="CtrlSize.html"/>
+        <link rel="prev" title="An arrangement of the control" href="CtrlAnchor.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -111,17 +108,13 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">The control priority</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">The control priority</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id">If the same texture ID is specified</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">If the priority is the same</a></li>
 </ul>
@@ -160,9 +153,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -195,9 +192,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -210,54 +207,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>The control priority</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>The control priority</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CtrlPriority.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CtrlPriority.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -278,58 +255,58 @@
 <p>This window is constructed from two font meshes and two texture meshes.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>fn40</p></li>
-<li><p>fn30</p></li>
-<li><p>100_000_00001</p></li>
-<li><p>100_010_00000</p></li>
+<li>fn40</li>
+<li>fn30</li>
+<li>100_000_00001</li>
+<li>100_010_00000</li>
 </ul>
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id">
 <h2>If the same texture ID is specified<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>It can be set by the <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span class="std std-ref">PRIORITY</span></a>  of the control .</p>
-<p>A control with a large <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span class="std std-ref">PRIORITY</span></a> value is displayed in the front .</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="o">=</span> <span class="mi">001_000_00010</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>
-  <span class="n">PRIORITY</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<div><p>It can be set by the <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a>  of the control .</p>
+<p>A control with a large <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> value is displayed in the front .</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">100</span><span class="p">,</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">;</span>
+  <span class="n">PRIORITY</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-</div></blockquote>
 <div class="section" id="id2">
 <h3>If the priority is the same<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>If the priority is the same , it is automatically sorted according to the type of controls .</p>
 <p>The control which list order is high is rendered to the front.</p>
 <ul class="simple">
-<li><p>SCROLLBAR</p></li>
-<li><p>LISTBOX</p></li>
-<li><p>LISTBOXEX</p></li>
-<li><p>CONTAINER</p></li>
-<li><p>TEXT</p></li>
-<li><p>RICHTEXT</p></li>
-<li><p>LOG</p></li>
-<li><p>LOGTEXT</p></li>
-<li><p>BUTTON</p></li>
-<li><p>CHECKBOX</p></li>
-<li><p>RADIO</p></li>
-<li><p>HELPBUTTON</p></li>
-<li><p>EDITBOX</p></li>
-<li><p>TEXTBOX</p></li>
-<li><p>METER</p></li>
-<li><p>ICON</p></li>
-<li><p>CARD</p></li>
-<li><p>TEXTURE</p></li>
-<li><p>RENDER</p></li>
-<li><p>RENDERICON</p></li>
-<li><p>RECASTICON</p></li>
-<li><p>LINE</p></li>
-<li><p>LABEL</p></li>
-<li><p>FRAME</p></li>
-<li><p>BAR</p></li>
+<li>SCROLLBAR</li>
+<li>LISTBOX</li>
+<li>LISTBOXEX</li>
+<li>CONTAINER</li>
+<li>TEXT</li>
+<li>RICHTEXT</li>
+<li>LOG</li>
+<li>LOGTEXT</li>
+<li>BUTTON</li>
+<li>CHECKBOX</li>
+<li>RADIO</li>
+<li>HELPBUTTON</li>
+<li>EDITBOX</li>
+<li>TEXTBOX</li>
+<li>METER</li>
+<li>ICON</li>
+<li>CARD</li>
+<li>TEXTURE</li>
+<li>RENDER</li>
+<li>RENDERICON</li>
+<li>RECASTICON</li>
+<li>LINE</li>
+<li>LABEL</li>
+<li>FRAME</li>
+<li>BAR</li>
 </ul>
 </div></blockquote>
 </div>
@@ -337,50 +314,54 @@
 <div class="section" id="id3">
 <h2>If the texture ID is different<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>If the texture ID is different , The texture’s z offset is priority than the priority of the control.</p>
-<p>It is possible to set the Z offset of texture by <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a> of window properties .</p>
+<div><p>If the texture ID is different , The texture&#8217;s z offset is priority than the priority of the control.</p>
+<p>It is possible to set the Z offset of texture by <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> of window properties .</p>
 <p>The mesh that has larger value is displayed at the back.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WINDOW</span><span class="p">(</span><span class="mi">100_100_00010</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">TEX_ID</span> <span class="o">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">POPUP</span><span class="o">|</span><span class="n">NOFRAME</span><span class="o">|</span><span class="n">NOTITLEBAR</span><span class="p">;</span>
-  <span class="n">TEXTURE_ZOFFSET</span> <span class="o">=</span> <span class="mi">100_100_00000</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-  <span class="n">TEXTURE_ZOFFSET</span> <span class="o">=</span> <span class="mi">100_010_00000</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-  <span class="n">SCREEN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,{</span><span class="mi">100</span><span class="p">},{</span><span class="o">-</span><span class="n">BASEY</span><span class="p">};</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="n">WIN_W</span><span class="p">,</span><span class="n">WIN_H</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">100</span><span class="n">_100_00010</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">POPUP</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">|</span><span class="n">NOTITLEBAR</span><span class="p">;</span>
+  <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_100_00000</span><span class="p">,-</span><span class="m">1</span><span class="p">;</span>
+  <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_010_00000</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
+  <span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="n">BASEY</span><span class="p">);</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="n">WIN_W</span><span class="p">,</span><span class="n">WIN_H</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>In this example , Meshes are rendered in the following order.</p>
+<blockquote>
+<div><p>In this example , Meshes are rendered in the following order.</p>
 <ul class="simple">
-<li><p>100_100_00000    front</p></li>
-<li><p>DEFAULT_TEXTURE</p></li>
-<li><p>100_010_00000    back</p></li>
+<li><p class="first">100_100_00000    front</p>
+</li>
+<li>DEFAULT_TEXTURE</li>
+<li><p class="first">100_010_00000    back</p>
+</li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If not explicitly specify the Z offset,this window system assigns a value as this texture mesh is rendered in front of the existing meshes. This order is difficult to explicitly control because it is handled automatically by the system. If your window has three or more texture, you are better to set the <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">If not explicitly specify the Z offset,this window system assigns a value as this texture mesh is rendered in front of the existing meshes. This order is difficult to explicitly control because it is handled automatically by the system. If your window has three or more texture, you are better to set the <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Meshes generated as render targets can be ordered with  <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a> .See <a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a> , <a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a> .</p>
+<p class="first admonition-title">Note</p>
+<p>You can change the rendering order of generated meshes for render target by setting this <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a>.</p>
+<p class="last">refer to the <a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> , <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a> .</p>
 </div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CtrlSize.html" class="btn btn-neutral float-right" title="The control size" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CtrlSize.html" class="btn btn-neutral float-right" title="The control size" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CtrlAnchor.html" class="btn btn-neutral float-left" title="An arrangement of the control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CtrlAnchor.html" class="btn btn-neutral" title="An arrangement of the control" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -389,11 +370,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -406,15 +387,36 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

@@ -1,53 +1,52 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RICHTEXT &mdash; WindowSystem 2.00 ドキュメント</title>
+  <title>RICHTEXT &mdash; WindowSystem 1.07 ドキュメント</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="LOG" href="LOG.html" />
-    <link rel="prev" title="TEXT" href="TEXT.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
+        <link rel="next" title="LOG" href="LOG.html"/>
+        <link rel="prev" title="TEXT" href="TEXT.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -61,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -82,10 +81,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -112,10 +108,6 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
@@ -128,18 +120,18 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">RICHTEXT</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">RICHTEXT</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">プロパティ</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = コントロールID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = <span class="xref std std-ref">Ｘ，Ｙ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#font-kind"><strong>FONT_KIND</strong> = フォント種類</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &quot;文字列&quot;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = &#8220;文字列&#8221;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = <span class="xref std std-ref">改行サイズ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contents-size"><strong>CONTENTS_SIZE</strong> = 改行サイズ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = <span class="xref std std-ref">Ｘ,Ｙ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#richtext-cmd">リッチテキストで使用可能なコントロールコード</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#w">ウィンドウコマンド \w</a></li>
@@ -178,6 +170,10 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -210,7 +206,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -225,54 +221,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>RICHTEXT</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>RICHTEXT</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/RICHTEXT.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/RICHTEXT.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -281,7 +257,7 @@
   <div class="section" id="richtext">
 <span id="id1"></span><h1>RICHTEXT<a class="headerlink" href="#richtext" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span class="std std-ref">CWinCtrlRichText</span></a></p>
+<div><p>C#: <a class="reference internal" href="CWinCtrlRichText.html#cwinctrlrichtext"><span>CWinCtrlRichText</span></a></p>
 <p>リッチテキストを表示するためのコントロールです。</p>
 <p>途中で文字色を変えたり、テクスチャを埋め込んだりすることが可能です。</p>
 <blockquote>
@@ -300,79 +276,71 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>記述例<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WINDOW</span><span class="p">(</span><span class="mi">255_000_00001</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">NOTITLEBAR</span><span class="o">|</span><span class="n">ANCHOR_LEFT</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">255</span><span class="n">_000_00001</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">NOTITLEBAR</span><span class="p">|</span><span class="n">ANCHOR_LEFT</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">100</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">512</span><span class="p">,</span><span class="m">256</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="n">RICHTEXT</span><span class="p">(</span><span class="n">Message</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="o">=</span> <span class="mi">00_000_00010</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">64</span><span class="p">;</span>
-  <span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\a</span><span class="s2">[3]TESTabc</span><span class="se">\f</span><span class="s2">[fn16]smallFont</span><span class="se">\t</span><span class="s2">123[100_000_00001,ATTR1,32,32,0]&quot;</span> <span class="o">+</span>
-            <span class="s2">&quot;</span><span class="se">\a</span><span class="s2">[4]\w[001_002_00003,click here!]&quot;</span><span class="p">;</span>
-  <span class="n">CONTENTS_SIZE</span> <span class="o">=</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">64</span><span class="p">;</span>
+  <span class="n">ID</span> <span class="p">=</span> <span class="m">00</span><span class="n">_000_00010</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
+  <span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;\a[3]TESTabc\f[fn16]smallFont\t123[100_000_00001,ATTR1,32,32,0]&quot;</span> <span class="p">+</span>
+            <span class="s">&quot;\a[4]\w[001_002_00003,click here!]&quot;</span><span class="p">;</span>
+  <span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">380</span><span class="p">,</span> <span class="m">64</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <img alt="_images/RICHTEXT.png" src="_images/RICHTEXT.png" />
-</div></blockquote>
 </div>
 <div class="section" id="id3">
 <h2>プロパティ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="id-id">
 <h3><strong>ID</strong> = コントロールID<a class="headerlink" href="#id-id" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>コントロールIDを定義します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="o">=</span> <span class="mi">001_000_00010</span><span class="p">;</span>
+<div>コントロールIDを定義します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>設定しなかったときは、自動的にハッシュ値から生成します。</p>
+<p class="first admonition-title">注釈</p>
+<p class="last">設定しなかったときは、自動的にハッシュ値から生成します。</p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="position-x-y">
-<h3><strong>POSITION</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">Ｘ，Ｙ</span></a><a class="headerlink" href="#position-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>表示位置を決定します。
-STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span class="std std-ref">アンカー</span></a> 指定に応じて、基準位置が変わります。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,{</span><span class="mi">50</span><span class="p">}</span> <span class="o">+</span> <span class="mi">64</span><span class="p">;</span>
+<div>表示位置を決定します。
+STYLEに応じて、表示位置の基準を柔軟に変更可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,-</span><span class="m">64</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>座標は <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
-</div></blockquote>
 </div>
 <div class="section" id="font-kind">
 <h3><strong>FONT_KIND</strong> = フォント種類<a class="headerlink" href="#font-kind" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>フォントの種類を指定します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FONT_KIND</span> <span class="o">=</span> <span class="s2">&quot;fnt32&quot;</span><span class="p">;</span>
+<div>フォントの種類を指定します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">FONT_KIND</span> <span class="p">=</span> <span class="s">&quot;fnt32&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="caption-id">
 <h3><strong>CAPTION</strong> = キャプションID<a class="headerlink" href="#caption-id" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>文字列のIDを指定してください。</p>
-<p><a class="reference internal" href="caption.html#multi-language"><span class="std std-ref">こちら</span></a> を参照ください。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="o">=</span> <span class="mi">010_000_00100</span><span class="p">;</span>
+<p><a class="reference internal" href="caption.html#multi-language"><span>こちら</span></a> を参照ください。</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00100</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="caption">
-<h3><strong>CAPTION</strong> = &quot;文字列&quot;<a class="headerlink" href="#caption" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><strong>CAPTION</strong> = &#8220;文字列&#8221;<a class="headerlink" href="#caption" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>文字列を設定します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;Hellow world!&quot;</span><span class="p">;</span>
+<div>文字列を設定します。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
-<p>リッチテキストのキャプションに <a class="reference internal" href="#richtext-cmd"><span class="std std-ref">コマンド</span></a> を埋め込むことによって、様々な装飾が可能になっています。</p>
 </div>
 <div class="section" id="caption-color-r-g-b-a">
 <h3><strong>CAPTION_COLOR</strong> = R,G,B,A<a class="headerlink" href="#caption-color-r-g-b-a" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -382,241 +350,228 @@ STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span 
 </div></blockquote>
 </div>
 <div class="section" id="contents-size">
-<h3><strong>CONTENTS_SIZE</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">改行サイズ</span></a><a class="headerlink" href="#contents-size" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><strong>CONTENTS_SIZE</strong> = 改行サイズ<a class="headerlink" href="#contents-size" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>文字列が改行サイズを超えたとき、そこから自動で改行をします。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONTENTS_SIZE</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>  <span class="o">//</span><span class="mi">128</span><span class="n">pixel</span>
-
-<span class="n">CONTENTS_SIZE</span> <span class="o">=</span> <span class="p">{</span><span class="mi">50</span><span class="p">}</span> <span class="o">+</span> <span class="mi">32</span><span class="p">;</span>    <span class="o">//</span> <span class="n">screen</span> <span class="n">width</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mi">32</span>
+<div>文字列が改行サイズを超えたとき、そこから自動で改行をします。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CONTENTS_SIZE</span> <span class="p">=</span> <span class="m">128</span><span class="p">;</span>   <span class="c1">//128pixel</span>
 </pre></div>
 </div>
-<p>改行サイズは <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
-</div></blockquote>
 </div>
 <div class="section" id="line-space">
 <h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>行間をこのプロパティで設定可能です。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LINE_SPACE</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>       <span class="o">//</span><span class="n">Put</span> <span class="n">an</span> <span class="mi">8</span><span class="o">-</span><span class="n">dot</span> <span class="n">space</span><span class="o">.</span>
+<div>行間をこのプロパティで設定可能です。</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>        <span class="c1">//Put an 8-dot space.</span>
 </pre></div>
 </div>
-<p>行間は割合指定はできません。</p>
-</div></blockquote>
 </div>
 <div class="section" id="caption-offset-x-y">
-<h3><strong>CAPTION_OFFSET</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">Ｘ,Ｙ</span></a><a class="headerlink" href="#caption-offset-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><strong>CAPTION_OFFSET</strong> = Ｘ,Ｙ<a class="headerlink" href="#caption-offset-x-y" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>キャプションの位置を移動することができます。</p>
-<p>キャプションオフセットは <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
-</div></blockquote>
+<div>キャプションの位置を移動することができます。</div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
 <h3><strong>STYLE</strong> = フラグ0|フラグ1|..|フラグn<a class="headerlink" href="#style-0-1-n" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>コントロールの表示アンカーを指定できます。</p>
-</div></blockquote>
-<table class="docutils align-center">
+<div>コントロールの表示アンカーを指定できます。</div></blockquote>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>表示位置アンカーフラグ</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">表示位置アンカーフラグ</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
-<td><p>アンカー位置を左上に設定</p>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td><p class="first">アンカー位置を左上に設定</p>
 <p>ANCHOR_LEFTTOPと同じ</p>
-<p>コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
-<td><p>アンカー位置を左上に設定</p>
-<p>コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td><p class="first">アンカー位置を左上に設定</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_LEFT</p></td>
-<td><p>アンカー位置を左に設定</p>
+<tr class="row-even"><td>ANCHOR_LEFT</td>
+<td><p class="first">アンカー位置を左に設定</p>
 <p>縦にはセンタリング</p>
-<p>コントロールの中心位置はデフォルトで、BASE_LEFTになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTになる。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTBOTTOM</p></td>
-<td><p>アンカー位置を左に設定</p>
+<tr class="row-odd"><td>ANCHOR_LEFTBOTTOM</td>
+<td><p class="first">アンカー位置を左に設定</p>
 <p>縦には下辺を基準に配置</p>
-<p>コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_TOP</p></td>
-<td><p>アンカー位置を上辺に設定</p>
+<tr class="row-even"><td>ANCHOR_TOP</td>
+<td><p class="first">アンカー位置を上辺に設定</p>
 <p>横方向にはセンタリング</p>
-<p>コントロールの中心位置はデフォルトで、BASE_TOPになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_TOPになる。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_CENTER</p></td>
-<td><p>アンカー位置を画面中央にセンタリング</p>
-<p>コントロールの中心位置はデフォルトで、BASE_CENTERになる。</p>
+<tr class="row-odd"><td>ANCHOR_CENTER</td>
+<td><p class="first">アンカー位置を画面中央にセンタリング</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_CENTERになる。</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_BOTTOM</p></td>
-<td><p>アンカー位置を底辺に設定</p>
+<tr class="row-even"><td>ANCHOR_BOTTOM</td>
+<td><p class="first">アンカー位置を底辺に設定</p>
 <p>横方向にはセンタリング</p>
-<p>コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
-<td><p>アンカー位置を右上に設定</p>
-<p>コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td><p class="first">アンカー位置を右上に設定</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_RIGHT</p></td>
-<td><p>アンカー位置を右に設定</p>
+<tr class="row-even"><td>ANCHOR_RIGHT</td>
+<td><p class="first">アンカー位置を右に設定</p>
 <p>縦にはセンタリング</p>
-<p>コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
-<td><p>アンカー位置を右に設定</p>
+<tr class="row-odd"><td>ANCHOR_RIGHTBOTTOM</td>
+<td><p class="first">アンカー位置を右に設定</p>
 <p>縦には下辺を基準に配置</p>
-<p>コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
+<p class="last">コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
 </td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><p>コントロールの中心位置を指定できます。</p>
-</div></blockquote>
-<table class="docutils align-center">
+<div>コントロールの中心位置を指定できます。</div></blockquote>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 32%" />
-<col style="width: 68%" />
+<col width="32%" />
+<col width="68%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>中心位置変更フラグ</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">中心位置変更フラグ</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>BASE_DEFAULT</p></td>
-<td><p>アンカーフラグに応じて変わる。</p>
+<tbody valign="top">
+<tr class="row-even"><td>BASE_DEFAULT</td>
+<td><p class="first">アンカーフラグに応じて変わる。</p>
 <p>特に指定しなければ、これになります。</p>
-<p>各アンカーフラグの説明を参照</p>
+<p class="last">各アンカーフラグの説明を参照</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_LEFTTOP</p></td>
-<td><p>中心位置をコントロールの左上に設定</p></td>
+<tr class="row-odd"><td>BASE_LEFTTOP</td>
+<td>中心位置をコントロールの左上に設定</td>
 </tr>
-<tr class="row-even"><td><p>BASE_LEFT</p></td>
-<td><p>中心位置を左に設定</p>
-<p>縦にはコントロールの真中</p>
+<tr class="row-even"><td>BASE_LEFT</td>
+<td><p class="first">中心位置を左に設定</p>
+<p class="last">縦にはコントロールの真中</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_LEFTBOTTOM</p></td>
-<td><p>中心位置を左下に設定</p></td>
+<tr class="row-odd"><td>BASE_LEFTBOTTOM</td>
+<td>中心位置を左下に設定</td>
 </tr>
-<tr class="row-even"><td><p>BASE_TOP</p></td>
-<td><p>中心位置を上辺に設定</p>
-<p>横にはコントロールの中心</p>
+<tr class="row-even"><td>BASE_TOP</td>
+<td><p class="first">中心位置を上辺に設定</p>
+<p class="last">横にはコントロールの中心</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_CENTER</p></td>
-<td><p>中心位置をコントロールの中心</p></td>
+<tr class="row-odd"><td>BASE_CENTER</td>
+<td>中心位置をコントロールの中心</td>
 </tr>
-<tr class="row-even"><td><p>BASE_BOTTOM</p></td>
-<td><p>中心位置を底辺に設定</p>
-<p>横方向にはコントロールの真中</p>
+<tr class="row-even"><td>BASE_BOTTOM</td>
+<td><p class="first">中心位置を底辺に設定</p>
+<p class="last">横方向にはコントロールの真中</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_RIGHTTOP</p></td>
-<td><p>中心位置をコントロールの右上に設定</p></td>
+<tr class="row-odd"><td>BASE_RIGHTTOP</td>
+<td>中心位置をコントロールの右上に設定</td>
 </tr>
-<tr class="row-even"><td><p>BASE_RIGHT</p></td>
-<td><p>中心位置を右に設定</p>
-<p>横にはコントロールの中心</p>
+<tr class="row-even"><td>BASE_RIGHT</td>
+<td><p class="first">中心位置を右に設定</p>
+<p class="last">横にはコントロールの中心</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BASE_RIGHTBOTTOM</p></td>
-<td><p>中心位置を右下に設定</p></td>
+<tr class="row-odd"><td>BASE_RIGHTBOTTOM</td>
+<td>中心位置を右下に設定</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><p>キャプションの中心位置を指定できます。</p>
-</div></blockquote>
-<table class="docutils align-center">
+<div>キャプションの中心位置を指定できます。</div></blockquote>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>テキストアンカー</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">テキストアンカー</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>TEXT_CENTER</p></td>
-<td><p>テキスト表示を中心に合わせます。</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>TEXT_CENTER</td>
+<td>テキスト表示を中心に合わせます。</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_LEFT</p></td>
-<td><p>テキスト表示を左に合わせます。</p></td>
+<tr class="row-odd"><td>TEXT_LEFT</td>
+<td>テキスト表示を左に合わせます。</td>
 </tr>
-<tr class="row-even"><td><p>TEXT_RIGHT</p></td>
-<td><p>テキスト表示を右に合わせます。</p></td>
+<tr class="row-even"><td>TEXT_RIGHT</td>
+<td>テキスト表示を右に合わせます。</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><p>キャプションのフォント装飾を変更できます。</p>
-</div></blockquote>
-<table class="docutils align-center">
+<div>キャプションのフォント装飾を変更できます。</div></blockquote>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>キャプション装飾種類</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">キャプション装飾種類</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>TEXT_NORMAL</p></td>
-<td><p>装飾なし</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>TEXT_NORMAL</td>
+<td>装飾なし</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_BOLD</p></td>
-<td><p>太字</p></td>
+<tr class="row-odd"><td>TEXT_BOLD</td>
+<td>太字</td>
 </tr>
-<tr class="row-even"><td><p>TEXT_DENT</p></td>
-<td><p>へこんだ感じの文字</p></td>
+<tr class="row-even"><td>TEXT_DENT</td>
+<td>へこんだ感じの文字</td>
 </tr>
-<tr class="row-odd"><td><p>TEXT_SHADOW</p></td>
-<td><p>影付き文字</p></td>
+<tr class="row-odd"><td>TEXT_SHADOW</td>
+<td>影付き文字</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><p>機能を制限するスタイルは以下のものがあります。</p>
-</div></blockquote>
-<table class="docutils align-center">
+<div>機能を制限するスタイルは以下のものがあります。</div></blockquote>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 64%" />
+<col width="36%" />
+<col width="64%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>機能制限スタイル</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">機能制限スタイル</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>HIDE</p></td>
-<td><p>表示を隠す。</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>HIDE</td>
+<td>表示を隠す。</td>
 </tr>
-<tr class="row-odd"><td><p>DISABLE</p></td>
-<td><p>押せなくし、暗くする。</p></td>
+<tr class="row-odd"><td>DISABLE</td>
+<td>押せなくし、暗くする。</td>
 </tr>
-<tr class="row-even"><td><p>NOHIT</p></td>
-<td><p>押せなくする。</p></td>
+<tr class="row-even"><td>NOHIT</td>
+<td>押せなくする。</td>
 </tr>
 </tbody>
 </table>
@@ -624,147 +579,144 @@ STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span 
 <div class="section" id="richtext-cmd">
 <span id="id4"></span><h3>リッチテキストで使用可能なコントロールコード<a class="headerlink" href="#richtext-cmd" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>リッチテキストのキャプションに <a class="reference internal" href="#richtext-cmd"><span class="std std-ref">コマンド</span></a> を埋め込むことによって、様々な装飾が可能になっています。</p>
+<div><p>リッチテキストのキャプションにコントロールコードを埋め込むことによって、様々な装飾が可能になっています。</p>
 <p>例えば、途中にテクスチャを挟み込むには次のような文字列をキャプションに設定します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;texture test</span><span class="se">\t</span><span class="s2">[001_001_01000,icon0,32,32,0]</span><span class="se">\n</span><span class="s2">display test&quot;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;テクスチャテスト\t[001_001_01000,icon0,32,32,0]\n表示テスト&quot;</span>
 </pre></div>
 </div>
-</div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 39%" />
-<col style="width: 61%" />
+<col width="39%" />
+<col width="61%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>コマンド</p></th>
-<th class="head"><p>説明</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">コマンド</th>
+<th class="head">説明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>\n or \r</p></td>
-<td><p>改行</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>\n or \r</td>
+<td>改行</td>
 </tr>
-<tr class="row-odd"><td><p>\ \</p></td>
-<td><p>\文字</p></td>
+<tr class="row-odd"><td>\ \</td>
+<td>\文字</td>
 </tr>
-<tr class="row-even"><td><p>\f[フォント名]</p></td>
-<td><p>以降のフォントを指定したものに切り替える</p></td>
+<tr class="row-even"><td>\f[フォント名]</td>
+<td>以降のフォントを指定したものに切り替える</td>
 </tr>
-<tr class="row-odd"><td><p>\a[0] or \a[1]</p></td>
-<td><p>横:左揃え 縦:上辺</p></td>
+<tr class="row-odd"><td>\a[0] or \a[1]</td>
+<td>横:左揃え 縦:上辺</td>
 </tr>
-<tr class="row-even"><td><p>\a[2]</p></td>
-<td><p>横:左揃え 縦:中心</p></td>
+<tr class="row-even"><td>\a[2]</td>
+<td>横:左揃え 縦:中心</td>
 </tr>
-<tr class="row-odd"><td><p>\a[3]</p></td>
-<td><p>横:左揃え 縦:下辺</p></td>
+<tr class="row-odd"><td>\a[3]</td>
+<td>横:左揃え 縦:下辺</td>
 </tr>
-<tr class="row-even"><td><p>\a[4]</p></td>
-<td><p>横:センタリング 縦:上辺</p></td>
+<tr class="row-even"><td>\a[4]</td>
+<td>横:センタリング 縦:上辺</td>
 </tr>
-<tr class="row-odd"><td><p>\a[5]</p></td>
-<td><p>横:センタリング 縦:中心</p></td>
+<tr class="row-odd"><td>\a[5]</td>
+<td>横:センタリング 縦:中心</td>
 </tr>
-<tr class="row-even"><td><p>\a[6]</p></td>
-<td><p>横:センタリング 縦:下辺</p></td>
+<tr class="row-even"><td>\a[6]</td>
+<td>横:センタリング 縦:下辺</td>
 </tr>
-<tr class="row-odd"><td><p>\a[7]</p></td>
-<td><p>横:右揃え 縦:上辺</p></td>
+<tr class="row-odd"><td>\a[7]</td>
+<td>横:右揃え 縦:上辺</td>
 </tr>
-<tr class="row-even"><td><p>\a[8]</p></td>
-<td><p>横:右揃え 縦:中心</p></td>
+<tr class="row-even"><td>\a[8]</td>
+<td>横:右揃え 縦:中心</td>
 </tr>
-<tr class="row-odd"><td><p>\a[9]</p></td>
-<td><p>横:右揃え 縦:下辺</p></td>
+<tr class="row-odd"><td>\a[9]</td>
+<td>横:右揃え 縦:下辺</td>
 </tr>
-<tr class="row-even"><td><p>\c[0]</p></td>
-<td><p>カラーを白色</p></td>
+<tr class="row-even"><td>\c[0]</td>
+<td>カラーを白色</td>
 </tr>
-<tr class="row-odd"><td><p>\c[1]</p></td>
-<td><p>カラーを水色</p></td>
+<tr class="row-odd"><td>\c[1]</td>
+<td>カラーを水色</td>
 </tr>
-<tr class="row-even"><td><p>\c[2]</p></td>
-<td><p>カラーを紫色</p></td>
+<tr class="row-even"><td>\c[2]</td>
+<td>カラーを紫色</td>
 </tr>
-<tr class="row-odd"><td><p>\c[3]</p></td>
-<td><p>カラーを青色</p></td>
+<tr class="row-odd"><td>\c[3]</td>
+<td>カラーを青色</td>
 </tr>
-<tr class="row-even"><td><p>\c[4]</p></td>
-<td><p>カラーを黄色</p></td>
+<tr class="row-even"><td>\c[4]</td>
+<td>カラーを黄色</td>
 </tr>
-<tr class="row-odd"><td><p>\c[5]</p></td>
-<td><p>カラーを緑色</p></td>
+<tr class="row-odd"><td>\c[5]</td>
+<td>カラーを緑色</td>
 </tr>
-<tr class="row-even"><td><p>\c[6]</p></td>
-<td><p>カラーを赤色</p></td>
+<tr class="row-even"><td>\c[6]</td>
+<td>カラーを赤色</td>
 </tr>
-<tr class="row-odd"><td><p>\c[7]</p></td>
-<td><p>カラーをピンク色</p></td>
+<tr class="row-odd"><td>\c[7]</td>
+<td>カラーをピンク色</td>
 </tr>
-<tr class="row-even"><td><p>\c[8]</p></td>
-<td><p>カラーをオレンジ色</p></td>
+<tr class="row-even"><td>\c[8]</td>
+<td>カラーをオレンジ色</td>
 </tr>
-<tr class="row-odd"><td><p>\c[9]</p></td>
-<td><p>カラーをスカイブルー</p></td>
+<tr class="row-odd"><td>\c[9]</td>
+<td>カラーをスカイブルー</td>
 </tr>
-<tr class="row-even"><td><p>\c[10]</p></td>
-<td><p>カラーを黒</p></td>
+<tr class="row-even"><td>\c[10]</td>
+<td>カラーを黒</td>
 </tr>
-<tr class="row-odd"><td><p>\C[00000000] ～ \C[FFFFFFFF]</p></td>
-<td><p>カラーを16進数(AARRGGBB)で指定</p></td>
+<tr class="row-odd"><td>\C[00000000] ～ \C[FFFFFFFF]</td>
+<td>カラーを16進数(AARRGGBB)で指定</td>
 </tr>
-<tr class="row-even"><td><p>\wUserID[WindowID,キャプション]</p></td>
-<td><p>指定したIDのウィンドウコマンドを発行する</p></td>
+<tr class="row-even"><td>\wUserID[WindowID,キャプション]</td>
+<td>指定したIDのウィンドウコマンドを発行する</td>
 </tr>
-<tr class="row-odd"><td><p>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</p></td>
-<td><p>指定したテクスチャ内のパーツIDの <a class="reference internal" href="#richtext-texturecmd"><span class="std std-ref">パーツ</span></a> を埋め込む。</p></td>
+<tr class="row-odd"><td>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</td>
+<td>指定したテクスチャ内のパーツIDの <a class="reference internal" href="#richtext-texturecmd"><span>パーツ</span></a> を埋め込む。</td>
 </tr>
-<tr class="row-even"><td><p>\B or \b</p></td>
-<td><p>ボールド</p></td>
+<tr class="row-even"><td>\B or \b</td>
+<td>ボールド</td>
 </tr>
-<tr class="row-odd"><td><p>\N</p></td>
-<td><p>装飾無</p></td>
+<tr class="row-odd"><td>\N</td>
+<td>装飾無</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><p>\aコマンドを使ったときに、右揃え、センタリング、左揃えのアンカーが変化したとき、自動的に改行します。</p>
-</div></blockquote>
+<div>\aコマンドを使ったときに、右揃え、センタリング、左揃えのアンカーが変化したとき、自動的に改行します。</div></blockquote>
 <div class="section" id="w">
-<h4>ウィンドウコマンド \w<a class="headerlink" href="#w" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<blockquote id="richtext-windowcmd">
-<div><p>指定されたキャプション文字列をタッチすると <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CWindowBase.onClick(CWinCtrlRichText</span> <span class="pre">cCtrl,CRichTextOne</span> <span class="pre">cText)</span></code></a> が発生します。</p>
+<span id="richtext-windowcmd"></span><h4>ウィンドウコマンド \w<a class="headerlink" href="#w" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<blockquote>
+<div><p>指定されたキャプション文字列をタッチすると <a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>コールバック</span></a> が発生します。</p>
 <p>次のようなフォーマットになっています。</p>
 <blockquote>
-<div><p>\wUserID[WindowID,キャプション]</p>
-</div></blockquote>
+<div>\wUserID[WindowID,キャプション]</div></blockquote>
 <ul class="simple">
-<li><p>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</p></li>
-<li><p>WindowID: マルチIDで指定してください。</p></li>
-<li><p>キャプション: 文字列を指定してください。この文字列を押すとコールバックが発生します。</p></li>
+<li>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</li>
+<li>WindowID: マルチIDで指定してください。</li>
+<li>キャプション: 文字列を指定してください。この文字列を押すとコールバックが発生します。</li>
 </ul>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\a</span><span class="s2">[4]\w123[001_002_00003,click here!]&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;\a[4]\w123[001_002_00003,click here!]&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="t">
-<h4>テクスチャコマンド \t<a class="headerlink" href="#t" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<blockquote id="richtext-texturecmd">
+<span id="richtext-texturecmd"></span><h4>テクスチャコマンド \t<a class="headerlink" href="#t" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<blockquote>
 <div><p>文字列の途中にテクスチャを埋め込めます。</p>
-<p>テクスチャをタッチすると <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CWindowBase.onClick(CWinCtrlRichText</span> <span class="pre">cCtrl,CRichTextOne</span> <span class="pre">cText)</span></code></a> が発生します。</p>
+<p>テクスチャをタッチすると <a class="reference internal" href="CWinCtrlRichText.html#richtext-click"><span>コールバック</span></a> が発生します。</p>
 <p>次のようなフォーマットになっています。</p>
 <blockquote>
-<div><p>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</p>
-</div></blockquote>
+<div>\tUserID[テクスチャID,パーツID,横,縦,Yオフセット]</div></blockquote>
 <ul class="simple">
-<li><p>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</p></li>
-<li><p>テクスチャID: マルチIDで指定してください。</p></li>
-<li><p>横,縦: ピクセルサイズを指定してください。</p></li>
-<li><p>Yオフセット: 表示するときのY方向へのオフセットです(省略可能です)。</p></li>
+<li>UserID:  整数で指定してください(省略可能です。デフォルトで0が設定されます)</li>
+<li>テクスチャID: マルチIDで指定してください。</li>
+<li>横,縦: ピクセルサイズを指定してください。</li>
+<li>Yオフセット: 表示するときのY方向へのオフセットです(省略可能です)。</li>
 </ul>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;Texture test</span><span class="se">\t</span><span class="s2">456[001_001_01000,icon0,32,32,0]&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;テクスチャテスト\t456[001_001_01000,icon0,32,32,0]&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -774,16 +726,15 @@ STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span 
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="LOG.html" class="btn btn-neutral float-right" title="LOG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="LOG.html" class="btn btn-neutral float-right" title="LOG" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TEXT.html" class="btn btn-neutral float-left" title="TEXT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TEXT.html" class="btn btn-neutral" title="TEXT" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -792,11 +743,11 @@ STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -809,15 +760,37 @@ STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span 
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

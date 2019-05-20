@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Texture parts default &mdash; WindowSystem 2.00 documentation</title>
+  <title>Texture parts default &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Callback reaching the CWindowBase" href="Callback.html" />
-    <link rel="prev" title="How to change the default value" href="Config.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="Callback reaching the CWindowBase" href="Callback.html"/>
+        <link rel="prev" title="How to change the default value" href="Config.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -153,9 +146,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -187,10 +184,10 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -203,54 +200,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Texture parts default</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Texture parts default</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/TextureDefault.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/TextureDefault.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -258,84 +235,85 @@
             
   <div class="section" id="texture-default">
 <span id="id1"></span><h1>Texture parts default<a class="headerlink" href="#texture-default" title="Permalink to this headline">¶</a></h1>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 53%" />
-<col style="width: 47%" />
+<col width="53%" />
+<col width="47%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Kinds of control</p></th>
-<th class="head"><p>Default value</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Kinds of control</p>
+</th>
+<th class="head"><p class="first last">Default value</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
-<td><p>0:”TXFD?”(TXFD0,TXFD1)
-1:”CURSR”</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
+<td>0:&#8221;TXFD?&#8221;(TXFD0,TXFD1)
+1:&#8221;CURSR&#8221;</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
-<td><p>“TXFD”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
+<td>&#8220;TXFD&#8221;</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
-<td><p>“BTN0?”(BTN00,BTN01)</p></td>
+<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
+<td>&#8220;BTN0?&#8221;(BTN00,BTN01)</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
-<td><p>“BTN0?”(BTN00,BTN01)</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
+<td>&#8220;BTN0?&#8221;(BTN00,BTN01)</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
-<td><p>“BTN0?”(BTN00,BTN01)</p></td>
+<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
+<td>&#8220;BTN0?&#8221;(BTN00,BTN01)</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
-<td><p>“”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
+<td>&#8220;&#8221;</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
-<td><p>“LINE”</p></td>
+<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
+<td>&#8220;LINE&#8221;</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
-<td><p>“ICON”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
+<td>&#8220;ICON&#8221;</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
-<td><p>“ICON”</p></td>
+<tr class="row-even"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
+<td>&#8220;ICON&#8221;</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
-<td><p>0:”MTR”  1:”MTRB”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
+<td>0:&#8221;MTR&#8221;  1:&#8221;MTRB&#8221;</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
-<td><p>“SCBRH”</p></td>
+<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
+<td>&#8220;SCBRH&#8221;</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
-<td><p>“FRAME”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
+<td>&#8220;FRAME&#8221;</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
-<td><p>“LABEL”</p></td>
+<tr class="row-even"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
+<td>&#8220;LABEL&#8221;</td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
-<td><p>“BAR”</p></td>
+<tr class="row-odd"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
+<td>&#8220;BAR&#8221;</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="null">
-<h1>“NULL” part: It is used when the texture is not present.<a class="headerlink" href="#null" title="Permalink to this headline">¶</a></h1>
+<h1>&#8220;NULL&#8221; part: It is used when the texture is not present.<a class="headerlink" href="#null" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>If texture parts do not exist in a texture resource, this window system tries to assign “NULL” texture part.</p>
-<p>If it can not find “NULL” texture part, it cancels control rendering.Beforehand if you include “NULL” texture part in the texture resource, you can find out visually that you forget to include some texture parts.</p>
+<div><p>If texture parts do not exist in a texture resource, this window system tries to assign &#8220;NULL&#8221; texture part.</p>
+<p>If it can not find &#8220;NULL&#8221; texture part, it cancels control rendering.Beforehand if you include &#8220;NULL&#8221; texture part in the texture resource, you can find out visually that you forget to include some texture parts.</p>
 <img alt="_images/null.png" src="_images/null.png" />
 </div></blockquote>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Callback.html" class="btn btn-neutral float-right" title="Callback reaching the CWindowBase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Callback.html" class="btn btn-neutral float-right" title="Callback reaching the CWindowBase" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Config.html" class="btn btn-neutral float-left" title="How to change the default value" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Config.html" class="btn btn-neutral" title="How to change the default value" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -344,11 +322,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -361,15 +339,36 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

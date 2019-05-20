@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CAssetBundleMgr &mdash; WindowSystem 2.00 documentation</title>
+  <title>CAssetBundleMgr &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="About asset bundle" href="AssetVersion.html" />
-    <link rel="prev" title="CMainSystemBase" href="CMainSystemBase.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="About the AssetBundle version." href="AssetVersion.html"/>
+        <link rel="prev" title="CMainSystemBase" href="CMainSystemBase.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -152,13 +145,21 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CAssetBundleMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">How to change a path to load local files.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CAssetBundleMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">CAssetBundleMgr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cassetbundle">CAssetBundle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">How to change a path to load local files.</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -191,9 +192,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -206,54 +207,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CAssetBundleMgr</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CAssetBundleMgr</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CAssetBundleMgr.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CAssetBundleMgr.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -261,205 +242,215 @@
             
   <div class="section" id="cassetbundlemgr">
 <h1>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="class-CAssetBundleMgr">
-<code class="descname">class CAssetBundleMgr</code><a class="headerlink" href="#class-CAssetBundleMgr" title="Permalink to this definition">¶</a></dt>
-<dd><p>You need to add this script by AddComponent in “Awake” method of CMainSystem.</p>
+<blockquote id="id1">
+<div><p>You need to add this script by AddComponent in &#8220;Awake&#8221; method of CMainSystem.</p>
 <p>This is the manager to cache or load the assetbundles.</p>
 <p>When you prepare your own manager , it is unnecessary.</p>
 <p>First ,for get the version of each asset , this script downloads the version.unity3d.</p>
 <p>if the versions are different ,this script discards old cached data.</p>
 <p>To have the following characteristics .</p>
 <ol class="arabic simple">
-<li><p>Asset bundles are version control.This script does not download assetbundles if same assetbundle downloaded in the past(WWW.LoadFromCacheOrDownload).</p></li>
-<li><p>The loaded asset bundles are cached in memory.</p></li>
-<li><p>It releases the cache at the scene switching .</p></li>
-<li><p>It is possible to put a resident flag in assetbundles.  These are not released at the scene switching.</p></li>
-<li><p>Possible to switch the load path in the configuration file on the MS-Windows and the Mac ( local files without using the HTTP server can also be loaded)</p></li>
-<li><p>The name’s format of the assetbundle is <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a> .unity3d.</p></li>
+<li><p class="first">Asset bundles are version control.This script does not download assetbundles if same assetbundle downloaded in the past(WWW.LoadFromCacheOrDownload).</p>
+</li>
+<li><p class="first">The loaded asset bundles are cached in memory.</p>
+</li>
+<li><p class="first">It releases the cache at the scene switching .</p>
+</li>
+<li><p class="first">It is possible to put a resident flag in assetbundles.  These are not released at the scene switching.</p>
+</li>
+<li><p class="first">Possible to switch the load path in the configuration file on the MS-Windows and the Mac ( local files without using the HTTP server can also be loaded)</p>
+</li>
+<li><p class="first">The name&#8217;s format of the assetbundle is <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .unity3d.</p>
+</li>
 </ol>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.MaxConcurrentLoadNum">
-<em>const</em> int <code class="descname">MaxConcurrentLoadNum</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaxConcurrentLoadNum" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>This value means the maximum number that this script can download  at the same time.</p>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>CAssetBundleMgr<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<dl class="member">
+<dt id="_CPPv220MaxConcurrentLoadNum">
+<span id="MaxConcurrentLoadNum__iC"></span><em class="property">const</em> int <code class="descclassname"></code><code class="descname">MaxConcurrentLoadNum</code><a class="headerlink" href="#_CPPv220MaxConcurrentLoadNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>This value means the maximum number that this script can download  at the same time.</p>
 <p>In other words,the number of a LoadFromCacheOrDownload calling can not exceed this maximum value.</p>
 <p>The default value is to 1.</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.MaximumAvailableDiskSpace">
-<em>const</em> long <code class="descname">MaximumAvailableDiskSpace</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaximumAvailableDiskSpace" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It sets the maximum cache size of a local disk.</p>
+<dl class="member">
+<dt id="_CPPv225MaximumAvailableDiskSpace">
+<span id="MaximumAvailableDiskSpace__lC"></span><em class="property">const</em> long <code class="descclassname"></code><code class="descname">MaximumAvailableDiskSpace</code><a class="headerlink" href="#_CPPv225MaximumAvailableDiskSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the maximum cache size of a local disk.</p>
 <p>The default value is set to 512 * 1024 * 1024 (512Mbyte).</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.httpServerPath">
-<em>static</em> string <code class="descname">httpServerPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.httpServerPath" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It sets the HTTP address.</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.debugPath">
-<em>static</em> string <code class="descname">debugPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.debugPath" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv214httpServerPath">
+<span id="httpServerPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">httpServerPath</code><a class="headerlink" href="#_CPPv214httpServerPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the HTTP address.</p>
+</dd></dl>
 
-<p>It sets the debug path . It is effective only in MS-Windows / Mac environment .This manager preferentially loads assetbundles via this path.</p>
+<dl class="member">
+<dt id="_CPPv29debugPath">
+<span id="debugPath__string"></span><em class="property">static</em> string <code class="descclassname"></code><code class="descname">debugPath</code><a class="headerlink" href="#_CPPv29debugPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the debug path . It is effective only in MS-Windows / Mac environment .This manager preferentially loads assetbundles via this path.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A file that was loaded via the debug path does not perform the cache to the local disk.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">A file that was loaded via the debug path does not perform the cache to the local disk.</p>
 </div>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.lastError">
-int <code class="descname">lastError</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.lastError" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It has the error number</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.errorMessage">
-int <code class="descname">errorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.errorMessage" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv29lastError">
+<span id="lastError__i"></span>int <code class="descclassname"></code><code class="descname">lastError</code><a class="headerlink" href="#_CPPv29lastError" title="Permalink to this definition">¶</a></dt>
+<dd><p>It has the error number</p>
+</dd></dl>
 
-<p>It has the error message</p>
+<dl class="member">
+<dt id="_CPPv212errorMessage">
+<span id="errorMessage__i"></span>int <code class="descclassname"></code><code class="descname">errorMessage</code><a class="headerlink" href="#_CPPv212errorMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>It has the error message</p>
+</dd></dl>
+
 <dl class="member">
 <dt id="c.lodings">
 CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="#c.lodings" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>This returns a list of asset bundles currently being downloaded .</p>
+<dd><p>This returns a list of asset bundles currently being downloaded .</p>
 <p>This list includes what the manager deferred assetbundle downloads.</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.loadNum">
-int <code class="descname">loadNum</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.loadNum" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It has a number of asset bundle currently being downloaded .</p>
+<dl class="member">
+<dt id="_CPPv27loadNum">
+<span id="loadNum__i"></span>int <code class="descclassname"></code><code class="descname">loadNum</code><a class="headerlink" href="#_CPPv27loadNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>It has a number of asset bundle currently being downloaded .</p>
 <p>This number includes what the manager deferred assetbundle downloads.</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CAssetBundleMgr" title="CAssetBundleMgr class">CAssetBundleMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.Instance" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It has an instance of a manager</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.reference">
-<a class="reference internal" href="#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a> <code class="descname">reference</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.reference" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="member">
+<dt id="_CPPv28Instance">
+<span id="Instance__CAssetBundleMgr"></span>CAssetBundleMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>It has an instance of a manager</p>
+</dd></dl>
 
-<p>It references a assetbundle. If you have not cache it , the manager downloads it .</p>
+<dl class="function">
+<dt id="_CPPv29reference4uint">
+<span id="reference__uint"></span>CAssetBundle <code class="descclassname"></code><code class="descname">reference</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29reference4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>It references a assetbundle. If you have not cache it , the manager downloads it .</p>
 <p>If it was already downloaded, it returns the existing CAssetBundle.</p>
 <p>Whether CAssetBundle was downloaded, it is possible to determine by CAssetBundle.isLoaded.</p>
 <p>if it returns true,the asset is already loaded.</p>
 <p>When null is returned , it is  not exist.</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.isExist">
-bool <code class="descname">isExist</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.isExist" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>It examines whether the asset bundle exist .</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.startPreload">
-void <code class="descname">startPreload</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.startPreload" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv27isExist4uint">
+<span id="isExist__uint"></span>bool <code class="descclassname"></code><code class="descname">isExist</code><span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27isExist4uint" title="Permalink to this definition">¶</a></dt>
+<dd><p>It examines whether the asset bundle exist .</p>
+</dd></dl>
 
-<p>You need to call this function if  you want to download all asset bundles that exist in order to cache on the local disk.</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.loadAssetVersion">
-void <code class="descname">loadAssetVersion</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.loadAssetVersion" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv212startPreloadv">
+<span id="startPreload"></span>void <code class="descclassname"></code><code class="descname">startPreload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212startPreloadv" title="Permalink to this definition">¶</a></dt>
+<dd><p>You need to call this function if  you want to download all asset bundles that exist in order to cache on the local disk.</p>
+</dd></dl>
 
-<p>Asset version (version.unity3d) to download and again , and updates the cache of asset bundle.</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.releaseAll">
-void <code class="descname">releaseAll</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.releaseAll" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="function">
+<dt id="_CPPv216loadAssetVersionv">
+<span id="loadAssetVersion"></span>void <code class="descclassname"></code><code class="descname">loadAssetVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216loadAssetVersionv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asset version (version.unity3d) to download and again , and updates the cache of asset bundle.</p>
+</dd></dl>
 
-<p>It releases all asset bundle regardless of the resident / non-resident .</p>
+<dl class="function">
+<dt id="_CPPv210releaseAllv">
+<span id="releaseAll"></span>void <code class="descclassname"></code><code class="descname">releaseAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210releaseAllv" title="Permalink to this definition">¶</a></dt>
+<dd><p>It releases all asset bundle regardless of the resident / non-resident .</p>
 <p>After the release , you must call the loadAssetVersion.</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="class-CAssetBundle">
-<code class="descname">class CAssetBundle</code><a class="headerlink" href="#class-CAssetBundle" title="Permalink to this definition">¶</a></dt>
-<dd><p>It can be cast in AssetBundle.</p>
-<dl class="method">
-<dt id="method-CAssetBundle.get">
-AssetBundle <code class="descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundle.get" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Get the AssetBundle.</p>
-<dl class="property">
-<dt id="property-CAssetBundle.id">
-uint <code class="descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>It has the ID.</p>
-<dl class="property">
-<dt id="property-CAssetBundle.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.isLoaded" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>if it is already loaded,this value sets to true.</p>
-<p>You can see whether it is resident .</p>
+</div>
+<div class="section" id="cassetbundle">
+<h2>CAssetBundle<a class="headerlink" href="#cassetbundle" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>It can be cast in AssetBundle.</p>
+</div></blockquote>
+<dl class="member">
+<dt id="_CPPv23get">
+AssetBundle <code class="descclassname"></code><code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv23get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the AssetBundle.</p>
 </dd></dl>
 
-<div class="section" id="id1">
-<h2>How to change a path to load local files.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="member">
+<dt id="_CPPv22id">
+<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="Permalink to this definition">¶</a></dt>
+<dd><p>It has the ID.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28isLoaded">
+<span id="isLoaded__b"></span>bool <code class="descclassname"></code><code class="descname">isLoaded</code><a class="headerlink" href="#_CPPv28isLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>if it is already loaded,this value sets to true.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28isRemain">
+<span id="isRemain__b"></span>bool <code class="descclassname"></code><code class="descname">isRemain</code><a class="headerlink" href="#_CPPv28isRemain" title="Permalink to this definition">¶</a></dt>
+<dd><p>You can see whether it is resident .</p>
+</dd></dl>
+
+<div class="section" id="id3">
+<h3>How to change a path to load local files.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is only valid on Windows / Mac.</p>
 <p>You make the following files in the same location as the Assets folder.</p>
 <ul class="simple">
-<li><p>config.cf</p></li>
-<li><p>config.local.cf</p></li>
+<li>config.cf</li>
+<li>config.local.cf</li>
 </ul>
 <img alt="_images/configpath.png" src="_images/configpath.png" />
 <p>The loading order is config.cf → config.local.cf.</p>
-<p>“config.cf” is overwritten by “config.local.cf”.</p>
+<p>&#8220;config.cf&#8221; is overwritten by &#8220;config.local.cf&#8221;.</p>
 <p>It is described as follows in config.cf</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="c1"># config.cf</span>
-<span class="c1">#</span>
-<span class="n">DEBUG_PATH</span> <span class="o">=</span> <span class="o">../../../</span><span class="n">unified</span><span class="o">/</span><span class="n">AssetBuilder</span><span class="o">/</span><span class="n">assetbundles</span><span class="o">/</span><span class="n">Windows</span>
+<div class="highlight-csharp"><div class="highlight"><pre>#
+# config.cf
+#
+DEBUG_PATH = ../../../unified/AssetBuilder/assetbundles/Windows
 </pre></div>
 </div>
 <blockquote>
 <div><p>In the Awake of CMainSystem, set as follows .</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//==========================================================================
-/*!Awake
-* @brief    Unity Callback
-*/
-new void Awake() {
-     base.Awake();
-     if (m_instance != null) {
-         Debug.LogError(&quot;already exist CMainSystem&quot;);
-         return;
-     }
-     m_instance = this;
-     #if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBPLAYER)
-         CAssetBundleMgr.debugPath = CConfig.Instance.get (&quot;DEBUG_PATH&quot;,&quot;../Debug/&quot;);
-     #endif
-     if (KsSoftConfig.UseAssetBundle) {
-             gameObject.AddComponent&lt;CAssetBundleMgr&gt;();
-         }
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">//==========================================================================</span>
+<span class="cm">/*!Awake</span>
+<span class="cm">* @brief    Unity Callback</span>
+<span class="cm">*/</span>
+<span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+     <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">m_instance</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">Debug</span><span class="p">.</span><span class="n">LogError</span><span class="p">(</span><span class="s">&quot;already exist CMainSystem&quot;</span><span class="p">);</span>
+         <span class="k">return</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">m_instance</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+     <span class="cp">#if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBPLAYER)</span>
+         <span class="n">CAssetBundleMgr</span><span class="p">.</span><span class="n">debugPath</span> <span class="p">=</span> <span class="n">CConfig</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="k">get</span> <span class="p">(</span><span class="s">&quot;DEBUG_PATH&quot;</span><span class="p">,</span><span class="s">&quot;../Debug/&quot;</span><span class="p">);</span>
+     <span class="cp">#endif</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+         <span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="AssetVersion.html" class="btn btn-neutral float-right" title="About asset bundle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="AssetVersion.html" class="btn btn-neutral float-right" title="About the AssetBundle version." accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CMainSystemBase.html" class="btn btn-neutral float-left" title="CMainSystemBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CMainSystemBase.html" class="btn btn-neutral" title="CMainSystemBase" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -468,11 +459,11 @@ new void Awake() {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -485,15 +476,36 @@ new void Awake() {
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

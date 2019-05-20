@@ -72,7 +72,7 @@ FiveCC
 ::
  
  "BTN00"
- "BTN0?" = "BTN0_"
+ "BTN0?" = "BTN_"
  "Test"
 
 ..

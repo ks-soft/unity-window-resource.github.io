@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SCROLLBAR &mdash; WindowSystem 2.00 documentation</title>
+  <title>SCROLLBAR &mdash; WindowSystem 1.07 documentation</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="LISTBOX" href="LISTBOX.html" />
-    <link rel="prev" title="METER" href="METER.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
+        <link rel="next" title="LISTBOX" href="LISTBOX.html"/>
+        <link rel="prev" title="METER" href="METER.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -81,15 +81,12 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -109,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -142,7 +135,7 @@
 <li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a></li>
 <li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">SCROLLBAR</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">SCROLLBAR</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Position and size</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">Direction of the scroll bar</a></li>
@@ -150,7 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id6">Property</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id7">Default value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = Control ID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = X, Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = Ｘ，Ｙ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id-id"><strong>TEX_ID</strong> = Texture ID,Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tex-id-id"><strong>TEX_ID</strong> = Part ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = width,height</a></li>
@@ -170,9 +163,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -205,9 +202,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -220,54 +217,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>SCROLLBAR</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>SCROLLBAR</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/SCROLLBAR.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/SCROLLBAR.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -277,20 +254,19 @@
 <span id="id1"></span><h1>SCROLLBAR<a class="headerlink" href="#scrollbar" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><blockquote>
-<div><p>C#: <a class="reference internal" href="CWinCtrlScrollbar.html#cwinctrlscrollbar"><span class="std std-ref">CWinCtrlScrollbar</span></a></p>
-</div></blockquote>
+<div>C#: <a class="reference internal" href="CWinCtrlScrollbar.html#cwinctrlscrollbar"><span>CWinCtrlScrollbar</span></a></div></blockquote>
 <p>This is a control to display the scroll bar.</p>
 <p>By assigning to the scrollable control, this control is enabled.</p>
 <p>By associating SCROLLBAR control the GROUP property, it is possible to display a scroll bar.</p>
 <p>It is also possible to assign some scrollbars to a scrollable control.</p>
 <p>It is listed scrollable controls below.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></li>
-<li><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></li>
-<li><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></li>
-<li><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></li>
-<li><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></li>
-<li><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></li>
+<li><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></li>
+<li><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></li>
+<li><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></li>
+<li><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></li>
+<li><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></li>
+<li><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></li>
 </ul>
 <p>You can not set HIT or NOHIT flag to STYLE property.</p>
 <blockquote>
@@ -309,11 +285,10 @@
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$w = 300;
+<div class="highlight-csharp"><div class="highlight"><pre>$w = 300;
 LISTBOX(List) {
   ID = 001_100_00000;
-  POSITION = 0,-160;
+  POSITION = 0,160;
   STYLE = ANCHOR_BOTTOM;
   SIZE = $w,160 - 16;
   CONTENTS_SIZE = $w,48;
@@ -332,12 +307,13 @@ SCROLLBAR(List) {
   ID = 001_100_00010;
   DEF_SCROLLBAR;
   STYLE = ANCHOR_RIGHTTOP;
-  POSITION = 0,16;
-  SIZE = 0,-16 * 2;
+  POSITION = 0,-16;
+  SIZE = 0,- 16 * 2;
 };
 </pre></div>
 </div>
-<img alt="_images/SCROLLBAR.png" src="_images/SCROLLBAR.png" />
+<blockquote>
+<div><img alt="_images/SCROLLBAR.png" src="_images/SCROLLBAR.png" />
 </div></blockquote>
 </div>
 <div class="section" id="id3">
@@ -346,89 +322,87 @@ SCROLLBAR(List) {
 <div><p>Unlike normal control, handling of location and size of this control is special.</p>
 <p>The position and size are relative to the scrollable controls that are assigned.</p>
 <p>Position and size is a relative value from the scrollable are related control.</p>
-<p>Valid anchors to see <a class="reference internal" href="#anchor-scrollbar"><span class="std std-ref">here</span></a> .</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;wr.h&quot;</span>
+<p>Valid anchors to see <a class="reference internal" href="#anchor-scrollbar"><span>here</span></a> .</p>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
 
-<span class="n">WINDOW</span><span class="p">(</span><span class="mi">255_000_00001</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">NOTITLEBAR</span><span class="o">|</span><span class="n">ANCHOR_CENTER</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="mi">100_000_00001</span><span class="p">;</span>
-<span class="p">};</span>
+WINDOW(255_000_00001) {
+       STYLE = NOTITLEBAR|ANCHOR_CENTER;
+       POSITION = 0,0;
+       SIZE = 256,256;
+       TEX_ID = 100_000_00001;
+};
 
-<span class="n">CONTAINER</span><span class="p">(</span><span class="n">Map</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">ID</span> <span class="o">=</span> <span class="mi">000_000_000100</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-      <span class="n">CONTENTS_SIZE</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">;</span>
-      <span class="n">COLOR</span> <span class="o">=</span> <span class="n">COLOR32</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
-      <span class="n">CONTENTS</span> <span class="o">=</span> <span class="p">{</span>
-              <span class="n">BUTTON</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
-                      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">BASE_LEFT</span><span class="p">;</span>
-                      <span class="n">PRIORITY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-                      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
-                      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;TQML0&quot;</span><span class="p">;</span>
-              <span class="p">};</span>
-              <span class="n">BUTTON</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span>
-                      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">BASE_TOP</span><span class="p">;</span>
-                      <span class="n">PRIORITY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-                      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-                      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;TQML0&quot;</span><span class="p">;</span>
-              <span class="p">};</span>
-              <span class="n">BUTTON</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="p">{</span>
-                      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">BASE_BOTTOM</span><span class="p">;</span>
-                      <span class="n">PRIORITY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-                      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span><span class="mi">512</span><span class="p">;</span>
-                      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;TQML0&quot;</span><span class="p">;</span>
-              <span class="p">};</span>
-              <span class="n">BUTTON</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="p">{</span>
-                      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">BASE_RIGHT</span><span class="p">;</span>
-                      <span class="n">PRIORITY</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-                      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span><span class="mi">256</span><span class="p">;</span>
-                      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;TQML0&quot;</span><span class="p">;</span>
-              <span class="p">};</span>
-      <span class="p">};</span>
-      <span class="n">GROUP</span> <span class="o">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">LEFT</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">TOP</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">BOTTOM</span><span class="p">);</span>
-<span class="p">};</span>
-<span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">LEFT</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">ANCHOR_LEFTTOP</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;SCBBH&quot;</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">ANCHOR_RIGHTTOP</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;SCBBH&quot;</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">TOP</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">ANCHOR_LEFTTOP</span><span class="o">|</span><span class="n">ITEM_STACK_H</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;SCBBV&quot;</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">BOTTOM</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">STYLE</span> <span class="o">=</span> <span class="n">ANCHOR_LEFTBOTTOM</span><span class="o">|</span><span class="n">ITEM_STACK_H</span><span class="p">;</span>
-      <span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;SCBBV&quot;</span><span class="p">;</span>
-      <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-      <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
-<span class="p">};</span>
+CONTAINER(Map) {
+       ID = 000_000_000100;
+       POSITION = 0,0;
+       SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+       CONTENTS_SIZE = 512,512;
+       COLOR = COLOR32(255,255,255,255);
+       CONTENTS = {
+               BUTTON(A) {
+                       STYLE = BASE_LEFT;
+                       PRIORITY = -1;
+                       POSITION = 0,-256;
+                       TEX_ID = &quot;TQML0&quot;;
+               };
+               BUTTON(B) {
+                       STYLE = BASE_TOP;
+                       PRIORITY = -1;
+                       POSITION = 256,0;
+                       TEX_ID = &quot;TQML0&quot;;
+               };
+               BUTTON(C) {
+                       STYLE = BASE_BOTTOM;
+                       PRIORITY = -1;
+                       POSITION = 256,-512;
+                       TEX_ID = &quot;TQML0&quot;;
+               };
+               BUTTON(D) {
+                       STYLE = BASE_RIGHT;
+                       PRIORITY = -1;
+                       POSITION = 512,-256;
+                       TEX_ID = &quot;TQML0&quot;;
+               };
+       };
+       GROUP = SCROLLBAR(LEFT),SCROLLBAR(RIGHT),SCROLLBAR(TOP),SCROLLBAR(BOTTOM);
+};
+SCROLLBAR(LEFT) {
+       STYLE = ANCHOR_LEFTTOP;
+       TEX_ID = &quot;SCBBH&quot;;
+       POSITION = 0,0;
+       SIZE = 0,0;
+};
+SCROLLBAR(RIGHT) {
+       STYLE = ANCHOR_RIGHTTOP;
+       TEX_ID = &quot;SCBBH&quot;;
+       POSITION = 0,0;
+       SIZE = 0,0;
+};
+SCROLLBAR(TOP) {
+       STYLE = ANCHOR_LEFTTOP|ITEM_STACK_H;
+       TEX_ID = &quot;SCBBV&quot;;
+       POSITION = 0,0;
+       SIZE = 0,0;
+};
+SCROLLBAR(BOTTOM) {
+       STYLE = ANCHOR_LEFTBOTTOM|ITEM_STACK_H;
+       TEX_ID = &quot;SCBBV&quot;;
+       POSITION = 0,0;
+       SIZE = 0,0;
+};
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="id4">
 <h2>Direction of the scroll bar<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>You can use not only the vertical scroll bar but also the horizontal scroll bar.</p>
 <p>Please set the following values to the style.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Vertical: ITEM_STACK_V</p></li>
-<li><p>Horizontal: ITEM_STACK_H</p></li>
+<ul class="simple">
+<li>縦方向: ITEM_STACK_V</li>
+<li>横方向: ITEM_STACK_H</li>
 </ul>
-</div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="scrollbar-display-flag">
@@ -436,8 +410,7 @@ SCROLLBAR(List) {
 <blockquote>
 <div><p>By setting the style, you can choose the scrollbar display type whether display or hide.</p>
 <p>You can choose from the following three types.</p>
-<blockquote>
-<div><p><strong>SCROLLBAR_DISPLAY_NORMAL(Default)</strong></p>
+<p><strong>SCROLLBAR_DISPLAY_NORMAL(Default)</strong></p>
 <blockquote>
 <div><p>Only when the area is scrollable and you touch the scrollable area,it is displayed.</p>
 </div></blockquote>
@@ -450,42 +423,38 @@ SCROLLBAR(List) {
 <div><p>Always displays.</p>
 </div></blockquote>
 </div></blockquote>
-</div></blockquote>
 </div>
 <div class="section" id="id6">
 <h2>Property<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id7">
 <h3>Default value<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TEX_ID</span> <span class="o">=</span> <span class="s2">&quot;SCBRH&quot;</span><span class="p">;</span>
-<span class="n">STYLE</span> <span class="o">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>
-<span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;SCBRH&quot;</span><span class="p">;</span>
+<span class="n">STYLE</span> <span class="p">=</span> <span class="n">ITEM_STACK_V</span><span class="p">;</span>
+<span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="id-id">
 <h3><strong>ID</strong> = Control ID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Define the control ID.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="o">=</span> <span class="mi">001_000_00010</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you don’t set the ID, it generates automatically from the hash value.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">If you don&#8217;t set the ID, it generates automatically from the hash value.</p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="position-x-y">
-<h3><strong>POSITION</strong> = X, Y<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
+<h3><strong>POSITION</strong> = Ｘ，Ｙ<a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It determine the display position. It becomes relative position from a scrollable control.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">;</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,-</span><span class="m">16</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>You cannot specify a percentage.</p>
-</div></blockquote>
 </div>
 <div class="section" id="tex-id-id-id">
 <h3><strong>TEX_ID</strong> = Texture ID,Part ID<a class="headerlink" href="#tex-id-id-id" title="Permalink to this headline">¶</a></h3>
@@ -500,19 +469,18 @@ SCROLLBAR(List) {
 <h3><strong>SIZE</strong> = width,height<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set the display size of the scroll bar. It is the relative size of the scrollable control.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SIZE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>                   <span class="o">//</span><span class="n">display</span> <span class="n">size</span>
+</div></blockquote>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SIZE</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>                    <span class="c1">//display size</span>
 </pre></div>
 </div>
-<p>You cannot specify a percentage.</p>
-</div></blockquote>
 </div>
 <div class="section" id="color-r-g-b-a">
 <h3><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>It is possible to set the color values . By changing color , it affects all of the controls that are included .</p>
-<p>Set R, G, B in the range of 0…2 .</p>
+<p>Set R, G, B in the range of 0～2 .</p>
 <p>If you set a value in excess of one , each color component can double the brightness.</p>
-<p>Set A in the range of 0…1 .</p>
+<p>Set A in the range of 0～1 .</p>
 </div></blockquote>
 </div>
 <div class="section" id="style-0-1-n">
@@ -520,43 +488,45 @@ SCROLLBAR(List) {
 <blockquote>
 <div><p>You can set the display anchor of control.</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Display position anchor flag</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Display position anchor flag</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
-<td><p>Set the anchor position in the upper left</p>
+<tbody valign="top">
+<tr class="row-even"><td>ANCHOR_DEFAULT</td>
+<td><p class="first">Set the anchor position in the upper left</p>
 <p>Same as ANCHOR_LEFTTOP</p>
-<p>The default control center position is set to BASE_LEFT.</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
-<td><p>Set the anchor position in the upper left</p>
-<p>The default control center position is set to BASE_LEFT.</p>
+<tr class="row-odd"><td>ANCHOR_LEFTTOP</td>
+<td><p class="first">Set the anchor position in the upper left</p>
+<p class="last">The default control center position is set to BASE_LEFT.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_LEFTBOTTOM</p></td>
-<td><p>Set the anchor position to the left.</p>
+<tr class="row-even"><td>ANCHOR_LEFTBOTTOM</td>
+<td><p class="first">Set the anchor position to the left.</p>
 <p>Located along the lower edge</p>
-<p>The default control center position is set to BASE_LEFTBOTTOM.</p>
+<p class="last">The default control center position is set to BASE_LEFTBOTTOM.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
-<td><p>Set the anchor position in the upper right</p>
-<p>The default control center position is set to BASE_RIGHTBOTTOM.</p>
+<tr class="row-odd"><td>ANCHOR_RIGHTTOP</td>
+<td><p class="first">Set the anchor position in the upper right</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
-<tr class="row-even"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
-<td><p>Set the anchor position to the right</p>
+<tr class="row-even"><td>ANCHOR_RIGHTBOTTOM</td>
+<td><p class="first">Set the anchor position to the right</p>
 <p>Located along the lower edge</p>
-<p>The default control center position is set to BASE_RIGHTBOTTOM.</p>
+<p class="last">The default control center position is set to BASE_RIGHTBOTTOM.</p>
 </td>
 </tr>
 </tbody>
@@ -566,34 +536,42 @@ SCROLLBAR(List) {
 <img alt="_images/SCROLLBAR_align.png" src="_images/SCROLLBAR_align.png" />
 </div></blockquote>
 <p>Style that limits the function as follows .</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
+<col width="24%" />
+<col width="76%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Function limit style</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Function limit style</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>HIDE</p></td>
-<td><p>Hide.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>HIDE</td>
+<td><p class="first last">Hide.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>ITEM_STACK_V</p></td>
-<td><p>Set to the direction of the scroll bar in the vertical direction.</p></td>
+<tr class="row-odd"><td>ITEM_STACK_V</td>
+<td><p class="first last">Set to the direction of the scroll bar in the vertical direction.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>ITEM_STACK_H</p></td>
-<td><p>Set to the direction of the scroll bar in the horizontal direction.</p></td>
+<tr class="row-even"><td>ITEM_STACK_H</td>
+<td><p class="first last">Set to the direction of the scroll bar in the horizontal direction.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>SCROLLBAR_DISPLAY_NORMAL</p></td>
-<td><p>Only when the area is scrollable and you touch the scrollable area,it is displayed.</p></td>
+<tr class="row-odd"><td>SCROLLBAR_DISPLAY_NORMAL</td>
+<td><p class="first last">Only when the area is scrollable and you touch the scrollable area,it is displayed.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p>SCROLLBAR_DISPLAY_SCROLLABLE</p></td>
-<td><p>It display only when the area is scrollable.</p></td>
+<tr class="row-even"><td>SCROLLBAR_DISPLAY_SCROLLABLE</td>
+<td><p class="first last">It display only when the area is scrollable.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>SCROLLBAR_DISPLAY_ALWAYS</p></td>
-<td><p>Always displays.</p></td>
+<tr class="row-odd"><td>SCROLLBAR_DISPLAY_ALWAYS</td>
+<td><p class="first last">Always displays.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -603,16 +581,15 @@ SCROLLBAR(List) {
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="LISTBOX.html" class="btn btn-neutral float-right" title="LISTBOX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="LISTBOX.html" class="btn btn-neutral float-right" title="LISTBOX" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="METER.html" class="btn btn-neutral float-left" title="METER" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="METER.html" class="btn btn-neutral" title="METER" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -621,11 +598,11 @@ SCROLLBAR(List) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -638,15 +615,36 @@ SCROLLBAR(List) {
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

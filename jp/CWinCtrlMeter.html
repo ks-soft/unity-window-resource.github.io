@@ -1,53 +1,52 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlMeter &mdash; WindowSystem 2.00 ドキュメント</title>
+  <title>CWinCtrlMeter &mdash; WindowSystem 1.07 ドキュメント</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="CWinCtrlScrollbar" href="CWinCtrlScrollbar.html" />
-    <link rel="prev" title="CWinCtrlRenderIcon" href="CWinCtrlRenderIcon.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
+        <link rel="next" title="CWinCtrlScrollbar" href="CWinCtrlScrollbar.html"/>
+        <link rel="prev" title="CWinCtrlRenderIcon" href="CWinCtrlRenderIcon.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -61,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -82,10 +81,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -110,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -157,6 +149,10 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -177,7 +173,12 @@
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlMeter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cwindowbase">CWindowBaseに届くコールバック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">固有の関数/プロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">使用例</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a></li>
@@ -189,7 +190,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -204,54 +205,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CWinCtrlMeter</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CWinCtrlMeter</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CWinCtrlMeter.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CWinCtrlMeter.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -260,91 +241,211 @@
   <div class="section" id="cwinctrlmeter">
 <span id="id1"></span><h1>CWinCtrlMeter<a class="headerlink" href="#cwinctrlmeter" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>スクリプト: <a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p>
+<div><p>スクリプト: <a class="reference internal" href="METER.html#meter"><span>METER</span></a></p>
 <p>メータを表示するためのコントロールです。</p>
 <p>プログレスバーなどに使えます。</p>
-<p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a> と同様に最大8枚まで重ねて表示することが可能です。</p>
+<p><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a> と同様に最大8枚まで重ねて表示することが可能です。</p>
 <p>任意のテクスチャパーツの伸縮を設定可能です。</p>
-<p>長さを１に設定すると、ちょうど <a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a> と同じ見た目で表示されるようになっています。</p>
+<p>長さを１に設定すると、ちょうど <a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a> と同じ見た目で表示されるようになっています。</p>
 </div></blockquote>
-<p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
+<div class="section" id="cwindowbase">
+<h2>CWindowBaseに届くコールバック<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>METERは、デフォルトでNOHITになっています。
-コールバックを受け取りたいときは、STYLEにHITを指定し忘れないでください。</p>
-<blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-</div></blockquote>
-</div></blockquote>
-<dl class="class">
-<dt id="class-CWinCtrlMeter">
-<code class="descname">class CWinCtrlMeter</code><a class="headerlink" href="#class-CWinCtrlMeter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<dl class="method">
-<dt id="method-CWinCtrlMeter.meter">
-float <code class="descname">meter</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlMeter.meter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int index</dt>
-<dd class="field-odd"><p>テクスチャパーツ番号</p>
-</dd>
-<dt class="field-even">Return float</dt>
-<dd class="field-even"><p>メータの長さ</p>
-</dd>
-</dl>
+<div>METERは、デフォルトでNOHITになっています。
+コールバックを受け取りたいときは、STYLEにHITを指定し忘れないでください。</div></blockquote>
+<dl class="function">
+<dt id="_CPPv27onClick12CWinCtrlBase">
+<span id="onClick__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">タッチされたコントロール</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv26onHold12CWinCtrlBase">
+<span id="onHold__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
+<li><strong>Vector2 dragVelocity</strong> &#8211; タッチ位置の変位</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
+<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
+<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
+<li><strong>Vector2 dragVelocity</strong> &#8211; タッチ位置の変位</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
+<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
+<li><strong>Transform transform</strong> &#8211; ドラッグされたコントロールのトランスフォーム</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">複製したコントロールをレンダリングするかどうかを選択する。</p>
+<ul class="last simple">
+<li>true: ドラッグ中のコントロールの複製をレンダリングする。</li>
+<li>false: ドラッグ中のコントロールの複製をレンダリングしない。</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
+<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
+<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
+<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212onDropGround12CWinCtrlBase">
+<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">ドロップされたコントロール</td>
+</tr>
+</tbody>
+</table>
+<p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
+<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>固有の関数/プロパティ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="function">
+<dt id="_CPPv25meteri">
+<span id="meter__i"></span>float <code class="descclassname"></code><code class="descname">meter</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25meteri" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ int index:</th><td class="field-body">テクスチャパーツ番号</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return float:</th><td class="field-body">メータの長さ</td>
+</tr>
+</tbody>
+</table>
 <p>指定されたテクスチャ番号のパーツが元のサイズから何割の長さに設定されているか取得する.</p>
 <p>0 ～ 1で値が返ってきます。</p>
 <p>デフォルトでは、1が設定されています(メータがマックスの状態)</p>
-<dl class="method">
-<dt id="method-CWinCtrlMeter.setMeter">
-void <code class="descname">setMeter</code> <span class="sig-paren">(</span>int <em>index</em>, float <em>value</em>, float <em>speed</em><em> = 0.2f</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlMeter.setMeter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int index</dt>
-<dd class="field-odd"><p>テクスチャパーツ番号</p>
-</dd>
-<dt class="field-even">Param float value</dt>
-<dd class="field-even"><p>メータの長さ(0～1)</p>
-</dd>
-<dt class="field-odd">Param float speed = 0.2f</dt>
-<dd class="field-odd"><p>アニメーション速度</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv28setMeteriff">
+<span id="setMeter__i.float.float"></span>void <code class="descclassname"></code><code class="descname">setMeter</code><span class="sig-paren">(</span>int <em>index</em>, float <em>value</em>, float <em>speed</em> = 0.2f<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setMeteriff" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>int index</strong> &#8211; テクスチャパーツ番号</li>
+<li><strong>float value</strong> &#8211; メータの長さ(0～1)</li>
+<li><strong>float speed = 0.2f</strong> &#8211; アニメーション速度</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <p>指定されたテクスチャ番号のパーツのサイズをアニメーション付で変更します。</p>
 </dd></dl>
 
-<p><em>使用例</em></p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get control</span>
+</div>
+<div class="section" id="id3">
+<h2>使用例<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// コントロールを取得する方法.</span>
 <span class="n">CWinCtrlMeter</span>  <span class="n">mtrLoading</span> <span class="p">=</span> <span class="n">find</span><span class="p">(</span><span class="n">METER_Loading</span><span class="p">)</span> <span class="k">as</span> <span class="n">CWinCtrlMeter</span><span class="p">;</span>
 
-<span class="c1">// Get Meter Position (0 … 1.)</span>
+<span class="c1">// メータの位置を取得(0～1で返ります)</span>
 <span class="kt">float</span> <span class="n">pos</span> <span class="p">=</span> <span class="n">mtrLoading</span><span class="p">.</span><span class="n">meter</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
 
-<span class="c1">// Set 3rd texture part stretch (It can be specified as 0 … 1.)</span>
+<span class="c1">// 3番目のテクスチャパーツの伸縮を設定(0～1で指定可能です。)</span>
 <span class="n">mtrLoading</span><span class="p">.</span><span class="n">setMeter</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">0.5f</span><span class="p">);</span>
 </pre></div>
+</div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlScrollbar.html" class="btn btn-neutral float-right" title="CWinCtrlScrollbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlScrollbar.html" class="btn btn-neutral float-right" title="CWinCtrlScrollbar" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlRenderIcon.html" class="btn btn-neutral float-left" title="CWinCtrlRenderIcon" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlRenderIcon.html" class="btn btn-neutral" title="CWinCtrlRenderIcon" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -353,11 +454,11 @@ void <code class="descname">setMeter</code> <span class="sig-paren">(</span>int 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -370,15 +471,37 @@ void <code class="descname">setMeter</code> <span class="sig-paren">(</span>int 
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

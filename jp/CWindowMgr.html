@@ -1,53 +1,52 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWindowMgrについて &mdash; WindowSystem 2.00 ドキュメント</title>
+  <title>CWindowMgrについて &mdash; WindowSystem 1.07 ドキュメント</title>
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="CWindowBase" href="CWindowBase.html" />
-    <link rel="prev" title="CMessageDataSheetMgrについて" href="CMessageDataSheetMgr.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
+        <link rel="next" title="CWindowBase" href="CWindowBase.html"/>
+        <link rel="prev" title="CMessageDataSheetMgrについて" href="CMessageDataSheetMgr.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -61,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                1.07
               </div>
             
           
@@ -82,10 +81,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -110,10 +106,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -157,8 +149,15 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CWindowMgrについて</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CWindowMgrについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">CWindowMgr</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
@@ -189,7 +188,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -204,54 +203,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WindowSystem</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WindowSystem</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>CWindowMgrについて</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>CWindowMgrについて</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/CWindowMgr.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/CWindowMgr.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -264,159 +243,150 @@
 <p>ウィンドウを管理するためのマネージャです。</p>
 <p>このマネージャを介して全てのウィンドウをクリエイトします。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWindowMgr">
-<code class="descname">class CWindowMgr</code><a class="headerlink" href="#class-CWindowMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CWindowMgr.setUIResolution">
-void <code class="descname">setUIResolution</code> <span class="sig-paren">(</span>float <em>width</em>, float <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.setUIResolution" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param width</dt>
-<dd class="field-odd"><p>UIのスクリーン幅を設定します。0を指定したときは、heightを基準に拡縮率を計算します。</p>
-</dd>
-<dt class="field-even">Param height</dt>
-<dd class="field-even"><p>UIのスクリーン高を設定します。width = 0を指定した場合のみ、heightを基準に拡縮率を計算します。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>UIの仮想的なスクリーンサイズを設定します。
-アスペクト比は自動的に狂わないように拡縮率を決定するようになっています。</p>
-<ul class="simple">
-<li><p>width != 0の場合</p></li>
-</ul>
-<p>widthを基準にUIスクリーンサイズを決定します。</p>
-<ul class="simple">
-<li><p>width == 0 and height != 0の場合</p></li>
-</ul>
-<p>heightを基準にUIスクリーンサイズを決定します。</p>
-<ul class="simple">
-<li><p>width == 0 and height == 0の場合(デフォルト)</p></li>
-</ul>
-<p>端末のスクリーンサイズに準拠します。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>読み込まれたウィンドウリソースを展開し、初期化します。
+<div class="section" id="id2">
+<h2>CWindowMgr<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="function">
+<dt id="c.initialize">
+bool <code class="descname">initialize</code><span class="sig-paren">(</span>CAssetBundle[]<em>&nbsp;aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#c.initialize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>読み込まれたウィンドウリソースを展開し、初期化します。
 CAssetBundleMgrが登録されていたら、自動的にウィンドウリソースをサーバからダウンロードしてきて、この関数に渡されます。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.load">
-bool <code class="descname">load</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.load" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>バイトデータとして読み込んだウィンドウリソースを展開し初期化します。</p>
-<dl class="method">
-<dt>
-bool <code class="descname">load</code> <span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param string assetname</dt>
-<dd class="field-odd"><p>読み込まれるアセット名</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="c.load">
+bool <code class="descname">load</code><span class="sig-paren">(</span>byte[]<em>&nbsp;buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>バイトデータとして読み込んだウィンドウリソースを展開し初期化します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv24load6string">
+<span id="load__string"></span>bool <code class="descclassname"></code><code class="descname">load</code><span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24load6string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ string assetname:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">読み込まれるアセット名</td>
+</tr>
+</tbody>
+</table>
 <p>リソースデータから、指定したアセット名のウィンドウリソースを読み込み初期化します。</p>
-<p>実際に読み込まれるアセットは、assetname + &quot;.asset&quot;という名前です。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.create">
-WindowScript <code class="descname">create</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em>, <a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cParent</em><em> = null</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.create" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param WindowScript</dt>
-<dd class="field-odd"><p>クリエイトするウィンドウのクラス名</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>ウィンドウID</p>
-</dd>
-<dt class="field-odd">Param CWindowBase cParet</dt>
-<dd class="field-odd"><p>親ウィンドウ</p>
-</dd>
-</dl>
+<p>実際に読み込まれるアセットは、assetname + &#8221;.asset&#8221;という名前です。</p>
 </dd></dl>
 
+<span class="target" id="window-create-function"></span><dl class="function">
+<dt id="_CPPv26createI12WindowScriptE4uint11CWindowBase">
+<span id="create:WindowScript:__uint.CWindowBase"></span>WindowScript <code class="descclassname"></code><code class="descname">create</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em>, CWindowBase <em>cParent</em> = null<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26createI12WindowScriptE4uint11CWindowBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>WindowScript</strong> &#8211; クリエイトするウィンドウのクラス名</li>
+<li><strong>uint id</strong> &#8211; ウィンドウID</li>
+<li><strong>CWindowBase cParet</strong> &#8211; 親ウィンドウ</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <p>指定したクラスのウィンドウをクリエイトする。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.find">
-WindowScript <code class="descname">find</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param WindowScript</dt>
-<dd class="field-odd"><p>ウィドウクラス名</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>ウィンドウID</p>
-</dd>
-</dl>
 </dd></dl>
 
+<span class="target" id="window-find-function"></span><dl class="function">
+<dt id="_CPPv24findI12WindowScriptE4uint">
+<span id="find:WindowScript:__uint"></span>WindowScript <code class="descclassname"></code><code class="descname">find</code>&lt;WindowScript&gt;<span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI12WindowScriptE4uint" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
+<li><strong>WindowScript</strong> &#8211; ウィドウクラス名</li>
+<li><strong>uint id</strong> &#8211; ウィンドウID</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <p>指定されたウィンドウを探す。まだクリエイトされていないなら、nullが返る。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.bringToTop">
-void <code class="descname">bringToTop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.bringToTop" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CWindowBase cWindow</dt>
-<dd class="field-odd"><p>対象ウィンドウ</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv210bringToTop11CWindowBase">
+<span id="bringToTop__CWindowBase"></span>void <code class="descclassname"></code><code class="descname">bringToTop</code><span class="sig-paren">(</span>CWindowBase <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210bringToTop11CWindowBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWindowBase cWindow:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">対象ウィンドウ</td>
+</tr>
+</tbody>
+</table>
 <p>対象ウィンドウの優先順位を上げる。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.getCaption">
-string <code class="descname">getCaption</code> <span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.getCaption" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mCaptionId</dt>
-<dd class="field-odd"><p>キャプションID</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv210getCaption4uint">
+<span id="getCaption__uint"></span>string <code class="descclassname"></code><code class="descname">getCaption</code><span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210getCaption4uint" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ uint mCaptionId:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">キャプションID</td>
+</tr>
+</tbody>
+</table>
 <p>指定されたキャプションIDから、文字列を取得します。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.play">
-void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.play" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mSE</dt>
-<dd class="field-odd"><p>SEのID</p>
-</dd>
-</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv24play4uint">
+<span id="play__uint"></span>void <code class="descclassname"></code><code class="descname">play</code><span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24play4uint" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメタ uint mSE:</th><td class="field-body">SEのID</td>
+</tr>
+</tbody>
+</table>
 <p>指定されたSE IDから、効果音を再生する。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.clickSE">
-uint <code class="descname">clickSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.clickSE" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>タッチしたときに鳴らす標準音を指定します。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.scrollSE">
-uint <code class="descname">scrollSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.scrollSE" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>リストボックスなどをスクロールさせたときに鳴らす標準音を指定します。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CWindowMgr" title="CWindowMgr class">CWindowMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウマネージャのインスタンスを取得します。</p>
 </dd></dl>
 
+<dl class="member">
+<dt id="_CPPv27clickSE">
+<span id="clickSE__uint"></span>uint <code class="descclassname"></code><code class="descname">clickSE</code><a class="headerlink" href="#_CPPv27clickSE" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>タッチしたときに鳴らす標準音を指定します。</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28scrollSE">
+<span id="scrollSE__uint"></span>uint <code class="descclassname"></code><code class="descname">scrollSE</code><a class="headerlink" href="#_CPPv28scrollSE" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リストボックスなどをスクロールさせたときに鳴らす標準音を指定します。</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv28Instance">
+<span id="Instance__CWindowMgr"></span><em class="property">static</em> CWindowMgr <code class="descclassname"></code><code class="descname">Instance</code><a class="headerlink" href="#_CPPv28Instance" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ウィンドウマネージャのインスタンスを取得します。</p>
+</dd></dl>
+
+</div>
 </div>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWindowBase.html" class="btn btn-neutral float-right" title="CWindowBase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWindowBase.html" class="btn btn-neutral float-right" title="CWindowBase" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CMessageDataSheetMgr.html" class="btn btn-neutral float-left" title="CMessageDataSheetMgrについて" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CMessageDataSheetMgr.html" class="btn btn-neutral" title="CMessageDataSheetMgrについて" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -425,11 +395,11 @@ uint <code class="descname">scrollSE</code> { <em class="property">get; set;</em
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -442,15 +412,37 @@ uint <code class="descname">scrollSE</code> { <em class="property">get; set;</em
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.07',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>
