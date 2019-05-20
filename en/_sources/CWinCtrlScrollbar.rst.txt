@@ -1,0 +1,40 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlScrollbar:
+
+=============================
+CWinCtrlScrollbar
+=============================
+
+ スクリプト: :ref:`SCROLLBAR`
+
+ スクロールバーを表示するためのコントロールです。
+ 
+ 主にリストボックスの :ref:`GROUP<LISTBOX_GROUP>` に設定することによって自動的に表示を制御してくれます。
+ 
+
+:ref:`CWindowBase` に届くコールバック
+
+ 無し
+
+.. class:: CWinCtrlScrollbar
+
+ *固有の関数/プロパティ*
+
+ .. property:: int index { get; set; }
+
+ スクロールバーとして振る舞うテクスチャインデックスを指定します。
+
+ この値で指定したテクスチャ以外は、長さや位置の変更なしに表示されます。
+ 
+ .. property:: float fadeSpeed { get; set; }
+
+ スクロールバーの :ref:`表示条件<SCROLLBAR_DISPLAY_FLAG>` から外れたときに、消える速度を指定します。
+
+*使用例*
+
+.. code-block:: csharp
+
+  CWinCtrlScrollbar	sbListbox = find<CWinCtrlScrollbar>(SCROLLBAR_Listbox);
+
+..

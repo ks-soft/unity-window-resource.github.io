@@ -1,0 +1,50 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlEditbox:
+
+=============================
+CWinCtrlEditbox
+=============================
+
+ スクリプト: :ref:`EDITBOX`
+
+ 編集可能なエディットボックスの為のコントロールです。
+
+ 行数指定及び、文字列の最大サイズを指定可能です。
+
+:ref:`CWindowBase` に届くコールバック
+
+ :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+ :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+ :meth:`void onClickEnter(CWinCtrlBase cCtrl)<CWindowBase.onClickEnter>`
+
+  文字が確定したとき呼び出されます。
+  入力文字は、captionに格納されています。
+ 
+ :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+  このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。
+
+
+*使用例*
+
+.. code-block:: csharp
+
+ // get a control.
+ CWinCtrlEditbox	ebSentence = find<CWinCtrlEditbox>(EDITBOX_Sentence);
+
+ // get entered text.
+ string strSentence = ebSentence.caption;
+
+ 
+ // Called when input is complete..
+ override protected void onClickEnter(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case EDITBOX_Sentence:
+         break;
+     }
+ }
+
+..

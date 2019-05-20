@@ -1,0 +1,80 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlRadio:
+
+====================
+CWinCtrlRadio
+====================
+
+ スクリプト: :ref:`RADIO`
+ 
+ ラジオボタンとは、複数のラジオボタン同士をグループ化し、一つがONになるとグループ化されたラジオボタンが自動的にOFFになるボタンです。
+ 
+ :ref:`CHECKBOX` 同様、:ref:`CONTENTS<RADIO_CONTENTS>` を持つことができ、タブボタンとして振る舞うことも可能です。
+
+
+:ref:`CWindowBase` に届くコールバック
+
+  :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+  :meth:`void onHold(CWinCtrlBase cCtrl)<CWindowBase.onHold>`
+
+  :meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)<CWindowBase.onBeginDrag>`
+
+  :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  :meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)<CWindowBase.onDragRender>`
+
+  :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+  :meth:`void onDropGround(CWinCtrlBase cCtrl)<CWindowBase.onDropGround>`
+
+
+.. class:: CWinCtrlRadio
+ 
+ *固有の関数/プロパティ*
+
+
+ .. property:: bool check { get; set; }
+
+ ラジオボタンの状態を変更します。
+
+ * true:
+ 
+   ON状態にし、グループ化されているラジオボタンに対してOFF状態にする。
+   関連付いているコンテンツがあれば、アクティブにします。
+
+ * false: 
+ 
+   OFF状態にし、関連付いているコンテンツがあれば、非アクティブにし表示を抑制します。
+
+
+*使用例*
+
+.. code-block:: csharp
+
+ // get control
+ CWinCtrlRadio	rdSelect = find<CWinCtrlRadio>(RADIO_Select);
+
+ if (rdSelect.check) {
+   //ON
+ } else {
+   //OFF
+ }
+ 
+ // click callback
+ override protected void onClick(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case RADIO_Select:
+         break;
+     }
+ }
+ // hold callback 
+ override protected void onHold(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case RADIO_Select:
+         break;
+     }
+ }
+
+..

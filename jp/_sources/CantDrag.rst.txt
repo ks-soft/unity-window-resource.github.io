@@ -1,0 +1,22 @@
+.. default-domain:: cpp
+
+.. _CANT_DRAG:
+
+==================================
+ドラッグできないコントロール
+==================================
+
+ リッチテキストとスクロール可能なオブジェクトはドラッグできません。
+ スクロール可能なオブジェクトは、どの方向にコントロールがドラッグされたかをonDragによって知ることができます。
+
+ STYLEに :ref:`SCROLL_LOCK<LISTBOX_STYLE>` をつけておくと、onDragコールバックが呼び出され、ドラッグした方向を検出できます。
+ DRAGをつけても、これらコントロールには効果がないことに気を付けてください。
+
+ * :ref:`RICHTEXT`
+ * :ref:`LOG`
+ * :ref:`EDITBOX`
+ * :ref:`TEXTBOX`
+ * :ref:`SCROLLBAR`
+ * :ref:`LISTBOX`
+ * :ref:`LISTBOXEX`
+ * :ref:`CONTAINER`

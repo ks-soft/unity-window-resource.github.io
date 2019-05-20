@@ -1,0 +1,38 @@
+.. highlight:: csharp
+
+.. _CWinCtrlTextbox:
+
+===========================
+CWinCtrlTextbox
+===========================
+
+ スクリプト: :ref:`TEXTBOX`
+ 
+ 編集できないエディットボックスです。
+
+ キャプションが、コントロールサイズに収まらないときは、テキストボックスをタッチするとスクロールします。
+
+:ref:`CWindowBase` に届くコールバック
+
+  :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+  :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+
+*固有の関数/プロパティ*
+
+ 無し
+
+*使用例*
+
+.. code-block::csharp
+
+ // get control
+ CWinCtrlTextbox	tbSentence = find<CWinCtrlTextbox>(TEXTBOX_Sentence);
+
+ // get catpion
+ string strSentence = tbSentence.caption;
+
+..

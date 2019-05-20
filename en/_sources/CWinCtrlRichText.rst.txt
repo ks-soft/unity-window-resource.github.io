@@ -1,0 +1,79 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlRichText:
+
+============================
+CWinCtrlRichText
+============================
+
+ スクリプト: :ref:`RICHTEXT`
+
+ リッチテキストを表示するためのコントロールです。
+ 
+ 改行や途中で文字色を変えたりすることが可能です。
+
+
+:ref:`CWindowBase` に届くコールバック
+
+ :meth:`void onClick(CWinCtrlRichText cCtrl,CRichTextOne cText)<CWindowBase.onClick>`
+ 
+  このコールバックが発行されるのは、テクスチャコマンド( :ref:`\\t<RICHTEXT_TEXTURECMD>` )とウィンドウコマンド( :ref:`\\w<RICHTEXT_WINDOWCMD>` )のみです。
+  CRichTextOneは :type:`こちら<CRichTextOne>` を参照ください。
+
+ :meth:`void onHold(CWinCtrlBase cCtrl)<CWindowBase.onHold>`
+
+ :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+..
+
+.. class:: CRichTextOne
+
+ *固有の関数/プロパティ*
+
+  クリックイベントに渡される引数です。
+  メンバを調べることによって、どこをクリックしたかを判定できます。
+ 
+ .. property:: CRichTextOne.e_Cmd cmd { get; }
+
+   e_Cmd.String
+  
+    文字列：この部位はクリックイベントが発生しない筈です。
+    
+   e_Cmd.Window
+
+    ウィンドウ： :ref:`\\wコマンド<RICHTEXT_WINDOWCMD>` の部位がクリックされた。
+    
+    次のプロパティに有効な値が入っています。
+    
+    :prop:`userId<CRichTextOne.userId>`
+
+    :prop:`windowId<CRichTextOne.windowId>`
+   
+   e_Cmd.Texture
+   
+    テクスチャ： :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` の部位がクリックされた。
+    
+    次のプロパティに有効な値が入っています。
+    
+    :prop:`userId<CRichTextOne.userId>`
+
+    :prop:`texId<CRichTextOne.texId>`
+
+    :prop:`partId<CRichTextOne.partId>`
+
+ .. property:: uint userId { get; }
+
+   キャプション内で設定したユーザＩＤが格納されています。
+   ユーザＩＤを省略すると、0が入ります。
+
+ .. property:: uint windowId { get; }
+
+  :ref:`\\wコマンド<RICHTEXT_WINDOWCMD>` で指定したウィンドウIDを取得できます。
+
+ .. property:: uint texId { get; }
+
+   :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` で指定したテクスチャIDを取得できます。
+
+ .. property:: uint partId { get; }
+
+   :ref:`\\tコマンド<RICHTEXT_TEXTURECMD>` で指定したパーツIDを取得できます。

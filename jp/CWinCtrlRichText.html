@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlRichText &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>CWinCtrlRichText &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="CWinCtrlLog" href="CWinCtrlLog.html"/>
-        <link rel="prev" title="CWinCtrlText" href="CWinCtrlText.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="CWinCtrlLog" href="CWinCtrlLog.html" />
+    <link rel="prev" title="CWinCtrlText" href="CWinCtrlText.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -106,6 +110,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -149,22 +157,13 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlRichText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cwindowbase">CWindowBaseに届くコールバック</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">固有の関数/プロパティ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#crichtextone">CRichTextOne</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlRichText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a></li>
@@ -190,7 +189,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -205,34 +204,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinCtrlRichText</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinCtrlRichText</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinCtrlRichText.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinCtrlRichText.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -241,135 +260,93 @@
   <div class="section" id="cwinctrlrichtext">
 <span id="id1"></span><h1>CWinCtrlRichText<a class="headerlink" href="#cwinctrlrichtext" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>スクリプト: <a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></p>
+<div><p>スクリプト: <a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p>
 <p>リッチテキストを表示するためのコントロールです。</p>
 <p>改行や途中で文字色を変えたりすることが可能です。</p>
 </div></blockquote>
-<div class="section" id="cwindowbase">
-<h2>CWindowBaseに届くコールバック<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<span class="target" id="richtext-click"></span><dl class="function">
-<dt id="_CPPv27onClick16CWinCtrlRichText12CRichTextOne">
-<span id="onClick__CWinCtrlRichText.CRichTextOne"></span>void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlRichText <em>cCtrl</em>, CRichTextOne <em>cText</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick16CWinCtrlRichText12CRichTextOne" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlRichText cCtrl</strong> &#8211; タッチされたリッチテキストコントロール</li>
-<li><strong>CRichTextOne cText</strong> &#8211; タッチされたリッチテキストコントロールの部分</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>このコールバックが発行されるのは、テクスチャコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span>\t</span></a> )とウィンドウコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span>\w</span></a> )のみです。
-CRichTextOneは <a class="reference internal" href="#crichtextone"><span>こちらを</span></a> 参照ください。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">長押しされたコントロール</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
-<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
-<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
-</dd></dl>
-
-</div>
-<div class="section" id="id2">
-<h2>固有の関数/プロパティ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-</div>
-<div class="section" id="crichtextone">
-<span id="id3"></span><h2>CRichTextOne<a class="headerlink" href="#crichtextone" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div>クリックイベントに渡される引数です。
-メンバを調べることによって、どこをクリックしたかを判定できます。</div></blockquote>
-<dl class="member">
-<dt id="_CPPv23cmd">
-<span id="cmd__CRichTextOne::e_Cmd"></span>CRichTextOne::e_Cmd <code class="descclassname"></code><code class="descname">cmd</code><a class="headerlink" href="#_CPPv23cmd" title="この定義へのパーマリンク">¶</a></dt>
+<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlRichText</span> <span class="pre">cCtrl,CRichTextOne</span> <span class="pre">cText)</span></code></a></p>
+<blockquote>
+<div><p>このコールバックが発行されるのは、テクスチャコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\t</span></a> )とウィンドウコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\w</span></a> )のみです。
+CRichTextOneは <a class="reference internal" href="#class-CRichTextOne" title="CRichTextOne class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+</div></blockquote>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+</div></blockquote>
+<dl class="class">
+<dt id="class-CRichTextOne">
+<code class="descname">class CRichTextOne</code><a class="headerlink" href="#class-CRichTextOne" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><em>固有の関数/プロパティ</em></p>
+<blockquote>
+<div><p>クリックイベントに渡される引数です。
+メンバを調べることによって、どこをクリックしたかを判定できます。</p>
+</div></blockquote>
+<dl class="property">
+<dt id="property-CRichTextOne.cmd">
+CRichTextOne.e_Cmd <code class="descname">cmd</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.cmd" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>e_Cmd.String</p>
 <blockquote>
-<div>文字列：この部位はクリックイベントが発生しない筈です。</div></blockquote>
+<div><p>文字列：この部位はクリックイベントが発生しない筈です。</p>
+</div></blockquote>
 <p>e_Cmd.Window</p>
 <blockquote>
-<div><p>ウィンドウ： <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span>\wコマンド</span></a> の部位がクリックされた。</p>
+<div><p>ウィンドウ： <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\wコマンド</span></a> の部位がクリックされた。</p>
 <p>次のプロパティに有効な値が入っています。</p>
-<p><a class="reference internal" href="#richtext-userid"><span>userID</span></a></p>
-<p><a class="reference internal" href="#richtext-windowid"><span>windowId</span></a></p>
+<p><a class="reference internal" href="#property-CRichTextOne.userId" title="CRichTextOne.userId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">userId</span></code></a></p>
+<p><a class="reference internal" href="#property-CRichTextOne.windowId" title="CRichTextOne.windowId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">windowId</span></code></a></p>
 </div></blockquote>
 <p>e_Cmd.Texture</p>
 <blockquote>
-<div><p>テクスチャ： <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span>\tコマンド</span></a> の部位がクリックされた。</p>
+<div><p>テクスチャ： <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> の部位がクリックされた。</p>
 <p>次のプロパティに有効な値が入っています。</p>
-<p><a class="reference internal" href="#richtext-userid"><span>userID</span></a></p>
-<p><a class="reference internal" href="#richtext-texid"><span>texId</span></a></p>
-<p><a class="reference internal" href="#richtext-partid"><span>partId</span></a></p>
+<p><a class="reference internal" href="#property-CRichTextOne.userId" title="CRichTextOne.userId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">userId</span></code></a></p>
+<p><a class="reference internal" href="#property-CRichTextOne.texId" title="CRichTextOne.texId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">texId</span></code></a></p>
+<p><a class="reference internal" href="#property-CRichTextOne.partId" title="CRichTextOne.partId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">partId</span></code></a></p>
 </div></blockquote>
 </dd></dl>
 
-<span class="target" id="richtext-userid"></span><dl class="member">
-<dt id="_CPPv26userId">
-<span id="userId__uint"></span>uint <code class="descclassname"></code><code class="descname">userId</code><a class="headerlink" href="#_CPPv26userId" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-CRichTextOne.userId">
+uint <code class="descname">userId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.userId" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>キャプション内で設定したユーザＩＤが格納されています。
 ユーザＩＤを省略すると、0が入ります。</p>
 </dd></dl>
 
-<span class="target" id="richtext-windowid"></span><dl class="member">
-<dt id="_CPPv28windowId">
-<span id="windowId__uint"></span>uint <code class="descclassname"></code><code class="descname">windowId</code><a class="headerlink" href="#_CPPv28windowId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span>\wコマンド</span></a> で指定したウィンドウIDを取得できます。</p>
+<dl class="property">
+<dt id="property-CRichTextOne.windowId">
+uint <code class="descname">windowId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.windowId" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\wコマンド</span></a> で指定したウィンドウIDを取得できます。</p>
 </dd></dl>
 
-<span class="target" id="richtext-texid"></span><dl class="member">
-<dt id="_CPPv25texId">
-<span id="texId__uint"></span>uint <code class="descclassname"></code><code class="descname">texId</code><a class="headerlink" href="#_CPPv25texId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span>\tコマンド</span></a> で指定したテクスチャIDを取得できます。</p>
+<dl class="property">
+<dt id="property-CRichTextOne.texId">
+uint <code class="descname">texId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.texId" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> で指定したテクスチャIDを取得できます。</p>
 </dd></dl>
 
-<span class="target" id="richtext-partid"></span><dl class="member">
-<dt id="_CPPv26partId">
-<span id="partId__uint"></span>uint <code class="descclassname"></code><code class="descname">partId</code><a class="headerlink" href="#_CPPv26partId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span>\tコマンド</span></a> で指定したパーツIDを取得できます。</p>
+<dl class="property">
+<dt id="property-CRichTextOne.partId">
+uint <code class="descname">partId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.partId" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> で指定したパーツIDを取得できます。</p>
 </dd></dl>
 
-</div>
+</dd></dl>
+
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlLog.html" class="btn btn-neutral float-right" title="CWinCtrlLog" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlLog.html" class="btn btn-neutral float-right" title="CWinCtrlLog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlText.html" class="btn btn-neutral" title="CWinCtrlText" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlText.html" class="btn btn-neutral float-left" title="CWinCtrlText" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -378,11 +355,11 @@ CRichTextOneは <a class="reference internal" href="#crichtextone"><span>こち�
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -395,37 +372,15 @@ CRichTextOneは <a class="reference internal" href="#crichtextone"><span>こち�
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

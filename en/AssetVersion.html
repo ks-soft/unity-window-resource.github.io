@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About the AssetBundle version. &mdash; WindowSystem 1.07 documentation</title>
+  <title>About asset bundle &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="CTextureResourceMgr" href="CTextureResourceMgr.html"/>
-        <link rel="prev" title="CAssetBundleMgr" href="CAssetBundleMgr.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CTextureResourceMgr" href="CTextureResourceMgr.html" />
+    <link rel="prev" title="CAssetBundleMgr" href="CAssetBundleMgr.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,12 +81,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -106,6 +109,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -146,23 +153,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">About the AssetBundle version.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#version-unity3d">When is version.unity3d updated?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Resident of asset bundles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#version-txt">a version.txt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">When a collision occurs in such as version control tool.</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">When the asset bundle collides</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">When version.unity3d collide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About asset bundle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-unity3d">When “version.unity3d” is updated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Asset Bundle Residency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-txt">version.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Collisions, such as with version control tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">When asset bundles themselves collide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">When “version.unity3d” collides</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -195,9 +198,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -210,131 +213,145 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>About the AssetBundle version.</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>About asset bundle</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/AssetVersion.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/AssetVersion.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>About the AssetBundle version.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>About asset bundle<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>First, CAssetBundleMgr load the version.unity3d. In this item, it will be explained this version.unity3d.</p>
+<div><p>“CAssetBundleMgr” first loads “version.unit3d”.This section describes how this “version.unity3d” works.</p>
 </div></blockquote>
 <div class="section" id="version-unity3d">
-<h2>When is version.unity3d updated?<a class="headerlink" href="#version-unity3d" title="Permalink to this headline">¶</a></h2>
+<h2>When “version.unity3d” is updated<a class="headerlink" href="#version-unity3d" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>[Tools]-&gt;[KsSoft]-&gt;[Export Binary Data]</li>
-<li>[Tools]-&gt;[KsSoft]-&gt;[Export Window Resource]</li>
+<li><p>[Tools]-&gt;[KsSoft]-&gt;[Export Binary Data]</p></li>
+<li><p>[Tools]-&gt;[KsSoft]-&gt;[Export Window Resource]</p></li>
 </ul>
-<p>It automatically updates when you create or update assetbundles.</p>
-<p>Tools calls the next function.</p>
+<p>Automatically updates when you create or update any asset bundle.</p>
+<p>Within these tools, the following functions are called.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">ExportVersion</span><span class="p">.</span><span class="n">export</span><span class="p">(</span><span class="n">BuildTarget</span> <span class="n">eTarget</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ExportVersion</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">BuildTarget</span> <span class="n">eTarget</span><span class="p">);</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>The vresion.unity3d have information as following.</p>
+<div><p>“version.unity3d” contains the following information before export.</p>
 <ul class="simple">
-<li><p class="first">List of assets bundles</p>
-</li>
-<li><p class="first">MD5 of each asset bundle</p>
-</li>
-<li><p class="first">Version number of each asset bundle</p>
-</li>
-<li><p class="first">Whether asset bundle resident</p>
-</li>
+<li><p>Asset bundles that existed</p></li>
+<li><p>MD5 of each asset bundle</p></li>
+<li><p>Version number of each asset bundle</p></li>
+<li><p>Information on which asset bundles are resident after loading</p></li>
 </ul>
-<p>This function compares the MD5 of assetbundle and the value of version.unity3d.if the value is different,the version.unity3d is updated.</p>
-<p>In this case,giving new version number that was generated from the current time.</p>
-<p>The manager is able to know following by the version.unity3d.</p>
+<p>By calling this function, you are rebuilding “version.unity3d” if any changes were made compared to MD5 in the asset bundle in the folder corresponding to the build target.</p>
+<p>At this time, the version number generated from the current time is given to the updated file.</p>
+<p>This allows you to simply load “version.unity3d” to:</p>
 <ul class="simple">
-<li><p class="first">You can see in advance whether asset bundles exist</p>
-</li>
-<li><p class="first">It&#8217;s giving the new version to a only file of the update. Thereby, it is possible to download only the updated files. You can use this version number to LoadFromCacheOrDownload.</p>
-</li>
+<li><p>Know what’s in the asset bundle ahead of time.</p></li>
+<li><p>“LoadFromCacheOrDownload” argument, version, can only be newly allocated to files that have changed, so only updates can be downloaded.</p></li>
 </ul>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">When you want to create an asset bundle in the own, you do not forget that your scripts call to  export the version.unity3d in the last.</p>
+<p class="admonition-title">Note</p>
+<p>If you want to create your own asset bundle, remember to export “version.unity3d” at the end of the script.</p>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="id2">
-<h2>Resident of asset bundles<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Asset Bundle Residency<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The version.unity3d can have flags whether resident assetbundles.</p>
-<p>In the same location as the Assets folder , please create a &#8216;version.def&#8217; file.</p>
+<div><p>It is possible to set the downloaded asset to reside during the “version.unity3d” update.</p>
+<p>First, create a file named “version.def” in the same location as “Assets” folder.</p>
 <blockquote>
 <div><img alt="_images/versiondefpath.png" src="_images/versiondefpath.png" />
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>#Texture for Window Resource
-100_000_00001  =       REMAIN:1;
-#SoundEffect for 2D
-052_000_00000  =       REMAIN:1;
-#SoundEffect for 3D
-053_000_00000  =       REMAIN:1;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Texture for Window Resource</span>
+<span class="mi">100_000_00001</span>  <span class="o">=</span>       <span class="n">REMAIN</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
+<span class="c1">#SoundEffect for 2D</span>
+<span class="mi">052_000_00000</span>  <span class="o">=</span>       <span class="n">REMAIN</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
+<span class="c1">#SoundEffect for 3D</span>
+<span class="mi">053_000_00000</span>  <span class="o">=</span>       <span class="n">REMAIN</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>Asset bundle specified in this way  will be resident assetbundles after download.</p>
+<div><p>The asset bundle you specify will reside after loading.</p>
 </div></blockquote>
 </div>
 <div class="section" id="version-txt">
-<h2>a version.txt<a class="headerlink" href="#version-txt" title="Permalink to this headline">¶</a></h2>
+<h2>version.txt<a class="headerlink" href="#version-txt" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>This tool  visualizes version.txt from version.unity3d for debugging.</p>
-<p>This is not necessary on the exporting and runtime.</p>
+<div><p>“version.txt” is a “version.unity3d” that was visualized for debugging purposes only.</p>
+<p>Unnecessary file at export/runtime.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id3">
-<h2>When a collision occurs in such as version control tool.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>Collisions, such as with version control tools<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Do Take the following steps .</p>
+<div><p>Please follow the steps below.</p>
 </div></blockquote>
 <div class="section" id="id4">
-<h3>When the asset bundle collides<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>When asset bundles themselves collide<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Resolve the conflict by yourself.</p>
+<div><p>Please try to solve it.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id5">
-<h3>When version.unity3d collide<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>When “version.unity3d” collides<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>You should resolve the conflict of assetbundles. You remove the version.unity3d. After that, it will download the version.unity3d that have been uploaded. Finally, you need to output version.unity3d again in the following way in the local environment.</p>
+<div><p>Remove “version.unit3d” once after resolving all asset bundle conflicts.It then download the uploaded “version.unit3d”.Finally, re-export “version.unit3d” in the local environment in the following way:.</p>
 <ul class="simple">
-<li>[Tools]-&gt;[KsSoft]-&gt;[Re-Export Version]</li>
+<li><p>[Tools]-&gt;[KsSoft]-&gt;[Re-Export Version]</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -343,15 +360,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CTextureResourceMgr.html" class="btn btn-neutral float-right" title="CTextureResourceMgr" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CTextureResourceMgr.html" class="btn btn-neutral float-right" title="CTextureResourceMgr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CAssetBundleMgr.html" class="btn btn-neutral" title="CAssetBundleMgr" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CAssetBundleMgr.html" class="btn btn-neutral float-left" title="CAssetBundleMgr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -360,11 +378,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -377,36 +395,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>ウィンドウスクリプト(wra)文法 &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="ウィンドウの配置について" href="WindowAnchor.html"/>
-        <link rel="prev" title="多言語対応について" href="caption.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="割合指定:柔軟な座標、サイズ指定方法" href="ratiovalue.html" />
+    <link rel="prev" title="多言語対応について" href="caption.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -105,7 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="caption.html">多言語対応について</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">ウィンドウスクリプト(wra)文法</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ウィンドウスクリプト(wra)文法</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">wra文法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">変数と式</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">変数の宣言</a></li>
@@ -117,6 +121,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#id7">プリプロセッサ</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -160,10 +168,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -196,7 +200,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -211,34 +215,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>ウィンドウスクリプト(wra)文法</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>ウィンドウスクリプト(wra)文法</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/syntax.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/syntax.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -251,43 +275,43 @@
 <blockquote>
 <div><p>wraは、大きく二つのブロックから構成されています。</p>
 <ul class="simple">
-<li>ウィンドウ定義ブロック</li>
-<li>コントロール定義ブロック</li>
+<li><p>ウィンドウ定義ブロック</p></li>
+<li><p>コントロール定義ブロック</p></li>
 </ul>
 <p>必ず、ウィンドウ定義ブロックが先頭にきて、その後にコントロール定義ブロックが続くことになります。
-ウィンドウIDは、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> を使って指定してください。</p>
+ウィンドウIDは、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> を使って指定してください。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>// window define block
-WINDOW(Window ID) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">window</span> <span class="n">define</span> <span class="n">block</span>
+<span class="n">WINDOW</span><span class="p">(</span><span class="n">Window</span> <span class="n">ID</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 
-// control define blocks
-ControlKind(name 0) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
-ControlKind(name 1) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
-      :
-ControlKind(name n) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<span class="o">//</span> <span class="n">control</span> <span class="n">define</span> <span class="n">blocks</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+      <span class="p">:</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;wr.h&quot;
 $y = 160;
 #pragma RESOURCE ON
 
@@ -298,13 +322,13 @@ WINDOW(250_000_00010) {
     TEX_ID = 100_000_00000;
     CAPTION = 000_000_0000;
     STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
-    SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+    SIZE = {100},{100};
     PRIORITY = PROGRESSBAR_PRIORITY;
 };
 METER(ProgressTotal) {
     ID = 000_001_00000;
     STYLE = ANCHOR_BOTTOM;
-    SIZE = RELATIVE_SIZE(-128);
+    SIZE = -128{100};
     POSITION = 0,$y;
     TEX_ID = 0,&quot;MTRB&quot;;
     COLOR = COLOR32(255.0,255.0,255.0,255.0);
@@ -315,7 +339,8 @@ $y -=64;
 METER(ProgressPart) {
    ID = 000_001_00010;
    STYLE = ANCHOR_BOTTOM;
-   SIZE = RELATIVE_SIZE(-128),32;
+   SIZE = -128{100},32;
+   SIZE = -128{100},32;
    POSITION = 0,$y;
    TEX_ID = 0,&quot;MTRB&quot;;
    COLOR = COLOR32(255.0,255.0,255.0,255.0);
@@ -328,19 +353,21 @@ METER(ProgressPart) {
 <div class="section" id="id2">
 <h2>変数と式<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>wraファイル内で変数とその変数を使った式が使えます。
+<div><p>wraファイル内で変数とその変数を使った式が使えます。
 <strong>$</strong> から始まるものが変数となります。
 使える変数の型は実数になります。
-また、式をプロパティ内にも記述可能です。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>ID = 000_000_00010 + (3 * $val);
+また、式をプロパティ内にも記述可能です。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ID = 000_000_00010 + (3 * $val);
 </pre></div>
 </div>
 <div class="section" id="id3">
 <h3>変数の宣言<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>変数を使うときは、必ず初期値が付いている状態で宣言する必要があります。
-未初期化な変数はエラーになります。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>$i = 3;             //integer(Decimal number)
+<div><p>変数を使うときは、必ず初期値が付いている状態で宣言する必要があります。
+未初期化な変数はエラーになります。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$i = 3;             //integer(Decimal number)
 $h = 0xfff123;      //integer(Hexadecimal number)
 $f = 3.14;          //real number
 $m = 001_002_00003; //Multi (8bit,8bit,16bit)
@@ -349,59 +376,59 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </div>
 <div class="section" id="id4">
 <h3>式において使える演算子<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="33%" />
-<col width="67%" />
+<col style="width: 33%" />
+<col style="width: 67%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">演算子</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>演算子</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>+,-,*,/</td>
-<td>四則演算</td>
+<tbody>
+<tr class="row-even"><td><p>+,-,*,/</p></td>
+<td><p>四則演算</p></td>
 </tr>
-<tr class="row-odd"><td>%</td>
-<td>剰余</td>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>剰余</p></td>
 </tr>
-<tr class="row-even"><td>|,&amp;,^,~</td>
-<td>ビット演算(or,and,xor,not)</td>
+<tr class="row-even"><td><p>|,&amp;,^,~</p></td>
+<td><p>ビット演算(or,and,xor,not)</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;&lt;,&gt;&gt;</td>
-<td>シフト演算</td>
+<tr class="row-odd"><td><p>&lt;&lt;,&gt;&gt;</p></td>
+<td><p>シフト演算</p></td>
 </tr>
-<tr class="row-even"><td>**</td>
-<td>べき乗演算</td>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>べき乗演算</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="id5">
 <h3>式においての定数表現<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col style="width: 35%" />
+<col style="width: 65%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">定数例</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>定数例</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>14</td>
-<td>10進整数</td>
+<tbody>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>10進整数</p></td>
 </tr>
-<tr class="row-odd"><td>0x12ffffff</td>
-<td>16進整数</td>
+<tr class="row-odd"><td><p>0x12ffffff</p></td>
+<td><p>16進整数</p></td>
 </tr>
-<tr class="row-even"><td>000_001_00010</td>
-<td>マルチID(8bit,8bit,16bit形式)</td>
+<tr class="row-even"><td><p>000_001_00010</p></td>
+<td><p>マルチID(8bit,8bit,16bit形式)</p></td>
 </tr>
-<tr class="row-odd"><td>0.345</td>
-<td>浮動小数点</td>
+<tr class="row-odd"><td><p>0.345</p></td>
+<td><p>浮動小数点</p></td>
 </tr>
 </tbody>
 </table>
@@ -412,11 +439,11 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div><p>文字列は、数字と違い変数に代入することはできませんが、連結するための演算は行えます。
 連結するには、以下の形式で行います。</p>
 <ul class="simple">
-<li>文字 + 文字</li>
-<li>文字 . 文字</li>
+<li><p>文字 + 文字</p></li>
+<li><p>文字 . 文字</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PATH</span> <span class="p">=</span> <span class="s">&quot;test/&quot;</span> <span class="p">+</span> <span class="s">&quot;folder/&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;test/&quot;</span> <span class="o">+</span> <span class="s2">&quot;folder/&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -424,90 +451,96 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div class="section" id="id7">
 <h2>プリプロセッサ<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>C言語,C++言語とほぼ同じプリプロセッサが使えます。</div></blockquote>
-<table border="1" class="docutils">
+<div><p>C言語,C++言語とほぼ同じプリプロセッサが使えます。</p>
+</div></blockquote>
+<table class="docutils align-center">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">プリプロセッサ</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリプロセッサ</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>// コメント</td>
-<td>ラインコメント</td>
+<tbody>
+<tr class="row-even"><td><p>// コメント</p></td>
+<td><p>ラインコメント</p></td>
 </tr>
-<tr class="row-odd"><td>/* コメント */</td>
-<td>ブロックコメント</td>
+<tr class="row-odd"><td><p>/* コメント */</p></td>
+<td><p>ブロックコメント</p></td>
 </tr>
-<tr class="row-even"><td>#include ファイル名</td>
-<td>ファイルをインクルードする</td>
+<tr class="row-even"><td><p>#include ファイル名</p></td>
+<td><p>ファイルをインクルードする</p></td>
 </tr>
-<tr class="row-odd"><td>#define 記号定数の定義</td>
-<td>記号定数の定義</td>
+<tr class="row-odd"><td><p>#define 記号定数の定義</p></td>
+<td><p>記号定数の定義</p></td>
 </tr>
-<tr class="row-even"><td>#define 関数マクロ</td>
-<td>関数マクロ</td>
+<tr class="row-even"><td><p>#define 関数マクロ</p></td>
+<td><p>関数マクロ</p></td>
 </tr>
-<tr class="row-odd"><td>#if defined(記号定義) ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#if defined(記号定義) ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#ifdef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-even"><td><p>#ifdef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-odd"><td>#ifndef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#ifndef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#pragma once</td>
-<td>多重インクルード防止</td>
+<tr class="row-even"><td><p>#pragma once</p></td>
+<td><p>多重インクルード防止</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div>次に、wra独自のプリプロセッサ定義について列挙しておきます。</div></blockquote>
-<table border="1" class="docutils">
+<div><p>次に、wra独自のプリプロセッサ定義について列挙しておきます。</p>
+</div></blockquote>
+<table class="docutils align-center">
 <colgroup>
-<col width="47%" />
-<col width="53%" />
+<col style="width: 47%" />
+<col style="width: 53%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">プリプロセッサ</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリプロセッサ</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a></td>
-<td><p class="first">アセットバンドルとして出力する</p>
-<blockquote class="last">
+<tbody>
+<tr class="row-even"><td><p>#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a></p></td>
+<td><p>アセットバンドルとして出力する</p>
+<blockquote>
 <div><p>例</p>
 <blockquote>
-<div>#pragma RESOURCE 000_014_000000</div></blockquote>
+<div><p>#pragma RESOURCE 000_014_000000</p>
+</div></blockquote>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-odd"><td>#pragma RESOURCE パス</td>
-<td><p class="first">リソースデータとして指定されたパスに出力する</p>
-<blockquote class="last">
+<tr class="row-odd"><td><p>#pragma RESOURCE パス</p></td>
+<td><p>リソースデータとして指定されたパスに出力する</p>
+<blockquote>
 <div><p>例</p>
 <blockquote>
-<div>#pragma RESOURCE = Resources/windows.asset</div></blockquote>
+<div><p>#pragma RESOURCE = Resources/windows.asset</p>
+</div></blockquote>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-even"><td>#pragma PATH 出力パス</td>
-<td><p class="first">出力パスを変更する</p>
+<tr class="row-even"><td><p>#pragma PATH 出力パス</p></td>
+<td><p>出力パスを変更する</p>
 <p>デフォルトは、以下のフォルダ</p>
-<blockquote class="last">
-<div>#pragma PATH ../wrc/base</div></blockquote>
+<blockquote>
+<div><p>#pragma PATH ../wrc/base</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="row-odd"><td>#pragma BASECLASS ベースクラス</td>
-<td><p class="first">ベースクラスを変更する</p>
+<tr class="row-odd"><td><p>#pragma BASECLASS ベースクラス</p></td>
+<td><p>ベースクラスを変更する</p>
 <p>デフォルトは、以下のクラス</p>
-<blockquote class="last">
-<div>#pragma BASECALSS CWindowBase</div></blockquote>
+<blockquote>
+<div><p>#pragma BASECALSS CWindowBase</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -517,15 +550,16 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="WindowAnchor.html" class="btn btn-neutral float-right" title="ウィンドウの配置について" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ratiovalue.html" class="btn btn-neutral float-right" title="割合指定:柔軟な座標、サイズ指定方法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="caption.html" class="btn btn-neutral" title="多言語対応について" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="caption.html" class="btn btn-neutral float-left" title="多言語対応について" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -534,11 +568,11 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -551,37 +585,15 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

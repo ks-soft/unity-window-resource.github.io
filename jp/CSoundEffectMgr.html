@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CSoundEffectMgr &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>CSoundEffectMgr &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="CMessageDataSheetMgrについて" href="CMessageDataSheetMgr.html"/>
-        <link rel="prev" title="CTextureResourceMgrについて" href="CTextureResourceMgr.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="CMessageDataSheetMgrについて" href="CMessageDataSheetMgr.html" />
+    <link rel="prev" title="CTextureResourceMgrについて" href="CTextureResourceMgr.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -106,6 +110,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -148,14 +156,10 @@
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CSoundEffectMgr</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">マネージャを組み込む方法</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CSoundEffectMgr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">マネージャを組み込む方法</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -188,7 +192,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -203,34 +207,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CSoundEffectMgr</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CSoundEffectMgr</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CSoundEffectMgr.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CSoundEffectMgr.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -238,25 +262,25 @@
             
   <div class="section" id="csoundeffectmgr">
 <h1>CSoundEffectMgr<a class="headerlink" href="#csoundeffectmgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote id="id1">
+<blockquote>
 <div><p>AudioSourceを複数持ち、SEのグループ化、プライオリティ、同時発生数制限等を行います。</p>
 <p>デフォルトの同時発生数制限は、このようになっています。</p>
 <ul class="simple">
-<li>2D音声 4音</li>
-<li>3D音声 8音</li>
+<li><p>2D音声 4音</p></li>
+<li><p>3D音声 8音</p></li>
 </ul>
 <p>また、グループ毎に同時発生数制限を個別に設定可能になっています。</p>
-<p>SEのこれら設定を行う方法は、こちらを <a class="reference internal" href="soundeffect.html#se-def"><span>参照</span></a> ください。</p>
+<p>SEのこれら設定を行う方法は、こちらを <a class="reference internal" href="soundeffect.html#se-def"><span class="std std-ref">参照</span></a> ください。</p>
 <p>AudioSourceを管理しており、音声を発生させるためにプログラマが別途AudioSourceを作成する必要がなくなっています。</p>
 </div></blockquote>
-<div class="section" id="id2">
-<h2>マネージャを組み込む方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id1">
+<h2>マネージャを組み込む方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>CSoundEffectMgrを使うには、次のようにマネージャをゲームオブジェクトに対して、Addする必要があります。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div><p>CSoundEffectMgrを使うには、次のようにマネージャをゲームオブジェクトに対して、Addする必要があります。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
    <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
-<span class="cm">    * @brief   Unity Callback</span>
+<span class="cm">    * @brief  Unity Callback</span>
 <span class="cm">    */</span>
     <span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
@@ -270,8 +294,8 @@
         <span class="c1">// Add Component</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CInput</span><span class="p">&gt;();</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">KsSoftConfig</span><span class="p">.</span><span class="n">UseAssetBundle</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
-            <span class="p">}</span>
+               <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CAssetBundleMgr</span><span class="p">&gt;();</span>
+           <span class="p">}</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CSpriteFontMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CTextureResourceMgr</span><span class="p">&gt;();</span>
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
@@ -283,332 +307,280 @@
     <span class="p">}</span>
 </pre></div>
 </div>
-<dl class="function">
-<dt id="c.playBgm">
-void <code class="descname">playBgm</code><span class="sig-paren">(</span>CBgmResource      <em>&nbsp;cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.playBgm" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CBgmResource</strong> &#8211; 読み込んだBGMリソース</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+</div></blockquote>
+<dl class="class">
+<dt id="class-CSoundEffectMgr">
+<code class="descname">class CSoundEffectMgr</code><a class="headerlink" href="#class-CSoundEffectMgr" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="method">
+<dt id="method-CSoundEffectMgr.playBgm">
+void <code class="descname">playBgm</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <em>cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSoundEffectMgr.playBgm" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param CBgmResource</dt>
+<dd class="field-odd"><p>読み込んだBGMリソース</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="method">
 <dt>
-void <code class="descname">playBgm</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
-<dd><blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">param uint id:</th><td class="field-body">アセットバンドルID</td>
-</tr>
-</tbody>
-</table>
+void <code class="descname">playBgm</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint id</dt>
+<dd class="field-odd"><p>アセットバンドルID</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>指定されたBGMを再生します。
 もし、指定されたアセットバンドルが読み込まれていないときは、読み込み終わった後に自動的に再生を開始します。
 明示的に読み込みを待ちたいときは、cBgmResource.isLoaded()が、trueを返すのを待ってから、再生してください。</p>
-</div></blockquote>
 <p>CBgmResourceを直接取得するには、次のように記述します。</p>
-</dd></dl>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">IEnumerator</span> <span class="nf">load</span><span class="p">(</span><span class="kt">uint</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">CBgmResource</span> <span class="n">cBgmResource</span> <span class="p">=</span> <span class="n">CBgmResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">IEnumerator</span> <span class="nf">load</span><span class="p">(</span><span class="kt">uint</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">CBgmResource</span> <span class="n">cBgmResource</span> <span class="p">=</span> <span class="n">CBgmResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
-
-   <span class="k">if</span> <span class="p">(</span><span class="n">cBgmResource</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-       <span class="c1">// error!!</span>
-       <span class="k">yield</span> <span class="k">break</span><span class="p">;</span>
-   <span class="p">}</span>
-   <span class="k">while</span> <span class="p">(!</span><span class="n">cBgmResource</span><span class="p">.</span><span class="n">isLoaded</span><span class="p">())</span> <span class="p">{</span>
-       <span class="k">yield</span> <span class="k">return</span> <span class="m">0</span><span class="p">;</span>
-   <span class="p">}</span>
-   <span class="n">CSoundEffectMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">playBgm</span><span class="p">(</span><span class="n">cBgmResource</span><span class="p">);</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">cBgmResource</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">// error!!</span>
+     <span class="k">yield</span> <span class="k">break</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="k">while</span> <span class="p">(!</span><span class="n">cBgmResource</span><span class="p">.</span><span class="n">isLoaded</span><span class="p">())</span> <span class="p">{</span>
+     <span class="k">yield</span> <span class="k">return</span> <span class="m">0</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="n">CSoundEffectMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">playBgm</span><span class="p">(</span><span class="n">cBgmResource</span><span class="p">);</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-<dl class="function">
-<dt id="c.play">
-void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#c.play" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; CSeResourceから取得可能な、SEオブジェクトです。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="method">
+<dt id="method-CSoundEffectMgr.play">
+void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSoundEffectMgr.play" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param CSoundEffect cSE</dt>
+<dd class="field-odd"><p>CSeResourceから取得可能な、SEオブジェクトです。</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>指定されたSEを2D音声として再生します。
 CSoundEffectは、次の方法で取得可能です。</p>
-</dd></dl>
-
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CSeResource</span>  <span class="n">m_cSR</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CSeResource</span>   <span class="n">m_cSR</span><span class="p">;</span>
          <span class="p">:</span>
-<span class="n">CSoundEffect</span> <span class="n">cSE</span> <span class="p">=</span> <span class="n">m_cSR</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="n">CSoundEffect</span>  <span class="n">cSE</span> <span class="p">=</span> <span class="n">m_cSR</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 </pre></div>
 </div>
-<dl class="function">
+<dl class="method">
 <dt>
-void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; アセットバンドルID</li>
-<li><strong>id</strong> (<em>uint</em>) &#8211; SE ID</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em>, uint <em>id</em><span class="sig-paren">)</span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint mAssetBundle</dt>
+<dd class="field-odd"><p>アセットバンドルID</p>
+</dd>
+<dt class="field-even">Param uint id</dt>
+<dd class="field-even"><p>SE ID</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>指定されたSEを2D音声として再生します。</p>
+<dl class="method">
+<dt>
+void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, IEffectEmitter <em>emitter</em><span class="sig-paren">)</span></dt>
+<dt>
+void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, Transform <em>trans</em><span class="sig-paren">)</span></dt>
+<dt>
+void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, Vector3 <em>position</em><span class="sig-paren">)</span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param CSoundEffect cSE</dt>
+<dd class="field-odd"><p>CSeResourceから取得可能な、SEオブジェクトです。</p>
+</dd>
+<dt class="field-even">Param IEffectEmitter emitter</dt>
+<dd class="field-even"><p>エフェクトが発生するエミッター</p>
+</dd>
+<dt class="field-odd">Param Transform trans</dt>
+<dd class="field-odd"><p>音が発生する場所</p>
+</dd>
+<dt class="field-even">Param Vector3 position</dt>
+<dd class="field-even"><p>音が発生する場所</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt>
-void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, IEffectEmitter<em>&nbsp;emitter</em><span class="sig-paren">)</span></dt>
-<dt>
-void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, Transform<em>&nbsp;trans</em><span class="sig-paren">)</span></dt>
-<dt>
-void <code class="descname">play</code><span class="sig-paren">(</span>CSoundEffect<em>&nbsp;cSE</em>, Vector3<em>&nbsp;position</em><span class="sig-paren">)</span></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>cSE</strong> (<em>CSoundEffect</em>) &#8211; CSeResourceから取得可能な、SEオブジェクトです。</li>
-<li><strong>emitter</strong> (<em>IEffectEmitter</em>) &#8211; エフェクトが発生するエミッター</li>
-<li><strong>trans</strong> (<em>Transform</em>) &#8211; 音が発生する場所</li>
-<li><strong>position</strong> (<em>Vector3</em>) &#8211; 音が発生する場所</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <p>指定されたSEを3D音声として再生します。</p>
+<p>マネージャのインスタンスを取得します。</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="c.Instance">
-CSoundEffectMgr <code class="descname">Instance</code><a class="headerlink" href="#c.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-</div>
-</div>
-<div class="section" id="cseresourcemgr">
-<span id="id3"></span><h1>CSeResourceMgr<a class="headerlink" href="#cseresourcemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote>
-<div><p>CSeResourceを管理するコンテナになっています。</p>
+<dl class="class">
+<dt id="class-CSeResourceMgr">
+<code class="descname">class CSeResourceMgr</code><a class="headerlink" href="#class-CSeResourceMgr" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>CSeResourceを管理するコンテナになっています。</p>
 <p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだ音声データを管理します。</p>
-</div></blockquote>
-<dl class="function">
-<dt id="c.refenrece">
-CSeResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#c.refenrece" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; SE リソースID(アセットバンドルID)を指定します。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">SEリソースが返ってきます。</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>SEリソースを取得する。取得できるアセットは、<a class="reference internal" href="soundeffect.html#se-assetbuild"><span>こちら</span></a> でコンバートしたものです。</p>
+<dl class="method">
+<dt id="method-CSeResourceMgr.refenrece">
+<a class="reference internal" href="#class-CSeResource" title="CSeResource class">CSeResource</a> <code class="descname">refenrece</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResourceMgr.refenrece" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint mAssetBundle</dt>
+<dd class="field-odd"><p>SE リソースID(アセットバンドルID)を指定します。</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>SEリソースが返ってきます。</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.find">
-CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em>, uint<em>&nbsp;mId</em><span class="sig-paren">)</span><a class="headerlink" href="#c.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; SEリソースを指定する。</li>
-<li><strong>id</strong> (<em>uint</em>) &#8211; SE IDを指定します。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">SEが返ってきます。指定したSEがパックされているアセットバンドルがまだ読み込み中であったり存在しないときは、nullが返ります。</p>
-</td>
-</tr>
-</tbody>
-</table>
+<p>SEリソースを取得する。取得できるアセットは、<a class="reference internal" href="soundeffect.html#se-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
+<dl class="method">
+<dt id="method-CSeResourceMgr.find">
+CSoundEffect <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em>, uint <em>mId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResourceMgr.find" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint mAssetBundle</dt>
+<dd class="field-odd"><p>SEリソースを指定する。</p>
+</dd>
+<dt class="field-even">Param uint id</dt>
+<dd class="field-even"><p>SE IDを指定します。</p>
+</dd>
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>SEが返ってきます。指定したSEがパックされているアセットバンドルがまだ読み込み中であったり存在しないときは、nullが返ります。</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>CSoundEffectを取得します。</p>
+<dl class="property">
+<dt id="property-CSeResourceMgr.Instance">
+<em>static</em> <a class="reference internal" href="#class-CSeResourceMgr" title="CSeResourceMgr class">CSeResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSeResourceMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>マネージャのインスタンスを取得します。</p>
 </dd></dl>
 
-<dl class="member">
-<dt>
-CSeResourceMgr <code class="descname">Instance</code></dt>
-<dd><p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-</div>
-<div class="section" id="cseresource">
-<span id="id4"></span><h1>CSeResource<a class="headerlink" href="#cseresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote>
-<div><p>アセットバンドル化されたSEを使える状態にして保持しています。</p>
+<dl class="class">
+<dt id="class-CSeResource">
+<code class="descname">class CSeResource</code><a class="headerlink" href="#class-CSeResource" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>アセットバンドル化されたSEを使える状態にして保持しています。</p>
 <p>CSeResource一つに、複数のSEがまとまった形で入っています。</p>
 <p>IWinSoundEffectインターフェースを持ち、CWindowMgrに登録することが可能です。</p>
 <p>実際に、SEを鳴らすには、CSoundEffectMgr経由で行います。</p>
-</div></blockquote>
-<dl class="function">
-<dt>
-CSoundEffect <code class="descname">find</code><span class="sig-paren">(</span>uint<em>&nbsp;id</em><span class="sig-paren">)</span></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>id</strong> (<em>uint</em>) &#8211; 取得したいSE IDを指定します。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">SEが返ってきます。</p>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="method">
+<dt id="method-CSeResource.find">
+CSoundEffect <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResource.find" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint id</dt>
+<dd class="field-odd"><p>取得したいSE IDを指定します。</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>SEが返ってきます。</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>SEを取得します。</p>
+<dl class="method">
+<dt id="method-CSeResource.play">
+void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResource.play" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint id</dt>
+<dd class="field-odd"><p>再生したいSE IDを指定します。</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt>
-void <code class="descname">play</code><span class="sig-paren">(</span>uint<em>&nbsp;mSE</em><span class="sig-paren">)</span></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>id</strong> (<em>uint</em>) &#8211; 再生したいSE IDを指定します。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <p>SEを再生します。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-CSeResource.isLoaded">
+bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSeResource.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="c.isLoaded">
-bool <code class="descname">isLoaded</code><a class="headerlink" href="#c.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
 <p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
 </dd></dl>
 
-</div>
-<div class="section" id="cbgmresourcemgr">
-<span id="id5"></span><h1>CBgmResourceMgr<a class="headerlink" href="#cbgmresourcemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote>
-<div><p>CBgmResourceを管理するコンテナになっています。</p>
+<dl class="class">
+<dt id="class-CBgmResourceMgr">
+<code class="descname">class CBgmResourceMgr</code><a class="headerlink" href="#class-CBgmResourceMgr" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>CBgmResourceを管理するコンテナになっています。</p>
 <p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだBGMデータを管理します。</p>
 <p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
-</div></blockquote>
-<dl class="function">
-<dt>
-CBgmResource <code class="descname">refenrece</code><span class="sig-paren">(</span>uint<em>&nbsp;mAssetBundle</em><span class="sig-paren">)</span></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>mAssetBundle</strong> (<em>uint</em>) &#8211; BGMリソースID(アセットバンドルID)を指定します。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">BGMリソースが返ってきます。</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>BGMリソースを取得します。取得できるアセットは、<a class="reference internal" href="soundeffect.html#bgm-assetbuild"><span>こちら</span></a> でコンバートしたものです。</p>
+<dl class="method">
+<dt id="method-CBgmResourceMgr.refenrece">
+<a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <code class="descname">refenrece</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CBgmResourceMgr.refenrece" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint mAssetBundle</dt>
+<dd class="field-odd"><p>BGMリソースID(アセットバンドルID)を指定します。</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>BGMリソースが返ってきます。</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.load">
-CBgmResource <code class="descname">load</code><span class="sig-paren">(</span>uint<em>&nbsp;mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#c.load" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>mResource</strong> (<em>uint</em>) &#8211; リソースIDを指定します。</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">BGMリソースが返ってきます。</p>
-</td>
-</tr>
-</tbody>
-</table>
+<p>BGMリソースを取得します。取得できるアセットは、<a class="reference internal" href="soundeffect.html#bgm-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
+<dl class="method">
+<dt id="method-CBgmResourceMgr.load">
+<a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <code class="descname">load</code> <span class="sig-paren">(</span>uint <em>mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CBgmResourceMgr.load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint mResource</dt>
+<dd class="field-odd"><p>リソースIDを指定します。</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>BGMリソースが返ってきます。</p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>Resourcesフォルダの下に次のような形でファイルを置いておくと読み込むことができます。</p>
-</dd></dl>
-
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">Resources</span><span class="p">/</span><span class="m">001</span><span class="n">_000_000000</span><span class="p">.</span><span class="n">mp3</span>
-<span class="n">Assets</span><span class="p">/</span><span class="n">Resources</span><span class="p">/</span><span class="m">001</span><span class="n">_000_000000</span><span class="p">.</span><span class="n">intro</span><span class="p">.</span><span class="n">mp3</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<dl class="member">
-<dt>
-CBgmResourceMgr <code class="descname">Instance</code></dt>
-<dd><p>マネージャのインスタンスを取得します。</p>
+<p>Assets/Resources/001_000_000000.mp3
+Assets/Resources/001_000_000000.intro.mp3</p>
+<dl class="property">
+<dt id="property-CBgmResourceMgr.Instance">
+<em>static</em> <a class="reference internal" href="#class-CBgmResourceMgr" title="CBgmResourceMgr class">CBgmResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResourceMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>マネージャのインスタンスを取得します。</p>
 </dd></dl>
 
-</div>
-<div class="section" id="cbgmresource">
-<span id="id6"></span><h1>CBgmResource<a class="headerlink" href="#cbgmresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<blockquote>
-<div><p>アセットバンドル化されたBGMを使える状態にして保持しています。</p>
+<dl class="class">
+<dt id="class-CBgmResource">
+<code class="descname">class CBgmResource</code><a class="headerlink" href="#class-CBgmResource" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>アセットバンドル化されたBGMを使える状態にして保持しています。</p>
 <p>CBgmResource内に、イントロ部分とループ部分の音声データを持っています。</p>
 <p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
-</div></blockquote>
-<dl class="member">
-<dt id="c.loopClip">
-AudioClip <code class="descname">loopClip</code><a class="headerlink" href="#c.loopClip" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ループ部分のクリップ</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-CBgmResource.loopClip">
+AudioClip <code class="descname">loopClip</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.loopClip" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="c.introClip">
-AudioClip <code class="descname">introClip</code><a class="headerlink" href="#c.introClip" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>イントロ部分のクリップ</p>
-</dd></dl>
+<p>ループ部分のクリップ</p>
+<dl class="property">
+<dt id="property-CBgmResource.introClip">
+AudioClip <code class="descname">introClip</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.introClip" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt>
-bool <code class="descname">isLoaded</code></dt>
-<dd><p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p>イントロ部分のクリップ</p>
+<dl class="property">
+<dt id="property-CBgmResource.isLoaded">
+bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
 <p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
 </dd></dl>
 
+</div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CMessageDataSheetMgr.html" class="btn btn-neutral float-right" title="CMessageDataSheetMgrについて" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CMessageDataSheetMgr.html" class="btn btn-neutral float-right" title="CMessageDataSheetMgrについて" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CTextureResourceMgr.html" class="btn btn-neutral" title="CTextureResourceMgrについて" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CTextureResourceMgr.html" class="btn btn-neutral float-left" title="CTextureResourceMgrについて" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -617,11 +589,11 @@ bool <code class="descname">isLoaded</code></dt>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -634,37 +606,15 @@ bool <code class="descname">isLoaded</code></dt>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlBase &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>CWinCtrlBase &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="CWinContents" href="CWinContents.html"/>
-        <link rel="prev" title="CWindowBase" href="CWindowBase.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="CWinContents" href="CWinContents.html" />
+    <link rel="prev" title="CWindowBase" href="CWindowBase.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -106,6 +110,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -149,22 +157,12 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlBase</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#contents-access">コンテンツについて</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contentslist-access">コンテンツリストについて</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">コントロールが持つ主なプロパティ/メソッド</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">コンテンツ関連</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">コンテンツリスト関連</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">その他</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
@@ -195,7 +193,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -210,53 +208,73 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinCtrlBase</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinCtrlBase</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinCtrlBase.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinCtrlBase.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="cwinctrlbase">
-<span id="id1"></span><h1>CWinCtrlBase<a class="headerlink" href="#cwinctrlbase" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>CWinCtrlBase<a class="headerlink" href="#cwinctrlbase" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>全てのコントロールは、CWinCtrlBaseを継承しています。</p>
 <p>CWinCtrlBaseに各コントロールの共通メソッド/プロパティを持っています。</p>
 <p>これを継承したコントロールはそれぞれ独自のプロパティを持つものもありますが、それについては各コントロールの説明を参照ください。</p>
 </div></blockquote>
 <div class="section" id="contents-access">
-<span id="id2"></span><h2>コンテンツについて<a class="headerlink" href="#contents-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id1"></span><h2>コンテンツについて<a class="headerlink" href="#contents-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>ウィンドウスクリプト上で、 <strong>CONTENTS</strong> によって関連付いたコントロールは <a class="reference internal" href="#getcontents"><span>getContents()</span></a> でアクセス可能です。</p>
-<p><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a> 、 <a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a> 、 <a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a> 等のコンテンツはこれに該当します。</p>
+<div><p>ウィンドウスクリプト上で、 <strong>CONTENTS</strong> によって関連付いたコントロールは <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">getContents()</span></code> でアクセス可能です。</p>
+<p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a> 、 <a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a> 、 <a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a> 等のコンテンツはこれに該当します。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Get the CONTAINER(Map)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Get the CONTAINER(Map)</span>
 <span class="n">CWinCtrlContainer</span>      <span class="n">ctnMap</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlContainer</span><span class="p">&gt;(</span><span class="n">CONTAINER_Map</span><span class="p">);</span>
 <span class="n">CWinContents</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">ctnMap</span><span class="p">.</span><span class="n">getContents</span><span class="p">();</span>
 <span class="c1">// Get the BUTTON(A) in contents</span>
@@ -264,23 +282,24 @@
 </pre></div>
 </div>
 <blockquote>
-<div>また、 <a class="reference internal" href="CWindowBase.html#cwindowbase-find"><span>CWindowBase.find</span></a> 関数と、 <a class="reference internal" href="CWinContents.html#contents-find"><span>CWinContents.find</span></a> は、コンテンツ内も(再帰的に)検索対象にします。
-よって、単純に次のようにもBUTTON_Aを取り出すことができます。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
+<div><p>また、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.find" title="CWindowBase.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CWindowBase.find</span></code></a> 関数と、 <a class="reference internal" href="CWinContents.html#method-CWinContents.find" title="CWinContents.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CWinContents.find</span></code></a> は、コンテンツ内も(再帰的に)検索対象にします。
+よって、単純に次のようにもBUTTON_Aを取り出すことができます。</p>
+</div></blockquote>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="contentslist-access">
-<span id="id3"></span><h2>コンテンツリストについて<a class="headerlink" href="#contentslist-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id2"></span><h2>コンテンツリストについて<a class="headerlink" href="#contentslist-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>リストボックスはコンテンツを複数組み持つものになります。
-リストボックスの行を追加するというのは、 <a class="reference internal" href="#contents-access"><span>コンテンツ</span></a> をテンプレートとして複製するということです。
+リストボックスの行を追加するというのは、 <a class="reference internal" href="#contents-access"><span class="std std-ref">コンテンツ</span></a> をテンプレートとして複製するということです。
 よって、コンテンツリスト内には同一のコントロールIDを持つコントロールが複数存在することになります。
 特定のコンテンツリスト内のコントロールを取得するには、まず最初にコンテンツリスト内からコンテンツを特定する必要があります。</p>
-<p>この時、 <a class="reference internal" href="#getcontentsfromindex"><span>getContentsFromIndex(int index)</span></a> を使います。</p>
+<p>この時、 <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">getContentsFromIndex(int</span> <span class="pre">index)</span></code> を使います。</p>
 <p>以下にリストボックス内のコントロールに対してアクセスする典型的なコードを掲載しておきます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// get the listbox control</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get the listbox control</span>
 <span class="n">CWinCtrlListbox</span>     <span class="n">lbFriends</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlListbox</span><span class="p">&gt;(</span><span class="n">LISTBOX_Friends</span><span class="p">);</span>
 
 <span class="c1">// set the listbox contents number</span>
@@ -294,460 +313,445 @@
     <span class="n">CWInCtrlIcon</span> <span class="n">icon</span> <span class="p">=</span> <span class="n">contents</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlIcon</span><span class="p">&gt;(</span><span class="n">ICON_Avatar</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>コントロールが持つ主なプロパティ/メソッド<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="section" id="id5">
-<h3>コンテンツ関連<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<span class="target" id="getcontents"></span><dl class="function">
-<dt id="_CPPv211getContentsv">
-<span id="getContents"></span>CWinContents <code class="descclassname"></code><code class="descname">getContents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211getContentsv" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span>CONTENTS</span></a> プロパティによって定義された <a class="reference internal" href="CWinContents.html#cwincontents"><span>コンテンツ</span></a> を取得する。</td>
-</tr>
-</tbody>
-</table>
+<dl class="class">
+<dt id="class-CWinCtrlBase">
+<code class="descname">class CWinCtrlBase</code><a class="headerlink" href="#class-CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p><em>コンテンツ関連</em></p>
+<blockquote>
+<div><dl class="method">
+<dt id="method-getContents">
+<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">getContents</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-getContents" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">return CWinContents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span class="std std-ref">CONTENTS</span></a> プロパティによって定義された <a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">コンテンツ</span></code></a> を取得する。</p>
+</dd>
+</dl>
+<p><em>コンテンツリスト関連</em></p>
+<dl class="property">
+<dt id="property-count">
+int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-count" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コンテンツリストの数を取得する。</p>
+<dl class="method">
+<dt id="method-resize">
+void <code class="descname">resize</code> <span class="sig-paren">(</span>int <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#method-resize" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param int num</dt>
+<dd class="field-odd"><p>コンテンツリストサイズ</p>
+</dd>
+</dl>
 </dd></dl>
 
-</div>
-<div class="section" id="id6">
-<h3>コンテンツリスト関連<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<dl class="member">
-<dt id="_CPPv25count">
-<span id="count__i"></span>int <code class="descclassname"></code><code class="descname">count</code><a class="headerlink" href="#_CPPv25count" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツリストの数を取得する。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26resizei">
-<span id="resize__i"></span>void <code class="descclassname"></code><code class="descname">resize</code><span class="sig-paren">(</span>int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26resizei" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ int count:</th><td class="field-body">コンテンツリストサイズ</td>
-</tr>
-</tbody>
-</table>
 <p>コンテンツリストの数を設定する。</p>
 <p>コンテンツリストの数が増えたときは、コンテンツをテンプレートとして必要な数、複製します。</p>
 <p>既にあるコンテンツリストの要素に対しては操作は行いません。</p>
+<dl class="method">
+<dt id="method-insert">
+<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">insert</code> <span class="sig-paren">(</span>int <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-insert" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param int pos</dt>
+<dd class="field-odd"><p>コンテンツを作成し、コンテンツリストに挿入する場所</p>
+</dd>
+<dt class="field-even">Return CWinContents</dt>
+<dd class="field-even"><p>コンテンツリスト内の <a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">コンテンツ</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv26inserti">
-<span id="insert__i"></span>CWinContents <code class="descclassname"></code><code class="descname">insert</code><span class="sig-paren">(</span>int <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26inserti" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ int pos:</th><td class="field-body">コンテンツを作成し、コンテンツリストに挿入する場所</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">コンテンツリスト内の <a class="reference internal" href="CWinContents.html#cwincontents"><span>コンテンツ</span></a></td>
-</tr>
-</tbody>
-</table>
 <p>コンテンツリストの特定の場所にコンテンツを生成し挿入する。</p>
+<dl class="method">
+<dt id="method-getContentsFromIndex">
+<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">getContentsFromIndex</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getContentsFromIndex" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param int index</dt>
+<dd class="field-odd"><p>コンテンツリスト内の取得したいコンテンツのインデックス</p>
+</dd>
+<dt class="field-even">Return CWinContents</dt>
+<dd class="field-even"><p>コンテンツリスト内の <a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">コンテンツ</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<span class="target" id="getcontentsfromindex"></span><dl class="function">
-<dt id="_CPPv220getContentsFromIndexi">
-<span id="getContentsFromIndex__i"></span>CWinContents <code class="descclassname"></code><code class="descname">getContentsFromIndex</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220getContentsFromIndexi" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ int index:</th><td class="field-body">コンテンツリスト内の取得したいコンテンツのインデックス</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Return CWinContents:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">コンテンツリスト内の <a class="reference internal" href="CWinContents.html#cwincontents"><span>コンテンツ</span></a></td>
-</tr>
-</tbody>
-</table>
 <p>コンテンツリストから、インデックスを用いて取得する。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv216getContentsIndex12CWinCtrlBase">
-<span id="getContentsIndex__CWinCtrlBase"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinCtrlBase <em>ctrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>特定のコントロールが何番目のコンテンツリストに含まれているか調べて返す。
-どのコンテンツリストの要素にも入っていなければ-1が返る。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv216getContentsIndex12CWinContents">
-<span id="getContentsIndex__CWinContents"></span>int <code class="descclassname"></code><code class="descname">getContentsIndex</code><span class="sig-paren">(</span>CWinContents <em>contents</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getContentsIndex12CWinContents" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>特定のコンテンツが何番目のコンテンツリストに含まれているか調べて返す。
-どのコンテンツリストのコンテンツのどれとも合致しなければ-1が返る。</p>
-</dd></dl>
-
-</div>
-<div class="section" id="id7">
-<h3>その他<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<dl class="function">
-<dt id="_CPPv28ToStringv">
-<span id="ToString"></span>string <code class="descclassname"></code><code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28ToStringv" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの種類とIDによる文字列を生成する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv22id">
-<span id="id__uint"></span>uint <code class="descclassname"></code><code class="descname">id</code><a class="headerlink" href="#_CPPv22id" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールのIDを取得/設定する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv24kind">
-<span id="kind__e_WinCtrlKind"></span>e_WinCtrlKind <code class="descclassname"></code><code class="descname">kind</code><a class="headerlink" href="#_CPPv24kind" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの種類を取得する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv28priority">
-<span id="priority__i"></span>int <code class="descclassname"></code><code class="descname">priority</code><a class="headerlink" href="#_CPPv28priority" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールのプライオリティを取得/設定する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv28position">
-<span id="position__Vector3"></span>Vector3 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの座標を設定する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv211absPosition">
-<span id="absPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">absPosition</code><a class="headerlink" href="#_CPPv211absPosition" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの座標をウィンドウ基準から取得</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv214screenPosition">
-<span id="screenPosition__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">screenPosition</code><a class="headerlink" href="#_CPPv214screenPosition" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの座標を画面基準から取得</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv25width">
-<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="method">
+<dt id="method-getContentsIndex">
+int <code class="descname">getContentsIndex</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>ctrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getContentsIndex" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26height">
-<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールのサイズを取得/設定する。</p>
-</dd></dl>
+<p>特定のコントロールが何番目のコンテンツリストに含まれているか調べて返す。
+どのコンテンツリストの要素にも入っていなければ-1が返る。</p>
+<dl class="method">
+<dt>
+int <code class="descname">getContentsIndex</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <em>contents</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv24size">
-<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールのサイズを取得/設定する。</p>
-</dd></dl>
+<p>特定のコンテンツが何番目のコンテンツリストに含まれているか調べて返す。
+どのコンテンツリストのコンテンツのどれとも合致しなければ-1が返る。</p>
+<p><em>その他</em></p>
+<dl class="method">
+<dt id="method-ToString">
+string <code class="descname">ToString</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ToString" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv212contentsSize">
-<span id="contentsSize__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">contentsSize</code><a class="headerlink" href="#_CPPv212contentsSize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツのサイズを取得/設定する。</p>
-</dd></dl>
+<p>コントロールの種類とIDによる文字列を生成する。</p>
+<dl class="property">
+<dt id="property-id">
+uint <code class="descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-id" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv28getColori">
-<span id="getColor__i"></span>WinColor <code class="descclassname"></code><code class="descname">getColor</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28getColori" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>コントロールのIDを取得/設定する。</p>
+<dl class="property">
+<dt id="property-kind">
+e_WinCtrlKind <code class="descname">kind</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-kind" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールの種類を取得する。</p>
+<dl class="property">
+<dt id="property-priority">
+int <code class="descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-priority" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールのプライオリティを取得/設定する。</p>
+<dl class="property">
+<dt id="property-position">
+Vector3 <code class="descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-position" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールの座標を設定する。</p>
+<dl class="property">
+<dt id="property-absPosition">
+Vector2 <code class="descname">absPosition</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-absPosition" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールの座標をウィンドウ基準から取得</p>
+<dl class="property">
+<dt id="property-screenPosition">
+Vector2 <code class="descname">screenPosition</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-screenPosition" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールの座標を画面基準から取得</p>
+<dl class="property">
+<dt id="property-width">
+float <code class="descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-width" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-height">
+float <code class="descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-height" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールのサイズを取得/設定する。</p>
+<dl class="property">
+<dt id="property-size">
+Vector2 <code class="descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-size" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コントロールのサイズを取得/設定する。</p>
+<dl class="property">
+<dt id="property-contentsSize">
+Vector2 <code class="descname">contentsSize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-contentsSize" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>コンテンツのサイズを取得/設定する。</p>
+<dl class="method">
+<dt id="method-getColor">
+WinColor <code class="descname">getColor</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getColor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>index = 0～7の間で設定する。
 カラーを取得する。
 テクスチャパーツを最大８まで持てるので、カラーもそれに対応して、8個持てる。</p>
-</dd></dl>
+<dl class="method">
+<dt id="method-setColor">
+void <code class="descname">setColor</code> <span class="sig-paren">(</span>int <em>index</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setColor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv28setColori8WinColor">
-<span id="setColor__i.WinColor"></span>void <code class="descclassname"></code><code class="descname">setColor</code><span class="sig-paren">(</span>int <em>index</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28setColori8WinColor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>index = 0～7の間で設定する。
 カラーを設定する。
 テクスチャパーツを最大８まで持てるので、カラーもそれに対応して、8個持てる。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv25color">
-<span id="color__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color</code><a class="headerlink" href="#_CPPv25color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>テクスチャパーツ番号0番のカラーを取得/設定する。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv26color1">
-<span id="color1__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color1</code><a class="headerlink" href="#_CPPv26color1" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-color">
+WinColor <code class="descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color2">
-<span id="color2__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color2</code><a class="headerlink" href="#_CPPv26color2" title="この定義へのパーマリンク">¶</a></dt>
+<p>テクスチャパーツ番号0番のカラーを取得/設定する。</p>
+<dl class="property">
+<dt id="property-color1">
+WinColor <code class="descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color1" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color3">
-<span id="color3__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color3</code><a class="headerlink" href="#_CPPv26color3" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-color2">
+WinColor <code class="descname">color2</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color2" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color4">
-<span id="color4__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color4</code><a class="headerlink" href="#_CPPv26color4" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-color3">
+WinColor <code class="descname">color3</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color3" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color5">
-<span id="color5__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color5</code><a class="headerlink" href="#_CPPv26color5" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-color4">
+WinColor <code class="descname">color4</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color4" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color6">
-<span id="color6__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color6</code><a class="headerlink" href="#_CPPv26color6" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-color5">
+WinColor <code class="descname">color5</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color5" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color7">
-<span id="color7__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color7</code><a class="headerlink" href="#_CPPv26color7" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>テクスチャパーツ番号1(～7番)のカラーを取得/設定する。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-color6">
+WinColor <code class="descname">color6</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color6" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv212setTextureIdi4uint">
-<span id="setTextureId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setTextureId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>texid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212setTextureIdi4uint" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<dl class="property">
+<dt id="property-color7">
+WinColor <code class="descname">color7</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-color7" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>テクスチャパーツ番号1(～7番)のカラーを取得/設定する。</p>
+<dl class="method">
+<dt id="method-setTextureId">
+void <code class="descname">setTextureId</code> <span class="sig-paren">(</span>int <em>index</em>, uint <em>texid</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>index = 0～7の間で設定する。
 特定のテクスチャIDを設定する。
 テクスチャパーツを最大８まで持てるので、テクスチャIDもそれに対応して8個持てる。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212getTextureIdi">
-<span id="getTextureId__i"></span>WinColor <code class="descclassname"></code><code class="descname">getTextureId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212getTextureIdi" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
-特定のテクスチャIDを取得する。
-テクスチャパーツを最大８まで持てるので、テクスチャIDもそれに対応して8個持てる。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv25texId">
-<span id="texId__uint"></span>uint <code class="descclassname"></code><code class="descname">texId</code><a class="headerlink" href="#_CPPv25texId" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="method">
+<dt id="method-getTextureId">
+WinColor <code class="descname">getTextureId</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getTextureId" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26texId1">
-<span id="texId1__uint"></span>uint <code class="descclassname"></code><code class="descname">texId1</code><a class="headerlink" href="#_CPPv26texId1" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>テクスチャＩＤを取得/設定する。</p>
-</dd></dl>
+<p>index = 0～7の間で設定する。
+特定のテクスチャIDを取得する。
+テクスチャパーツを最大８まで持てるので、テクスチャIDもそれに対応して8個持てる。</p>
+<dl class="property">
+<dt id="property-texId">
+uint <code class="descname">texId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-texId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv29setPartIdi4uint">
-<span id="setPartId__i.uint"></span>void <code class="descclassname"></code><code class="descname">setPartId</code><span class="sig-paren">(</span>int <em>index</em>, uint <em>partId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29setPartIdi4uint" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<dl class="property">
+<dt id="property-texId1">
+uint <code class="descname">texId1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-texId1" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>テクスチャＩＤを取得/設定する。</p>
+<dl class="method">
+<dt id="method-setPartId">
+void <code class="descname">setPartId</code> <span class="sig-paren">(</span>int <em>index</em>, uint <em>partId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setPartId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>index = 0～7の間で設定する。
 特定のテクスチャパーツIDを設定する。
 テクスチャパーツを最大８まで持てるので、パーツIDもそれに対応して8個持てる。</p>
-</dd></dl>
+<dl class="method">
+<dt id="method-getPartId">
+uint <code class="descname">getPartId</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getPartId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv29getPartIdi">
-<span id="getPartId__i"></span>uint <code class="descclassname"></code><code class="descname">getPartId</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29getPartIdi" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>index = 0～7の間で設定する。
 特定のテクスチャパーツIDを取得する。
 テクスチャパーツを最大８まで持てるので、パーツIDもそれに対応して8個持てる。</p>
-</dd></dl>
+<dl class="method">
+<dt id="method-setTextureSize">
+void <code class="descname">setTextureSize</code> <span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureSize" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv214setTextureSizei7Vector2">
-<span id="setTextureSize__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureSize</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214setTextureSizei7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>index = 0～7の間で設定する。
 特定のテクスチャパーツの表示サイズを設定する。
 テクスチャパーツを最大８まで持てるので、サイズもそれに対応して8個持てる。
 特にindex = 0の時、width,heightにアクセスするのと同等になる。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv25parts">
-<span id="parts__uint"></span>uint <code class="descclassname"></code><code class="descname">parts</code><a class="headerlink" href="#_CPPv25parts" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-parts">
+uint <code class="descname">parts</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-parts" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId1">
-<span id="partId1__uint"></span>uint <code class="descclassname"></code><code class="descname">partId1</code><a class="headerlink" href="#_CPPv27partId1" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId1">
+uint <code class="descname">partId1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId1" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId2">
-<span id="partId2__uint"></span>uint <code class="descclassname"></code><code class="descname">partId2</code><a class="headerlink" href="#_CPPv27partId2" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId2">
+uint <code class="descname">partId2</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId2" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId3">
-<span id="partId3__uint"></span>uint <code class="descclassname"></code><code class="descname">partId3</code><a class="headerlink" href="#_CPPv27partId3" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId3">
+uint <code class="descname">partId3</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId3" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId4">
-<span id="partId4__uint"></span>uint <code class="descclassname"></code><code class="descname">partId4</code><a class="headerlink" href="#_CPPv27partId4" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId4">
+uint <code class="descname">partId4</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId4" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId5">
-<span id="partId5__uint"></span>uint <code class="descclassname"></code><code class="descname">partId5</code><a class="headerlink" href="#_CPPv27partId5" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId5">
+uint <code class="descname">partId5</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId5" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId6">
-<span id="partId6__uint"></span>uint <code class="descclassname"></code><code class="descname">partId6</code><a class="headerlink" href="#_CPPv27partId6" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="property">
+<dt id="property-partId6">
+uint <code class="descname">partId6</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId6" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27partId7">
-<span id="partId7__uint"></span>uint <code class="descclassname"></code><code class="descname">partId7</code><a class="headerlink" href="#_CPPv27partId7" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>テクスチャパーツＩＤを取得/設定する。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-partId7">
+uint <code class="descname">partId7</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-partId7" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv216setTextureOffseti7Vector2">
-<span id="setTextureOffset__i.Vector2"></span>void <code class="descclassname"></code><code class="descname">setTextureOffset</code><span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216setTextureOffseti7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>テクスチャパーツＩＤを取得/設定する。</p>
+<dl class="method">
+<dt id="method-setTextureOffset">
+void <code class="descname">setTextureOffset</code> <span class="sig-paren">(</span>int <em>index</em>, Vector2 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#method-setTextureOffset" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>index = 0～7の間で設定する。
 特定のテクスチャパーツの表示オフセットを設定する。
 テクスチャパーツを最大８まで持てるので、オフセットもそれに対応して8個持てる。</p>
-</dd></dl>
+<dl class="method">
+<dt id="method-getTextureOffset">
+Vector2 <code class="descname">getTextureOffset</code> <span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#method-getTextureOffset" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv216getTextureOffseti">
-<span id="getTextureOffset__i"></span>Vector2 <code class="descclassname"></code><code class="descname">getTextureOffset</code><span class="sig-paren">(</span>int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216getTextureOffseti" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>index = 0～7の間で設定する。
+<p>index = 0～7の間で設定する。
 特定のテクスチャパーツの表示オフセットを取得する。
 テクスチャパーツを最大８まで持てるので、オフセットもそれに対応して8個持てる。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-anchor">
+e_Anchor <code class="descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-anchor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26anchor">
-<span id="anchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">anchor</code><a class="headerlink" href="#_CPPv26anchor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>基準座標を決定するためのアンカーを取得/設定する。</p>
-</dd></dl>
+<p>基準座標を決定するためのアンカーを取得/設定する。</p>
+<dl class="property">
+<dt id="property-baseAnchor">
+e_Anchor <code class="descname">baseAnchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-baseAnchor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv210baseAnchor">
-<span id="baseAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">baseAnchor</code><a class="headerlink" href="#_CPPv210baseAnchor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールの原点をどこにするかを決定するベースアンカーを取得/設定する。</p>
-</dd></dl>
+<p>コントロールの原点をどこにするかを決定するベースアンカーを取得/設定する。</p>
+<dl class="property">
+<dt id="property-textAnchor">
+e_Anchor <code class="descname">textAnchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-textAnchor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv210textAnchor">
-<span id="textAnchor__e_Anchor"></span>e_Anchor <code class="descclassname"></code><code class="descname">textAnchor</code><a class="headerlink" href="#_CPPv210textAnchor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプションの原点をどこにするかを決定するテキストアンカーを取得/設定する。</p>
-</dd></dl>
+<p>キャプションの原点をどこにするかを決定するテキストアンカーを取得/設定する。</p>
+<dl class="property">
+<dt id="property-fontKind">
+uint <code class="descname">fontKind</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-fontKind" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv28fontKind">
-<span id="fontKind__uint"></span>uint <code class="descclassname"></code><code class="descname">fontKind</code><a class="headerlink" href="#_CPPv28fontKind" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>フォントの種類を取得/設定する。</p>
-</dd></dl>
+<p>フォントの種類を取得/設定する。</p>
+<dl class="property">
+<dt id="property-caption">
+string <code class="descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-caption" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27caption">
-<span id="caption__string"></span>string <code class="descclassname"></code><code class="descname">caption</code><a class="headerlink" href="#_CPPv27caption" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプションを取得/設定する。</p>
-</dd></dl>
+<p>キャプションを取得/設定する。</p>
+<dl class="property">
+<dt id="property-captionId">
+uint <code class="descname">captionId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-captionId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv29captionId">
-<span id="captionId__uint"></span>uint <code class="descclassname"></code><code class="descname">captionId</code><a class="headerlink" href="#_CPPv29captionId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプションIDを取得/設定する。
+<p>キャプションIDを取得/設定する。
 ただし、設定してもcaptionには反映しません。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-captionColor">
+WinColor <code class="descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-captionColor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv212captionColor">
-<span id="captionColor__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">captionColor</code><a class="headerlink" href="#_CPPv212captionColor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプションカラーを取得/設定する。</p>
-</dd></dl>
+<p>キャプションカラーを取得/設定する。</p>
+<dl class="property">
+<dt id="property-captionOffset">
+Vector2 <code class="descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-captionOffset" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv213captionOffset">
-<span id="captionOffset__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">captionOffset</code><a class="headerlink" href="#_CPPv213captionOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプションの表示オフセットをずらす。</p>
-</dd></dl>
+<p>キャプションの表示オフセットをずらす。</p>
+<dl class="property">
+<dt id="property-lineSpace">
+float <code class="descname">lineSpace</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-lineSpace" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv29lineSpace">
-<span id="lineSpace__float"></span>float <code class="descclassname"></code><code class="descname">lineSpace</code><a class="headerlink" href="#_CPPv29lineSpace" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツ間のスペースを設定する。
+<p>コンテンツ間のスペースを設定する。
 またリッチテキストなどでは、行間の値になる。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-SEId">
+uint <code class="descname">SEId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-SEId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv24SEId">
-<span id="SEId__uint"></span>uint <code class="descclassname"></code><code class="descname">SEId</code><a class="headerlink" href="#_CPPv24SEId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールに割り当てられたSEのIDを取得/設定する。</p>
-</dd></dl>
+<p>コントロールに割り当てられたSEのIDを取得/設定する。</p>
+<dl class="property">
+<dt id="property-parent">
+<a class="reference internal" href="CWinContents.html#class-CWinContents" title="CWinContents class">CWinContents</a> <code class="descname">parent</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-parent" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26parent">
-<span id="parent__CWinContents"></span>CWinContents <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールが含まれているコンテンツを取得する。</p>
-</dd></dl>
+<p>コントロールが含まれているコンテンツを取得する。</p>
+<dl class="property">
+<dt id="property-groups">
+<a class="reference internal" href="#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a>[] <code class="descname">groups</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-groups" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="c.groups">
-CWinCtrlBase[] <code class="descname">groups</code><a class="headerlink" href="#c.groups" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールが持つGROUPを取得する。</p>
-</dd></dl>
+<p>コントロールが持つGROUPを取得する。</p>
+<dl class="property">
+<dt id="property-window">
+<a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">window</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-window" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26window">
-<span id="window__CWindowBase"></span>CWindowBase <code class="descclassname"></code><code class="descname">window</code><a class="headerlink" href="#_CPPv26window" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールが含まれているウィンドウを取得する。</p>
-</dd></dl>
+<p>コントロールが含まれているウィンドウを取得する。</p>
+<dl class="property">
+<dt id="property-style">
+e_WinCtrlStyle <code class="descname">style</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-style" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv25style">
-<span id="style__e_WinCtrlStyle"></span>e_WinCtrlStyle <code class="descclassname"></code><code class="descname">style</code><a class="headerlink" href="#_CPPv25style" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コントロールのスタイルフラグを取得する。</p>
-</dd></dl>
+<p>コントロールのスタイルフラグを取得する。</p>
+<dl class="property">
+<dt id="property-hide">
+bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-hide" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv24hide">
-<span id="hide__b"></span>bool <code class="descclassname"></code><code class="descname">hide</code><a class="headerlink" href="#_CPPv24hide" title="この定義へのパーマリンク">¶</a></dt>
-<dd><blockquote>
-<div>true: コントロールの表示を止める。</div></blockquote>
+<p>true: コントロールの表示を止める。</p>
 <p>false: コントロールを表示する。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-disable">
+bool <code class="descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-disable" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv27disable">
-<span id="disable__b"></span>bool <code class="descclassname"></code><code class="descname">disable</code><a class="headerlink" href="#_CPPv27disable" title="この定義へのパーマリンク">¶</a></dt>
-<dd><ul class="simple">
-<li>true: コントロールの機能を奪い暗くする。</li>
-<li>false: コントロールを通常表示する。</li>
+<ul class="simple">
+<li><p>true: コントロールの機能を奪い暗くする。</p></li>
+<li><p>false: コントロールを通常表示する。</p></li>
 </ul>
-</dd></dl>
+<dl class="property">
+<dt id="property-nohit">
+bool <code class="descname">nohit</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-nohit" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv25nohit">
-<span id="nohit__b"></span>bool <code class="descclassname"></code><code class="descname">nohit</code><a class="headerlink" href="#_CPPv25nohit" title="この定義へのパーマリンク">¶</a></dt>
-<dd><ul class="simple">
-<li>true: コントロールの機能う(disableと違い暗くしない)。</li>
-<li>false: コントロールを通常表示する。</li>
+<ul class="simple">
+<li><p>true: コントロールの機能う(disableと違い暗くしない)。</p></li>
+<li><p>false: コントロールを通常表示する。</p></li>
 </ul>
-</dd></dl>
-
-</div>
+</div></blockquote>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinContents.html" class="btn btn-neutral float-right" title="CWinContents" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinContents.html" class="btn btn-neutral float-right" title="CWinContents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWindowBase.html" class="btn btn-neutral" title="CWindowBase" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWindowBase.html" class="btn btn-neutral float-left" title="CWindowBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -756,11 +760,11 @@ CWinCtrlBase[] <code class="descname">groups</code><a class="headerlink" href="#
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -773,37 +777,15 @@ CWinCtrlBase[] <code class="descname">groups</code><a class="headerlink" href="#
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

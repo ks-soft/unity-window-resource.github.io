@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>多言語対応について &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>多言語対応について &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="ウィンドウスクリプト(wra)文法" href="syntax.html"/>
-        <link rel="prev" title="効果音、BGMについて" href="soundeffect.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="ウィンドウスクリプト(wra)文法" href="syntax.html" />
+    <link rel="prev" title="効果音、BGMについて" href="soundeffect.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -102,7 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="soundeffect.html">効果音、BGMについて</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">多言語対応について</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">多言語対応について</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#excel">文字リソースExcel書式</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#origin">[ORIGIN]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#d-r">[D],[R]</a></li>
@@ -121,6 +125,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -164,10 +172,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -200,7 +204,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -215,34 +219,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>多言語対応について</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>多言語対応について</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/caption.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/caption.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -258,8 +282,8 @@
 <p>作成したExcelデータからリソースデータ用のバイナリデータを出力するためのツールを用意しています。</p>
 <p>出力されたデータを使用するためのオブジェクトとして、以下を用意してあります。</p>
 <ul class="simple">
-<li><a class="reference internal" href="CMessageDataSheetMgr.html#id1"><span>CMessageDataSheetMgr</span></a></li>
-<li><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet"><span>CMessageDataSheet</span></a></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CMessageDataSheetMgr</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CMessageDataSheet</span></code></p></li>
 </ul>
 </div></blockquote>
 <div class="section" id="excel">
@@ -282,8 +306,8 @@
 <div><p>B4カラム,C4カラムの[D],[R]は、バージョンごとに出力するかしないかを選択します。
 ここの列が空欄の時は、その行はデータ出力を抑止します。</p>
 <ul class="simple">
-<li>[D]はデバッグバージョン</li>
-<li>[R]はリリースバージョン</li>
+<li><p>[D]はデバッグバージョン</p></li>
+<li><p>[R]はリリースバージョン</p></li>
 </ul>
 <p>DやRの文字は自由に設定でき、コンバータに渡す引数でどのデータを出力するかしないかを選択可能になっています。
 細かくバージョン管理したいときは、行を追加して下さい。</p>
@@ -292,7 +316,7 @@
 <div class="section" id="id">
 <h3>ID<a class="headerlink" href="#id" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>D3カラムのIDは、文字リソースのIDを <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> で指定することになります。
+<div><p>D3カラムのIDは、文字リソースのIDを <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> で指定することになります。
 その下(D4)の、[D][R]は、デバッグバージョン、リリースバージョンでも必要なのでこのような記述になっています。</p>
 <p>IDを使って、文字リソースにアクセスするので、IDカラムは全てのバージョンで必須です。</p>
 </div></blockquote>
@@ -303,8 +327,8 @@
 <div><p>E3 ,F3カラムのJP,ENは文字リソースのロケール名です。
 出力するとき次のようにデータが出力されます。</p>
 <ul class="simple">
-<li>messagedata.JP.bin</li>
-<li>messagedata.EN.bin</li>
+<li><p>messagedata.JP.bin</p></li>
+<li><p>messagedata.EN.bin</p></li>
 </ul>
 <p>自由に列を追加可能です。</p>
 <p>E4の[D][R]は、ロケールがJPの時は、リリース、デバッグ両方で出力することを意味します。</p>
@@ -314,7 +338,7 @@
 <div class="section" id="wndw">
 <h3>シート名 [WNDW]<a class="headerlink" href="#wndw" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>シート名は、 <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> でエンコードされます。</p>
+<div><p>シート名は、 <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> でエンコードされます。</p>
 <p>よって、半角英数字5文字まででシート名を付けてください。</p>
 <p>シート名+IDの組み合わせで、文字リソースにアクセスすることになります。</p>
 </div></blockquote>
@@ -324,7 +348,7 @@
 <h2>文字リソースExcelコンバート方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>messagedata.exe、若しくはmessagedata.pyを使ってください。</p>
-<p>インストール手順は、 <a class="reference internal" href="install.html#install-messagedata"><span>こちら</span></a> を参照ください。</p>
+<p>インストール手順は、 <a class="reference internal" href="install.html#install-messagedata"><span class="std std-ref">こちら</span></a> を参照ください。</p>
 <p>python(2.6以降)を用いて記述されています。</p>
 <p>Excelデータの読み込みには、openpyxlを使用しています。</p>
 <p>exeにするときに、pyinstallerを使っています。</p>
@@ -334,26 +358,28 @@
 <blockquote>
 <div><p>messagedata [-v version] Excelファイル名 [出力ファイル名]</p>
 <ul class="simple">
-<li>-v version</li>
+<li><p>-v version</p></li>
 </ul>
 <p>versionで指定した、文字列のデータを出力します。
 デフォルトでは、Dになっています。</p>
 <ul class="simple">
-<li>Excelファイル名</li>
+<li><p>Excelファイル名</p></li>
 </ul>
 <blockquote>
-<div>エクセルファイルを指定してください。必須です。</div></blockquote>
-<ul class="simple">
-<li>出力ファイル名</li>
-</ul>
-<blockquote>
-<div>省略したときは、エクセルファイル名から生成します。</div></blockquote>
+<div><p>エクセルファイルを指定してください。必須です。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">messagedata</span> <span class="p">-</span><span class="n">v</span> <span class="n">R</span> <span class="n">messagedata</span><span class="p">.</span><span class="n">xlsx</span> <span class="n">caption</span>
+<ul class="simple">
+<li><p>出力ファイル名</p></li>
+</ul>
+<blockquote>
+<div><p>省略したときは、エクセルファイル名から生成します。</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">messagedata</span> <span class="o">-</span><span class="n">v</span> <span class="n">R</span> <span class="n">messagedata</span><span class="o">.</span><span class="n">xlsx</span> <span class="n">caption</span>
 
 <span class="n">output</span> <span class="n">file</span> <span class="n">names</span><span class="p">:</span>
-  <span class="n">messagedata</span><span class="p">.</span><span class="n">JP</span><span class="p">.</span><span class="n">bin</span>
-  <span class="n">messagedata</span><span class="p">.</span><span class="n">EN</span><span class="p">.</span><span class="n">bin</span>
+  <span class="n">messagedata</span><span class="o">.</span><span class="n">JP</span><span class="o">.</span><span class="n">bin</span>
+  <span class="n">messagedata</span><span class="o">.</span><span class="n">EN</span><span class="o">.</span><span class="n">bin</span>
   <span class="n">etc</span>
 </pre></div>
 </div>
@@ -365,7 +391,7 @@
 <p>バイナリを自前で読み込みデータを展開する方法もあります。</p>
 <p>メニュータブから、[Tools]-&gt;[KsSoft]-&gt;[Export Binary Data]を選択してください。</p>
 <img alt="_images/exportbinary.png" src="_images/exportbinary.png" />
-<p>ロケールデータデータファイルを追加したときは、 <a class="reference internal" href="Config.html#cf-messagedata"><span>KsSoftConfig</span></a> を編集/追加してください。</p>
+<p>ロケールデータデータファイルを追加したときは、 <a class="reference internal" href="Config.html#cf-messagedata"><span class="std std-ref">KsSoftConfig</span></a> を編集/追加してください。</p>
 </div></blockquote>
 </div>
 </div>
@@ -373,15 +399,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="syntax.html" class="btn btn-neutral float-right" title="ウィンドウスクリプト(wra)文法" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="syntax.html" class="btn btn-neutral float-right" title="ウィンドウスクリプト(wra)文法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="soundeffect.html" class="btn btn-neutral" title="効果音、BGMについて" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="soundeffect.html" class="btn btn-neutral float-left" title="効果音、BGMについて" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -390,11 +417,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -407,37 +434,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

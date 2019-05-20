@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlRenderIcon &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>CWinCtrlRenderIcon &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="CWinCtrlMeter" href="CWinCtrlMeter.html"/>
-        <link rel="prev" title="CWinCtrlRecastIcon" href="CWinCtrlRecastIcon.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="CWinCtrlMeter" href="CWinCtrlMeter.html" />
+    <link rel="prev" title="CWinCtrlRecastIcon" href="CWinCtrlRecastIcon.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -106,6 +110,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -149,10 +157,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -172,15 +176,7 @@
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlRenderIcon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cwindowbase">CWindowBaseに届くコールバック</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">固有の関数/プロパティ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">各レイヤーの初期値</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">レンダリングの主な流れ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#onbeginrender">onBeginRenderが呼ばれるタイミング.</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlRenderIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a></li>
@@ -193,7 +189,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -208,34 +204,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinCtrlRenderIcon</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinCtrlRenderIcon</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinCtrlRenderIcon.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinCtrlRenderIcon.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -244,247 +260,110 @@
   <div class="section" id="cwinctrlrendericon">
 <span id="id1"></span><h1>CWinCtrlRenderIcon<a class="headerlink" href="#cwinctrlrendericon" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>スクリプト: <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></p>
+<div><p>スクリプト: <a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p>
 <p>アイコンにレンダリングするためのコントロールです。</p>
 <p>指定されたレンダーテクスチャから自動的に矩形を切り出し、レンダリングします。</p>
 <p>複数のレンダー結果を一枚のレンダーテクスチャ内に含めることができるため、一度レンダリングした後のアイコンの描画が高速です。</p>
 <p>例えば、リストボックス内のコンテンツに着せ替え可能アバターアイコンを表示したいときなどに使うと効果的です。</p>
 </div></blockquote>
-<div class="section" id="cwindowbase">
-<h2>CWindowBaseに届くコールバック<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="function">
-<dt id="_CPPv27onClick12CWinCtrlBase">
-<span id="onClick__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">タッチされたコントロール</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">長押しされたコントロール</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
-<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
-<li><strong>Vector2 dragVelocity</strong> &#8211; タッチ位置の変位</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
-<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Transform transform</strong> &#8211; ドラッグされたコントロールのトランスフォーム</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">複製したコントロールをレンダリングするかどうかを選択する。</p>
-<ul class="last simple">
-<li>true: ドラッグ中のコントロールの複製をレンダリングする。</li>
-<li>false: ドラッグ中のコントロールの複製をレンダリングしない。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
-<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
-<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDropGround12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">ドロップされたコントロール</td>
-</tr>
-</tbody>
-</table>
-<p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
-<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
-</dd></dl>
-
-<span class="target" id="onbeginrendericon"></span><dl class="function">
-<dt id="_CPPv217onBeginRenderIcon18CWinCtrlRenderIcon">
-<span id="onBeginRenderIcon__CWinCtrlRenderIcon"></span>bool <code class="descclassname"></code><code class="descname">onBeginRenderIcon</code><span class="sig-paren">(</span>CWinCtrlRenderIcon <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217onBeginRenderIcon18CWinCtrlRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlRenderIcon icon:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">レンダリングを要求されたアイコンコントロール</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body">実際にレンダリングするかしないかを選択します。</td>
-</tr>
-</tbody>
-</table>
-<p>アイコンにレンダリング開始</p>
+<p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
+<blockquote>
+<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onBeginRenderIcon(CWinCtrlRenderIcon</span> <span class="pre">icon)</span></code></a></p>
+<blockquote>
+<div><p>アイコンにレンダリング開始</p>
 <p>この関数の戻り値は、次の意味を持ちます。</p>
 <blockquote>
 <div><ul class="simple">
-<li>trueを返すとテクスチャにレンダリングします。</li>
-<li>falseを返すとレンダリングしません。 <a class="reference internal" href="#onendrendericon"><span>onEndRenderIcon</span></a> も呼ばれません。</li>
+<li><p>trueを返すとテクスチャにレンダリングします。</p></li>
+<li><p>falseを返すとレンダリングしません。 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> も呼ばれません。</p></li>
 </ul>
 </div></blockquote>
-</dd></dl>
-
-<span class="target" id="onendrendericon"></span><dl class="function">
-<dt id="_CPPv215onEndRenderIcon18CWinCtrlRenderIcon">
-<span id="onEndRenderIcon__CWinCtrlRenderIcon"></span>bool <code class="descclassname"></code><code class="descname">onEndRenderIcon</code><span class="sig-paren">(</span>CWinCtrlRenderIcon <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215onEndRenderIcon18CWinCtrlRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlRenderIcon icon:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">レンダリングを要求されたアイコンコントロール</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body">以降のフレームでレンダリングを継続するか打ち切るかを選択します。</td>
-</tr>
-</tbody>
-</table>
-<p>レンダリングが終了したときに呼ばれる</p>
+</div></blockquote>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onEndRenderIcon(CWinCtrlRenderIcon</span> <span class="pre">icon)</span></code></a></p>
+<blockquote>
+<div><p>レンダリングが終了したときに呼ばれる</p>
 <p>この関数の戻り値は、次の意味を持ちます。</p>
 <blockquote>
 <div><ul class="simple">
-<li>trueを返すと、次のフレームもレンダリングを継続します( <a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> が呼ばれる)</li>
-<li>falseを返すと、以降のフレームでは必要がない限り、レンダリングされません。</li>
+<li><p>trueを返すと、次のフレームもレンダリングを継続します( <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼ばれる)</p></li>
+<li><p>falseを返すと、以降のフレームでは必要がない限り、レンダリングされません。</p></li>
 </ul>
 </div></blockquote>
-<p>一度停止させたレンダリングを再開したいときは、 <a class="reference internal" href="#needtorender"><span>needToRender</span></a> をtrueにしてください。</p>
-</dd></dl>
+<p>一度停止させたレンダリングを再開したいときは、 <a class="reference internal" href="#property-CWinCtrlRenderIcon.needToRender" title="CWinCtrlRenderIcon.needToRender property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">needToRender</span></code></a> をtrueにしてください。</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="class">
+<dt id="class-CWinCtrlRenderIcon">
+<code class="descname">class CWinCtrlRenderIcon</code><a class="headerlink" href="#class-CWinCtrlRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><em>固有の関数/プロパティ</em></p>
+<dl class="property">
+<dt id="property-CWinCtrlRenderIcon.regionId">
+ulong <code class="descname">regionId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.regionId" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-</div>
-<div class="section" id="id2">
-<h2>固有の関数/プロパティ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<span class="target" id="regionid"></span><dl class="member">
-<dt id="_CPPv28regionId">
-<span id="regionId__ulong"></span>ulong <code class="descclassname"></code><code class="descname">regionId</code><a class="headerlink" href="#_CPPv28regionId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>0以外の固有のIDを割り振ってください。
+<p>0以外の固有のIDを割り振ってください。
 0を代入すると確保されたレンダリング領域が解放されます。
 また、他のコントロールと同じ値を割り振ると、レンダリング領域を共有します。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-CWinCtrlRenderIcon.camera">
+Camera <code class="descname">camera</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.camera" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26camera">
-<span id="camera__Camera"></span>Camera <code class="descclassname"></code><code class="descname">camera</code><a class="headerlink" href="#_CPPv26camera" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>レンダリングテクスチャが割り当てられたカメラを取得できます。
+<p>レンダリングテクスチャが割り当てられたカメラを取得できます。
 カメラの位置や角度等をカスタマイズしたいときにアクセスしてください。</p>
-</dd></dl>
+<dl class="property">
+<dt id="property-CWinCtrlRenderIcon.color1">
+WinColor <code class="descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.color1" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26color1">
-<span id="color1__WinColor"></span>WinColor <code class="descclassname"></code><code class="descname">color1</code><a class="headerlink" href="#_CPPv26color1" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>レンダリングする際の背景色として割り当てられています。</p>
+<p>レンダリングする際の背景色として割り当てられています。</p>
 <p>デフォルトは、(0,0,0,0)です。</p>
+<dl class="property">
+<dt id="property-CWinCtrlRenderIcon.needToRender">
+bool <code class="descname">needToRender</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.needToRender" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>レンダリングを再開したいとき、trueを設定してください。</p>
+<p>次のフレームでは <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼び出されます。</p>
+<dl class="property">
+<dt id="property-CWinCtrlRenderIcon.state">
+CInput::e_State <code class="descname">state</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.state" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>アイコンが押されている状態を取得できます。</p>
 </dd></dl>
 
-<span class="target" id="needtorender"></span><dl class="member">
-<dt id="_CPPv212needToRender">
-<span id="needToRender__b"></span>bool <code class="descclassname"></code><code class="descname">needToRender</code><a class="headerlink" href="#_CPPv212needToRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>レンダリングを再開したいとき、trueを設定してください。</p>
-<p>次のフレームでは <a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> が呼び出されます。</p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv25state">
-<span id="state__CInput::e_State"></span>CInput::e_State <code class="descclassname"></code><code class="descname">state</code><a class="headerlink" href="#_CPPv25state" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アイコンが押されている状態を取得できます。</p>
-</dd></dl>
-
-</div>
-<div class="section" id="id3">
-<h2>使用例<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><em>使用例</em></p>
 <blockquote>
-<div><p><a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> によって、レンダリングしたいオブジェクトのみアクティブにしています。
-そして、 <a class="reference internal" href="#onendrendericon"><span>onEndRenderIcon</span></a> によって、非アクティブにしています。</p>
+<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> によって、レンダリングしたいオブジェクトのみアクティブにしています。
+そして、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> によって、非アクティブにしています。</p>
 <p>この操作をしないと全てのオブジェクトが一つのアイコンにレンダリングされることになります。</p>
-<p>また、 <a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> がtrueを返すと、直ちにCamera.Render()が呼び出されるので、
+<p>また、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> がtrueを返すと、直ちにCamera.Render()が呼び出されるので、
 アニメーションなどの設定をしたときは、下記の例のように、Animation.Sample()を明示的に呼んでおく必要があります。</p>
 <p>正しくレンダリングされないときは、以下の点をチェックしてみて下さい。</p>
 <ul class="simple">
-<li>レイヤーの設定がおかしくないか？/レイヤーの設定を忘れていないか?</li>
-<li>カメラにレンダリング対象が収まっているか？</li>
+<li><p>レイヤーの設定がおかしくないか？/レイヤーの設定を忘れていないか?</p></li>
+<li><p>カメラにレンダリング対象が収まっているか？</p></li>
 </ul>
 <blockquote>
-<div>当然、カメラに収まっていないとオブジェクトはレンダリングされません。</div></blockquote>
-<ul class="simple">
-<li><a class="reference internal" href="#regionid"><span>regionId</span></a> を設定したか？</li>
-</ul>
-<blockquote>
-<div><a class="reference internal" href="#regionid"><span>regionId</span></a> が0の時は、レンダーテクスチャへのレンダリングが行われません。
-<a class="reference internal" href="#regionid"><span>regionId</span></a> をキーにしてレンダーテクスチャの空いている領域から矩形を切り出し、レンダリングします。</div></blockquote>
+<div><p>当然、カメラに収まっていないとオブジェクトはレンダリングされません。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">override</span> <span class="k">public</span> <span class="kt">bool</span> <span class="nf">onBeginRenderIcon</span><span class="p">(</span><span class="n">CWinCtrlRenderIcon</span> <span class="n">icon</span><span class="p">)</span> <span class="p">{</span>
+<ul class="simple">
+<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> を設定したか？</p></li>
+</ul>
+<blockquote>
+<div><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> が0の時は、レンダーテクスチャへのレンダリングが行われません。
+<a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> をキーにしてレンダーテクスチャの空いている領域から矩形を切り出し、レンダリングします。</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">override</span> <span class="k">public</span> <span class="kt">bool</span> <span class="nf">onBeginRenderIcon</span><span class="p">(</span><span class="n">CWinCtrlRenderIcon</span> <span class="n">icon</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">CWinCtrlListbox</span>    <span class="n">lbAvatar</span> <span class="p">=</span> <span class="n">lbAvatar</span> <span class="p">=</span> <span class="n">find</span><span class="p">(</span><span class="n">CWinCtrlListbox</span><span class="p">&gt;(</span><span class="n">LISTBOX_Avatar</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">idx</span> <span class="p">=</span> <span class="n">lbAvatar</span><span class="p">.</span><span class="n">getContentsIndex</span><span class="p">(</span><span class="n">icon</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">idx</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
@@ -512,106 +391,96 @@
     <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// 押されたときのコールバック.</span>
+<span class="c1">// click callback</span>
 <span class="k">override</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="n">RENDERICON_Avatar</span><span class="p">:</span>
-      <span class="c1">//押されたときの処理.</span>
       <span class="k">break</span><span class="p">;</span>
    <span class="p">}</span>
 <span class="p">}</span>
-<span class="c1">// 長押しされたときのコールバック.</span>
+<span class="c1">// hold callback</span>
 <span class="k">override</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">onHold</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
      <span class="k">case</span> <span class="n">RENDERICON_Avatar</span><span class="p">:</span>
-      <span class="c1">//押されたときの処理.</span>
       <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>各レイヤーの初期値<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><em>各レイヤーの初期値</em></p>
 <blockquote>
 <div><p>Camera.cullingMask = e_Layer.RenderIcon;</p>
 <p>特に必要が無ければ触らないようにしておいてください。</p>
 <p>レンダリングするときは、レイヤー設定をしているかしっかり確認してください。</p>
 <p>レンダリング対象のゲームオブジェクトも上記値を設定しておくようにしておいてください。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// gameobjectAvatarが複数の階層でなければ、以下で十分.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// If gameobjectAvatar is not multiple hierarchies, the following is sufficient.</span>
 <span class="n">gameobjectAvatar</span><span class="p">.</span><span class="n">layer</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">e_LayerId</span><span class="p">.</span><span class="n">RenderIcon</span><span class="p">;</span>
-<span class="c1">// gameobjectAvatarが複数の階層からできているときは、次の関数を使って再帰的に設定する必要がある.</span>
+<span class="c1">// If gameobjectAvatar is made up of multiple hierarchies, it must be recursively set using the following function:</span>
 <span class="n">Utility</span><span class="p">.</span><span class="n">setLayer</span><span class="p">(</span><span class="n">gameObjectAvatar</span><span class="p">,</span><span class="n">e_LayerId</span><span class="p">.</span><span class="n">RenderIcon</span><span class="p">);</span>
-<span class="c1">// RenderIconにレンダリングするオブジェクトは、読み込みが終了したタイミングですぐにSetActive(false)にしておく必要がある.</span>
 <span class="n">gameobjectAvatar</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">GameObject.layerは、一つの階層に対してのみレイヤーを設定します。子供の階層にまで影響を与えません。
+<p class="admonition-title">注釈</p>
+<p>GameObject.layerは、一つの階層に対してのみレイヤーを設定します。子供の階層にまで影響を与えません。
 レンダーアイコンが持つカメラに選択的に子供の階層を持つオブジェクトを正しくレンダリングするためには、
 本アセットが用意しているレイヤーを再帰的に設定可能な、Utility.setLayerを使ってください。</p>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>レンダリングの主な流れ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><em>レンダリングの主な流れ</em></p>
 <blockquote>
 <div><p>RenderIconは、複数のモデルをテクスチャにレンダリングして表示するのに適しています。
 ただし、レイヤーの数が限りがあるので、一つのレイヤーを使いまわすことを考える必要があります。</p>
 <p>この問題を回避するために次のような手順でレンダリングします。</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>モデルの読み込み</li>
-<li>読み込み終わったら、SetActive(false)にしてゲームオブジェクトを非アクティブにします</li>
-<li>レイヤーをRenderIconに設定します。</li>
-<li><a class="reference internal" href="#regionid"><span>regionId</span></a> に、ユニークな値を設定します。</li>
-<li>OnBeginRenderIconが呼ばれたら、対象のゲームオブジェクトをアクティブにします</li>
-<li>OnEndRenderIconが呼ばれたら、対象のゲームオブジェクトを非アクティブにします</li>
+<li><p>モデルの読み込み</p></li>
+<li><p>読み込み終わったら、SetActive(false)にしてゲームオブジェクトを非アクティブにします</p></li>
+<li><p>レイヤーをRenderIconに設定します。</p></li>
+<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に、ユニークな値を設定します。</p></li>
+<li><p>OnBeginRenderIconが呼ばれたら、対象のゲームオブジェクトをアクティブにします</p></li>
+<li><p>OnEndRenderIconが呼ばれたら、対象のゲームオブジェクトを非アクティブにします</p></li>
 </ol>
 </div></blockquote>
 <p>これによって必ずRenderIconにレンダリングされるゲームオブジェクトを一つに絞ることができます。
 OnEndRenderIconの戻り値は、falseを返しておく方がパフォーマンスが出ます。
 そうしないと、毎フレーム、テクスチャへのレンダリングが発生してしまいます。</p>
 </div></blockquote>
-</div>
-<div class="section" id="onbeginrender">
-<h2>onBeginRenderが呼ばれるタイミング.<a class="headerlink" href="#onbeginrender" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><em>onBeginRenderが呼ばれるタイミング</em></p>
 <blockquote>
 <div><ul>
-<li><p class="first"><a class="reference internal" href="#regionid"><span>regionId</span></a> に0以外の値が設定されたとき.</p>
-<p><a class="reference internal" href="#regionid"><span>regionId</span></a> に0以外のユニークな値を設定した直後から、 <a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> が呼ばれます。
-<a class="reference internal" href="#onbeginrendericon"><span>onBeginRenderIcon</span></a> がtrueを返すまで呼ばれ続けます。
-falseを返した時は、 <a class="reference internal" href="#onendrendericon"><span>onEndRenderIcon</span></a> は呼び出されません。
+<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に0以外の値が設定されたとき.</p>
+<p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に0以外のユニークな値を設定した直後から、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼ばれます。
+<a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> がtrueを返すまで呼ばれ続けます。
+falseを返した時は、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> は呼び出されません。
 この仕組みを使ってモデルの非同期読み込み途中は、falseを返し、レンダリング準備ができたタイミングで
 モデルをテクスチャにレンダリングすることが可能です(レイヤーの設定は忘れないでください)。</p>
 </li>
-<li><p class="first">レンダーテクスチャ消失後</p>
+<li><p>レンダーテクスチャ消失後</p>
 <p>レンダーテクスチャが消失する理由としては、スクリーンセーバが走ったり、ウィンドウが最小化されたときなどが考えられます。
 レンダーテクスチャは破壊されることがあるので、常にテクスチャへの再レンダーができるようにしておくべきです。</p>
 </li>
-<li><p class="first"><a class="reference internal" href="#needtorender"><span>needToRender</span></a> にtrueを設定した後</p>
-</li>
-<li><p class="first"><a class="reference internal" href="#onendrendericon"><span>onEndRenderIcon</span></a> がtrueを返した次のフレーム</p>
+<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.needToRender" title="CWinCtrlRenderIcon.needToRender property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">needToRender</span></code></a> にtrueを設定した後</p></li>
+<li><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> がtrueを返した次のフレーム</p>
 <p>毎フレームレンダリングしたいときは、trueを返してください。
 ただし、パフォーマンスには気を付けてください。</p>
 </li>
 </ul>
 </div></blockquote>
 </div>
-</div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlMeter.html" class="btn btn-neutral float-right" title="CWinCtrlMeter" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlMeter.html" class="btn btn-neutral float-right" title="CWinCtrlMeter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlRecastIcon.html" class="btn btn-neutral" title="CWinCtrlRecastIcon" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlRecastIcon.html" class="btn btn-neutral float-left" title="CWinCtrlRecastIcon" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -620,11 +489,11 @@ falseを返した時は、 <a class="reference internal" href="#onendrendericon"
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -637,37 +506,15 @@ falseを返した時は、 <a class="reference internal" href="#onendrendericon"
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

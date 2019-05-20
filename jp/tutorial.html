@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>チュートリアル &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>チュートリアル &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="マルチID,FiveCC" href="id.html"/>
-        <link rel="prev" title="サンプル" href="sample.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="マルチID,FiveCC" href="id.html" />
+    <link rel="prev" title="サンプル" href="sample.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,44 +82,47 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">環境構築方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">サンプル</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">チュートリアル</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">アセットバンドルとリソースを使うか、リソースのみ使うかを決定</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#use-assetbundle-or-resource">リソースのみを使う</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">アセットバンドルとリソースを使う</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vs">アセットバンドルをサーバーから落としてくる VS ストリーミングアセットを使う</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-download-or-streaming">ストリーミングアセットを使う(デフォルト)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">アセットバンドルをサーバーからダウンロードする.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#wra">wraファイルをコンパイルする</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">全てのアセットバンドルを出力する</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">スクリプト作成/編集方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id4">全てのアセットバンドルを出力する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">スクリプト作成/編集方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wra-wrb">wraファイル/wrbファイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">インクルードパス</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">wraファイルをコンパイルするときにインクルードされるファイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">コンパイルされたファイルの場所</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">インクルードパス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">wraファイルをコンパイルするときにインクルードされるファイル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">コンパイルされたファイルの場所</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id10">ウィンドウビューワー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">ウィンドウビューワー</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#export-windowresource">アセットバンドル/リソースデータ化</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">実際のゲーム内でウィンドウを扱う方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id11">実際のゲーム内でウィンドウを扱う方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cmainsystem">CMainSystemを作成/編集する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">CMainSystemをゲームオブジェクトに登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">CMainSystemをゲームオブジェクトに登録</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cinput">CInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cspritefontmgr">CSpriteFontMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ctextureresourcemgr">CTextureResourceMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cassetbundlemgr">CAssetBundleMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cwindowmgr">CWindowMgr</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id14">リソースから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">アセットバンドルから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">ウィンドウをクリエイトする方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">クリエイト済のウィンドウを取得する方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">特定のウィンドウを全面に出す方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">効果音について</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">リソースから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">アセットバンドルから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">ウィンドウをクリエイトする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">クリエイト済のウィンドウを取得する方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">特定のウィンドウを全面に出す方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">効果音について</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
 </ul>
 </li>
 </ul>
@@ -143,6 +147,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -186,10 +194,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -222,7 +226,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -237,34 +241,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>チュートリアル</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>チュートリアル</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/tutorial.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -272,68 +296,67 @@
             
   <div class="section" id="id1">
 <h1>チュートリアル<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="id2">
-<h2>アセットバンドルとリソースを使うか、リソースのみ使うかを決定<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="section" id="use-assetbundle-or-resource">
-<span id="id3"></span><h3>リソースのみを使う<a class="headerlink" href="#use-assetbundle-or-resource" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="vs">
+<h2>アセットバンドルをサーバーから落としてくる VS ストリーミングアセットを使う<a class="headerlink" href="#vs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="use-download-or-streaming">
+<span id="id2"></span><h3>ストリーミングアセットを使う(デフォルト)<a class="headerlink" href="#use-download-or-streaming" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div><p>アセットバンドルを使わず、リソースのみを用いてデータをロードするなら、次のように設定してください。</p>
-<p>Assets/KsSoft/Plugins/KsSoftConfig.cs,27行目</p>
-</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">UseAssetBundle</span> <span class="p">{</span>
-        <span class="k">get</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>   <span class="c1">//if you use resources without using assetbunle,you need to return false.</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<div><p>クライアントにアセットバンドルを封入しておくには、StreamingAssetsを使うことになります。
+アセットバンドルをストリーミングするときは、次のように設定してください。</p>
+<p>Assets/KsSoft/Plugins/KsSoftConfig.cs</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">KsSoftConfig</span> <span class="p">:</span> <span class="n">KsSoftConfigBase</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">m_UseStreaming</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
 </pre></div>
 </div>
-<blockquote>
-<div>デフォルトではこちらになっています。</div></blockquote>
+<p>デフォルトではこちらになっています。</p>
+</div></blockquote>
 </div>
-<div class="section" id="id4">
-<h3>アセットバンドルとリソースを使う<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id3">
+<h3>アセットバンドルをサーバーからダウンロードする.<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>あなたのアプリケーションが、アセットバンドルを用いてHTTP経由でデータを落としてくる必要があるなら次のように設定してください。</p>
-<p>Assets/KsSoft/Plugins/KsSoftConfig.cs,27行目</p>
-</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">UseAssetBundle</span> <span class="p">{</span>
-        <span class="k">get</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>    <span class="c1">//if you use resources without using assetbunle,you need to return false.</span>
-        <span class="p">}</span>
-<span class="p">}</span>
+<p>Assets/KsSoft/Plugins/KsSoftConfig.cs</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">KsSoftConfig</span> <span class="p">:</span> <span class="n">KsSoftConfigBase</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">m_UseStreaming</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="wra">
 <h2>wraファイルをコンパイルする<a class="headerlink" href="#wra" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p><a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を、済ましているか確認してください。</p>
+<div><p><a class="reference internal" href="install.html#install-cygwin"><span class="std std-ref">環境設定</span></a> を、済ましているか確認してください。</p>
 <p>済ましているなら、KsSoft/WindowResource/を選択した状態で、右クリック→Exportを選んでください。</p>
 <p>全てのwraファイルがコンパイルされます。</p>
-<p>エラーが出でたときには、 <a class="reference internal" href="install.html#install-cygwin"><span>環境設定</span></a> を見直してください。</p>
+<p>エラーが出でたときには、 <a class="reference internal" href="install.html#install-cygwin"><span class="std std-ref">環境設定</span></a> を見直してください。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id5">
-<h2>全てのアセットバンドルを出力する<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h2>全てのアセットバンドルを出力する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>[メニュー]から[Tools]-&gt;[KsSoft]-&gt;[Export All]-&gt;[Windows,Mac]</div></blockquote>
+<div><p>[メニュー]から[Tools]-&gt;[KsSoft]-&gt;[Export All]-&gt;[Windows,Mac]</p>
+</div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">Mac環境で試すときは、Xcodeのコマンドラインツールがインストールしているか確認してください。</p>
+<p class="admonition-title">注釈</p>
+<p>Mac環境で試すときは、Xcodeのコマンドラインツールがインストールしているか確認してください。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">リソースを使う <span class="xref std std-ref">設定</span> になっているときは、アセットバンドルではなく、リソースデータを出力します。</p>
+<p class="admonition-title">注釈</p>
+<p>リソースを使う <a class="reference internal" href="WINDOW.html#use-assetbundle-or-resource"><span class="std std-ref">設定</span></a> になっているときは、アセットバンドルではなく、リソースデータを出力します。</p>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>スクリプト作成/編集方法<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id5">
+<h2>スクリプト作成/編集方法<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Unity Projectを起動します。</li>
-<li>プロジェクト内のWindowResourceフォルダ(Assets/KsSoft/WindowResource)の直下にwraファイルを作成します。</li>
-<li>wraファイル上で右クリックし、Exportを選びます。</li>
+<li><p>Unity Projectを起動します。</p></li>
+<li><p>プロジェクト内のWindowResourceフォルダ(Assets/KsSoft/WindowResource)の直下にwraファイルを作成します。</p></li>
+<li><p>wraファイル上で右クリックし、Exportを選びます。</p></li>
 </ol>
 <blockquote>
 <div><p>好みのエディタで編集してください。</p>
@@ -350,56 +373,57 @@
 <strong>wra</strong> ファイルをUnity Editor上でコンパイルに成功すると、対応したwrbファイルが生成されます。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h3>インクルードパス<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id6">
+<h3>インクルードパス<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>以下のパスにインクルードパスが、通っています。
-インクルードファイルを作成する際は、ファイルをここに置いてください。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span>
+<div><p>以下のパスにインクルードパスが、通っています。
+インクルードファイルを作成する際は、ファイルをここに置いてください。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">WindowResource</span><span class="o">/</span><span class="n">include</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id8">
-<h3>wraファイルをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id7">
+<h3>wraファイルをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>次のファイルは、wraファイルをコンパイルするときに、自動的にインクルードされます。
-共通の設定や定数は、このファイルに設定されています。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">WindowResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">wr</span><span class="p">.</span><span class="n">h</span>
+<div><p>次のファイルは、wraファイルをコンパイルするときに、自動的にインクルードされます。
+共通の設定や定数は、このファイルに設定されています。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">WindowResource</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">wr</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
 <blockquote>
 <div><img alt="_images/edit.png" src="_images/edit.png" />
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h3>コンパイルされたファイルの場所<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h3>コンパイルされたファイルの場所<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>Assets/KsSoft/WindowResource/wrbというフォルダの直下に、*.wrbというファイルが生成されています。
-このファイルがコンパイルされたファイルです。</div></blockquote>
+<div><p>Assets/KsSoft/WindowResource/wrbというフォルダの直下に、*.wrbというファイルが生成されています。
+このファイルがコンパイルされたファイルです。</p>
+</div></blockquote>
 </div>
 </div>
-<div class="section" id="id10">
-<h2>ウィンドウビューワー<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id9">
+<h2>ウィンドウビューワー<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>コンパイルしたウィンドウをビューワーですぐ確認できます。</p>
 <p>また、一度コンパイルに成功したウィンドウはビューワーを起動しっ放しでも変更を確認できます。</p>
 <p>ただし、新規で追加したウィンドウを確認したい場合は、一度ウィンドウビューワを終わらせて再起動してください。</p>
 </div></blockquote>
 <ol class="arabic">
-<li><p class="first">シーン WWindowViewerを選択し、実行してください。</p>
+<li><p>シーン WWindowViewerを選択し、実行してください。</p>
 <p>シーン実行中もスクリプトのコンパイルはできます。</p>
 </li>
-<li><p class="first">リストが表示されるので、所定のウィンドウを選んでください。</p>
-</li>
-<li><p class="first">コンパイル結果のウィンドウが表示されます。</p>
-</li>
+<li><p>リストが表示されるので、所定のウィンドウを選んでください。</p></li>
+<li><p>コンパイル結果のウィンドウが表示されます。</p></li>
 </ol>
 <blockquote>
 <div><img alt="_images/viewer.png" src="_images/viewer.png" />
 </div></blockquote>
 </div>
 <div class="section" id="export-windowresource">
-<span id="id11"></span><h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#export-windowresource" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id10"></span><h2>アセットバンドル/リソースデータ化<a class="headerlink" href="#export-windowresource" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>WWindowViewerは、各wraファイルから、コンパイルしたwrbファイルを直接読み込んで動作します。
 よって、wraファイルをコンパイルした後、即座にその変更をチェックすることができます。</p>
@@ -411,9 +435,9 @@
 <img alt="_images/load_application.png" src="_images/load_application.png" />
 <p>Unity上のメニューの[Tools]-&gt;[KsSoft]-&gt;[Export Window Resource]を選ぶとassetbundlesフォルダにアセットファイルが出力されます。</p>
 <p>ファイル名は、 デフォルトで <strong>000_000_00010.unity3d</strong> です。</p>
-<p>読み込むファイルを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span>参考</span></a> にしてください。</p>
-<p>WINDOWプロパティ: <a class="reference internal" href="WINDOW.html#resource-a"><span>RESOURCE = マルチID</span></a> を用いて、出力先を変更できます。</p>
-<p>同じ <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> を指定したウィンドウデータは、一つのアセットとして纏めた状態で出力します。
+<p>読み込むファイルを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span class="std std-ref">参考</span></a> にしてください。</p>
+<p>WINDOWプロパティ: <a class="reference internal" href="WINDOW.html#resource-a"><span class="std std-ref">RESOURCE = マルチID</span></a> を用いて、出力先を変更できます。</p>
+<p>同じ <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> を指定したウィンドウデータは、一つのアセットとして纏めた状態で出力します。
 また、アセットバンドルの情報を格納した <strong>version.unity3d</strong> も併せて更新されます。</p>
 <p>CAssetBundleMgrは、 <strong>version.unity3d</strong> を起動時に一度読み込み、アセットバンドルが更新されているかどうかをチェックします。</p>
 </div></blockquote>
@@ -421,20 +445,21 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p>WINDOWプロパティ: <a class="reference internal" href="WINDOW.html#resource-ab"><span>RESOURCE = パス</span></a> を用いて、アセットデータとして出力することもできます。
+<div><p>WINDOWプロパティ: <a class="reference internal" href="WINDOW.html#use-assetbundle-or-resource"><span class="std std-ref">RESOURCE = パス</span></a> を用いて、アセットデータとして出力することもできます。
 同じパスを指定したウィンドウデータは、一つのアセットバンドルとして纏めた状態で出力します。</p>
 <blockquote>
 <div><img alt="_images/export.png" src="_images/export.png" />
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id12">
-<h2>実際のゲーム内でウィンドウを扱う方法<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id11">
+<h2>実際のゲーム内でウィンドウを扱う方法<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>ウィンドウ作成環境とアプリケーションを分ける/分けないにかかわらず同じ方法で扱えます。</div></blockquote>
+<div><p>ウィンドウ作成環境とアプリケーションを分ける/分けないにかかわらず同じ方法で扱えます。</p>
+</div></blockquote>
 <div class="section" id="cmainsystem">
 <h3>CMainSystemを作成/編集する<a class="headerlink" href="#cmainsystem" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
     <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
 <span class="cm">     * @brief    Unity Callback</span>
@@ -456,7 +481,7 @@
         <span class="n">gameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">CWindowMgr</span><span class="p">&gt;();</span>
     <span class="p">}</span>
     <span class="c1">//==========================================================================</span>
-    <span class="cm">/*!初期化を行う.</span>
+    <span class="cm">/*!Initialize.</span>
 <span class="cm">     * @brief    initialize</span>
 <span class="cm">    */</span>
     <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">initialize</span><span class="p">()</span> <span class="p">{</span>
@@ -476,22 +501,23 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id13">
-<h3>CMainSystemをゲームオブジェクトに登録<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id12">
+<h3>CMainSystemをゲームオブジェクトに登録<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>下記の通り、MainSystemという空のゲームオブジェクトを作成し、そこにCMainSystemをスクリプトとして追加します。</p>
 <img alt="_images/MainSystem.png" src="_images/MainSystem.png" />
-<p>CMainSystemは、<a class="reference internal" href="CMainSystemBase.html#id1"><span>CMainSystemBase</span></a> を継承するようにしてください。
+<p>CMainSystemは、<a class="reference internal" href="CMainSystemBase.html"><span class="doc">CMainSystemBase</span></a> を継承するようにしてください。
 CMainSystemを張り付けたゲームオブジェクトは、シーンを読み込んでも自動的に破壊されないように設定されています(DontDestroyOnLoad参照)。</p>
 <p>最低限ウィンドウシステムを使用するために必要なスクリプトは下記の４つです。</p>
-<p>詳しくは、<a class="reference internal" href="CMainSystemBase.html#id1"><span>こちら</span></a> を参照ください。</p>
+<p>詳しくは、<a class="reference internal" href="CMainSystemBase.html"><span class="doc">こちら</span></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="cinput">
 <h3>CInput<a class="headerlink" href="#cinput" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>入力を監視するスクリプトです。
-必須です。</div></blockquote>
+<div><p>入力を監視するスクリプトです。
+必須です。</p>
+</div></blockquote>
 </div>
 <div class="section" id="cspritefontmgr">
 <h3>CSpriteFontMgr<a class="headerlink" href="#cspritefontmgr" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -499,7 +525,7 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <div><p>フォントテクスチャ、フォントデータを管理しています。
 文字を出すために必須です。</p>
 <p>CAssetBundleMgrをゲームオブジェクトにアタッチし、アセットデータが存在するときは、フォントデータをダウンロードして使うことができます。</p>
-<p>詳しくは、<a class="reference internal" href="SpriteFont.html#spritefont"><span>こちら</span></a> を参照ください。</p>
+<p>詳しくは、<a class="reference internal" href="SpriteFont.html#spritefont"><span class="std std-ref">こちら</span></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="ctextureresourcemgr">
@@ -508,7 +534,7 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <div><p>アトラス化したテクスチャリソースを管理しています。
 必須です。</p>
 <p>CAssetBundleMgrをゲームオブジェクトにアタッチし、アセットデータが存在するときは、テクスチャデータをダウンロードして使うことができます。</p>
-<p>詳しくは、<a class="reference internal" href="CTextureResourceMgr.html#id1"><span>こちら</span></a> を参照ください。</p>
+<p>詳しくは、<a class="reference internal" href="CTextureResourceMgr.html#class-CTextureResourceMgr" title="CTextureResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="cassetbundlemgr">
@@ -518,7 +544,7 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <p>効果音、ウィンドウレイアウトデータ、テクスチャデータ、フォントデータ等全てアセットバンドル化し、読み込むことが可能です。</p>
 <p>アセットバンドルを使用しないときは、必要ありません。</p>
 <p>マネージャ自身はアセットバンドルの中身については関与しません。</p>
-<p>詳しくは、<a class="reference internal" href="CAssetBundleMgr.html#id1"><span>こちら</span></a> を参照ください。</p>
+<p>詳しくは、<a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundleMgr" title="CAssetBundleMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="cwindowmgr">
@@ -526,38 +552,38 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <blockquote>
 <div><p>ウィンドウを管理しています。
 必須です。</p>
-<p>詳しくは、<a class="reference internal" href="CWindowMgr.html#id1"><span>こちら</span></a> を参照ください。</p>
+<p>詳しくは、<a class="reference internal" href="CWindowMgr.html#class-CWindowMgr" title="CWindowMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
 </div></blockquote>
-<div class="section" id="id14">
-<h4>リソースから読み込むとき<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id13">
+<h4>リソースから読み込むとき<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>Resourcesフォルダに配置した、アセットを読み込みます。</p>
 <p>一度、読み込むと、ウィンドウデータは常駐します。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span> <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWindowMgr</span> <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
 <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;windows&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id15">
-<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id14">
+<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p><strong>[Export Window Resource]</strong> を行うと次の二つのファイルが更新されます(PC,Mac &amp; Linux Standalone環境の場合)。</p>
 <ul class="simple">
-<li>assetbundles/Windows/000_000_00010.unity3d</li>
-<li>assetbundles/Windows/version.unity3d</li>
+<li><p>assetbundles/Windows/000_000_00010.unity3d</p></li>
+<li><p>assetbundles/Windows/version.unity3d</p></li>
 </ul>
-<p><a class="reference internal" href="Config.html#cf-address"><span>KsSoftConfig.httpserver</span></a> が、正しいHTTPサーバのフォルダを指しているかを確認します。</p>
+<p><a class="reference internal" href="Config.html#cf-address"><span class="std std-ref">KsSoftConfig.httpserver</span></a> が、正しいHTTPサーバのフォルダを指しているかを確認します。</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">出力するファイルIDを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span>参考</span></a> にしてください。</p>
+<p class="admonition-title">注釈</p>
+<p>出力するファイルIDを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span class="std std-ref">参考</span></a> にしてください。</p>
 </div>
 </div>
-<div class="section" id="id16">
-<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id15">
+<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>例えば、このような名前でウィンドウを定義したとします。</p>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;default_style.h&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;default_style.h&quot;
 
 #define        WIN_WIDTH       640
 $y = 160;
@@ -568,7 +594,7 @@ WINDOW(001_000_00000) {
    TEX_ID = 100_000_00000;
    CAPTION = 000_000_0000;
    STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
-   SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+   SIZE = {100},{100};
    PRIORITY = PROGRESSBAR_PRIORITY;
 };
 
@@ -576,10 +602,10 @@ METER(ProgressTotal) {
    ID = 000_001_00000;
    STYLE = ANCHOR_BOTTOM;
    POSITION = 0,$y;
-   SIZE = RELATIVE_SIZE(-128);
+   SIZE = -128{100};
    TEX_ID = 0,&quot;MTRB&quot;;
    COLOR = COLOR32(255.0,255.0,255.0,255.0);
-   SIZE1 = RELATIVE_SIZE(-128);
+   SIZE1 = -128{100};
    TEX_ID1 = 0,&quot;MTR&quot;;
    COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
 };
@@ -587,11 +613,11 @@ $y -=64;
 METER(ProgressPart) {
    ID = 000_001_00010;
    STYLE = ANCHOR_BOTTOM;
-   SIZE = RELATIVE_SIZE(-128),32;
+   SIZE = -128{100},-32;
    POSITION = 0,$y;
    TEX_ID = 0,&quot;MTRB&quot;;
    COLOR = COLOR32(255.0,255.0,255.0,255.0);
-   SIZE1 = RELATIVE_SIZE(-128),32;
+   SIZE1 = -128{100},32;
    TEX_ID1 = 0,&quot;MTR&quot;;
    COLOR1 = COLOR32(255.0,255.0,255.0,255.0);
 };
@@ -599,14 +625,14 @@ TEXTURE(Wait) {
    ID = 000_002_00020;
    STYLE = ANCHOR_RIGHTBOTTOM;
    TEX_ID = 0,&quot;LD00&quot;;
-   POSITION = -48,32;
+   POSITION = -48,-32;
 };
 TEXT(Message) {
    ID = 000_002_00030;
    STYLE = TEXT_RIGHT|ANCHOR_RIGHTTOP;
    CAPTION = 000_000_00250;
    FONT_KIND = &quot;cfn20&quot;;
-   POSITION = -48,-32;
+   POSITION = -48,32;
    COLOR = 1,1,1,1;
 };
 </pre></div>
@@ -616,60 +642,62 @@ TEXT(Message) {
 これを継承した、CWinAssetbundleLoadingクラスを作ります。</p>
 <p>次のようにCWinAssetbundleLoadingBase.create()を使ってウィンドウを作成できます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
 </pre></div>
 </div>
 <blockquote>
-<div>自動生成された、CWinAssetbundleLoadingBaseには、次のような関数が生成されています。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">public</span> <span class="n">CWinAssetbundleLoading</span> <span class="nf">create</span><span class="p">(</span><span class="n">CWindowBase</span> <span class="n">cParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+<div><p>自動生成された、CWinAssetbundleLoadingBaseには、次のような関数が生成されています。</p>
+</div></blockquote>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">public</span> <span class="n">CWinAssetbundleLoading</span> <span class="nf">create</span><span class="p">(</span><span class="n">CWindowBase</span> <span class="n">cParent</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">create</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">windowId</span><span class="p">,</span><span class="n">cParent</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id17">
-<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id16">
+<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
-<div>クリエイト済のウィンドウをウィンドウマネージャ経由で <a class="reference internal" href="CWindowMgr.html#window-find-function"><span>find</span></a> を使って取得することができます。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWinAssetbundleLoading</span> <span class="n">cLoading</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">windowId</span><span class="p">);</span>
+<div><p>クリエイト済のウィンドウをウィンドウマネージャ経由で <a class="reference internal" href="CWindowBase.html#method-CWindowBase.find" title="CWindowBase.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">find</span></code></a> を使って取得することができます。</p>
+</div></blockquote>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinAssetbundleLoading</span> <span class="n">cLoading</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">windowId</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">cLoading</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-   <span class="c1">//クリエイト済のウィンドウが見つかった!</span>
+   <span class="c1">//find created this window.</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-   <span class="c1">//ウィンドウは、クリエイトしていない.</span>
+   <span class="c1">//can&#39;t find this window.</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id18">
-<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id17">
+<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>ウィンドウマネージャが持つ、bringToTopを使って、特定のウィンドウを最前面に出すことができます。</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id19">
-<h4>効果音について<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id18">
+<h4>効果音について<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>効果音を鳴らすには、CWindowMgr.soundeffectを書き換えます。</p>
 <p>soundeffectは、IWinSoundEffectというインターフェースを持つオブジェクトです。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinSoundEffect</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinSoundEffect</span> <span class="p">{</span>
     <span class="k">void</span> <span class="nf">play</span><span class="p">(</span><span class="kt">uint</span> <span class="n">mSE</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>付属している <a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr"><span>CSeResourceMgr</span></a> と連動させる一つの例です。</p>
-<p><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr"><span>CSeResourceMgr</span></a> 経由で、アセットバンドル化されたSEを取得します(一つのアセットバンドルに複数のSEが入っています)。</p>
-<p>取得した、<a class="reference internal" href="CSoundEffectMgr.html#cseresource"><span>CSeResource</span></a> は、IWinSoundEffectインターフェースを持っています。
-(音を実際、鳴らすには <a class="reference internal" href="CSoundEffectMgr.html#id1"><span>CSoundEffectMgr</span></a> もCMainSystemにAddComponentしておく必要があります)。</p>
+<div><p>付属している <a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a> と連動させる一つの例です。</p>
+<p><a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a> 経由で、アセットバンドル化されたSEを取得します(一つのアセットバンドルに複数のSEが入っています)。</p>
+<p>取得した、<a class="reference internal" href="CSoundEffectMgr.html#class-CSeResource" title="CSeResource class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResource</span></code></a> は、IWinSoundEffectインターフェースを持っています。
+(音を実際、鳴らすには <a class="reference internal" href="CSoundEffectMgr.html#class-CSoundEffectMgr" title="CSoundEffectMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSoundEffectMgr</span></code></a> もCMainSystemにAddComponentしておく必要があります)。</p>
 <p>下記の例では、052_000_00000内にウィンドウ系の効果音がパックされているという前提の実装になっています。</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">自作したIWinSoundEffectを持つオブジェクトと関連付けることも可能です。</p>
+<p class="admonition-title">注釈</p>
+<p>自作したIWinSoundEffectを持つオブジェクトと関連付けることも可能です。</p>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
     <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
 <span class="cm">    * @brief   Unity Callback</span>
@@ -706,7 +734,7 @@ TEXT(Message) {
         <span class="c1">//--------------------------------------------</span>
         <span class="n">CWindowMgr</span>     <span class="n">cWindowMgr</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
         <span class="c1">// Assign standard SEs.</span>
-        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span> <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="k">true</span><span class="p">);</span>    <span class="c1">//2D系;</span>
+        <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">soundeffect</span> <span class="p">=</span> <span class="n">CSeResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="k">true</span><span class="p">);</span>    <span class="c1">//2D sound;</span>
         <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">clickSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">20</span><span class="p">);</span>
         <span class="n">cWindowMgr</span><span class="p">.</span><span class="n">scrollSE</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">52</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">110</span><span class="p">);</span>
     <span class="p">}</span>
@@ -725,23 +753,23 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id20">
-<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id19">
+<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>キャプションIDから、文字列に変換する際、CWindowMgr.captiondataに設定されたオブジェクトを通して変換されます。</p>
 <p>captiondataは、IWinCaptionDataインターフェースです。</p>
 <p>現在のロケールに応じて返す文字列を変えることによって多言語対応が可能になっています。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinCaptionData</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IWinCaptionData</span> <span class="p">{</span>
     <span class="kt">string</span> <span class="nf">find</span><span class="p">(</span><span class="kt">uint</span> <span class="n">mCaptionId</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>付属している <a class="reference internal" href="CMessageDataSheetMgr.html#id1"><span>CMessageDataSheetMgr</span></a> と連動させるための一つの例です。</p>
-<p><a class="reference internal" href="CMessageDataSheetMgr.html#cmessagedatasheet"><span>CMessageDataSheet</span></a> が、IWinCaptionDataインターフェースを持っているので次のようなコードでキャプションデータを取得できます。</p>
+<div><p>付属している <a class="reference internal" href="CMessageDataSheetMgr.html"><span class="doc">CMessageDataSheetMgr</span></a> と連動させるための一つの例です。</p>
+<p><a class="reference internal" href="CMessageDataSheetMgr.html#method-CMessageDataSheet.find" title="CMessageDataSheet.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CMessageDataSheet</span></code></a> が、IWinCaptionDataインターフェースを持っているので次のようなコードでキャプションデータを取得できます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
     <span class="c1">//==========================================================================</span>
     <span class="cm">/*!Awake</span>
 <span class="cm">    * @brief   Unity Callback</span>
@@ -799,8 +827,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">自作したIWinCaptionDataを持つオブジェクトと関連付けることも可能です。</p>
+<p class="admonition-title">注釈</p>
+<p>自作したIWinCaptionDataを持つオブジェクトと関連付けることも可能です。</p>
 </div>
 </div>
 </div>
@@ -809,15 +837,16 @@ TEXT(Message) {
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="id.html" class="btn btn-neutral float-right" title="マルチID,FiveCC" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="id.html" class="btn btn-neutral float-right" title="マルチID,FiveCC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sample.html" class="btn btn-neutral" title="サンプル" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sample.html" class="btn btn-neutral float-left" title="サンプル" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -826,11 +855,11 @@ TEXT(Message) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -843,37 +872,15 @@ TEXT(Message) {
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

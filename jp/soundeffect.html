@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>効果音、BGMについて &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>効果音、BGMについて &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="多言語対応について" href="caption.html"/>
-        <link rel="prev" title="フォントについて" href="SpriteFont.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="多言語対応について" href="caption.html" />
+    <link rel="prev" title="フォントについて" href="SpriteFont.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -99,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">フォントについて</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">効果音、BGMについて</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">効果音、BGMについて</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#se">SEのアセットバンドルを作成する方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#se-def">&#64;se.def記述方法</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">インクルードパス</a></li>
@@ -124,6 +128,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -167,10 +175,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -203,7 +207,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -218,34 +222,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>効果音、BGMについて</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>効果音、BGMについて</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/soundeffect.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/soundeffect.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -256,16 +280,16 @@
 <blockquote>
 <div><p>音関連を制御するためのマネージャとして、次のものを用意しています。</p>
 <ul class="simple">
-<li><a class="reference internal" href="CSoundEffectMgr.html#id1"><span>CSoundEffectMgr</span></a></li>
-<li><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr"><span>CSeResourceMgr</span></a></li>
-<li><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr"><span>CBgmResourceMgr</span></a></li>
+<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CSoundEffectMgr" title="CSoundEffectMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSoundEffectMgr</span></code></a></p></li>
+<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a></p></li>
+<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CBgmResourceMgr" title="CBgmResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CBgmResourceMgr</span></code></a></p></li>
 </ul>
 <p>これらを用いて、アセットバンドルの管理、SEのグループ化、プライオリティ、同時発声数制限等を行います。
 また、BGMは、イントロ＋ループ部分の再生を行ってくれます。</p>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">グループ化、プライオリティ、同時発声数制限は、3Dのみ対応しています。
+<p class="admonition-title">注釈</p>
+<p>グループ化、プライオリティ、同時発声数制限は、3Dのみ対応しています。
 2Dの音声は、同じ音が同時にならないような制御のみ行っています。</p>
 </div>
 <div class="section" id="se">
@@ -273,33 +297,34 @@
 <blockquote>
 <div><p>次の手順で、効果音に使う音声ファイルを配置してください。</p>
 <ol class="arabic simple">
-<li>Assets/KsSoft/の下に、Seというフォルダを作ります。</li>
-<li>作成したSeフォルダの下に、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> で更にフォルダを作ってください。</li>
-<li><a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> 名で作成したフォルダの下に音声ファイルを置いてください。</li>
-<li>必要ならば、&#64;se.defというファイルも作成し置いてください。</li>
-<li>フォルダを選んで、[右クリック]→[Export]を選んでください(複数選択可能)。</li>
+<li><p>Assets/KsSoft/の下に、Seというフォルダを作ります。</p></li>
+<li><p>作成したSeフォルダの下に、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> で更にフォルダを作ってください。</p></li>
+<li><p><a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> 名で作成したフォルダの下に音声ファイルを置いてください。</p></li>
+<li><p>必要ならば、&#64;se.defというファイルも作成し置いてください。</p></li>
+<li><p>フォルダを選んで、[右クリック]→[Export]を選んでください(複数選択可能)。</p></li>
 </ol>
 <p>2.で作成したフォルダ名と同名のアセットバンドルが生成されます。
 場所は、assetbundles/XXXX/です。</p>
-<p>配置する音声ファイルは、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> か、 <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> である必要があります。</p>
+<p>配置する音声ファイルは、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> か、 <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> である必要があります。</p>
 </div></blockquote>
 <img alt="_images/SeResource.png" src="_images/SeResource.png" />
 </div>
 <div class="section" id="se-def">
 <span id="id1"></span><h2>&#64;se.def記述方法<a class="headerlink" href="#se-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>アセットバンドルを作成するときに、各SEに様々な情報を埋め込むことができます。
+<div><p>アセットバンドルを作成するときに、各SEに様々な情報を埋め込むことができます。
 以下に例を挙げておきます。
-ファイルは、UTF-8(BOM無し)で作成してください。</div></blockquote>
-<div class="highlight-cpp"><div class="highlight"><pre><span class="c1">// click sound effect</span>
-<span class="n">SE</span><span class="p">(</span><span class="mo">052</span><span class="n">_000_00020</span><span class="p">)</span> <span class="p">{</span>
+ファイルは、UTF-8(BOM無し)で作成してください。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">click</span> <span class="n">sound</span> <span class="n">effect</span>
+<span class="n">SE</span><span class="p">(</span><span class="mi">052_000_00020</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">VOLUME</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="n">PRIORITY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="n">GROUP</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
     <span class="n">POLYPHONY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="c1">// decide sound effect</span>
-<span class="n">SE</span><span class="p">(</span><span class="mo">052</span><span class="n">_000_00030</span><span class="p">)</span> <span class="p">{</span>
+<span class="o">//</span> <span class="n">decide</span> <span class="n">sound</span> <span class="n">effect</span>
+<span class="n">SE</span><span class="p">(</span><span class="mi">052_000_00030</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">VOLUME</span> <span class="o">=</span> <span class="mi">50</span><span class="o">%</span><span class="p">;</span>
     <span class="n">PRIORITY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="n">GROUP</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
@@ -308,65 +333,68 @@
 </pre></div>
 </div>
 <blockquote>
-<div>基本的な記述方法は、次の通りです。
-エリアスも使え、同一の音声ファイルに別名を与え、違うパラメータを割り振ることが可能です。</div></blockquote>
-<div class="highlight-cpp"><div class="highlight"><pre>SE(se file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<div><p>基本的な記述方法は、次の通りです。
+エリアスも使え、同一の音声ファイルに別名を与え、違うパラメータを割り振ることが可能です。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SE</span><span class="p">(</span><span class="n">se</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 
-SE(Alias name,SE file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<span class="n">SE</span><span class="p">(</span><span class="n">Alias</span> <span class="n">name</span><span class="p">,</span><span class="n">SE</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>エリアス名/ファイル名は、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> か <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> (半角英数5文字)である必要があります。</p>
+<div><p>エリアス名/ファイル名は、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> か <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> (半角英数5文字)である必要があります。</p>
 <p>次のようにルールがあります。</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="43%" />
-<col width="57%" />
+<col style="width: 43%" />
+<col style="width: 57%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">ID</th>
-<th class="head">ファイル名</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>ファイル名</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>000_000_00010</td>
-<td>000_000_00010.wav等</td>
+<tbody>
+<tr class="row-even"><td><p>000_000_00010</p></td>
+<td><p>000_000_00010.wav等</p></td>
 </tr>
-<tr class="row-odd"><td>&#8220;click&#8221;</td>
-<td>click.wav等</td>
+<tr class="row-odd"><td><p>&quot;click&quot;</p></td>
+<td><p>click.wav等</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last"><a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> (半角英数5文字)を使うときは、&#8221;～&#8221;でくくるのを忘れないでください</p>
+<p class="admonition-title">注釈</p>
+<p><a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> (半角英数5文字)を使うときは、&quot;～&quot;でくくるのを忘れないでください</p>
 </div>
 <div class="section" id="id2">
 <h3>インクルードパス<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>以下のパスにインクルードパスが、通っています。
-インクルードファイルを作成する際は、ファイルをここに置いてください。</div></blockquote>
-<div class="highlight-cpp"><div class="highlight"><pre><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span>
+<div><p>以下のパスにインクルードパスが、通っています。
+インクルードファイルを作成する際は、ファイルをここに置いてください。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h3>&#64;se.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>次のファイルは、&#64;se.defをコンパイルするときに、自動的にインクルードされます。
-共通の設定は、このファイルに記述すると便利です。</div></blockquote>
-<div class="highlight-cpp"><div class="highlight"><pre><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">se</span><span class="p">.</span><span class="n">h</span>
+<div><p>次のファイルは、&#64;se.defをコンパイルするときに、自動的にインクルードされます。
+共通の設定は、このファイルに記述すると便利です。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">Se</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">se</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
 </div>
@@ -378,7 +406,7 @@ SE(Alias name,SE file name) {
 <div><p>ボリュームを設定します。</p>
 <p>値は、0～1の少数で指定するか、0～100%の百分率が使えます。</p>
 <ul class="simple">
-<li>VOLUME = 1;</li>
+<li><p>VOLUME = 1;</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -419,54 +447,56 @@ SE(Alias name,SE file name) {
 <div class="section" id="id5">
 <h3>プリプロセッサ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>C言語,C++言語とほぼ同じプリプロセッサが使えます。</div></blockquote>
-<table border="1" class="docutils">
+<div><p>C言語,C++言語とほぼ同じプリプロセッサが使えます。</p>
+</div></blockquote>
+<table class="docutils align-center">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">プリプロセッサ</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリプロセッサ</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>// コメント</td>
-<td>ラインコメント</td>
+<tbody>
+<tr class="row-even"><td><p>// コメント</p></td>
+<td><p>ラインコメント</p></td>
 </tr>
-<tr class="row-odd"><td>/* コメント */</td>
-<td>ブロックコメント</td>
+<tr class="row-odd"><td><p>/* コメント */</p></td>
+<td><p>ブロックコメント</p></td>
 </tr>
-<tr class="row-even"><td>#include ファイル名</td>
-<td>ファイルをインクルードする</td>
+<tr class="row-even"><td><p>#include ファイル名</p></td>
+<td><p>ファイルをインクルードする</p></td>
 </tr>
-<tr class="row-odd"><td>#define 記号定数の定義</td>
-<td>記号定数の定義</td>
+<tr class="row-odd"><td><p>#define 記号定数の定義</p></td>
+<td><p>記号定数の定義</p></td>
 </tr>
-<tr class="row-even"><td>#define 関数マクロ</td>
-<td>関数マクロ</td>
+<tr class="row-even"><td><p>#define 関数マクロ</p></td>
+<td><p>関数マクロ</p></td>
 </tr>
-<tr class="row-odd"><td>#if defined(記号定義) ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#if defined(記号定義) ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#ifdef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-even"><td><p>#ifdef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-odd"><td>#ifndef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#ifndef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#pragma once</td>
-<td>多重インクルード防止</td>
+<tr class="row-even"><td><p>#pragma once</p></td>
+<td><p>多重インクルード防止</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><a class="reference external" href="http://docs.unity3d.com/ScriptReference/BuildTarget.html">BuildTarget</a> がマクロとして自動定義されています。</div></blockquote>
-<div class="highlight-cpp"><div class="highlight"><pre><span class="cp">#if defined(StandaloneWindows)</span>
+<div><p><a class="reference external" href="http://docs.unity3d.com/ScriptReference/BuildTarget.html">BuildTarget</a> がマクロとして自動定義されています。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if defined(StandaloneWindows)</span>
    <span class="n">MS</span><span class="o">-</span><span class="n">Windows</span>
-<span class="cp">#else</span>
+<span class="c1">#else</span>
    <span class="n">Other</span>
-<span class="cp">#endif</span>
+<span class="c1">#endif</span>
 </pre></div>
 </div>
 </div>
@@ -477,14 +507,15 @@ SE(Alias name,SE file name) {
 <div><p>BGMを、予めイントロ部分、ループ部分に分けておいてアセットバンドル化することによって、マネージャ側が自動的に順番に再生を行ってくれます。</p>
 <p>次の手順でアセットバンドル化してください。</p>
 <ol class="arabic simple">
-<li>Assets/KsSoft/の下に、Bgmというフォルダを作ります。</li>
-<li>ループ部分は、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> .mp3という名前でBgmフォルダ内においてください。</li>
-<li>イントロ部分は、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> .intro.mp3という名前で同フォルダ内においてください。</li>
-<li>準備ができたら、アセットバンドル化したいループファイルか、イントロファイルのどちらかを選択します。</li>
-<li>[右クリック]→[Export]を選択してください。</li>
+<li><p>Assets/KsSoft/の下に、Bgmというフォルダを作ります。</p></li>
+<li><p>ループ部分は、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> .mp3という名前でBgmフォルダ内においてください。</p></li>
+<li><p>イントロ部分は、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> .intro.mp3という名前で同フォルダ内においてください。</p></li>
+<li><p>準備ができたら、アセットバンドル化したいループファイルか、イントロファイルのどちらかを選択します。</p></li>
+<li><p>[右クリック]→[Export]を選択してください。</p></li>
 </ol>
 <blockquote>
-<div><a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> 部分が、アセットバンドル名になります。</div></blockquote>
+<div><p><a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> 部分が、アセットバンドル名になります。</p>
+</div></blockquote>
 </div></blockquote>
 <img alt="_images/BgmResource.png" src="_images/BgmResource.png" />
 </div>
@@ -492,15 +523,16 @@ SE(Alias name,SE file name) {
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="caption.html" class="btn btn-neutral float-right" title="多言語対応について" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="caption.html" class="btn btn-neutral float-right" title="多言語対応について" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="SpriteFont.html" class="btn btn-neutral" title="フォントについて" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="SpriteFont.html" class="btn btn-neutral float-left" title="フォントについて" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -509,11 +541,11 @@ SE(Alias name,SE file name) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -526,37 +558,15 @@ SE(Alias name,SE file name) {
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

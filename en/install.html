@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Environment setting &mdash; WindowSystem 1.07 documentation</title>
+  <title>Environment setting &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="window system’s samples" href="sample.html"/>
-        <link rel="prev" title="Features of window system" href="feature.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="window system’s samples" href="sample.html" />
+    <link rel="prev" title="Features of window system" href="feature.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,29 +81,32 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Environment setting</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Environment setting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ms-windows-cygwin">For MS-Windows:Install the cygwin.</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cygwin">Download the cygwin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#devel">Installation by choosing the &#8220;Devel&#8221; package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#devel">Installation by choosing the “Devel” package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Install</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-system-path">Add the PATH of enviroment variable .</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">The confirmation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#osx-xcode">For OSX:Install the Command Line Tools in Xcode.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-messagedata">A preparation for the multi-lingual</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#python-2-7">Install the Python 2.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ms">A preparation for the multi-lingual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-3-x">Install the Python 2.7</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python">Add the windows system path for the Python.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files">Install the opeppyxl library(A Python library to read/write Excel 2010 xlsx/xlsm files)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pywin32">Install the Python 2.7</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -123,6 +126,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -163,13 +170,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -202,9 +205,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -217,34 +220,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Environment setting</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Environment setting</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -255,7 +278,7 @@
 <div class="section" id="ms-windows-cygwin">
 <span id="install-cygwin"></span><h2>For MS-Windows:Install the cygwin.<a class="headerlink" href="#ms-windows-cygwin" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>A window data need to compile the script. This compiler invokes a gcc&#8217;s preprocessor.</p>
+<div><p>A window data need to compile the script. This compiler invokes a gcc’s preprocessor.</p>
 <p>Install the cygwin procedure in the MS-Windows environment as follows..</p>
 </div></blockquote>
 <div class="section" id="cygwin">
@@ -266,9 +289,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="devel">
-<span id="install-cygwin-devel"></span><h3>Installation by choosing the &#8220;Devel&#8221; package<a class="headerlink" href="#devel" title="Permalink to this headline">¶</a></h3>
+<span id="install-cygwin-devel"></span><h3>Installation by choosing the “Devel” package<a class="headerlink" href="#devel" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>In the &#8220;Select Packages&#8221;, the Devel <strong>Default</strong> → <strong>Install</strong> .</p>
+<div><p>In the “Select Packages”, the Devel <strong>Default</strong> → <strong>Install</strong> .</p>
 <img alt="_images/cygwin.png" src="_images/cygwin.png" />
 </div></blockquote>
 </div>
@@ -281,21 +304,21 @@
 <div class="section" id="set-system-path">
 <span id="id3"></span><h3>Add the PATH of enviroment variable .<a class="headerlink" href="#set-system-path" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Add the system path to &#8220;bin&#8221; of the installed folder .</p>
+<div><p>Add the system path to “bin” of the installed folder .</p>
 <p>It has become in the following folder by the default</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>C:\cygwin\bin (64bit版なら、c:\cygwin64\bin)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">cygwin</span>\<span class="nb">bin</span> <span class="ow">or</span>  <span class="n">c</span><span class="p">:</span>\<span class="n">cygwin64</span>\<span class="nb">bin</span><span class="p">(</span><span class="mi">64</span><span class="n">bit</span> <span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is not the environment variable of cygwin, it is the system environment variable of windows.</p>
+<p class="admonition-title">Note</p>
+<p>It is not the environment variable of cygwin, it is the system environment variable of windows.</p>
 </div>
 <p>Detailed procedure is as follows.</p>
 <blockquote>
 <div><p>Click the start menu of windows.</p>
 <img alt="_images/Startmenu.png" src="_images/Startmenu.png" />
-<p>Input &#8220;sysdm.cpl&#8221; in Search programs and files. New window that named System Properties will appear.</p>
+<p>Input “sysdm.cpl” in Search programs and files. New window that named System Properties will appear.</p>
 <img alt="_images/SystemProperties.png" src="_images/SystemProperties.png" />
 <p>Select the Advanced panel, and click the Enviroment Variables button.</p>
 <img alt="_images/EnviromentVariables.png" src="_images/EnviromentVariables.png" />
@@ -304,35 +327,33 @@
 <p>A new window will appear with the current value highlighted. Do not remove or change the current value, or you will wreck your user settings!</p>
 <p>You will see that the PATH variable already has a default value of something like the following:</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">system32</span><span class="p">;</span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span><span class="p">;</span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">System32</span>\<span class="n">Wbem</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>The semicolons separate the values, so there are three components in this default PATH:</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32
-%SystemRoot%
-%SystemRoot%\System32\Wbem
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">system32</span>
+<span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>
+<span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">System32</span>\<span class="n">Wbem</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>You want to add ;c:\cygwin\bin to the end of that list, so it becomes something like this. However, do not change the entire string to this example! Leave the existing PATH assignment as you find it and simply add your new directories.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;c:\cygwin\bin
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">system32</span><span class="p">;</span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span><span class="p">;</span><span class="o">%</span><span class="n">SystemRoot</span><span class="o">%</span>\<span class="n">System32</span>\<span class="n">Wbem</span><span class="p">;</span><span class="n">c</span><span class="p">:</span>\<span class="n">cygwin</span>\<span class="nb">bin</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3>The confirmation<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Open a windows command prompt(not the cygwin&#8217;s bash!), try typing &#8220;gcc &#8211;version&#8221;. If you have been installed,it is displayed as follows.</p>
+<div><p>Open a windows command prompt(not the cygwin’s bash!), try typing “gcc –version”. If you have been installed,it is displayed as follows.</p>
 <img alt="_images/check_gcc.png" src="_images/check_gcc.png" />
 <p>When you can not get the same result, you try to check two things.</p>
 <ol class="arabic simple">
-<li><p class="first">You confirm to exist gcc.exe in the &#8220;C:\cygwin\bin&#8221; directory. If you can not find gcc.exe, please rechecked <a class="reference internal" href="#install-cygwin-devel"><span>here.</span></a> .</p>
-</li>
-<li><p class="first">If you find gcc.exe at the &#8220;C:\cygwin\bin&#8221; directory, please rechecked <a class="reference internal" href="#set-system-path"><span>here</span></a> .</p>
-</li>
+<li><p>You confirm to exist gcc.exe in the “C:\cygwin\bin” directory. If you can not find gcc.exe, please rechecked <a class="reference internal" href="#install-cygwin-devel"><span class="std std-ref">here.</span></a> .</p></li>
+<li><p>If you find gcc.exe at the “C:\cygwin\bin” directory, please rechecked <a class="reference internal" href="#set-system-path"><span class="std std-ref">here</span></a> .</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -343,10 +364,10 @@
 <div><p>If you can not find the gcc on the terminal, please install the Command Line Tools in Xcode.</p>
 </div></blockquote>
 </div>
-<div class="section" id="install-messagedata">
-<span id="id5"></span><h2>A preparation for the multi-lingual<a class="headerlink" href="#install-messagedata" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="python-2-7">
-<h3>Install the Python 2.7<a class="headerlink" href="#python-2-7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ms">
+<span id="install-messagedata"></span><h2>A preparation for the multi-lingual<a class="headerlink" href="#ms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python-3-x">
+<h3>Install the Python 2.7<a class="headerlink" href="#python-3-x" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>If you make a character resources for multi-lingual , use MS-Excel.This tool for data conversion from a Excel file is written in Python.</p>
 <p>Install the <a class="reference external" href="https://www.python.org/downloads/">Python2.7</a></p>
@@ -357,18 +378,18 @@
 <blockquote>
 <div><p>Add the system path of the installed folder .</p>
 <p>Please refer to here how to set the python path.</p>
-<p>The default path is as follows.</p>
+<p>The path depends on the version of Python you have installed.The default path is:</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>C:\Python27
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Python3x</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files">
-<h3>Install the opeppyxl library(A Python library to read/write Excel 2010 xlsx/xlsm files)<a class="headerlink" href="#openpyxl-a-python-library-to-read-write-excel-2010-xlsx-xlsm-files" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pywin32">
+<h3>Install the Python 2.7<a class="headerlink" href="#pywin32" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This multiligual message data tool used the <strong>openpyxl</strong> library. you need to install this library.Install the openpyxl on the command prompt as follows.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">openpyxl</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pywin32</span>
 </pre></div>
 </div>
 </div>
@@ -377,15 +398,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sample.html" class="btn btn-neutral float-right" title="window system’s samples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sample.html" class="btn btn-neutral float-right" title="window system’s samples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="feature.html" class="btn btn-neutral" title="Features of window system" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="feature.html" class="btn btn-neutral float-left" title="Features of window system" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -394,11 +416,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -411,36 +433,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

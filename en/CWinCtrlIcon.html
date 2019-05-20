@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlIcon &mdash; WindowSystem 1.07 documentation</title>
+  <title>CWinCtrlIcon &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="CWinCtrlRecastIcon" href="CWinCtrlRecastIcon.html"/>
-        <link rel="prev" title="CWinCtrlRender" href="CWinCtrlRender.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CWinCtrlRecastIcon" href="CWinCtrlRecastIcon.html" />
+    <link rel="prev" title="CWinCtrlRender" href="CWinCtrlRender.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,12 +81,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -106,6 +109,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -146,13 +153,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -170,11 +173,7 @@
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlIcon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cwindowbase">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Example of use</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a></li>
@@ -189,9 +188,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -204,34 +203,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinCtrlIcon</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinCtrlIcon</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinCtrlIcon.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinCtrlIcon.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -240,176 +259,56 @@
   <div class="section" id="cwinctrlicon">
 <span id="id1"></span><h1>CWinCtrlIcon<a class="headerlink" href="#cwinctrlicon" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>Script: <a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></p>
+<div><p>Script: <a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p>
 <p>This is the control to display the icon.</p>
 <p>It is possible to display eight texture parts.</p>
-<p>This behavior is almost the same as <a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a>. But if you touch it,it becomes darker.</p>
-<p>And , unlike  <a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a>  control , it can have a caption.</p>
+<p>This behavior is almost the same as <a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a>. But if you touch it,it becomes darker.</p>
+<p>And , unlike  <a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a>  control , it can have a caption.</p>
 </div></blockquote>
-<div class="section" id="cwindowbase">
-<h2>Callback reaching the CWindowBase<a class="headerlink" href="#cwindowbase" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="_CPPv27onClick12CWinCtrlBase">
-<span id="onClick__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Parameters CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The touched control</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Parameters CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Control that was pressed and hold</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
-<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
-<li><strong>Vector2 pos</strong> &#8211; Drag position , or the position of the mouse cursor</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
-<li><strong>Vector2 pos</strong> &#8211; Drag position , or the position of the mouse cursor</li>
-<li><strong>Vector2 dragVelocity</strong> &#8211; Displacement of the touch position</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
-<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; The dragged control</li>
-<li><strong>Transform transform</strong> &#8211; The transform of dragged control</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">You can choice whether to render the duplicated control.</p>
-<ul class="last simple">
-<li><p class="first">true: Render the duplicated control.</p>
-</li>
-<li><p class="first">false: Don&#8217;t render the duplicated control.</p>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; Dropped control.</li>
-<li><strong>CWindowBase cDragWindow</strong> &#8211; The window of dragged control</li>
-<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; The dragged control</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>This callback sent to the window of cCtrl.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDropGround12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Parameters CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Dropped control.</td>
-</tr>
-</tbody>
-</table>
-<p>Release the dragged control at open place.</p>
-<p>Or when the window of dragged control is closed, this callback is called before closing.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="id2">
-<h2>Example of use<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// コントロールを取得する方法.</span>
+<p>Callbacks arriving at <a href="#id1"><span class="problematic" id="id2">:class:`CWindowBase&lt;CWindowBase&gt;`</span></a></p>
+<blockquote>
+<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+</div></blockquote>
+<p>Example of use</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get cotrol</span>
 <span class="n">CWinCtrlIcon</span>   <span class="n">icnItem</span> <span class="p">=</span> <span class="n">find</span><span class="p">(</span><span class="n">ICON_Item</span><span class="p">)</span> <span class="k">as</span> <span class="n">CWinCtrlIcon</span><span class="p">;</span>
 
-<span class="c1">// 押されたときのコールバック</span>
+<span class="c1">// click callback</span>
 <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="n">ICON_Item</span><span class="p">:</span>
-      <span class="c1">//押されたときの処理</span>
       <span class="k">break</span><span class="p">;</span>
    <span class="p">}</span>
 <span class="p">}</span>
-<span class="c1">// 長押しされたときのコールバック</span>
+<span class="c1">// hold callback</span>
 <span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">onHold</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">case</span> <span class="n">ICON_Item</span><span class="p">:</span>
-        <span class="c1">//押されたときの処理</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-</div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlRecastIcon.html" class="btn btn-neutral float-right" title="CWinCtrlRecastIcon" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlRecastIcon.html" class="btn btn-neutral float-right" title="CWinCtrlRecastIcon" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlRender.html" class="btn btn-neutral" title="CWinCtrlRender" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlRender.html" class="btn btn-neutral float-left" title="CWinCtrlRender" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -418,11 +317,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -435,36 +334,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

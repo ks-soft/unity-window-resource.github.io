@@ -1,0 +1,91 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlRecastIcon:
+
+===================================
+CWinCtrlRecastIcon
+===================================
+
+ スクリプト: :ref:`RECASTICON`
+
+ リキャストアイコンを表示するためのコントロールです。
+
+ 最大8枚のテクスチャパーツを重ねて表示することが可能です。
+ 
+ :ref:`ICON` とほぼ同じ振る舞いを行います。
+ 
+ リキャスト設定を行うと、指定したテクスチャパーツが、下から徐々に充填されるようなアニメーションを行います。
+ リキャスト時間は、0の時、:ref:`TEXTURE` と同等の表示を行い、1以上の時何も表示されないようになっています。
+
+
+:ref:`CWindowBase` に届くコールバック
+
+  :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+  :meth:`void onHold(CWinCtrlBase cCtrl)<CWindowBase.onHold>`
+
+  :meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)<CWindowBase.onBeginDrag>`
+
+  :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  :meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)<CWindowBase.onDragRender>`
+
+  :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+  :meth:`void onDropGround(CWinCtrlBase cCtrl)<CWindowBase.onDropGround>`
+
+
+.. class:: CWinCtrlRecastIcon
+
+ *固有の関数/プロパティ*
+
+ .. property:: CInput::e_State state { get; }
+
+  アイコンが押されている状態を取得できます。
+
+ .. method:: void setRecastTime(int index,float tmRecast)
+
+  :param int index: リキャストアニメーションを行うテクスチャパーツ番号
+  :param float tmRecast: アニメーション時間[0～1]
+
+  リキャスト時間を設定します。
+
+ .. method::	public float getRecastTime(int index)
+
+  :param int index: リキャストアニメーションを行うテクスチャパーツ番号
+  :return float: 残りアニメーション時間
+
+  リキャスト時間を取得します。
+
+  .. note:
+   
+   リキャスト時間は、0の時、:ref:`TEXTURE` と同等の表示、1以上の時何も表示されないようになっています。
+
+  ..
+
+*使用例*
+
+.. code-block:: csharp
+
+ // get control
+ CWinCtrlRecastIcon	rcItem = find(RECASTICON_Item) as CWinCtrlRecastIcon;
+ 
+ // Recast Display (Display half of the texture of TEX_ID3)
+ rcItem.setRecastTime(3,0.5f);
+ 
+ // click callback
+ override protected void onClick(CWinCtrlBase cCtrl) {
+   switch (cCtrl.id) {
+     case RECASTICON_Item:
+       break;
+    }
+ }
+ // hold callback 
+ override protected void onHold(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case ICON_Item:
+         break;
+     }
+ }
+
+..

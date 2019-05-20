@@ -1,0 +1,93 @@
+.. default-domain:: csharp
+
+
+========================
+CWinContents
+========================
+
+.. class:: CWinContents
+
+ .. image:: images/CWinContents.png
+
+ CWinContentsは、各種コントロールを保持するためのコンテナとしての役割を持ちます。
+
+ CWinContentsは以下の場面で使われています。
+ 
+ * CWindowBase内に一つ持ち、複数のコントロールを保持します。
+ 
+ * CWinCtrlBase内に一つ持ち、コンテンツと呼びます。 :ref:`こちら<CTRL_PROP_CONTENTS>` で定義されます。
+ 
+ * CWinCtrlBase内にリストでもち、コンテンツリストと呼びます。
+ 
+
+ 最初の二つは :ref:`ウィンドウスクリプト<WINDOW>` によって構造が定義されます。
+ 
+ 三つ目のコンテンツリストは、コントロールが持つコンテンツをテンプレートとして、コピーすることによってリストとして持っています。
+ 
+ *固有の関数/プロパティ*
+
+ .. method:: WinCtrl find<WinCtrl>(uint ctrlId)
+
+  :param uint ctrlId: コントロールID
+
+  該当するIDのコントロールを探します。
+  もし、コンテンツ内に存在しないときは、コントロールが持つコンテンツ内も再帰的に探します。
+  ただし、コンテンツリスト内は検索対象に含まれません。
+  よって、コントロールは必ず一意に決まります。
+
+ .. method:: int getIndex(uint ctrlId)
+
+  :param uint ctrlId: コントロールID
+
+  指定されたコントロールIDが何番目に格納されているか探します。
+  見つからないときは、-1が返ります。
+  findと違い、再帰的には検索しません。
+ 
+  返ってきたインデックス値は、this[N]で使え、高速にアクセス可能になります。
+
+ .. indexer:: CWinCtrlBase this[int N] { get; }
+
+  :meth:`getIndex<CWinContents::getIndex>` によって取得したインデックス値を使えます。
+ 
+
+ .. property:: int count { get; }
+
+  コンテンツ内のコントロールの数を返します。
+
+ .. property:: ClipRect.State	clipState { get; }
+
+  コンテンツリスト内に入っているコンテンツのみで使われます(ex: :ref:`LISTBOX`, :ref:`LISTBOXEX` )。
+ 
+   ClipRect.State.Inside
+    完全に領域に入っている
+   ClipRect.State.Clipped
+    クリッピングが必要
+   ClipRect.State.Outside
+    完全に外に出ていてレンダリング不要
+
+
+ .. property:: float width { get; }
+
+  コンテンツの横幅を取得します。
+  コントロールのサイズから自動計算されます。
+ 
+ .. property:: float height { get; }
+
+  コンテンツの縦を取得します。
+  コントロールのサイズから自動計算されます。
+
+ .. property:: Vector2 size { get; }
+
+  コンテンツのサイズを取得します。
+  コントロールのサイズから自動計算されます。
+
+ .. property:: Vector3 position { get; }
+
+  コンテンツの表示位置
+ 
+ .. property:: CWinCtrlBase parent { get; }
+
+  コンテンツの親になっているコントロールを取得します。
+
+ :ref:`CWindowBase` が持つコンテンツの場合、nullが返ります。
+

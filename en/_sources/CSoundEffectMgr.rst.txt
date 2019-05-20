@@ -1,0 +1,241 @@
+.. default-domain:: csharp
+
+CSoundEffectMgr
+--------------------------------
+
+ AudioSourceを複数持ち、SEのグループ化、プライオリティ、同時発生数制限等を行います。
+
+ デフォルトの同時発生数制限は、このようになっています。
+
+ * 2D音声 4音
+ * 3D音声 8音
+
+ また、グループ毎に同時発生数制限を個別に設定可能になっています。
+
+ SEのこれら設定を行う方法は、こちらを :ref:`参照<se_def>` ください。
+ 
+ AudioSourceを管理しており、音声を発生させるためにプログラマが別途AudioSourceを作成する必要がなくなっています。
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ マネージャを組み込む方法
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ CSoundEffectMgrを使うには、次のようにマネージャをゲームオブジェクトに対して、Addする必要があります。
+
+ .. code-block:: csharp
+
+  public class CMainSystem : CMainSystemBase {
+     //==========================================================================
+      /*!Awake
+      * @brief	Unity Callback
+      */
+      new void Awake() {
+          base.Awake();
+
+          if (m_instance != null) {
+              Debug.LogError("already exist CMainSystem");
+              return;
+          }
+          m_instance = this;
+
+          // Add Component
+          gameObject.AddComponent<CInput>();
+          if (KsSoftConfig.UseAssetBundle) {
+ 	         gameObject.AddComponent<CAssetBundleMgr>();
+ 	     }
+          gameObject.AddComponent<CSpriteFontMgr>();
+          gameObject.AddComponent<CTextureResourceMgr>();
+          gameObject.AddComponent<CWindowMgr>();
+          gameObject.AddComponent<CBgmResourceMgr>();
+          gameObject.AddComponent<CSeResourceMgr>();
+          gameObject.AddComponent<CSoundEffectMgr>();
+
+          addManager(new CMessageDataSheetMgr(Utility.getSystemLocale()));
+      }
+
+ ..
+
+
+
+.. class:: CSoundEffectMgr
+
+ .. method:: void playBgm(CBgmResource	cBgmResource)
+
+  :param CBgmResource: 読み込んだBGMリソース
+
+ .. method:: void playBgm(uint id)
+
+  :param uint id: アセットバンドルID
+
+ 指定されたBGMを再生します。
+ もし、指定されたアセットバンドルが読み込まれていないときは、読み込み終わった後に自動的に再生を開始します。
+ 明示的に読み込みを待ちたいときは、cBgmResource.isLoaded()が、trueを返すのを待ってから、再生してください。
+
+ CBgmResourceを直接取得するには、次のように記述します。
+
+ .. code-block:: csharp
+
+  IEnumerator load(uint id) {
+   CBgmResource cBgmResource = CBgmResourceMgr.Instance.reference(id);
+
+   if (cBgmResource == null) {
+       // error!!
+       yield break;
+   }
+   while (!cBgmResource.isLoaded()) {
+       yield return 0;
+   }
+   CSoundEffectMgr.Instance.playBgm(cBgmResource);
+  };
+
+ ..
+
+
+ .. method:: void play(CSoundEffect cSE)
+
+  :param CSoundEffect cSE: CSeResourceから取得可能な、SEオブジェクトです。
+
+ 指定されたSEを2D音声として再生します。
+ CSoundEffectは、次の方法で取得可能です。
+
+ .. code-block:: csharp
+
+  CSeResource	m_cSR;
+           :
+  CSoundEffect	cSE = m_cSR.find(id);
+
+ ..
+
+ .. method:: void play(uint mAssetBundle,uint id)
+
+  :param uint mAssetBundle: アセットバンドルID
+  :param uint id: SE ID
+
+ 指定されたSEを2D音声として再生します。
+
+
+ .. method:: void play(CSoundEffect cSE,IEffectEmitter emitter)
+           void play(CSoundEffect cSE,Transform trans)
+           void play(CSoundEffect cSE,Vector3 position)
+
+  :param CSoundEffect cSE: CSeResourceから取得可能な、SEオブジェクトです。
+  :param IEffectEmitter emitter: エフェクトが発生するエミッター
+  :param Transform trans: 音が発生する場所
+  :param Vector3 position: 音が発生する場所
+
+ 指定されたSEを3D音声として再生します。
+
+ .. member::static CSoundEffectMgr Instance
+
+ マネージャのインスタンスを取得します。
+
+.. class:: CSeResourceMgr
+
+ CSeResourceを管理するコンテナになっています。
+
+ CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだ音声データを管理します。
+
+ .. method:: CSeResource refenrece(uint mAssetBundle)
+
+  :param uint mAssetBundle: SE リソースID(アセットバンドルID)を指定します。
+  :return: SEリソースが返ってきます。
+
+ SEリソースを取得する。取得できるアセットは、:ref:`こちら<se_assetbuild>` でコンバートしたものです。
+
+ .. method:: CSoundEffect find(uint mAssetBundle,uint mId)
+
+  :param uint mAssetBundle: SEリソースを指定する。
+  :param uint id: SE IDを指定します。
+  :return: SEが返ってきます。指定したSEがパックされているアセットバンドルがまだ読み込み中であったり存在しないときは、nullが返ります。
+
+ CSoundEffectを取得します。
+
+ .. property:: static CSeResourceMgr Instance { get; }
+
+ マネージャのインスタンスを取得します。
+
+.. class:: CSeResource
+
+ アセットバンドル化されたSEを使える状態にして保持しています。
+
+ CSeResource一つに、複数のSEがまとまった形で入っています。
+
+ IWinSoundEffectインターフェースを持ち、CWindowMgrに登録することが可能です。
+
+ 実際に、SEを鳴らすには、CSoundEffectMgr経由で行います。
+
+ .. method:: CSoundEffect find(uint id)
+
+  :param uint id: 取得したいSE IDを指定します。
+  :return: SEが返ってきます。
+
+ SEを取得します。
+
+ .. method:: void play(uint mSE)
+
+  :param uint id: 再生したいSE IDを指定します。
+
+ SEを再生します。
+
+ .. property:: bool isLoaded { get; }
+
+ アセットバンドルが読み込み終わっているかどうか調べます。
+
+ trueの時、読み込みが完了しており、使用可能な状態になっています。
+
+
+.. class:: CBgmResourceMgr
+
+ CBgmResourceを管理するコンテナになっています。
+
+ CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだBGMデータを管理します。
+
+ 実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。
+
+ .. method:: CBgmResource refenrece(uint mAssetBundle)
+
+   :param uint mAssetBundle: BGMリソースID(アセットバンドルID)を指定します。
+   :return: BGMリソースが返ってきます。
+
+ BGMリソースを取得します。取得できるアセットは、:ref:`こちら<bgm_assetbuild>` でコンバートしたものです。
+
+ .. method:: CBgmResource load(uint mResource)
+
+  :param uint mResource: リソースIDを指定します。
+  :return: BGMリソースが返ってきます。
+
+ Resourcesフォルダの下に次のような形でファイルを置いておくと読み込むことができます。
+
+ .. code-block:: csharp
+
+ Assets/Resources/001_000_000000.mp3
+ Assets/Resources/001_000_000000.intro.mp3
+
+ ..
+
+ .. property:: static CBgmResourceMgr Instance { get; }
+
+ マネージャのインスタンスを取得します。
+
+
+.. class:: CBgmResource
+
+ アセットバンドル化されたBGMを使える状態にして保持しています。
+
+ CBgmResource内に、イントロ部分とループ部分の音声データを持っています。
+
+ 実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。
+
+ .. property:: AudioClip loopClip { get; }
+
+ ループ部分のクリップ
+
+ .. property:: AudioClip introClip { get; }
+
+ イントロ部分のクリップ
+
+ .. property:: bool isLoaded { get; }
+
+ アセットバンドルが読み込み終わっているかどうか調べます。
+
+ trueの時、読み込みが完了しており、使用可能な状態になっています。
