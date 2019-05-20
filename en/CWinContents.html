@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinContents &mdash; WindowSystem 1.07 documentation</title>
+  <title>CWinContents &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="CWinCtrlText" href="CWinCtrlText.html"/>
-        <link rel="prev" title="CWinCtrlBase" href="CWinCtrlBase.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CWinCtrlText" href="CWinCtrlText.html" />
+    <link rel="prev" title="CWinCtrlBase" href="CWinCtrlBase.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,12 +81,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -106,6 +109,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -146,21 +153,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinContents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Functions/Methods</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinContents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a></li>
@@ -188,9 +188,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -203,165 +203,173 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinContents</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinContents</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinContents.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinContents.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="cwincontents">
-<span id="id1"></span><h1>CWinContents<a class="headerlink" href="#cwincontents" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><img alt="_images/CWinContents.png" src="_images/CWinContents.png" />
+<h1>CWinContents<a class="headerlink" href="#cwincontents" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="class-CWinContents">
+<code class="descname">class CWinContents</code><a class="headerlink" href="#class-CWinContents" title="Permalink to this definition">¶</a></dt>
+<dd><img alt="_images/CWinContents.png" src="_images/CWinContents.png" />
 <p>CWinContents has a role as a container for holding the various controls .</p>
 <p>CWinContents is used in the following part.</p>
 <ul class="simple">
-<li><p class="first">CWindowBase has a CWinContents. Thereby , a window can have some controls.</p>
-</li>
-<li><p class="first">CWinCtrlBase has a CWinContents. (This window system calls it the contents. Please refer to <a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span>here</span></a> ).</p>
-</li>
-<li><p class="first">CWinCtrlBase has it in a list form.  This window system  calls it the contents list.</p>
-</li>
+<li><p>CWindowBase has a CWinContents. Thereby , a window can have some controls.</p></li>
+<li><p>CWinCtrlBase has a CWinContents. (This window system calls it the contents. Please refer to <a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span class="std std-ref">here</span></a> ).</p></li>
+<li><p>CWinCtrlBase has it in a list form.  This window system  calls it the contents list.</p></li>
 </ul>
-<p>The first two are defined structure by the <a class="reference internal" href="WINDOW.html#window"><span>window script</span></a>.</p>
+<p>The first two are defined structure by the <a class="reference internal" href="WINDOW.html#window"><span class="std std-ref">window script</span></a>.</p>
 <p>The contents list(third) has a lot of contents by the list form.</p>
-</div></blockquote>
-<div class="section" id="id2">
-<h2>Functions/Methods<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="contents-find"></span><dl class="function">
-<dt id="_CPPv24findI7WinCtrlE4uint">
-<span id="find:WinCtrl:__uint"></span>WinCtrl <code class="descclassname"></code><code class="descname">find</code>&lt;WinCtrl&gt;<span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv24findI7WinCtrlE4uint" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint ctrlId:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Control ID</td>
-</tr>
-</tbody>
-</table>
-<p>It finds the control of the ID. If it does not exist in the contents , this function recursively searches into the contents of the control. However , this function does not search into the contents list. Thus , control is determined always unique.</p>
+<p>Functions / Properties</p>
+<dl class="method">
+<dt id="method-CWinContents.find">
+WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.find" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint ctrlId</dt>
+<dd class="field-odd"><p>Control ID</p>
+</dd>
+</dl>
+<p>Locate the control with the specified ID. If it doesn’t exist in the content, it recursively looks in the content of the control.However, the content list is not included in the search. This ensures that the control is unique.</p>
 </dd></dl>
 
-<span class="target" id="getindex"></span><dl class="function">
-<dt id="_CPPv28getIndex4uint">
-<span id="getIndex__uint"></span>int <code class="descclassname"></code><code class="descname">getIndex</code><span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28getIndex4uint" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Parameters uint ctrlId:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Control ID</td>
-</tr>
-</tbody>
-</table>
-<p>It looks for whether the specified control ID is stored in what number. If not found , it returns -1. This function does not search recursively unlike the 「find」.</p>
-<p>you can use a index value as an argument of [N]. Thereby enabling high-speed access.</p>
+<dl class="method">
+<dt id="method-CWinContents.getIndex">
+int <code class="descname">getIndex</code> <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.getIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Param uint ctrlId</dt>
+<dd class="field-odd"><p>Control ID</p>
+</dd>
+</dl>
+<p>Locates the position of the specified control ID in the list. If not found, -1 is returned. Unlike find, it does not search recursively.</p>
+<p>The returned index value can be used with this [N] for fast access.</p>
 </dd></dl>
 
-<dl class="member">
-<dt>
-<code class="descname">CWinCtrlBase this[N]</code></dt>
-<dd><p>You can use the index value obtained by 「 <a class="reference internal" href="#getindex"><span>getIndex</span></a> 」.</p>
+<dl class="indexer">
+<dt id="indexer-CWinContents.this[]">
+<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">this</code><code class="descclassname">[, int <em>N</em>]</code> { <em class="property">get;</em> }<a class="headerlink" href="#indexer-CWinContents.this[]" title="Permalink to this definition">¶</a></dt>
+<dd><p>You can use the index value obtained by ” <span class="xref std std-ref">getIndex</span> ” .</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv25count">
-<span id="count__i"></span>int <code class="descclassname"></code><code class="descname">count</code><a class="headerlink" href="#_CPPv25count" title="Permalink to this definition">¶</a></dt>
-<dd><p>It returns the number of controls in the contents.</p>
+<dl class="property">
+<dt id="property-CWinContents.count">
+int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of controls in the content.</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv29clipState">
-<span id="clipState__ClipRect::State"></span>ClipRect::State <code class="descclassname"></code><code class="descname">clipState</code><a class="headerlink" href="#_CPPv29clipState" title="Permalink to this definition">¶</a></dt>
-<dd><p>It uses for the contents included within the contents list. (ex: <a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a> , <a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a> ).</p>
+<dl class="property">
+<dt id="property-CWinContents.clipState">
+ClipRect.State <code class="descname">clipState</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.clipState" title="Permalink to this definition">¶</a></dt>
+<dd><p>It uses for the contents included within the contents list. (ex: <a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a> , <a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a> ).</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>ClipRect.State.Inside</dt>
-<dd><p class="first last">Completely within the region</p>
+<div><dl class="simple">
+<dt>ClipRect.State.Inside</dt><dd><p>Completely within the region</p>
 </dd>
-<dt>ClipRect.State.Clipped</dt>
-<dd><p class="first last">Clipping is necessary.</p>
+<dt>ClipRect.State.Clipped</dt><dd><p>Clipping is necessary.</p>
 </dd>
-<dt>ClipRect.State.Outside</dt>
-<dd><p class="first last">Rendering is unnecessary (completely outside the region)</p>
+<dt>ClipRect.State.Outside</dt><dd><p>Rendering is unnecessary (completely outside the region)</p>
 </dd>
 </dl>
 </div></blockquote>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv25width">
-<span id="width__float"></span>float <code class="descclassname"></code><code class="descname">width</code><a class="headerlink" href="#_CPPv25width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the width of the contents. It is automatically calculated from the size of the control.</p>
+<dl class="property">
+<dt id="property-CWinContents.width">
+float <code class="descname">width</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the width of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26height">
-<span id="height__float"></span>float <code class="descclassname"></code><code class="descname">height</code><a class="headerlink" href="#_CPPv26height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the height of the contents. It is automatically calculated from the size of the control.</p>
+<dl class="property">
+<dt id="property-CWinContents.height">
+float <code class="descname">height</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the height of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv24size">
-<span id="size__Vector2"></span>Vector2 <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv24size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the size of the contents. It is automatically calculated from the size of the control.</p>
+<dl class="property">
+<dt id="property-CWinContents.size">
+Vector2 <code class="descname">size</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the size of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv28position">
-<span id="position__Vector3"></span>Vector3 <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv28position" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display position of contents</p>
+<dl class="property">
+<dt id="property-CWinContents.position">
+Vector3 <code class="descname">position</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display position of the content</p>
 </dd></dl>
 
-<dl class="member">
-<dt id="_CPPv26parent">
-<span id="parent__CWinCtrlBase"></span>CWinCtrlBase <code class="descclassname"></code><code class="descname">parent</code><a class="headerlink" href="#_CPPv26parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a parent of this contents.</p>
-<p>if the parent of this contents is <a class="reference internal" href="CWindowBase.html#cwindowbase"><span>CWindowBase</span></a> ,it returns a null.</p>
+<dl class="property">
+<dt id="property-CWinContents.parent">
+<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the control that is the parent of the content.</p>
 </dd></dl>
 
-</div>
+<p>if the parent of this contents is <a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> ,it returns a null.</p>
+</dd></dl>
+
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlText.html" class="btn btn-neutral float-right" title="CWinCtrlText" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlText.html" class="btn btn-neutral float-right" title="CWinCtrlText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlBase.html" class="btn btn-neutral" title="CWinCtrlBase" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlBase.html" class="btn btn-neutral float-left" title="CWinCtrlBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -370,11 +378,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -387,36 +395,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -1,0 +1,80 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlMeter:
+
+====================
+CWinCtrlMeter
+====================
+
+ スクリプト: :ref:`METER`
+
+ メータを表示するためのコントロールです。
+ 
+ プログレスバーなどに使えます。
+
+ :ref:`TEXTURE` と同様に最大8枚まで重ねて表示することが可能です。
+ 
+ 任意のテクスチャパーツの伸縮を設定可能です。
+
+ 長さを１に設定すると、ちょうど :ref:`TEXTURE` と同じ見た目で表示されるようになっています。
+
+:ref:`CWindowBase` に届くコールバック
+
+ METERは、デフォルトでNOHITになっています。
+ コールバックを受け取りたいときは、STYLEにHITを指定し忘れないでください。
+
+  :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+  :meth:`void onHold(CWinCtrlBase cCtrl)<CWindowBase.onHold>`
+
+  :meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)<CWindowBase.onBeginDrag>`
+
+  :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  :meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)<CWindowBase.onDragRender>`
+
+  :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+  :meth:`void onDropGround(CWinCtrlBase cCtrl)<CWindowBase.onDropGround>`
+
+
+
+.. class:: CWinCtrlMeter
+
+ *固有の関数/プロパティ*
+
+ .. method:: float meter(int index)
+
+  :param int index: テクスチャパーツ番号
+  :return float: メータの長さ
+
+ 指定されたテクスチャ番号のパーツが元のサイズから何割の長さに設定されているか取得する.
+
+ 0 ～ 1で値が返ってきます。
+
+ デフォルトでは、1が設定されています(メータがマックスの状態)
+
+ .. method:: void setMeter(int index,float value,float speed = 0.2f)
+
+  :param int index: テクスチャパーツ番号
+  :param float value: メータの長さ(0～1)
+  :param float speed = 0.2f: アニメーション速度
+
+ 指定されたテクスチャ番号のパーツのサイズをアニメーション付で変更します。
+
+
+
+*使用例*
+
+.. code-block:: csharp
+
+ // get control
+ CWinCtrlMeter	mtrLoading = find(METER_Loading) as CWinCtrlMeter;
+
+ // Get Meter Position (0 … 1.)
+ float pos = mtrLoading.meter(3);
+
+ // Set 3rd texture part stretch (It can be specified as 0 … 1.)
+ mtrLoading.setMeter(3,0.5f);
+
+

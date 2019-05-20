@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The texture &mdash; WindowSystem 1.07 documentation</title>
+  <title>The texture &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="Font" href="SpriteFont.html"/>
-        <link rel="prev" title="Mul ID,FiveCC" href="id.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Font" href="SpriteFont.html" />
+    <link rel="prev" title="Mul ID,FiveCC" href="id.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,19 +81,22 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">The texture</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The texture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">How to make a texture resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parts-def">The definition file &#64;parts.def</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">Texture Format</a></li>
@@ -135,6 +138,10 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
@@ -173,13 +180,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -212,9 +215,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -227,34 +230,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>The texture</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>The texture</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/TextureResource.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/TextureResource.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -263,15 +286,15 @@
   <div class="section" id="textureresource">
 <span id="id1"></span><h1>The texture<a class="headerlink" href="#textureresource" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>Please refer <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>here</span></a> to access the texture resources on C#.</p>
+<div><p>Please refer <span class="xref std std-ref">here</span> to access the texture resources on C#.</p>
 <p>This window system uses what summarizes some of the texture(texture atlas). And when do the texture atlas,the summarized texture automatically reduces color to 16 bit by dithering.</p>
 <p>If you want, when do the texture atlas, the summarized texture automatically reduced color to 16bit with dithering.</p>
 <p>It can be chosen whether to perform dithering for each part.</p>
-<p>■Texture part</p>
+<p><em>Texture part</em></p>
 <blockquote>
-<div><p>It can also be called a &#8220;part&#8221;. This is part of the texture atlas.</p>
+<div><p>It can also be called a “part”. This is part of the texture atlas.</p>
 </div></blockquote>
-<p>■The texture</p>
+<p><em>The texture</em></p>
 <blockquote>
 <div><p>When referred to as a texture in this document ,it is the summraized texture(texture atlas).In addition, in order to clearly separate the normal texture , sometimes referred to as a texture resource.</p>
 </div></blockquote>
@@ -280,82 +303,78 @@
 <h2>How to make a texture resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p class="first">Start your Unity Project.</p>
-</li>
-<li><p class="first">Create a folder with <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> under the &#8220;TextureResource&#8221; folder in your project (&#8220;Assets/KsSoft/TextureResource&#8221;).</p>
-</li>
-<li><p class="first">Place textures in the folder .</p>
-</li>
-<li><p class="first">Highlight a folder, please select the [Right-Click] → [Export] (multiple can be selected).</p>
-</li>
+<li><p>Start your Unity Project.</p></li>
+<li><p>Create a folder with <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a> under the “TextureResource” folder in your project (“Assets/KsSoft/TextureResource”).</p></li>
+<li><p>Place textures in the folder .</p></li>
+<li><p>Highlight a folder, please select the [Right-Click] → [Export] (multiple can be selected).</p></li>
 </ol>
 <blockquote>
 <div><img alt="_images/TextureResource.png" src="_images/TextureResource.png" />
 </div></blockquote>
-<p>Thus, the asset bundle named 100_000_00000.unity3d is generated under the &#8220;assetbundles&#8221; folder.</p>
-<p>■The texture name constraints</p>
+<p>Thus, the asset bundle named 100_000_00000.unity3d is generated under the “assetbundles” folder.</p>
+<p><em>The texture name constraints</em></p>
 <p>The name of the texture atlas must be 5 characters , except for the extension .</p>
-<p>It is encoded as <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
-<p>Other, you can use the <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> file name.</p>
+<p>It is encoded as <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> .</p>
+<p>Other, you can use the <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a> file name.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">BTN00</span><span class="p">.</span><span class="n">pgn</span>
-<span class="m">000</span><span class="n">_000_00010</span><span class="p">.</span><span class="n">png</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BTN00</span><span class="o">.</span><span class="n">pgn</span>
+<span class="mf">000_000_00010.</span><span class="n">png</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>■The folder name constraints</p>
-<p>It must be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</p>
-<p>Asset bundles because thease are managed by <a class="reference internal" href="id.html#mulid"><span>MulID</span></a> .</p>
+<div><p><em>The folder name constraints</em></p>
+<p>It must be <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a> .</p>
+<p>Asset bundles because thease are managed by <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a> .</p>
 </div></blockquote>
 </div>
 <div class="section" id="parts-def">
 <span id="id3"></span><h2>The definition file &#64;parts.def<a class="headerlink" href="#parts-def" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>If a &#8220;&#64;parts.def&#8221; placed in the texture folder, texture parts are converted along the definition file.</p>
+<div><p>If a “&#64;parts.def” placed in the texture folder, texture parts are converted along the definition file.</p>
 <p>Because it is a simple text file , you can write it with your favorite editor.</p>
 <p>The file encoding is UTF8.</p>
 </div></blockquote>
 <p>Choose whether to convert to a resource.</p>
 <hr class="docutils" />
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="n">ON</span><span class="p">/</span><span class="n">OFF</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RESOURCE</span> <span class="o">=</span> <span class="n">ON</span><span class="o">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
-<div><p>When you enable RESOURCE, It create two files as follows under the &#8220;KsSoft/Resources/&#8221; folder.</p>
+<div><p>When you enable RESOURCE, It create two files as follows under the “KsSoft/Resources/” folder.</p>
 <ul class="simple">
-<li>001_000_00000.spr</li>
-<li>001_000_00000.tex</li>
+<li><p>001_000_00000.spr</p></li>
+<li><p>001_000_00000.tex</p></li>
 </ul>
 </div></blockquote>
 <p>This is not loaded by assetbundle,It is loaded this two file from resources. The default is that output to assetbundles.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RESOURCE</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <div class="section" id="id4">
 <h3>Texture Format<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">FORMAT</span> <span class="p">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FORMAT</span> <span class="o">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>The default texture format is <a class="reference external" href="http://docs.unity3d.com/ScriptReference/TextureFormat.html">RGBA4444</a> .</p>
-<p>Otherwise, it is possible to set a <a class="reference internal" href="#png-jpg"><span>PNG or JPG</span></a> .</p>
+<p>Otherwise, it is possible to set a <a class="reference internal" href="#png-jpg"><span class="std std-ref">PNG or JPG</span></a> .</p>
 <p>Except when you want to specify a 16bit texture, please dithering to OFF.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-<span class="n">FORMAT</span> <span class="p">=</span> <span class="n">RGBA32</span><span class="p">;</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+<span class="n">FORMAT</span> <span class="o">=</span> <span class="n">RGBA32</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -367,24 +386,22 @@
 <p>However, when it is loaded on the application, it is deployed as 32bit texture.</p>
 <p>Please use it consider the advantages and disadvantages.</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="30%" />
-<col width="70%" />
+<col style="width: 30%" />
+<col style="width: 70%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Format</p>
-</th>
-<th class="head"><p class="first last">Texture formats on application</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Texture formats on application</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>FORMAT = PNG;</td>
-<td>ARGB32</td>
+<tbody>
+<tr class="row-even"><td><p>FORMAT = PNG;</p></td>
+<td><p>ARGB32</p></td>
 </tr>
-<tr class="row-odd"><td>FORMAT = JPG;</td>
-<td>RGB24</td>
+<tr class="row-odd"><td><p>FORMAT = JPG;</p></td>
+<td><p>RGB24</p></td>
 </tr>
 </tbody>
 </table>
@@ -398,15 +415,15 @@
 <div><p>Because it is deployed as a 32bit texture,it uses a lot of VRAM and main memory.</p>
 <p>In addition, the rendering becomes heavier.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">On a narrow memory bandwidth smartphone, your application performance becomes degradation.</p>
+<p class="admonition-title">Note</p>
+<p>On a narrow memory bandwidth smartphone, your application performance becomes degradation.</p>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="id6">
 <h3>The default value for dithering<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">/</span><span class="n">OFF</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="o">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
@@ -414,21 +431,21 @@
 <p>When you do not specify, you can be selected either whether to default values.</p>
 <p>In this example, partA is done the dithering, partB is not done.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id7">
 <h3>Switching of the shader<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;SHADER PATH&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHADER</span> <span class="o">=</span> <span class="s2">&quot;SHADER PATH&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
@@ -436,10 +453,10 @@
 <p>You can not switch the shaders for each texture part.</p>
 <p>But you can assign a shader to the texture resource.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;Custom/Billboard&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHADER</span> <span class="o">=</span> <span class="s2">&quot;Custom/Billboard&quot;</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;blck&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;blck&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -449,30 +466,30 @@
 <blockquote>
 <div><p>Texture part definitions can be defined in the form such as follows.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>PART(Texture part file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="n">Texture</span> <span class="n">part</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 
-PART(Alias name,Texture part file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<span class="n">PART</span><span class="p">(</span><span class="n">Alias</span> <span class="n">name</span><span class="p">,</span><span class="n">Texture</span> <span class="n">part</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>You can assign a different name for one texture part. This makes it possible to act as parts with different properties in the same part.</p>
-<p>For example, these are defined as follows. If you use &#8220;BTN00&#8221;, the window system renders it as it is. On the other hand,if you use &#8220;BTN01&#8221;, it is rendered dark.</p>
+<p>For example, these are defined as follows. If you use “BTN00”, the window system renders it as it is. On the other hand,if you use “BTN01”, it is rendered dark.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">,</span><span class="s">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">,</span><span class="s2">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -491,7 +508,7 @@ PART(Alias name,Texture part file name) {
 <h4>DITHER = ON/OFF;<a class="headerlink" href="#dither-on-off" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>It is possible to select whether or not dithering a part.</p>
-<p>When the dithering is enabled,it is dithered with the &#8220;Jarvis, Judice, and Ninke&#8221; dithering.</p>
+<p>When the dithering is enabled,it is dithered with the “Jarvis, Judice, and Ninke” dithering.</p>
 <p>The default is ON.</p>
 </div></blockquote>
 </div>
@@ -513,9 +530,9 @@ PART(Alias name,Texture part file name) {
 <blockquote>
 <div><p>When a texture part is stretched,widths of left and right is fixed, and only the middle is stretched.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE3H</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE3H</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -531,9 +548,9 @@ PART(Alias name,Texture part file name) {
 <blockquote>
 <div><p>When a texture part is stretched,heights of top and bottom is fixed, and only the middle is stretched.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE3V</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE3V</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -549,9 +566,9 @@ PART(Alias name,Texture part file name) {
 <blockquote>
 <div><p>When a texture part is stretched, the four sides of the specified size is fixed and  only the middle  is stretched.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;FRAME&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE9</span> <span class="p">=</span> <span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE9</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -565,16 +582,16 @@ PART(Alias name,Texture part file name) {
 <blockquote>
 <div><p>The include path is set to the following path.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">TextureResource</span><span class="o">/</span><span class="n">include</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id11">
 <h3>&#64;parts.def file that is automatically included<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>When you convert a texture resource, the &#8220;tr.h&#8221; is automatically included in &#8220;&#64;part.def&#8221;.</p>
+<div><p>When you convert a texture resource, the “tr.h” is automatically included in “&#64;part.def”.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">tr</span><span class="p">.</span><span class="n">h</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">TextureResource</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">tr</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
 </div>
@@ -584,71 +601,54 @@ PART(Alias name,Texture part file name) {
 <blockquote>
 <div><p>You can use the same as C language preprocessor.</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Preprocessor</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preprocessor</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><p class="first last">// Comment</p>
-</td>
-<td><p class="first last">Line comment</p>
-</td>
+<tbody>
+<tr class="row-even"><td><p>// Comment</p></td>
+<td><p>Line comment</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">/* Comment */</p>
-</td>
-<td><p class="first last">Block comment</p>
-</td>
+<tr class="row-odd"><td><p>/* Comment */</p></td>
+<td><p>Block comment</p></td>
 </tr>
-<tr class="row-even"><td><p class="first last">#include &#8220;file name&#8221;</p>
-</td>
-<td><p class="first last">Include the file</p>
-</td>
+<tr class="row-even"><td><p>#include “file name”</p></td>
+<td><p>Include the file</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#define constant</p>
-</td>
-<td><p class="first last">Definition of a symbolic constant</p>
-</td>
+<tr class="row-odd"><td><p>#define constant</p></td>
+<td><p>Definition of a symbolic constant</p></td>
 </tr>
-<tr class="row-even"><td><p class="first last">#define Function macro</p>
-</td>
-<td><p class="first last">Function macro</p>
-</td>
+<tr class="row-even"><td><p>#define Function macro</p></td>
+<td><p>Function macro</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#if defined(symbol definition) ～ #endif</p>
-</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-odd"><td><p>#if defined(symbol definition) … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-even"><td>#ifdef ～ #endif</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-even"><td><p>#ifdef … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-odd"><td>#ifndef ～ #endif</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-odd"><td><p>#ifndef … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-even"><td>#pragma once</td>
-<td><p class="first last">Multiple include prevention</p>
-</td>
+<tr class="row-even"><td><p>#pragma once</p></td>
+<td><p>Multiple include prevention</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p><a class="reference external" href="http://docs.unity3d.com/ScriptReference/BuildTarget.html">BuildTarget</a>   is defined as a macro.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="cp">#if defined(StandaloneWindows)</span>
-   <span class="n">MS</span><span class="p">-</span><span class="n">Windows</span>
-<span class="cp">#else</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if defined(StandaloneWindows)</span>
+   <span class="n">MS</span><span class="o">-</span><span class="n">Windows</span>
+<span class="c1">#else</span>
    <span class="n">Other</span>
-<span class="cp">#endif</span>
+<span class="c1">#endif</span>
 </pre></div>
 </div>
 </div>
@@ -656,15 +656,16 @@ PART(Alias name,Texture part file name) {
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="SpriteFont.html" class="btn btn-neutral float-right" title="Font" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="SpriteFont.html" class="btn btn-neutral float-right" title="Font" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="id.html" class="btn btn-neutral" title="Mul ID,FiveCC" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="id.html" class="btn btn-neutral float-left" title="Mul ID,FiveCC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -673,11 +674,11 @@ PART(Alias name,Texture part file name) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -690,36 +691,15 @@ PART(Alias name,Texture part file name) {
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

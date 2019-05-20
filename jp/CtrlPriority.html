@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>コントロールのプライオリティについて &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>コントロールのプライオリティについて &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="コントロールのサイズについて" href="CtrlSize.html"/>
-        <link rel="prev" title="コントロールの配置について" href="CtrlAnchor.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="コントロールのサイズについて" href="CtrlSize.html" />
+    <link rel="prev" title="コントロールの配置について" href="CtrlAnchor.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -108,13 +112,17 @@
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">ウィンドウプライオリティについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">コントロールの配置について</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">コントロールのプライオリティについて</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">コントロールのプライオリティについて</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id">同一のテクスチャIDが指定されているとき</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">プライオリティが同一の時</a></li>
 </ul>
@@ -156,10 +164,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -192,7 +196,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -207,34 +211,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>コントロールのプライオリティについて</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>コントロールのプライオリティについて</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CtrlPriority.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CtrlPriority.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -255,58 +279,58 @@
 <p>このウィンドウは、フォントメッシュとテクスチャメッシュから構成されています。</p>
 <blockquote>
 <div><ul class="simple">
-<li>fn40</li>
-<li>fn30</li>
-<li>100_000_00001</li>
-<li>100_010_00000</li>
+<li><p>fn40</p></li>
+<li><p>fn30</p></li>
+<li><p>100_000_00001</p></li>
+<li><p>100_010_00000</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
 <div class="section" id="id">
 <h2>同一のテクスチャIDが指定されているとき<a class="headerlink" href="#id" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div><p>コントロールのプロパティである、 <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> によって設定可能です。</p>
-<p><a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span>PRIORITY</span></a> の値が大きいほど手前に表示されます。</p>
-</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">100</span><span class="p">,</span><span class="m">100</span><span class="p">;</span>
-  <span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">;</span>
-  <span class="n">PRIORITY</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div><p>コントロールのプロパティである、 <a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span class="std std-ref">PRIORITY</span></a> によって設定可能です。</p>
+<p><a class="reference internal" href="CtrlProp.html#ctrl-prop-priority"><span class="std std-ref">PRIORITY</span></a> の値が大きいほど手前に表示されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUTTON</span><span class="p">(</span><span class="n">Button</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ID</span> <span class="o">=</span> <span class="mi">001_000_00010</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">;</span>
+  <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>
+  <span class="n">PRIORITY</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
+</div></blockquote>
 <div class="section" id="id2">
 <h3>プライオリティが同一の時<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>プライオリティが同一の時は、コントロールの種類に応じて自動的にソートされます。</p>
 <p>上にあるものほど、手前にレンダリングされます。</p>
 <ul class="simple">
-<li>SCROLLBAR</li>
-<li>LISTBOX</li>
-<li>LISTBOXEX</li>
-<li>CONTAINER</li>
-<li>TEXT</li>
-<li>RICHTEXT</li>
-<li>LOG</li>
-<li>LOGTEXT</li>
-<li>BUTTON</li>
-<li>CHECKBOX</li>
-<li>RADIO</li>
-<li>HELPBUTTON</li>
-<li>EDITBOX</li>
-<li>TEXTBOX</li>
-<li>METER</li>
-<li>ICON</li>
-<li>CARD</li>
-<li>TEXTURE</li>
-<li>RENDER</li>
-<li>RENDERICON</li>
-<li>RECASTICON</li>
-<li>LINE</li>
-<li>LABEL</li>
-<li>FRAME</li>
-<li>BAR</li>
+<li><p>SCROLLBAR</p></li>
+<li><p>LISTBOX</p></li>
+<li><p>LISTBOXEX</p></li>
+<li><p>CONTAINER</p></li>
+<li><p>TEXT</p></li>
+<li><p>RICHTEXT</p></li>
+<li><p>LOG</p></li>
+<li><p>LOGTEXT</p></li>
+<li><p>BUTTON</p></li>
+<li><p>CHECKBOX</p></li>
+<li><p>RADIO</p></li>
+<li><p>HELPBUTTON</p></li>
+<li><p>EDITBOX</p></li>
+<li><p>TEXTBOX</p></li>
+<li><p>METER</p></li>
+<li><p>ICON</p></li>
+<li><p>CARD</p></li>
+<li><p>TEXTURE</p></li>
+<li><p>RENDER</p></li>
+<li><p>RENDERICON</p></li>
+<li><p>RECASTICON</p></li>
+<li><p>LINE</p></li>
+<li><p>LABEL</p></li>
+<li><p>FRAME</p></li>
+<li><p>BAR</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -315,53 +339,52 @@
 <h2>テクスチャIDが異なるとき<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>テクスチャIDが異なるときは、コントロールのプライオリティよりもテクスチャのＺオフセットが優先されます。</p>
-<p>テクスチャのＺオフセットを設定するには、WINDOWのプロパティである、 <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> を使います。</p>
+<p>テクスチャのＺオフセットを設定するには、WINDOWのプロパティである、 <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a> を使います。</p>
 <p>値が大きいものほど、奥に表示されます。</p>
-</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">WINDOW</span><span class="p">(</span><span class="m">100</span><span class="n">_100_00010</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">TEX_ID</span> <span class="p">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
-  <span class="n">STYLE</span> <span class="p">=</span> <span class="n">POPUP</span><span class="p">|</span><span class="n">NOFRAME</span><span class="p">|</span><span class="n">NOTITLEBAR</span><span class="p">;</span>
-  <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_100_00000</span><span class="p">,-</span><span class="m">1</span><span class="p">;</span>
-  <span class="n">TEXTURE_ZOFFSET</span> <span class="p">=</span> <span class="m">100</span><span class="n">_010_00000</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
-  <span class="n">POSITION</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">;</span>
-  <span class="n">SCREEN</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="n">RELATIVE_SIZE</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="n">RELATIVE_SIZE</span><span class="p">(-</span><span class="n">BASEY</span><span class="p">);</span>
-  <span class="n">SIZE</span> <span class="p">=</span> <span class="n">WIN_W</span><span class="p">,</span><span class="n">WIN_H</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WINDOW</span><span class="p">(</span><span class="mi">100_100_00010</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">TEX_ID</span> <span class="o">=</span> <span class="n">DEFAULT_TEXTURE</span><span class="p">;</span>
+  <span class="n">STYLE</span> <span class="o">=</span> <span class="n">POPUP</span><span class="o">|</span><span class="n">NOFRAME</span><span class="o">|</span><span class="n">NOTITLEBAR</span><span class="p">;</span>
+  <span class="n">TEXTURE_ZOFFSET</span> <span class="o">=</span> <span class="mi">100_100_00000</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="n">TEXTURE_ZOFFSET</span> <span class="o">=</span> <span class="mi">100_010_00000</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
+  <span class="n">POSITION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span>
+  <span class="n">SCREEN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,{</span><span class="mi">100</span><span class="p">},{</span><span class="o">-</span><span class="n">BASEY</span><span class="p">};</span>
+  <span class="n">SIZE</span> <span class="o">=</span> <span class="n">WIN_W</span><span class="p">,</span><span class="n">WIN_H</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>この例では、次の順番に表示されます。</p>
+<p>この例では、次の順番に表示されます。</p>
 <ul class="simple">
-<li>100_100_00000    手前</li>
-<li>DEFAULT_TEXTURE</li>
-<li>100_010_00000    再背面</li>
+<li><p>100_100_00000    手前</p></li>
+<li><p>DEFAULT_TEXTURE</p></li>
+<li><p>100_010_00000    再背面</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">Zオフセットを明示的に指定しなかったとき、デフォルトテクスチャとして設定したメッシュより手前に、レンダリングされるようにシステム側でＺオフセットを設定します。
+<p class="admonition-title">注釈</p>
+<p>Zオフセットを明示的に指定しなかったとき、デフォルトテクスチャとして設定したメッシュより手前に、レンダリングされるようにシステム側でＺオフセットを設定します。
 その順番はシステム側で処理されるため、厳密に制御が困難です。
-3枚以上のテクスチャを一つのウィンドウで使うときは、明示的に <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> を指示するようにしてください。</p>
+3枚以上のテクスチャを一つのウィンドウで使うときは、明示的に <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a> を指示するようにしてください。</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p>レンダーターゲットとして生成されたメッシュについても、 <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span>TEXTURE_ZOFFSET</span></a> でレンダリング順序を指定可能です。</p>
-<p class="last"><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> 、 <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a> を参照ください。</p>
+<p class="admonition-title">注釈</p>
+<p>レンダーターゲットとして生成されたメッシュについても、 <a class="reference internal" href="WINDOW.html#window-prop-texture-zoffset"><span class="std std-ref">TEXTURE_ZOFFSET</span></a> でレンダリング順序を指定可能です。
+<a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a> 、 <a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a> を参照ください。</p>
 </div>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CtrlSize.html" class="btn btn-neutral float-right" title="コントロールのサイズについて" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CtrlSize.html" class="btn btn-neutral float-right" title="コントロールのサイズについて" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CtrlAnchor.html" class="btn btn-neutral" title="コントロールの配置について" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CtrlAnchor.html" class="btn btn-neutral float-left" title="コントロールの配置について" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -370,11 +393,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -387,37 +410,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

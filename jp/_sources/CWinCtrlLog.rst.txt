@@ -1,0 +1,159 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlLog:
+
+====================
+CWinCtrlLog
+====================
+
+ スクリプト: :ref:`LOG`
+
+ チャットログのためのコントロールです。
+ 
+ コンテンツを複製し、それを一行とします。
+ 
+ リストボックスと違い、コンテンツの最大数が設定でき、それ以上のコンテンツを追加しようとしたとき、内部で循環(一番古いものが破棄されます)するようになっています。
+ 
+ :ref:`LOGTEXT` 以外のコントロールもコンテンツとして入れることができます。
+
+:ref:`CWindowBase` に届くコールバック
+
+ :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  領域をドラッグしたとき呼び出されます。
+  :ref:`ロック<LISTBOX_STYLE>` しているときだけ、このコールバックは呼ばれます。
+
+ :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+
+.. class:: CWinCtrlLog
+
+ *固有の関数/プロパティ*
+
+ .. method:: void resize(int count)
+
+  :param int count: ログのサイズ
+  
+  Listboxでは、コンテンツの数に相当しますが、ここでは保持可能な最大ログ数になります。
+
+ .. property:: int count { get; }
+
+  Listboxでは、コンテンツリスト内のコンテンツ数になりますが、ここでは保持しているログの数になります。
+
+  resizeで設定した値より、大きくなることはありません。
+
+ .. method:: void clearLog()
+
+  現在保持しているログを全てクリアにし、空にします。
+
+ .. method:: CWinCtrlLogText add(string text,WinColor color)
+  
+  :param string text: 追加する文字列
+  :param WinColor color: 文字列のカラー
+  :return CWinCtrlLogText: 文字列を設定したログテキストコントロール
+  
+  ログを追加するために、まずコンテンツを内部的に追加します(若しくは再利用します)。
+  
+  そのコンテンツ内から、 :ref:`CWinCtrlLogText` を探し、そのコントロールのキャプションに指定された文字列とカラーを設定します。
+
+  戻り値の :ref:`CWinCtrlLogText` から追加されたコンテンツを取得することができます。
+  
+ ::
+
+    CWinCtrlLogText ltChat = lgChat.add(strSentence,WinColor.white);
+    //Access to content that contains the added LogText.
+    CWinContents contents = ltChat.parent;
+
+ ..
+
+ .. property:: Vector2 viewsize { get; set; }
+
+  リストボックスのサイズとなります。
+  sizeプロパティと同等です。
+
+ .. property:: Vector2 screensize { get; set; }
+
+  リストボックスの仮想画面のサイズです。
+  コンテンツリスト内の全ての高さの総和になります。
+
+ .. property:: Vector2 offset { get; set; }
+
+  リストボックスが仮想画面のどこをポイントしているかを表しています。
+  値を設定すると一気に移動します。
+  滑らかにアニメーションさせながら移動させたいときは、 :meth:`setSmoothOffset<CWinCtrlLog.setSmoothOffset>` を使ってください。
+
+ .. property:: bool isSwipe { get; }
+
+  スワイプ中かどうか判定します。
+
+ .. method:: void setSmoothOffset(Vector2 offset,float spd)
+
+  :param Vector2 offset: 設定したい最終オフセット
+  :param float spd: 速度
+  
+  
+ .. property:: Vector2 smoothOffset { get; set; }
+
+  0.25の速度で、 :meth:`setSmoothOffset<CWinCtrlLog.setSmoothOffset>` したのと同じ振る舞いになります。
+
+ .. property:: bool isSmoothScrolled { get; }
+
+  setSmoothOffsetによるスクロールアニメーションかどうかを取得できます。
+
+ .. method:: Vector2 getContentsOffset(int index,e_Anchor eAnchor)
+  
+  :param int index: 取得したいコンテンツオフセットのインデックス
+  :param e_Anchor eAnchor: コンテンツがどの位置に来ることを望むかをアンカーで指定する
+  
+  特定のコンテンツが指定したアンカー位置に沿って表示されるようなオフセットを取得できます。
+
+  リストボックスが縦方向の時は次の通りです。
+
+  +------------------------------+--------------------------------------------+
+  |e_Anchor                      |位置                                        |
+  +==============================+============================================+
+  |Bottom,LeftBottom,RightBottom |コンテンツが一番下に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+  |Top,LeftTop,RightTop          |コンテンツが一番上に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+  |Center,Left,Right             |コンテンツが真ん中に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+
+  リストボックスが横方向の時は次の通りです。
+
+  +------------------------------+--------------------------------------------+
+  |e_Anchor                      |位置                                        |
+  +==============================+============================================+
+  |Left,LeftBottom,LeftTop       |コンテンツが一番左に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+  |Right,RightBottom,RightTop    |コンテンツが一番右に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+  |Center,Top,Bottom             |コンテンツが真ん中に来るようなオフセット値  |
+  +------------------------------+--------------------------------------------+
+
+.. _CWinCtrlLog_Example:
+
+*使用例*
+
+.. code-block:: csharp
+
+ CWinCtrlLog	lgChat = find<CWinCtrlLog>(LOG_Chat);
+
+ lgChat.resize(10);
+
+ string strSentence;
+ CWinCtrlLogText ltChat = lgChat.add(strSentence,WinColor.white);
+
+ CWinContents contents = ltChat.parent;
+
+..
+
+
+*ログをクリアする方法*
+
+.. code-block:: csharp
+
+ //log clear
+ lgChat.clearLog();
+
+..

@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CWinCtrlCheckbox &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>CWinCtrlCheckbox &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="CWinCtrlTexture" href="CWinCtrlTexture.html"/>
-        <link rel="prev" title="CWinCtrlRadio" href="CWinCtrlRadio.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="CWinCtrlTexture" href="CWinCtrlTexture.html" />
+    <link rel="prev" title="CWinCtrlRadio" href="CWinCtrlRadio.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -106,6 +110,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -149,10 +157,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -166,12 +170,7 @@
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">CWinCtrlTextbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">CWinCtrlCheckbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cwindowbase">CWindowBaseに届くコールバック</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">固有の関数/プロパティ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用例</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWinCtrlCheckbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a></li>
@@ -190,7 +189,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -205,34 +204,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>CWinCtrlCheckbox</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWinCtrlCheckbox</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CWinCtrlCheckbox.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CWinCtrlCheckbox.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -241,199 +260,89 @@
   <div class="section" id="cwinctrlcheckbox">
 <span id="id1"></span><h1>CWinCtrlCheckbox<a class="headerlink" href="#cwinctrlcheckbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>スクリプト: <a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></p>
+<div><p>スクリプト: <a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p>
 <p>チェックボックスボタンを実現するためのコントロールです。</p>
 <p>ボタン同様、７つまでバッジを表示することができます。</p>
-<p><a class="reference internal" href="CHECKBOX.html#checkbox-contents"><span>コンテンツ</span></a> を持つことができ、ONの時だけ関連付いたコンテンツをアクティブにすることも可能です。</p>
+<p><a class="reference internal" href="CHECKBOX.html#checkbox-contents"><span class="std std-ref">コンテンツ</span></a> を持つことができ、ONの時だけ関連付いたコンテンツをアクティブにすることも可能です。</p>
 </div></blockquote>
-<div class="section" id="cwindowbase">
-<h2>CWindowBaseに届くコールバック<a class="headerlink" href="#cwindowbase" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="function">
-<dt id="_CPPv27onClick12CWinCtrlBase">
-<span id="onClick__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onClick</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv27onClick12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">タッチされたコントロール</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onHold12CWinCtrlBase">
-<span id="onHold__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onHold</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onHold12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">長押しされたコントロール</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv211onBeginDrag12CWinCtrlBase7Vector2">
-<span id="onBeginDrag__CWinCtrlBase.Vector2"></span>void <code class="descclassname"></code><code class="descname">onBeginDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211onBeginDrag12CWinCtrlBase7Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrag12CWinCtrlBase7Vector27Vector2">
-<span id="onDrag__CWinCtrlBase.Vector2.Vector2"></span>void <code class="descclassname"></code><code class="descname">onDrag</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Vector2 <em>pos</em>, Vector2 <em>dragVelocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrag12CWinCtrlBase7Vector27Vector2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Vector2 pos</strong> &#8211; ドラッグされているタッチ位置、若しくはマウスカーソルの位置(ウィンドウ上)</li>
-<li><strong>Vector2 dragVelocity</strong> &#8211; タッチ位置の変位</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDragRender12CWinCtrlBase9Transform">
-<span id="onDragRender__CWinCtrlBase.Transform"></span>bool <code class="descclassname"></code><code class="descname">onDragRender</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDragRender12CWinCtrlBase9Transform" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドラッグされたコントロール</li>
-<li><strong>Transform transform</strong> &#8211; ドラッグされたコントロールのトランスフォーム</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first">複製したコントロールをレンダリングするかどうかを選択する。</p>
-<ul class="last simple">
-<li>true: ドラッグ中のコントロールの複製をレンダリングする。</li>
-<li>false: ドラッグ中のコントロールの複製をレンダリングしない。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase">
-<span id="onDrop__CWinCtrlBase.CWindowBase.CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDrop</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em>, CWindowBase <em>cDragWindow</em>, CWinCtrlBase <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26onDrop12CWinCtrlBase11CWindowBase12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメタ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>CWinCtrlBase cCtrl</strong> &#8211; ドロップされたコントロール</li>
-<li><strong>CWindowBase cDragWindow</strong> &#8211; ドラッグされたコントロールの含まれるウィンドウ</li>
-<li><strong>CWinCtrlBase cDragCtrl</strong> &#8211; ドラッグされたコントロール</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv212onDropGround12CWinCtrlBase">
-<span id="onDropGround__CWinCtrlBase"></span>void <code class="descclassname"></code><code class="descname">onDropGround</code><span class="sig-paren">(</span>CWinCtrlBase <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212onDropGround12CWinCtrlBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">パラメタ CWinCtrlBase cCtrl:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">ドロップされたコントロール</td>
-</tr>
-</tbody>
-</table>
-<p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
-<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
-</dd></dl>
-
-</div>
-<div class="section" id="id2">
-<h2>固有の関数/プロパティ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="member">
-<dt id="_CPPv25check">
-<span id="check__b"></span>bool <code class="descclassname"></code><code class="descname">check</code><a class="headerlink" href="#_CPPv25check" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>チェックボックスボタンの状態を変更します。</p>
+<p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>true:</dt>
-<dd>ON状態にし、関連付いているコンテンツがあれば、アクティブにします。</dd>
-<dt>false:</dt>
-<dd>OFF状態にし、関連付いているコンテンツがあれば、非アクティブにし表示を抑制します。</dd>
-</dl>
+<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+</div></blockquote>
+<dl class="class">
+<dt id="class-CWinCtrlCheckBox">
+<code class="descname">class CWinCtrlCheckBox</code><a class="headerlink" href="#class-CWinCtrlCheckBox" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="property">
+<dt id="property-CWinCtrlCheckBox.check">
+bool <code class="descname">check</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlCheckBox.check" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<p>チェックボックスボタンの状態を変更します。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>true:</p></li>
+</ul>
+<blockquote>
+<div><p>ON状態にし、関連付いているコンテンツがあれば、アクティブにします。</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>false:</p></li>
+</ul>
+<blockquote>
+<div><p>OFF状態にし、関連付いているコンテンツがあれば、非アクティブにし表示を抑制します。</p>
+</div></blockquote>
 </div></blockquote>
 </dd></dl>
 
-</div>
-<div class="section" id="id3">
-<h2>使用例<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="highlight-csharp"><div class="highlight"><pre>// コントロールを取得する方法.
-CWinCtrlCheckbox       cbSelect = find&lt;CWinCtrlCheckbox&gt;(CHECKBOX_Select);
+<p><em>使用例</em></p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get control</span>
+<span class="n">CWinCtrlCheckbox</span>       <span class="n">cbSelect</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlCheckbox</span><span class="p">&gt;(</span><span class="n">CHECKBOX_Select</span><span class="p">);</span>
 
-if (cbSelect.check) {
-  ONの状態
-} else {
-  OFFの状態
-}
-// コンテンツ内から、BUTTON(A)を取得する
-// コンテナ内のコンテンツを次の通り、findでアクセス可能です
-CWinCtrlButton btnA = find&lt;CWinCtrlButton&gt;(BUTTON_A);
+<span class="k">if</span> <span class="p">(</span><span class="n">cbSelect</span><span class="p">.</span><span class="n">check</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//on</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">//off</span>
+<span class="p">}</span>
+<span class="c1">// Get BUTTON(A) from within content</span>
+<span class="c1">// Content in the container can be accessed by find as follows</span>
+<span class="n">CWinCtrlButton</span> <span class="n">btnA</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlButton</span><span class="p">&gt;(</span><span class="n">BUTTON_A</span><span class="p">);</span>
 
-// 押されたときのコールバック
-override protected void onClick(CWinCtrlBase cCtrl) {
-    switch (cCtrl.id) {
-      case CHECKBOX_Select:
-        //押されたときの処理
-        break;
-    }
-}
- // 長押しされたときのコールバック
-override protected void onHold(CWinCtrlBase cCtrl) {
-    switch (cCtrl.id) {
-      case CHECKBOX_Select:
-        //押されたときの処理
-        break;
-    }
-}
+<span class="c1">// click callback</span>
+<span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="n">CHECKBOX_Select</span><span class="p">:</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+ <span class="c1">// hold callback</span>
+<span class="k">override</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">onHold</span><span class="p">(</span><span class="n">CWinCtrlBase</span> <span class="n">cCtrl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">cCtrl</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="n">CHECKBOX_Select</span><span class="p">:</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
-</div>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CWinCtrlTexture.html" class="btn btn-neutral float-right" title="CWinCtrlTexture" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="CWinCtrlTexture.html" class="btn btn-neutral float-right" title="CWinCtrlTexture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="CWinCtrlRadio.html" class="btn btn-neutral" title="CWinCtrlRadio" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CWinCtrlRadio.html" class="btn btn-neutral float-left" title="CWinCtrlRadio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -442,11 +351,11 @@ override protected void onHold(CWinCtrlBase cCtrl) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -459,37 +368,15 @@ override protected void onHold(CWinCtrlBase cCtrl) {
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

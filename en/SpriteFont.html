@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Font &mdash; WindowSystem 1.07 documentation</title>
+  <title>Font &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="SoundEffect,BGM" href="soundeffect.html"/>
-        <link rel="prev" title="The texture" href="TextureResource.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SoundEffect,BGM" href="soundeffect.html" />
+    <link rel="prev" title="The texture" href="TextureResource.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,12 +81,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -96,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Font</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Font</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Created as a resource data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Created as an asset bundle data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bmfont">The font data generating method of BMFont</a><ul>
@@ -114,6 +117,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -154,13 +161,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -193,9 +196,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -208,34 +211,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Font</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Font</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/SpriteFont.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/SpriteFont.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -245,61 +268,62 @@
 <span id="id1"></span><h1>Font<a class="headerlink" href="#spritefont" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>It can handle four bitmap fonts as one of the font texture.</p>
-<p>When you convert these four bitmaps, it uses the α channel of the bitmap file. Four α channels are mapped to each channel(R,G,B,A) of a single texture.</p>
-<p>If the number of bitmap exceeds 4, it can&#8217;t  be handled as a single font data.</p>
+<p>When you convert these four bitmaps, it uses the A channel of the bitmap file. Four A channels are mapped to each channel(R,G,B,A) of a single texture.</p>
+<p>If the number of bitmap exceeds 4, it can’t  be handled as a single font data.</p>
 </div></blockquote>
 <div class="section" id="id2">
 <h2>Created as a resource data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Make a FontResource folder under the &#8220;Assets/KsSoft/&#8221; folder.</p>
-<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a>  under the folder.</p>
-<p>If you want to create a font named &#8220;cfn20&#8221;, you need to prepare the files such as follows.And you place these  in this location.</p>
+<div><p>Make a FontResource folder under the “Assets/KsSoft/” folder.</p>
+<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a>  under the folder.</p>
+<p>If you want to create a font named “cfn20”, you need to prepare the files such as follows.And you place these  in this location.</p>
 <blockquote>
 <div><ul class="simple">
-<li>cfn20.txt</li>
-<li>cfn20_0.png</li>
-<li>cfn20_1.png</li>
-<li>cfn20_2.png</li>
-<li>cfn20_3.png</li>
+<li><p>cfn20.txt</p></li>
+<li><p>cfn20_0.png</p></li>
+<li><p>cfn20_1.png</p></li>
+<li><p>cfn20_2.png</p></li>
+<li><p>cfn20_3.png</p></li>
 </ul>
 </div></blockquote>
-<p>You highlight the &#8220;cfn20.txt&#8221;, and choose the [Right-click]→[Export]. Files such as the following are generated under the &#8220;Resources&#8221; folder.</p>
+<p>You highlight the “cfn20.txt”, and choose the [Right-click]→[Export]. Files such as the following are generated under the “Resources” folder.</p>
 <blockquote>
 <div><ul class="simple">
-<li>cfn20.font</li>
-<li>cfn20.tex</li>
+<li><p>cfn20.font</p></li>
+<li><p>cfn20.tex</p></li>
 </ul>
 </div></blockquote>
-<p>By these steps,your application can use  the &#8220;cfn20&#8221; as a font data.</p>
+<p>By these steps,your application can use  the “cfn20” as a font data.</p>
 <img alt="_images/FontResource.png" src="_images/FontResource.png" />
 </div></blockquote>
 </div>
 <div class="section" id="id3">
 <h2>Created as an asset bundle data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Make a Fonts folder under the &#8220;Assets/KsSoft/&#8221; folder.</p>
-<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> under the folder.</p>
-<p>If you want to create a font named &#8220;fn16&#8221;, you need to prepare the files such as follows. And you place these in this location.</p>
+<div><p>Make a Fonts folder under the “Assets/KsSoft/” folder.</p>
+<p>You put the text file and bitmap files that are named with  <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> under the folder.</p>
+<p>If you want to create a font named “fn16”, you need to prepare the files such as follows. And you place these in this location.</p>
 <blockquote>
 <div><ul class="simple">
-<li>fn16.txt</li>
-<li>fn16_0.png</li>
-<li>fn16_1.png</li>
-<li>fn16_2.png</li>
-<li>fn16_3.png</li>
+<li><p>fn16.txt</p></li>
+<li><p>fn16_0.png</p></li>
+<li><p>fn16_1.png</p></li>
+<li><p>fn16_2.png</p></li>
+<li><p>fn16_3.png</p></li>
 </ul>
 </div></blockquote>
 <p>Also, when you want to use multiple fonts, put the number required by the same procedure.</p>
 <p>If you are ready, run the [Tools]-&gt;[KsSoft]-&gt;[Export Fonts].</p>
 <p>The following asset bundles are generated.</p>
 <blockquote>
-<div>assetbundles/Windows/000_001_00000.unity3d</div></blockquote>
+<div><p>assetbundles/Windows/000_001_00000.unity3d</p>
+</div></blockquote>
 <p>Within this asset bundles are stored all font data required.</p>
 <img alt="_images/Fonts.png" src="_images/Fonts.png" />
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">When you want to change the default value, please reference  <a class="reference internal" href="Config.html#cf-font"><span>here</span></a> .</p>
+<p class="admonition-title">Note</p>
+<p>When you want to change the default value, please reference  <a class="reference internal" href="Config.html#cf-font"><span class="std std-ref">here</span></a> .</p>
 </div>
 </div>
 <div class="section" id="bmfont">
@@ -310,7 +334,7 @@
 <div class="section" id="id4">
 <h3>Creating a bitmap font<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>■Font Settings</p>
+<div><p><em>Font Settings</em></p>
 <blockquote>
 <div><p>First, select the font you want to use. Select the [Options]→[Font Settings] from the menu.</p>
 <p>Then select the font type and font size.</p>
@@ -318,28 +342,28 @@
 <p>Put 100 to [Hieght%].</p>
 <img alt="_images/FontSetting.png" src="_images/FontSetting.png" />
 </div></blockquote>
-<p>■Export Options</p>
+<p><em>Export Options</em></p>
 <blockquote>
 <div><p>Next, to set the Export. Select the [Options] → [Export Options] from the menu.</p>
 <p>You change the value of the part of the following red frame.</p>
 <img alt="_images/FontExportOption.png" src="_images/FontExportOption.png" />
 </div></blockquote>
-<p>■ Select the character that you want to include</p>
+<p><em>Select the character that you want to include</em></p>
 <blockquote>
 <div><p>Then you select characters included in the bitmap font.</p>
 </div></blockquote>
-<p>■ confirmation</p>
+<p><em>confirmation</em></p>
 <blockquote>
 <div><p>Ensure that you are correctly output along the items set. Select [Options] → [Visualize] from the menu, you can preview.</p>
 <p>Make sure that bitmap number is within four.</p>
 <p>If the bitmap number is one, almost always it may be possible to reduce the data size. You try to adjust the texture size that the bitmap number may be four.</p>
 </div></blockquote>
-<p>■Output</p>
+<p><em>Output</em></p>
 <blockquote>
 <div><p>This configuration is complete.</p>
-<p>Select the [Options] → [Save bitmap font as ...] from the menu, and then output bitmaps.</p>
-<p>You need to save the file using a  <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> .</p>
-<p>Finally, you need to change the &#8220;fnt&#8221; extension to &#8220;fnt&#8221;.</p>
+<p>Select the [Options] → [Save bitmap font as …] from the menu, and then output bitmaps.</p>
+<p>You need to save the file using a  <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> .</p>
+<p>Finally, you need to change the “fnt” extension to “fnt”.</p>
 </div></blockquote>
 </div></blockquote>
 </div>
@@ -348,15 +372,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="soundeffect.html" class="btn btn-neutral float-right" title="SoundEffect,BGM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="soundeffect.html" class="btn btn-neutral float-right" title="SoundEffect,BGM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TextureResource.html" class="btn btn-neutral" title="The texture" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TextureResource.html" class="btn btn-neutral float-left" title="The texture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -365,11 +390,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -382,36 +407,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

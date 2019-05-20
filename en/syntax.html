@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The window script(wra) syntax &mdash; WindowSystem 1.07 documentation</title>
+  <title>The window script(wra) syntax &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="An arrangement of the window" href="WindowAnchor.html"/>
-        <link rel="prev" title="The multilingual" href="caption.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Percentages: flexible coordinates, sizing methods" href="ratiovalue.html" />
+    <link rel="prev" title="The multilingual" href="caption.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,12 +81,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -105,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">The window script(wra) syntax</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The window script(wra) syntax</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">The wra syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Variables and expressions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">The declaration of variables</a></li>
@@ -117,6 +120,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#id7">Preprocessor</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -157,13 +164,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -196,9 +199,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -211,34 +214,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>The window script(wra) syntax</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>The window script(wra) syntax</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/syntax.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/syntax.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -251,44 +274,42 @@
 <blockquote>
 <div><p>a wra is composed of two main blocks.</p>
 <ul class="simple">
-<li><p class="first">The window definition block</p>
-</li>
-<li><p class="first">Control definition blocks</p>
-</li>
+<li><p>The window definition block</p></li>
+<li><p>Control definition blocks</p></li>
 </ul>
-<p>Always , window definition block comes to the top. Following that, there is a control definition block. The window-ID is required to be <a class="reference internal" href="id.html#mulid"><span>MulID</span></a>.</p>
+<p>Always , window definition block comes to the top. Following that, there is a control definition block. The window-ID is required to be <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a>.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>// window define block
-WINDOW(Window ID) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">window</span> <span class="n">define</span> <span class="n">block</span>
+<span class="n">WINDOW</span><span class="p">(</span><span class="n">Window</span> <span class="n">ID</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 
-// control define blocks
-ControlKind(name 0) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
-ControlKind(name 1) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
-      :
-ControlKind(name n) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<span class="o">//</span> <span class="n">control</span> <span class="n">define</span> <span class="n">blocks</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+      <span class="p">:</span>
+<span class="n">ControlKind</span><span class="p">(</span><span class="n">name</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>#include &quot;wr.h&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;wr.h&quot;
 $y = 160;
 #pragma RESOURCE ON
 
@@ -299,13 +320,13 @@ WINDOW(250_000_00010) {
     TEX_ID = 100_000_00000;
     CAPTION = 000_000_0000;
     STYLE = NOTITLEBAR|NOFRAME|ANCHOR_CENTER|TOP;
-    SIZE = RELATIVE_SIZE(0),RELATIVE_SIZE(0);
+    SIZE = {100},{100};
     PRIORITY = PROGRESSBAR_PRIORITY;
 };
 METER(ProgressTotal) {
     ID = 000_001_00000;
     STYLE = ANCHOR_BOTTOM;
-    SIZE = RELATIVE_SIZE(-128);
+    SIZE = -128{100};
     POSITION = 0,$y;
     TEX_ID = 0,&quot;MTRB&quot;;
     COLOR = COLOR32(255.0,255.0,255.0,255.0);
@@ -316,7 +337,8 @@ $y -=64;
 METER(ProgressPart) {
    ID = 000_001_00010;
    STYLE = ANCHOR_BOTTOM;
-   SIZE = RELATIVE_SIZE(-128),32;
+   SIZE = -128{100},32;
+   SIZE = -128{100},32;
    POSITION = 0,$y;
    TEX_ID = 0,&quot;MTRB&quot;;
    COLOR = COLOR32(255.0,255.0,255.0,255.0);
@@ -331,7 +353,7 @@ METER(ProgressPart) {
 <blockquote>
 <div><p>You can use the variables and the expression on the wra file. Those that begin from <strong>$</strong> is a variable. The type of the variable is real. It is possible to write an expression in the property.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>ID = 000_000_00010 + (3 * $val);
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ID = 000_000_00010 + (3 * $val);
 </pre></div>
 </div>
 <div class="section" id="id3">
@@ -339,7 +361,7 @@ METER(ProgressPart) {
 <blockquote>
 <div><p>When you use a variable , it is necessary to always have an initial value. Uninitialized variables are errors.</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>$i = 3;             //integer(Decimal number)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$i = 3;             //integer(Decimal number)
 $h = 0xfff123;      //integer(Hexadecimal number)
 $f = 3.14;          //real number
 $m = 001_002_00003; //Multi (8bit,8bit,16bit)
@@ -348,71 +370,59 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 </div>
 <div class="section" id="id4">
 <h3>Operators that can be used in the expression.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="33%" />
-<col width="67%" />
+<col style="width: 33%" />
+<col style="width: 67%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Operators</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operators</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>+,-,*,/</td>
-<td><p class="first last">Four arithmetic operations.</p>
-</td>
+<tbody>
+<tr class="row-even"><td><p>+,-,*,/</p></td>
+<td><p>Four arithmetic operations.</p></td>
 </tr>
-<tr class="row-odd"><td>%</td>
-<td><p class="first last">Surplus</p>
-</td>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>Surplus</p></td>
 </tr>
-<tr class="row-even"><td>|,&amp;,^,~</td>
-<td><p class="first last">Bit operations(or,and,xor,not)</p>
-</td>
+<tr class="row-even"><td><p>|,&amp;,^,~</p></td>
+<td><p>Bit operations(or,and,xor,not)</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;&lt;,&gt;&gt;</td>
-<td><p class="first last">Shift operations</p>
-</td>
+<tr class="row-odd"><td><p>&lt;&lt;,&gt;&gt;</p></td>
+<td><p>Shift operations</p></td>
 </tr>
-<tr class="row-even"><td>**</td>
-<td><p class="first last">Exponentiation</p>
-</td>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>Exponentiation</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="id5">
 <h3>The constant representation of the expression<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col style="width: 35%" />
+<col style="width: 65%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Constants Examples</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Constants Examples</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>14</td>
-<td><p class="first last">Decimal integer</p>
-</td>
+<tbody>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>Decimal integer</p></td>
 </tr>
-<tr class="row-odd"><td>0x12ffffff</td>
-<td><p class="first last">Hexadecimal integer</p>
-</td>
+<tr class="row-odd"><td><p>0x12ffffff</p></td>
+<td><p>Hexadecimal integer</p></td>
 </tr>
-<tr class="row-even"><td>000_001_00010</td>
-<td>マルチID(8bit,8bit,16bit形式)</td>
+<tr class="row-even"><td><p>000_001_00010</p></td>
+<td><p>MultiID(format is 8bit,8bit,16bit)</p></td>
 </tr>
-<tr class="row-odd"><td>0.345</td>
-<td><p class="first last">Floating point</p>
-</td>
+<tr class="row-odd"><td><p>0.345</p></td>
+<td><p>Floating point</p></td>
 </tr>
 </tbody>
 </table>
@@ -420,15 +430,13 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <div class="section" id="id6">
 <h3>Calculation of string<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>a variable can&#8217;t store a string. But,the operation for connecting the strings can be used.</p>
+<div><p>a variable can’t store a string. But,the operation for connecting the strings can be used.</p>
 <ul class="simple">
-<li><p class="first">string + string</p>
-</li>
-<li><p class="first">string . string</p>
-</li>
+<li><p>string + string</p></li>
+<li><p>string . string</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PATH</span> <span class="p">=</span> <span class="s">&quot;test/&quot;</span> <span class="p">+</span> <span class="s">&quot;folder/&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;test/&quot;</span> <span class="o">+</span> <span class="s2">&quot;folder/&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -438,113 +446,94 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 <blockquote>
 <div><p>You can use the same as C language preprocessor.</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Preprocessor</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preprocessor</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><p class="first last">// Comment</p>
-</td>
-<td><p class="first last">Line comment</p>
-</td>
+<tbody>
+<tr class="row-even"><td><p>// Comment</p></td>
+<td><p>Line comment</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">/* Comment */</p>
-</td>
-<td><p class="first last">Block comment</p>
-</td>
+<tr class="row-odd"><td><p>/* Comment */</p></td>
+<td><p>Block comment</p></td>
 </tr>
-<tr class="row-even"><td><p class="first last">#include &#8220;file name&#8221;</p>
-</td>
-<td><p class="first last">Include the file</p>
-</td>
+<tr class="row-even"><td><p>#include “file name”</p></td>
+<td><p>Include the file</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#define constant</p>
-</td>
-<td><p class="first last">Definition of a symbolic constant</p>
-</td>
+<tr class="row-odd"><td><p>#define constant</p></td>
+<td><p>Definition of a symbolic constant</p></td>
 </tr>
-<tr class="row-even"><td><p class="first last">#define Function macro</p>
-</td>
-<td><p class="first last">Function macro</p>
-</td>
+<tr class="row-even"><td><p>#define Function macro</p></td>
+<td><p>Function macro</p></td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#if defined(symbol definition) ～ #endif</p>
-</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-odd"><td><p>#if defined(symbol definition) … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-even"><td>#ifdef ～ #endif</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-even"><td><p>#ifdef … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-odd"><td>#ifndef ～ #endif</td>
-<td><p class="first last">Conditional compilation</p>
-</td>
+<tr class="row-odd"><td><p>#ifndef … #endif</p></td>
+<td><p>Conditional compilation</p></td>
 </tr>
-<tr class="row-even"><td>#pragma once</td>
-<td><p class="first last">Multiple include prevention</p>
-</td>
+<tr class="row-even"><td><p>#pragma once</p></td>
+<td><p>Multiple include prevention</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p>Next, list the preprocessor definitions of wra.</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="47%" />
-<col width="53%" />
+<col style="width: 47%" />
+<col style="width: 53%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Preprocessor</p>
-</th>
-<th class="head"><p class="first last">Description</p>
-</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preprocessor</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><p class="first last">#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span>MulID</span></a></p>
-</td>
-<td><p class="first">output as an asset bundles</p>
-<blockquote class="last">
+<tbody>
+<tr class="row-even"><td><p>#pragma RESOURCE <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MulID</span></a></p></td>
+<td><p>output as an asset bundles</p>
+<blockquote>
 <div><p>Example</p>
 <blockquote>
-<div>#pragma RESOURCE 000_014_000000</div></blockquote>
+<div><p>#pragma RESOURCE 000_014_000000</p>
+</div></blockquote>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#pragma RESOURCE path</p>
-</td>
-<td><p class="first">Output it  to the specified path as resource data.</p>
-<blockquote class="last">
+<tr class="row-odd"><td><p>#pragma RESOURCE path</p></td>
+<td><p>Output it  to the specified path as resource data.</p>
+<blockquote>
 <div><p>Example</p>
 <blockquote>
-<div>#pragma RESOURCE = Resources/windows.asset</div></blockquote>
+<div><p>#pragma RESOURCE = Resources/windows.asset</p>
+</div></blockquote>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-even"><td><p class="first last">#pragma PATH &#8220;export path&#8221;</p>
-</td>
-<td><p class="first">You want to change the output path.</p>
+<tr class="row-even"><td><p>#pragma PATH “export path”</p></td>
+<td><p>You want to change the output path.</p>
 <p>By default , the following folder.</p>
-<blockquote class="last">
-<div>#pragma PATH ../wrc/base</div></blockquote>
+<blockquote>
+<div><p>#pragma PATH ../wrc/base</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="row-odd"><td><p class="first last">#pragma BASECLASS Base class name</p>
-</td>
-<td><p class="first">You want to change the base class</p>
+<tr class="row-odd"><td><p>#pragma BASECLASS Base class name</p></td>
+<td><p>You want to change the base class</p>
 <p>By default , the following class</p>
-<blockquote class="last">
-<div>#pragma BASECALSS CWindowBase</div></blockquote>
+<blockquote>
+<div><p>#pragma BASECALSS CWindowBase</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -554,15 +543,16 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="WindowAnchor.html" class="btn btn-neutral float-right" title="An arrangement of the window" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ratiovalue.html" class="btn btn-neutral float-right" title="Percentages: flexible coordinates, sizing methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="caption.html" class="btn btn-neutral" title="The multilingual" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="caption.html" class="btn btn-neutral float-left" title="The multilingual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -571,11 +561,11 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -588,36 +578,15 @@ $m = 001_002_00003; //Multi (8bit,8bit,16bit)
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

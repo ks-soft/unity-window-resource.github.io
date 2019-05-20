@@ -8,45 +8,45 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>window system’s samples &mdash; WindowSystem 1.07 documentation</title>
+  <title>window system’s samples &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="next" title="Tutorial" href="tutorial.html"/>
-        <link rel="prev" title="Environment setting" href="install.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Environment setting" href="install.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,24 +81,27 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">window system&#8217;s samples</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">window system’s samples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Sample scenes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">The sample which you can confirm each control behaviour.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">The sample which assumed that you used this in your application.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-unity">The sample which you can confirm each control behaviour.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialize-unity">The sample which assumed that you used this in your application.</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">The title</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">The Home</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">The chat window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">The profile window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">The friend list window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id10">The friend list window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id11">The quest window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">The title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">The Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">The chat window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">The profile window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">The friend list window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">The friend list window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">The quest window</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
@@ -120,6 +123,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -160,13 +167,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -199,9 +202,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
 </ul>
 
@@ -214,135 +217,153 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>window system&#8217;s samples</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>window system’s samples</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/sample.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/sample.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>window system&#8217;s samples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>window system’s samples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>Sample scenes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>I prepare two samples.</p>
 <ul class="simple">
-<li><p class="first">The sample which you can confirm each control behaviour.</p>
-</li>
+<li><p>The sample which you can confirm each control behaviour.</p></li>
 </ul>
 <blockquote>
-<div>KsSoft/Scene/Test/Test.unity</div></blockquote>
+<div><p>KsSoft/Scene/Test/Test.unity</p>
+</div></blockquote>
 <ul class="simple">
-<li><p class="first">The sample which assumed that you used this in your application.</p>
-</li>
+<li><p>The sample which assumed that you used this in your application.</p></li>
 </ul>
 <blockquote>
-<div>KsSoft/Scene/Initialize.unity</div></blockquote>
+<div><p>Run “KsSoft/Scene/Initialize.unity”.</p>
+</div></blockquote>
 <img alt="_images/exec_initialize.png" src="_images/exec_initialize.png" />
 </div></blockquote>
-<div class="section" id="id3">
-<h3>The sample which you can confirm each control behaviour.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="test-unity">
+<h3>The sample which you can confirm each control behaviour.<a class="headerlink" href="#test-unity" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This is the sample that you can confirm behavior of almost all control.</p>
 <p>On the Console, this sample outputs logs in console when various callbacks were sent. You can see when a window receive various callback. And dragable controls are able to drag by the description of wra scripts.</p>
 <p>Related codes are as follows.</p>
 <ul class="simple">
-<li>KsSoft/Script/Test/Test.cs</li>
-<li>KsSoft/Script/Test/CWinTest.cs</li>
-<li>KsSoft/Script/Test/CWinTestBase.cs</li>
-<li>KsSoft/WindowResource/CWinTitle.wra</li>
+<li><p>KsSoft/Script/Test/Test.cs</p></li>
+<li><p>KsSoft/Script/Test/CWinTest.cs</p></li>
+<li><p>KsSoft/Script/Test/CWinTestBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinTest.wra</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">After you edit the CWinTest.wra, if you want to check changes, you need to do <a class="reference internal" href="tutorial.html#export-windowresource"><span>Export Window Resource</span></a> .</p>
+<p class="admonition-title">Note</p>
+<p>After you edit the CWinTest.wra, if you want to check changes, you need to do <a class="reference internal" href="tutorial.html#export-windowresource"><span class="std std-ref">Export Window Resource</span></a> .</p>
 </div>
-<blockquote>
-<div><img alt="_images/CWinTest_sample.png" src="_images/CWinTest_sample.png" />
-</div></blockquote>
+<img alt="_images/CWinTest_sample.png" src="_images/CWinTest_sample.png" />
 </div>
-<div class="section" id="id4">
-<h3>The sample which assumed that you used this in your application.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="initialize-unity">
+<h3>The sample which assumed that you used this in your application.<a class="headerlink" href="#initialize-unity" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>The title<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>The title<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinTitle.cs</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Title/CWinTitle.cs</li>
-<li>KsSoft/Script/Scene/Title/CWinTitleBase.cs</li>
-<li>KsSoft/WindowResource/CWinTitle.wra</li>
+<li><p>KsSoft/Script/Scene/Title/CWinTitle.cs</p></li>
+<li><p>KsSoft/Script/Scene/Title/CWinTitleBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinTitle.wra</p></li>
 </ul>
 <img alt="_images/title_sample.png" src="_images/title_sample.png" />
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id6">
-<h2>The Home<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>The Home<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinHome</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/Home/CWinHome.cs</li>
-<li>KsSoft/Script/Scene/Town/Home/CWinHomeBase.cs</li>
-<li>KsSoft/WindowResource/CWinHome.wra</li>
+<li><p>KsSoft/Script/Scene/Town/Home/CWinHome.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Home/CWinHomeBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinHome.wra</p></li>
 </ul>
-<p>It is rendering the guild button,the friend button,the treasure button, and the center of the screen character.It is helpful on how to use the  <a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> .</p>
+<p>It is rendering the guild button,the friend button,the treasure button, and the center of the screen character.It is helpful on how to use the  <a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a> .</p>
 </div></blockquote>
 <p>CWinTopPart</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/CWinTopPart.cs</li>
-<li>KsSoft/Script/Scene/Town/CWinTopPartBase.cs</li>
-<li>KsSoft/WindowResource/CWinTopPart.wra</li>
+<li><p>KsSoft/Script/Scene/Town/CWinTopPart.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/CWinTopPartBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinTopPart.wra</p></li>
 </ul>
 </div></blockquote>
 <p>It is responsible for the character status and render icon part of the top of the screen.</p>
-<p>It is helpful on how to use the  <a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a> .</p>
+<p>It is helpful on how to use the  <a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a> .</p>
 <p>CWinBottomPart</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/CWinBottomPart.cs</li>
-<li>KsSoft/Script/Scene/Town/CWinBottomPartBase.cs</li>
-<li>KsSoft/WindowResource/CWinBottomPart.wra</li>
+<li><p>KsSoft/Script/Scene/Town/CWinBottomPart.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/CWinBottomPartBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinBottomPart.wra</p></li>
 </ul>
 </div></blockquote>
 <p>It is responsible for the chat button and the toggle part of the menu button at the bottom of the screen.</p>
 <p>CWinTabbar</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/CWinTabbar.cs</li>
-<li>KsSoft/Script/Scene/Town/CWinTabbarBase.cs</li>
-<li>KsSoft/WindowResource/CWinTabbar.wra</li>
+<li><p>KsSoft/Script/Scene/Town/CWinTabbar.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/CWinTabbarBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinTabbar.wra</p></li>
 </ul>
 </div></blockquote>
 <p>It is responsible for the menu icon part of the bottom of the screen.</p>
@@ -351,31 +372,31 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h2>The chat window<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>The chat window<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinChat</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Chat/CWinChat.cs</li>
-<li>KsSoft/Script/Chat/CWinChatBase.cs</li>
-<li>KsSoft/WindowResource/CWinChat.wra</li>
+<li><p>KsSoft/Script/Chat/CWinChat.cs</p></li>
+<li><p>KsSoft/Script/Chat/CWinChatBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinChat.wra</p></li>
 </ul>
 </div></blockquote>
 <p>CWinChatInput</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Chat/CWinChatInput.cs</li>
-<li>KsSoft/Script/Chat/CWinChatInputBase.cs</li>
-<li>KsSoft/WindowResource/CWinChatInput.wra</li>
+<li><p>KsSoft/Script/Chat/CWinChatInput.cs</p></li>
+<li><p>KsSoft/Script/Chat/CWinChatInputBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinChatInput.wra</p></li>
 </ul>
 </div></blockquote>
 <p>CWinChatPerson</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Chat/CWinChatPerson.cs</li>
-<li>KsSoft/Script/Chat/CWinChatPersonBase.cs</li>
-<li>KsSoft/WindowResource/CWinChatPerson.wra</li>
+<li><p>KsSoft/Script/Chat/CWinChatPerson.cs</p></li>
+<li><p>KsSoft/Script/Chat/CWinChatPersonBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinChatPerson.wra</p></li>
 </ul>
 </div></blockquote>
 <p>This is an example of how to make the chat window.It is a sample of how to resizing the log window and displays the speaker icon.</p>
@@ -384,78 +405,78 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h2>The profile window<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>The profile window<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinProfile</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/Profile/CWinProfile.cs</li>
-<li>KsSoft/Script/Scene/Town/Profile/CWinProfileBase.cs</li>
-<li>KsSoft/WindowResource/CWinProfile.wra</li>
+<li><p>KsSoft/Script/Scene/Town/Profile/CWinProfile.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Profile/CWinProfileBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinProfile.wra</p></li>
 </ul>
-<p>This is examples of horizontal list box.It is possible to page forward by swiping.In addition, it would be helpful on how to use the  <a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a> .</p>
+<p>This is examples of horizontal list box.It is possible to page forward by swiping.In addition, it would be helpful on how to use the  <a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a> .</p>
 <img alt="_images/profile_sample.png" src="_images/profile_sample.png" />
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id9">
-<h2>The friend list window<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h2>The friend list window<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinFriend,CWinFriendList,CWinFriendApply,CWinFriendBalcklist</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriend.cs</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriend.wra</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendList.cs</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendListBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendList.wra</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendApply.cs</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendApplyBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendApply.wra</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendBalcklist.cs</li>
-<li>KsSoft/Script/Scene/Town/Friend/CWinFriendBalcklistBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendBalcklist.wra</li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriend.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriend.wra</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendList.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendListBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendList.wra</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendApply.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendApplyBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendApply.wra</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendBalcklist.cs</p></li>
+<li><p>KsSoft/Script/Scene/Town/Friend/CWinFriendBalcklistBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendBalcklist.wra</p></li>
 </ul>
 <img alt="_images/friend_list.png" src="_images/friend_list.png" />
 </div></blockquote>
 <p>This is an example of how to update the contents of the list box.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id10">
-<h2>The friend list window<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h2>The friend list window<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Friend/CWinFriend.cs</li>
-<li>KsSoft/Script/Friend/CWinFriendBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriend.wra</li>
-<li>KsSoft/Script/Friend/CWinFriendList.cs</li>
-<li>KsSoft/Script/Friend/CWinFriendListBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendList.wra</li>
-<li>KsSoft/Script/Friend/CWinFriendApply.cs</li>
-<li>KsSoft/Script/Friend/CWinFriendApplyBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendApply.wra</li>
-<li>KsSoft/Script/Friend/CWinFriendBalcklist.cs</li>
-<li>KsSoft/Script/Friend/CWinFriendBalcklistBase.cs</li>
-<li>KsSoft/WindowResource/CWinFriendBalcklist.wra</li>
+<li><p>KsSoft/Script/Friend/CWinFriend.cs</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriend.wra</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendList.cs</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendListBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendList.wra</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendApply.cs</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendApplyBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendApply.wra</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendBalcklist.cs</p></li>
+<li><p>KsSoft/Script/Friend/CWinFriendBalcklistBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinFriendBalcklist.wra</p></li>
 </ul>
 <img alt="_images/friend_list.png" src="_images/friend_list.png" />
 </div></blockquote>
 <p>This is an example of how to update the contents of the list box.</p>
 </div></blockquote>
 </div>
-<div class="section" id="id11">
-<h2>The quest window<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h2>The quest window<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>CWinQuest</p>
 <blockquote>
 <div><ul class="simple">
-<li>KsSoft/Script/Scene/Quest/CWinQuest.cs</li>
-<li>KsSoft/Script/Scene/Quest/CWinQuestBase.cs</li>
-<li>KsSoft/WindowResource/CWinQuest.wra</li>
+<li><p>KsSoft/Script/Scene/Quest/CWinQuest.cs</p></li>
+<li><p>KsSoft/Script/Scene/Quest/CWinQuestBase.cs</p></li>
+<li><p>KsSoft/WindowResource/CWinQuest.wra</p></li>
 </ul>
 </div></blockquote>
 <p>By giving content to the radio button, it is an example of how to behave it like a tab.</p>
@@ -468,15 +489,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="Environment setting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="Environment setting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -485,11 +507,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -502,36 +524,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

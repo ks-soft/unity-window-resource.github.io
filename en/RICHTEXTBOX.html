@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RICHTEXTBOX &mdash; WindowSystem 2.00 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BUTTON" href="BUTTON.html" />
+    <link rel="prev" title="TEXTBOX" href="TEXTBOX.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WindowSystem
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="id.html">Mul ID,FiveCC</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TextureResource.html">The texture</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpriteFont.html">Font</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="soundeffect.html">SoundEffect,BGM</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="caption.html">The multilingual</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WindowPriority.html">Window priority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WINDOW.html">WINDOW</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CtrlAnchor.html">An arrangement of the control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlPriority.html">The control priority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlSize.html">The control size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlProp.html">Control common properties</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="TEXT.html">TEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RICHTEXT.html">RICHTEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOG.html">LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOGTEXT.html">LOGTEXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EDITBOX.html">EDITBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTBOX.html">TEXTBOX</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RICHTEXTBOX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">記述例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">プロパティ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id">パーツIDルール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id-id"><strong>ID</strong> = コントロールID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit"><strong>EDIT</strong> = キャプション文字最大数,キャプション最大行数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = <span class="xref std std-ref">Ｘ，Ｙ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = <span class="xref std std-ref">横サイズ,縦サイズ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tex-id-id-id"><strong>TEX_ID</strong> = テクスチャID,パーツID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tex-id-id"><strong>TEX_ID</strong> = パーツID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-r-g-b-a"><strong>COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption"><strong>CAPTION</strong> = “文字列”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption-color-r-g-b-a"><strong>CAPTION_COLOR</strong> = R,G,B,A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caption-offset-x-y"><strong>CAPTION_OFFSET</strong> = <span class="xref std std-ref">Ｘ,Ｙ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-space"><strong>LINE_SPACE</strong> = 行間ピクセル値</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-scrollbarid"><strong>GROUP</strong> = SCROLLBARコントロールID,…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = スタイル0|スタイル1|..|スタイルn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUTTON.html">BUTTON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RADIO.html">RADIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHECKBOX.html">CHECKBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEXTURE.html">TEXTURE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LINE.html">LINE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RENDER.html">RENDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ICON.html">ICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RECASTICON.html">RECASTICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RENDERICON.html">RENDERICON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="METER.html">METER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SCROLLBAR.html">SCROLLBAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOX.html">LISTBOX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LISTBOXEX.html">LISTBOXEX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTAINER.html">CONTAINER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FRAME.html">FRAME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LABEL.html">LABEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAR.html">BAR</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBase.html">CWinCtrlBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinContents.html">CWinContents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlText.html">CWinCtrlText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichText.html">CWinCtrlRichText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLog.html">CWinCtrlLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLogText.html">CWinCtrlLogText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlEditbox.html">CWinCtrlEditbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTextbox.html">CWinCtrlTextbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRichTextbox.html">CWinCtrlRichTextbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlButton.html">CWinCtrlButton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRadio.html">CWinCtrlRadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlCheckbox.html">CWinCtrlCheckbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlTexture.html">CWinCtrlTexture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLine.html">CWinCtrlLine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRender.html">CWinCtrlRender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlIcon.html">CWinCtrlIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRecastIcon.html">CWinCtrlRecastIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlRenderIcon.html">CWinCtrlRenderIcon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlMeter.html">CWinCtrlMeter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlScrollbar.html">CWinCtrlScrollbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListbox.html">CWinCtrlListbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlListboxEx.html">CWinCtrlListboxEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlContainer.html">CWinCtrlContainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlFrame.html">CWinCtrlFrame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlLabel.html">CWinCtrlLabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CWinCtrlBar.html">CWinCtrlBar</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">Kinds of valid STYLE flag</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>RICHTEXTBOX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/RICHTEXTBOX.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="richtextbox">
+<span id="id1"></span><h1>RICHTEXTBOX<a class="headerlink" href="#richtextbox" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><blockquote>
+<div><p>C#: <a class="reference internal" href="CWinCtrlTextbox.html#cwinctrltextbox"><span class="std std-ref">CWinCtrlTextbox</span></a></p>
+</div></blockquote>
+<p>編集できないエディットボックスです。</p>
+<p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">テキストボックス</span></a> と違い、キャプションのレンダリングに、<a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">リッチテキスト</span></a> を使用しています。</p>
+<p>よって、文字列だけでなく、絵なども自由に貼り付けることができます。</p>
+<p>キャプションが、コントロールサイズに収まらないときは、テキストボックスをタッチするとスクロールします。</p>
+<p>このコントロールはスクロール可能なコントロールです。</p>
+<p>STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">SCROLL_LOCK</span></a> をつけておくと、onDragコールバックが呼び出され、ドラッグした方向を検出できます。
+DRAGをつけても、これらコントロールには効果がないことに気を付けてください。</p>
+<blockquote>
+<div><p>RICHTEXTBOX(コントロール名) {</p>
+<blockquote>
+<div><p>プロパティ1;</p>
+<p>プロパティ2;</p>
+<blockquote>
+<div><p>:</p>
+<p>:</p>
+</div></blockquote>
+<p>プロパティn;</p>
+</div></blockquote>
+<p>};</p>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>記述例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>一行のテキストボックスの例(TEXTとほぼ同じ振る舞いになります)</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>RICHTEXTBOX(Sentence) {
+  ID = 001_000_00010;
+  STYLE = ANCHOR_BOTTOM;
+  SIZE = 300;
+  EDIT = 255,0;       //255 characters,one line
+  POSITION = 0,$y;
+  FONT_KIND = &quot;fn24&quot;;
+};
+</pre></div>
+</div>
+<p>複数行(この例では10行)のテキストボックスの例.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>RICHTEXTBOX(Sentence) {
+  ID = 000_000_00010;
+  STYLE = ANCHOR_LEFT;
+  CAPTION_COLOR = COLOR32(50,50,50,255);
+  FONT_KIND=&quot;fn16&quot;;
+  EDIT = 255,10;              //255 characters,10 lines
+  TEX_ID = 0,&quot;EDBT0&quot;;
+  POSITION = $x,$y;
+  SIZE = $w,$h;
+};
+</pre></div>
+</div>
+<img alt="images/RICHTEXTBOX.png" src="images/RICHTEXTBOX.png" />
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>プロパティ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;TXFD?&quot;</span><span class="p">;</span>
+<span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">CAPTION_COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="id">
+<h3>パーツIDルール<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>パーツIDの５文字目を自動的に0/1に入れ替えます。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>XXXX0: OFFの状態</p></li>
+<li><p>XXXX1: ONの状態</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">TEX_ID</span> <span class="p">=</span> <span class="s">&quot;TXFD?&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>パーツIDがこのように設定されているとすると以下のようなパーツを用意しておく必要があります。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>TXFD0:フォーカスOFFの状態</p></li>
+<li><p>TXFD1:フォーカスONの状態</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id-id">
+<h3><strong>ID</strong> = コントロールID<a class="headerlink" href="#id-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>コントロールIDを定義します。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="p">=</span> <span class="m">001</span><span class="n">_000_00010</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>設定しなかったときは、自動的にハッシュ値から生成します。</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="edit">
+<h3><strong>EDIT</strong> = キャプション文字最大数,キャプション最大行数<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>キャプション文字最大数と、キャプション最大行数を設定します。</p>
+</div></blockquote>
+</div>
+<div class="section" id="position-x-y">
+<h3><strong>POSITION</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">Ｘ，Ｙ</span></a><a class="headerlink" href="#position-x-y" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>表示位置を決定します。
+STYLEの <a class="reference internal" href="CtrlAnchor.html#ctrl-anchor"><span class="std std-ref">アンカー</span></a> 指定に応じて、基準位置が変わります。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">POSITION</span> <span class="p">=</span> <span class="m">32</span><span class="p">,{</span><span class="m">50</span><span class="p">}</span> <span class="p">+</span> <span class="m">64</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>座標は <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
+</div></blockquote>
+</div>
+<div class="section" id="size">
+<h3><strong>SIZE</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">横サイズ,縦サイズ</span></a><a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>表示サイズを変更します。
+省略したとき、若しくは、0を指定すると、テクスチャパーツからサイズを取得してきます。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">,</span><span class="m">32</span><span class="p">;</span> <span class="c1">//64x32</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="p">,</span><span class="m">32</span><span class="p">;</span>   <span class="c1">//Set the width of the texture part width</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="m">64</span><span class="p">;</span>            <span class="c1">//Set the height of the texture part height</span>
+<span class="n">SIZE</span> <span class="p">=</span> <span class="p">{</span><span class="m">50</span><span class="p">}</span> <span class="p">-</span> <span class="m">25</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>サイズは <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
+</div></blockquote>
+</div>
+<div class="section" id="tex-id-id-id">
+<h3><strong>TEX_ID</strong> = テクスチャID,パーツID<a class="headerlink" href="#tex-id-id-id" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tex-id-id">
+<h3><strong>TEX_ID</strong> = パーツID<a class="headerlink" href="#tex-id-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>テクスチャIDとパーツIDを指定します。</p>
+</div></blockquote>
+</div>
+<div class="section" id="color-r-g-b-a">
+<h3><strong>COLOR</strong> = R,G,B,A<a class="headerlink" href="#color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>カラーを指定します。</p>
+<p>R,G,Bについては、0～2の間で指定してください。</p>
+<p>1を超えたとき、そのカラー成分を2倍まで上げて表示することができます。</p>
+<p>Aについては、0～1の間で指定してください。</p>
+</div></blockquote>
+</div>
+<div class="section" id="caption-id">
+<h3><strong>CAPTION</strong> = キャプションID<a class="headerlink" href="#caption-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>文字列のIDを指定してください。</p>
+<p><a class="reference internal" href="caption.html#multi-language"><span class="std std-ref">こちら</span></a> を参照ください。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="p">=</span> <span class="m">010</span><span class="n">_000_00100</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="caption">
+<h3><strong>CAPTION</strong> = “文字列”<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>文字列を設定します。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTION</span> <span class="p">=</span> <span class="s">&quot;Hellow world!&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>テキスト表示に <a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">リッチテキスト</span></a> を使っているので、キャプションに <a class="reference internal" href="RICHTEXT.html#richtext-cmd"><span class="std std-ref">コマンド</span></a> を埋め込むことによって、様々な装飾が可能になっています。</p>
+</div></blockquote>
+</div>
+<div class="section" id="caption-color-r-g-b-a">
+<h3><strong>CAPTION_COLOR</strong> = R,G,B,A<a class="headerlink" href="#caption-color-r-g-b-a" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>キャプションのカラーを指定できます。</p>
+<p>EDITBOXでは、入力文字列のカラーになります。</p>
+<p>0～1の間で指定してください。</p>
+</div></blockquote>
+</div>
+<div class="section" id="caption-offset-x-y">
+<h3><strong>CAPTION_OFFSET</strong> = <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">Ｘ,Ｙ</span></a><a class="headerlink" href="#caption-offset-x-y" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>キャプションの位置を移動することができます。</p>
+<p>キャプションオフセットは <a class="reference internal" href="ratiovalue.html#ratiovalue"><span class="std std-ref">割合指定</span></a> が可能です。</p>
+</div></blockquote>
+</div>
+<div class="section" id="line-space">
+<h3><strong>LINE_SPACE</strong> = 行間ピクセル値<a class="headerlink" href="#line-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>コンテンツとコンテンツ間の隙間をこのプロパティで設定可能です。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">LINE_SPACE</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>       <span class="c1">//Put an 8-dot space.</span>
+</pre></div>
+</div>
+<p>割合指定はできません。</p>
+</div></blockquote>
+</div>
+<div class="section" id="group-scrollbarid">
+<h3><strong>GROUP</strong> = SCROLLBARコントロールID,…<a class="headerlink" href="#group-scrollbarid" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>SCROLLBARコントロールをGROUPとして定義しておくと、自動的にテキストボックスと連動してスクロールバーを表示します。</p>
+<p>CONTENTSに入れないように気を付けてください。</p>
+<p>複数のスクロールバーを関連付けることも可能です。</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP</span> <span class="p">=</span> <span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Horizon</span><span class="p">),</span><span class="n">SCROLLBAR</span><span class="p">(</span><span class="n">Vertical</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="style-0-1-n">
+<h3><strong>STYLE</strong> = スタイル0|スタイル1|..|スタイルn<a class="headerlink" href="#style-0-1-n" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>コントロールの表示アンカーを指定できます。</p>
+</div></blockquote>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>表示位置アンカーフラグ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ANCHOR_DEFAULT</p></td>
+<td><p>アンカー位置を左上に設定</p>
+<p>ANCHOR_LEFTTOPと同じ</p>
+<p>コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ANCHOR_LEFTTOP</p></td>
+<td><p>アンカー位置を左上に設定</p>
+<p>コントロールの中心位置はデフォルトで、BASE_LEFTTOPになる。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ANCHOR_LEFT</p></td>
+<td><p>アンカー位置を左に設定</p>
+<p>縦にはセンタリング</p>
+<p>コントロールの中心位置はデフォルトで、BASE_LEFTになる。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ANCHOR_LEFTBOTTOM</p></td>
+<td><p>アンカー位置を左に設定</p>
+<p>縦には下辺を基準に配置</p>
+<p>コントロールの中心位置はデフォルトで、BASE_LEFTBOTTOMになる。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ANCHOR_TOP</p></td>
+<td><p>アンカー位置を上辺に設定</p>
+<p>横方向にはセンタリング</p>
+<p>コントロールの中心位置はデフォルトで、BASE_TOPになる。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ANCHOR_CENTER</p></td>
+<td><p>アンカー位置を画面中央にセンタリング</p>
+<p>コントロールの中心位置はデフォルトで、BASE_CENTERになる。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ANCHOR_BOTTOM</p></td>
+<td><p>アンカー位置を底辺に設定</p>
+<p>横方向にはセンタリング</p>
+<p>コントロールの中心位置はデフォルトで、BASE_BOTTOMになる。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ANCHOR_RIGHTTOP</p></td>
+<td><p>アンカー位置を右上に設定</p>
+<p>コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>ANCHOR_RIGHT</p></td>
+<td><p>アンカー位置を右に設定</p>
+<p>縦にはセンタリング</p>
+<p>コントロールの中心位置はデフォルトで、BASE_RIGHTになる。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ANCHOR_RIGHTBOTTOM</p></td>
+<td><p>アンカー位置を右に設定</p>
+<p>縦には下辺を基準に配置</p>
+<p>コントロールの中心位置はデフォルトで、BASE_RIGHTBOTTOMになる。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>コントロールの中心位置を指定できます。</p>
+</div></blockquote>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>中心位置変更フラグ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BASE_DEFAULT</p></td>
+<td><p>アンカーフラグに応じて変わる。</p>
+<p>特に指定しなければ、これになります。</p>
+<p>各アンカーフラグの説明を参照</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BASE_LEFTTOP</p></td>
+<td><p>中心位置をコントロールの左上に設定</p></td>
+</tr>
+<tr class="row-even"><td><p>BASE_LEFT</p></td>
+<td><p>中心位置を左に設定</p>
+<p>縦にはコントロールの真中</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BASE_LEFTBOTTOM</p></td>
+<td><p>中心位置を左下に設定</p></td>
+</tr>
+<tr class="row-even"><td><p>BASE_TOP</p></td>
+<td><p>中心位置を上辺に設定</p>
+<p>横にはコントロールの中心</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BASE_CENTER</p></td>
+<td><p>中心位置をコントロールの中心</p></td>
+</tr>
+<tr class="row-even"><td><p>BASE_BOTTOM</p></td>
+<td><p>中心位置を底辺に設定</p>
+<p>横方向にはコントロールの真中</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BASE_RIGHTTOP</p></td>
+<td><p>中心位置をコントロールの右上に設定</p></td>
+</tr>
+<tr class="row-even"><td><p>BASE_RIGHT</p></td>
+<td><p>中心位置を右に設定</p>
+<p>横にはコントロールの中心</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BASE_RIGHTBOTTOM</p></td>
+<td><p>中心位置を右下に設定</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>キャプションのフォント装飾を変更できます。</p>
+</div></blockquote>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>キャプション装飾種類</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TEXT_NORMAL</p></td>
+<td><p>装飾なし</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEXT_BOLD</p></td>
+<td><p>太字</p></td>
+</tr>
+<tr class="row-even"><td><p>TEXT_DENT</p></td>
+<td><p>へこんだ感じの文字</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEXT_SHADOW</p></td>
+<td><p>影付き文字</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>機能を制限するスタイルは以下のものがあります。</p>
+</div></blockquote>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>機能制限スタイル</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HIDE</p></td>
+<td><p>表示を隠す。</p></td>
+</tr>
+<tr class="row-odd"><td><p>DISABLE</p></td>
+<td><p>押せなくし、暗くする。</p></td>
+</tr>
+<tr class="row-even"><td><p>NOHIT</p></td>
+<td><p>押せなくする。</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOBOUNCES</p></td>
+<td><p>端までスクロールしたとき、勢いが残っていても跳ね返らない</p></td>
+</tr>
+<tr class="row-even"><td><p>SCROLL_UNLOCK</p></td>
+<td><p>スクロールを許可する。</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCROLL_LOCK</p></td>
+<td><p>スクロールを抑制する。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BUTTON.html" class="btn btn-neutral float-right" title="BUTTON" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TEXTBOX.html" class="btn btn-neutral float-left" title="TEXTBOX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

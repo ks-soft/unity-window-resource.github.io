@@ -8,44 +8,44 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kinds of valid STYLE flag &mdash; WindowSystem 1.07 documentation</title>
+  <title>Kinds of valid STYLE flag &mdash; WindowSystem 2.00 documentation</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 documentation" href="index.html"/>
-        <link rel="prev" title="Kinds of control which you can not drag." href="CantDrag.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Non-Dragable Controls" href="CantDrag.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -80,12 +80,15 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Features of window system</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Environment setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">window system&#8217;s samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">window system’s samples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 </ul>
 <ul>
@@ -105,6 +108,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">The window script(wra) syntax</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">Percentages: flexible coordinates, sizing methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">How to set the virtual GUI screen size</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">An arrangement of the window</a></li>
@@ -145,13 +152,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CMainSystemBase.html">CMainSystemBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAssetBundleMgr.html">CAssetBundleMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About the AssetBundle version.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">About asset bundle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -184,10 +187,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Config.html">How to change the default value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">Texture parts default</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221; part: It is used when the texture is not present.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">“NULL” part: It is used when the texture is not present.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">Callback reaching the CWindowBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Kinds of control which you can not drag.</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Kinds of valid STYLE flag</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="CantDrag.html">Non-Dragable Controls</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Kinds of valid STYLE flag</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#nohit-hit">About NOHIT/HIT</a></li>
 </ul>
 </li>
@@ -202,34 +205,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Kinds of valid STYLE flag</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Kinds of valid STYLE flag</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/CtrlStyle.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/CtrlStyle.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -237,870 +260,870 @@
             
   <div class="section" id="ctrlstyle">
 <span id="id1"></span><h1>Kinds of valid STYLE flag<a class="headerlink" href="#ctrlstyle" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="28%" />
-<col width="13%" />
-<col width="10%" />
-<col width="9%" />
-<col width="9%" />
-<col width="13%" />
-<col width="10%" />
-<col width="7%" />
+<col style="width: 28%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 7%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">ANCHOR_*</th>
-<th class="head">BASE_*</th>
-<th class="head">HIDE</th>
-<th class="head">DRAG</th>
-<th class="head">DISABLE</th>
-<th class="head">NOHIT</th>
-<th class="head">HIT</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>ANCHOR_*</p></th>
+<th class="head"><p>BASE_*</p></th>
+<th class="head"><p>HIDE</p></th>
+<th class="head"><p>DRAG</p></th>
+<th class="head"><p>DISABLE</p></th>
+<th class="head"><p>NOHIT</p></th>
+<th class="head"><p>HIT</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="35%" />
-<col width="18%" />
-<col width="22%" />
-<col width="25%" />
+<col style="width: 35%" />
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 25%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">TEXT_LEFT</th>
-<th class="head">TEXT_RIGHT</th>
-<th class="head">TEXT_CENTER</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>TEXT_LEFT</p></th>
+<th class="head"><p>TEXT_RIGHT</p></th>
+<th class="head"><p>TEXT_CENTER</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="29%" />
-<col width="18%" />
-<col width="17%" />
-<col width="17%" />
-<col width="20%" />
+<col style="width: 29%" />
+<col style="width: 18%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 20%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">TEXT_NORMAL</th>
-<th class="head">TEXT_BOLD</th>
-<th class="head">TEXT_DENT</th>
-<th class="head">TEXT_SHADOW</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>TEXT_NORMAL</p></th>
+<th class="head"><p>TEXT_BOLD</p></th>
+<th class="head"><p>TEXT_DENT</p></th>
+<th class="head"><p>TEXT_SHADOW</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="28%" />
-<col width="18%" />
-<col width="54%" />
+<col style="width: 28%" />
+<col style="width: 18%" />
+<col style="width: 54%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">EDIT_BLIND</th>
-<th class="head"><a class="reference internal" href="EDITBOX.html#editbox-style"><span>EDIT_TYPE_*</span></a></th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>EDIT_BLIND</p></th>
+<th class="head"><p><a class="reference internal" href="EDITBOX.html#editbox-style"><span class="std std-ref">EDIT_TYPE_*</span></a></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="33%" />
-<col width="19%" />
-<col width="26%" />
-<col width="22%" />
+<col style="width: 33%" />
+<col style="width: 19%" />
+<col style="width: 26%" />
+<col style="width: 22%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">NOBOUNCES</th>
-<th class="head">SCROLL_UNLOCK</th>
-<th class="head">SCROLL_LOCK</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>NOBOUNCES</p></th>
+<th class="head"><p>SCROLL_UNLOCK</p></th>
+<th class="head"><p>SCROLL_LOCK</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="20%" />
-<col width="25%" />
-<col width="55%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+<col style="width: 55%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">ITEM_STACK_V/H</th>
-<th class="head"><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-style"><span>SCROLLBAR_DISPLAY_*</span></a></th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>ITEM_STACK_V/H</p></th>
+<th class="head"><p><a class="reference internal" href="SCROLLBAR.html#scrollbar-display-style"><span class="std std-ref">SCROLLBAR_DISPLAY_*</span></a></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>O</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1109,135 +1132,135 @@
 <blockquote>
 <div><p>Each control has default of whether or not to hit.</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="48%" />
-<col width="23%" />
-<col width="18%" />
-<col width="13%" />
+<col style="width: 48%" />
+<col style="width: 23%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&nbsp;</th>
-<th class="head">Default</th>
-<th class="head">NOHIT</th>
-<th class="head">HIT</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>NOHIT</p></th>
+<th class="head"><p>HIT</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="TEXT.html#text"><span>TEXT</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TEXT.html#text"><span class="std std-ref">TEXT</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RICHTEXT.html#richtext"><span>RICHTEXT</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RICHTEXT.html#richtext"><span class="std std-ref">RICHTEXT</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LOG.html#log"><span>LOG</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LOG.html#log"><span class="std std-ref">LOG</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LOGTEXT.html#logtext"><span>LOGTEXT</span></a></td>
-<td>NOHIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LOGTEXT.html#logtext"><span class="std std-ref">LOGTEXT</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="EDITBOX.html#editbox"><span>EDITBOX</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="EDITBOX.html#editbox"><span class="std std-ref">EDITBOX</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTBOX.html#textbox"><span>TEXTBOX</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTBOX.html#textbox"><span class="std std-ref">TEXTBOX</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BUTTON.html#button"><span>BUTTON</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BUTTON.html#button"><span class="std std-ref">BUTTON</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RADIO.html#radio"><span>RADIO</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RADIO.html#radio"><span class="std std-ref">RADIO</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="CHECKBOX.html#checkbox"><span>CHECKBOX</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="CHECKBOX.html#checkbox"><span class="std std-ref">CHECKBOX</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="TEXTURE.html#texture"><span>TEXTURE</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="TEXTURE.html#texture"><span class="std std-ref">TEXTURE</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LINE.html#line"><span>LINE</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LINE.html#line"><span class="std std-ref">LINE</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RENDER.html#render"><span>RENDER</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RENDER.html#render"><span class="std std-ref">RENDER</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ICON.html#icon"><span>ICON</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="ICON.html#icon"><span class="std std-ref">ICON</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="RECASTICON.html#recasticon"><span>RECASTICON</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="RECASTICON.html#recasticon"><span class="std std-ref">RECASTICON</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="RENDERICON.html#rendericon"><span>RENDERICON</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="RENDERICON.html#rendericon"><span class="std std-ref">RENDERICON</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="METER.html#meter"><span>METER</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="METER.html#meter"><span class="std std-ref">METER</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span>SCROLLBAR</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="SCROLLBAR.html#scrollbar"><span class="std std-ref">SCROLLBAR</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LISTBOX.html#listbox"><span>LISTBOX</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="LISTBOXEX.html#listboxex"><span>LISTBOXEX</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="CONTAINER.html#container"><span>CONTAINER</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="CONTAINER.html#container"><span class="std std-ref">CONTAINER</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="FRAME.html#frame"><span>FRAME</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="FRAME.html#frame"><span class="std std-ref">FRAME</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="LABEL.html#label"><span>LABEL</span></a></td>
-<td>NOHIT</td>
-<td>&nbsp;</td>
-<td>O</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="LABEL.html#label"><span class="std std-ref">LABEL</span></a></p></td>
+<td><p>NOHIT</p></td>
+<td></td>
+<td><p>O</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="BAR.html#bar"><span>BAR</span></a></td>
-<td>HIT</td>
-<td>O</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p><a class="reference internal" href="BAR.html#bar"><span class="std std-ref">BAR</span></a></p></td>
+<td><p>HIT</p></td>
+<td><p>O</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1246,13 +1269,14 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="CantDrag.html" class="btn btn-neutral" title="Kinds of control which you can not drag." accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="CantDrag.html" class="btn btn-neutral float-left" title="Non-Dragable Controls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1261,11 +1285,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1278,36 +1302,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

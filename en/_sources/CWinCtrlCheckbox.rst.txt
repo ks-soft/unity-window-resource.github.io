@@ -1,0 +1,79 @@
+.. default-domain:: csharp
+
+.. _CWinCtrlCheckbox:
+
+==============================
+CWinCtrlCheckbox
+==============================
+
+ スクリプト: :ref:`CHECKBOX`
+
+ チェックボックスボタンを実現するためのコントロールです。
+
+ ボタン同様、７つまでバッジを表示することができます。
+ 
+ :ref:`コンテンツ<CHECKBOX_CONTENTS>` を持つことができ、ONの時だけ関連付いたコンテンツをアクティブにすることも可能です。
+ 
+
+:ref:`CWindowBase` に届くコールバック
+
+  :meth:`void onClick(CWinCtrlBase cCtrl)<CWindowBase.onClick>`
+
+  :meth:`void onHold(CWinCtrlBase cCtrl)<CWindowBase.onHold>`
+
+  :meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)<CWindowBase.onBeginDrag>`
+
+  :meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)<CWindowBase.onDrag>`
+
+  :meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)<CWindowBase.onDragRender>`
+
+  :meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)<CWindowBase.onDrop>`
+
+  :meth:`void onDropGround(CWinCtrlBase cCtrl)<CWindowBase.onDropGround>`
+
+.. class:: CWinCtrlCheckBox
+
+ .. property:: bool check { get; set; }
+
+ チェックボックスボタンの状態を変更します。
+
+  * true:
+
+   ON状態にし、関連付いているコンテンツがあれば、アクティブにします。
+
+  * false:
+   
+   OFF状態にし、関連付いているコンテンツがあれば、非アクティブにし表示を抑制します。
+
+*使用例*
+
+.. code-block:: csharp
+
+ // get control
+ CWinCtrlCheckbox	cbSelect = find<CWinCtrlCheckbox>(CHECKBOX_Select);
+
+ if (cbSelect.check) {
+   //on
+ } else {
+   //off
+ }
+ // Get BUTTON(A) from within content
+ // Content in the container can be accessed by find as follows
+ CWinCtrlButton btnA = find<CWinCtrlButton>(BUTTON_A);
+ 
+ // click callback
+ override protected void onClick(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case CHECKBOX_Select:
+         break;
+     }
+ }
+  // hold callback
+ override protected void onHold(CWinCtrlBase cCtrl) {
+     switch (cCtrl.id) {
+       case CHECKBOX_Select:
+         break;
+     }
+ }
+
+..

@@ -1,52 +1,53 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>テクスチャについて &mdash; WindowSystem 1.07 ドキュメント</title>
+  <title>テクスチャについて &mdash; WindowSystem 2.00 ドキュメント</title>
   
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="WindowSystem 1.07 ドキュメント" href="index.html"/>
-        <link rel="next" title="フォントについて" href="SpriteFont.html"/>
-        <link rel="prev" title="マルチID,FiveCC" href="id.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="フォントについて" href="SpriteFont.html" />
+    <link rel="prev" title="マルチID,FiveCC" href="id.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                1.07
+                2.00
               </div>
             
           
@@ -81,7 +82,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">特徴</a></li>
 </ul>
 <ul>
@@ -93,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="id.html">マルチID,FiveCC</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">テクスチャについて</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">テクスチャについて</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">テクスチャリソースを作る方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parts-def">定義ファイル &#64;parts.def</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">テクスチャフォーマット.</a></li>
@@ -133,6 +137,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syntax.html">ウィンドウスクリプト(wra)文法</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ratiovalue.html">割合指定:柔軟な座標、サイズ指定方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualsize.html">仮想的なGUIスクリーンサイズの設定方法</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="WindowAnchor.html">ウィンドウの配置について</a></li>
@@ -176,10 +184,6 @@
 <li class="toctree-l1"><a class="reference internal" href="AssetVersion.html">アセットバンドルについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CTextureResourceMgr.html">CTextureResourceMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html">CSoundEffectMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresourcemgr">CSeResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cseresource">CSeResource</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresourcemgr">CBgmResourceMgr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CSoundEffectMgr.html#cbgmresource">CBgmResource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMessageDataSheetMgr.html">CMessageDataSheetMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowMgr.html">CWindowMgrについて</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CWindowBase.html">CWindowBase</a></li>
@@ -212,7 +216,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Config.html">デフォルト値の変更方法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TextureDefault.html">テクスチャパーツデフォルト値</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&#8220;NULL&#8221;パーツ:テクスチャパーツが見つからないとき</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextureDefault.html#null">&quot;NULL&quot;パーツ:テクスチャパーツが見つからないとき</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Callback.html">CWindowBaseに届くコールバック</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CantDrag.html">ドラッグできないコントロール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CtrlStyle.html">有効なスタイルフラグ</a></li>
@@ -227,34 +231,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WindowSystem</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WindowSystem</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>テクスチャについて</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>テクスチャについて</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/TextureResource.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/TextureResource.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -263,28 +287,30 @@
   <div class="section" id="textureresource">
 <span id="id1"></span><h1>テクスチャについて<a class="headerlink" href="#textureresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>C#上でテクスチャリソースを扱うには、 <a class="reference internal" href="CTextureResourceMgr.html#id1"><span>こちら</span></a> を参照ください。</p>
+<div><p>C#上でテクスチャリソースを扱うには、 <a class="reference internal" href="CTextureResourceMgr.html#class-CTextureResourceMgr" title="CTextureResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
 <p>ウィンドウシステムで使うテクスチャは、幾つかのテクスチャをアトラス化することによって
 一つのメッシュとしてまとめてレンダリングできるようにしています。</p>
 <p>また、アトラス化するときに、自動的に16bitに減色し、ディザリングも行ってくれます。</p>
 <p>パーツ毎にディザリングを行うか/単純な色変換を行うか選択可能になっています。</p>
 <p>■テクスチャパーツ</p>
 <blockquote>
-<div>単純にパーツとも呼びます。
-アトラス化する前のテクスチャをテクスチャパーツと呼びます。</div></blockquote>
+<div><p>単純にパーツとも呼びます。
+アトラス化する前のテクスチャをテクスチャパーツと呼びます。</p>
+</div></blockquote>
 <p>■テクスチャ</p>
 <blockquote>
-<div>本ドキュメントでテクスチャと呼ぶときは、アトラス化された後のテクスチャを指します。
-また、通常のテクスチャと明確に分けるために、テクスチャリソースと呼ぶこともあります。</div></blockquote>
+<div><p>本ドキュメントでテクスチャと呼ぶときは、アトラス化された後のテクスチャを指します。
+また、通常のテクスチャと明確に分けるために、テクスチャリソースと呼ぶこともあります。</p>
+</div></blockquote>
 </div></blockquote>
 <div class="section" id="id2">
 <h2>テクスチャリソースを作る方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Unityプロジェクトを起動します。</li>
-<li>プロジェクト内のTextureResourceフォルダ(Assets/KsSoft/TextureResource)の直下に <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> でフォルダを作ります。</li>
-<li>そのフォルダ内に、テクスチャを配置していきます。</li>
-<li>フォルダを選んで、[右クリック]→[Export]を選んでください(複数選択可能)。</li>
+<li><p>Unityプロジェクトを起動します。</p></li>
+<li><p>プロジェクト内のTextureResourceフォルダ(Assets/KsSoft/TextureResource)の直下に <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> でフォルダを作ります。</p></li>
+<li><p>そのフォルダ内に、テクスチャを配置していきます。</p></li>
+<li><p>フォルダを選んで、[右クリック]→[Export]を選んでください(複数選択可能)。</p></li>
 </ol>
 <blockquote>
 <div><img alt="_images/TextureResource.png" src="_images/TextureResource.png" />
@@ -292,17 +318,17 @@
 <p>これによって、100_000_00000.unity3dというアセットバンドルが、assetbundlesの下に生成されます。</p>
 <p>■テクスチャ名の制約</p>
 <p>アトラス化するテクスチャの名前は、拡張子を除いて5文字である必要があります。</p>
-<p>これは、 <a class="reference internal" href="id.html#fivecc"><span>FiveCC</span></a> としてエンコーディングされるためです。</p>
-<p>また、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> ファイル名も使用できます。</p>
+<p>これは、 <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> としてエンコーディングされるためです。</p>
+<p>また、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> ファイル名も使用できます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">BTN00</span><span class="p">.</span><span class="n">pgn</span>
-<span class="m">000</span><span class="n">_000_00010</span><span class="p">.</span><span class="n">png</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BTN00</span><span class="o">.</span><span class="n">pgn</span>
+<span class="mf">000_000_00010.</span><span class="n">png</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>■フォルダ名の制約</p>
-<p><a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> である必要があります。</p>
-<p>アセットバンドルは、 <a class="reference internal" href="id.html#mulid"><span>マルチID</span></a> で管理されるためです。</p>
+<p><a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> である必要があります。</p>
+<p>アセットバンドルは、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> で管理されるためです。</p>
 </div></blockquote>
 </div>
 <div class="section" id="parts-def">
@@ -314,46 +340,46 @@
 </div></blockquote>
 <p>リソース化するかどうかを選択</p>
 <hr class="docutils" />
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="n">ON</span><span class="p">/</span><span class="n">OFF</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RESOURCE</span> <span class="o">=</span> <span class="n">ON</span><span class="o">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>次のように、RESOURCEを有効にすると、KsSoft/Resources/の下に次のようなファイルを生成します。</p>
 <ul class="simple">
-<li>001_000_00000.spr</li>
-<li>001_000_00000.tex</li>
+<li><p>001_000_00000.spr</p></li>
+<li><p>001_000_00000.tex</p></li>
 </ul>
 </div></blockquote>
 <p>アセットバンドル経由で読み込まず、この二つのファイルをリソース経由で読み込みます。
 デフォルトでは、アセットバンドルを出力するようになっています。</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">RESOURCE</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RESOURCE</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <div class="section" id="id4">
 <h3>テクスチャフォーマット.<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">FORMAT</span> <span class="p">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FORMAT</span> <span class="o">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>テクスチャフォーマットのデフォルトは <a class="reference external" href="http://docs.unity3d.com/ScriptReference/TextureFormat.html">RGBA4444</a> です。</p>
-<p>それ以外に、<a class="reference internal" href="#png-jpg"><span>PNG,JPG</span></a> を指定することが可能です。</p>
+<p>それ以外に、<a class="reference internal" href="#png-jpg"><span class="std std-ref">PNG,JPG</span></a> を指定することが可能です。</p>
 <p>16bitテクスチャを指定するとき以外は、ディザリングをOFFにしてください。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-<span class="n">FORMAT</span> <span class="p">=</span> <span class="n">RGBA32</span><span class="p">;</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+<span class="n">FORMAT</span> <span class="o">=</span> <span class="n">RGBA32</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -365,43 +391,44 @@
 <p>ただし、実際にアプリケーションに組み込んで使うとき、これらテクスチャは32bitテクスチャとして展開されます。</p>
 <p>メリットとデメリットを考えて使ってください。</p>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="30%" />
-<col width="70%" />
+<col style="width: 30%" />
+<col style="width: 70%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">フォーマット</th>
-<th class="head">実機上でのテクスチャフォーマット</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>フォーマット</p></th>
+<th class="head"><p>実機上でのテクスチャフォーマット</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>FORMAT = PNG;</td>
-<td>ARGB32</td>
+<tbody>
+<tr class="row-even"><td><p>FORMAT = PNG;</p></td>
+<td><p>ARGB32</p></td>
 </tr>
-<tr class="row-odd"><td>FORMAT = JPG;</td>
-<td>RGB24</td>
+<tr class="row-odd"><td><p>FORMAT = JPG;</p></td>
+<td><p>RGB24</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <div><p><strong>利点</strong></p>
 <blockquote>
-<div>アセットサイズが小さくなる (=ダウンロードサイズが小さくなる)</div></blockquote>
+<div><p>アセットサイズが小さくなる (=ダウンロードサイズが小さくなる)</p>
+</div></blockquote>
 <p><strong>弱点</strong></p>
 <blockquote>
 <div><p>32bitテクスチャとして展開されるため、VRAMやメインメモリを圧迫します。</p>
 <p>また、レンダリング速度も犠牲になります。</p>
 <div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">特にメモリ帯域の狭いスマートフォン上では、著しくパフォーマンスが落ちるため、気を付けてください。</p>
+<p class="admonition-title">注釈</p>
+<p>特にメモリ帯域の狭いスマートフォン上では、著しくパフォーマンスが落ちるため、気を付けてください。</p>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="id6">
 <h3>ディザリングのデフォルト値<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">/</span><span class="n">OFF</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="o">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
@@ -409,21 +436,21 @@
 <p>特に指定しないとき、どちらをデフォルト値にするか選択可能です。</p>
 <p>この例ではpartAは、ディザリングを行い、partBは、ディザリングがキャンセルされます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partA&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
-   <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;partB&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
+   <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id7">
 <h3>シェーダの切り替え<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;SHADER PATH&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHADER</span> <span class="o">=</span> <span class="s2">&quot;SHADER PATH&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <blockquote>
@@ -431,10 +458,10 @@
 <p>シェーダはパーツ単位で切り替えることはできません。</p>
 <p>ただし、テクスチャリソース単位では切り替えることが可能です。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SHADER</span> <span class="p">=</span> <span class="s">&quot;Custom/Billboard&quot;</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHADER</span> <span class="o">=</span> <span class="s2">&quot;Custom/Billboard&quot;</span><span class="p">;</span>
 
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;blck&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;blck&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -442,31 +469,32 @@
 <div class="section" id="id8">
 <h3>パーツ定義とエイリアス<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>パーツの定義は、次のような形で設定可能です。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre>PART(Texture part file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<div><p>パーツの定義は、次のような形で設定可能です。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="n">Texture</span> <span class="n">part</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 
-PART(Alias name,Texture part file name) {
-   Property 0;
-   Property 1;
-       ：
-   Property n;
-};
+<span class="n">PART</span><span class="p">(</span><span class="n">Alias</span> <span class="n">name</span><span class="p">,</span><span class="n">Texture</span> <span class="n">part</span> <span class="n">file</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Property</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Property</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="p">:</span>
+   <span class="n">Property</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>後者は同一のテクスチャパーツに対して名前をエイリアスすることによって、あたかも同一パーツで別のプロパティを持つパーツとして振る舞うことが可能です。</p>
-<p>例えば、次のように定義すると、&#8221;BTN00&#8221;は、テクスチャカラーがそのまま出力されますが、&#8221;BTN01&#8221;は暗くレンダリングされます。</p>
+<p>例えば、次のように定義すると、&quot;BTN00&quot;は、テクスチャカラーがそのまま出力されますが、&quot;BTN01&quot;は暗くレンダリングされます。</p>
 </div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">COLOR</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">COLOR</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">,</span><span class="s">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">COLOR</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">1</span><span class="p">;</span>
+<span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">,</span><span class="s2">&quot;BTN00&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">COLOR</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -505,10 +533,11 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch3h">
 <h4>PATCH3H = 左固定幅,右固定幅;<a class="headerlink" href="#patch3h" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
-<div>パーツを拡大するとき、左右の指定幅だけ固定し、真ん中を拡大表示する。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE3H</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div><p>パーツを拡大するとき、左右の指定幅だけ固定し、真ん中を拡大表示する。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE3H</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -522,10 +551,11 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch3v">
 <h4>PATCH3V = 上固定高,下固定高;<a class="headerlink" href="#patch3v" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
-<div>パーツを拡大するとき、上下の指定高だけ固定し、真ん中を拡大表示する。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE3V</span> <span class="p">=</span> <span class="m">24</span><span class="p">,</span><span class="m">24</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">ON</span><span class="p">;</span>
+<div><p>パーツを拡大するとき、上下の指定高だけ固定し、真ん中を拡大表示する。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;BTN01&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE3V</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -539,10 +569,11 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="patch9">
 <h4>PATCH9 = 左上固定幅,左上固定高,右下固定幅,右下固定高;<a class="headerlink" href="#patch9" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
-<div>パーツを拡大するとき、4辺の指定サイズだけ固定し、真ん中を拡大表示する。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PART</span><span class="p">(</span><span class="s">&quot;FRAME&quot;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">DIVIDE9</span> <span class="p">=</span> <span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">40</span><span class="p">;</span>
-   <span class="n">DITHER</span> <span class="p">=</span> <span class="n">OFF</span><span class="p">;</span>
+<div><p>パーツを拡大するとき、4辺の指定サイズだけ固定し、真ん中を拡大表示する。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">DIVIDE9</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">;</span>
+   <span class="n">DITHER</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -554,18 +585,20 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="id10">
 <h3>インクルードパス<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>以下のパスにインクルードパスが、通っています。
-インクルードファイルを作成する際は、ファイルをここに置いてください。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span>
+<div><p>以下のパスにインクルードパスが、通っています。
+インクルードファイルを作成する際は、ファイルをここに置いてください。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">TextureResource</span><span class="o">/</span><span class="n">include</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id11">
 <h3>&#64;parts.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
-<div>次のファイルは、&#64;parts.defをコンパイルするときに、自動的にインクルードされます。
-共通の設定は、このファイルに記述すると便利です。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assets</span><span class="p">/</span><span class="n">KsSoft</span><span class="p">/</span><span class="n">TextureResource</span><span class="p">/</span><span class="n">include</span><span class="p">/</span><span class="n">tr</span><span class="p">.</span><span class="n">h</span>
+<div><p>次のファイルは、&#64;parts.defをコンパイルするときに、自動的にインクルードされます。
+共通の設定は、このファイルに記述すると便利です。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Assets</span><span class="o">/</span><span class="n">KsSoft</span><span class="o">/</span><span class="n">TextureResource</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">tr</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
 </div>
@@ -573,54 +606,56 @@ PART(Alias name,Texture part file name) {
 <div class="section" id="id12">
 <h2>プリプロセッサ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
-<div>C言語,C++言語とほぼ同じプリプロセッサが使えます。</div></blockquote>
-<table border="1" class="docutils">
+<div><p>C言語,C++言語とほぼ同じプリプロセッサが使えます。</p>
+</div></blockquote>
+<table class="docutils align-center">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">プリプロセッサ</th>
-<th class="head">説明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリプロセッサ</p></th>
+<th class="head"><p>説明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>// コメント</td>
-<td>ラインコメント</td>
+<tbody>
+<tr class="row-even"><td><p>// コメント</p></td>
+<td><p>ラインコメント</p></td>
 </tr>
-<tr class="row-odd"><td>/* コメント */</td>
-<td>ブロックコメント</td>
+<tr class="row-odd"><td><p>/* コメント */</p></td>
+<td><p>ブロックコメント</p></td>
 </tr>
-<tr class="row-even"><td>#include ファイル名</td>
-<td>ファイルをインクルードする</td>
+<tr class="row-even"><td><p>#include ファイル名</p></td>
+<td><p>ファイルをインクルードする</p></td>
 </tr>
-<tr class="row-odd"><td>#define 記号定数の定義</td>
-<td>記号定数の定義</td>
+<tr class="row-odd"><td><p>#define 記号定数の定義</p></td>
+<td><p>記号定数の定義</p></td>
 </tr>
-<tr class="row-even"><td>#define 関数マクロ</td>
-<td>関数マクロ</td>
+<tr class="row-even"><td><p>#define 関数マクロ</p></td>
+<td><p>関数マクロ</p></td>
 </tr>
-<tr class="row-odd"><td>#if defined(記号定義) ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#if defined(記号定義) ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#ifdef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-even"><td><p>#ifdef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-odd"><td>#ifndef ～ #endif</td>
-<td>条件コンパイル</td>
+<tr class="row-odd"><td><p>#ifndef ～ #endif</p></td>
+<td><p>条件コンパイル</p></td>
 </tr>
-<tr class="row-even"><td>#pragma once</td>
-<td>多重インクルード防止</td>
+<tr class="row-even"><td><p>#pragma once</p></td>
+<td><p>多重インクルード防止</p></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<div><a class="reference external" href="http://docs.unity3d.com/ScriptReference/BuildTarget.html">BuildTarget</a> がマクロとして自動定義されています。</div></blockquote>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="cp">#if defined(StandaloneWindows)</span>
-   <span class="n">MS</span><span class="p">-</span><span class="n">Windows</span>
-<span class="cp">#else</span>
+<div><p><a class="reference external" href="http://docs.unity3d.com/ScriptReference/BuildTarget.html">BuildTarget</a> がマクロとして自動定義されています。</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if defined(StandaloneWindows)</span>
+   <span class="n">MS</span><span class="o">-</span><span class="n">Windows</span>
+<span class="c1">#else</span>
    <span class="n">Other</span>
-<span class="cp">#endif</span>
+<span class="c1">#endif</span>
 </pre></div>
 </div>
 </div>
@@ -628,15 +663,16 @@ PART(Alias name,Texture part file name) {
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="SpriteFont.html" class="btn btn-neutral float-right" title="フォントについて" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="SpriteFont.html" class="btn btn-neutral float-right" title="フォントについて" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="id.html" class="btn btn-neutral" title="マルチID,FiveCC" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="id.html" class="btn btn-neutral float-left" title="マルチID,FiveCC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -645,11 +681,11 @@ PART(Alias name,Texture part file name) {
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Seikichi Kanemura,KsSoft.
+        &copy; Copyright 2015, Seikichi Kanemura,KsSoft
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -662,37 +698,15 @@ PART(Alias name,Texture part file name) {
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.07',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
