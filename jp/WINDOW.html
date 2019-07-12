@@ -136,7 +136,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = キャプションID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = <span class="xref std std-ref">X,Y</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = <span class="xref std std-ref">横サイズ,縦サイズ</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#screen-x-y"><strong>SCREEN</strong> = <span class="xref std std-ref">左上X,左上Y,横サイズ,縦サイズ</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-x-y"><strong>SCREEN</strong> = <span class="xref std std-ref">左上X,左上Y,横サイズ,縦サイズ</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">セーフエリア</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#priority"><strong>PRIORITY</strong> = 表示プライオリティ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#texture-zoffset-id-z"><strong>TEXTURE_ZOFFSET</strong> = テクスチャID,Ｚオフセット</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = スタイルフラグ0|スタイルフラグ1|..|スタイルフラグn</a></li>
@@ -536,6 +539,15 @@ height = 50 + 960 * 20/100 = 242</p>
 <p>この例では、下図のようにウィンドウを配置します。</p>
 </div></blockquote>
 <img alt="_images/winprop_screen.png" src="_images/winprop_screen.png" />
+<div class="section" id="id9">
+<h4>セーフエリア<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<blockquote>
+<div><p>ノッチ付の端末に対応するためにセーフエリアを基準にSCREENを設定できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SCREEN</span> <span class="o">=</span> <span class="n">SAFEAREA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,{</span><span class="mi">100</span><span class="p">},{</span><span class="mi">100</span><span class="p">});</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="priority">
 <span id="window-prop-priority"></span><h3><strong>PRIORITY</strong> = 表示プライオリティ<a class="headerlink" href="#priority" title="このヘッドラインへのパーマリンク">¶</a></h3>

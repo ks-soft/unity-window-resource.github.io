@@ -135,7 +135,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#caption-id"><strong>CAPTION</strong> = Caption ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#position-x-y"><strong>POSITION</strong> = <span class="xref std std-ref">X,Y</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#size"><strong>SIZE</strong> = <span class="xref std std-ref">width,height</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#screen-x-y"><strong>SCREEN</strong> = <span class="xref std std-ref">Top Left X,Top Left Y,width,height</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-x-y"><strong>SCREEN</strong> = <span class="xref std std-ref">Top Left X,Top Left Y,width,height</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Safe Area</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#priority"><strong>PRIORITY</strong> = display priority</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#texture-zoffset-id-z"><strong>TEXTURE_ZOFFSET</strong> = Texture ID,Z offset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-0-1-n"><strong>STYLE</strong> = style flag 0|style flag 1|..|style flag n</a></li>
@@ -531,6 +534,15 @@ height = 50 + 960 * 20/100 = 242</p>
 <p>In this example, It places the window as shown in the figure below.</p>
 </div></blockquote>
 <img alt="_images/winprop_screen.png" src="_images/winprop_screen.png" />
+<div class="section" id="id9">
+<h4>Safe Area<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You can set SCREEN based on the safe area to support terminals with a notch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SCREEN</span> <span class="o">=</span> <span class="n">SAFEAREA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,{</span><span class="mi">100</span><span class="p">},{</span><span class="mi">100</span><span class="p">});</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="priority">
 <span id="window-prop-priority"></span><h3><strong>PRIORITY</strong> = display priority<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
