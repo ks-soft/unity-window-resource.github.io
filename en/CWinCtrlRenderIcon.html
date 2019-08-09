@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -300,37 +300,37 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CWinCtrlRenderIcon">
-<code class="descname">class CWinCtrlRenderIcon</code><a class="headerlink" href="#class-CWinCtrlRenderIcon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CWinCtrlRenderIcon</code><a class="headerlink" href="#class-CWinCtrlRenderIcon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Functions / Properties</p>
 <dl class="property">
 <dt id="property-CWinCtrlRenderIcon.regionId">
-ulong <code class="descname">regionId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.regionId" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint64.aspx" title="System.UInt64">UInt64</a> <code class="sig-name descname">regionId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.regionId" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Assign a unique ID other than 0. Setting it to 0 frees the reserved render texture.Also, if you assign the same value as other controls, they share a render texture.</p>
 <dl class="property">
 <dt id="property-CWinCtrlRenderIcon.camera">
-Camera <code class="descname">camera</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.camera" title="Permalink to this definition">¶</a></dt>
+Camera <code class="sig-name descname">camera</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.camera" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>you can get the camera to which the rendering texture is assigned. Access when you want to customize the camera position and angle.</p>
 <dl class="property">
 <dt id="property-CWinCtrlRenderIcon.color1">
-WinColor <code class="descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.color1" title="Permalink to this definition">¶</a></dt>
+WinColor <code class="sig-name descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.color1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It is assigned as the background color for rendering.</p>
 <p>Default valus is (0,0,0,0).</p>
 <dl class="property">
 <dt id="property-CWinCtrlRenderIcon.needToRender">
-bool <code class="descname">needToRender</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.needToRender" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">needToRender</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.needToRender" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Set to true when you want to restart rendering.</p>
 <p>If you return a true, rendering of the next frame is continued( <span class="xref std std-ref">onBeginRenderIcon</span> is called at the next frame. ).</p>
 <dl class="property">
 <dt id="property-CWinCtrlRenderIcon.state">
-CInput::e_State <code class="descname">state</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.state" title="Permalink to this definition">¶</a></dt>
+CInput::e_State <code class="sig-name descname">state</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.state" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Gets the state that the icon is depressed.</p>

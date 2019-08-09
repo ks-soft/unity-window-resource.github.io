@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -313,44 +313,44 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CWindowBase">
-<code class="descname">class CWindowBase</code><a class="headerlink" href="#class-CWindowBase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CWindowBase</code><a class="headerlink" href="#class-CWindowBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>A window is composed by many controls.</p>
 <p>If you perform operations as touch and drag to controls, the callback function in this window is called.</p>
 <p>It enumerates callback functions that a window can receive.</p>
 <p>You need to create new class which is inherited the class that is generated when you compile the script window. And you override callback functions in this new class.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onCreate">
-<em>virtual</em> void <code class="descname">onCreate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCreate" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onCreate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCreate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>called immediately after the window has been initialized.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onUpdate">
-<em>virtual</em> void <code class="descname">onUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onUpdate" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onUpdate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called before each control update.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onAfterUpdate">
-<em>virtual</em> void <code class="descname">onAfterUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onAfterUpdate" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onAfterUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onAfterUpdate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called after each control update.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onPreRender">
-<em>virtual</em> void <code class="descname">onPreRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onPreRender" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onPreRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onPreRender" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called before each control render.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onRender">
-<em>virtual</em> <code class="descname">onRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRender" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> <code class="sig-name descname">onRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRender" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called after each control render.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onClose">
-<em>virtual</em> bool <code class="descname">onClose</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClose" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">onClose</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClose" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called when the window is closed.</p>
@@ -362,44 +362,44 @@
 </div></blockquote>
 <dl class="method">
 <dt id="method-CWindowBase.onClick">
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClick" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClick" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Control is pressed.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onHold">
-<em>virtual</em> void <code class="descname">onHold</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onHold" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onHold</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onHold" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Control is hold.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onClickEnter">
-<em>virtual</em> void <code class="descname">onClickEnter</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClickEnter" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onClickEnter</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClickEnter" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Input of edit box is confirmed.</p>
 <dl class="method">
 <dt>
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="CWinCtrlRichText.html#class-CRichTextOne" title="CRichTextOne class">CRichTextOne</a> <em>cText</em><span class="sig-paren">)</span></dt>
+<em>virtual</em> void <code class="sig-name descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="CWinCtrlRichText.html#class-CRichTextOne" title="CRichTextOne class">CRichTextOne</a> <em>cText</em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
 
 <p>A part of the rich text is pressed</p>
 <dl class="method">
 <dt id="method-CWindowBase.onBeginDrag">
-<em>virtual</em> void <code class="descname">onBeginDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginDrag" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onBeginDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginDrag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>The control is dragged. called once first when it is dragged.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onDrag">
-<em>virtual</em> void <code class="descname">onDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrag" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>The control is being dragged. kept calling while dragging.</p>
 <p>You can tell which direction a scrollable control has been dragged by onDrag.However, STYLE must have  <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">SCROLL_LOCK</span></a> .onDrag can detect the direction of the drag.Note that DRAG does not affect these controls.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onDragRender">
-<em>virtual</em> bool <code class="descname">onDragRender</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDragRender" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">onDragRender</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDragRender" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>When a control is being dragged, called the render timing. If not overridden, the control is rendered normally.</p>
@@ -412,50 +412,50 @@
 </div></blockquote>
 <dl class="method">
 <dt id="method-CWindowBase.onDrop">
-<em>virtual</em> void <code class="descname">onDrop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cDragWindow</em>, <a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrop" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onDrop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cDragWindow</em>, <a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>When the control being dragged is released, it is called on the window containing the control that exists under the released location.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onDropGround">
-<em>virtual</em> void <code class="descname">onDropGround</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDropGround" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onDropGround</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDropGround" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called when control being dragged is released in empty space.</p>
 <p>It is also called when the window containing the control being dragged has disappeared, just before the disappearance.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onOK">
-<em>virtual</em> void <code class="descname">onOK</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onOK" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onOK</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onOK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p><cite>OK</cite> button was pressed in the message window that was created as a child window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onNext">
-<em>virtual</em> void <code class="descname">onNext</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNext" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onNext</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNext" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p><cite>Next</cite> button was pressed in the message window that was created as a child window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onYes">
-<em>virtual</em> void <code class="descname">onYes</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onYes" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onYes</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onYes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p><cite>Yes</cite> button was pressed in the message window that was created as a child window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onNo">
-<em>virtual</em> void <code class="descname">onNo</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNo" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onNo</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p><cite>No</cite> button was pressed in the message window that was created as a child window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onCancel">
-<em>virtual</em> void <code class="descname">onCancel</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCancel" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onCancel</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCancel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p><cite>Cancel</cite> button was pressed in the message window that was created as a child window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onRecreatedRenderTexture">
-<em>virtual</em> void <code class="descname">onRecreatedRenderTexture</code> <span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRecreatedRenderTexture" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">onRecreatedRenderTexture</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRecreatedRenderTexture" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It is called when a render texture disappears due to some event. However, since the automatic reset is performed by the system, it is not necessary to override the automatic reset.</p>
@@ -465,7 +465,7 @@
 <p>I explain the accessible methods and properties of CWindowBase.</p>
 <dl class="method">
 <dt id="method-CWindowBase.onBeginRenderIcon">
-<em>virtual</em> bool <code class="descname">onBeginRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginRenderIcon" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">onBeginRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginRenderIcon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Start rendering to the icon. <a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a>  is called only when the window contains it.</p>
@@ -476,7 +476,7 @@
 </ul>
 <dl class="method">
 <dt id="method-CWindowBase.onEndRenderIcon">
-<em>virtual</em> bool <code class="descname">onEndRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onEndRenderIcon" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">onEndRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onEndRenderIcon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called when rendering is finished. <a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a>  is called only when the window contains it.</p>
@@ -490,160 +490,160 @@
 <p>If you want to resume the stopped rendering , you set the needToRender to true.</p>
 <dl class="method">
 <dt id="method-CWindowBase.close">
-void <code class="descname">close</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><em> = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.close" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">close</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>iCloseInfo</em><em> = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Call when you want to close a window. iCloseInfo is passed as a parameter to onClose.</p>
 <dl class="method">
 <dt id="method-CWindowBase.find">
-WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.find" title="Permalink to this definition">¶</a></dt>
+WinCtrl <code class="sig-name descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.find" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Find the control with that ID.</p>
 <dl class="method">
 <dt>
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span></dt>
+<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="sig-name descname">find</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
 
 <p>Find the control with that ID.</p>
 <dl class="property">
 <dt id="property-CWindowBase.id">
-uint <code class="descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.id" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <code class="sig-name descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set the window ID.</p>
 <dl class="property">
 <dt id="property-CWindowBase.child">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">child</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.child" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="sig-name descname">child</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.child" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>return child window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.parent">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.parent" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="sig-name descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.parent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>return parent window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.layer">
-e_LayerId <code class="descname">layer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.layer" title="Permalink to this definition">¶</a></dt>
+e_LayerId <code class="sig-name descname">layer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.layer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set rendering layer.</p>
 <dl class="property">
 <dt id="property-CWindowBase.priority">
-int <code class="descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priority" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set drawing priority.</p>
 <dl class="property">
 <dt id="property-CWindowBase.texid">
-uint <code class="descname">texid</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.texid" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <code class="sig-name descname">texid</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.texid" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>return the default texture id of this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.x">
-float <code class="descname">x</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.x" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">x</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.x" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="property">
 <dt id="property-CWindowBase.y">
-float <code class="descname">y</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.y" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">y</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.y" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set window coordinate</p>
 <dl class="property">
 <dt id="property-CWindowBase.position">
-Vector2 <code class="descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.position" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.position" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set window coordinate</p>
 <dl class="property">
 <dt id="property-CWindowBase.transform">
-Transform <code class="descname">transform</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.transform" title="Permalink to this definition">¶</a></dt>
+Transform <code class="sig-name descname">transform</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.transform" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get transform of this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.scale">
-Vector2 <code class="descname">scale</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.scale" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">scale</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.scale" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set x,y scale of this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.anchor">
-e_Anchor <code class="descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.anchor" title="Permalink to this definition">¶</a></dt>
+e_Anchor <code class="sig-name descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.anchor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set the display position anchor setting.</p>
 <dl class="property">
 <dt id="property-CWindowBase.width">
-float <code class="descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.width" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="property">
 <dt id="property-CWindowBase.height">
-float <code class="descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.height" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.height" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set this window size.</p>
 <dl class="property">
 <dt id="property-CWindowBase.size">
-Vector2 <code class="descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.size" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set this window size.</p>
 <dl class="property">
 <dt id="property-CWindowBase.screenWidth">
-float <code class="descname">screenWidth</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenWidth" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">screenWidth</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenWidth" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="property">
 <dt id="property-CWindowBase.screenHeight">
-float <code class="descname">screenHeight</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenHeight" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">screenHeight</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenHeight" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set this window screen size.</p>
 <dl class="property">
 <dt id="property-CWindowBase.caption">
-string <code class="descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.caption" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.caption" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set a title bar’s caption of this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.captionColor">
-WinColor <code class="descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionColor" title="Permalink to this definition">¶</a></dt>
+WinColor <code class="sig-name descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionColor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set a title bar’s color fo this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.captionOffset">
-Vector2 <code class="descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionOffset" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionOffset" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set a title bar’s caption offset of this window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.color">
-WinColor <code class="descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.color" title="Permalink to this definition">¶</a></dt>
+WinColor <code class="sig-name descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.color" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set this window color. this color is all affect all contorl under the window.</p>
 <dl class="property">
 <dt id="property-CWindowBase.style">
-e_WinStyle <code class="descname">style</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.style" title="Permalink to this definition">¶</a></dt>
+e_WinStyle <code class="sig-name descname">style</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.style" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get this window style.</p>
 <dl class="property">
 <dt id="property-CWindowBase.priorityStyle">
-e_WinStyle <code class="descname">priorityStyle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priorityStyle" title="Permalink to this definition">¶</a></dt>
+e_WinStyle <code class="sig-name descname">priorityStyle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priorityStyle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get/Set this window priority style.</p>
 <dl class="property">
 <dt id="property-CWindowBase.hide">
-bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.hide" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.hide" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <ul class="simple">
@@ -660,7 +660,7 @@ bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<
 </div></blockquote>
 <dl class="property">
 <dt id="property-CWindowBase.disable">
-bool <code class="descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.disable" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.disable" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <ul class="simple">
@@ -678,19 +678,19 @@ bool <code class="descname">disable</code> { <em class="property">get; set;</em>
 <p>if stop a window from functioning, it won’t respond when you touch it.</p>
 <dl class="property">
 <dt id="property-CWindowBase.isClose">
-bool <code class="descname">isClose</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isClose" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isClose</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isClose" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>True if the window is during close animation.</p>
 <dl class="property">
 <dt id="property-CWindowBase.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isLoaded" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>True if textures are being imported.</p>
 <dl class="property">
 <dt id="property-CWindowBase.isFade">
-bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isFade" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isFade</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isFade" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>True if the window is fade-in/fade-out.</p>
@@ -700,7 +700,7 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 <p>CWindowBase has overridable methods other than callback. You need to override when you want to customize the fade animation when creating the window or closing the window.</p>
 <dl class="method">
 <dt id="method-CWindowBase.startFade">
-<em>protected</em> <em>virtual</em> void <code class="descname">startFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.startFade" title="Permalink to this definition">¶</a></dt>
+<em>protected</em> <em>virtual</em> void <code class="sig-name descname">startFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.startFade" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called when a fade begins.The fade-in/fade-out can be determined by looking at e _ FadeState.Perform the initialization required for fade processing.</p>
@@ -720,7 +720,7 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 </div></blockquote>
 <dl class="method">
 <dt id="method-CWindowBase.doFade">
-<em>protected</em> <em>virtual</em> bool <code class="descname">doFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.doFade" title="Permalink to this definition">¶</a></dt>
+<em>protected</em> <em>virtual</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">doFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.doFade" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called during fade.</p>

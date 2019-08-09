@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -264,145 +264,33 @@
 <p>ウィンドウを管理するためのマネージャです。</p>
 <p>このマネージャを介して全てのウィンドウをクリエイトします。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWindowMgr">
-<code class="descname">class CWindowMgr</code><a class="headerlink" href="#class-CWindowMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CWindowMgr.setUIResolution">
-void <code class="descname">setUIResolution</code> <span class="sig-paren">(</span>float <em>width</em>, float <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.setUIResolution" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param width</dt>
-<dd class="field-odd"><p>UIのスクリーン幅を設定します。0を指定したときは、heightを基準に拡縮率を計算します。</p>
-</dd>
-<dt class="field-even">Param height</dt>
-<dd class="field-even"><p>UIのスクリーン高を設定します。width = 0を指定した場合のみ、heightを基準に拡縮率を計算します。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>UIの仮想的なスクリーンサイズを設定します。
+<p class="cwindowmgr">UIの仮想的なスクリーンサイズを設定します。
 アスペクト比は自動的に狂わないように拡縮率を決定するようになっています。</p>
-<ul class="simple">
+<ul class="cwindowmgr simple">
 <li><p>width != 0の場合</p></li>
 </ul>
-<p>widthを基準にUIスクリーンサイズを決定します。</p>
-<ul class="simple">
+<p class="cwindowmgr">widthを基準にUIスクリーンサイズを決定します。</p>
+<ul class="cwindowmgr simple">
 <li><p>width == 0 and height != 0の場合</p></li>
 </ul>
-<p>heightを基準にUIスクリーンサイズを決定します。</p>
-<ul class="simple">
+<p class="cwindowmgr">heightを基準にUIスクリーンサイズを決定します。</p>
+<ul class="cwindowmgr simple">
 <li><p>width == 0 and height == 0の場合(デフォルト)</p></li>
 </ul>
-<p>端末のスクリーンサイズに準拠します。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>読み込まれたウィンドウリソースを展開し、初期化します。
+<p class="cwindowmgr">端末のスクリーンサイズに準拠します。</p>
+<p class="cwindowmgr">読み込まれたウィンドウリソースを展開し、初期化します。
 CAssetBundleMgrが登録されていたら、自動的にウィンドウリソースをサーバからダウンロードしてきて、この関数に渡されます。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.load">
-bool <code class="descname">load</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.load" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>バイトデータとして読み込んだウィンドウリソースを展開し初期化します。</p>
-<dl class="method">
-<dt>
-bool <code class="descname">load</code> <span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param string assetname</dt>
-<dd class="field-odd"><p>読み込まれるアセット名</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>リソースデータから、指定したアセット名のウィンドウリソースを読み込み初期化します。</p>
-<p>実際に読み込まれるアセットは、assetname + &quot;.asset&quot;という名前です。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.create">
-WindowScript <code class="descname">create</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em>, <a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cParent</em><em> = null</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.create" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param WindowScript</dt>
-<dd class="field-odd"><p>クリエイトするウィンドウのクラス名</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>ウィンドウID</p>
-</dd>
-<dt class="field-odd">Param CWindowBase cParet</dt>
-<dd class="field-odd"><p>親ウィンドウ</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定したクラスのウィンドウをクリエイトする。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.find">
-WindowScript <code class="descname">find</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param WindowScript</dt>
-<dd class="field-odd"><p>ウィドウクラス名</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>ウィンドウID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたウィンドウを探す。まだクリエイトされていないなら、nullが返る。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.bringToTop">
-void <code class="descname">bringToTop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.bringToTop" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CWindowBase cWindow</dt>
-<dd class="field-odd"><p>対象ウィンドウ</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>対象ウィンドウの優先順位を上げる。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.getCaption">
-string <code class="descname">getCaption</code> <span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.getCaption" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mCaptionId</dt>
-<dd class="field-odd"><p>キャプションID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたキャプションIDから、文字列を取得します。</p>
-<dl class="method">
-<dt id="method-CWindowMgr.play">
-void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.play" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mSE</dt>
-<dd class="field-odd"><p>SEのID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたSE IDから、効果音を再生する。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.clickSE">
-uint <code class="descname">clickSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.clickSE" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>タッチしたときに鳴らす標準音を指定します。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.scrollSE">
-uint <code class="descname">scrollSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.scrollSE" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>リストボックスなどをスクロールさせたときに鳴らす標準音を指定します。</p>
-<dl class="property">
-<dt id="property-CWindowMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CWindowMgr" title="CWindowMgr class">CWindowMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウマネージャのインスタンスを取得します。</p>
-</dd></dl>
-
+<p class="cwindowmgr">バイトデータとして読み込んだウィンドウリソースを展開し初期化します。</p>
+<p class="cwindowmgr">リソースデータから、指定したアセット名のウィンドウリソースを読み込み初期化します。</p>
+<p class="cwindowmgr">実際に読み込まれるアセットは、assetname + &quot;.asset&quot;という名前です。</p>
+<p class="cwindowmgr">指定したクラスのウィンドウをクリエイトする。</p>
+<p class="cwindowmgr">指定されたウィンドウを探す。まだクリエイトされていないなら、nullが返る。</p>
+<p class="cwindowmgr">対象ウィンドウの優先順位を上げる。</p>
+<p class="cwindowmgr">指定されたキャプションIDから、文字列を取得します。</p>
+<p class="cwindowmgr">指定されたSE IDから、効果音を再生する。</p>
+<p class="cwindowmgr">タッチしたときに鳴らす標準音を指定します。</p>
+<p class="cwindowmgr">リストボックスなどをスクロールさせたときに鳴らす標準音を指定します。</p>
+<p class="cwindowmgr">ウィンドウマネージャのインスタンスを取得します。</p>
 </div>
 
 

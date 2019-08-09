@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -266,10 +266,10 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CMainSystemBase">
-<code class="descname">class CMainSystemBase</code><a class="headerlink" href="#class-CMainSystemBase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CMainSystemBase</code><a class="headerlink" href="#class-CMainSystemBase" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="method-CMainSystemBase.Awake">
-void <code class="descname">Awake</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CMainSystemBase.Awake" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">Awake</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CMainSystemBase.Awake" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>By registering various managers in the Awake function using AddComponent and addManager, the Start function automatically performs necessary initialization and loading of necessary asset bundles.</p>
@@ -309,7 +309,7 @@ void <code class="descname">Awake</code> <span class="sig-paren">(</span><span c
 </div>
 <dl class="method">
 <dt id="method-addManager">
-void <code class="descname">addManager</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-IManager" title="IManager class">IManager</a> <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#method-addManager" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">addManager</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-IManager" title="IManager class">IManager</a> <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#method-addManager" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param IManager mgr</dt>
 <dd class="field-odd"><p>It is an interface required for the objects that must be initialized with the loaded asset bundle.</p>
@@ -323,19 +323,19 @@ void <code class="descname">addManager</code> <span class="sig-paren">(</span><a
 </div>
 <dl class="method">
 <dt id="method-initialize">
-<em>virtual</em> void <code class="descname">initialize</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-initialize" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">initialize</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>As soon as the asset bundle is loaded, the initialization process is called through the interfaces: ILoader, IManager.</p>
 <dl class="method">
 <dt id="method-OnChangeScene">
-<em>virtual</em> void <code class="descname">OnChangeScene</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-OnChangeScene" title="Permalink to this definition">¶</a></dt>
+<em>virtual</em> void <code class="sig-name descname">OnChangeScene</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-OnChangeScene" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Called when you switch scenes.</p>
 <dl class="method">
 <dt id="method-changeScene">
-bool <code class="descname">changeScene</code> <span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange=false</em><span class="sig-paren">)</span><a class="headerlink" href="#method-changeScene" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">changeScene</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <em>sScene</em>, <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <em>bForceChange=false</em><span class="sig-paren">)</span><a class="headerlink" href="#method-changeScene" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switches to the specified scene.</p>
 <p>Equivalent to Application.LoadLevel, but differs in the following ways:</p>
 <ol class="arabic simple">
@@ -348,48 +348,48 @@ bool <code class="descname">changeScene</code> <span class="sig-paren">(</span>s
 
 <dl class="property">
 <dt id="property-isChangingScene">
-bool <code class="descname">isChangingScene</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isChangingScene" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isChangingScene</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isChangingScene" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Determines whether a scene is being imported.</p>
 <p>Available only when switching scenes via CMainSystemBase.chageScene.</p>
 <dl class="property">
 <dt id="property-isInitialized">
-bool <code class="descname">isInitialized</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isInitialized" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isInitialized</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isInitialized" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Determines whether initialization is complete.</p>
 <dl class="method">
 <dt id="method-randi">
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randi" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">randi</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randi" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Returns a random integer.</p>
 <dl class="method">
 <dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">randi</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>iMax</em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
 
 <p>Returns a random number in the specified range.</p>
 <dl class="method">
 <dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">randi</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>iMin</em>, <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>iMax</em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
 
 <p>Returns a random number in the specified range.</p>
 <dl class="method">
 <dt id="method-randf">
-<em>static</em> float <code class="descname">randf</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randf" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">randf</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Returns a floating point random number.</p>
 </div></blockquote>
 <dl class="class">
 <dt id="class-ILoader">
-<code class="descname">class ILoader</code><a class="headerlink" href="#class-ILoader" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class ILoader</code><a class="headerlink" href="#class-ILoader" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="method-ILoader.isLoading">
-bool <code class="descname">isLoading</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ILoader.isLoading" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isLoading</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ILoader.isLoading" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return bool</dt>
 <dd class="field-odd"><p>true while loading, false when finished loading</p>
@@ -407,7 +407,7 @@ bool <code class="descname">isLoading</code> <span class="sig-paren">(</span><sp
 
 <dl class="class">
 <dt id="class-IManager">
-<code class="descname">class IManager</code><a class="headerlink" href="#class-IManager" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class IManager</code><a class="headerlink" href="#class-IManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>These should be added using the CMainSystemBase.addManager in Awake method.</p>
 <p>It is an interface required for the objects that must be initialized with the loaded asset bundle.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">());</span>
@@ -415,7 +415,7 @@ bool <code class="descname">isLoading</code> <span class="sig-paren">(</span><sp
 </div>
 <dl class="method">
 <dt id="method-IManager.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAssetBundles</em><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.initialize" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAssetBundles</em><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param CAssetBundle[] aAssetBundles</dt>
 <dd class="field-odd"><p>array of loaded asset bundles</p>
@@ -425,13 +425,13 @@ bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a
 
 <dl class="method">
 <dt id="method-IManager.release">
-void <code class="descname">release</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.release" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">release</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.release" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Release process called when the game object is released</p>
 <dl class="method">
 <dt id="method-IManager.getAssetBundleIds">
-uint[] <code class="descname">getAssetBundleIds</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.getAssetBundleIds" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a>[] <code class="sig-name descname">getAssetBundleIds</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.getAssetBundleIds" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return uint[]</dt>
 <dd class="field-odd"><p>ID of the asset bundle that needs to be loaded at initialization</p>

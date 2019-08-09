@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -260,7 +260,7 @@
 <h1>CWinContents<a class="headerlink" href="#cwincontents" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="class-CWinContents">
-<code class="descname">class CWinContents</code><a class="headerlink" href="#class-CWinContents" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CWinContents</code><a class="headerlink" href="#class-CWinContents" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/CWinContents.png" src="_images/CWinContents.png" />
 <p>CWinContents has a role as a container for holding the various controls .</p>
 <p>CWinContents is used in the following part.</p>
@@ -274,7 +274,7 @@
 <p>Functions / Properties</p>
 <dl class="method">
 <dt id="method-CWinContents.find">
-WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.find" title="Permalink to this definition">¶</a></dt>
+WinCtrl <code class="sig-name descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.find" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint ctrlId</dt>
 <dd class="field-odd"><p>Control ID</p>
@@ -285,7 +285,7 @@ WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren
 
 <dl class="method">
 <dt id="method-CWinContents.getIndex">
-int <code class="descname">getIndex</code> <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.getIndex" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">getIndex</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.getIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint ctrlId</dt>
 <dd class="field-odd"><p>Control ID</p>
@@ -297,19 +297,19 @@ int <code class="descname">getIndex</code> <span class="sig-paren">(</span>uint 
 
 <dl class="indexer">
 <dt id="indexer-CWinContents.this[]">
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">this</code><code class="descclassname">[, int <em>N</em>]</code> { <em class="property">get;</em> }<a class="headerlink" href="#indexer-CWinContents.this[]" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="sig-name descname">this</code><code class="sig-prename descclassname">[, <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>N</em>]</code> { <em class="property">get;</em> }<a class="headerlink" href="#indexer-CWinContents.this[]" title="Permalink to this definition">¶</a></dt>
 <dd><p>You can use the index value obtained by ” <span class="xref std std-ref">getIndex</span> ” .</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.count">
-int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.count" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of controls in the content.</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.clipState">
-ClipRect.State <code class="descname">clipState</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.clipState" title="Permalink to this definition">¶</a></dt>
+ClipRect.State <code class="sig-name descname">clipState</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.clipState" title="Permalink to this definition">¶</a></dt>
 <dd><p>It uses for the contents included within the contents list. (ex: <a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a> , <a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a> ).</p>
 <blockquote>
 <div><dl class="simple">
@@ -325,31 +325,31 @@ ClipRect.State <code class="descname">clipState</code> { <em class="property">ge
 
 <dl class="property">
 <dt id="property-CWinContents.width">
-float <code class="descname">width</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.width" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">width</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the width of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.height">
-float <code class="descname">height</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.height" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="sig-name descname">height</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the height of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.size">
-Vector2 <code class="descname">size</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.size" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">size</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the size of the content. Automatically calculated from the size of the control.</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.position">
-Vector3 <code class="descname">position</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.position" title="Permalink to this definition">¶</a></dt>
+Vector3 <code class="sig-name descname">position</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display position of the content</p>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-CWinContents.parent">
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.parent" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="sig-name descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the control that is the parent of the content.</p>
 </dd></dl>
 

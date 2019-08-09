@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -268,84 +268,54 @@
 </div></blockquote>
 <p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onBeginRenderIcon(CWinCtrlRenderIcon</span> <span class="pre">icon)</span></code></a></p>
+<div><p><a href="#id2"><span class="problematic" id="id3">:meth:`void onClick(CWinCtrlBase cCtrl)&lt;CWindowBase.onClick&gt;`</span></a></p>
+<p><a href="#id4"><span class="problematic" id="id5">:meth:`void onHold(CWinCtrlBase cCtrl)&lt;CWindowBase.onHold&gt;`</span></a></p>
+<p><a href="#id6"><span class="problematic" id="id7">:meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)&lt;CWindowBase.onBeginDrag&gt;`</span></a></p>
+<p><a href="#id8"><span class="problematic" id="id9">:meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)&lt;CWindowBase.onDrag&gt;`</span></a></p>
+<p><a href="#id10"><span class="problematic" id="id11">:meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)&lt;CWindowBase.onDragRender&gt;`</span></a></p>
+<p><a href="#id12"><span class="problematic" id="id13">:meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)&lt;CWindowBase.onDrop&gt;`</span></a></p>
+<p><a href="#id14"><span class="problematic" id="id15">:meth:`void onDropGround(CWinCtrlBase cCtrl)&lt;CWindowBase.onDropGround&gt;`</span></a></p>
+<p><a href="#id16"><span class="problematic" id="id17">:meth:`bool onBeginRenderIcon(CWinCtrlRenderIcon icon)&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a></p>
 <blockquote>
 <div><p>アイコンにレンダリング開始</p>
 <p>この関数の戻り値は、次の意味を持ちます。</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>trueを返すとテクスチャにレンダリングします。</p></li>
-<li><p>falseを返すとレンダリングしません。 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> も呼ばれません。</p></li>
+<li><p>falseを返すとレンダリングしません。 <a href="#id18"><span class="problematic" id="id19">:meth:`onEndRenderIcon&lt;CWindowBase.onEndRenderIcon&gt;`</span></a> も呼ばれません。</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onEndRenderIcon(CWinCtrlRenderIcon</span> <span class="pre">icon)</span></code></a></p>
+<p><a href="#id20"><span class="problematic" id="id21">:meth:`bool onEndRenderIcon(CWinCtrlRenderIcon icon)&lt;CWindowBase.onEndRenderIcon&gt;`</span></a></p>
 <blockquote>
 <div><p>レンダリングが終了したときに呼ばれる</p>
 <p>この関数の戻り値は、次の意味を持ちます。</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>trueを返すと、次のフレームもレンダリングを継続します( <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼ばれる)</p></li>
+<li><p>trueを返すと、次のフレームもレンダリングを継続します( <a href="#id22"><span class="problematic" id="id23">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> が呼ばれる)</p></li>
 <li><p>falseを返すと、以降のフレームでは必要がない限り、レンダリングされません。</p></li>
 </ul>
 </div></blockquote>
-<p>一度停止させたレンダリングを再開したいときは、 <a class="reference internal" href="#property-CWinCtrlRenderIcon.needToRender" title="CWinCtrlRenderIcon.needToRender property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">needToRender</span></code></a> をtrueにしてください。</p>
+<p>一度停止させたレンダリングを再開したいときは、 <a href="#id24"><span class="problematic" id="id25">:prop:`needToRender&lt;CWinCtrlRenderIcon.needToRender&gt;`</span></a> をtrueにしてください。</p>
 </div></blockquote>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWinCtrlRenderIcon">
-<code class="descname">class CWinCtrlRenderIcon</code><a class="headerlink" href="#class-CWinCtrlRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<dl class="property">
-<dt id="property-CWinCtrlRenderIcon.regionId">
-ulong <code class="descname">regionId</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.regionId" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>0以外の固有のIDを割り振ってください。
+<p class="cwinctrlrendericon"><em>固有の関数/プロパティ</em></p>
+<p class="cwinctrlrendericon">0以外の固有のIDを割り振ってください。
 0を代入すると確保されたレンダリング領域が解放されます。
 また、他のコントロールと同じ値を割り振ると、レンダリング領域を共有します。</p>
-<dl class="property">
-<dt id="property-CWinCtrlRenderIcon.camera">
-Camera <code class="descname">camera</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.camera" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダリングテクスチャが割り当てられたカメラを取得できます。
+<p class="cwinctrlrendericon">レンダリングテクスチャが割り当てられたカメラを取得できます。
 カメラの位置や角度等をカスタマイズしたいときにアクセスしてください。</p>
-<dl class="property">
-<dt id="property-CWinCtrlRenderIcon.color1">
-WinColor <code class="descname">color1</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.color1" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダリングする際の背景色として割り当てられています。</p>
-<p>デフォルトは、(0,0,0,0)です。</p>
-<dl class="property">
-<dt id="property-CWinCtrlRenderIcon.needToRender">
-bool <code class="descname">needToRender</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.needToRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダリングを再開したいとき、trueを設定してください。</p>
-<p>次のフレームでは <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼び出されます。</p>
-<dl class="property">
-<dt id="property-CWinCtrlRenderIcon.state">
-CInput::e_State <code class="descname">state</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRenderIcon.state" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アイコンが押されている状態を取得できます。</p>
-</dd></dl>
-
+<p class="cwinctrlrendericon">レンダリングする際の背景色として割り当てられています。</p>
+<p class="cwinctrlrendericon">デフォルトは、(0,0,0,0)です。</p>
+<p class="cwinctrlrendericon">レンダリングを再開したいとき、trueを設定してください。</p>
+<p class="cwinctrlrendericon">次のフレームでは <a href="#id26"><span class="problematic" id="id27">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> が呼び出されます。</p>
+<p class="cwinctrlrendericon">アイコンが押されている状態を取得できます。</p>
 <p><em>使用例</em></p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> によって、レンダリングしたいオブジェクトのみアクティブにしています。
-そして、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> によって、非アクティブにしています。</p>
+<div><p><a href="#id28"><span class="problematic" id="id29">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> によって、レンダリングしたいオブジェクトのみアクティブにしています。
+そして、 <a href="#id30"><span class="problematic" id="id31">:meth:`onEndRenderIcon&lt;CWindowBase.onEndRenderIcon&gt;`</span></a> によって、非アクティブにしています。</p>
 <p>この操作をしないと全てのオブジェクトが一つのアイコンにレンダリングされることになります。</p>
-<p>また、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> がtrueを返すと、直ちにCamera.Render()が呼び出されるので、
+<p>また、 <a href="#id32"><span class="problematic" id="id33">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> がtrueを返すと、直ちにCamera.Render()が呼び出されるので、
 アニメーションなどの設定をしたときは、下記の例のように、Animation.Sample()を明示的に呼んでおく必要があります。</p>
 <p>正しくレンダリングされないときは、以下の点をチェックしてみて下さい。</p>
 <ul class="simple">
@@ -356,11 +326,11 @@ CInput::e_State <code class="descname">state</code> { <em class="property">get;<
 <div><p>当然、カメラに収まっていないとオブジェクトはレンダリングされません。</p>
 </div></blockquote>
 <ul class="simple">
-<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> を設定したか？</p></li>
+<li><p><a href="#id34"><span class="problematic" id="id35">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> を設定したか？</p></li>
 </ul>
 <blockquote>
-<div><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> が0の時は、レンダーテクスチャへのレンダリングが行われません。
-<a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> をキーにしてレンダーテクスチャの空いている領域から矩形を切り出し、レンダリングします。</p>
+<div><p><a href="#id36"><span class="problematic" id="id37">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> が0の時は、レンダーテクスチャへのレンダリングが行われません。
+<a href="#id38"><span class="problematic" id="id39">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> をキーにしてレンダーテクスチャの空いている領域から矩形を切り出し、レンダリングします。</p>
 </div></blockquote>
 </div></blockquote>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">override</span> <span class="k">public</span> <span class="kt">bool</span> <span class="nf">onBeginRenderIcon</span><span class="p">(</span><span class="n">CWinCtrlRenderIcon</span> <span class="n">icon</span><span class="p">)</span> <span class="p">{</span>
@@ -437,7 +407,7 @@ CInput::e_State <code class="descname">state</code> { <em class="property">get;<
 <li><p>モデルの読み込み</p></li>
 <li><p>読み込み終わったら、SetActive(false)にしてゲームオブジェクトを非アクティブにします</p></li>
 <li><p>レイヤーをRenderIconに設定します。</p></li>
-<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に、ユニークな値を設定します。</p></li>
+<li><p><a href="#id40"><span class="problematic" id="id41">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> に、ユニークな値を設定します。</p></li>
 <li><p>OnBeginRenderIconが呼ばれたら、対象のゲームオブジェクトをアクティブにします</p></li>
 <li><p>OnEndRenderIconが呼ばれたら、対象のゲームオブジェクトを非アクティブにします</p></li>
 </ol>
@@ -449,10 +419,10 @@ OnEndRenderIconの戻り値は、falseを返しておく方がパフォーマン
 <p><em>onBeginRenderが呼ばれるタイミング</em></p>
 <blockquote>
 <div><ul>
-<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に0以外の値が設定されたとき.</p>
-<p><a class="reference internal" href="#property-CWinCtrlRenderIcon.regionId" title="CWinCtrlRenderIcon.regionId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">regionId</span></code></a> に0以外のユニークな値を設定した直後から、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼ばれます。
-<a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> がtrueを返すまで呼ばれ続けます。
-falseを返した時は、 <a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> は呼び出されません。
+<li><p><a href="#id42"><span class="problematic" id="id43">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> に0以外の値が設定されたとき.</p>
+<p><a href="#id44"><span class="problematic" id="id45">:prop:`regionId&lt;CWinCtrlRenderIcon.regionId&gt;`</span></a> に0以外のユニークな値を設定した直後から、 <a href="#id46"><span class="problematic" id="id47">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> が呼ばれます。
+<a href="#id48"><span class="problematic" id="id49">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> がtrueを返すまで呼ばれ続けます。
+falseを返した時は、 <a href="#id50"><span class="problematic" id="id51">:meth:`onEndRenderIcon&lt;CWindowBase.onEndRenderIcon&gt;`</span></a> は呼び出されません。
 この仕組みを使ってモデルの非同期読み込み途中は、falseを返し、レンダリング準備ができたタイミングで
 モデルをテクスチャにレンダリングすることが可能です(レイヤーの設定は忘れないでください)。</p>
 </li>
@@ -460,8 +430,8 @@ falseを返した時は、 <a class="reference internal" href="CWindowBase.html#
 <p>レンダーテクスチャが消失する理由としては、スクリーンセーバが走ったり、ウィンドウが最小化されたときなどが考えられます。
 レンダーテクスチャは破壊されることがあるので、常にテクスチャへの再レンダーができるようにしておくべきです。</p>
 </li>
-<li><p><a class="reference internal" href="#property-CWinCtrlRenderIcon.needToRender" title="CWinCtrlRenderIcon.needToRender property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">needToRender</span></code></a> にtrueを設定した後</p></li>
-<li><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> がtrueを返した次のフレーム</p>
+<li><p><a href="#id52"><span class="problematic" id="id53">:prop:`needToRender&lt;CWinCtrlRenderIcon.needToRender&gt;`</span></a> にtrueを設定した後</p></li>
+<li><p><a href="#id54"><span class="problematic" id="id55">:meth:`onEndRenderIcon&lt;CWindowBase.onEndRenderIcon&gt;`</span></a> がtrueを返した次のフレーム</p>
 <p>毎フレームレンダリングしたいときは、trueを返してください。
 ただし、パフォーマンスには気を付けてください。</p>
 </li>

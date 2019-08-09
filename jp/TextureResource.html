@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -98,14 +98,14 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">テクスチャについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">テクスチャリソースを作る方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">テクスチャリソースを作る方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parts-def">定義ファイル &#64;parts.def</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">テクスチャフォーマット.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">テクスチャフォーマット.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#png-jpg">PNG,JPGファイルとしてアトラス化する方法.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">ディザリングのデフォルト値</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">シェーダの切り替え</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">パーツ定義とエイリアス</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">パーツ定義プロパティ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">ディザリングのデフォルト値</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">シェーダの切り替え</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">パーツ定義とエイリアス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">パーツ定義プロパティ</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#color-r-g-b-a">COLOR = R,G,B,A;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dither-on-off">DITHER = ON/OFF;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#nodivide">NODIVIDE;</a></li>
@@ -118,11 +118,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#patch9">PATCH9 = 左上固定幅,左上固定高,右下固定幅,右下固定高;</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">インクルードパス</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">&#64;parts.defをコンパイルするときにインクルードされるファイル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">インクルードパス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">&#64;parts.defをコンパイルするときにインクルードされるファイル</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">プリプロセッサ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">プリプロセッサ</a></li>
 </ul>
 </li>
 </ul>
@@ -287,7 +287,7 @@
   <div class="section" id="textureresource">
 <span id="id1"></span><h1>テクスチャについて<a class="headerlink" href="#textureresource" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
-<div><p>C#上でテクスチャリソースを扱うには、 <a class="reference internal" href="CTextureResourceMgr.html#class-CTextureResourceMgr" title="CTextureResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+<div><p>C#上でテクスチャリソースを扱うには、 <a href="#id2"><span class="problematic" id="id3">:type:`こちら&lt;CTextureResourceMgr&gt;`</span></a> を参照ください。</p>
 <p>ウィンドウシステムで使うテクスチャは、幾つかのテクスチャをアトラス化することによって
 一つのメッシュとしてまとめてレンダリングできるようにしています。</p>
 <p>また、アトラス化するときに、自動的に16bitに減色し、ディザリングも行ってくれます。</p>
@@ -303,8 +303,8 @@
 また、通常のテクスチャと明確に分けるために、テクスチャリソースと呼ぶこともあります。</p>
 </div></blockquote>
 </div></blockquote>
-<div class="section" id="id2">
-<h2>テクスチャリソースを作る方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h2>テクスチャリソースを作る方法<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Unityプロジェクトを起動します。</p></li>
@@ -332,7 +332,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="parts-def">
-<span id="id3"></span><h2>定義ファイル &#64;parts.def<a class="headerlink" href="#parts-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id5"></span><h2>定義ファイル &#64;parts.def<a class="headerlink" href="#parts-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>&#64;parts.defをテクスチャフォルダ内に置いておくと、定義ファイルに沿ってアトラス化してくれます。</p>
 <p>単純なテキストファイルなので、お好みのエディタを使って編集してください。</p>
@@ -362,8 +362,8 @@
 <span class="p">};</span>
 </pre></div>
 </div>
-<div class="section" id="id4">
-<h3>テクスチャフォーマット.<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id6">
+<h3>テクスチャフォーマット.<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FORMAT</span> <span class="o">=</span> <span class="n">Texture</span> <span class="n">Format</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -385,13 +385,13 @@
 </div>
 </div>
 <div class="section" id="png-jpg">
-<span id="id5"></span><h3>PNG,JPGファイルとしてアトラス化する方法.<a class="headerlink" href="#png-jpg" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="id7"></span><h3>PNG,JPGファイルとしてアトラス化する方法.<a class="headerlink" href="#png-jpg" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>幾つかのテクスチャを纏め(アトラス化)た後、テクスチャをアセットバンドルに変換するときに、テクスチャをPNGやJPGファイルに変換することが可能です。</p>
 <p>ただし、実際にアプリケーションに組み込んで使うとき、これらテクスチャは32bitテクスチャとして展開されます。</p>
 <p>メリットとデメリットを考えて使ってください。</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 70%" />
@@ -426,8 +426,8 @@
 </div></blockquote>
 </div></blockquote>
 </div>
-<div class="section" id="id6">
-<h3>ディザリングのデフォルト値<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h3>ディザリングのデフォルト値<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DITHER</span> <span class="o">=</span> <span class="n">ON</span><span class="o">/</span><span class="n">OFF</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -448,8 +448,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h3>シェーダの切り替え<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id9">
+<h3>シェーダの切り替え<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHADER</span> <span class="o">=</span> <span class="s2">&quot;SHADER PATH&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -466,8 +466,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id8">
-<h3>パーツ定義とエイリアス<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id10">
+<h3>パーツ定義とエイリアス<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>パーツの定義は、次のような形で設定可能です。</p>
 </div></blockquote>
@@ -499,8 +499,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id9">
-<h3>パーツ定義プロパティ<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id11">
+<h3>パーツ定義プロパティ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="section" id="color-r-g-b-a">
 <h4>COLOR = R,G,B,A;<a class="headerlink" href="#color-r-g-b-a" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
@@ -582,8 +582,8 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="id10">
-<h3>インクルードパス<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id12">
+<h3>インクルードパス<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>以下のパスにインクルードパスが、通っています。
 インクルードファイルを作成する際は、ファイルをここに置いてください。</p>
@@ -592,8 +592,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h3>&#64;parts.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id13">
+<h3>&#64;parts.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>次のファイルは、&#64;parts.defをコンパイルするときに、自動的にインクルードされます。
 共通の設定は、このファイルに記述すると便利です。</p>
@@ -603,12 +603,12 @@
 </div>
 </div>
 </div>
-<div class="section" id="id12">
-<h2>プリプロセッサ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id14">
+<h2>プリプロセッサ<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>C言語,C++言語とほぼ同じプリプロセッサが使えます。</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 52%" />
 <col style="width: 48%" />

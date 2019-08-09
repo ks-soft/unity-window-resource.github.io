@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -268,94 +268,12 @@
 <p>リソース作成方法は <a class="reference internal" href="TextureResource.html#textureresource"><span class="std std-ref">こちら</span></a> を参照ください。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>アセットバンドル経由で読み込むには、<a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundleMgr" title="CAssetBundleMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CAssetBundleMgr</span></code></a> を登録しておく必要があります。</p>
+<p>アセットバンドル経由で読み込むには、<a href="#id1"><span class="problematic" id="id2">:type:`CAssetBundleMgr&lt;CAssetBundleMgr&gt;`</span></a> を登録しておく必要があります。</p>
 </div>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CTextureResourceMgr">
-<code class="descname">class CTextureResourceMgr</code><a class="headerlink" href="#class-CTextureResourceMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CTextureResourceMgr.reference">
-<a class="reference internal" href="#class-CTextureResource" title="CTextureResource class">CTextureResource</a> <code class="descname">reference</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CTextureResourceMgr.reference" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>アセットバンドルID</p>
-</dd>
-</dl>
-<p>テクスチャリソースを参照します。
-もし、キャッシュされていないときは、ダウンロードします。</p>
-<p>ダウンロード済みでなくてもテクスチャリソースが存在するときは、CTextureResourceを返します。</p>
-<p>返ってきたCTextureResourceがダウンロード中かどうかは、CTextureResource.isLoadedによって判別可能です。</p>
-<p>trueの時、使用可能になっています。</p>
-<p>アセットバンドルとしてダウンロードできないときは、リソースデータとして読み込めるか試します。</p>
-<p>それでも存在しないときは、nullが返ってきます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CTextureResourceMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CTextureResourceMgr" title="CTextureResourceMgr class">CTextureResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResourceMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CTextureResource">
-<code class="descname">class CTextureResource</code><a class="headerlink" href="#class-CTextureResource" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Materialにキャスト可能です。</p>
-<dl class="method">
-<dt id="method-CTextureResource.get">
-Material <code class="descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CTextureResource.get" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>保持しているMaterialを取得します。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CTextureResource.id">
-uint <code class="descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.id" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>IDを取得します。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CTextureResource.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>trueなら読み込み済みです。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CTextureResource.isRemain">
-bool <code class="descname">isRemain</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.isRemain" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>常駐しているかどうか調べます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CTextureResource.spriteData">
-<a class="reference internal" href="#class-CSpriteDataOne" title="CSpriteDataOne class">CSpriteDataOne</a>[] <code class="descname">spriteData</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CTextureResource.spriteData" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>スプライトデータを取得します。</p>
-<p>アトラス化されたテクスチャパーツのUV情報、パッチ情報、カラー情報等が格納されています。</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CSpriteDataOne">
-<code class="descname">class CSpriteDataOne</code><a class="headerlink" href="#class-CSpriteDataOne" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アトラス化されたテクスチャパーツのUV情報、パッチ情報、カラー情報等が格納されています。</p>
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_id">
-uint <code class="descname">m_id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_id" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_color">
-WinColor <code class="descname">m_color</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CSpriteDataOne.m_ePatch">
-e_Patch <code class="descname">m_ePatch</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSpriteDataOne.m_ePatch" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">enum</span> <span class="n">e_Patch</span> <span class="p">{</span>
+<p class="ctextureresource">Materialにキャスト可能です。</p>
+<p class="cspritedataone">アトラス化されたテクスチャパーツのUV情報、パッチ情報、カラー情報等が格納されています。</p>
+<div class="cspritedataone highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">enum</span> <span class="n">e_Patch</span> <span class="p">{</span>
     <span class="n">None</span><span class="p">,</span>   <span class="c1">//patch none</span>
     <span class="n">H3</span><span class="p">,</span>     <span class="c1">//3 patch in a horizontal direction</span>
     <span class="n">V3</span><span class="p">,</span>     <span class="c1">//3 patch in the vertical direction</span>
@@ -363,20 +281,8 @@ e_Patch <code class="descname">m_ePatch</code> { <em class="property">get;</em> 
 <span class="p">};</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <blockquote>
-<div><dl class="property">
-<dt id="property-m_uv">
-Vector4 <code class="descname">m_uv</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-m_uv" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>テクスチャのUV情報が格納されています。</p>
-<dl class="property">
-<dt id="property-m_aUV">
-Vector4[] <code class="descname">m_aUV</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-m_aUV" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
+<div><p>テクスチャのUV情報が格納されています。</p>
 <p>e_PatchがH3,V3ならば、三つのUV情報が格納されています。
 e_PatchがHV9ならば、9つのUV情報が格納されています。</p>
 </div></blockquote>

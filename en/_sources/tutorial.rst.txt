@@ -188,6 +188,18 @@ wraファイルをコンパイルするときにインクルードされるフ�
 
   .. image:: images/export.png
 
+namespaceについて
+--------------------------------------
+
+ 本ウィンドウシステムは、すべてのKSというネームスペースに割り当てられています。
+
+.. code-block:: csharp
+
+	using UnityEngine;
+	using System.Collections;
+	using KS;
+
+..
 
 実際のゲーム内でウィンドウを扱う方法
 --------------------------------------

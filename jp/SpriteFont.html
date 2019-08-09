@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -102,9 +102,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">フォントについて</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">リソースデータとして作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">アセットバンドルデータとして作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">アセットバンドルデータとして作成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">多言語対応</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#bmfont">BMFontによるフォントデータ作成方法</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">ビットマップフォントの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">ビットマップフォントの作成</a></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +284,7 @@
 <p>例えば、cfn20というフォントを作りたいときは、次のようなファイルを用意し、指定の場所に置きます。</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>cfn20.txt</p></li>
+<li><p>cfn20.fnt</p></li>
 <li><p>cfn20_0.png</p></li>
 <li><p>cfn20_1.png</p></li>
 <li><p>cfn20_2.png</p></li>
@@ -303,18 +306,18 @@
 <h2>アセットバンドルデータとして作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>Assets/KsSoft/のフォルダの下に、Fontsというフォルダを作ります。</p>
-<p>そのフォルダの下に <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> で命名したテキストファイルとテクスチャファイルを置きます。</p>
-<p>例えば、fn16というフォントを作りたいときは、次のようなファイルを用意し、指定の場所に置きます。</p>
+<p>そして、アセットバンドルIDとして出力したいフォルダを作り、そのフォルダの下に <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> で命名したテキストファイルとテクスチャファイルを置きます。</p>
+<p>例えば、000_001_00000.unity3d(これがデフォルトのビットマップフォントアセットバンドルのIDです)のfn16というフォントを作りたいときは、次のようなファイルを用意し、指定の場所に置きます。</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>fn16.txt</p></li>
-<li><p>fn16_0.png</p></li>
-<li><p>fn16_1.png</p></li>
-<li><p>fn16_2.png</p></li>
-<li><p>fn16_3.png</p></li>
+<li><p>000_001_00000/fn16/fn16.fnt</p></li>
+<li><p>000_001_00000/fn16/fn16_0.png</p></li>
+<li><p>000_001_00000/fn16/fn16_1.png</p></li>
+<li><p>000_001_00000/fn16/fn16_2.png</p></li>
+<li><p>000_001_00000/fn16/fn16_3.png</p></li>
 </ul>
 </div></blockquote>
-<p>また、複数のフォントを使いたいときは、同じ手順で複数ファイルを配置しておきます。</p>
+<p>また、複数のフォントを内包したいときは、同じ手順で複数ファイルを配置しておきます。</p>
 <p>準備ができましたら、[Tools]-&gt;[KsSoft]-&gt;[Export Fonts]を実行してください。</p>
 <p>以下のアセットバンドルが生成されます。</p>
 <blockquote>
@@ -327,14 +330,239 @@
 <p class="admonition-title">注釈</p>
 <p>デフォルト値を変更したいときは、 <a class="reference internal" href="Config.html#cf-font"><span class="std std-ref">こちら</span></a> を参考ください。</p>
 </div>
+<div class="section" id="id4">
+<h3>多言語対応<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><p>使用する言語に応じて、ビットマップフォントを読み替えることができます。</p>
+<p>デフォルトで読み込むビットマップフォントは、000_001_00000.unity3dで固定されています。</p>
+<p>起動時のロケールに応じて、対応する000_001_XXXXX.unity3dが存在するとき、そちらを優先して読み込みます。</p>
+<p>XXXXXに入るロケールIDは、以下の表を参照ください。</p>
+</div></blockquote>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">ビットマンㇷフォントのアセットバンドルID</span><a class="headerlink" href="#id6" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>000_001_00000</p></td>
+<td></td>
+<td><p>Default</p></td>
+<td><p>デフォルト</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00001</p></td>
+<td><p>AR</p></td>
+<td><p>Arabic</p></td>
+<td><p>アラビア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00002</p></td>
+<td><p>EU</p></td>
+<td><p>Basque</p></td>
+<td><p>バスク語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00003</p></td>
+<td><p>BE</p></td>
+<td><p>Belarusian</p></td>
+<td><p>ベラルーシ語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00004</p></td>
+<td><p>BG</p></td>
+<td><p>Bulgarian</p></td>
+<td><p>ブルガリア語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00005</p></td>
+<td><p>CA</p></td>
+<td><p>Catalan</p></td>
+<td><p>カタロニア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00006</p></td>
+<td><p>ZH</p></td>
+<td><p>Chinese</p></td>
+<td><p>中国語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00007</p></td>
+<td><p>CS</p></td>
+<td><p>Czech</p></td>
+<td><p>チェコ語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00008</p></td>
+<td><p>DA</p></td>
+<td><p>Danish</p></td>
+<td><p>デンマーク語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00009</p></td>
+<td><p>NL</p></td>
+<td><p>Dutch</p></td>
+<td><p>オランダ語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00010</p></td>
+<td><p>EN</p></td>
+<td><p>English</p></td>
+<td><p>英語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00011</p></td>
+<td><p>ET</p></td>
+<td><p>Estonian</p></td>
+<td><p>エストニア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00013</p></td>
+<td><p>FI</p></td>
+<td><p>Finnish</p></td>
+<td><p>フィンランド語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00014</p></td>
+<td><p>FR</p></td>
+<td><p>French</p></td>
+<td><p>フランス語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00015</p></td>
+<td><p>DE</p></td>
+<td><p>German</p></td>
+<td><p>ドイツ語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00016</p></td>
+<td><p>EL</p></td>
+<td><p>Greek</p></td>
+<td><p>ギリシャ語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00017</p></td>
+<td><p>HE</p></td>
+<td><p>Hebrew</p></td>
+<td><p>ヘブライ語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00018</p></td>
+<td><p>HU</p></td>
+<td><p>Hungarian</p></td>
+<td><p>ハンガリー語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00019</p></td>
+<td><p>IS</p></td>
+<td><p>Icelandic</p></td>
+<td><p>アイスランド語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00020</p></td>
+<td><p>ID</p></td>
+<td><p>Indonesian</p></td>
+<td><p>インドネシア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00021</p></td>
+<td><p>IT</p></td>
+<td><p>Italian</p></td>
+<td><p>イタリア語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00022</p></td>
+<td><p>JA</p></td>
+<td><p>Japanese</p></td>
+<td><p>日本語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00023</p></td>
+<td><p>KO</p></td>
+<td><p>Korean</p></td>
+<td><p>韓国語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00024</p></td>
+<td><p>LV</p></td>
+<td><p>Latvian</p></td>
+<td><p>ラトビア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00025</p></td>
+<td><p>LT</p></td>
+<td><p>Lithuanian</p></td>
+<td><p>リトアニア語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00026</p></td>
+<td><p>NO</p></td>
+<td><p>Norwegian</p></td>
+<td><p>ノルウェー語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00027</p></td>
+<td><p>PL</p></td>
+<td><p>Polish</p></td>
+<td><p>ポーランド語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00028</p></td>
+<td><p>PT</p></td>
+<td><p>Portuguese</p></td>
+<td><p>ポルトガル語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00029</p></td>
+<td><p>RO</p></td>
+<td><p>Romanian</p></td>
+<td><p>ルーマニア語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00030</p></td>
+<td><p>RU</p></td>
+<td><p>Russian</p></td>
+<td><p>ロシア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00031</p></td>
+<td><p>HR</p></td>
+<td><p>SerboCroatian</p></td>
+<td><p>セルビアクロアチア語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00033</p></td>
+<td><p>SL</p></td>
+<td><p>Slovenian</p></td>
+<td><p>スロベニア語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00034</p></td>
+<td><p>ES</p></td>
+<td><p>Spanish</p></td>
+<td><p>スペイン語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00035</p></td>
+<td><p>SV</p></td>
+<td><p>Swedish</p></td>
+<td><p>スウェーデン語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00036</p></td>
+<td><p>TH</p></td>
+<td><p>Thai</p></td>
+<td><p>タイ語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00037</p></td>
+<td><p>TR</p></td>
+<td><p>Turkish</p></td>
+<td><p>トルコ語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00038</p></td>
+<td><p>UK</p></td>
+<td><p>Ukrainian</p></td>
+<td><p>ウクライナ語</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00039</p></td>
+<td><p>VE</p></td>
+<td><p>Vietnamese</p></td>
+<td><p>ベトナム語</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00040</p></td>
+<td><p>ZS</p></td>
+<td><p>ChineseSimplified</p></td>
+<td><p>中国語簡体字(simplified)</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00041</p></td>
+<td><p>ZT</p></td>
+<td><p>ChineseTraditional</p></td>
+<td><p>中国語繁体字(traditional)</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00100</p></td>
+<td><p>AF</p></td>
+<td><p>Afrikaans</p></td>
+<td><p>アフリカ語</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="bmfont">
 <h2>BMFontによるフォントデータ作成方法<a class="headerlink" href="#bmfont" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>BMFont(Bitmap Font Generator) を使ってビットマップフォントを作る方法を紹介します。</p>
 </div></blockquote>
-<div class="section" id="id4">
-<h3>ビットマップフォントの作成<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id5">
+<h3>ビットマップフォントの作成<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>■Font Settings</p>
 <blockquote>

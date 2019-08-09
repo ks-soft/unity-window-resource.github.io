@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -262,16 +262,13 @@
             
   <div class="section" id="cassetbundlemgr">
 <h1>CAssetBundleMgrについて<a class="headerlink" href="#cassetbundlemgr" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<dl class="class">
-<dt id="class-CAssetBundleMgr">
-<code class="descname">class CAssetBundleMgr</code><a class="headerlink" href="#class-CAssetBundleMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>CMainSystemのAwake内でAddComponentしてください。</p>
-<p>アセットバンドルを読み込んだりキャッシュしたりするためのマネージャです。</p>
-<p>自前のマネージャを用意するときは、不必要です。</p>
-<p>最初に、version.unity3dをダウンロードし、各アセットのバージョンを取得します。</p>
-<p>バージョンが異なっているときはローカルにキャッシュされたデータを捨て、ダウンロードしてきます。</p>
-<p>次のような特徴を持っています。</p>
-<ol class="arabic simple">
+<p class="cassetbundlemgr">CMainSystemのAwake内でAddComponentしてください。</p>
+<p class="cassetbundlemgr">アセットバンドルを読み込んだりキャッシュしたりするためのマネージャです。</p>
+<p class="cassetbundlemgr">自前のマネージャを用意するときは、不必要です。</p>
+<p class="cassetbundlemgr">最初に、version.unity3dをダウンロードし、各アセットのバージョンを取得します。</p>
+<p class="cassetbundlemgr">バージョンが異なっているときはローカルにキャッシュされたデータを捨て、ダウンロードしてきます。</p>
+<p class="cassetbundlemgr">次のような特徴を持っています。</p>
+<ol class="cassetbundlemgr arabic simple">
 <li><p>アセットバンドルはバージョン管理されており、一度読み込んだものはキャッシュから読み込むようになっている(WWW.LoadFromCacheOrDownload)</p></li>
 <li><p>読み込んだアセットバンドルはメモリにキャッシュする</p></li>
 <li><p>シーン切り替え時に、キャッシュを解放する</p></li>
@@ -279,134 +276,47 @@
 <li><p>Windows,Mac上では設定ファイルによって読み込み先を切り替え可能(ローカルのファイルでも可)</p></li>
 <li><p>扱えるアセットバンドルの名前は、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> .unity3dというフォーマットに限る</p></li>
 </ol>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.MaxConcurrentLoadNum">
-<em>const</em> int <code class="descname">MaxConcurrentLoadNum</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaxConcurrentLoadNum" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>同時にダウンロードする最大数</p>
-<p>この数を超えて、LoadFromCacheOrDownloadを同時に発行しないようになっています。</p>
-<p>デフォルト値は、1になっています。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.MaximumAvailableDiskSpace">
-<em>const</em> long <code class="descname">MaximumAvailableDiskSpace</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaximumAvailableDiskSpace" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ローカルディスクへの最大キャッシュサイズを指定します。</p>
-<p>デフォルト値は、512 * 1024 * 1024(512Mbyte)になっています。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.httpServerPath">
-<em>static</em> string <code class="descname">httpServerPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.httpServerPath" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>HTTPアドレスを指定します。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.debugPath">
-<em>static</em> string <code class="descname">debugPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.debugPath" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>デバッグ用パスを指定します。
+<p class="cassetbundlemgr">同時にダウンロードする最大数</p>
+<p class="cassetbundlemgr">この数を超えて、LoadFromCacheOrDownloadを同時に発行しないようになっています。</p>
+<p class="cassetbundlemgr">デフォルト値は、1になっています。</p>
+<p class="cassetbundlemgr">ローカルディスクへの最大キャッシュサイズを指定します。</p>
+<p class="cassetbundlemgr">デフォルト値は、512 * 1024 * 1024(512Mbyte)になっています。</p>
+<p class="cassetbundlemgr">HTTPアドレスを指定します。</p>
+<p class="cassetbundlemgr">デバッグ用パスを指定します。
 Windows,Mac環境でのみ有効です。
 こちらを指定しておくと、そのパスを優先してファイルを読み込みます。</p>
-<div class="admonition note">
+<div class="cassetbundlemgr admonition note">
 <p class="admonition-title">注釈</p>
 <p>デバッグパスを経由して読み込んだファイルは、ローカルディスクへのキャッシュを行いません。</p>
 </div>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.lastError">
-int <code class="descname">lastError</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.lastError" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>最後に発生したエラー番号が入っています。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.errorMessage">
-int <code class="descname">errorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.errorMessage" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>最後に発生したエラーメッセージが入っています。</p>
-<dl class="member">
+<p class="cassetbundlemgr">最後に発生したエラー番号が入っています。</p>
+<p class="cassetbundlemgr">最後に発生したエラーメッセージが入っています。</p>
+<dl class="cassetbundlemgr member">
 <dt id="c.lodings">
-CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="#c.lodings" title="この定義へのパーマリンク">¶</a></dt>
+CAssetBundle[] <code class="sig-name descname">lodings</code><a class="headerlink" href="#c.lodings" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
-<p>現在ダウンロード中のアセットバンドルのリストが返ってきます。</p>
-<p>ダウンロードをペンディングしているものもこのリストに含まれます。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.loadNum">
-int <code class="descname">loadNum</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.loadNum" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>現在ダウンロード中のアセットバンドルの数が返ってきます。</p>
-<p>ダウンロードをペンディングしているものも数に含まれます。</p>
-<dl class="property">
-<dt id="property-CAssetBundleMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CAssetBundleMgr" title="CAssetBundleMgr class">CAssetBundleMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>マネージャのインスタンスを取得します。</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.reference">
-<a class="reference internal" href="#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a> <code class="descname">reference</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.reference" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アセットバンドルを参照します。
+<p class="cassetbundlemgr">現在ダウンロード中のアセットバンドルのリストが返ってきます。</p>
+<p class="cassetbundlemgr">ダウンロードをペンディングしているものもこのリストに含まれます。</p>
+<p class="cassetbundlemgr">現在ダウンロード中のアセットバンドルの数が返ってきます。</p>
+<p class="cassetbundlemgr">ダウンロードをペンディングしているものも数に含まれます。</p>
+<p class="cassetbundlemgr">マネージャのインスタンスを取得します。</p>
+<p class="cassetbundlemgr">アセットバンドルを参照します。
 もし、キャッシュされていないときは、ダウンロードします。</p>
-<p>ダウンロード済みでなくてもアセットバンドルが存在するときは、CAssetBundleを返します。</p>
-<p>返ってきたCAssetBundleがダウンロード中かどうかは、CAssetBundle.isLoadedによって判別可能です。</p>
-<p>trueの時、使用可能になっています。</p>
-<p>nullが返ってくるときは、アセットバンドルがそもそも存在しないときです。</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.isExist">
-bool <code class="descname">isExist</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.isExist" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アセットバンドルが存在するかどうか調べます。</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.startPreload">
-void <code class="descname">startPreload</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.startPreload" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>呼び出すと、存在するアセットバンドル全てをダウンロードし、ローカルディスクにキャッシュしようとします。</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.loadAssetVersion">
-void <code class="descname">loadAssetVersion</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.loadAssetVersion" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アセットバージョン(version.unity3d)をダウンロードしなおし、アセットバンドルのキャッシュを更新します。</p>
-<dl class="method">
-<dt id="method-CAssetBundleMgr.releaseAll">
-void <code class="descname">releaseAll</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.releaseAll" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>常駐/非常駐に関わらず、全てのアセットバンドルを解放します。</p>
-<p>解放後は、loadAssetVersionを呼び出す必要があります。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CAssetBundle">
-<code class="descname">class CAssetBundle</code><a class="headerlink" href="#class-CAssetBundle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>AssetBundleにキャスト可能です。</p>
-<dl class="method">
-<dt id="method-CAssetBundle.get">
-AssetBundle <code class="descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundle.get" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>保持しているAssetBundleを取得します。</p>
-<dl class="property">
-<dt id="property-CAssetBundle.id">
-uint <code class="descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.id" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>IDを取得します。</p>
-<dl class="property">
-<dt id="property-CAssetBundle.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>trueなら読み込み済みです。</p>
-<p>常駐しているかどうか調べます。</p>
-</dd></dl>
-
+<p class="cassetbundlemgr">ダウンロード済みでなくてもアセットバンドルが存在するときは、CAssetBundleを返します。</p>
+<p class="cassetbundlemgr">返ってきたCAssetBundleがダウンロード中かどうかは、CAssetBundle.isLoadedによって判別可能です。</p>
+<p class="cassetbundlemgr">trueの時、使用可能になっています。</p>
+<p class="cassetbundlemgr">nullが返ってくるときは、アセットバンドルがそもそも存在しないときです。</p>
+<p class="cassetbundlemgr">アセットバンドルが存在するかどうか調べます。</p>
+<p class="cassetbundlemgr">呼び出すと、存在するアセットバンドル全てをダウンロードし、ローカルディスクにキャッシュしようとします。</p>
+<p class="cassetbundlemgr">アセットバージョン(version.unity3d)をダウンロードしなおし、アセットバンドルのキャッシュを更新します。</p>
+<p class="cassetbundlemgr">常駐/非常駐に関わらず、全てのアセットバンドルを解放します。</p>
+<p class="cassetbundlemgr">解放後は、loadAssetVersionを呼び出す必要があります。</p>
+<p class="cassetbundle">AssetBundleにキャスト可能です。</p>
+<p class="cassetbundle">保持しているAssetBundleを取得します。</p>
+<p class="cassetbundle">IDを取得します。</p>
+<p class="cassetbundle">trueなら読み込み済みです。</p>
+<p class="cassetbundle">常駐しているかどうか調べます。</p>
 <div class="section" id="id1">
 <h2>ローカルのファイルを読み込む際のパス変更方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>

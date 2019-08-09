@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -259,112 +259,18 @@
             
   <div class="section" id="cwincontents">
 <h1>CWinContents<a class="headerlink" href="#cwincontents" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<dl class="class">
-<dt id="class-CWinContents">
-<code class="descname">class CWinContents</code><a class="headerlink" href="#class-CWinContents" title="この定義へのパーマリンク">¶</a></dt>
-<dd><img alt="_images/CWinContents.png" src="_images/CWinContents.png" />
-<p>CWinContentsは、各種コントロールを保持するためのコンテナとしての役割を持ちます。</p>
-<p>CWinContentsは以下の場面で使われています。</p>
-<ul class="simple">
+<img alt="_images/CWinContents.png" class="cwincontents" src="_images/CWinContents.png" />
+<p class="cwincontents">CWinContentsは、各種コントロールを保持するためのコンテナとしての役割を持ちます。</p>
+<p class="cwincontents">CWinContentsは以下の場面で使われています。</p>
+<ul class="cwincontents simple">
 <li><p>CWindowBase内に一つ持ち、複数のコントロールを保持します。</p></li>
 <li><p>CWinCtrlBase内に一つ持ち、コンテンツと呼びます。 <a class="reference internal" href="CtrlProp.html#ctrl-prop-contents"><span class="std std-ref">こちら</span></a> で定義されます。</p></li>
 <li><p>CWinCtrlBase内にリストでもち、コンテンツリストと呼びます。</p></li>
 </ul>
-<p>最初の二つは <a class="reference internal" href="WINDOW.html#window"><span class="std std-ref">ウィンドウスクリプト</span></a> によって構造が定義されます。</p>
-<p>三つ目のコンテンツリストは、コントロールが持つコンテンツをテンプレートとして、コピーすることによってリストとして持っています。</p>
-<p><em>固有の関数/プロパティ</em></p>
-<dl class="method">
-<dt id="method-CWinContents.find">
-WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint ctrlId</dt>
-<dd class="field-odd"><p>コントロールID</p>
-</dd>
-</dl>
-<p>該当するIDのコントロールを探します。
-もし、コンテンツ内に存在しないときは、コントロールが持つコンテンツ内も再帰的に探します。
-ただし、コンテンツリスト内は検索対象に含まれません。
-よって、コントロールは必ず一意に決まります。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CWinContents.getIndex">
-int <code class="descname">getIndex</code> <span class="sig-paren">(</span>uint <em>ctrlId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinContents.getIndex" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint ctrlId</dt>
-<dd class="field-odd"><p>コントロールID</p>
-</dd>
-</dl>
-<p>指定されたコントロールIDが何番目に格納されているか探します。
-見つからないときは、-1が返ります。
-findと違い、再帰的には検索しません。</p>
-<p>返ってきたインデックス値は、this[N]で使え、高速にアクセス可能になります。</p>
-</dd></dl>
-
-<dl class="indexer">
-<dt id="indexer-CWinContents.this[]">
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">this</code><code class="descclassname">[, int <em>N</em>]</code> { <em class="property">get;</em> }<a class="headerlink" href="#indexer-CWinContents.this[]" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">getIndex</span></code> によって取得したインデックス値を使えます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.count">
-int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.count" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツ内のコントロールの数を返します。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.clipState">
-ClipRect.State <code class="descname">clipState</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.clipState" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツリスト内に入っているコンテンツのみで使われます(ex: <a class="reference internal" href="LISTBOX.html#listbox"><span class="std std-ref">LISTBOX</span></a>, <a class="reference internal" href="LISTBOXEX.html#listboxex"><span class="std std-ref">LISTBOXEX</span></a> )。</p>
-<blockquote>
-<div><dl class="simple">
-<dt>ClipRect.State.Inside</dt><dd><p>完全に領域に入っている</p>
-</dd>
-<dt>ClipRect.State.Clipped</dt><dd><p>クリッピングが必要</p>
-</dd>
-<dt>ClipRect.State.Outside</dt><dd><p>完全に外に出ていてレンダリング不要</p>
-</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.width">
-float <code class="descname">width</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.width" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツの横幅を取得します。
-コントロールのサイズから自動計算されます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.height">
-float <code class="descname">height</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.height" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツの縦を取得します。
-コントロールのサイズから自動計算されます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.size">
-Vector2 <code class="descname">size</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.size" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツのサイズを取得します。
-コントロールのサイズから自動計算されます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.position">
-Vector3 <code class="descname">position</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.position" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツの表示位置</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinContents.parent">
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinContents.parent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンテンツの親になっているコントロールを取得します。</p>
-</dd></dl>
-
-<p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> が持つコンテンツの場合、nullが返ります。</p>
-</dd></dl>
-
+<p class="cwincontents">最初の二つは <a class="reference internal" href="WINDOW.html#window"><span class="std std-ref">ウィンドウスクリプト</span></a> によって構造が定義されます。</p>
+<p class="cwincontents">三つ目のコンテンツリストは、コントロールが持つコンテンツをテンプレートとして、コピーすることによってリストとして持っています。</p>
+<p class="cwincontents"><em>固有の関数/プロパティ</em></p>
+<p class="cwincontents"><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> が持つコンテンツの場合、nullが返ります。</p>
 </div>
 
 

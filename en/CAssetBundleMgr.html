@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -263,7 +263,7 @@
 <h1>CAssetBundleMgr<a class="headerlink" href="#cassetbundlemgr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="class-CAssetBundleMgr">
-<code class="descname">class CAssetBundleMgr</code><a class="headerlink" href="#class-CAssetBundleMgr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CAssetBundleMgr</code><a class="headerlink" href="#class-CAssetBundleMgr" title="Permalink to this definition">¶</a></dt>
 <dd><p>You need to add this script by AddComponent in “Awake” method of CMainSystem.</p>
 <p>This is the manager to cache or load the assetbundles.</p>
 <p>When you prepare your own manager , it is unnecessary.</p>
@@ -280,7 +280,7 @@
 </ol>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.MaxConcurrentLoadNum">
-<em>const</em> int <code class="descname">MaxConcurrentLoadNum</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaxConcurrentLoadNum" title="Permalink to this definition">¶</a></dt>
+<em>const</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">MaxConcurrentLoadNum</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaxConcurrentLoadNum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>This value means the maximum number that this script can download  at the same time.</p>
@@ -288,20 +288,20 @@
 <p>The default value is to 1.</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.MaximumAvailableDiskSpace">
-<em>const</em> long <code class="descname">MaximumAvailableDiskSpace</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaximumAvailableDiskSpace" title="Permalink to this definition">¶</a></dt>
+<em>const</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int64.aspx" title="System.Int64">Int64</a> <code class="sig-name descname">MaximumAvailableDiskSpace</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.MaximumAvailableDiskSpace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It sets the maximum cache size of a local disk.</p>
 <p>The default value is set to 512 * 1024 * 1024 (512Mbyte).</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.httpServerPath">
-<em>static</em> string <code class="descname">httpServerPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.httpServerPath" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">httpServerPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.httpServerPath" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It sets the HTTP address.</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.debugPath">
-<em>static</em> string <code class="descname">debugPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.debugPath" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">debugPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.debugPath" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It sets the debug path . It is effective only in MS-Windows / Mac environment .This manager preferentially loads assetbundles via this path.</p>
@@ -311,39 +311,39 @@
 </div>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.lastError">
-int <code class="descname">lastError</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.lastError" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">lastError</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.lastError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It has the error number</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.errorMessage">
-int <code class="descname">errorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.errorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">errorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.errorMessage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It has the error message</p>
 <dl class="member">
 <dt id="c.lodings">
-CAssetBundle[] <code class="descname">lodings</code><a class="headerlink" href="#c.lodings" title="Permalink to this definition">¶</a></dt>
+CAssetBundle[] <code class="sig-name descname">lodings</code><a class="headerlink" href="#c.lodings" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>This returns a list of asset bundles currently being downloaded .</p>
 <p>This list includes what the manager deferred assetbundle downloads.</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.loadNum">
-int <code class="descname">loadNum</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.loadNum" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="sig-name descname">loadNum</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.loadNum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It has a number of asset bundle currently being downloaded .</p>
 <p>This number includes what the manager deferred assetbundle downloads.</p>
 <dl class="property">
 <dt id="property-CAssetBundleMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CAssetBundleMgr" title="CAssetBundleMgr class">CAssetBundleMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.Instance" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference internal" href="#class-CAssetBundleMgr" title="CAssetBundleMgr class">CAssetBundleMgr</a> <code class="sig-name descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundleMgr.Instance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It has an instance of a manager</p>
 <dl class="method">
 <dt id="method-CAssetBundleMgr.reference">
-<a class="reference internal" href="#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a> <code class="descname">reference</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.reference" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a> <code class="sig-name descname">reference</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.reference" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It references a assetbundle. If you have not cache it , the manager downloads it .</p>
@@ -353,25 +353,25 @@ int <code class="descname">loadNum</code> { <em class="property">get;</em> }<a c
 <p>When null is returned , it is  not exist.</p>
 <dl class="method">
 <dt id="method-CAssetBundleMgr.isExist">
-bool <code class="descname">isExist</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.isExist" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isExist</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.isExist" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It examines whether the asset bundle exist .</p>
 <dl class="method">
 <dt id="method-CAssetBundleMgr.startPreload">
-void <code class="descname">startPreload</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.startPreload" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">startPreload</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.startPreload" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>You need to call this function if  you want to download all asset bundles that exist in order to cache on the local disk.</p>
 <dl class="method">
 <dt id="method-CAssetBundleMgr.loadAssetVersion">
-void <code class="descname">loadAssetVersion</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.loadAssetVersion" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">loadAssetVersion</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.loadAssetVersion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Asset version (version.unity3d) to download and again , and updates the cache of asset bundle.</p>
 <dl class="method">
 <dt id="method-CAssetBundleMgr.releaseAll">
-void <code class="descname">releaseAll</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.releaseAll" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">releaseAll</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundleMgr.releaseAll" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It releases all asset bundle regardless of the resident / non-resident .</p>
@@ -380,23 +380,23 @@ void <code class="descname">releaseAll</code> <span class="sig-paren">(</span><s
 
 <dl class="class">
 <dt id="class-CAssetBundle">
-<code class="descname">class CAssetBundle</code><a class="headerlink" href="#class-CAssetBundle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CAssetBundle</code><a class="headerlink" href="#class-CAssetBundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>It can be cast in AssetBundle.</p>
 <dl class="method">
 <dt id="method-CAssetBundle.get">
-AssetBundle <code class="descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundle.get" title="Permalink to this definition">¶</a></dt>
+AssetBundle <code class="sig-name descname">get</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CAssetBundle.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Get the AssetBundle.</p>
 <dl class="property">
 <dt id="property-CAssetBundle.id">
-uint <code class="descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.id" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <code class="sig-name descname">id</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It has the ID.</p>
 <dl class="property">
 <dt id="property-CAssetBundle.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.isLoaded" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CAssetBundle.isLoaded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>if it is already loaded,this value sets to true.</p>

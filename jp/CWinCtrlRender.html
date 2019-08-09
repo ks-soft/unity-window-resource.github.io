@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -272,33 +272,16 @@
 </div></blockquote>
 <p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onBeginDrag" title="CWindowBase.onBeginDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onBeginDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDragRender" title="CWindowBase.onDragRender method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">bool</span> <span class="pre">onDragRender(CWinCtrlBase</span> <span class="pre">cCtrl,Transform</span> <span class="pre">transform)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDropGround" title="CWindowBase.onDropGround method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDropGround(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
+<div><p><a href="#id2"><span class="problematic" id="id3">:meth:`void onClick(CWinCtrlBase cCtrl)&lt;CWindowBase.onClick&gt;`</span></a></p>
+<p><a href="#id4"><span class="problematic" id="id5">:meth:`void onHold(CWinCtrlBase cCtrl)&lt;CWindowBase.onHold&gt;`</span></a></p>
+<p><a href="#id6"><span class="problematic" id="id7">:meth:`void onBeginDrag(CWinCtrlBase cCtrl,Vector2 pos)&lt;CWindowBase.onBeginDrag&gt;`</span></a></p>
+<p><a href="#id8"><span class="problematic" id="id9">:meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)&lt;CWindowBase.onDrag&gt;`</span></a></p>
+<p><a href="#id10"><span class="problematic" id="id11">:meth:`bool onDragRender(CWinCtrlBase cCtrl,Transform transform)&lt;CWindowBase.onDragRender&gt;`</span></a></p>
+<p><a href="#id12"><span class="problematic" id="id13">:meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)&lt;CWindowBase.onDrop&gt;`</span></a></p>
+<p><a href="#id14"><span class="problematic" id="id15">:meth:`void onDropGround(CWinCtrlBase cCtrl)&lt;CWindowBase.onDropGround&gt;`</span></a></p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWinCtrlRender">
-<code class="descname">class CWinCtrlRender</code><a class="headerlink" href="#class-CWinCtrlRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<dl class="property">
-<dt id="property-CWinCtrlRender.camera">
-Camera <code class="descname">camera</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlRender.camera" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>レンダリングテクスチャが割り当てられたカメラを取得できます。
-カメラの位置や角度等をカスタマイズしたいときにアクセスしてください。</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>描画対象オブジェクトとカメラのレイヤーの設定に矛盾が出ないように気を付けてください。
-また、複数のRENDERコントロールが同時に画面にできるときは、それぞれのRENDERでレイヤー設定が重複しないように気を付けて割り当てる必要があります。</p>
-</div>
-</dd></dl>
-
-<p><em>使用例</em></p>
-</dd></dl>
-
+<p class="cwinctrlrender"><em>固有の関数/プロパティ</em></p>
+<p class="cwinctrlrender"><em>使用例</em></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// get control</span>
 <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">onCreate</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">CWinCtrlRender</span>       <span class="n">rdAvatar</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlRender</span><span class="p">&gt;(</span><span class="n">RENDER_AVATAR</span><span class="p">);</span>

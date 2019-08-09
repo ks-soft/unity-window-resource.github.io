@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -308,34 +308,11 @@
 </pre></div>
 </div>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CSoundEffectMgr">
-<code class="descname">class CSoundEffectMgr</code><a class="headerlink" href="#class-CSoundEffectMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CSoundEffectMgr.playBgm">
-void <code class="descname">playBgm</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <em>cBgmResource</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSoundEffectMgr.playBgm" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CBgmResource</dt>
-<dd class="field-odd"><p>読み込んだBGMリソース</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt>
-void <code class="descname">playBgm</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>アセットバンドルID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたBGMを再生します。
+<p class="csoundeffectmgr">指定されたBGMを再生します。
 もし、指定されたアセットバンドルが読み込まれていないときは、読み込み終わった後に自動的に再生を開始します。
 明示的に読み込みを待ちたいときは、cBgmResource.isLoaded()が、trueを返すのを待ってから、再生してください。</p>
-<p>CBgmResourceを直接取得するには、次のように記述します。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">IEnumerator</span> <span class="nf">load</span><span class="p">(</span><span class="kt">uint</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+<p class="csoundeffectmgr">CBgmResourceを直接取得するには、次のように記述します。</p>
+<div class="csoundeffectmgr highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">IEnumerator</span> <span class="nf">load</span><span class="p">(</span><span class="kt">uint</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
  <span class="n">CBgmResource</span> <span class="n">cBgmResource</span> <span class="p">=</span> <span class="n">CBgmResourceMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">reference</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 
  <span class="k">if</span> <span class="p">(</span><span class="n">cBgmResource</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
@@ -349,223 +326,47 @@ void <code class="descname">playBgm</code> <span class="sig-paren">(</span>uint 
 <span class="p">};</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="method-CSoundEffectMgr.play">
-void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSoundEffectMgr.play" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CSoundEffect cSE</dt>
-<dd class="field-odd"><p>CSeResourceから取得可能な、SEオブジェクトです。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたSEを2D音声として再生します。
+<p class="csoundeffectmgr">指定されたSEを2D音声として再生します。
 CSoundEffectは、次の方法で取得可能です。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CSeResource</span>   <span class="n">m_cSR</span><span class="p">;</span>
+<div class="csoundeffectmgr highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CSeResource</span>   <span class="n">m_cSR</span><span class="p">;</span>
          <span class="p">:</span>
 <span class="n">CSoundEffect</span>  <span class="n">cSE</span> <span class="p">=</span> <span class="n">m_cSR</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt>
-void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em>, uint <em>id</em><span class="sig-paren">)</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mAssetBundle</dt>
-<dd class="field-odd"><p>アセットバンドルID</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>SE ID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたSEを2D音声として再生します。</p>
-<dl class="method">
-<dt>
-void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, IEffectEmitter <em>emitter</em><span class="sig-paren">)</span></dt>
-<dt>
-void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, Transform <em>trans</em><span class="sig-paren">)</span></dt>
-<dt>
-void <code class="descname">play</code> <span class="sig-paren">(</span>CSoundEffect <em>cSE</em>, Vector3 <em>position</em><span class="sig-paren">)</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CSoundEffect cSE</dt>
-<dd class="field-odd"><p>CSeResourceから取得可能な、SEオブジェクトです。</p>
-</dd>
-<dt class="field-even">Param IEffectEmitter emitter</dt>
-<dd class="field-even"><p>エフェクトが発生するエミッター</p>
-</dd>
-<dt class="field-odd">Param Transform trans</dt>
-<dd class="field-odd"><p>音が発生する場所</p>
-</dd>
-<dt class="field-even">Param Vector3 position</dt>
-<dd class="field-even"><p>音が発生する場所</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>指定されたSEを3D音声として再生します。</p>
-<p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CSeResourceMgr">
-<code class="descname">class CSeResourceMgr</code><a class="headerlink" href="#class-CSeResourceMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>CSeResourceを管理するコンテナになっています。</p>
-<p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだ音声データを管理します。</p>
-<dl class="method">
-<dt id="method-CSeResourceMgr.refenrece">
-<a class="reference internal" href="#class-CSeResource" title="CSeResource class">CSeResource</a> <code class="descname">refenrece</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResourceMgr.refenrece" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mAssetBundle</dt>
-<dd class="field-odd"><p>SE リソースID(アセットバンドルID)を指定します。</p>
-</dd>
-<dt class="field-even">Return</dt>
-<dd class="field-even"><p>SEリソースが返ってきます。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>SEリソースを取得する。取得できるアセットは、<a class="reference internal" href="soundeffect.html#se-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
-<dl class="method">
-<dt id="method-CSeResourceMgr.find">
-CSoundEffect <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em>, uint <em>mId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResourceMgr.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mAssetBundle</dt>
-<dd class="field-odd"><p>SEリソースを指定する。</p>
-</dd>
-<dt class="field-even">Param uint id</dt>
-<dd class="field-even"><p>SE IDを指定します。</p>
-</dd>
-<dt class="field-odd">Return</dt>
-<dd class="field-odd"><p>SEが返ってきます。指定したSEがパックされているアセットバンドルがまだ読み込み中であったり存在しないときは、nullが返ります。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>CSoundEffectを取得します。</p>
-<dl class="property">
-<dt id="property-CSeResourceMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CSeResourceMgr" title="CSeResourceMgr class">CSeResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSeResourceMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CSeResource">
-<code class="descname">class CSeResource</code><a class="headerlink" href="#class-CSeResource" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アセットバンドル化されたSEを使える状態にして保持しています。</p>
-<p>CSeResource一つに、複数のSEがまとまった形で入っています。</p>
-<p>IWinSoundEffectインターフェースを持ち、CWindowMgrに登録することが可能です。</p>
-<p>実際に、SEを鳴らすには、CSoundEffectMgr経由で行います。</p>
-<dl class="method">
-<dt id="method-CSeResource.find">
-CSoundEffect <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResource.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>取得したいSE IDを指定します。</p>
-</dd>
-<dt class="field-even">Return</dt>
-<dd class="field-even"><p>SEが返ってきます。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>SEを取得します。</p>
-<dl class="method">
-<dt id="method-CSeResource.play">
-void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CSeResource.play" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p>再生したいSE IDを指定します。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>SEを再生します。</p>
-<dl class="property">
-<dt id="property-CSeResource.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CSeResource.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
-<p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CBgmResourceMgr">
-<code class="descname">class CBgmResourceMgr</code><a class="headerlink" href="#class-CBgmResourceMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>CBgmResourceを管理するコンテナになっています。</p>
-<p>CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだBGMデータを管理します。</p>
-<p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
-<dl class="method">
-<dt id="method-CBgmResourceMgr.refenrece">
-<a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <code class="descname">refenrece</code> <span class="sig-paren">(</span>uint <em>mAssetBundle</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CBgmResourceMgr.refenrece" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mAssetBundle</dt>
-<dd class="field-odd"><p>BGMリソースID(アセットバンドルID)を指定します。</p>
-</dd>
-<dt class="field-even">Return</dt>
-<dd class="field-even"><p>BGMリソースが返ってきます。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>BGMリソースを取得します。取得できるアセットは、<a class="reference internal" href="soundeffect.html#bgm-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
-<dl class="method">
-<dt id="method-CBgmResourceMgr.load">
-<a class="reference internal" href="#class-CBgmResource" title="CBgmResource class">CBgmResource</a> <code class="descname">load</code> <span class="sig-paren">(</span>uint <em>mResource</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CBgmResourceMgr.load" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint mResource</dt>
-<dd class="field-odd"><p>リソースIDを指定します。</p>
-</dd>
-<dt class="field-even">Return</dt>
-<dd class="field-even"><p>BGMリソースが返ってきます。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>Resourcesフォルダの下に次のような形でファイルを置いておくと読み込むことができます。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>
+<p class="csoundeffectmgr">指定されたSEを2D音声として再生します。</p>
+<p class="csoundeffectmgr">指定されたSEを3D音声として再生します。</p>
+<p class="csoundeffectmgr">マネージャのインスタンスを取得します。</p>
+<p class="cseresourcemgr">CSeResourceを管理するコンテナになっています。</p>
+<p class="cseresourcemgr">CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだ音声データを管理します。</p>
+<p class="cseresourcemgr">SEリソースを取得する。取得できるアセットは、<a class="reference internal" href="soundeffect.html#se-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
+<p class="cseresourcemgr">CSoundEffectを取得します。</p>
+<p class="cseresourcemgr">マネージャのインスタンスを取得します。</p>
+<p class="cseresource">アセットバンドル化されたSEを使える状態にして保持しています。</p>
+<p class="cseresource">CSeResource一つに、複数のSEがまとまった形で入っています。</p>
+<p class="cseresource">IWinSoundEffectインターフェースを持ち、CWindowMgrに登録することが可能です。</p>
+<p class="cseresource">実際に、SEを鳴らすには、CSoundEffectMgr経由で行います。</p>
+<p class="cseresource">SEを取得します。</p>
+<p class="cseresource">SEを再生します。</p>
+<p class="cseresource">アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p class="cseresource">trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
+<p class="cbgmresourcemgr">CBgmResourceを管理するコンテナになっています。</p>
+<p class="cbgmresourcemgr">CAssetBundleMgr経由で、アセットバンドルをダウンロードしてきた後、読み込んだBGMデータを管理します。</p>
+<p class="cbgmresourcemgr">実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
+<p class="cbgmresourcemgr">BGMリソースを取得します。取得できるアセットは、<a class="reference internal" href="soundeffect.html#bgm-assetbuild"><span class="std std-ref">こちら</span></a> でコンバートしたものです。</p>
+<p class="cbgmresourcemgr">Resourcesフォルダの下に次のような形でファイルを置いておくと読み込むことができます。</p>
+<div class="cbgmresourcemgr highlight-csharp notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<p>Assets/Resources/001_000_000000.mp3
+<p class="cbgmresourcemgr">Assets/Resources/001_000_000000.mp3
 Assets/Resources/001_000_000000.intro.mp3</p>
-<dl class="property">
-<dt id="property-CBgmResourceMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CBgmResourceMgr" title="CBgmResourceMgr class">CBgmResourceMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResourceMgr.Instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>マネージャのインスタンスを取得します。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CBgmResource">
-<code class="descname">class CBgmResource</code><a class="headerlink" href="#class-CBgmResource" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>アセットバンドル化されたBGMを使える状態にして保持しています。</p>
-<p>CBgmResource内に、イントロ部分とループ部分の音声データを持っています。</p>
-<p>実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
-<dl class="property">
-<dt id="property-CBgmResource.loopClip">
-AudioClip <code class="descname">loopClip</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.loopClip" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ループ部分のクリップ</p>
-<dl class="property">
-<dt id="property-CBgmResource.introClip">
-AudioClip <code class="descname">introClip</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.introClip" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>イントロ部分のクリップ</p>
-<dl class="property">
-<dt id="property-CBgmResource.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CBgmResource.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アセットバンドルが読み込み終わっているかどうか調べます。</p>
-<p>trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
-</dd></dl>
-
+<p class="cbgmresourcemgr">マネージャのインスタンスを取得します。</p>
+<p class="cbgmresource">アセットバンドル化されたBGMを使える状態にして保持しています。</p>
+<p class="cbgmresource">CBgmResource内に、イントロ部分とループ部分の音声データを持っています。</p>
+<p class="cbgmresource">実際に、BGMを鳴らすには、CSoundEffectMgr経由で行います。</p>
+<p class="cbgmresource">ループ部分のクリップ</p>
+<p class="cbgmresource">イントロ部分のクリップ</p>
+<p class="cbgmresource">アセットバンドルが読み込み終わっているかどうか調べます。</p>
+<p class="cbgmresource">trueの時、読み込みが完了しており、使用可能な状態になっています。</p>
 </div>
 </div>
 

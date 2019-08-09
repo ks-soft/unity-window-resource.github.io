@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -278,35 +278,35 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CWinCtrlListboxEx">
-<code class="descname">class CWinCtrlListboxEx</code><a class="headerlink" href="#class-CWinCtrlListboxEx" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CWinCtrlListboxEx</code><a class="headerlink" href="#class-CWinCtrlListboxEx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Functions / Properties</p>
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.viewsize">
-Vector2 <code class="descname">viewsize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.viewsize" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">viewsize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.viewsize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It is the size of the list box.It is equivalent to the size property.</p>
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.screensize">
-Vector2 <code class="descname">screensize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.screensize" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">screensize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.screensize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It is the size of the list box virtual screen.This value is the sum of all heights in the content list.</p>
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.offset">
-Vector2 <code class="descname">offset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.offset" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">offset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.offset" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>This value represents where the list box is pointing in the virtual screen. Set a value to move there instantly.If you want to move the animation smoothly,you can use  <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code> .</p>
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.isSwipe">
-bool <code class="descname">isSwipe</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSwipe" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isSwipe</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSwipe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>This value determines whether the user is swiping.</p>
 <dl class="method">
 <dt id="method-CWinCtrlListboxEx.setSmoothOffset">
-void <code class="descname">setSmoothOffset</code> <span class="sig-paren">(</span>Vector2 <em>offset</em>, float <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.setSmoothOffset" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">setSmoothOffset</code> <span class="sig-paren">(</span>Vector2 <em>offset</em>, <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.setSmoothOffset" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param Vector2 offset</dt>
 <dd class="field-odd"><p>Final offset you want to set</p>
@@ -319,19 +319,19 @@ void <code class="descname">setSmoothOffset</code> <span class="sig-paren">(</sp
 
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.smoothOffset">
-Vector2 <code class="descname">smoothOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.smoothOffset" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">smoothOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.smoothOffset" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>It behaves the same as when you call  <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code>  at a speed of 0.25 .</p>
 <dl class="property">
 <dt id="property-CWinCtrlListboxEx.isSmoothScrolled">
-bool <code class="descname">isSmoothScrolled</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSmoothScrolled" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">isSmoothScrolled</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSmoothScrolled" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>You can check this value with to see if you are during setSmoothOffset scrolling animation.</p>
 <dl class="method">
 <dt id="method-CWinCtrlListboxEx.getContentsOffset">
-Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">(</span>int <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.getContentsOffset" title="Permalink to this definition">¶</a></dt>
+Vector2 <code class="sig-name descname">getContentsOffset</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.getContentsOffset" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param int index</dt>
 <dd class="field-odd"><p>Index of the content offset you want to get.</p>
@@ -345,7 +345,7 @@ Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">
 <p>Specify where you want the content to be placed with the anchor.</p>
 <p>If the contents of the list box are arranged in a horizontal direction</p>
 <blockquote>
-<div><table class="docutils align-center">
+<div><table class="docutils align-default">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 59%" />
@@ -368,7 +368,7 @@ Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">
 </tbody>
 </table>
 <p>If the contents of the list box are arranged in a horizontal direction</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 59%" />

@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -312,416 +312,138 @@
 <li><p>各ウィンドウオブジェクトに届くコールバックについて *</p></li>
 </ul>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWindowBase">
-<code class="descname">class CWindowBase</code><a class="headerlink" href="#class-CWindowBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ウィンドウは複数のコントロールから構成されています。</p>
-<p>コントロールに対してタッチやドラッグ等の操作を行うと、それに応じてウィンドウ内のコールバックが呼ばれます。</p>
-<p>受け取れるコールバックを下記に列挙しておきます。</p>
-<p>各ウィンドウを作成するというのは、ウィンドウスクリプトをコンパイルした際に生成されたクラスを継承し、これらコールバックをオーバライドする作業になります。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onCreate">
-<em>virtual</em> void <code class="descname">onCreate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCreate" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウの初期化が終わった直後に呼ばれる。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onUpdate">
-<em>virtual</em> void <code class="descname">onUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onUpdate" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>各コントロールのアップデート前に呼ばれる。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onAfterUpdate">
-<em>virtual</em> void <code class="descname">onAfterUpdate</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onAfterUpdate" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>各コントロールのアップデート後に呼ばれる。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onPreRender">
-<em>virtual</em> void <code class="descname">onPreRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onPreRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールのレンダリング前に呼ばれる。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onRender">
-<em>virtual</em> <code class="descname">onRender</code> <span class="sig-paren">(</span>CWindowRenderer <em>cRenderer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールのレンダリングが終わった後に呼ばれる。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onClose">
-<em>virtual</em> bool <code class="descname">onClose</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClose" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウを閉じたときに呼ばれる。</p>
-<blockquote>
+<p class="cwindowbase">ウィンドウは複数のコントロールから構成されています。</p>
+<p class="cwindowbase">コントロールに対してタッチやドラッグ等の操作を行うと、それに応じてウィンドウ内のコールバックが呼ばれます。</p>
+<p class="cwindowbase">受け取れるコールバックを下記に列挙しておきます。</p>
+<p class="cwindowbase">各ウィンドウを作成するというのは、ウィンドウスクリプトをコンパイルした際に生成されたクラスを継承し、これらコールバックをオーバライドする作業になります。</p>
+<p class="cwindowbase">ウィンドウの初期化が終わった直後に呼ばれる。</p>
+<p class="cwindowbase">各コントロールのアップデート前に呼ばれる。</p>
+<p class="cwindowbase">各コントロールのアップデート後に呼ばれる。</p>
+<p class="cwindowbase">コントロールのレンダリング前に呼ばれる。</p>
+<p class="cwindowbase">コントロールのレンダリングが終わった後に呼ばれる。</p>
+<p class="cwindowbase">ウィンドウを閉じたときに呼ばれる。</p>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
 <li><p>true: ウィンドウを閉じる</p></li>
 <li><p>false: ウィンドウを閉じるのを抑制する</p></li>
 </ul>
 </div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.onClick">
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClick" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onHold">
-<em>virtual</em> void <code class="descname">onHold</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onHold" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールが長押しされた。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onClickEnter">
-<em>virtual</em> void <code class="descname">onClickEnter</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onClickEnter" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>エディットボックスの入力が確定した。</p>
-<dl class="method">
-<dt>
-<em>virtual</em> void <code class="descname">onClick</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="CWinCtrlRichText.html#class-CRichTextOne" title="CRichTextOne class">CRichTextOne</a> <em>cText</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
-<p>リッチテキストの一部が押された</p>
-<dl class="method">
-<dt id="method-CWindowBase.onBeginDrag">
-<em>virtual</em> void <code class="descname">onBeginDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginDrag" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールがドラッグされた。
+<p class="cwindowbase">コントロールが押された。</p>
+<p class="cwindowbase">コントロールが長押しされた。</p>
+<p class="cwindowbase">エディットボックスの入力が確定した。</p>
+<p class="cwindowbase">リッチテキストの一部が押された</p>
+<p class="cwindowbase">コントロールがドラッグされた。
 最初に一度、呼び出される。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDrag">
-<em>virtual</em> void <code class="descname">onDrag</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Vector2 <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrag" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールがドラッグされている。
+<p class="cwindowbase">コントロールがドラッグされている。
 ドラッグ中、呼び続けられる。</p>
-<p>スクロール可能なコントロールは、どの方向にコントロールがドラッグされたかをonDragによって知ることができる。
+<p class="cwindowbase">スクロール可能なコントロールは、どの方向にコントロールがドラッグされたかをonDragによって知ることができる。
 ただし、STYLEに <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">SCROLL_LOCK</span></a> をつけておく必要がある。
 onDragによって、ドラッグした方向を検出できる。
 DRAGをつけても、これらコントロールには効果がないことに気を付ける必要がある。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDragRender">
-<em>virtual</em> bool <code class="descname">onDragRender</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, Transform <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDragRender" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>コントロールがドラッグされているときに、レンダリングタイミングで呼ばれる。
+<p class="cwindowbase">コントロールがドラッグされているときに、レンダリングタイミングで呼ばれる。
 overrideしなければ普通にコントロールがレンダリングされる。</p>
-<p>戻り値の意味は以下の通りです。</p>
-<blockquote>
+<p class="cwindowbase">戻り値の意味は以下の通りです。</p>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
 <li><p>true ドラッグ中のコントロールの複製をレンダリングする。</p></li>
 <li><p>false ドラッグ中のコントロールの複製をレンダリングしない。</p></li>
 </ul>
 </div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.onDrop">
-<em>virtual</em> void <code class="descname">onDrop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em>, <a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cDragWindow</em>, <a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cDragCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDrop" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>特定ウィンドウのコントロール上でドラッグ中のコントロールが離されたとき呼ばれる。
+<p class="cwindowbase">特定ウィンドウのコントロール上でドラッグ中のコントロールが離されたとき呼ばれる。
 このコールバックは、cCtrlが含まれるウィンドウにコールバックが届く。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onDropGround">
-<em>virtual</em> void <code class="descname">onDropGround</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <em>cCtrl</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onDropGround" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
-<p>また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onOK">
-<em>virtual</em> void <code class="descname">onOK</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onOK" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でOKボタンが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onNext">
-<em>virtual</em> void <code class="descname">onNext</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNext" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でNextボタンが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onYes">
-<em>virtual</em> void <code class="descname">onYes</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onYes" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でYesボタンが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onNo">
-<em>virtual</em> void <code class="descname">onNo</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onNo" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でNoボタンが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onCancel">
-<em>virtual</em> void <code class="descname">onCancel</code> <span class="sig-paren">(</span>int <em>msgBoxWinID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onCancel" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウとしてクリエイトしたメッセージウィンドウ上でCancelボタンが押された。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onRecreatedRenderTexture">
-<em>virtual</em> void <code class="descname">onRecreatedRenderTexture</code> <span class="sig-paren">(</span>uint <em>mRenderTextureId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onRecreatedRenderTexture" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダーテクスチャが何らかのイベントによって、消失したとき呼ばれる。
+<p class="cwindowbase">何もないところでドラッグ中のコントロールが離されたとき呼ばれる。</p>
+<p class="cwindowbase">また、ドラッグ中のコントロールが含まれるウィンドウが消滅したときにも、消滅する直前に呼び出される。</p>
+<p class="cwindowbase">子ウィンドウとしてクリエイトしたメッセージウィンドウ上でOKボタンが押された。</p>
+<p class="cwindowbase">子ウィンドウとしてクリエイトしたメッセージウィンドウ上でNextボタンが押された。</p>
+<p class="cwindowbase">子ウィンドウとしてクリエイトしたメッセージウィンドウ上でYesボタンが押された。</p>
+<p class="cwindowbase">子ウィンドウとしてクリエイトしたメッセージウィンドウ上でNoボタンが押された。</p>
+<p class="cwindowbase">子ウィンドウとしてクリエイトしたメッセージウィンドウ上でCancelボタンが押された。</p>
+<p class="cwindowbase">レンダーテクスチャが何らかのイベントによって、消失したとき呼ばれる。
 ただし、自動復帰はシステム側が行うので基本オーバーライドする必要はない。</p>
-<ul class="simple">
+<ul class="cwindowbase simple">
 <li><p>ウィンドウオブジェクトの持つ主なプロパティ/メソッド *</p></li>
 </ul>
-<p>ここでは、CWindowBaseが持つアクセス可能なメソッド、プロパティについて列挙しておきます。</p>
-<dl class="method">
-<dt id="method-CWindowBase.onBeginRenderIcon">
-<em>virtual</em> bool <code class="descname">onBeginRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onBeginRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>アイコンにレンダリング開始
-<a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a> がウィンドウに含まれている時のみ呼び出されます。</p>
-<p>この関数の戻り値は、次の意味を持ちます。</p>
-<ul class="simple">
+<p class="cwindowbase">ここでは、CWindowBaseが持つアクセス可能なメソッド、プロパティについて列挙しておきます。</p>
+<p class="cwindowbase">アイコンにレンダリング開始
+<a href="#id3"><span class="problematic" id="id4">:type:`CWinCtrlRenderIcon`</span></a> がウィンドウに含まれている時のみ呼び出されます。</p>
+<p class="cwindowbase">この関数の戻り値は、次の意味を持ちます。</p>
+<ul class="cwindowbase simple">
 <li><p>trueを返すとテクスチャにレンダリングします。</p></li>
-<li><p>falseを返すとレンダリングしません。 <a class="reference internal" href="#method-CWindowBase.onEndRenderIcon" title="CWindowBase.onEndRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onEndRenderIcon</span></code></a> も呼ばれません。</p></li>
+<li><p>falseを返すとレンダリングしません。 <a href="#id5"><span class="problematic" id="id6">:meth:`onEndRenderIcon&lt;CWindowBase.onEndRenderIcon&gt;`</span></a> も呼ばれません。</p></li>
 </ul>
-<dl class="method">
-<dt id="method-CWindowBase.onEndRenderIcon">
-<em>virtual</em> bool <code class="descname">onEndRenderIcon</code> <span class="sig-paren">(</span><a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class">CWinCtrlRenderIcon</a> <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.onEndRenderIcon" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダリングが終了したときに呼ばれる
-<a class="reference internal" href="CWinCtrlRenderIcon.html#class-CWinCtrlRenderIcon" title="CWinCtrlRenderIcon class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CWinCtrlRenderIcon</span></code></a> がウィンドウに含まれている時のみ呼び出されます。</p>
-<p>この関数の戻り値は、次の意味を持ちます。</p>
-<blockquote>
+<p class="cwindowbase">レンダリングが終了したときに呼ばれる
+<a href="#id7"><span class="problematic" id="id8">:type:`CWinCtrlRenderIcon`</span></a> がウィンドウに含まれている時のみ呼び出されます。</p>
+<p class="cwindowbase">この関数の戻り値は、次の意味を持ちます。</p>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
-<li><p>trueを返すと、次のフレームもレンダリングを継続します( <a class="reference internal" href="#method-CWindowBase.onBeginRenderIcon" title="CWindowBase.onBeginRenderIcon method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">onBeginRenderIcon</span></code></a> が呼ばれる)</p></li>
+<li><p>trueを返すと、次のフレームもレンダリングを継続します( <a href="#id9"><span class="problematic" id="id10">:meth:`onBeginRenderIcon&lt;CWindowBase.onBeginRenderIcon&gt;`</span></a> が呼ばれる)</p></li>
 <li><p>falseを返すと、以降のフレームでは必要がない限り、レンダリングされません。</p></li>
 </ul>
 </div></blockquote>
-<p>一度停止させたレンダリングを再開したいときは、 <a class="reference internal" href="CWinCtrlRenderIcon.html#property-CWinCtrlRenderIcon.needToRender" title="CWinCtrlRenderIcon.needToRender property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">needToRender</span></code></a> をtrueにしてください。</p>
-<dl class="method">
-<dt id="method-CWindowBase.close">
-void <code class="descname">close</code> <span class="sig-paren">(</span>int <em>iCloseInfo</em><em> = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.close" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウを閉じたいときに呼び出す。
+<p class="cwindowbase">一度停止させたレンダリングを再開したいときは、 <a href="#id11"><span class="problematic" id="id12">:prop:`needToRender&lt;CWinCtrlRenderIcon.needToRender&gt;`</span></a> をtrueにしてください。</p>
+<p class="cwindowbase">ウィンドウを閉じたいときに呼び出す。
 iCloseInfoは、onCloseのパラメータとして渡されます。</p>
-<dl class="method">
-<dt id="method-CWindowBase.find">
-WinCtrl <code class="descname">find</code>&lt;WinCtrl&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>該当するIDを持つコントロールを探す。</p>
-<dl class="method">
-<dt>
-<a class="reference internal" href="CWinCtrlBase.html#class-CWinCtrlBase" title="CWinCtrlBase class">CWinCtrlBase</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
-<p>該当するIDを持つコントロールを探す。</p>
-<dl class="property">
-<dt id="property-CWindowBase.id">
-uint <code class="descname">id</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.id" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウIDを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.child">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">child</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.child" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>子ウィンドウを返す。</p>
-<dl class="property">
-<dt id="property-CWindowBase.parent">
-<a class="reference internal" href="#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <code class="descname">parent</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.parent" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>親ウィンドウを返す。</p>
-<dl class="property">
-<dt id="property-CWindowBase.layer">
-e_LayerId <code class="descname">layer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.layer" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>レンダリングレイヤーを取得/設定します。</p>
-<dl class="property">
-<dt id="property-CWindowBase.priority">
-int <code class="descname">priority</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priority" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>描画プライオリティを取得/設定します。</p>
-<dl class="property">
-<dt id="property-CWindowBase.texid">
-uint <code class="descname">texid</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.texid" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのデフォルトテクスチャIDを返す。</p>
-<dl class="property">
-<dt id="property-CWindowBase.x">
-float <code class="descname">x</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.x" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CWindowBase.y">
-float <code class="descname">y</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.y" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウ座標を取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.position">
-Vector2 <code class="descname">position</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.position" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウ座標を取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.transform">
-Transform <code class="descname">transform</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.transform" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>Transformを取得する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.scale">
-Vector2 <code class="descname">scale</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.scale" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>x,yスケールを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.anchor">
-e_Anchor <code class="descname">anchor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.anchor" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>表示位置の基準アンカー設定を変更する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.width">
-float <code class="descname">width</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.width" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CWindowBase.height">
-float <code class="descname">height</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.height" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのサイズを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.size">
-Vector2 <code class="descname">size</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.size" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのサイズを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.screenWidth">
-float <code class="descname">screenWidth</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenWidth" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-CWindowBase.screenHeight">
-float <code class="descname">screenHeight</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.screenHeight" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>表示スクリーンサイズの取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.caption">
-string <code class="descname">caption</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.caption" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのタイトルバーキャプションを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.captionColor">
-WinColor <code class="descname">captionColor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionColor" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのタイトルバーキャプションカラーを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.captionOffset">
-Vector2 <code class="descname">captionOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.captionOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウのタイトルバーキャプション表示オフセットを取得/設定する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.color">
-WinColor <code class="descname">color</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.color" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウカラーを設定します。
+<p class="cwindowbase">該当するIDを持つコントロールを探す。</p>
+<p class="cwindowbase">該当するIDを持つコントロールを探す。</p>
+<p class="cwindowbase">ウィンドウIDを取得/設定する。</p>
+<p class="cwindowbase">子ウィンドウを返す。</p>
+<p class="cwindowbase">親ウィンドウを返す。</p>
+<p class="cwindowbase">レンダリングレイヤーを取得/設定します。</p>
+<p class="cwindowbase">描画プライオリティを取得/設定します。</p>
+<p class="cwindowbase">ウィンドウのデフォルトテクスチャIDを返す。</p>
+<p class="cwindowbase">ウィンドウ座標を取得/設定する。</p>
+<p class="cwindowbase">ウィンドウ座標を取得/設定する。</p>
+<p class="cwindowbase">Transformを取得する。</p>
+<p class="cwindowbase">x,yスケールを取得/設定する。</p>
+<p class="cwindowbase">表示位置の基準アンカー設定を変更する。</p>
+<p class="cwindowbase">ウィンドウのサイズを取得/設定する。</p>
+<p class="cwindowbase">ウィンドウのサイズを取得/設定する。</p>
+<p class="cwindowbase">表示スクリーンサイズの取得/設定する。</p>
+<p class="cwindowbase">ウィンドウのタイトルバーキャプションを取得/設定する。</p>
+<p class="cwindowbase">ウィンドウのタイトルバーキャプションカラーを取得/設定する。</p>
+<p class="cwindowbase">ウィンドウのタイトルバーキャプション表示オフセットを取得/設定する。</p>
+<p class="cwindowbase">ウィンドウカラーを設定します。
 配下にあるコントロールは全て影響受けます。</p>
-<dl class="property">
-<dt id="property-CWindowBase.style">
-e_WinStyle <code class="descname">style</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.style" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウスタイルを取得します。</p>
-<dl class="property">
-<dt id="property-CWindowBase.priorityStyle">
-e_WinStyle <code class="descname">priorityStyle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.priorityStyle" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>プライオリティスタイルを設定/取得する。</p>
-<dl class="property">
-<dt id="property-CWindowBase.hide">
-bool <code class="descname">hide</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.hide" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<ul class="simple">
+<p class="cwindowbase">ウィンドウスタイルを取得します。</p>
+<p class="cwindowbase">プライオリティスタイルを設定/取得する。</p>
+<ul class="cwindowbase simple">
 <li><p>true</p></li>
 </ul>
-<blockquote>
+<blockquote class="cwindowbase">
 <div><p>ウィンドウ表示を隠す。</p>
 </div></blockquote>
-<ul class="simple">
+<ul class="cwindowbase simple">
 <li><p>false</p></li>
 </ul>
-<blockquote>
+<blockquote class="cwindowbase">
 <div><p>ウィンドウを表示する。</p>
 </div></blockquote>
-<dl class="property">
-<dt id="property-CWindowBase.disable">
-bool <code class="descname">disable</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowBase.disable" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<ul class="simple">
+<ul class="cwindowbase simple">
 <li><p>true</p></li>
 </ul>
-<blockquote>
+<blockquote class="cwindowbase">
 <div><p>ウィンドウの機能を奪い暗くする。</p>
 </div></blockquote>
-<ul class="simple">
+<ul class="cwindowbase simple">
 <li><p>false</p></li>
 </ul>
-<blockquote>
+<blockquote class="cwindowbase">
 <div><p>ウィンドウを通常表示する。</p>
 </div></blockquote>
-<p>ウィンドウ機能を奪うと、タッチしても反応しなくなります。</p>
-<dl class="property">
-<dt id="property-CWindowBase.isClose">
-bool <code class="descname">isClose</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isClose" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウがクローズアニメーション中ならtrueになります。</p>
-<dl class="property">
-<dt id="property-CWindowBase.isLoaded">
-bool <code class="descname">isLoaded</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isLoaded" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>テクスチャ等の読み込みが行われているときtrueになります。</p>
-<dl class="property">
-<dt id="property-CWindowBase.isFade">
-bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowBase.isFade" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ウィンドウがフェードイン/フェードアウト中ならtrueになります。</p>
-<ul class="simple">
+<p class="cwindowbase">ウィンドウ機能を奪うと、タッチしても反応しなくなります。</p>
+<p class="cwindowbase">ウィンドウがクローズアニメーション中ならtrueになります。</p>
+<p class="cwindowbase">テクスチャ等の読み込みが行われているときtrueになります。</p>
+<p class="cwindowbase">ウィンドウがフェードイン/フェードアウト中ならtrueになります。</p>
+<ul class="cwindowbase simple">
 <li><p>その他オーバーライド可能なメソッド *</p></li>
 </ul>
-<p>コールバック以外にオーバライド可能なメソッドが存在します。
+<p class="cwindowbase">コールバック以外にオーバライド可能なメソッドが存在します。
 特にウィンドウをクリエイトしたとき/クローズしたときに行うフェードアニメーションをカスタマイズしたいときは
 オーバライドする必要があります。</p>
-<dl class="method">
-<dt id="method-CWindowBase.startFade">
-<em>protected</em> <em>virtual</em> void <code class="descname">startFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.startFade" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>フェードが始まった時に呼ばれる。
+<p class="cwindowbase">フェードが始まった時に呼ばれる。
 フェードイン/フェードアウトは、e_FadeStateを見て判断できる。
 フェード処理で必要な初期化を行ってください。</p>
-<blockquote>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
 <li><p>e_FadeState.Open</p></li>
 </ul>
@@ -735,13 +457,8 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 <div><p>フェードアウト</p>
 </div></blockquote>
 </div></blockquote>
-<dl class="method">
-<dt id="method-CWindowBase.doFade">
-<em>protected</em> <em>virtual</em> bool <code class="descname">doFade</code> <span class="sig-paren">(</span>e_FadeState <em>eState</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowBase.doFade" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>フェード中に呼ばれます。</p>
-<blockquote>
+<p class="cwindowbase">フェード中に呼ばれます。</p>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
 <li><p>true</p></li>
 </ul>
@@ -755,9 +472,9 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 <div><p>フェード終了</p>
 </div></blockquote>
 </div></blockquote>
-<p>フェードが終了したら、falseを返すようにしてください。</p>
-<p>また、e_FadeState.Noneがわたってきたときも、falseを返すようにしてください。</p>
-<blockquote>
+<p class="cwindowbase">フェードが終了したら、falseを返すようにしてください。</p>
+<p class="cwindowbase">また、e_FadeState.Noneがわたってきたときも、falseを返すようにしてください。</p>
+<blockquote class="cwindowbase">
 <div><ul class="simple">
 <li><p>e_FadeState.None</p></li>
 </ul>
@@ -777,8 +494,6 @@ bool <code class="descname">isFade</code> { <em class="property">get;</em> }<a c
 <div><p>フェードアウト中</p>
 </div></blockquote>
 </div></blockquote>
-</dd></dl>
-
 </div>
 </div>
 

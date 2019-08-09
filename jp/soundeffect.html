@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -106,9 +106,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">効果音、BGMについて</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#se">SEのアセットバンドルを作成する方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#se-def">&#64;se.def記述方法</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">インクルードパス</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">&#64;se.defをコンパイルするときにインクルードされるファイル</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">&#64;se.defに使えるプロパティ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">インクルードパス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">&#64;se.defをコンパイルするときにインクルードされるファイル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">&#64;se.defに使えるプロパティ</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#volume">VOLUME = 数字</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#group">GROUP = グループ番号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#priority">PRIORITY = プライオリティ</a></li>
@@ -116,7 +116,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#distance">DISTANCE = 最少距離,最大距離</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">プリプロセッサ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">プリプロセッサ</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#bgm-assetbuild">BGMのアセットバンドルを作成する方法</a></li>
@@ -280,9 +280,9 @@
 <blockquote>
 <div><p>音関連を制御するためのマネージャとして、次のものを用意しています。</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CSoundEffectMgr" title="CSoundEffectMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSoundEffectMgr</span></code></a></p></li>
-<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a></p></li>
-<li><p><a class="reference internal" href="CSoundEffectMgr.html#class-CBgmResourceMgr" title="CBgmResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CBgmResourceMgr</span></code></a></p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">:type:`CSoundEffectMgr&lt;CSoundEffectMgr&gt;`</span></a></p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">:type:`CSeResourceMgr&lt;CSeResourceMgr&gt;`</span></a></p></li>
+<li><p><a href="#id5"><span class="problematic" id="id6">:type:`CBgmResourceMgr&lt;CBgmResourceMgr&gt;`</span></a></p></li>
 </ul>
 <p>これらを用いて、アセットバンドルの管理、SEのグループ化、プライオリティ、同時発声数制限等を行います。
 また、BGMは、イントロ＋ループ部分の再生を行ってくれます。</p>
@@ -310,7 +310,7 @@
 <img alt="_images/SeResource.png" src="_images/SeResource.png" />
 </div>
 <div class="section" id="se-def">
-<span id="id1"></span><h2>&#64;se.def記述方法<a class="headerlink" href="#se-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id7"></span><h2>&#64;se.def記述方法<a class="headerlink" href="#se-def" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>アセットバンドルを作成するときに、各SEに様々な情報を埋め込むことができます。
 以下に例を挙げておきます。
@@ -355,7 +355,7 @@
 <div><p>エリアス名/ファイル名は、 <a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> か <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> (半角英数5文字)である必要があります。</p>
 <p>次のようにルールがあります。</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 43%" />
 <col style="width: 57%" />
@@ -378,8 +378,8 @@
 <p class="admonition-title">注釈</p>
 <p><a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> (半角英数5文字)を使うときは、&quot;～&quot;でくくるのを忘れないでください</p>
 </div>
-<div class="section" id="id2">
-<h3>インクルードパス<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h3>インクルードパス<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>以下のパスにインクルードパスが、通っています。
 インクルードファイルを作成する際は、ファイルをここに置いてください。</p>
@@ -388,8 +388,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h3>&#64;se.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id9">
+<h3>&#64;se.defをコンパイルするときにインクルードされるファイル<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>次のファイルは、&#64;se.defをコンパイルするときに、自動的にインクルードされます。
 共通の設定は、このファイルに記述すると便利です。</p>
@@ -398,8 +398,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h3>&#64;se.defに使えるプロパティ<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id10">
+<h3>&#64;se.defに使えるプロパティ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="section" id="volume">
 <h4>VOLUME = 数字<a class="headerlink" href="#volume" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
@@ -444,12 +444,12 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>プリプロセッサ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id11">
+<h3>プリプロセッサ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <blockquote>
 <div><p>C言語,C++言語とほぼ同じプリプロセッサが使えます。</p>
 </div></blockquote>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 52%" />
 <col style="width: 48%" />
@@ -502,7 +502,7 @@
 </div>
 </div>
 <div class="section" id="bgm-assetbuild">
-<span id="id6"></span><h2>BGMのアセットバンドルを作成する方法<a class="headerlink" href="#bgm-assetbuild" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id12"></span><h2>BGMのアセットバンドルを作成する方法<a class="headerlink" href="#bgm-assetbuild" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p>BGMを、予めイントロ部分、ループ部分に分けておいてアセットバンドル化することによって、マネージャ側が自動的に順番に再生を行ってくれます。</p>
 <p>次の手順でアセットバンドル化してください。</p>

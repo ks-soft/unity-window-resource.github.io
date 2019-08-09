@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -323,73 +323,20 @@
 <blockquote>
 <div><p>CMessageDataSheetMgrが、IWinCaptionDataインターフェースを持っているためこのように記述可能です。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CMessageDataSheetMgr">
-<code class="descname">class CMessageDataSheetMgr</code><a class="headerlink" href="#class-CMessageDataSheetMgr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>CMessageDataSheetMgrは、CMessageDataSheetを複数持つ、コンテナになっています。</p>
-<p>CMessageDataSheetは、Excel上でシート一つに該当します。</p>
-<p>CMessageDataSheetMgrは、Excelのシートを束ねて持っているコンテナとも言えます。</p>
-<p>ただし、複数ロケールを一つのアセットに纏めて持つわけではなく、ロケール毎に分けて文字リソースデータを持っています。
+<p class="cmessagedatasheetmgr">CMessageDataSheetMgrは、CMessageDataSheetを複数持つ、コンテナになっています。</p>
+<p class="cmessagedatasheetmgr">CMessageDataSheetは、Excel上でシート一つに該当します。</p>
+<p class="cmessagedatasheetmgr">CMessageDataSheetMgrは、Excelのシートを束ねて持っているコンテナとも言えます。</p>
+<p class="cmessagedatasheetmgr">ただし、複数ロケールを一つのアセットに纏めて持つわけではなく、ロケール毎に分けて文字リソースデータを持っています。
 よって、アプリケーションでは一つのロケールデータのみを保持することになります。</p>
-<dl class="method">
-<dt id="method-CMessageDataSheetMgr.initialize">
-void <code class="descname">initialize</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param byte[] buffer</dt>
-<dd class="field-odd"><p>読み込んだバイナリデータ</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>Excelから生成したバイナリデータを指定します。</p>
-<dl class="method">
-<dt id="method-CMessageDataSheetMgr.find">
-<a class="reference internal" href="#class-CMessageDataSheet" title="CMessageDataSheet class">CMessageDataSheet</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>sheetname</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint type</dt>
-<dd class="field-odd"><p>シート名を <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a> で渡します。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>シートを一つ取得します。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CMessageDataSheet</span> <span class="n">cSheet</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="k">new</span> <span class="n">FiveCC</span><span class="p">(</span><span class="s">&quot;WNDW&quot;</span><span class="p">);</span>
+<p class="cmessagedatasheetmgr">Excelから生成したバイナリデータを指定します。</p>
+<p class="cmessagedatasheetmgr">シートを一つ取得します。</p>
+<div class="cmessagedatasheetmgr highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CMessageDataSheet</span> <span class="n">cSheet</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="k">new</span> <span class="n">FiveCC</span><span class="p">(</span><span class="s">&quot;WNDW&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>現在設定されているロケールを取得する。</p>
-<p>CMessageDataSheetMgrのインスタンスを取得する。</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-CMessageDataSheet">
-<code class="descname">class CMessageDataSheet</code><a class="headerlink" href="#class-CMessageDataSheet" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Excel上のシート一つに対応します。</p>
-<dl class="method">
-<dt id="method-CMessageDataSheet.find">
-string <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.find" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p><a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> を指定し、文字リソースを取得します。</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CMessageDataSheet.format">
-string <code class="descname">format</code> <span class="sig-paren">(</span>uint <em>id</em>, <em>params</em> object[] <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.format" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param uint id</dt>
-<dd class="field-odd"><p><a class="reference internal" href="id.html#mulid"><span class="std std-ref">マルチID</span></a> を指定し、文字リソースを取得します。</p>
-</dd>
-<dt class="field-even">Param params object[] args</dt>
-<dd class="field-even"><p>可変引数</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>フォーマットにそって文字リソースを生成し返します。</p>
-</dd></dl>
-
+<p class="cmessagedatasheetmgr">現在設定されているロケールを取得する。</p>
+<p class="cmessagedatasheetmgr">CMessageDataSheetMgrのインスタンスを取得する。</p>
+<p class="cmessagedatasheet">Excel上のシート一つに対応します。</p>
+<p class="cmessagedatasheet">フォーマットにそって文字リソースを生成し返します。</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="n">cMessageDataSheetMgr</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">new</span> <span class="n">MulId</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="s">&quot;Test&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="k">value</span><span class="p">);</span>
 </pre></div>
 </div>

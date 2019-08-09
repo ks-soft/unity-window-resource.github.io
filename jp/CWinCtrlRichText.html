@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -266,73 +266,19 @@
 </div></blockquote>
 <p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onClick" title="CWindowBase.onClick method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onClick(CWinCtrlRichText</span> <span class="pre">cCtrl,CRichTextOne</span> <span class="pre">cText)</span></code></a></p>
+<div><p><a href="#id2"><span class="problematic" id="id3">:meth:`void onClick(CWinCtrlRichText cCtrl,CRichTextOne cText)&lt;CWindowBase.onClick&gt;`</span></a></p>
 <blockquote>
 <div><p>このコールバックが発行されるのは、テクスチャコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\t</span></a> )とウィンドウコマンド( <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\w</span></a> )のみです。
-CRichTextOneは <a class="reference internal" href="#class-CRichTextOne" title="CRichTextOne class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+CRichTextOneは <a href="#id4"><span class="problematic" id="id5">:type:`こちら&lt;CRichTextOne&gt;`</span></a> を参照ください。</p>
 </div></blockquote>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onHold" title="CWindowBase.onHold method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onHold(CWinCtrlBase</span> <span class="pre">cCtrl)</span></code></a></p>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a href="#id6"><span class="problematic" id="id7">:meth:`void onHold(CWinCtrlBase cCtrl)&lt;CWindowBase.onHold&gt;`</span></a></p>
+<p><a href="#id8"><span class="problematic" id="id9">:meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)&lt;CWindowBase.onDrop&gt;`</span></a></p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CRichTextOne">
-<code class="descname">class CRichTextOne</code><a class="headerlink" href="#class-CRichTextOne" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<blockquote>
+<p class="crichtextone"><em>固有の関数/プロパティ</em></p>
+<blockquote class="crichtextone">
 <div><p>クリックイベントに渡される引数です。
 メンバを調べることによって、どこをクリックしたかを判定できます。</p>
 </div></blockquote>
-<dl class="property">
-<dt id="property-CRichTextOne.cmd">
-CRichTextOne.e_Cmd <code class="descname">cmd</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.cmd" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>e_Cmd.String</p>
-<blockquote>
-<div><p>文字列：この部位はクリックイベントが発生しない筈です。</p>
-</div></blockquote>
-<p>e_Cmd.Window</p>
-<blockquote>
-<div><p>ウィンドウ： <a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\wコマンド</span></a> の部位がクリックされた。</p>
-<p>次のプロパティに有効な値が入っています。</p>
-<p><a class="reference internal" href="#property-CRichTextOne.userId" title="CRichTextOne.userId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">userId</span></code></a></p>
-<p><a class="reference internal" href="#property-CRichTextOne.windowId" title="CRichTextOne.windowId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">windowId</span></code></a></p>
-</div></blockquote>
-<p>e_Cmd.Texture</p>
-<blockquote>
-<div><p>テクスチャ： <a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> の部位がクリックされた。</p>
-<p>次のプロパティに有効な値が入っています。</p>
-<p><a class="reference internal" href="#property-CRichTextOne.userId" title="CRichTextOne.userId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">userId</span></code></a></p>
-<p><a class="reference internal" href="#property-CRichTextOne.texId" title="CRichTextOne.texId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">texId</span></code></a></p>
-<p><a class="reference internal" href="#property-CRichTextOne.partId" title="CRichTextOne.partId property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">partId</span></code></a></p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CRichTextOne.userId">
-uint <code class="descname">userId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.userId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>キャプション内で設定したユーザＩＤが格納されています。
-ユーザＩＤを省略すると、0が入ります。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CRichTextOne.windowId">
-uint <code class="descname">windowId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.windowId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-windowcmd"><span class="std std-ref">\wコマンド</span></a> で指定したウィンドウIDを取得できます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CRichTextOne.texId">
-uint <code class="descname">texId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.texId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> で指定したテクスチャIDを取得できます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CRichTextOne.partId">
-uint <code class="descname">partId</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CRichTextOne.partId" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="RICHTEXT.html#richtext-texturecmd"><span class="std std-ref">\tコマンド</span></a> で指定したパーツIDを取得できます。</p>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 
 

@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -101,9 +101,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Font</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Created as a resource data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Created as an asset bundle data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Created as an asset bundle data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Multilingual</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#bmfont">The font data generating method of BMFont</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Creating a bitmap font</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Creating a bitmap font</a></li>
 </ul>
 </li>
 </ul>
@@ -279,7 +282,7 @@
 <p>If you want to create a font named “cfn20”, you need to prepare the files such as follows.And you place these  in this location.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>cfn20.txt</p></li>
+<li><p>cfn20.fnt</p></li>
 <li><p>cfn20_0.png</p></li>
 <li><p>cfn20_1.png</p></li>
 <li><p>cfn20_2.png</p></li>
@@ -305,11 +308,11 @@
 <p>If you want to create a font named “fn16”, you need to prepare the files such as follows. And you place these in this location.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>fn16.txt</p></li>
-<li><p>fn16_0.png</p></li>
-<li><p>fn16_1.png</p></li>
-<li><p>fn16_2.png</p></li>
-<li><p>fn16_3.png</p></li>
+<li><p>000_001_00000/fn16/fn16.fnt</p></li>
+<li><p>000_001_00000/fn16/fn16_0.png</p></li>
+<li><p>000_001_00000/fn16/fn16_1.png</p></li>
+<li><p>000_001_00000/fn16/fn16_2.png</p></li>
+<li><p>000_001_00000/fn16/fn16_3.png</p></li>
 </ul>
 </div></blockquote>
 <p>Also, when you want to use multiple fonts, put the number required by the same procedure.</p>
@@ -325,14 +328,197 @@
 <p class="admonition-title">Note</p>
 <p>When you want to change the default value, please reference  <a class="reference internal" href="Config.html#cf-font"><span class="std std-ref">here</span></a> .</p>
 </div>
+<div class="section" id="id4">
+<h3>Multilingual<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Depending on the language your app is using, you can swap bitmap fonts.</p>
+<p>The default bitmap fonts load from 000_001_00000.unity3d.</p>
+<p>Depending on the locale at startup, the corresponding 000 _ 001 _ XXXXX.unity3d, if present, is preferentially read.</p>
+<p>The locale and asset bundle IDs are mapped as follows:.</p>
+</div></blockquote>
+<table class="docutils align-default" id="asset-bundle-id-of-the-bitmap-fonts">
+<caption><span class="caption-text">Asset bundle ID of the bitmap fonts</span><a class="headerlink" href="#asset-bundle-id-of-the-bitmap-fonts" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>000_001_00000</p></td>
+<td></td>
+<td><p>Default</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00001</p></td>
+<td><p>AR</p></td>
+<td><p>Arabic</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00002</p></td>
+<td><p>EU</p></td>
+<td><p>Basque</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00003</p></td>
+<td><p>BE</p></td>
+<td><p>Belarusian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00004</p></td>
+<td><p>BG</p></td>
+<td><p>Bulgarian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00005</p></td>
+<td><p>CA</p></td>
+<td><p>Catalan</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00006</p></td>
+<td><p>ZH</p></td>
+<td><p>Chinese</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00007</p></td>
+<td><p>CS</p></td>
+<td><p>Czech</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00008</p></td>
+<td><p>DA</p></td>
+<td><p>Danish</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00009</p></td>
+<td><p>NL</p></td>
+<td><p>Dutch</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00010</p></td>
+<td><p>EN</p></td>
+<td><p>English</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00011</p></td>
+<td><p>ET</p></td>
+<td><p>Estonian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00013</p></td>
+<td><p>FI</p></td>
+<td><p>Finnish</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00014</p></td>
+<td><p>FR</p></td>
+<td><p>French</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00015</p></td>
+<td><p>DE</p></td>
+<td><p>German</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00016</p></td>
+<td><p>EL</p></td>
+<td><p>Greek</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00017</p></td>
+<td><p>HE</p></td>
+<td><p>Hebrew</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00018</p></td>
+<td><p>HU</p></td>
+<td><p>Hungarian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00019</p></td>
+<td><p>IS</p></td>
+<td><p>Icelandic</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00020</p></td>
+<td><p>ID</p></td>
+<td><p>Indonesian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00021</p></td>
+<td><p>IT</p></td>
+<td><p>Italian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00022</p></td>
+<td><p>JA</p></td>
+<td><p>Japanese</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00023</p></td>
+<td><p>KO</p></td>
+<td><p>Korean</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00024</p></td>
+<td><p>LV</p></td>
+<td><p>Latvian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00025</p></td>
+<td><p>LT</p></td>
+<td><p>Lithuanian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00026</p></td>
+<td><p>NO</p></td>
+<td><p>Norwegian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00027</p></td>
+<td><p>PL</p></td>
+<td><p>Polish</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00028</p></td>
+<td><p>PT</p></td>
+<td><p>Portuguese</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00029</p></td>
+<td><p>RO</p></td>
+<td><p>Romanian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00030</p></td>
+<td><p>RU</p></td>
+<td><p>Russian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00031</p></td>
+<td><p>HR</p></td>
+<td><p>SerboCroatian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00033</p></td>
+<td><p>SL</p></td>
+<td><p>Slovenian</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00034</p></td>
+<td><p>ES</p></td>
+<td><p>Spanish</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00035</p></td>
+<td><p>SV</p></td>
+<td><p>Swedish</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00036</p></td>
+<td><p>TH</p></td>
+<td><p>Thai</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00037</p></td>
+<td><p>TR</p></td>
+<td><p>Turkish</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00038</p></td>
+<td><p>UK</p></td>
+<td><p>Ukrainian</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00039</p></td>
+<td><p>VE</p></td>
+<td><p>Vietnamese</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00040</p></td>
+<td><p>ZS</p></td>
+<td><p>ChineseSimplified</p></td>
+</tr>
+<tr class="row-even"><td><p>000_001_00041</p></td>
+<td><p>ZT</p></td>
+<td><p>ChineseTraditional</p></td>
+</tr>
+<tr class="row-odd"><td><p>000_001_00100</p></td>
+<td><p>AF</p></td>
+<td><p>Afrikaans</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="bmfont">
 <h2>The font data generating method of BMFont<a class="headerlink" href="#bmfont" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Introduce a method of making bitmap fonts by the BMFont(Bitmap Font Generator).</p>
 </div></blockquote>
-<div class="section" id="id4">
-<h3>Creating a bitmap font<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Creating a bitmap font<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p><em>Font Settings</em></p>
 <blockquote>

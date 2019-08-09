@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -116,13 +116,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#ctextureresourcemgr">CTextureResourceMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cassetbundlemgr">CAssetBundleMgr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cwindowmgr">CWindowMgr</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id13">リソースから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">アセットバンドルから読み込むとき</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">ウィンドウをクリエイトする方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">クリエイト済のウィンドウを取得する方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">特定のウィンドウを全面に出す方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">効果音について</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">リソースから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">アセットバンドルから読み込むとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">ウィンドウをクリエイトする方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">クリエイト済のウィンドウを取得する方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">特定のウィンドウを全面に出す方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">効果音について</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35">多言語対応、文字リソースをアセットバンドルにする方法</a></li>
 </ul>
 </li>
 </ul>
@@ -534,7 +534,7 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <div><p>アトラス化したテクスチャリソースを管理しています。
 必須です。</p>
 <p>CAssetBundleMgrをゲームオブジェクトにアタッチし、アセットデータが存在するときは、テクスチャデータをダウンロードして使うことができます。</p>
-<p>詳しくは、<a class="reference internal" href="CTextureResourceMgr.html#class-CTextureResourceMgr" title="CTextureResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+<p>詳しくは、<a href="#id13"><span class="problematic" id="id14">:type:`こちら&lt;CTextureResourceMgr&gt;`</span></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="cassetbundlemgr">
@@ -544,7 +544,7 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <p>効果音、ウィンドウレイアウトデータ、テクスチャデータ、フォントデータ等全てアセットバンドル化し、読み込むことが可能です。</p>
 <p>アセットバンドルを使用しないときは、必要ありません。</p>
 <p>マネージャ自身はアセットバンドルの中身については関与しません。</p>
-<p>詳しくは、<a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundleMgr" title="CAssetBundleMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+<p>詳しくは、<a href="#id15"><span class="problematic" id="id16">:type:`こちら&lt;CAssetBundleMgr&gt;`</span></a> を参照ください。</p>
 </div></blockquote>
 </div>
 <div class="section" id="cwindowmgr">
@@ -552,10 +552,10 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <blockquote>
 <div><p>ウィンドウを管理しています。
 必須です。</p>
-<p>詳しくは、<a class="reference internal" href="CWindowMgr.html#class-CWindowMgr" title="CWindowMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">こちら</span></code></a> を参照ください。</p>
+<p>詳しくは、<a href="#id17"><span class="problematic" id="id18">:type:`こちら&lt;CWindowMgr&gt;`</span></a> を参照ください。</p>
 </div></blockquote>
-<div class="section" id="id13">
-<h4>リソースから読み込むとき<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id19">
+<h4>リソースから読み込むとき<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>Resourcesフォルダに配置した、アセットを読み込みます。</p>
 <p>一度、読み込むと、ウィンドウデータは常駐します。</p>
@@ -565,8 +565,8 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 </pre></div>
 </div>
 </div>
-<div class="section" id="id14">
-<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id20">
+<h4>アセットバンドルから読み込むとき<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p><strong>[Export Window Resource]</strong> を行うと次の二つのファイルが更新されます(PC,Mac &amp; Linux Standalone環境の場合)。</p>
 <ul class="simple">
@@ -580,8 +580,8 @@ CMainSystemを張り付けたゲームオブジェクトは、シーンを読み
 <p>出力するファイルIDを変更したいときは、こちらを <a class="reference internal" href="Config.html#cf-windowresource"><span class="std std-ref">参考</span></a> にしてください。</p>
 </div>
 </div>
-<div class="section" id="id15">
-<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id21">
+<h4>ウィンドウをクリエイトする方法<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>例えば、このような名前でウィンドウを定義したとします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;default_style.h&quot;
 
@@ -654,10 +654,10 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id16">
-<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id22">
+<h4>クリエイト済のウィンドウを取得する方法<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
-<div><p>クリエイト済のウィンドウをウィンドウマネージャ経由で <a class="reference internal" href="CWindowBase.html#method-CWindowBase.find" title="CWindowBase.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">find</span></code></a> を使って取得することができます。</p>
+<div><p>クリエイト済のウィンドウをウィンドウマネージャ経由で <a href="#id23"><span class="problematic" id="id24">:meth:`find&lt;CWindowBase.find&gt;`</span></a> を使って取得することができます。</p>
 </div></blockquote>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinAssetbundleLoading</span> <span class="n">cLoading</span> <span class="p">=</span> <span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">find</span><span class="p">&lt;</span><span class="n">CWinAssetbundleLoading</span><span class="p">&gt;(</span><span class="n">CWinAssetbundleLoading</span><span class="p">.</span><span class="n">windowId</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">cLoading</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
@@ -668,15 +668,15 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id17">
-<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id25">
+<h4>特定のウィンドウを全面に出す方法<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>ウィンドウマネージャが持つ、bringToTopを使って、特定のウィンドウを最前面に出すことができます。</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWindowMgr</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">bringToTop</span><span class="p">(</span><span class="n">cWindow</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id18">
-<h4>効果音について<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id26">
+<h4>効果音について<a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>効果音を鳴らすには、CWindowMgr.soundeffectを書き換えます。</p>
 <p>soundeffectは、IWinSoundEffectというインターフェースを持つオブジェクトです。</p>
@@ -687,10 +687,10 @@ TEXT(Message) {
 </pre></div>
 </div>
 <blockquote>
-<div><p>付属している <a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a> と連動させる一つの例です。</p>
-<p><a class="reference internal" href="CSoundEffectMgr.html#class-CSeResourceMgr" title="CSeResourceMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResourceMgr</span></code></a> 経由で、アセットバンドル化されたSEを取得します(一つのアセットバンドルに複数のSEが入っています)。</p>
-<p>取得した、<a class="reference internal" href="CSoundEffectMgr.html#class-CSeResource" title="CSeResource class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSeResource</span></code></a> は、IWinSoundEffectインターフェースを持っています。
-(音を実際、鳴らすには <a class="reference internal" href="CSoundEffectMgr.html#class-CSoundEffectMgr" title="CSoundEffectMgr class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">CSoundEffectMgr</span></code></a> もCMainSystemにAddComponentしておく必要があります)。</p>
+<div><p>付属している <a href="#id27"><span class="problematic" id="id28">:type:`CSeResourceMgr&lt;CSeResourceMgr&gt;`</span></a> と連動させる一つの例です。</p>
+<p><a href="#id29"><span class="problematic" id="id30">:type:`CSeResourceMgr&lt;CSeResourceMgr&gt;`</span></a> 経由で、アセットバンドル化されたSEを取得します(一つのアセットバンドルに複数のSEが入っています)。</p>
+<p>取得した、<a href="#id31"><span class="problematic" id="id32">:type:`CSeResource&lt;CSeResource&gt;`</span></a> は、IWinSoundEffectインターフェースを持っています。
+(音を実際、鳴らすには <a href="#id33"><span class="problematic" id="id34">:type:`CSoundEffectMgr&lt;CSoundEffectMgr&gt;`</span></a> もCMainSystemにAddComponentしておく必要があります)。</p>
 <p>下記の例では、052_000_00000内にウィンドウ系の効果音がパックされているという前提の実装になっています。</p>
 </div></blockquote>
 <div class="admonition note">
@@ -753,8 +753,8 @@ TEXT(Message) {
 </pre></div>
 </div>
 </div>
-<div class="section" id="id19">
-<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id35">
+<h4>多言語対応、文字リソースをアセットバンドルにする方法<a class="headerlink" href="#id35" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <blockquote>
 <div><p>キャプションIDから、文字列に変換する際、CWindowMgr.captiondataに設定されたオブジェクトを通して変換されます。</p>
 <p>captiondataは、IWinCaptionDataインターフェースです。</p>
@@ -767,7 +767,7 @@ TEXT(Message) {
 </div>
 <blockquote>
 <div><p>付属している <a class="reference internal" href="CMessageDataSheetMgr.html"><span class="doc">CMessageDataSheetMgr</span></a> と連動させるための一つの例です。</p>
-<p><a class="reference internal" href="CMessageDataSheetMgr.html#method-CMessageDataSheet.find" title="CMessageDataSheet.find method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">CMessageDataSheet</span></code></a> が、IWinCaptionDataインターフェースを持っているので次のようなコードでキャプションデータを取得できます。</p>
+<p><a href="#id36"><span class="problematic" id="id37">:meth:`CMessageDataSheet&lt;CMessageDataSheet.find&gt;`</span></a> が、IWinCaptionDataインターフェースを持っているので次のようなコードでキャプションデータを取得できます。</p>
 </div></blockquote>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">CMainSystem</span> <span class="p">:</span> <span class="n">CMainSystemBase</span> <span class="p">{</span>
     <span class="c1">//==========================================================================</span>

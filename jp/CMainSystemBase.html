@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -265,23 +265,13 @@
 <p>また、シーン切り替え等に、このスクリプトを使うとAssetBundleダウンロード時などに切り替えをペンディングしてくれます。</p>
 <p>使うときは、CMainSystemクラスを作成し、継承するようにしてください。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CMainSystemBase">
-<code class="descname">class CMainSystemBase</code><a class="headerlink" href="#class-CMainSystemBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-CMainSystemBase.Awake">
-void <code class="descname">Awake</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CMainSystemBase.Awake" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>Awake関数の中で AddComponent,addManagerをすることによって、Start関数内で自動的に必要な初期化や必要なアセットバンドルの読み込みを自動的に行います。</p>
-<p>代表的な記述方法は次の通りです。</p>
-<div class="admonition note">
+<p class="cmainsystembase">Awake関数の中で AddComponent,addManagerをすることによって、Start関数内で自動的に必要な初期化や必要なアセットバンドルの読み込みを自動的に行います。</p>
+<p class="cmainsystembase">代表的な記述方法は次の通りです。</p>
+<div class="cmainsystembase admonition note">
 <p class="admonition-title">注釈</p>
 <p>void Start() は、継承先でnewによって上書きしないようにしてください。
 読み込みが正常に行えなくなります。</p>
 </div>
-</dd></dl>
-
 <blockquote>
 <div><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">new</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span>
@@ -309,144 +299,36 @@ void <code class="descname">Awake</code> <span class="sig-paren">(</span><span c
 <span class="p">}</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="method-addManager">
-void <code class="descname">addManager</code> <span class="sig-paren">(</span><a class="reference internal" href="#class-IManager" title="IManager class">IManager</a> <em>mgr</em><span class="sig-paren">)</span><a class="headerlink" href="#method-addManager" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param IManager mgr</dt>
-<dd class="field-odd"><p>アセットバンドルを読み込み初期化する必要のあるオブジェクト</p>
-</dd>
-</dl>
-</dd></dl>
-
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>Awake内で、AddComponetする必要があります。</p>
 </div>
-<dl class="method">
-<dt id="method-initialize">
-<em>virtual</em> void <code class="descname">initialize</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>継承先でオーバライドしてください。
 アセットバンドルの読み込みが終わり、ILoader,IManagerの読み込みが完了した後、呼び出される。</p>
-<dl class="method">
-<dt id="method-OnChangeScene">
-<em>virtual</em> void <code class="descname">OnChangeScene</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-OnChangeScene" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>継承先でオーバライドしてください。
 シーンを切り替えたときに呼び出されます。</p>
-<dl class="method">
-<dt id="method-changeScene">
-bool <code class="descname">changeScene</code> <span class="sig-paren">(</span>string <em>sScene</em>, bool <em>bForceChange=false</em><span class="sig-paren">)</span><a class="headerlink" href="#method-changeScene" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>指定したシーンに切り替えます。</p>
-<p>Application.LoadLevelと同等ですが、以下の点で異なります。</p>
-<ol class="arabic simple">
-<li><p>フェードオブジェクトのフェードが終わるまで待ちます。</p></li>
-<li><p>アセットバンドル読み込み中などにシーン切り替えをペンディングしてくれます。</p></li>
-<li><p>クリエイト済のウィンドウを自動的に閉じてくれます。</p></li>
-</ol>
-<p>シーン切り替え直前(Application.LoadLevelが呼び出される直前)に、OnChageSceneが呼び出されます。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-isChangingScene">
-bool <code class="descname">isChangingScene</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isChangingScene" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>シーン読み込み中かどうか判定します。</p>
 <p>CMainSystemBase.chageSceneによってシーンを切り替えているときのみ有効です。</p>
-<dl class="property">
-<dt id="property-isInitialized">
-bool <code class="descname">isInitialized</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-isInitialized" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>初期化が終わっているかどうか判定します。</p>
-<dl class="method">
-<dt id="method-randi">
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randi" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>整数値の乱数を取得します。</p>
-<dl class="method">
-<dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMax</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
 <p>指定された範囲の乱数を取得します。</p>
-<dl class="method">
-<dt>
-<em>static</em> int <code class="descname">randi</code> <span class="sig-paren">(</span>int <em>iMin</em>, int <em>iMax</em><span class="sig-paren">)</span></dt>
-<dd></dd></dl>
-
 <p>指定された範囲の乱数を取得します。</p>
-<dl class="method">
-<dt id="method-randf">
-<em>static</em> float <code class="descname">randf</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-randf" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
 <p>浮動小数点の乱数を取得します。</p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-ILoader">
-<code class="descname">class ILoader</code><a class="headerlink" href="#class-ILoader" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="method">
-<dt id="method-ILoader.isLoading">
-bool <code class="descname">isLoading</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-ILoader.isLoading" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return bool</dt>
-<dd class="field-odd"><p>読み込み中はtrue,読み込み終了状態の時はfalse</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>MonoBehaviourを継承したスクリプトにつけてください。</p>
-<p>CMainSystemBaseと同じゲームオブジェクト内のスクリプトにおいて、ILoaderを持つオブジェクトを調べ、
+<p class="iloader">MonoBehaviourを継承したスクリプトにつけてください。</p>
+<p class="iloader">CMainSystemBaseと同じゲームオブジェクト内のスクリプトにおいて、ILoaderを持つオブジェクトを調べ、
 ILoader.isLoading() がfalseになるまで待機します。</p>
-<div class="admonition note">
+<div class="iloader admonition note">
 <p class="admonition-title">注釈</p>
 <p>Awake内で、AddComponetする必要があります。</p>
 </div>
-</dd></dl>
-
-<dl class="class">
-<dt id="class-IManager">
-<code class="descname">class IManager</code><a class="headerlink" href="#class-IManager" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Awake()内で、CMainSystemBase.addManagerで追加してください。</p>
-<p>アセットバンドルを読み込んだのち、それを使って初期化する必要のあるオブジェクトに対してつけておく必要があります。</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">());</span>
+<p class="imanager">Awake()内で、CMainSystemBase.addManagerで追加してください。</p>
+<p class="imanager">アセットバンドルを読み込んだのち、それを使って初期化する必要のあるオブジェクトに対してつけておく必要があります。</p>
+<div class="imanager highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">addManager</span><span class="p">(</span><span class="k">new</span> <span class="n">CMessageDataSheetMgr</span><span class="p">());</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="method-IManager.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAssetBundles</em><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.initialize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param CAssetBundle[] aAssetBundles</dt>
-<dd class="field-odd"><p>読み込み終わったアセットバンドルの配列</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-IManager.release">
-void <code class="descname">release</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.release" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>ゲームオブジェクトが解放されるときに、呼ばれる解放処理</p>
-<dl class="method">
-<dt id="method-IManager.getAssetBundleIds">
-uint[] <code class="descname">getAssetBundleIds</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-IManager.getAssetBundleIds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return uint[]</dt>
-<dd class="field-odd"><p>初期化時に読み込んでおく必要のあるアセットバンドルのID</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>読み込む必要のあるアセットバンドルIDの配列を返す関数です。</p>
-</dd></dl>
-
+<p class="imanager">ゲームオブジェクトが解放されるときに、呼ばれる解放処理</p>
+<p class="imanager">読み込む必要のあるアセットバンドルIDの配列を返す関数です。</p>
 </div>
 
 

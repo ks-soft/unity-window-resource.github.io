@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -271,87 +271,28 @@
 </div></blockquote>
 <p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
+<div><p><a href="#id2"><span class="problematic" id="id3">:meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)&lt;CWindowBase.onDrag&gt;`</span></a></p>
 <blockquote>
 <div><p>領域をドラッグしたとき呼び出されます。
 <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">ロック</span></a> しているときだけ、このコールバックは呼ばれます。</p>
 </div></blockquote>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a href="#id4"><span class="problematic" id="id5">:meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)&lt;CWindowBase.onDrop&gt;`</span></a></p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWinCtrlListboxEx">
-<code class="descname">class CWinCtrlListboxEx</code><a class="headerlink" href="#class-CWinCtrlListboxEx" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.viewsize">
-Vector2 <code class="descname">viewsize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.viewsize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>リストボックスのサイズとなります。
+<p class="cwinctrllistboxex"><em>固有の関数/プロパティ</em></p>
+<p class="cwinctrllistboxex">リストボックスのサイズとなります。
 sizeプロパティと同等です。</p>
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.screensize">
-Vector2 <code class="descname">screensize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.screensize" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>リストボックスの仮想画面のサイズです。
+<p class="cwinctrllistboxex">リストボックスの仮想画面のサイズです。
 コンテンツリスト内の全ての高さの総和になります。</p>
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.offset">
-Vector2 <code class="descname">offset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.offset" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>リストボックスが仮想画面のどこをポイントしているかを表しています。
+<p class="cwinctrllistboxex">リストボックスが仮想画面のどこをポイントしているかを表しています。
 値を設定すると一気に移動します。
-滑らかにアニメーションさせながら移動させたいときは、 <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code> を使ってください。</p>
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.isSwipe">
-bool <code class="descname">isSwipe</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSwipe" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>スワイプ中かどうか判定します。</p>
-<dl class="method">
-<dt id="method-CWinCtrlListboxEx.setSmoothOffset">
-void <code class="descname">setSmoothOffset</code> <span class="sig-paren">(</span>Vector2 <em>offset</em>, float <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.setSmoothOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param Vector2 offset</dt>
-<dd class="field-odd"><p>設定したい最終オフセット</p>
-</dd>
-<dt class="field-even">Param float spd</dt>
-<dd class="field-even"><p>速度</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.smoothOffset">
-Vector2 <code class="descname">smoothOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.smoothOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>0.25の速度で、 <code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code> したのと同じ振る舞いになります。</p>
-<dl class="property">
-<dt id="property-CWinCtrlListboxEx.isSmoothScrolled">
-bool <code class="descname">isSmoothScrolled</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlListboxEx.isSmoothScrolled" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<p>setSmoothOffsetによるスクロールアニメーションかどうかを取得できます。</p>
-<dl class="method">
-<dt id="method-CWinCtrlListboxEx.getContentsOffset">
-Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">(</span>int <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlListboxEx.getContentsOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int index</dt>
-<dd class="field-odd"><p>取得したいコンテンツオフセットのインデックス</p>
-</dd>
-<dt class="field-even">Param e_Anchor eAnchor</dt>
-<dd class="field-even"><p>コンテンツがどの位置に来ることを望むかをアンカーで指定する</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>特定のコンテンツが指定したアンカー位置に沿って表示されるようなオフセットを取得できます。</p>
-<p>リストボックスが縦方向の時は次の通りです。</p>
-<blockquote>
-<div><table class="docutils align-center">
+滑らかにアニメーションさせながら移動させたいときは、 <a href="#id6"><span class="problematic" id="id7">:meth:`setSmoothOffset&lt;CWinCtrlListBoxEx.setSmoothOffset&gt;`</span></a> を使ってください。</p>
+<p class="cwinctrllistboxex">スワイプ中かどうか判定します。</p>
+<p class="cwinctrllistboxex">0.25の速度で、 <a href="#id8"><span class="problematic" id="id9">:meth:`setSmoothOffset&lt;CWinCtrlListBoxEx.setSmoothOffset&gt;`</span></a> したのと同じ振る舞いになります。</p>
+<p class="cwinctrllistboxex">setSmoothOffsetによるスクロールアニメーションかどうかを取得できます。</p>
+<p class="cwinctrllistboxex">特定のコンテンツが指定したアンカー位置に沿って表示されるようなオフセットを取得できます。</p>
+<p class="cwinctrllistboxex">リストボックスが縦方向の時は次の通りです。</p>
+<blockquote class="cwinctrllistboxex">
+<div><table class="docutils align-default">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 59%" />
@@ -374,7 +315,7 @@ Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">
 </tbody>
 </table>
 <p>リストボックスが横方向の時は次の通りです。</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 59%" />
@@ -397,8 +338,6 @@ Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">
 </tbody>
 </table>
 </div></blockquote>
-</dd></dl>
-
 <p><em>使用例</em></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">override</span> <span class="k">public</span> <span class="k">void</span> <span class="nf">onUpdate</span><span class="p">()</span> <span class="p">{</span>
    <span class="c1">// get control</span>

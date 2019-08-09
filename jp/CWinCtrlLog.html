@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -268,180 +268,19 @@
 </div></blockquote>
 <p><a class="reference internal" href="CWindowBase.html#cwindowbase"><span class="std std-ref">CWindowBase</span></a> に届くコールバック</p>
 <blockquote>
-<div><p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrag" title="CWindowBase.onDrag method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrag(CWinCtrlBase</span> <span class="pre">cCtrl,Vector2</span> <span class="pre">pos,Vector2</span> <span class="pre">dragVelocity)</span></code></a></p>
+<div><p><a href="#id2"><span class="problematic" id="id3">:meth:`void onDrag(CWinCtrlBase cCtrl,Vector2 pos,Vector2 dragVelocity)&lt;CWindowBase.onDrag&gt;`</span></a></p>
 <blockquote>
 <div><p>領域をドラッグしたとき呼び出されます。
 <a class="reference internal" href="LISTBOX.html#listbox-style"><span class="std std-ref">ロック</span></a> しているときだけ、このコールバックは呼ばれます。</p>
 </div></blockquote>
-<p><a class="reference internal" href="CWindowBase.html#method-CWindowBase.onDrop" title="CWindowBase.onDrop method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">void</span> <span class="pre">onDrop(CWinCtrlBase</span> <span class="pre">cCtrl,CWindowBase</span> <span class="pre">cDragWindow,CWinCtrlBase</span> <span class="pre">cDragCtrl)</span></code></a></p>
+<p><a href="#id4"><span class="problematic" id="id5">:meth:`void onDrop(CWinCtrlBase cCtrl,CWindowBase cDragWindow,CWinCtrlBase cDragCtrl)&lt;CWindowBase.onDrop&gt;`</span></a></p>
 </div></blockquote>
-<dl class="class">
-<dt id="class-CWinCtrlLog">
-<code class="descname">class CWinCtrlLog</code><a class="headerlink" href="#class-CWinCtrlLog" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>固有の関数/プロパティ</em></p>
-<dl class="method">
-<dt id="method-CWinCtrlLog.resize">
-void <code class="descname">resize</code> <span class="sig-paren">(</span>int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlLog.resize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int count</dt>
-<dd class="field-odd"><p>ログのサイズ</p>
-</dd>
-</dl>
-<p>Listboxでは、コンテンツの数に相当しますが、ここでは保持可能な最大ログ数になります。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.count">
-int <code class="descname">count</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlLog.count" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Listboxでは、コンテンツリスト内のコンテンツ数になりますが、ここでは保持しているログの数になります。</p>
-<p>resizeで設定した値より、大きくなることはありません。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CWinCtrlLog.clearLog">
-void <code class="descname">clearLog</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlLog.clearLog" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>現在保持しているログを全てクリアにし、空にします。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CWinCtrlLog.add">
-CWinCtrlLogText <code class="descname">add</code> <span class="sig-paren">(</span>string <em>text</em>, WinColor <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlLog.add" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param string text</dt>
-<dd class="field-odd"><p>追加する文字列</p>
-</dd>
-<dt class="field-even">Param WinColor color</dt>
-<dd class="field-even"><p>文字列のカラー</p>
-</dd>
-<dt class="field-odd">Return CWinCtrlLogText</dt>
-<dd class="field-odd"><p>文字列を設定したログテキストコントロール</p>
-</dd>
-</dl>
-<p>ログを追加するために、まずコンテンツを内部的に追加します(若しくは再利用します)。</p>
-<p>そのコンテンツ内から、 <a class="reference internal" href="CWinCtrlLogText.html#cwinctrllogtext"><span class="std std-ref">CWinCtrlLogText</span></a> を探し、そのコントロールのキャプションに指定された文字列とカラーを設定します。</p>
-<p>戻り値の <a class="reference internal" href="CWinCtrlLogText.html#cwinctrllogtext"><span class="std std-ref">CWinCtrlLogText</span></a> から追加されたコンテンツを取得することができます。</p>
-</dd></dl>
-
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CWinCtrlLogText</span> <span class="n">ltChat</span> <span class="o">=</span> <span class="n">lgChat</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">strSentence</span><span class="p">,</span><span class="n">WinColor</span><span class="o">.</span><span class="n">white</span><span class="p">);</span>
+<p class="cwinctrllog"><em>固有の関数/プロパティ</em></p>
+<div class="cwinctrllog highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CWinCtrlLogText</span> <span class="n">ltChat</span> <span class="o">=</span> <span class="n">lgChat</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">strSentence</span><span class="p">,</span><span class="n">WinColor</span><span class="o">.</span><span class="n">white</span><span class="p">);</span>
 <span class="o">//</span><span class="n">Access</span> <span class="n">to</span> <span class="n">content</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">added</span> <span class="n">LogText</span><span class="o">.</span>
 <span class="n">CWinContents</span> <span class="n">contents</span> <span class="o">=</span> <span class="n">ltChat</span><span class="o">.</span><span class="n">parent</span><span class="p">;</span>
 </pre></div>
 </div>
-<dl class="property">
-<dt id="property-CWinCtrlLog.viewsize">
-Vector2 <code class="descname">viewsize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlLog.viewsize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リストボックスのサイズとなります。
-sizeプロパティと同等です。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.screensize">
-Vector2 <code class="descname">screensize</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlLog.screensize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リストボックスの仮想画面のサイズです。
-コンテンツリスト内の全ての高さの総和になります。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.offset">
-Vector2 <code class="descname">offset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlLog.offset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>リストボックスが仮想画面のどこをポイントしているかを表しています。
-値を設定すると一気に移動します。
-滑らかにアニメーションさせながら移動させたいときは、 <a class="reference internal" href="#method-CWinCtrlLog.setSmoothOffset" title="CWinCtrlLog.setSmoothOffset method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code></a> を使ってください。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.isSwipe">
-bool <code class="descname">isSwipe</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlLog.isSwipe" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>スワイプ中かどうか判定します。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CWinCtrlLog.setSmoothOffset">
-void <code class="descname">setSmoothOffset</code> <span class="sig-paren">(</span>Vector2 <em>offset</em>, float <em>spd</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlLog.setSmoothOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param Vector2 offset</dt>
-<dd class="field-odd"><p>設定したい最終オフセット</p>
-</dd>
-<dt class="field-even">Param float spd</dt>
-<dd class="field-even"><p>速度</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.smoothOffset">
-Vector2 <code class="descname">smoothOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWinCtrlLog.smoothOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>0.25の速度で、 <a class="reference internal" href="#method-CWinCtrlLog.setSmoothOffset" title="CWinCtrlLog.setSmoothOffset method"><code class="xref csharp csharp-meth docutils literal notranslate"><span class="pre">setSmoothOffset</span></code></a> したのと同じ振る舞いになります。</p>
-</dd></dl>
-
-<dl class="property">
-<dt id="property-CWinCtrlLog.isSmoothScrolled">
-bool <code class="descname">isSmoothScrolled</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWinCtrlLog.isSmoothScrolled" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>setSmoothOffsetによるスクロールアニメーションかどうかを取得できます。</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="method-CWinCtrlLog.getContentsOffset">
-Vector2 <code class="descname">getContentsOffset</code> <span class="sig-paren">(</span>int <em>index</em>, e_Anchor <em>eAnchor</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWinCtrlLog.getContentsOffset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Param int index</dt>
-<dd class="field-odd"><p>取得したいコンテンツオフセットのインデックス</p>
-</dd>
-<dt class="field-even">Param e_Anchor eAnchor</dt>
-<dd class="field-even"><p>コンテンツがどの位置に来ることを望むかをアンカーで指定する</p>
-</dd>
-</dl>
-<p>特定のコンテンツが指定したアンカー位置に沿って表示されるようなオフセットを取得できます。</p>
-<p>リストボックスが縦方向の時は次の通りです。</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 41%" />
-<col style="width: 59%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>e_Anchor</p></th>
-<th class="head"><p>位置</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Bottom,LeftBottom,RightBottom</p></td>
-<td><p>コンテンツが一番下に来るようなオフセット値</p></td>
-</tr>
-<tr class="row-odd"><td><p>Top,LeftTop,RightTop</p></td>
-<td><p>コンテンツが一番上に来るようなオフセット値</p></td>
-</tr>
-<tr class="row-even"><td><p>Center,Left,Right</p></td>
-<td><p>コンテンツが真ん中に来るようなオフセット値</p></td>
-</tr>
-</tbody>
-</table>
-<p>リストボックスが横方向の時は次の通りです。</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 41%" />
-<col style="width: 59%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>e_Anchor</p></th>
-<th class="head"><p>位置</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Left,LeftBottom,LeftTop</p></td>
-<td><p>コンテンツが一番左に来るようなオフセット値</p></td>
-</tr>
-<tr class="row-odd"><td><p>Right,RightBottom,RightTop</p></td>
-<td><p>コンテンツが一番右に来るようなオフセット値</p></td>
-</tr>
-<tr class="row-even"><td><p>Center,Top,Bottom</p></td>
-<td><p>コンテンツが真ん中に来るようなオフセット値</p></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
 <p id="cwinctrllog-example"><em>使用例</em></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">CWinCtrlLog</span>    <span class="n">lgChat</span> <span class="p">=</span> <span class="n">find</span><span class="p">&lt;</span><span class="n">CWinCtrlLog</span><span class="p">&gt;(</span><span class="n">LOG_Chat</span><span class="p">);</span>
 

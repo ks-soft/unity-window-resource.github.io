@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -265,10 +265,10 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CWindowMgr">
-<code class="descname">class CWindowMgr</code><a class="headerlink" href="#class-CWindowMgr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CWindowMgr</code><a class="headerlink" href="#class-CWindowMgr" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="method-CWindowMgr.setUIResolution">
-void <code class="descname">setUIResolution</code> <span class="sig-paren">(</span>float <em>width</em>, float <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.setUIResolution" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">setUIResolution</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <em>width</em>, <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.setUIResolution" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param width</dt>
 <dd class="field-odd"><p>Sets the screen width of the UI. If the value is 0, the scaling factor is calculated relative to the height.</p>
@@ -294,19 +294,19 @@ void <code class="descname">setUIResolution</code> <span class="sig-paren">(</sp
 <p>It conforms to the screen size of the terminal.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.initialize">
-bool <code class="descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.initialize" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">initialize</code> <span class="sig-paren">(</span><a class="reference internal" href="CAssetBundleMgr.html#class-CAssetBundle" title="CAssetBundle class">CAssetBundle</a>[] <em>aAB</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Expand and initialize the loaded window resource.If CassetBundleMgr is registered, it will automatically download the window resources from the server and pass them to this function.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.load">
-bool <code class="descname">load</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.load" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">load</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.byte.aspx" title="System.Byte">Byte</a>[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Expands and initializes window resources loaded as byte data.</p>
 <dl class="method">
 <dt>
-bool <code class="descname">load</code> <span class="sig-paren">(</span>string <em>assetname</em><span class="sig-paren">)</span></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="sig-name descname">load</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <em>assetname</em><span class="sig-paren">)</span></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param string assetname</dt>
 <dd class="field-odd"><p>Name of the imported asset</p>
@@ -318,7 +318,7 @@ bool <code class="descname">load</code> <span class="sig-paren">(</span>string <
 <p>The actual imported asset is named assetname + “.asset”.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.create">
-WindowScript <code class="descname">create</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em>, <a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cParent</em><em> = null</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.create" title="Permalink to this definition">¶</a></dt>
+WindowScript <code class="sig-name descname">create</code>&lt;WindowScript&gt; <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em>, <a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cParent</em><em> = null</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.create" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">The class name of the window to create.</dt>
 <dd class="field-odd"><p>The class name of the window to create.</p>
@@ -335,7 +335,7 @@ WindowScript <code class="descname">create</code>&lt;WindowScript&gt; <span clas
 <p>Creates a window of the specified class.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.find">
-WindowScript <code class="descname">find</code>&lt;WindowScript&gt; <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.find" title="Permalink to this definition">¶</a></dt>
+WindowScript <code class="sig-name descname">find</code>&lt;WindowScript&gt; <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.find" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">The class name of the window to create.</dt>
 <dd class="field-odd"><p>Window class name</p>
@@ -349,7 +349,7 @@ WindowScript <code class="descname">find</code>&lt;WindowScript&gt; <span class=
 <p>Finds the specified window. If not yet created, null is returned.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.bringToTop">
-void <code class="descname">bringToTop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.bringToTop" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">bringToTop</code> <span class="sig-paren">(</span><a class="reference internal" href="CWindowBase.html#class-CWindowBase" title="CWindowBase class">CWindowBase</a> <em>cWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.bringToTop" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param CWindowBase cWindow</dt>
 <dd class="field-odd"><p>target window</p>
@@ -360,7 +360,7 @@ void <code class="descname">bringToTop</code> <span class="sig-paren">(</span><a
 <p>rise a priority of target window.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.getCaption">
-string <code class="descname">getCaption</code> <span class="sig-paren">(</span>uint <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.getCaption" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">getCaption</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>mCaptionId</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.getCaption" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint mCaptionId</dt>
 <dd class="field-odd"><p>Caption ID</p>
@@ -371,7 +371,7 @@ string <code class="descname">getCaption</code> <span class="sig-paren">(</span>
 <p>Gets the string from the specified caption ID.</p>
 <dl class="method">
 <dt id="method-CWindowMgr.play">
-void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.play" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">play</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>mSE</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CWindowMgr.play" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint mSE</dt>
 <dd class="field-odd"><p>SE’s ID</p>
@@ -382,19 +382,19 @@ void <code class="descname">play</code> <span class="sig-paren">(</span>uint <em
 <p>Play the SE</p>
 <dl class="property">
 <dt id="property-CWindowMgr.clickSE">
-uint <code class="descname">clickSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.clickSE" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <code class="sig-name descname">clickSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.clickSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Specifies a standard sound to be played when touched.</p>
 <dl class="property">
 <dt id="property-CWindowMgr.scrollSE">
-uint <code class="descname">scrollSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.scrollSE" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <code class="sig-name descname">scrollSE</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-CWindowMgr.scrollSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Specifies a standard sound to be played when scrolling through a list box.</p>
 <dl class="property">
 <dt id="property-CWindowMgr.Instance">
-<em>static</em> <a class="reference internal" href="#class-CWindowMgr" title="CWindowMgr class">CWindowMgr</a> <code class="descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowMgr.Instance" title="Permalink to this definition">¶</a></dt>
+<em>static</em> <a class="reference internal" href="#class-CWindowMgr" title="CWindowMgr class">CWindowMgr</a> <code class="sig-name descname">Instance</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-CWindowMgr.Instance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>Gets an instance of a window manager.</p>

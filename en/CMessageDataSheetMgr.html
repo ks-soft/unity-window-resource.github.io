@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.00
+                2.01
               </div>
             
           
@@ -324,14 +324,14 @@
 </div></blockquote>
 <dl class="class">
 <dt id="class-CMessageDataSheetMgr">
-<code class="descname">class CMessageDataSheetMgr</code><a class="headerlink" href="#class-CMessageDataSheetMgr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CMessageDataSheetMgr</code><a class="headerlink" href="#class-CMessageDataSheetMgr" title="Permalink to this definition">¶</a></dt>
 <dd><p>CMessageDataSheetMgr is a container of CMessageDataSheet.</p>
 <p>CMessageDataSheet corresponds to the an Excel sheet .</p>
 <p>In other words,CMessageDataSheetMgr is the container of your Excel sheets.</p>
 <p>However,the assetbundle of string resource has only one locale.(it does not have multiple locale data).</p>
 <dl class="method">
 <dt id="method-CMessageDataSheetMgr.initialize">
-void <code class="descname">initialize</code> <span class="sig-paren">(</span>byte[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.initialize" title="Permalink to this definition">¶</a></dt>
+void <code class="sig-name descname">initialize</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.byte.aspx" title="System.Byte">Byte</a>[] <em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param byte[] buffer</dt>
 <dd class="field-odd"><p>Binary data read</p>
@@ -342,7 +342,7 @@ void <code class="descname">initialize</code> <span class="sig-paren">(</span>by
 <p>Specifies binary data generated from Excel.</p>
 <dl class="method">
 <dt id="method-CMessageDataSheetMgr.find">
-<a class="reference internal" href="#class-CMessageDataSheet" title="CMessageDataSheet class">CMessageDataSheet</a> <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>sheetname</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.find" title="Permalink to this definition">¶</a></dt>
+<a class="reference internal" href="#class-CMessageDataSheet" title="CMessageDataSheet class">CMessageDataSheet</a> <code class="sig-name descname">find</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>sheetname</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheetMgr.find" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint type</dt>
 <dd class="field-odd"><p>Pass the sheet name with <a class="reference internal" href="id.html#fivecc"><span class="std std-ref">FiveCC</span></a>.</p>
@@ -360,11 +360,11 @@ void <code class="descname">initialize</code> <span class="sig-paren">(</span>by
 
 <dl class="class">
 <dt id="class-CMessageDataSheet">
-<code class="descname">class CMessageDataSheet</code><a class="headerlink" href="#class-CMessageDataSheet" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">class CMessageDataSheet</code><a class="headerlink" href="#class-CMessageDataSheet" title="Permalink to this definition">¶</a></dt>
 <dd><p>It corresponds to the one sheet on an Excel file.</p>
 <dl class="method">
 <dt id="method-CMessageDataSheet.find">
-string <code class="descname">find</code> <span class="sig-paren">(</span>uint <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.find" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">find</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.find" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint id</dt>
 <dd class="field-odd"><p>Specifies <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MultiID</span></a>  and retrieves text resources.</p>
@@ -374,7 +374,7 @@ string <code class="descname">find</code> <span class="sig-paren">(</span>uint <
 
 <dl class="method">
 <dt id="method-CMessageDataSheet.format">
-string <code class="descname">format</code> <span class="sig-paren">(</span>uint <em>id</em>, <em>params</em> object[] <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.format" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="sig-name descname">format</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" title="System.UInt32">UInt32</a> <em>id</em>, <em>params</em> object[] <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#method-CMessageDataSheet.format" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Param uint id</dt>
 <dd class="field-odd"><p>Specifies <a class="reference internal" href="id.html#mulid"><span class="std std-ref">MultiID</span></a>  and retrieves text resources.</p>
